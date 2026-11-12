@@ -1,0 +1,56 @@
+{
+  "source_id": "cp06-train-supplement-v1",
+  "source_framework_commit": "413b3d3a73de257aad6e5a034c3b947dcc52f91d",
+  "source_files": {
+    "world.py": "746e36c3d5874b6e3d8597ca2fe1ae0c8fb0cc7d4d4ea3f690daeebd11b5a760",
+    "task.py": "f992e1dbcb93ab3b96825861e99d9dae44bda85a4f4a42770e6856df9cc88633",
+    "timeline.py": "71da8bb9f9325777a5a1fd48721cc834a647366810f58442327d5b23bc5522da",
+    "compose_cpu.py": "9251c11d37556d3ae498f6413fddc084e4c3dbf89ec9000d52c452dbd2c81f2b",
+    "replay.py": "813be8cbdb1b76ee1d74fc666110981758e7f1cfdb127a13b71e981b89eab626",
+    "backend_world.py": "587657c2c8c28ba0588328a2ce8e91a02ab05539f5e4deb3f63086b1c25a3e29",
+    "binding.py": "3daa9d33fa5faeb426c4c6482235ca8b5691fcc79920ff24c2b0ce879c0103a0",
+    "evidence.py": "78dbf848c1af47aa4022d9d167f1ec1297603f2b8a5c8fac2a188611591d7835",
+    "rules/controls.py": "db9b65300c48cc89c6343afa491aeb978bac77c2732c148509ced129f9075e34",
+    "rules/display.py": "4f86d9a866d3eb2112cba7682bf3d48e7f1842da3b338e026cd9683570eb46c8",
+    "rules/rider_latch.py": "1b49fd315704dcd6e1ad9c72c5599e8392d37bc516c170479a62453fa6135085",
+    "cases_unified/CP06/annotate.py": "16ce8e5328df243f1a4ebdb02b7271d62caec46783ec3fb256dbcc2ae264116e"
+  },
+  "source_binding_proof_sha256": "02f7578ecc57f9ee82d2c77a2e9eef41fb95d7acc70d4c29b7af63fbbfe46f2c",
+  "cpu_composition_receipt_sha256": "3679d9c8171f1b8549fb8c212520402e5e6e407295ac586ee112ccfe18c436ae",
+  "selected_asset_hash_receipt_sha256": "1980a39277510d683d1d24ff4f97bb660d7d0b77754c0f55c546c21cad5c1f4f",
+  "source_actions_index_sha256": "776e7a0f9f5fd47d8bcb4a009970c49512dec9a0cffd944733c5ab88deadca1a",
+  "rule_authority": "CP06 current snapshot sections5/6: success100 otherwise20*k/N, N4/6/8",
+  "migration": {
+    "legacy_easy_121_identical_commands_and_exact_closed_target": "removed; current section5 measured lift/contact applies to every tier",
+    "robot_sim_and_camera_lifecycle": "shared framework",
+    "physics_geometry_friction_camera_seed_changed": false,
+    "prepared_source_station_boundary": "world.py39-64; selected repaired stand retained; shared official robot initialization required",
+    "original_spec_and_declared_hash": "immutable; separately pin resource URI/derived Task hashes",
+    "expert_events_or_job_targets_used": false,
+    "formal_eval_profiles": "not supplied; only exact selected train-supplement-v1-000",
+    "native_validation": "not run; CPU composition/ports are not PhysX or pixel/video certification"
+  },
+  "selected_h5": [
+    {
+      "tier": "easy",
+      "selected_h5_sha256": "7e351bdf0e2fefaa0ed8052be76c9e43fb0d1b36931eaf563bf7d3cfafec07b5",
+      "actual_instance_sha256": "b58be637c2c90b644e20ae58f755ab5056af27acc38f2e599f3824c8f7404fa2",
+      "rows": 854,
+      "H5_full_sha_source": "existing accepted E42 source-c-CP08-CP06-F2.json@7319c90a; not rehashed in this task"
+    },
+    {
+      "tier": "medium",
+      "selected_h5_sha256": "17b7c03839d7a1b5144d310104c378749f0cf8972d9478493b895803c90284fc",
+      "actual_instance_sha256": "b003cc7f9ef9f6c3396804728d6d06c08c717678aed618983b08c778ab67d906",
+      "rows": 1231,
+      "H5_full_sha_source": "existing accepted E42 source-c-CP08-CP06-F2.json@7319c90a; not rehashed in this task"
+    },
+    {
+      "tier": "hard",
+      "selected_h5_sha256": "ad08ae2d7cdb751ac77fa97f240fb155b98c49035c51a73e791ad1013aa1c49f",
+      "actual_instance_sha256": "a9eee5d7710c38ebde1441b9658a276f83dea1b88ea0c27953b3300e6d9db363",
+      "rows": 1414,
+      "H5_full_sha_source": "existing accepted E42 source-c-CP08-CP06-F2.json@7319c90a; not rehashed in this task"
+    }
+  ]
+}

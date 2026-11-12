@@ -1,0 +1,29 @@
+{
+  "task": "CP01",
+  "rule_version": "mind2act-final-scoring-20261105",
+  "snapshot": {
+    "file": "feishu-20261101/CP01.md",
+    "sha256": "67c5be0b77fcd7dca4c428fb7d05183bcb8fbea132b6a7128cb54d9dad0bc6e4",
+    "obj_token": "JeYJdP034oAD5xxvmMRcCLLFn0g",
+    "edit_time": "1793287865"
+  },
+  "source_id": "cp01-mh-single-place-keep-final-camera-v2",
+  "formula": "success: 100; otherwise difficulty cap * max(0, correct core units - wrong core units - extra core units) / core N; setup earns no partial credit",
+  "required_steps": {
+    "easy": 3,
+    "medium": 8,
+    "hard": 12
+  },
+  "scoring_version": "mind2act-final-scoring-20261105",
+  "authority": "reviews/final-version-20261105/FINAL-VERSION.md",
+  "core_units": {
+    "easy": 3,
+    "medium": 6,
+    "hard": 9
+  },
+  "partial_caps": {
+    "easy": 15,
+    "medium": 10,
+    "hard": 7
+  }
+}

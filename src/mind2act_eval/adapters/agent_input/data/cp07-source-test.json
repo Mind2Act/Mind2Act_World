@@ -1,0 +1,30 @@
+{
+  "schema": "cp07.source-test-recipe.v1",
+  "input_protocol": "mind2act-common_input-coding-cp07-original8-v2",
+  "authority": "Historical original-eight reader only; superseded for replacement fixed50 by training-layout v3",
+  "source_protocol": "cp07-original-eight-v1",
+  "source_code_sha256": "4c5c24e0f9ab27e6a616f87345d571830488430ccbee0369fa13eb08f2044132",
+  "source_request_sha256": "762e1a6dedba760c10f317865feb99d44f9a17ccb7f4d364e4bae825a86219e3",
+  "profiles": {
+    "easy": {
+      "required_pieces": 8,
+      "stock_pieces": 8,
+      "scoring_steps": 10
+    },
+    "medium": {
+      "required_pieces": 8,
+      "stock_pieces": 11,
+      "scoring_steps": 10
+    },
+    "hard": {
+      "required_pieces": 8,
+      "stock_pieces": 14,
+      "scoring_steps": 10
+    }
+  },
+  "goals": {
+    "easy": "Goal: Build a stable bridge across the gap with continuous wheel paths on both sides. Release the bridge pieces, then press and release the button and let the car drive across to the opposite bank.\n\nTASK RECIPE:\n# Bridge Construction and Car Crossing — Easy\n\n## Capability dimension\nSelect and assemble a functional structure, then verify its operation.\n\n## Description\nEight pieces, all needed; no spares. Carry each piece in a real finger grasp, lifted over 35 mm; each must end seated within 12 mm of its place, supported by the pieces below. After releasing the bridge, press the start button once and release it, then keep both arms out of the button area and the car lane. The car starts when the lane is clear and must reach the opposite bank without leaving the lane, falling or tipping.\n\n## Scoring\n100: Full success — all task requirements are satisfied.\nOtherwise: 20 × k / 10 points (always below 20). Steps: the 8 bridge pieces in place, lower layers first, one valid button press after the bridge is complete, then the car reaching the opposite bank. k counts the required steps completed consecutively from the start, before the first error.",
+    "medium": "Goal: Build a stable bridge across the gap with continuous wheel paths on both sides. Choose suitable pieces by shape and size from the stock, which includes extra blocks, and leave unused blocks aside. Release the bridge pieces, then press and release the button and let the car drive across to the opposite bank.\n\nTASK RECIPE:\n# Bridge Construction and Car Crossing — Medium\n\n## Capability dimension\nSelect and assemble a functional structure, then verify its operation.\n\n## Description\nEight of the eleven pieces are needed; leave the spares aside and do not move the car before the start. Carry each piece in a real finger grasp, lifted over 35 mm; each must end seated within 12 mm of its place, supported by the pieces below. After releasing the bridge, press the start button once and release it, then keep both arms out of the button area and the car lane. The car starts when the lane is clear and must reach the opposite bank without leaving the lane, falling or tipping.\n\n## Scoring\n100: Full success — all task requirements are satisfied.\nOtherwise: 20 × k / 10 points (always below 20). Steps: the 8 bridge pieces in place, lower layers first, one valid button press after the bridge is complete, then the car reaching the opposite bank. k counts the required steps completed consecutively from the start, before the first error. A spare piece in the bridge is an error.",
+    "hard": "Goal: Build a stable bridge across the gap with continuous wheel paths on both sides. Choose suitable pieces by shape and size from the stock, which includes extra blocks, and leave unused blocks aside. Release the bridge pieces, then press and release the button and let the car drive across to the opposite bank.\n\nTASK RECIPE:\n# Bridge Construction and Car Crossing — Hard\n\n## Capability dimension\nSelect and assemble a functional structure, then verify its operation.\n\n## Description\nEight of the fourteen pieces are needed; any valid choice counts. Leave the spares aside and do not move the car before the start. Carry each piece in a real finger grasp, lifted over 35 mm; each must end seated within 12 mm of its place, supported by the pieces below. After releasing the bridge, press the start button once and release it, then keep both arms out of the button area and the car lane. The car starts when the lane is clear and must reach the opposite bank without leaving the lane, falling or tipping.\n\n## Scoring\n100: Full success — all task requirements are satisfied.\nOtherwise: 20 × k / 10 points (always below 20). Steps: the 8 bridge pieces in place, lower layers first, one valid button press after the bridge is complete, then the car reaching the opposite bank. k counts the required steps completed consecutively from the start, before the first error. A spare piece in the bridge is an error."
+  }
+}

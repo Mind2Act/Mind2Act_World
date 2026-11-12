@@ -1,0 +1,36 @@
+{
+  "delivered_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "entries": [
+    {
+      "d": [
+        "easy"
+      ],
+      "en": "Carry the tray with two balls by its handle to the delivery platform, keeping each ball inside its marked circle. Set the tray down stably, release it and retreat. Do not touch the balls or hit other objects.",
+      "ex": "",
+      "zh": "抓住把手，把放着两个球的托盘端到交付平台，每个球都保持在自己的标记圆内。平稳放下托盘、松开并撤离。不要碰球，也不要撞到其他物体。"
+    },
+    {
+      "d": [
+        "medium"
+      ],
+      "en": "Carry the tray of balls by its handle from START to DESTINATION around the column, keeping each ball inside its marked circle. Set the tray down stably, release it and retreat. Do not touch the balls or hit anything.",
+      "ex": "",
+      "zh": "抓住把手，把放着球的托盘从 START 绕过柱子端到 DESTINATION，每个球都保持在自己的标记圆内。平稳放下托盘、松开并撤离。不要碰球，也不要撞到任何东西。"
+    },
+    {
+      "d": [
+        "hard"
+      ],
+      "en": "Carry the tray of four balls by its handle from START to DESTINATION around the two staggered columns, keeping each ball inside its marked circle. Set the tray down stably, release it and retreat. Do not touch the balls or hit anything.",
+      "ex": "",
+      "zh": "抓住把手，把放着四个球的托盘从 START 绕过两根交错的柱子端到 DESTINATION，每个球都保持在自己的标记圆内。平稳放下托盘、松开并撤离。不要碰球，也不要撞到任何东西。"
+    }
+  ],
+  "goal_recipe": {
+    "easy": "Goal: Carry the tray with two balls by its handle to the delivery platform, keeping each ball inside its marked circle. Set the tray down stably, release it and retreat. Do not touch the balls or hit other objects.\n\nTASK RECIPE:\n# Tray Transport and Balance — Easy\n\n## Description\nCarry two balls to the delivery platform; each marked circle has radius 30 mm. Grasp the tray handle and lift the tray at least 60 mm before delivery. Choose your route and final orientation from the visible scene. From evaluation start until cutoff, keep every ball on the tray; its maximum horizontal shift from its own initial position, measured relative to the tray, must not exceed its marked radius plus 0.5 mm tolerance. Later recovery cannot erase a violation. Do not touch the balls or collide with obstacles; balls cannot substitute for one another.\n\n## Completion\nThroughout the final continuous simulated second, leave the tray on the delivery platform with horizontal placement error at most 20 mm and height error below 3 mm. Throughout the final continuous simulated second, release all fingers and keep both end effectors more than 60 mm from the handle; maintain platform support at more than 90% of the samples in that final one-second window (measured upward platform force above 0.05 N at each supported sample), tray tilt below 3 degrees, tray linear speed below 0.005 m/s, angular speed below 0.05 rad/s and every ball speed relative to the tray below 0.025 m/s. Success requires the real grasp and lift, compliant transport of every ball, and stable released delivery with retreat.\n\n## Scoring\nFull success scores 100; valid failures score 0, 5 or 10.",
+    "medium": "Goal: Carry the tray of balls by its handle from START to DESTINATION around the column, keeping each ball inside its marked circle. Set the tray down stably, release it and retreat. Do not touch the balls or hit anything.\n\nTASK RECIPE:\n# Tray Transport and Balance — Medium\n\n## Description\nCarry the visible load of balls from START to DESTINATION around one column; each marked circle has radius 25 mm. Grasp the tray handle and lift the tray at least 60 mm before delivery. Choose your route and final orientation from the visible scene. From evaluation start until cutoff, keep every ball on the tray; its maximum horizontal shift from its own initial position, measured relative to the tray, must not exceed its marked radius plus 0.5 mm tolerance. Later recovery cannot erase a violation. Do not touch the balls or collide with obstacles; balls cannot substitute for one another.\n\n## Completion\nThroughout the final continuous simulated second, leave the tray on the delivery platform with horizontal placement error at most 20 mm and height error below 3 mm. Throughout the final continuous simulated second, release all fingers and keep both end effectors more than 60 mm from the handle; maintain platform support at more than 90% of the samples in that final one-second window (measured upward platform force above 0.05 N at each supported sample), tray tilt below 3 degrees, tray linear speed below 0.005 m/s, angular speed below 0.05 rad/s and every ball speed relative to the tray below 0.025 m/s. Success requires the real grasp and lift, compliant transport of every ball, and stable released delivery with retreat.\n\n## Scoring\nFull success scores 100; valid failures score 0, 5 or 10.",
+    "hard": "Goal: Carry the tray of four balls by its handle from START to DESTINATION around the two staggered columns, keeping each ball inside its marked circle. Set the tray down stably, release it and retreat. Do not touch the balls or hit anything.\n\nTASK RECIPE:\n# Tray Transport and Balance — Hard\n\n## Description\nCarry four balls from START to DESTINATION around two staggered columns; each marked circle has radius 20 mm. Grasp the tray handle and lift the tray at least 60 mm before delivery. Choose your route and final orientation from the visible scene. From evaluation start until cutoff, keep every ball on the tray; its maximum horizontal shift from its own initial position, measured relative to the tray, must not exceed its marked radius plus 0.5 mm tolerance. Later recovery cannot erase a violation. Do not touch the balls or collide with obstacles; balls cannot substitute for one another.\n\n## Completion\nThroughout the final continuous simulated second, leave the tray on the delivery platform with horizontal placement error at most 20 mm and height error below 3 mm. Throughout the final continuous simulated second, release all fingers and keep both end effectors more than 60 mm from the handle; maintain platform support at more than 90% of the samples in that final one-second window (measured upward platform force above 0.05 N at each supported sample), tray tilt below 3 degrees, tray linear speed below 0.005 m/s, angular speed below 0.05 rad/s and every ball speed relative to the tray below 0.025 m/s. Success requires the real grasp and lift, compliant transport of every ball, and stable released delivery with retreat.\n\n## Scoring\nFull success scores 100; valid failures score 0, 5 or 10."
+  },
+  "scoring_version": "assigned7-scoring-20261029-v4",
+  "spec_sha256": "2ee19f7934f421d094a23f918a6cf1c437ac01164522ca2368d27875fc47ce00"
+}

@@ -1,0 +1,41 @@
+{
+  "source_id": "pr7-short-tail-v2",
+  "source_revision": "b6432b408607981059acf36ee668b731e36d70a0",
+  "source_map_id": "source_2f2ecef68b27",
+  "source_map_sha256": "c6d5b3a1f0c51817cccbc2a04f95d930cb33811650507505a2e20d0c84096296",
+  "source_prefix_id": "pr7-short-tail-v2/source/cases/PR/PR7",
+  "public_alias": {
+    "DR4": "PR7"
+  },
+  "files": {
+    "easy_scoring.py": "d8d37b478b733a8690634b0e6e4265c99c5ea6912abe32710ff5059dfa73544b",
+    "medium_scoring.py": "9f515ff82cf00dbb3219267c86a1d409770e26b794ec1392a61283fc604a0c98",
+    "scoring.py": "47f2650906d4d8c26d3cbace4d073f2ba4a42f0aa2f26bbaba845147f9fecf2e",
+    "seeded.py": "38f1ab87bf9f93353ac308b80f74b16fbcdc99234ee43149fea5c4f383cd914f"
+  },
+  "historical_route_and_heading_gates_excluded": true,
+  "scoring_rule_version": "assigned7-scoring-20261029-v4",
+  "scoring_snapshot_sha256": "2ee19f7934f421d094a23f918a6cf1c437ac01164522ca2368d27875fc47ce00",
+  "native_snapshot_source_id": "replay-new15-20261031",
+  "native_snapshot_files": {
+    "physical_score.py": "983aa07a656fa312286c96285efb0e8c0bdcb7696bb38b17cf0a06fd0f7498aa",
+    "physical_kinematics.py": "f2acfa08f9f712078e16aeb2ec4518a5a3ea7330a1835a7973262e9aeac7163b",
+    "world.py": "f2ab8d0ddcc553d0bc7b947b2262346cfa0cb211691280f10975c48b22895251",
+    "binding.py": "64fabaf5008881ecd6dfecd8f2834fd439961393780fe3ee11f359263d95f28b"
+  },
+  "source_reset_joint_state": {
+    "arm_degrees": [
+      0.0,
+      65.0,
+      100.0,
+      -65.0,
+      0.0,
+      0.0
+    ],
+    "finger_positions_m": [
+      0.044,
+      0.044
+    ],
+    "source_file": "world.py"
+  }
+}

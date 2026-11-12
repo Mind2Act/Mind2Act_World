@@ -1,0 +1,10 @@
+{
+  "task": "PR1",
+  "difficulty": "easy",
+  "source_case": {
+    "case_id": "PR1_synthetic_easy_0001",
+    "task": "PR1",
+    "parameters": {"difficulty": "easy", "initial": 13.3, "target": 6.9, "task": "PR1"}
+  },
+  "source_protocol": {"fixture_y_offset_m": -0.045, "tolerance": 0.2}
+}

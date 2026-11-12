@@ -1,0 +1,252 @@
+{
+  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "instructions": {
+    "CP01": [
+      {
+        "d": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "en": "At the start, watch the reference meal trays pass on the conveyor and remember the three food types on each. Then prepare the corresponding empty meal trays on the table and fill each with the same three food types from the continuously moving supply.",
+        "ex": "",
+        "zh": "开场先观察传送带上经过的参考餐盘，记住每盘的三种食物；随后在桌面上准备好对应的空餐盘，从持续移动的供料中取食物，给每盘配上与其参考餐盘相同的三种食物。"
+      }
+    ],
+    "CP02": [
+      {
+        "d": [
+          "easy"
+        ],
+        "en": "Remember each macaron and its place on the still cake shown for three seconds. Recreate the arrangement as the cake rotates.",
+        "ex": "",
+        "zh": "记住静止展示三秒的蛋糕上每个马卡龙及其位置。在蛋糕旋转时复原摆放。"
+      },
+      {
+        "d": [
+          "medium"
+        ],
+        "en": "Remember each macaron and its place on the still cake shown for three seconds. Open the ingredient-box lid, press the green button and recreate the arrangement as the cake rotates.",
+        "ex": "",
+        "zh": "记住静止展示三秒的蛋糕上每个马卡龙及其位置。打开配料盒盖，按绿色按钮，在蛋糕旋转时复原摆放。"
+      },
+      {
+        "d": [
+          "hard"
+        ],
+        "en": "Remember each macaron and its place on the still cake shown for three seconds. Open the ingredient-box lid, press the green button and recreate the arrangement as the cake rotates. Then press the red button, wait for the cake to stop, and place the cake cover over it.",
+        "ex": "",
+        "zh": "记住静止展示三秒的蛋糕上每个马卡龙及其位置。打开配料盒盖，按绿色按钮，在蛋糕旋转时复原摆放。然后按红色按钮，等蛋糕停下后盖上蛋糕罩。"
+      }
+    ],
+    "CP03": [
+      {
+        "d": [
+          "easy"
+        ],
+        "en": "Load <N> upright plates into the moving empty slots without disturbing other plates. Press the green button before loading.",
+        "ex": "",
+        "zh": "把 <N> 个竖立餐盘装入移动中的空槽，不要扰动其他餐盘；装盘前先按绿色按钮。"
+      },
+      {
+        "d": [
+          "medium"
+        ],
+        "en": "Load <N> upright plates into the moving empty slots without disturbing other plates. Move the lever to its upright middle position, release it, then press the green button before loading.",
+        "ex": "",
+        "zh": "把 <N> 个竖立餐盘装入移动中的空槽，不要扰动其他餐盘；先把拨杆拨到竖直居中的位置并松手，再按绿色按钮开始装盘。"
+      },
+      {
+        "d": [
+          "hard"
+        ],
+        "en": "Load <N> upright plates into the moving empty slots without disturbing other plates. Tilt the lever fully toward the back of the machine, away from the robot, release it, then press the green button before loading.",
+        "ex": "",
+        "zh": "把 <N> 个竖立餐盘装入移动中的空槽，不要扰动其他餐盘；先把拨杆向机器后方（远离机器人）拨到底并松手，再按绿色按钮开始装盘。"
+      }
+    ],
+    "CP04": [
+      {
+        "d": [
+          "easy"
+        ],
+        "en": "Pour each required jar into the pot in the remembered recipe order, returning jars upright and caps to the tray. Turn the black knob to HEAT and press the green button; within 4 s after 80 °C, switch to KEEP WARM, then press it again.",
+        "ex": "",
+        "zh": "按记住的菜谱顺序把每个需要的罐子倒进锅里，空罐竖直放回、盖子放到托盘上。把黑色旋钮转到 HEAT 并按绿色按钮；到 80 °C 后 4 秒内转到 KEEP WARM，再按一次绿色按钮关闭。"
+      },
+      {
+        "d": [
+          "medium"
+        ],
+        "en": "Open the drawer. Pour each required jar into the pot in the remembered recipe order, returning jars upright and caps to the tray, then cover the pot. Turn the black knob to HEAT and press the green button; within 3 s after 80 °C, switch to KEEP WARM, then press it again.",
+        "ex": "",
+        "zh": "拉开抽屉。按记住的菜谱顺序把每个需要的罐子倒进锅里，空罐竖直放回、盖子放到托盘上，再盖上锅盖。把黑色旋钮转到 HEAT 并按绿色按钮；到 80 °C 后 3 秒内转到 KEEP WARM，再按一次绿色按钮关闭。"
+      },
+      {
+        "d": [
+          "hard"
+        ],
+        "en": "Open the drawer. Pour each required jar into the pot in the remembered recipe order, returning jars upright and caps to the tray, then cover the pot. Turn the black knob to HEAT and press the green button; within 2 s after 80 °C, switch to KEEP WARM, then press it again.",
+        "ex": "",
+        "zh": "拉开抽屉。按记住的菜谱顺序把每个需要的罐子倒进锅里，空罐竖直放回、盖子放到托盘上，再盖上锅盖。把黑色旋钮转到 HEAT 并按绿色按钮；到 80 °C 后 2 秒内转到 KEEP WARM，再按一次绿色按钮关闭。"
+      }
+    ],
+    "CP05": [
+      {
+        "d": [
+          "easy"
+        ],
+        "en": "Pick up the central mallet, press the triangle-marked button and watch the demonstration while holding it, then reproduce the eight key presses in order. Return and release the mallet, release all keys, and withdraw your arms.",
+        "ex": "",
+        "zh": "拿起中间的槌，按下带三角标记的按钮，拿着槌看示范，然后按顺序复现 8 次按键；放回并松开槌，松开所有键，收回手臂。"
+      },
+      {
+        "d": [
+          "medium"
+        ],
+        "en": "Pick up both side mallets, press the triangle-marked button and watch the demonstration while holding both, then reproduce the eight key presses in order using either mallet. Return and release both mallets, release all keys, and withdraw your arms.",
+        "ex": "",
+        "zh": "拿起两侧的槌，按下带三角标记的按钮，拿着两根槌看示范，然后用任一根槌按顺序复现 8 次按键；放回并松开两根槌，松开所有键，收回手臂。"
+      },
+      {
+        "d": [
+          "hard"
+        ],
+        "en": "Set volume to MAX and release the slider. Pick up both side mallets, press the triangle-marked button and watch the demonstration while holding both, then reproduce the twelve key presses in order using either mallet. Return and release both mallets, release all keys, withdraw your arms, and keep volume at MAX.",
+        "ex": "",
+        "zh": "先把音量推到 MAX 并松开推杆。拿起两侧的槌，按下带三角标记的按钮，拿着两根槌看示范，然后用任一根槌按顺序复现 12 次按键；放回并松开两根槌，松开所有键，收回手臂，音量保持 MAX。"
+      }
+    ],
+    "DR1": [
+      {
+        "d": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "en": "Pick up all <N> packages on the conveyor belt and place them in the central collection tray.",
+        "ex": "Pick up all 3 packages on the conveyor belt and place them in the central collection tray.",
+        "zh": "把传送带上的 <N> 个包裹全部拿起，放进中间的收集托盘。"
+      }
+    ],
+    "DR2": [
+      {
+        "d": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "en": "Press the currently illuminated button within <N> seconds and release within <N> second. Respond correctly to all <N> cues; never press an unlit button.",
+        "ex": "Press the currently illuminated button within 4.0 seconds and release within 1 second. Respond correctly to all 10 cues; never press an unlit button.",
+        "zh": "在 <N> 秒内按下当前亮起的按钮，并在 <N> 秒内松开。对全部 <N> 次提示都正确响应；不要按没亮的按钮。"
+      }
+    ],
+    "E1": [
+      {
+        "d": [
+          "easy"
+        ],
+        "en": "Observe and remember each batch of items. After the first batch, place the one item that appeared in the immediately preceding batch into the submission tray.",
+        "ex": "",
+        "zh": "观察并记住每一批物品。从第二批开始，把在紧邻上一批中出现过的那一个物品放进提交托盘。"
+      },
+      {
+        "d": [
+          "medium"
+        ],
+        "en": "Observe and remember each batch of items. After the first batch, place the one item that appeared in any of the previous three batches into the submission tray.",
+        "ex": "",
+        "zh": "观察并记住每一批物品。从第二批开始，把在之前三批中任一批出现过的那一个物品放进提交托盘。"
+      },
+      {
+        "d": [
+          "hard"
+        ],
+        "en": "Observe and remember each batch of items. After the first batch, place the one item that appeared in any of the previous five batches into the submission tray.",
+        "ex": "",
+        "zh": "观察并记住每一批物品。从第二批开始，把在之前五批中任一批出现过的那一个物品放进提交托盘。"
+      }
+    ],
+    "F1": [
+      {
+        "d": [
+          "easy"
+        ],
+        "en": "Probe the two unmarked buttons and remember how each moves the slider. After the slider resets and the goal appears, reach the visible goal using the fewest presses.",
+        "ex": "",
+        "zh": "试按两个无标记按钮，记住各自如何移动滑块。滑块复位、目标出现后，用最少的按压次数到达可见目标。"
+      },
+      {
+        "d": [
+          "medium",
+          "hard"
+        ],
+        "en": "Probe the four unmarked buttons and remember how each moves the slider. After the slider resets and the goal appears, reach the visible goal on the <N> by <N> grid using the fewest presses.",
+        "ex": "Probe the four unmarked buttons and remember how each moves the slider. After the slider resets and the goal appears, reach the visible goal on the 3 by 3 grid using the fewest presses.",
+        "zh": "试按四个无标记按钮，记住各自如何移动滑块。滑块复位、目标出现后，在 <N>×<N> 网格上用最少的按压次数到达可见目标。"
+      }
+    ],
+    "M1": [
+      {
+        "d": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "en": "Remember the target location and station route. Track the target through the cover exchanges, uncover it, and move it through the required stations in order.",
+        "ex": "",
+        "zh": "记住目标位置和站点路线。在罩子交换过程中追踪目标，打开罩子取出它，并按顺序把它移过要求的站点。"
+      }
+    ],
+    "P1": [
+      {
+        "d": [
+          "easy"
+        ],
+        "en": "Remember the initial orders and place all requested ingredients into the indicated containers.",
+        "ex": "",
+        "zh": "记住初始订单，把所有要求的食材放进指定的容器。"
+      },
+      {
+        "d": [
+          "medium"
+        ],
+        "en": "Remember the initial orders and one additional order shown later. Place all requested ingredients into the indicated containers; the additional order adds to earlier demand.",
+        "ex": "",
+        "zh": "记住初始订单以及之后出现的一个追加订单。把所有要求的食材放进指定容器；追加订单在之前的需求上累加。"
+      },
+      {
+        "d": [
+          "hard"
+        ],
+        "en": "Remember the initial orders and two additional orders shown later. Place all requested ingredients into the indicated containers; each additional order adds to earlier demand.",
+        "ex": "",
+        "zh": "记住初始订单以及之后出现的两个追加订单。把所有要求的食材放进指定容器；每个追加订单在之前的需求上累加。"
+      }
+    ],
+    "PR3": [
+      {
+        "d": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "en": "Grasp the marker and trace the complete visible path, then lift.",
+        "ex": "",
+        "zh": "抓起马克笔，沿可见路径完整描画，然后抬笔。"
+      }
+    ],
+    "S1": [
+      {
+        "d": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "en": "Remember the four colored slots, observe the carousel rotation, then place each colored block into its original matching slot after the carousel stops.",
+        "ex": "",
+        "zh": "记住四个彩色槽位，观察转盘旋转，在转盘停下后把每个彩色方块放回它原来对应的槽位。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "source_id": "pr3-original-source-mainline-pro-sourcepath",
+  "marker": {
+    "center_world_m": [
+      0.0,
+      -0.171,
+      0.794
+    ],
+    "mass_kg": 0.025,
+    "solver_position_iterations": 64,
+    "solver_velocity_iterations": 16
+  },
+  "paper": {
+    "top_z_m": 0.7745,
+    "center_xy_m": [
+      0.0,
+      0.065
+    ],
+    "board_proxy_size_m": [
+      0.44,
+      0.285,
+      0.003
+    ],
+    "board_proxy_center_y_m": 0.065
+  },
+  "contact": {
+    "contact_offset_m": 0.0002,
+    "static_friction": 0.8,
+    "dynamic_friction": 0.65,
+    "restitution": 0.0,
+    "barrel_torsional_patch_radius_m": 0.003,
+    "barrel_min_torsional_patch_radius_m": 0.001
+  },
+  "colliders": {
+    "barrel": {
+      "x": -0.005,
+      "radius": 0.01,
+      "length": 0.112
+    },
+    "cap": {
+      "x": 0.073,
+      "radius": 0.0108,
+      "length": 0.036
+    },
+    "neck": {
+      "x": -0.078,
+      "radius": 0.004,
+      "length": 0.01
+    },
+    "tip": {
+      "x": -0.084,
+      "radius": 0.0025
+    }
+  },
+  "marker_visual_names": [
+    "MarkerBarrel",
+    "MarkerNeck",
+    "NeckMoldSeam",
+    "RoundFeltNib",
+    "RearSeam",
+    "PostedCap",
+    "BarrelPrintedLabel",
+    "CapMoldRib0",
+    "CapMoldRib1",
+    "CapMoldRib2",
+    "CapMoldRib3",
+    "CapMoldRib4"
+  ],
+  "static_roots": [
+    "/World/Worktable",
+    "/World/TableFrame",
+    "/World/CameraStand",
+    "/World/PedestalLeft",
+    "/World/PedestalRight",
+    "/World/Floor"
+  ],
+  "clamp_prefixes": [
+    "Clip",
+    "Pivot",
+    "Lever",
+    "Pressure",
+    "Rivet",
+    "Torsion",
+    "Aluminum",
+    "Foot"
+  ],
+  "ink": {
+    "valid_x_m": 0.22,
+    "valid_y_half_m": 0.1425,
+    "valid_z_tol_m": 0.0001,
+    "width_m": 0.005
+  },
+  "tick_hz": 120,
+  "normal_completion_settle_ticks": 120
+}

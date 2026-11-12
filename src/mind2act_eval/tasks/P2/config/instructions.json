@@ -1,0 +1,23 @@
+{
+  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "task_id": "P2",
+  "entries": [
+    {
+      "d": [
+        "easy",
+        "medium"
+      ],
+      "en": "Remove the lid, remember the dim sum order as you unstack the baskets from top to bottom onto the mats, then restack them in the same order from bottom to top on the left steamer pot and replace the lid.",
+      "ex": "",
+      "zh": "取下盖子，在从上到下把蒸笼一层层拿下放到垫子上的过程中记住点心的顺序，然后按同样顺序从下到上叠回左边的蒸锅上，并盖回盖子。"
+    },
+    {
+      "d": [
+        "hard"
+      ],
+      "en": "Remove the lid, remember the dim sum order as you unstack the baskets from top to bottom onto the mats, then restack them in the same order from bottom to top on the left steamer pot and replace the lid without using any distractor baskets.",
+      "ex": "",
+      "zh": "取下盖子，在从上到下把蒸笼一层层拿下放到垫子上的过程中记住点心的顺序，然后按同样顺序从下到上叠回左边的蒸锅上并盖回盖子，不要用到任何干扰蒸笼。"
+    }
+  ]
+}

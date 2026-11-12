@@ -1,0 +1,29 @@
+{
+  "task": "CP02",
+  "rule_version": "mind2act-final-scoring-20261105",
+  "snapshot": {
+    "file": "feishu-20261101/CP02.md",
+    "sha256": "5e340246cfc1fb32f54a7c788ba39e83d14a9a0053348b6908f54eeec0023719",
+    "obj_token": "FK1TdybS2odZTBxGjoDc6Ne6nRb",
+    "edit_time": "1793320969"
+  },
+  "source_id": "cp02-hard-support-v3 (Easy/Medium: cp02-em-qualified-batch)",
+  "formula": "success: 100; otherwise difficulty cap * max(0, correct core units - wrong core units - extra core units) / core N; setup earns no partial credit",
+  "required_steps": {
+    "easy": 4,
+    "medium": 8,
+    "hard": 10
+  },
+  "scoring_version": "mind2act-final-scoring-20261105",
+  "authority": "reviews/final-version-20261105/FINAL-VERSION.md",
+  "core_units": {
+    "easy": 4,
+    "medium": 6,
+    "hard": 6
+  },
+  "partial_caps": {
+    "easy": 15,
+    "medium": 10,
+    "hard": 7
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "schema": "mind2act_eval.old15_layout_inventory.v1",
+  "source": "l20-eval-source/data/random_layouts",
+  "layout_pattern": "{task}/{difficulty}/{logical_slot}.json",
+  "coordinates": {
+    "settled_frame": "world",
+    "units": "m",
+    "quaternion": "wxyz"
+  },
+  "total_layouts": 2250,
+  "tiers": [
+    {
+      "task": "CP01",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP01",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP01",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP02",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 300,
+      "settled_objects": 300,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP02",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 300,
+      "settled_objects": 300,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP02",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 300,
+      "settled_objects": 300,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP03",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 150,
+      "settled_objects": 150,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP03",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 150,
+      "settled_objects": 150,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP03",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 150,
+      "settled_objects": 150,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP04",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 0,
+      "settled_objects": 0,
+      "empty_layouts": 50,
+      "archived_steps": []
+    },
+    {
+      "task": "CP04",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 0,
+      "settled_objects": 0,
+      "empty_layouts": 50,
+      "archived_steps": []
+    },
+    {
+      "task": "CP04",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 0,
+      "settled_objects": 0,
+      "empty_layouts": 50,
+      "archived_steps": []
+    },
+    {
+      "task": "CP05",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP05",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "CP05",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "E",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 0,
+      "settled_objects": 0,
+      "empty_layouts": 50,
+      "archived_steps": []
+    },
+    {
+      "task": "E",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 0,
+      "settled_objects": 0,
+      "empty_layouts": 50,
+      "archived_steps": []
+    },
+    {
+      "task": "E",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 0,
+      "settled_objects": 0,
+      "empty_layouts": 50,
+      "archived_steps": []
+    },
+    {
+      "task": "F",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 300,
+      "settled_objects": 300,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "F",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 300,
+      "settled_objects": 300,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "F",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 300,
+      "settled_objects": 300,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "FR1",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "FR1",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "FR1",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "FR2",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "FR2",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "FR2",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "M",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 150,
+      "settled_objects": 150,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "M",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 150,
+      "settled_objects": 150,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "M",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 150,
+      "settled_objects": 150,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "P",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 350,
+      "settled_objects": 350,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "P",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 349,
+      "settled_objects": 349,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "P",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 350,
+      "settled_objects": 350,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "PR1",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "PR1",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "PR1",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "PR2",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "PR2",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "PR2",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "PR3",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "PR3",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "PR3",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 250,
+      "settled_objects": 250,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "S",
+      "difficulty": "easy",
+      "layouts": 50,
+      "objects": 350,
+      "settled_objects": 350,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "S",
+      "difficulty": "medium",
+      "layouts": 50,
+      "objects": 350,
+      "settled_objects": 350,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    },
+    {
+      "task": "S",
+      "difficulty": "hard",
+      "layouts": 50,
+      "objects": 350,
+      "settled_objects": 350,
+      "empty_layouts": 0,
+      "archived_steps": [
+        300
+      ]
+    }
+  ]
+}

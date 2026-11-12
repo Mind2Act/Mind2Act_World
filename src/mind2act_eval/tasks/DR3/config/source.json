@@ -1,0 +1,54 @@
+{
+  "source_id": "fr3-replay-new15-20261031",
+  "source_repository": "zgcazyz/mind2act-new-cases",
+  "source_revision": "b6432b408607981059acf36ee668b731e36d70a0",
+  "native_task_id": "FR3",
+  "public_task_id": "DR3",
+  "files": {
+    "author.py": "12db4345e38c611efb178174a483139ad6384f0d0c9b50bff06e08756e134fdb",
+    "binding.py": "bf7813a96b64182d6d38cb0c8e01f5af53ac6a514034ff9288fd0c0dd03f0764",
+    "detector_capture.py": "d83909af875fd0d190b0a6da0f53ea0d6f4935710a5b1cef35f35529f235c451",
+    "detector_geometry.py": "e8b0b68f8cde56f02562136eadcbde074c551cf7148df93c137c10df0577735b",
+    "dual_config.py": "af03801cc9d6eb20f151d13b4de7fa5cacf348afbb48c767f43493ec2de39b05",
+    "dual_geometry.py": "1393343fec340a1c6ae2f8597d593f7c750769c5baab839d58e133c5872d783b",
+    "dual_world.py": "d22811d517b94b0264ef0e07be4b41deeb83e1375e587a98d02774e6bddb0bf0",
+    "event_detector.py": "af4a27e0167251d724618df7ab6373289c924047d787329336c679362e5bf840",
+    "evidence.py": "ecb448da5209fa77a1775e15cda6505ce9b594660db83b2abb4e25d4eaeaad72",
+    "layout_constants.py": "94bb941507db8b16b3bb4851e38d3cd704c1ad596f4a2e0f73d7cc7c55f24152",
+    "original/assets.py": "7e4a8bfbd0f04b9f43e811fc0833415294ce7ebb4cf5d5344be4cd98a770c64a",
+    "original/dual_config.py": "50c150a2229724a6f86a43b7585bd905829779a598d4bc28f9ff31802a31baac",
+    "original/dual_scene.py": "fc6ede53c6a14ea1191de424af3c04d99f14ba46208cf404eb94cdd2bf1e1355",
+    "original/gate_assembly.py": "eda61e7c39f591dbdc2e5f9e170ef62bfb358edb470585e2eef3b6076bb14490",
+    "original/layout.py": "b5bc3fd93712d3066da0f66205ebc7e1b9f83b0908cf7cf0b5f8452be3d9aab6",
+    "original/layout_constants.py": "8a177d8a10fbd8b618a822c751240380114fbe1d67596c7f596a03a3978ba368",
+    "original/scene.py": "c7f17ccd9c0070d000934d747a635f5b477da8ad20dd24549b3dc1942361c30d",
+    "original/timing.py": "be5c333b813827be22ccb6de777de15810249d28c869d5dd382bde589c644508",
+    "single_world.py": "5b590716cf918f7ef38f899797cca9176eb33b6128b2cecb6e8e0083cfa6c89b",
+    "source_closure.py": "730ffb6ac70117686839e5a14427df02e7dab29d9314fd455782884928c3e5af",
+    "task.py": "361fce45161c1ffa563a9335bf204eb0deb113f02be030d61d9db0107dea85a2",
+    "timeline.py": "ccffe2fbfa9161196fb4e6db1ef57a54d4ecc0bfb979e179c2007196fac10e4f",
+    "timing.py": "be5c333b813827be22ccb6de777de15810249d28c869d5dd382bde589c644508"
+  },
+  "migration": {
+    "legacy_gpu_qualification_is_scoring_precondition": false,
+    "robot_and_sim_lifecycle": "shared framework",
+    "physics_and_geometry_modified": false,
+    "capture_geometry_repair": {
+      "hidden_guide_meshes": "read actual Mesh descendants of CollisionAPI Xforms, no visual BBox filter",
+      "tray_region": "actual coplanar triangle union, same frozen rectangle/height/tolerance",
+      "motion_contract_changed": false,
+      "historical_raw_evidence_rewritten": false,
+      "rule_semantics_or_thresholds_changed": false
+    },
+    "measurement_contract": {
+      "version": "dr3-measured-physics-substeps-v1",
+      "authority": "root task_ff1afdc34796 explicit clarification, 2026-11-02; implements K0 15:35",
+      "physics_hz": 120,
+      "intra_step_continuous_trajectory_claimed": false,
+      "arbitrary_rotation_envelope_is_scoring_precondition": false,
+      "legacy_complete_raw_sequences_reconstructed_without_rewriting": true,
+      "genuinely_missing_geometry_pose_clock_contact_remains_invalid": true,
+      "source_rule_version_changed": false
+    }
+  }
+}

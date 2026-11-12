@@ -1,0 +1,47 @@
+{
+  "task_id": "PR2",
+  "revision": "scale-target-types-20260919",
+  "status": "static_preview; shared_tolerance_provisional_pending_pilot",
+  "scale": {
+    "range_V": [
+      0,
+      260
+    ],
+    "major_label_step_V": 20,
+    "minor_tick_step_V": 5
+  },
+  "levels": {
+    "easy": {
+      "target_kind": "labelled_major_tick",
+      "example_initial_voltage": 80,
+      "example_target_voltage": 120,
+      "tolerance_V": 1,
+      "tolerance_status": "provisional_common_value_not_calibrated"
+    },
+    "medium": {
+      "target_kind": "unlabelled_minor_tick",
+      "example_initial_voltage": 95,
+      "example_target_voltage": 135,
+      "tolerance_V": 1,
+      "tolerance_status": "provisional_common_value_not_calibrated"
+    },
+    "hard": {
+      "target_kind": "between_minor_ticks",
+      "example_initial_voltage": 92,
+      "example_target_voltage": 132,
+      "tolerance_V": 1,
+      "tolerance_status": "provisional_common_value_not_calibrated"
+    }
+  },
+  "controls": {
+    "target_count": 1,
+    "required_continuous_hold_s": 1,
+    "bidirectional_adjustment": true,
+    "geometry_friction_same_across_levels": true,
+    "goal_geometry_visible": false
+  },
+  "sampling": {
+    "matched_travel_distribution": true,
+    "examples_only_not_fixed_dataset_targets": true
+  }
+}

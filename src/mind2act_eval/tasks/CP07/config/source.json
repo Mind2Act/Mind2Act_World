@@ -1,0 +1,47 @@
+{
+  "source_id": "cp07-bridge-car-canonical-fff77c74",
+  "source_files": {
+    "BRIDGE_CAR/task.py": "86fee0cae91b5ec33aed4d05c2375b628e9147656ec8d2c28a6b41c063faae26",
+    "BRIDGE_CAR/runtime.py": "fff77c74af87096814463f1be451cb21de50dded2df9fde67f3160e625425f16",
+    "BRIDGE_CAR/world.py": "2363c2407d60bf6cba16a1a7285b34eb185b4239b8e04806fdc6fd98f49bb280",
+    "BRIDGE_CAR/case.yaml": "e9c0de7098b3fb4acb57d9d2650b7b981fa54261f63fdecf2b358a740389c701"
+  },
+  "scoring_authority": {
+    "section": "CP07 sections 5 and 6, finalized 2026-10-29",
+    "snapshot_sha256": "a8088df4911036567b16cf46a134ab859a7c8f6a176d9fd57e7c90d6687f7340",
+    "instruction_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae"
+  },
+  "port_scope": "physical producer/scorer and diagnostic prepared-scene binding; no old runtime imports",
+  "evaluation_profile_status": "not claimed; selected training-source binding loads independently of formal slot inventory or a complete Hard solution enumeration",
+  "native_validation": "pending; synthetic CPU evidence does not establish scene equivalence or native success",
+  "diagnostic_binding": {
+    "schema": "cp07.source-binding.v2",
+    "assets": [
+      "station",
+      "cp07_binding"
+    ],
+    "config": [
+      "cp07_mode=diagnostic_training",
+      "cp07_binding_sha256"
+    ],
+    "private_fields": [
+      "identity",
+      "mode",
+      "source_code_sha256",
+      "source_manifest_sha256",
+      "scene_sha256",
+      "solutions_scope",
+      "pieces",
+      "solutions",
+      "bridge_bounds_m",
+      "button_xy_m",
+      "car_start_x_m",
+      "roadtop_start_m",
+      "roadtop_end_m",
+      "lane_y_m",
+      "road_width_m",
+      "finish_x_m"
+    ],
+    "notes": "Explicit source kind and per-kind orientation rule: L_road <= 0.10 rad; all others not_applicable (approved 2026-11-02 01:40). Static support paths and earlier lower-slot references are scene-specific. Known-source-solutions is an explicit diagnostic subset, not a complete Hard equivalence claim. No expert action or selected_sequence is a scoring oracle."
+  }
+}

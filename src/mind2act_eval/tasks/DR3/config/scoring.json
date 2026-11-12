@@ -1,0 +1,6 @@
+{
+  "rule_version": "dr3-env-events-20261029-v5",
+  "authority": "2026-11-01 DR3 sections 5-6",
+  "formula": "full physical success=100; valid failure: all required legal apertures=5, legal same-window delivery=10, otherwise 0; safety violations, bypass/window violations, or bilateral transport contact below 0.95 force 0",
+  "technical_evidence": "unreconstructable required raw evidence is invalid, not a model failure; legacy GPU qualification is not a scoring precondition"
+}

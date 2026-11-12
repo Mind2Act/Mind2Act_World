@@ -1,0 +1,166 @@
+{
+  "donor_commit": "765189d0fe4c754caa170ff08b0e09d0f97859b3",
+  "donor_unified_sha256": "5d82101225ebf8e9bd8e0ad181d5f4f2a511af16d6ac10c6272164ef60bdaa89",
+  "donor_template_sha256": "61917e7a0a7f62143dfe1f0704139eb2fe4fdea533e032fc808f07862e7a4861",
+  "donor_memory_path": "cases/CP/CP05/agent_input/episodic_memory.py",
+  "donor_memory_sha256": "05d5625ee06ff491e3a7ecf518bb2c7a83af832510fa9c5ead65099d4c986156",
+  "port_mapping": {
+    "renderers": "runtime/coding_agent/agent_input/unified.py -> templates.py and policy.py prepare/observation/complete hooks",
+    "memory": "CP05 episodic_memory metadata index, exact-reference open, image LRU and request compaction -> memory.py; capture supplied by current public observation seam",
+    "wait": "physco_eval hold semantics -> wait_steps rows with explicit 120Hz tick durations",
+    "retained_mainline": "native planner, EEF kinematics and motion generation; framework budgets, runner, scene and scorer"
+  },
+  "current_common_sha256": "2d73eab5a4cc91dc85d47c100371bad3299a02de54c6dfac0165fa2c98539548",
+  "goal_sources": [
+    {
+      "task_id": "CP01",
+      "markdown_sha256": "06fc4ecdadf21c49ffca7b537e5664f51fb464832e4a5151fd258e2e90ca05f8",
+      "section": 4
+    },
+    {
+      "task_id": "CP02",
+      "markdown_sha256": "73262289d0f8af1080a46deda1bff4e0a91f46e00ef31c899fe2effed003a26d",
+      "section": 4
+    },
+    {
+      "task_id": "CP03",
+      "markdown_sha256": "fd7d56eaeb5976dfc4c063eaf8cd2c628a461e9662251ed40006dae19a7b595f",
+      "section": 4
+    },
+    {
+      "task_id": "CP04",
+      "markdown_sha256": "7af660a4ee408034ed2ba91a81e99b638cbe1a2e20eefc49b592b0bfdf381eb2",
+      "section": 4
+    },
+    {
+      "task_id": "CP05",
+      "markdown_sha256": "4f9df4f79922a68bce63e7d9dcbf85bdcace5215334860f0273120c7eb2e5110",
+      "section": 4
+    },
+    {
+      "task_id": "CP06",
+      "markdown_sha256": "2d15bd87b97e93133d33bae7d1d0c59d56c2e36d616fdd54a6b0a87b391ce760",
+      "section": 4
+    },
+    {
+      "task_id": "CP07",
+      "markdown_sha256": "303fcfea9708c854641d6b1dc3180f881ec625fd0c15d2a494fccd7771c12362",
+      "section": 4
+    },
+    {
+      "task_id": "CP08",
+      "markdown_sha256": "46db5e33c62199f06dcaf58cc2ee617451ace0e1aa0d72fb64108249f267c367",
+      "section": 4
+    },
+    {
+      "task_id": "CP09",
+      "markdown_sha256": "5225fea8f11607cfbbaf04ddca627cd025c4c52d1af38874e5705439eb21319c",
+      "section": 4
+    },
+    {
+      "task_id": "CP10",
+      "markdown_sha256": "e58bae4374df0d23f7286a9406c682d94f768883030d4f86f63063c810e91242",
+      "section": 4
+    },
+    {
+      "task_id": "DR1",
+      "markdown_sha256": "90c5b053dac717ae62cc7c0cd4dbe54bc090d96b46abc6ecabb748e48e069bb6",
+      "section": 4
+    },
+    {
+      "task_id": "DR2",
+      "markdown_sha256": "15b48d384dff62e938c6856b5699da5fef37bd32527e32ba6a8b952130cb7597",
+      "section": 4
+    },
+    {
+      "task_id": "DR3",
+      "markdown_sha256": "21628d041e8981f788f032339d88e97228e2f414c7f5528acea6118257900078",
+      "section": 4
+    },
+    {
+      "task_id": "DR4",
+      "markdown_sha256": "2ee19f7934f421d094a23f918a6cf1c437ac01164522ca2368d27875fc47ce00",
+      "section": 4
+    },
+    {
+      "task_id": "E1",
+      "markdown_sha256": "a1c8af6c0dcc1e1fb7fa083c7719581242526a4c2f3cbc64d7ff028f1b6b1772",
+      "section": 4
+    },
+    {
+      "task_id": "E2",
+      "markdown_sha256": "7d6ffbcf7cb627372a4cfa421bfd75db665dd668bf9d9dd2acaec36925087129",
+      "section": 4
+    },
+    {
+      "task_id": "F1",
+      "markdown_sha256": "ca67c38ff9df55f8ca162a17c13e47549e678c29a27601f7989c233aa33a8e89",
+      "section": 4
+    },
+    {
+      "task_id": "F2",
+      "markdown_sha256": "2a78bdeca450be8f6e5cd06878a17e92bf12a6f219bcb64e85c599dfe521dd4b",
+      "section": 4
+    },
+    {
+      "task_id": "M1",
+      "markdown_sha256": "699e779d3bebd59d296360730c9027639a4d2a4ddd0d623734740f9984631f39",
+      "section": 4
+    },
+    {
+      "task_id": "M2",
+      "markdown_sha256": "167ceb77dc340047f03bb46dd292fa538277d191b1ebfe2980920e36536eac46",
+      "section": 4
+    },
+    {
+      "task_id": "P1",
+      "markdown_sha256": "d6f3ec9d4006d16ff006840fbdd1b1c9ce913c374f56d99c560203446498221d",
+      "section": 4
+    },
+    {
+      "task_id": "P2",
+      "markdown_sha256": "c11bf976fc61bc716c1dcb47a5c58a6be058446f2956a3d715662e058750814c",
+      "section": 4
+    },
+    {
+      "task_id": "PR1",
+      "markdown_sha256": "e88ac6758f10fd3835a8f1d18c1dfa3f7deb2cbef33807420ff3aa04bb3e527b",
+      "section": 4
+    },
+    {
+      "task_id": "PR2",
+      "markdown_sha256": "765d4878291a25b273794aaf23fcf5f2f169acbd37aea6aa99e34a5741fd4d58",
+      "section": 4
+    },
+    {
+      "task_id": "PR3",
+      "markdown_sha256": "2c01911d8b762698bda003b906d2060d7e65b405977d56e090842106cf1d2412",
+      "section": 4
+    },
+    {
+      "task_id": "PR4",
+      "markdown_sha256": "6bd658899761853e6b58f9dc0e5d78ac304755d32bd7673ec6df8fc73ec1fedd",
+      "section": 4
+    },
+    {
+      "task_id": "PR5",
+      "markdown_sha256": "1ccb0110e74880fe9cbf5eac2fa54db44b0568c8ee00383c7f08d654a96a1010",
+      "section": 4
+    },
+    {
+      "task_id": "PR6",
+      "markdown_sha256": "cb254b266e77e8eaf2ca762cc96870ea230ee301f267e25c633d9198e483cfd5",
+      "section": 4
+    },
+    {
+      "task_id": "S1",
+      "markdown_sha256": "764c221b56865cff4a1c5b93da9f943b80cc60141ce2b4286bf8eaf56fff6b27",
+      "section": 4
+    },
+    {
+      "task_id": "S2",
+      "markdown_sha256": "28b19c8d795b861590857cc54e69411cf5ce866ede0ea6ea3e0683d9df413095",
+      "section": 4
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "source_id": "pr4-original-time-v3",
+  "source_map_id": "source_2f2ecef68b27",
+  "source_map_sha256": "c6d5b3a1f0c51817cccbc2a04f95d930cb33811650507505a2e20d0c84096296",
+  "source_revision": "b6432b408607981059acf36ee668b731e36d70a0",
+  "source_files": {
+    "hexagon.py": "ef05c6407869f4eeabad2a91c3055f848394d847b63b677374479fb07007e7dc",
+    "scoring.py": "17958af7ef0ea78c905811daeae0407e73a2bd03c2fe934221504164be07a0ca",
+    "fold_layout.py": "75d758044ebc8cd465c62632f70905ce3e1e4469fd2253052767e8d2c298e4e9",
+    "surface_cloth.py": "7ecee0352a206038c86719ade2ff39e10651a0f1af182f0f30e197d708919032",
+    "release_clearance.py": "cb8ae4779a5ab5a4fdae6261d20ce8339566e4d3a7f9709d2767adaf786d9407",
+    "fold_shapes.py": "1d78e80c244b038e892f0ecc5263dc8424121d04a088acb41cfdea1065980a6d"
+  },
+  "copied_functions": {
+    "geometry": [
+      [
+        "unexpected_pairs",
+        10,
+        26
+      ],
+      [
+        "spatial_layer_order",
+        120,
+        132
+      ],
+      [
+        "surface_layer_order",
+        135,
+        159
+      ],
+      [
+        "basic_fold",
+        162,
+        204
+      ]
+    ],
+    "hexagon": [
+      [
+        "outline",
+        35,
+        41
+      ],
+      [
+        "shape",
+        44,
+        74
+      ]
+    ],
+    "clearance": [
+      [
+        "observed_cloth_clearance",
+        44,
+        53
+      ]
+    ]
+  },
+  "runtime_dynamic_source_execution": false,
+  "snapshot_files": {
+    "world.py": "b106906803decb33daff8dc9bfa04b7e7e992b114c104bf313eef369fab2f801",
+    "physical_score.py": "143d68a0efe9d875bdafb865a22fc5bb11c296fd83b63fea59902f1d36ca2860",
+    "physical_kinematics.py": "f2acfa08f9f712078e16aeb2ec4518a5a3ea7330a1835a7973262e9aeac7163b"
+  },
+  "rule_version": "pr4-shape-release-20261101-v2",
+  "spec_document_token": "ZOttdfu2woIRLmxYkpecOrA3nJf",
+  "spec_sha256": "10e34e270fd8dafd6f8b3a0899f3443f4128bd2e9754fdeee7e8f52826814114",
+  "source_reset_joint_state": {
+    "arm_degrees": [
+      0,
+      65,
+      100,
+      -65,
+      0,
+      0
+    ],
+    "finger_positions_m": [
+      0.044,
+      0.044
+    ]
+  },
+  "rule_decision": {
+    "authority": "benchmark maintainer",
+    "date": "2026-11-01",
+    "time": "23:30",
+    "supersedes": "23:20 hand/region requirements",
+    "scored_hand_count": false,
+    "scored_grasp_regions": false
+  },
+  "prior_partial_commit": "a69926c2003ab5d00b2b4fa7f6b347b155b639ff"
+}

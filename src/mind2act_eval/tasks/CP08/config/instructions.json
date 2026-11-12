@@ -1,0 +1,22 @@
+{
+  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "instructions": [
+    {
+      "d": [
+        "easy",
+        "medium"
+      ],
+      "en": "Remember the briefly shown front view, then build the structure from memory, centred in the marked area and aligned with the table reference line. Fix any misplaced lower blocks. Use only reference-colour blocks and release everything.",
+      "ex": "",
+      "zh": "记住开场短暂显示的正视图，凭记忆搭出结构，在标记区域内居中并对齐桌面参考线。把放错的下层积木纠正。只用参考图颜色的积木，最后全部松开。"
+    },
+    {
+      "d": [
+        "hard"
+      ],
+      "en": "Remember the briefly shown front view, then build the structure from memory, centred in the marked area and aligned with the table reference line. If the base is misplaced, move the beam above it aside and rebuild; put the roof ridge-up on the cylinders. Use only reference-colour blocks and release everything.",
+      "ex": "",
+      "zh": "记住开场短暂显示的正视图，凭记忆搭出结构，在标记区域内居中并对齐桌面参考线。若底座放错，先把上面的横梁移开再重搭；屋顶屋脊朝上放在圆柱上。只用参考图颜色的积木，最后全部松开。"
+    }
+  ]
+}

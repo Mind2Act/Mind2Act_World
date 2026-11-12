@@ -1,0 +1,19 @@
+[
+  {
+    "d": [
+      "easy"
+    ],
+    "en": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
+    "ex": "",
+    "zh": "记住白板上短暂展示的原始图案。擦掉多出来的笔迹，并把被误擦掉的原有笔迹补画回去，让白板与原图一致。"
+  },
+  {
+    "d": [
+      "medium",
+      "hard"
+    ],
+    "en": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
+    "ex": "",
+    "zh": "记住白板上短暂展示的原始图案。擦掉多出来的笔迹，拧开需要用到的颜色的笔帽，并把被误擦掉的原有笔迹补画回去，让白板与原图一致。"
+  }
+]

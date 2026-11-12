@@ -1,0 +1,984 @@
+{
+  "scoring_version": "mind2act-final-scoring-20261105",
+  "goal_source": "live_e2e_instruction",
+  "authority": "reviews/final-version-20261105/FINAL-VERSION.md",
+  "source_path": "reviews/final-version-20261105/final_coding_agent_recipes.py",
+  "source_sha256": "b5d713fce7b7ef9c23c0f927c37ae7b86c44078ca3d3e2c2694e4d624c7e51b2",
+  "source_english_sha256": "c310d8acc3c81982505fa3f4f4c1d7cf97dcff0bd7345b847849f13fddede8eb",
+  "tasks": {
+    "PR1": {
+      "title": "Rheostat Resistance Adjustment",
+      "capability_en": "Precision linear control — set a sliding contact to a target reading.",
+      "goal_en": "Goal: Slide the rheostat wiper so that the resistance between the left terminal and the wiper reads {TARGET} Ω.",
+      "description_en": "The rheostat spans 0–40 Ω. Read the position from the orange indicator against the scale; the target may lie between two minor ticks, so interpolate. You may reverse and regrasp.",
+      "completion_en": "Success: the measured resistance is within ±0.2 / ±0.15 / ±0.12 Ω (Easy / Medium / Hard) of {TARGET} Ω. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: the resistance is within ±0.2 / ±0.15 / ±0.12 Ω (Easy / Medium / Hard) of the target.",
+        "Otherwise: 30 / 22 / 15 × (1 − error ÷ 8 / 4 / 2 Ω); 0 when the error is at least 8 / 4 / 2 Ω."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "±0.2 / ±0.15 / ±0.12",
+          "values": [
+            "±0.2",
+            "±0.15",
+            "±0.12"
+          ]
+        },
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        },
+        {
+          "source": "8 / 4 / 2",
+          "values": [
+            "8",
+            "4",
+            "2"
+          ]
+        }
+      ]
+    },
+    "PR2": {
+      "title": "Voltage Knob Adjustment",
+      "capability_en": "Precision rotary control — set a passive knob to a target reading.",
+      "goal_en": "Goal: Turn the knob so that the output voltage reads {TARGET} V.",
+      "description_en": "The knob is passive: it turns only when pushed or grasped and otherwise keeps its angle. Read the dial in the camera images and interpolate between the smallest ticks. You may reverse and regrasp.",
+      "completion_en": "Success: the measured voltage is within ±1 / ±0.5 / ±0.5 V (Easy / Medium / Hard) of {TARGET} V. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: the voltage is within ±1 / ±0.5 / ±0.5 V (Easy / Medium / Hard) of the target.",
+        "Otherwise: 30 / 22 / 15 × (1 − error ÷ 40 / 20 / 10 V); 0 when the error is at least 40 / 20 / 10 V."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "±1 / ±0.5 / ±0.5",
+          "values": [
+            "±1",
+            "±0.5",
+            "±0.5"
+          ]
+        },
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        },
+        {
+          "source": "40 / 20 / 10",
+          "values": [
+            "40",
+            "20",
+            "10"
+          ]
+        }
+      ]
+    },
+    "PR3": {
+      "title": "Path Tracing",
+      "capability_en": "Precision drawing — reproduce a visible reference path with real ink.",
+      "goal_en": "Goal: Grasp the marker and trace the complete visible path on the paper.",
+      "description_en": "The reference path has several bends (about 350 mm long on Hard). Only ink actually left on the paper counts.",
+      "completion_en": "Coverage = share of the reference path within 3 mm of ink; accuracy = arc-length-weighted RMS distance from ink to the path. Success: coverage ≥98% and RMS ≤2 mm. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: coverage ≥98% and RMS ≤2 mm.",
+        "30 / 22 / 15: exactly one of the two holds.",
+        "0: neither holds, or no ink."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        }
+      ]
+    },
+    "PR4": {
+      "title": "Cloth Folding",
+      "capability_en": "Deformable manipulation — fold cloth into a target shape.",
+      "goal_en": "Goal: Fold the cloth into the displayed target shape inside the target frame on the table (Easy: rectangle; Medium: triangle; Hard: trapezoid).",
+      "description_en": "Any folding strategy is allowed.The cloth must rest on the table.",
+      "completion_en": "The folded cloth is compared in place with the target outline. Success: median outline error <15 mm, 90th-percentile error <25 mm (Hard: maximum error <10 mm), and ≥98% of the cloth's projected area within the target outline expanded by 10 mm. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: outline and area conditions all hold.",
+        "0: otherwise."
+      ],
+      "kind": "A",
+      "difficulty_groups": []
+    },
+    "PR5": {
+      "title": "Stamping",
+      "capability_en": "Precision placement with a tool — make one aligned impression and return the tool.",
+      "goal_en": "Goal: Use stamp A to make exactly one complete impression fully inside the blue box with its arrow aligned to the target arrow, without dragging, then return the stamp to its holder in its original orientation.",
+      "description_en": "Blue box side 100 / 80 / 74 mm; heading tolerance 5° / 2° / 1° (Easy / Medium / Hard). Opposite or quarter-turn headings are wrong. The impression is judged from the ink actually on the paper.",
+      "completion_en": "Success: exactly one clean impression inside the box within the heading tolerance, and the stamp sits in its holder (horizontal <4 mm, vertical <2 mm, yaw <3°, tilt <3°). After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: correct single impression and stamp back in the holder.",
+        "30 / 22 / 15: correct impression, stamp not back.",
+        "15 / 11 / 7.5: single impression in the box but heading outside tolerance.",
+        "0: no impression, more than one, dragged, or outside the box."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "100 / 80 / 74",
+          "values": [
+            "100",
+            "80",
+            "74"
+          ]
+        },
+        {
+          "source": "5° / 2° / 1°",
+          "values": [
+            "5°",
+            "2°",
+            "1°"
+          ]
+        },
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        },
+        {
+          "source": "15 / 11 / 7.5",
+          "values": [
+            "15",
+            "11",
+            "7.5"
+          ]
+        }
+      ]
+    },
+    "PR6": {
+      "title": "Domino Chain",
+      "capability_en": "Physical causal planning — build a chain that propagates to a target.",
+      "goal_en": "Goal: Stand the dominos inside the curved band in order along the curve, then push the first one so the chain topples and the last domino strikes the bell.",
+      "description_en": "5 / 7 / 9 dominos (Easy / Medium / Hard); no individual target slots. At most 8 pushes in total. If the chain stalls, wait at least 3 s; you may restart from a later domino only when all earlier ones have fallen. Do not touch the bell or a domino that is falling.",
+      "completion_en": "Success: all dominos topple through the chain and the last one touches the bell, within 8 pushes, without touching the bell or a falling domino. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: all topple and the last touches the bell.",
+        "30 / 22 / 15: the chain topples at least the first 3 / 4 / 5 dominos.",
+        "15 / 11 / 7.5: a complete legal setup was built.",
+        "0: no setup, more than 8 pushes, or you touched the bell or a falling domino."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "5 / 7 / 9",
+          "values": [
+            "5",
+            "7",
+            "9"
+          ]
+        },
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        },
+        {
+          "source": "3 / 4 / 5",
+          "values": [
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "source": "15 / 11 / 7.5",
+          "values": [
+            "15",
+            "11",
+            "7.5"
+          ]
+        }
+      ]
+    },
+    "DR1": {
+      "title": "Conveyor Parcel Catching",
+      "capability_en": "Timed continuous pick-and-place — take moving parcels before they leave reach.",
+      "goal_en": "Goal: Pick up all 3 / 5 / 7 parcels from the moving conveyor and place them in the central collection tray.",
+      "description_en": "Parcels arrive one after another; the conveyor keeps running. A parcel counts when it is supported by the tray, not held up by the gripper.",
+      "completion_en": "Success: all N parcels are in the tray. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: all parcels in the tray.",
+        "Otherwise: 30 / 22 / 15 × (parcels in tray) / N, N = 3 / 5 / 7."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "3 / 5 / 7",
+          "values": [
+            "3",
+            "5",
+            "7"
+          ]
+        },
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        }
+      ]
+    },
+    "DR2": {
+      "title": "Cued Button Response",
+      "capability_en": "Timed reactive control — respond to cues within a time limit.",
+      "goal_en": "Goal: For each of 10 cues, press the lit button within 4.0 / 3.2 / 2.6 s and let it return within 1 s; never press an unlit button.",
+      "description_en": "Three buttons light one at a time. A press counts at ≥2.5 mm travel; a return counts below 0.8 mm. If the same button lights again, let it return first and press again. A missed cue does not end the episode; all 10 cues are run.",
+      "completion_en": "A cue is correct when its lit button is pressed and returned within the limits. The episode ends when the required sequence is complete (or the budget is used); the recorded events and final state are scored.",
+      "scoring_en": [
+        "100: all 10 cues correct and no unlit button ever pressed.",
+        "Otherwise: 3 / 2.2 / 1.5 points per correct cue (a wrong press does not cancel other cues)."
+      ],
+      "kind": "B",
+      "difficulty_groups": [
+        {
+          "source": "4.0 / 3.2 / 2.6",
+          "values": [
+            "4.0",
+            "3.2",
+            "2.6"
+          ]
+        },
+        {
+          "source": "3 / 2.2 / 1.5",
+          "values": [
+            "3",
+            "2.2",
+            "1.5"
+          ]
+        }
+      ]
+    },
+    "DR3": {
+      "title": "Timed-Gate Delivery",
+      "capability_en": "Dynamic timing — pass moving gates and deliver an object.",
+      "goal_en": "Goal: Grasp the eraser, time the moving gate(s), pass through the opening (Hard: the blue opening, then the orange one) and put the eraser in the green tray behind.",
+      "description_en": "Pass only while the gate is open and do not go around it. A long gripper may span both Hard gates at once as long as it enters blue before orange.",
+      "completion_en": "Success: the eraser passes through in the required order and ends supported in the green tray. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: passed in order and delivered to the tray.",
+        "7.5 / 5.5 / 3.75: passed through but not delivered.",
+        "0: otherwise."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "7.5 / 5.5 / 3.75",
+          "values": [
+            "7.5",
+            "5.5",
+            "3.75"
+          ]
+        }
+      ]
+    },
+    "DR4": {
+      "title": "Tray Transport and Balance",
+      "capability_en": "Balance under transport — move a tray without spilling its balls.",
+      "goal_en": "Goal: Carry the tray by its handle to the delivery platform (Medium: around one column; Hard: around two staggered columns), keeping each ball inside its marked circle.",
+      "description_en": "Circle radius 30 / 25 / 20 mm (+0.5 mm tolerance). Every ball's position relative to the tray is recorded throughout. Delivered means the tray rests on the platform within 20 mm horizontally and 3 mm vertically. Do not hit obstacles.",
+      "completion_en": "Success: no ball ever left its circle and the tray is delivered. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: no ball ever left its circle and the tray is delivered.",
+        "30 / 22 / 15: a ball left its circle, but at the end all balls are back in their circles and the tray is delivered.",
+        "0: otherwise, including hitting an obstacle."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "30 / 25 / 20",
+          "values": [
+            "30",
+            "25",
+            "20"
+          ]
+        },
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        }
+      ]
+    },
+    "E1": {
+      "title": "Repeated-Item Identification",
+      "capability_en": "Episodic memory — find the item repeated from earlier batches.",
+      "goal_en": "Goal: Observe each batch. From the second batch on, put the one item that appeared in the immediately preceding batch (Medium: any of the previous three; Hard: any of the previous five) into the submission tray.",
+      "description_en": "There are N = 2 / 4 / 6 answer batches. Each batch has one chance: the first item placed and supported in the tray is the answer and cannot be swapped. The next batch starts after the answer is locked.",
+      "completion_en": "A batch is correct when its answer is the repeated item. The episode ends when the required sequence is complete (or the budget is used); the recorded events and final state are scored.",
+      "scoring_en": [
+        "100: all N batches correct.",
+        "Otherwise: 30 / 22 / 15 × (correct batches) / N."
+      ],
+      "kind": "B",
+      "difficulty_groups": [
+        {
+          "source": "2 / 4 / 6",
+          "values": [
+            "2",
+            "4",
+            "6"
+          ]
+        },
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        }
+      ]
+    },
+    "E2": {
+      "title": "Serial Code Entry",
+      "capability_en": "Working memory and arithmetic — compute a value and enter it serially.",
+      "goal_en": "Goal: Memorise the shown entity–value pairs, compute the physical expression, and enter the exact result on the nine keys.",
+      "description_en": "Enter one digit at a time. A key counts as pressed at ≥3 mm travel; the next digit is accepted only after the previous key has returned. Repeated digits need separate presses.",
+      "completion_en": "Correct when the entered digits exactly match the answer and the last key has returned. The episode ends when the required sequence is complete (or the budget is used); the recorded events and final state are scored.",
+      "scoring_en": [
+        "100: exact digits and last key returned.",
+        "Otherwise: 30 / 22 / 15 × (digits correct in position) / (code length)."
+      ],
+      "kind": "B",
+      "difficulty_groups": [
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        }
+      ]
+    },
+    "S1": {
+      "title": "Carousel Colour Restoration",
+      "capability_en": "Spatial tracking — remember physical slots through rotation.",
+      "goal_en": "Goal: Remember which colour belongs to each physical slot, watch the carousel rotate, and after it stops put each block into its original slot.",
+      "description_en": "The slots show colour cues for one second, then the carousel rotates with direction changes. A block counts when it is supported by its slot with its centre inside. You may correct placements; holding a block while waiting is allowed.",
+      "completion_en": "Success: all 4 blocks are in their original slots. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: all 4 correct.",
+        "15 / 11 / 7.5: 3 correct.",
+        "7.5 / 5.5 / 3.75: 2 correct.",
+        "0: 0–1 correct."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "15 / 11 / 7.5",
+          "values": [
+            "15",
+            "11",
+            "7.5"
+          ]
+        },
+        {
+          "source": "7.5 / 5.5 / 3.75",
+          "values": [
+            "7.5",
+            "5.5",
+            "3.75"
+          ]
+        }
+      ]
+    },
+    "S2": {
+      "title": "Forbidden-Cell Navigation",
+      "capability_en": "Spatial memory — navigate around remembered forbidden cells.",
+      "goal_en": "Goal: Remember the briefly lit forbidden cells, then press and release the arrow buttons (one cell per press) to move the slider into the ring without entering a forbidden cell or leaving the board.",
+      "description_en": "4 × 4 / 5 × 5 / 6 × 6 board (Easy / Medium / Hard). A press counts at ≥3 mm travel and must return below 1 mm before the next one; pressing two directions at once is invalid. A shortest route is not required.",
+      "completion_en": "Success: the slider is in the ring and never entered a forbidden cell or left the board. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: in the ring with no forbidden cell entered and no boundary crossed.",
+        "0: otherwise."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "4 × 4 / 5 × 5 / 6 × 6",
+          "values": [
+            "4 × 4",
+            "5 × 5",
+            "6 × 6"
+          ]
+        }
+      ]
+    },
+    "P1": {
+      "title": "Order Fulfilment",
+      "capability_en": "Incremental memory — accumulate orders and fulfil them exactly.",
+      "goal_en": "Goal: Remember the initial orders and any additional orders shown later (each adds to earlier demand), and place all requested ingredients into the indicated containers.",
+      "description_en": "There are 4 / 5 / 7 requested items in total. An ingredient counts when it is supported inside the container. Let m = missing + wrong + extra items.",
+      "completion_en": "Success: after all orders have been shown, every container matches its total order exactly (m = 0). After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: m = 0.",
+        "15 / 11 / 7.5: m = 1.",
+        "7.5 / 5.5 / 3.75: m = 2.",
+        "0: m ≥ 3."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "4 / 5 / 7",
+          "values": [
+            "4",
+            "5",
+            "7"
+          ]
+        },
+        {
+          "source": "15 / 11 / 7.5",
+          "values": [
+            "15",
+            "11",
+            "7.5"
+          ]
+        },
+        {
+          "source": "7.5 / 5.5 / 3.75",
+          "values": [
+            "7.5",
+            "5.5",
+            "3.75"
+          ]
+        }
+      ]
+    },
+    "P2": {
+      "title": "Steamer Basket Restacking",
+      "capability_en": "Sequence memory — rebuild a stack in its original order.",
+      "goal_en": "Goal: Remove the lid, remember the dim-sum order as you unstack the target baskets, then restack them on the left steamer pot in the same bottom-to-top order and replace the lid.",
+      "description_en": "There are 3 / 4 / 4 target baskets (Hard adds distractors; a distractor in the stack counts as wrong). Each layer must be within 10 mm horizontally, 3 mm vertically and 5° tilt, supported by the layer below.Let p = correct layers counted from the bottom.",
+      "completion_en": "Success: all target layers correct and the lid is on. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: all layers and the lid correct.",
+        "30 / 22 / 15: all layers correct, lid not.",
+        "20 / 15 / 10: p ≥ half of the layers.",
+        "10 / 7.5 / 5: 0 < p < half.",
+        "0: p = 0."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "3 / 4 / 4",
+          "values": [
+            "3",
+            "4",
+            "4"
+          ]
+        },
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        },
+        {
+          "source": "20 / 15 / 10",
+          "values": [
+            "20",
+            "15",
+            "10"
+          ]
+        },
+        {
+          "source": "10 / 7.5 / 5",
+          "values": [
+            "10",
+            "7.5",
+            "5"
+          ]
+        }
+      ]
+    },
+    "F1": {
+      "title": "Unknown Button Mapping and Slider Navigation",
+      "capability_en": "Causal exploration — learn button effects, then plan the shortest route.",
+      "goal_en": "Goal: Press and release every unmarked button at least once to learn how it moves the slider. After the slider resets and the goal appears, reach the goal with the fewest presses.",
+      "description_en": "2 / 4 / 4 buttons on a line / 3×3 / 4×4 grid. A press counts at ≥2.5 mm travel and returns below 0.8 mm; a press at the boundary that does not move the slider still counts. Exploration presses do not count toward the route. Any shortest route is accepted. Move the slider only through the buttons.",
+      "completion_en": "Success: exploration complete and the slider reaches the goal with the minimum number of route presses. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: exploration complete and goal reached with the minimum presses.",
+        "15 / 11 / 7.5: goal reached with more presses.",
+        "7.5 / 5.5 / 3.75: goal reached but the last button has not returned.",
+        "0: otherwise."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "2 / 4 / 4",
+          "values": [
+            "2",
+            "4",
+            "4"
+          ]
+        },
+        {
+          "source": "15 / 11 / 7.5",
+          "values": [
+            "15",
+            "11",
+            "7.5"
+          ]
+        },
+        {
+          "source": "7.5 / 5.5 / 3.75",
+          "values": [
+            "7.5",
+            "5.5",
+            "3.75"
+          ]
+        }
+      ]
+    },
+    "F2": {
+      "title": "Feedback Permutation Inference",
+      "capability_en": "Deductive reasoning — infer a hidden order from feedback.",
+      "goal_en": "Goal: Place one coloured block in each slot, then press and release the confirmation button; use the brief feedback (number of correct positions) to infer the hidden permutation in as few submissions as possible.",
+      "description_en": "3 / 4 / 5 blocks; at most 5 / 6 / 7 submissions. An incomplete arrangement is not a submission. A block counts when it is supported in a slot with its centre inside. Movement during the opening display is allowed and not penalised.",
+      "completion_en": "Correct when a submission has every block in the right slot and the arrangement is still correct at the end. The episode ends when the required sequence is complete (or the budget is used); the recorded events and final state are scored.",
+      "scoring_en": [
+        "100: a fully correct submission, still correct at the end.",
+        "0: otherwise."
+      ],
+      "kind": "B",
+      "difficulty_groups": [
+        {
+          "source": "3 / 4 / 5",
+          "values": [
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "source": "5 / 6 / 7",
+          "values": [
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      ]
+    },
+    "M1": {
+      "title": "Workpiece Tracking and Route Replay",
+      "capability_en": "Object tracking and route memory — follow a hidden target and replay its route.",
+      "goal_en": "Goal: Remember the target's location and its station route, track it through the cover exchanges, uncover it, and place it on the stations in route order.",
+      "description_en": "The route has N = 4 / 5 / 6 stops including revisits. Each placement supported on a station pad is one submission and cannot be undone; the first N submissions are your answer. A revisit needs a new placement after leaving the station.",
+      "completion_en": "Let C = longest part of your submissions that matches the route in order, W = submissions − C, m = N − C + W. Correct when the submissions match the route exactly and the target ends on the last station. The episode ends when the required sequence is complete (or the budget is used); the recorded events and final state are scored.",
+      "scoring_en": [
+        "100: exact route and target on the last station.",
+        "15 / 11 / 7.5: m = 1.",
+        "7.5 / 5.5 / 3.75: m = 2.",
+        "0: otherwise."
+      ],
+      "kind": "B",
+      "difficulty_groups": [
+        {
+          "source": "4 / 5 / 6",
+          "values": [
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        {
+          "source": "15 / 11 / 7.5",
+          "values": [
+            "15",
+            "11",
+            "7.5"
+          ]
+        },
+        {
+          "source": "7.5 / 5.5 / 3.75",
+          "values": [
+            "7.5",
+            "5.5",
+            "3.75"
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "title": "Card Pair Matching",
+      "capability_en": "Spatial memory — remember card positions and match pairs.",
+      "goal_en": "Goal: Press and release a card's yellow button to turn it face up, reveal at most two unmatched cards at a time, and match every pair.",
+      "description_en": "2 / 4 / 8 pairs. Matching pictures stay face up; mismatches turn back automatically. Wait for the flip or pair result to finish before selecting another card; a selection counts when the button is released while the card is ready.",
+      "completion_en": "Success: every pair matched and all cards face up (hinge within 2°). After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: all pairs matched and face up.",
+        "Otherwise: 30 / 22 / 15 × (matched pairs) / N, N = 2 / 4 / 8.",
+        "0: more than two unmatched cards face up at once."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "2 / 4 / 8",
+          "values": [
+            "2",
+            "4",
+            "8"
+          ]
+        },
+        {
+          "source": "30 / 22 / 15",
+          "values": [
+            "30",
+            "22",
+            "15"
+          ]
+        }
+      ]
+    },
+    "CP01": {
+      "title": "Conveyor Meal Assembly",
+      "capability_en": "Order memory, dynamic picking and multi-tray management.",
+      "goal_en": "Goal: Watch the reference meal trays pass on the conveyor and remember the food types on each; then prepare the matching empty trays and fill each with the same foods from the moving supply.",
+      "description_en": "Easy: 1 order (trays pre-placed); Medium: 2; Hard: 3. Each tray holds three food types. In Medium/Hard, separate the empty trays and place them flat without stacking. A food counts when it is supported in the correct tray. N = 3 / 6 / 9 foods; tray handling is required for 100 but earns no partial credit.",
+      "completion_en": "Success: every tray holds exactly its order with no extra food, after all reference orders have been shown. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: all trays correct, no extra food.",
+        "Otherwise: 15 / 10 / 7 × max(0, correct − wrong − extra) / N."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "3 / 6 / 9",
+          "values": [
+            "3",
+            "6",
+            "9"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ]
+    },
+    "CP02": {
+      "title": "Rotating Cake Decoration",
+      "capability_en": "Identity–position memory and rotation tracking.",
+      "goal_en": "Goal: Remember each macaron and its place on the still cake shown for three seconds and recreate the arrangement. Medium/Hard: open the ingredient-box lid, press the green button and decorate while the cake rotates. Hard: then press the red button, wait for the cake to stop, and put the cover on.",
+      "description_en": "A macaron counts when it is supported by the cake with its centre inside its target circle.The lid must be opened past 90° before START; in Hard, STOP comes after all macarons are placed and the cover must rest on the base over the cake. N = 4 / 6 / 6 macarons; the lid, START and STOP are required for 100 but earn no partial credit.",
+      "completion_en": "Success: all required steps and macarons correct with no extra macaron. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: everything correct, no extra.",
+        "Otherwise: 15 / 10 / 7 × max(0, correct − wrong − extra) / N."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "4 / 6 / 6",
+          "values": [
+            "4",
+            "6",
+            "6"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ]
+    },
+    "CP03": {
+      "title": "Dish Rack Loading",
+      "capability_en": "Mechanism operation and dynamic insertion.",
+      "goal_en": "Goal: Set the lever to the required gear and release it, press the green button so the rack moves, then load 3 / 5 / 7 upright plates into the moving empty slots.",
+      "description_en": "Easy has the gear preset. Gear within ±2°; START counts at ≥1.5 mm travel. Only plates taken from the source rack by the gripper count; pushed or knocked-in plates and pre-loaded plates do not. A plate counts when it ends supported in a correct empty slot after entering while the rack moves; releasing above the slot and letting it drop in is fine. N = 3 / 5 / 7 plates; the gear and START are required for 100 but earn no partial credit.",
+      "completion_en": "Success: gear then START done, and every plate correctly loaded. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: all correct.",
+        "Otherwise: 15 / 10 / 7 × max(0, correct − wrong − extra) / N."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "3 / 5 / 7",
+          "values": [
+            "3",
+            "5",
+            "7"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ]
+    },
+    "CP04": {
+      "title": "Cooking",
+      "capability_en": "Recipe-order memory and thermal response.",
+      "goal_en": "Goal: Medium/Hard: open the drawer. Pour each required jar into the pot in the remembered recipe order, returning jars to their slots and caps to the tray (Medium/Hard: then cover the pot). Turn the black knob to HEAT and press the green button; within 4 / 3 / 2 s after 80 °C, switch to KEEP WARM, then turn off.",
+      "description_en": "2 / 2 / 3 ingredients. Each jar must be uncapped before pouring and its whole portion must end in the pot. There is no second attempt: a wrong pour stays wrong. Jars are checked for being back in their slots, not for being upright. N = 2 / 2 / 3 ingredients, counted as the longest part that matches the recipe order. The drawer, lid, heat-to-keep-warm, turning off and returning jars and caps are required for 100 but earn no partial credit.",
+      "completion_en": "Complete when the heat is turned off with jars and caps returned. The episode ends when the required sequence is complete (or the budget is used); the recorded events and final state are scored.",
+      "scoring_en": [
+        "100: every step correct.",
+        "Otherwise: 15 / 10 / 7 × (ingredients in recipe order) / N."
+      ],
+      "kind": "B",
+      "difficulty_groups": [
+        {
+          "source": "4 / 3 / 2",
+          "values": [
+            "4",
+            "3",
+            "2"
+          ]
+        },
+        {
+          "source": "2 / 2 / 3",
+          "values": [
+            "2",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ]
+    },
+    "CP05": {
+      "title": "Electronic Piano Replay",
+      "capability_en": "Demonstration sequence memory with a tool.",
+      "goal_en": "Goal: Hard: set the volume to MAX first and keep it at MAX. Press the triangle-marked Play button, watch the demonstration, then replay the 8 / 8 / 12 key presses in order, and return the mallet(s) to the rack.",
+      "description_en": "Play counts at ≥3 mm travel. A note counts when a key goes down ≥2 mm and returns below 0.5 mm before the next press, whatever touches it. N = 8 / 8 / 12 notes, counted as the longest part matching the demonstration in order; an extra note prevents 100. Play, mallet return and Hard's MAX (checked before Play and at the end) are required for 100 but earn no partial credit.",
+      "completion_en": "Complete when the notes are played and the mallet(s) are back on the rack. The episode ends when the required sequence is complete (or the budget is used); the recorded events and final state are scored.",
+      "scoring_en": [
+        "100: every step correct and no extra note.",
+        "Otherwise: 15 / 10 / 7 × (notes in demonstrated order) / N."
+      ],
+      "kind": "B",
+      "difficulty_groups": [
+        {
+          "source": "8 / 8 / 12",
+          "values": [
+            "8",
+            "8",
+            "12"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ]
+    },
+    "CP06": {
+      "title": "Balance-Scale Calibration",
+      "capability_en": "Calibration, physical loading and closed-loop balancing.",
+      "goal_en": "Goal: Medium/Hard: with both pans empty, press ZERO. Move all fruit from the tray onto the left pan, balance the scale with the weights on the right (Hard: also push the sliding weight into place), and leave the pointer in the green zone.",
+      "description_en": "1 / 2 / 3 fruits; use at least two weights. ZERO counts at ≥4 mm travel; Hard's sliding weight must end at 90 ± 3 mm. Nothing may fall off a pan. N = 3 / 4 / 5 items (each fruit plus the two required weights), scored independently. ZERO, the green zone and Hard's sliding weight are required for 100 but earn no partial credit.",
+      "completion_en": "Success: all items correct and the pointer in the green zone. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: everything correct.",
+        "Otherwise: 15 / 10 / 7 × (correct items) / N."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "1 / 2 / 3",
+          "values": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "source": "3 / 4 / 5",
+          "values": [
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ]
+    },
+    "CP07": {
+      "title": "Bridge Construction and Car Crossing",
+      "capability_en": "Select and assemble a functional structure, then verify it works.",
+      "goal_en": "Goal: Build a bridge across the gap with continuous wheel paths on both sides (Medium/Hard: choose suitable pieces from a stock that includes extras), then press and release the button and let the car drive to the opposite bank.",
+      "description_en": "Easy uses all 8 pieces; Medium/Hard use 13 of the stock pieces, and any working choice counts. The car starts after the button is pressed and must reach the opposite bank; only arrival is scored.",
+      "completion_en": "Success: the car reaches the opposite bank. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: the car reaches the opposite bank.",
+        "0: otherwise."
+      ],
+      "kind": "A",
+      "difficulty_groups": []
+    },
+    "CP08": {
+      "title": "Structure Reconstruction and Rework",
+      "capability_en": "Retain a visual structure and perform hierarchical assembly and rework.",
+      "goal_en": "Goal: Remember the briefly shown front view, then build the structure from memory in the marked area. Fix any misplaced lower blocks (Hard: lift the beam off, correct the base, then rebuild). Use only reference-colour blocks.",
+      "description_en": "Each block must be in place (horizontal <6 / 4 / 4 mm, vertical <3 mm) and supported by the blocks below. Extra blocks stay outside the build area. N = 3 / 4 / 5 blocks, scored independently (Hard's pre-installed block A does not count). Hard's lift-off and base fix are required for 100 but earn no partial credit.",
+      "completion_en": "Success: the whole structure is correct. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: whole structure correct.",
+        "Otherwise: 15 / 10 / 7 × (correct blocks) / N."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "6 / 4 / 4",
+          "values": [
+            "6",
+            "4",
+            "4"
+          ]
+        },
+        {
+          "source": "3 / 4 / 5",
+          "values": [
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ]
+    },
+    "CP09": {
+      "title": "Whiteboard Restoration",
+      "capability_en": "Retain visual content and restore it with tools.",
+      "goal_en": "Goal: Remember the briefly shown original drawing on the whiteboard, erase the added strokes and redraw any original strokes you erased (Medium/Hard: uncap the pens of the colours needed), so the board matches the original.",
+      "description_en": "1 / 2 / 3 colours. A colour is repaired when its ink matches the original with precision and recall ≥95% (within 1.5 mm) and extra ink ≤3%; an intact colour counts automatically. How much you erase is not limited. Ink must come from real tool contact.",
+      "completion_en": "Success: every colour repaired. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "scoring_en": [
+        "100: all colours repaired.",
+        "Otherwise: 15 / 10 / 7 × (repaired colours) / (colours)."
+      ],
+      "kind": "A",
+      "difficulty_groups": [
+        {
+          "source": "1 / 2 / 3",
+          "values": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ]
+    },
+    "CP10": {
+      "title": "Ball Prediction and Blocker Return",
+      "capability_en": "Predict trajectories and act on delayed colour information.",
+      "goal_en": "Goal: Predict each ball from the launcher's settled aim. After two practice balls, use the sliding blocker to return every white ball to the far net and let every red ball pass untouched into the near net.",
+      "description_en": "Colour shows only after launch. 5 / 8 / 12 scored balls; practice balls never count and practice problems do not stop the session. Do not touch a ball with the robot. A ball counts when it ends in the correct net. N = scored white balls = 3 / 4 / 6.",
+      "completion_en": "Complete when all scored balls have been launched and settled. The episode ends when the required sequence is complete (or the budget is used); the recorded events and final state are scored.",
+      "scoring_en": [
+        "100: every scored ball correct.",
+        "Otherwise: 15 / 10 / 7 × k / N, where k = correct white balls before the first wrong scored ball.",
+        "0: the robot touched a ball."
+      ],
+      "kind": "B",
+      "difficulty_groups": [
+        {
+          "source": "5 / 8 / 12",
+          "values": [
+            "5",
+            "8",
+            "12"
+          ]
+        },
+        {
+          "source": "3 / 4 / 6",
+          "values": [
+            "3",
+            "4",
+            "6"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ]
+    }
+  }
+}

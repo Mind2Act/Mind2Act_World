@@ -1,0 +1,14 @@
+{
+  "system": "Linux",
+  "python": "3.11.16",
+  "packages": {
+    "numpy": "2.4.6",
+    "pytest": "9.2.0",
+    "h5py": "3.16.0",
+    "scipy": "1.17.1",
+    "usd-core": "26.11",
+    "pillow": "13.0.0",
+    "websockets": "15.0.1",
+    "msgpack": "1.1.0"
+  }
+}

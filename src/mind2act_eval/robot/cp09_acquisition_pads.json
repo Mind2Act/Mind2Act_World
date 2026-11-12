@@ -1,0 +1,115 @@
+{
+  "schema": "mind2act.cp09-acquisition-pad-geometry.v1",
+  "acquisition_version": "cp09-acquisition-geometry-v1",
+  "source_geometry_asset_sha256": "8e928866420fa05795d2bdb3fb03c598eb1838fefe4f38a52db0838c4664e22f",
+  "pads": [
+    {
+      "path": "/World/RobotLeft/Asset/link7/CP09RubberPad",
+      "size": 1.0,
+      "translate": [
+        0.0565,
+        -0.0235,
+        -0.0012
+      ],
+      "scale": [
+        0.018,
+        0.003,
+        0.022
+      ],
+      "visual_color": [
+        0.018,
+        0.023,
+        0.026
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8,
+      "contact_report_threshold": 0.0,
+      "contact_offset": 0.0001,
+      "rest_offset": 0.0,
+      "static_friction": 2.0,
+      "dynamic_friction": 1.8,
+      "restitution": 0.0
+    },
+    {
+      "path": "/World/RobotLeft/Asset/link8/CP09RubberPad",
+      "size": 1.0,
+      "translate": [
+        0.0565,
+        0.0235,
+        -0.0012
+      ],
+      "scale": [
+        0.018,
+        0.003,
+        0.022
+      ],
+      "visual_color": [
+        0.018,
+        0.023,
+        0.026
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8,
+      "contact_report_threshold": 0.0,
+      "contact_offset": 0.0001,
+      "rest_offset": 0.0,
+      "static_friction": 2.0,
+      "dynamic_friction": 1.8,
+      "restitution": 0.0
+    },
+    {
+      "path": "/World/RobotRight/Asset/link7/CP09RubberPad",
+      "size": 1.0,
+      "translate": [
+        0.0565,
+        -0.0235,
+        -0.0012
+      ],
+      "scale": [
+        0.018,
+        0.003,
+        0.022
+      ],
+      "visual_color": [
+        0.018,
+        0.023,
+        0.026
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8,
+      "contact_report_threshold": 0.0,
+      "contact_offset": 0.0001,
+      "rest_offset": 0.0,
+      "static_friction": 2.0,
+      "dynamic_friction": 1.8,
+      "restitution": 0.0
+    },
+    {
+      "path": "/World/RobotRight/Asset/link8/CP09RubberPad",
+      "size": 1.0,
+      "translate": [
+        0.0565,
+        0.0235,
+        -0.0012
+      ],
+      "scale": [
+        0.018,
+        0.003,
+        0.022
+      ],
+      "visual_color": [
+        0.018,
+        0.023,
+        0.026
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8,
+      "contact_report_threshold": 0.0,
+      "contact_offset": 0.0001,
+      "rest_offset": 0.0,
+      "static_friction": 2.0,
+      "dynamic_friction": 1.8,
+      "restitution": 0.0
+    }
+  ]
+}

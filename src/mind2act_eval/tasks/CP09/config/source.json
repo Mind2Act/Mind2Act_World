@@ -1,0 +1,141 @@
+{
+  "task_id": "CP09",
+  "source_id": "cp09-replay-contact-raster-v1",
+  "source_sha256": "fe3d67674830eccd6d721a9c08fe8aff12269b2aa17ae8b04743caa0c8d8a7d3",
+  "scoring": {
+    "authority": "Feishu CP09 section 6, finalized 2026-10-29",
+    "snapshot_sha256": "56d66d7bdb578750b0516ae60558c5da0d81288800225efe04d0f3f204c28b97",
+    "required_steps": {
+      "easy": 5,
+      "medium": 8,
+      "hard": 10
+    }
+  },
+  "instruction_authority_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "scene_binding_status": "implemented_requires_shared_collision_overlay_and_station_projection",
+  "runtime_registered": true,
+  "training_cohorts": {
+    "easy": {
+      "source_id": "cp09-training-k2-cp09-easy-3e-fulltask",
+      "framework_commit": "3735f2d92b9f6d8092c33861906c29178a0b110b",
+      "h5_instance_sha256": "77656e2d5ef962c22997ca4e58bfa8bb6ebbc340b53f712bad50059e6e815b09",
+      "training_manifest_sha256": "26ae9e2ffbc15eb7ddbf54c3957b409218e5cccae965b757d97e23bcdd1448e3",
+      "source_file_sha256": {
+        "world.py": "cebddec4aa1712f6b709952cee5db1eaf13acb7bbd07223f2a8cb35b953cc59a",
+        "source/board_support.py": "8b8b2601d72a2e1296be39bb831b5205ad877ecbacbbf7b7aa59114ec60cbe0a",
+        "source/environment.py": "a0acdc6ac39b6d16f2b04d05e8c513351276a965a0259ebcae36ef5c76682d95",
+        "source/tools.py": "89c40aaa79fe03890a33692d579fd892b8bb278cc172e26984a22071ce0160ed"
+      },
+      "effective_hash_index": "files",
+      "inherited_case_files_index_is_not_effective_freeze": true,
+      "h5_sha256": "caaf12ece5fd836afda735ef4ba3296f63b6ea67e9fb51077ac7dd2e18bd275c",
+      "h5_sha256_verified_on_source_host": true
+    },
+    "medium": {
+      "source_id": "cp09-training-pilot29-visible-cap-clip-physics",
+      "framework_commit": "3735f2d92b9f6d8092c33861906c29178a0b110b",
+      "h5_instance_sha256": "385e8afa00dd36ee48cf25dfec96d207d623093170b4d41a92aebac284b884a1",
+      "training_manifest_sha256": "849bea97ca46be9be08a31768bb7946f76f97dcd6d1aadc84b2f1ad25e279ef9",
+      "source_file_sha256": {
+        "world.py": "955ffa7cdf3254b330078049eddb6f62ae317447176d8d6500dcbcc24787427f",
+        "original_mesh_geometry_v3.py": "8373071ab3aefb2b52f2710381a8b64f1997f1cd6d5916da9de721261318583e",
+        "contact_safety_v3.py": "c13dbb498facd028d1b944e107c21c45cf5058eea79548542bbc179c2a454df7",
+        "source/board_support.py": "1f1fc587574badb97a25cc5b5891c1beb0aa23ba098591bd1698dcbffccef438",
+        "source/environment.py": "4ec0ea157404b0e6acb769725839c610e6264226a8ee0b094a0a9e8b6fbfabe5",
+        "source/tools.py": "1aa9ecb3d9ff33d21f15dcd8693d74f8b8948f6c68da97de5db5563b60987706"
+      },
+      "effective_hash_index": "files",
+      "inherited_case_files_index_is_not_effective_freeze": false,
+      "h5_sha256": "863c8bfbb4b7763e5be292afefd7579e3ca3e1271a2f458591b1138a5abf0fe4",
+      "h5_sha256_verified_on_source_host": true
+    },
+    "hard": {
+      "source_id": "cp09-training-pilot32-contact-bounded-cap-grasp",
+      "framework_commit": "3735f2d92b9f6d8092c33861906c29178a0b110b",
+      "h5_instance_sha256": "df594f5fd3fd25b9311837ba3ba93d86f94423ccda9e70c6d9b85e74fae56702",
+      "training_manifest_sha256": "064c7e9b3cb7ac89b2eb06005dbaddc6be47aec6eebfe62b17ce9ec8d637b053",
+      "source_file_sha256": {
+        "world.py": "955ffa7cdf3254b330078049eddb6f62ae317447176d8d6500dcbcc24787427f",
+        "original_mesh_geometry_v3.py": "8373071ab3aefb2b52f2710381a8b64f1997f1cd6d5916da9de721261318583e",
+        "contact_safety_v3.py": "102654fbb1fa566726d28f2c9221dcb30be1256804d98122993901f5d62a5cbf",
+        "source/board_support.py": "1f1fc587574badb97a25cc5b5891c1beb0aa23ba098591bd1698dcbffccef438",
+        "source/environment.py": "4ec0ea157404b0e6acb769725839c610e6264226a8ee0b094a0a9e8b6fbfabe5",
+        "source/tools.py": "ad8c524b5b9faa5504c495827904e1a6f29638b131bda192c8352603177c2260"
+      },
+      "effective_hash_index": "files",
+      "inherited_case_files_index_is_not_effective_freeze": false,
+      "h5_sha256": "9d3b9fda32d2672ded24a394136128c9980795bcd4e33459172cf025ece5412d",
+      "h5_sha256_verified_on_source_host": true
+    }
+  },
+  "acquisition_source_files": {
+    "easy": {
+      "source/environment.py": "a0acdc6ac39b6d16f2b04d05e8c513351276a965a0259ebcae36ef5c76682d95",
+      "source/native_collect.py": "939288e535902b2ed83379edfac99ecdc42838c1c15ec131b1ecd9d7da7a8c1e",
+      "source/robot_motion_audit.py": "87d96a4cd4599b0b2c5d7153989de2e073f825e121befc2951f737c02e5fb269",
+      "source/expert.py": "616f2b02efc96c0ece1ad8047efea3f85ae16b2c647fcddb3eed7dbc2d214e61",
+      "source/__init__.py": "e9ae951f9ba33454c5f0358fe74b50df2dbb388d9588b9389422fa93dcddf694",
+      "source/recollection_audit.py": "8bdf67e3659b24b6539403d502994a7278cc8c1ec7c16af19514a75fec67d3da",
+      "source/visibility.py": "ce7f23defafc0453d489f4b596b48e0867b0c0f8b93abb2c7048fa0d71eb53d6",
+      "source/native_replay.py": "f7b9be532a0b116f9265515d63be601cb2257be3f6750a8d7d836efc1d4cc338",
+      "source/interaction.py": "195eed34660c69bcb2f1b6c18775044cee4ad5299468559ca0105891e5477e8c",
+      "source/cases.py": "3b645fe9c04090cd012105fb82c413af957d8955c12bca6a95d563e372bddc2a",
+      "source/camera_audit.py": "7a610351baa512044ca6ada952c17b7e831fa19a3a3f873318878265d9df82ce",
+      "source/presentation.py": "0816ee58c4f948aff62bc4b32d5995eeb79bceeb867a6dfb9eea14ddda3fd946",
+      "source/surface.py": "997319d739ccf753b5b41a3e23c31f6abcdf17594e20cdd247163e9294cab5f1",
+      "source/board_support.py": "8b8b2601d72a2e1296be39bb831b5205ad877ecbacbbf7b7aa59114ec60cbe0a",
+      "source/native_scene.py": "5eb5132c275c20fed024951271eca01e87a0008bfdf10e27b17404d4b675a116",
+      "source/sweep_guard.py": "54f672800232569c5ffa5ef5ac5a88d3d1aad96d345a9d0de438c0d7c3a87de2",
+      "source/native_video.py": "e19342b1ab66b13d3ef2a302050e251ad9ac5700e6e88334f17360787d1201b2",
+      "source/retrieval_geometry.py": "31cf1758fb092e4b80327a810c29c0b51c70eb128709e924f0f26319a56f73cc",
+      "source/tools.py": "89c40aaa79fe03890a33692d579fd892b8bb278cc172e26984a22071ce0160ed",
+      "configs/case.json": "52aca103aac41a36870d165201f1dee3a290015e73b6e2d4493401c8d0f401f4"
+    },
+    "medium": {
+      "source/board_support.py": "1f1fc587574badb97a25cc5b5891c1beb0aa23ba098591bd1698dcbffccef438",
+      "source/surface.py": "997319d739ccf753b5b41a3e23c31f6abcdf17594e20cdd247163e9294cab5f1",
+      "source/robot_motion_audit.py": "87d96a4cd4599b0b2c5d7153989de2e073f825e121befc2951f737c02e5fb269",
+      "source/native_scene.py": "5eb5132c275c20fed024951271eca01e87a0008bfdf10e27b17404d4b675a116",
+      "source/cases.py": "3b645fe9c04090cd012105fb82c413af957d8955c12bca6a95d563e372bddc2a",
+      "source/retrieval_geometry.py": "31cf1758fb092e4b80327a810c29c0b51c70eb128709e924f0f26319a56f73cc",
+      "source/camera_audit.py": "7a610351baa512044ca6ada952c17b7e831fa19a3a3f873318878265d9df82ce",
+      "source/interaction.py": "195eed34660c69bcb2f1b6c18775044cee4ad5299468559ca0105891e5477e8c",
+      "source/native_video.py": "e19342b1ab66b13d3ef2a302050e251ad9ac5700e6e88334f17360787d1201b2",
+      "source/presentation.py": "0816ee58c4f948aff62bc4b32d5995eeb79bceeb867a6dfb9eea14ddda3fd946",
+      "source/native_replay.py": "f7b9be532a0b116f9265515d63be601cb2257be3f6750a8d7d836efc1d4cc338",
+      "source/visibility.py": "ce7f23defafc0453d489f4b596b48e0867b0c0f8b93abb2c7048fa0d71eb53d6",
+      "source/tools.py": "1aa9ecb3d9ff33d21f15dcd8693d74f8b8948f6c68da97de5db5563b60987706",
+      "source/expert.py": "616f2b02efc96c0ece1ad8047efea3f85ae16b2c647fcddb3eed7dbc2d214e61",
+      "source/__init__.py": "e9ae951f9ba33454c5f0358fe74b50df2dbb388d9588b9389422fa93dcddf694",
+      "source/environment.py": "4ec0ea157404b0e6acb769725839c610e6264226a8ee0b094a0a9e8b6fbfabe5",
+      "source/native_collect.py": "939288e535902b2ed83379edfac99ecdc42838c1c15ec131b1ecd9d7da7a8c1e",
+      "configs/case.json": "52aca103aac41a36870d165201f1dee3a290015e73b6e2d4493401c8d0f401f4"
+    },
+    "hard": {
+      "source/board_support.py": "1f1fc587574badb97a25cc5b5891c1beb0aa23ba098591bd1698dcbffccef438",
+      "source/surface.py": "997319d739ccf753b5b41a3e23c31f6abcdf17594e20cdd247163e9294cab5f1",
+      "source/robot_motion_audit.py": "87d96a4cd4599b0b2c5d7153989de2e073f825e121befc2951f737c02e5fb269",
+      "source/native_scene.py": "5eb5132c275c20fed024951271eca01e87a0008bfdf10e27b17404d4b675a116",
+      "source/cases.py": "3b645fe9c04090cd012105fb82c413af957d8955c12bca6a95d563e372bddc2a",
+      "source/retrieval_geometry.py": "31cf1758fb092e4b80327a810c29c0b51c70eb128709e924f0f26319a56f73cc",
+      "source/camera_audit.py": "7a610351baa512044ca6ada952c17b7e831fa19a3a3f873318878265d9df82ce",
+      "source/interaction.py": "195eed34660c69bcb2f1b6c18775044cee4ad5299468559ca0105891e5477e8c",
+      "source/native_video.py": "e19342b1ab66b13d3ef2a302050e251ad9ac5700e6e88334f17360787d1201b2",
+      "source/presentation.py": "0816ee58c4f948aff62bc4b32d5995eeb79bceeb867a6dfb9eea14ddda3fd946",
+      "source/native_replay.py": "f7b9be532a0b116f9265515d63be601cb2257be3f6750a8d7d836efc1d4cc338",
+      "source/visibility.py": "ce7f23defafc0453d489f4b596b48e0867b0c0f8b93abb2c7048fa0d71eb53d6",
+      "source/tools.py": "ad8c524b5b9faa5504c495827904e1a6f29638b131bda192c8352603177c2260",
+      "source/expert.py": "616f2b02efc96c0ece1ad8047efea3f85ae16b2c647fcddb3eed7dbc2d214e61",
+      "source/__init__.py": "e9ae951f9ba33454c5f0358fe74b50df2dbb388d9588b9389422fa93dcddf694",
+      "source/environment.py": "4ec0ea157404b0e6acb769725839c610e6264226a8ee0b094a0a9e8b6fbfabe5",
+      "source/native_collect.py": "939288e535902b2ed83379edfac99ecdc42838c1c15ec131b1ecd9d7da7a8c1e",
+      "configs/case.json": "52aca103aac41a36870d165201f1dee3a290015e73b6e2d4493401c8d0f401f4"
+    }
+  },
+  "shared_helper_sha256": {
+    "physco_station_scene.py": "3e99576f3285b40e04cb9471c54e0efd27b7506e6a09e39093ab9a1d21cf7df3",
+    "physco_f2_assets.py": "d18bc7602bac6f6bc08680e8f16772758df49bea3db0830d205640c1fd910e77"
+  },
+  "geometry_decision": "benchmark maintainer 2026-11-01 裁决：保留采集指垫与几何，不得删除或改回通用",
+  "native_validation": "not_run"
+}

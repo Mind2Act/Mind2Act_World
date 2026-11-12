@@ -1,0 +1,59 @@
+{
+  "task_id": "PR1",
+  "instance_id": "PR1_easy_synthetic_fixture",
+  "difficulty": "easy",
+  "source_id": "synthetic-source",
+  "config_version": "synthetic-v1",
+  "asset_version": "synthetic-release",
+  "protocol_version": "v1",
+  "seed": 0,
+  "clock": {
+    "physics_hz": 120,
+    "control_hz": 30,
+    "rgb_hz": 30
+  },
+  "config": {
+    "initial_ohm": 15.0,
+    "target_ohm": 10.0,
+    "fixture_y_offset_m": -0.05,
+    "robot_rest": [
+      0.0,
+      1.1344640137963142,
+      1.7453292519943295,
+      -1.1344640137963142,
+      0.0,
+      0.0,
+      0.044,
+      0.044
+    ],
+    "cameras": {
+      "head": {
+        "path": "/World/HeadCamera",
+        "resolution": [
+          640,
+          480
+        ]
+      },
+      "left_wrist": {
+        "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+        "resolution": [
+          640,
+          480
+        ]
+      },
+      "right_wrist": {
+        "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+        "resolution": [
+          640,
+          480
+        ]
+      }
+    }
+  },
+  "assets": {
+    "font_sans": "synthetic/font_sans",
+    "font_sans_bold": "synthetic/font_sans_bold",
+    "x5": "synthetic/x5",
+    "station": "synthetic/station"
+  }
+}

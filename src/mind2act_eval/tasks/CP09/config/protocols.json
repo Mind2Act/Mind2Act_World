@@ -1,0 +1,32 @@
+{
+  "easy": {
+    "physics_hz": 120,
+    "control_hz": 30,
+    "rgb_hz": 30,
+    "physics_budget": 50400,
+    "colors": 1,
+    "required_steps": 5,
+    "rule": "CP09-restoration-95-axial-pull-v2",
+    "actions": "absolute_joint14_common_mode_gripper_r4"
+  },
+  "medium": {
+    "physics_hz": 120,
+    "control_hz": 30,
+    "rgb_hz": 30,
+    "physics_budget": 50400,
+    "colors": 2,
+    "required_steps": 8,
+    "rule": "CP09-restoration-95-axial-pull-v2",
+    "actions": "absolute_joint14_common_mode_gripper_r4"
+  },
+  "hard": {
+    "physics_hz": 120,
+    "control_hz": 30,
+    "rgb_hz": 30,
+    "physics_budget": 50400,
+    "colors": 3,
+    "required_steps": 10,
+    "rule": "CP09-restoration-95-axial-pull-v2",
+    "actions": "absolute_joint14_common_mode_gripper_r4"
+  }
+}

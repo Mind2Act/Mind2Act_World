@@ -1,0 +1,29 @@
+name: CPU contracts
+on: [push, pull_request]
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.11']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install '.[test]'
+      - run: python -m mind2act_eval.validation
+      - run: python -m pytest -q
+      - name: Source-only worker regression
+        run: |
+          python -m venv /tmp/source-tests
+          /tmp/source-tests/bin/pip install pytest
+          /tmp/source-tests/bin/python -m pytest tests/test_batch.py::test_child_uses_frozen_requested_spec_even_if_source_changes -q
+      - run: mind2act-eval validate manifests/*.json
+      - name: Clean wheel installation
+        run: |
+          python -m pip wheel --no-deps --wheel-dir /tmp/wheels .
+          python -m venv /tmp/clean-eval
+          /tmp/clean-eval/bin/pip install /tmp/wheels/*.whl
+          cd /tmp
+          /tmp/clean-eval/bin/mind2act-eval --help

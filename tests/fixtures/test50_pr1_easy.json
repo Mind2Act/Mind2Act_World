@@ -1,0 +1,17 @@
+{
+  "task": "PR1",
+  "difficulty": "easy",
+  "parameters": {
+    "task": "PR1",
+    "initial": 34,
+    "target": 10.0,
+    "difficulty": "easy"
+  },
+  "group_id": "PR1_base_initial_12.5",
+  "pair_id": "PR1_base_initial_12.5",
+  "split": "test",
+  "case_id": "PR1_easy_0c7134bad55b7c6c",
+  "instance_sha256": "0c7134bad55b7c6cc1b68f7ca6190a278c1600365b1fb744ae5597c97ce5327d",
+  "seed": 13680355497307,
+  "selection_seed": 2026092605
+}
