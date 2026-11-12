@@ -1,2 +1,4 @@
 """Mind2Act evaluation; importing this package never starts Isaac/Kit."""
-__version__ = "1.0.7"
+from importlib.metadata import version
+
+__version__ = version('mind2act-eval')
