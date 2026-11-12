@@ -755,11 +755,11 @@ def test_production_root_accepts_resolved_shared_mount_and_stays_contained(tmp_p
     )
 
     assert campaign.is_relative_to(shared_mount)
-    assert campaign.parent == shared_mount / "users/yuzhi/workspace_jclin/mind2act-eval-runs/results"
+    assert campaign.parent == shared_mount / "evaluation-runs/results"
     assert campaign.parent.is_dir()
-    physical_lock_root = shared_mount / "users/yuzhi/workspace_jclin/mind2act-eval-runs" / f".mind2act-eval-{os.getuid()}"
+    physical_lock_root = shared_mount / "evaluation-runs" / f".mind2act-eval-{os.getuid()}"
     assert lock_paths == [physical_lock_root / "batch.lock", physical_lock_root / "batch.lock"]
-    assert physical_lock_root.is_relative_to(shared_mount / "users/yuzhi/workspace_jclin/mind2act-eval-runs")
+    assert physical_lock_root.is_relative_to(shared_mount / "evaluation-runs")
     sibling_root = campaign.parent.parent / "other-results"
     assert batch._launcher_lock_root(sibling_root, require_shared=True) == physical_lock_root
     assert summary == []
