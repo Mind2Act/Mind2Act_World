@@ -35,13 +35,16 @@ def main():
     expected = pair['code_commit']
     require(len(expected) == 40 and all(c in '0123456789abcdef' for c in expected),
             'Invalid code commit')
-    require((code / 'SOURCE_COMMIT').read_text().strip() == expected,
-            'SOURCE_COMMIT does not match assets')
+    marker = code / 'SOURCE_COMMIT'
+    if marker.exists():
+        require(marker.read_text().strip() == expected, 'SOURCE_COMMIT does not match assets')
     if (code / '.git').exists():
         actual = subprocess.check_output(['git', '-C', str(code), 'rev-parse', 'HEAD'],
                                          text=True).strip()
         require(actual == expected, 'Git HEAD does not match assets')
         subprocess.run(['git', '-C', str(code), 'diff', '--quiet', 'HEAD', '--'], check=True)
+    else:
+        require(marker.is_file(), 'Source archives require SOURCE_COMMIT')
     check_files(code, pair['code_files'])
     check_files(root, pair['asset_control_files'])
     for name in ('old15-release-v1', 'new15-release-v1'):

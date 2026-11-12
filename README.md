@@ -13,6 +13,7 @@ Use Linux with an NVIDIA GPU and an existing Isaac Sim 5.1 environment. Install 
 that environment's Python:
 
 ```bash
+git rev-parse HEAD > SOURCE_COMMIT
 python -m pip install -e '.[isaac,xpolicy,coding-agent]'
 ```
 
@@ -20,7 +21,12 @@ Scene and robot assets are downloaded separately. They currently require access 
 [Lustin5209/mind2act-assets](https://huggingface.co/datasets/Lustin5209/mind2act-assets).
 Use only an asset revision explicitly paired with this code revision. Historical
 asset releases remain bound to their original code; do not edit their identity files
-to bypass a mismatch. This migration candidate has not yet been paired or GPU-validated.
+to bypass a mismatch. Use the `world-v1.0.0-candidate` asset revision for this candidate. Native GPU
+acceptance is pending. Verify the pair before running:
+
+```bash
+python tools/verify_release_pair.py --asset-root /path/to/assets --expect-release v1.0.0
+```
 
 For coding agents, install the runtime from pinned upstream files and the robot assets:
 
@@ -86,3 +92,21 @@ or contact a model service. Report skipped dependencies as well as failures.
 
 Original project code is provided under MIT. Third-party code and assets retain their
 own terms; the project licence does not relicense them.
+
+## Code layout
+
+Runtime Python modules live in `src/mind2act_eval/`:
+
+| Area | Directory |
+| --- | --- |
+| Task construction, mechanisms and scoring | `tasks/` |
+| Isaac simulation, rendering and materials | `sim/` |
+| Robot configuration | `robot/` |
+| Model and coding-agent integration | `adapters/` |
+| Episode execution | `runner/` |
+
+Top-level `tools/` contains installation and scene-check commands; `manifests/`
+contains fixed configurations, `examples/` contains integration examples, and
+`tests/` and `docs/` contain checks and documentation. Scene payloads live in the
+separate asset repository. The `src` layout keeps one installable Python package;
+it does not merge the individual task or simulation modules.

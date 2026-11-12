@@ -140,3 +140,35 @@ def test_catalog_probe_uses_diagnostic_ticks_but_still_binds_spec(catalog_releas
     from dataclasses import replace
     with pytest.raises((ValueError,ReleaseContractError)):
         validate_release_inputs(replace(spec,seed=spec.seed+1),args)
+
+
+def test_pair_verifier_accepts_checkout_and_rejects_stale_identity(tmp_path, monkeypatch):
+    import subprocess
+    import sys
+    import runpy
+
+    code = tmp_path / 'code'
+    assets = tmp_path / 'assets'
+    (code / 'tools').mkdir(parents=True)
+    script = code / 'tools/verify_release_pair.py'
+    script.write_bytes((ROOT / 'tools/verify_release_pair.py').read_bytes())
+    subprocess.run(['git', 'init', '-q', str(code)], check=True)
+    subprocess.run(['git', '-C', str(code), 'add', '.'], check=True)
+    subprocess.run(['git', '-C', str(code), '-c', 'user.name=Test', '-c',
+                    'user.email=test@localhost', 'commit', '-qm', 'fixture'], check=True)
+    commit = subprocess.check_output(['git', '-C', str(code), 'rev-parse', 'HEAD'], text=True).strip()
+    assets.mkdir()
+    for name in ('old15-release-v1', 'new15-release-v1'):
+        (assets / name).mkdir()
+        (assets / name / 'RELEASE.json').write_text(json.dumps({'code_commit': commit}))
+    pair = dict(release='v1.0.0', code_commit=commit, code_files={}, asset_control_files={})
+    (assets / 'RELEASE-PAIR.json').write_text(json.dumps(pair))
+    monkeypatch.setattr(sys, 'argv', [str(script), '--asset-root', str(assets)])
+    runpy.run_path(str(script), run_name='__main__')
+    (code / 'SOURCE_COMMIT').write_text('0' * 40)
+    with pytest.raises(ValueError, match='SOURCE_COMMIT does not match'):
+        runpy.run_path(str(script), run_name='__main__')
+    (code / 'SOURCE_COMMIT').unlink()
+    script.write_text(script.read_text() + '\n# local edit\n')
+    with pytest.raises(subprocess.CalledProcessError):
+        runpy.run_path(str(script), run_name='__main__')
