@@ -11,7 +11,7 @@ dependencies = ["numpy>=1.24", "shapely>=2,<3"]
 
 [project.optional-dependencies]
 replay = ["h5py>=3.8", "numpy>=1.24"]
-test = ["pytest>=7", "h5py>=3.8", "numpy>=1.24", "scipy>=1.10", "websockets==15.0.1", "msgpack==1.1.0", "usd-core>=24.5", "pillow>=10", "pyyaml>=6", "jsonschema>=4"]
+test = ["setuptools>=68", "pytest>=7", "h5py>=3.8", "numpy>=1.24", "scipy>=1.10", "websockets==15.0.1", "msgpack==1.1.0", "usd-core>=24.5", "pillow>=10", "pyyaml>=6", "jsonschema>=4"]
 g05 = ["numpy>=1.24", "websockets==15.0.1", "msgpack==1.1.0"]
 isaac = ["psutil>=5.9", "requests>=2.31", "scipy>=1.10", "toml==0.10.2"]
 coding-agent = ["pillow>=10", "pyyaml>=6", "jsonschema>=4"]

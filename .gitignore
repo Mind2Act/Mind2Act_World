@@ -9,3 +9,6 @@ dist/
 *.hdf5
 *.mp4
 .env
+
+# Generated checkout identity; source archives include their own stamp.
+/SOURCE_COMMIT

@@ -12,6 +12,7 @@ import os
 from pathlib import Path
 import re
 import stat
+import subprocess
 from types import MappingProxyType
 from typing import Any, Mapping
 from .verified_files import file_identity
@@ -274,6 +275,16 @@ def load_release(assetroot, *, verified_code_commit=None, code_root=None):
                 raise ReleaseContractError(f"cannot read actual SOURCE_COMMIT {source}: {exc}") from exc
             else:
                 identities.append(("SOURCE_COMMIT", _commit(actual, "SOURCE_COMMIT")))
+        # A persisted marker cannot override a newer or edited checkout.
+        if any(label == 'SOURCE_COMMIT' for label, _ in identities) and (actual_root / '.git').exists():
+            try:
+                head = subprocess.check_output(
+                    ['git', '-C', str(actual_root), 'rev-parse', 'HEAD'], text=True).strip()
+                subprocess.run(['git', '-C', str(actual_root), 'diff', '--quiet', 'HEAD', '--'],
+                               check=True, capture_output=True)
+            except (OSError, subprocess.CalledProcessError) as exc:
+                raise ReleaseContractError('cannot verify a clean Git checkout for SOURCE_COMMIT') from exc
+            identities.append(('Git HEAD', _commit(head, 'Git HEAD')))
         for label, actual in identities:
             if actual != expected:
                 raise ReleaseContractError(f"release code_commit differs from {label}")

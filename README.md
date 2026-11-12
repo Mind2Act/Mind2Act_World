@@ -17,6 +17,10 @@ git rev-parse HEAD > SOURCE_COMMIT
 python -m pip install -e '.[isaac,xpolicy,coding-agent]'
 ```
 
+Regenerate `SOURCE_COMMIT` after switching commits. Builds and formal runs reject
+a stale stamp or tracked local modifications; commit intended changes before
+creating a new paired version.
+
 Scene and robot assets are downloaded separately. They currently require access to
 [Lustin5209/mind2act-assets](https://huggingface.co/datasets/Lustin5209/mind2act-assets).
 Use only an asset revision explicitly paired with this code revision. Historical

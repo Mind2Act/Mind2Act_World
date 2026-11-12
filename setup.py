@@ -12,11 +12,15 @@ ROOT = Path(__file__).resolve().parent
 
 def source_commit():
     source = ROOT / 'SOURCE_COMMIT'
-    if source.is_file():
-        value = source.read_text().strip()
-    else:
+    marker = source.read_text().strip() if source.is_file() else None
+    if (ROOT / '.git').exists():
         value = subprocess.check_output(['git', '-C', str(ROOT), 'rev-parse', 'HEAD'], text=True).strip()
-    if re.fullmatch('[0-9a-f]{40}', value) is None:
+        if marker is not None and marker != value:
+            raise ValueError('SOURCE_COMMIT differs from Git HEAD; refresh it after checkout')
+        subprocess.run(['git', '-C', str(ROOT), 'diff', '--quiet', 'HEAD', '--'], check=True)
+    else:
+        value = marker
+    if value is None or re.fullmatch('[0-9a-f]{40}', value) is None:
         raise ValueError('building requires an explicit full SOURCE_COMMIT or Git identity')
     return value + '\n'
 
