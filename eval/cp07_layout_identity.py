@@ -1,7 +1,6 @@
 """Public spec/index authentication; contains no solution or raw geometry reads."""
 import hashlib
 import json
-from pathlib import Path
 from importlib.resources import files
 
 MODE = 'train_layout_test'

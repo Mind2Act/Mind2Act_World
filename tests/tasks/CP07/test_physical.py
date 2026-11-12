@@ -258,7 +258,6 @@ def test_private_binding_and_scene_digests_are_enforced(tmp_path):
 def test_catalog_is_lazy_and_no_old_world_or_expert_imports():
     from mind2act_eval.tasks.catalog import load_task
     from mind2act_eval.validation import check_sources
-    from pathlib import Path
     assert load_task("CP07").task_id == "CP07"
     assert check_sources() == []
 

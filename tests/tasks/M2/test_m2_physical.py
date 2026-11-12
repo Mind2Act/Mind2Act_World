@@ -236,11 +236,10 @@ def test_inspected_source_spec_conversion_preserves_case_seed_and_ignores_paths(
 
 
 def test_catalog_and_source_boundary():
-    from pathlib import Path
     from mind2act_eval.tasks.catalog import load_task
     from mind2act_eval.validation import check_sources
     assert load_task("M2").task_id == "M2"
-    assert check_sources(Path(__file__).resolve().parents[3]/"eval") == []
+    assert check_sources() == []
 
 
 @pytest.mark.parametrize('release_offset', [0, 1])

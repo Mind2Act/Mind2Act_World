@@ -37,7 +37,7 @@ class SourceDist(sdist):
 PACKAGE_DIRS = {
     'mind2act_eval': 'eval',
     'mind2act_eval.tasks': 'task',
-    'mind2act_eval.sim': 'env',
+    'mind2act_eval.sim': 'env/sim',
     'mind2act_eval.robot': 'env_cfg',
     'mind2act_eval.adapters': 'policies',
 }

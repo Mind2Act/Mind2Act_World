@@ -21,10 +21,8 @@ Scene and robot assets are downloaded separately. They currently require access 
 [Lustin5209/mind2act-assets](https://huggingface.co/datasets/Lustin5209/mind2act-assets).
 Use only an asset revision explicitly paired with this code revision. Historical
 asset releases remain bound to their original code; do not edit their identity files
-to bypass a mismatch. This layout revision is being validated locally. The current
-`world-v1.0.0-candidate` asset revision remains paired with the preceding code;
-its pairing will be updated after layout checks pass. Native GPU acceptance is
-pending. Verify the selected pair before running:
+to bypass a mismatch. Use the `world-v1.0.0-candidate` asset revision paired with this exact code
+commit. Native GPU acceptance is pending. Verify the selected pair before running:
 
 ```bash
 python tools/verify_release_pair.py --asset-root /path/to/assets --expect-release v1.0.0
@@ -100,7 +98,7 @@ own terms; the project licence does not relicense them.
 | Top-level directory | Responsibility | Python import namespace |
 | --- | --- | --- |
 | `task/` | Task construction, mechanisms, task configuration and scoring | `mind2act_eval.tasks` |
-| `env/` | Isaac simulation, rendering, physics and materials | `mind2act_eval.sim` |
+| `env/sim/` | Isaac simulation, rendering, physics and materials | `mind2act_eval.sim` |
 | `env_cfg/` | Robot profiles, geometry configuration and robot integration | `mind2act_eval.robot` |
 | `eval/` | Episode runner, CLI, budgets and release checks | `mind2act_eval` |
 | `policies/` | Model adapters and coding-agent integration | `mind2act_eval.adapters` |
@@ -114,3 +112,6 @@ with `python -m pip install -e .` before running from a checkout; setting
 `PYTHONPATH` alone does not install the package mapping. CLI names, adapter module
 names and external model configuration remain unchanged. Wheels include the same
 package resources and can run from outside the checkout.
+
+The `env/` container has no Python initializer, avoiding a name collision with
+the external planner runtime's `env` namespace.
