@@ -187,7 +187,7 @@ def test_runtime_instruction_cannot_be_replaced_by_an_old_r_or_catalog_goal():
     ('tasks/_instructions/config/instructions.json', '2e08cb175e3205724c476a10f851f002376d966ab4478cef3ad273ec26d3b64a'),
 ])
 def test_legacy_provenance_and_e2e_catalog_bytes_are_not_rewritten(path, sha):
-    assert hashlib.sha256((ROOT / 'src/mind2act_eval' / path).read_bytes()).hexdigest() == sha
+    assert hashlib.sha256((ROOT / {'adapters': 'policies', 'tasks': 'task'}[path.split('/')[0]] / path.split('/', 1)[1]).read_bytes()).hexdigest() == sha
 
 
 @pytest.mark.parametrize('task', sorted(AUTHORITY_ROWS))

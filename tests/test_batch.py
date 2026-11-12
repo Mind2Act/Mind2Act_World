@@ -14,7 +14,7 @@ def demo_spec():
 
 def test_child_uses_frozen_requested_spec_even_if_source_changes(tmp_path, monkeypatch):
     # pytest pythonpath affects the parent only; bind the child to this checkout.
-    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "src"))
+    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "."))
     spec = demo_spec()
     source = tmp_path / "source.json"
     source.write_text(json.dumps(to_json(spec)))
@@ -84,7 +84,7 @@ def test_zero_exit_without_worker_result_is_archived_as_infra_failure(tmp_path):
 def test_valid_result_without_seal_stays_invalid_after_preseal_exit_zero(tmp_path, monkeypatch):
     from mind2act_eval.contracts import ConsumerKind, Result, Termination, to_json
 
-    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "src"))
+    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "."))
     script = tmp_path / "preseal_exit.py"
     script.write_text(
         "import argparse,json,os; from pathlib import Path; "
@@ -113,7 +113,7 @@ def test_valid_result_without_seal_stays_invalid_after_preseal_exit_zero(tmp_pat
 def test_sealed_result_is_valid_even_when_process_exit_code_is_nonzero(tmp_path, monkeypatch):
     from mind2act_eval.contracts import ConsumerKind, Result, Termination, to_json
 
-    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "src"))
+    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "."))
     script = tmp_path / "postseal_exit.py"
     script.write_text(
         "import argparse,json,os; from pathlib import Path; "
@@ -151,7 +151,7 @@ def test_postseal_child_mutation_is_rejected_by_final_validation(tmp_path, monke
     from mind2act_eval import batch
     from mind2act_eval.contracts import ConsumerKind
 
-    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "src"))
+    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "."))
     script = tmp_path / "mutate_after_seal.py"
     release = tmp_path / "allow_mutation"
     script.write_text(f"""
@@ -207,7 +207,7 @@ def test_visible_seal_with_failed_supervisor_fsync_is_invalid(tmp_path, monkeypa
     import mind2act_eval.sealing as sealing
     from mind2act_eval.contracts import ConsumerKind
 
-    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "src"))
+    monkeypatch.setenv("PYTHONPATH", str(Path(__file__).resolve().parents[1] / "."))
     script = tmp_path / "delay_final_directory_fsync.py"
     entered = tmp_path / "final-dir-fsync-entered"
     script.write_text(f"""

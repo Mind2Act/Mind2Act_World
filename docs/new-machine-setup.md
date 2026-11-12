@@ -7,7 +7,8 @@ GPU already assigned to another workload.
 1. In the clean checkout, run `git rev-parse HEAD > SOURCE_COMMIT`, then install the project with `python -m pip install -e '.[isaac,xpolicy,coding-agent]'`.
 2. Obtain the explicitly paired private asset revision. Check the code/asset release
    pair with `python tools/verify_release_pair.py --help` and the release instructions.
-   Use asset revision `world-v1.0.0-candidate`. Native GPU acceptance remains pending.
+   Use an asset revision paired with the exact checkout. The directory-layout
+   revision needs a new pairing after CPU validation. Native GPU acceptance remains pending.
 3. For coding agents, run `python tools/install_coding_agent.py --out DIR --asset-root ROOT`.
    All source downloads use fixed commits and SHA256. Large robot files are read from
    `ROOT/shared/robots/x5`; no second robot download is needed. A partial failed install

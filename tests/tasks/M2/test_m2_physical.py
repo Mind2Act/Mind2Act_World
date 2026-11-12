@@ -240,7 +240,7 @@ def test_catalog_and_source_boundary():
     from mind2act_eval.tasks.catalog import load_task
     from mind2act_eval.validation import check_sources
     assert load_task("M2").task_id == "M2"
-    assert check_sources(Path(__file__).resolve().parents[3]/"src/mind2act_eval") == []
+    assert check_sources(Path(__file__).resolve().parents[3]/"eval") == []
 
 
 @pytest.mark.parametrize('release_offset', [0, 1])

@@ -20,12 +20,6 @@ xpolicy = ["xpolicylab @ git+https://github.com/XPolicyLab/XPolicyLab.git@128e62
 [project.scripts]
 mind2act-eval = "mind2act_eval.cli:main"
 
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.setuptools.package-data]
-mind2act_eval = ["SOURCE_COMMIT", "robot/*.json", "sim/*.json", "tasks/*/config/*.json", "tasks/*/mechanism/*.json", "adapters/agent_input/data/*.json"]
-
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["."]

@@ -17,7 +17,7 @@ def worker(tmp_path, config, *, video_hz=6):
         config_path.write_text(json.dumps(config))
     output = tmp_path / "episode"
     output.mkdir()
-    env = dict(os.environ, PYTHONPATH=os.pathsep.join((str(ROOT / "src"), str(ROOT / "tests"), str(ROOT / "examples"))))
+    env = dict(os.environ, PYTHONPATH=os.pathsep.join((str(ROOT / "."), str(ROOT / "tests"), str(ROOT / "examples"))))
     completed = subprocess.run(
         [sys.executable, "-m", "mind2act_eval.cli", "_worker", "--backend", "demo",
          "--spec", str(ROOT / "manifests/demo.json"), "--output", str(output),

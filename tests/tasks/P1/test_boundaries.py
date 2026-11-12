@@ -5,7 +5,7 @@ from mind2act_eval.contracts import ClockSpec, InstanceSpec
 from mind2act_eval.tasks import TaskRegistry
 from mind2act_eval.tasks.P1 import DEFINITION
 
-ROOT = Path(__file__).parents[3] / "src/mind2act_eval/tasks/P1"
+ROOT = Path(__file__).parents[3] / "task/P1"
 SOURCES = {p: p.read_text() for p in ROOT.rglob("*.py")}
 
 

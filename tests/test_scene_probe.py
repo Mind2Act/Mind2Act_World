@@ -415,7 +415,7 @@ def test_supervisor_binds_unscored_seal_to_parent_consumer(intake, tmp_path, mon
     from mind2act_eval.batch import EpisodeJob, run_attempt
     fixture, _, _, _ = run_fake(intake, tmp_path)
     script = tmp_path/"cpu-seal-child.py"
-    source = str(Path(__file__).parents[1]/"src")
+    source = str(Path(__file__).parents[1]/".")
     script.write_text("import sys, pathlib, shutil, json, os\n"
         + "sys.path.insert(0, " + repr(source) + ")\n"
         + "from mind2act_eval.sealing import seal_worker_outputs\n"

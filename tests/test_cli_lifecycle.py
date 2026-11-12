@@ -62,7 +62,7 @@ def test_buffered_worker_stdout_is_flushed_before_seal_in_real_child(tmp_path, m
 
     output = tmp_path / "attempt"
     output.mkdir()
-    source_root = Path(__file__).resolve().parents[1] / "src"
+    source_root = Path(__file__).resolve().parents[1] / "."
     monkeypatch.setenv("PYTHONPATH", str(source_root))
     script = r"""
 import json, os, sys

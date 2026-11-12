@@ -148,10 +148,14 @@ def _rooted_in_handle(node, bindings) -> bool:
     return False
 
 
-def check_sources(package_root: Path):
+def check_sources(package_root: Path | None = None):
     findings = []
-    for path in Path(package_root).rglob("*.py"):
-        relative = path.relative_to(package_root)
+    if package_root is None:
+        from .package_paths import source_files
+        sources = source_files()
+    else:
+        sources = {path.relative_to(package_root): path for path in Path(package_root).rglob("*.py")}
+    for relative, path in sources.items():
         tree = ast.parse(path.read_text(), filename=str(relative))
         task_code = relative.parts[0] == "tasks"
         is_robot = _robot_bindings(tree) if task_code else None
@@ -189,7 +193,7 @@ def check_sources(package_root: Path):
 
 if __name__ == "__main__":
     import sys
-    findings = check_sources(Path(__file__).parent)
+    findings = check_sources()
     for finding in findings:
         print(finding)
     raise SystemExit(bool(findings))

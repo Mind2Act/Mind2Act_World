@@ -11,13 +11,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - run: python -m pip install '.[test]'
+      - run: python -m pip install -e '.[test]'
       - run: python -m mind2act_eval.validation
       - run: python -m pytest -q
       - name: Source-only worker regression
         run: |
           python -m venv /tmp/source-tests
           /tmp/source-tests/bin/pip install pytest
+          /tmp/source-tests/bin/pip install --no-deps -e .
           /tmp/source-tests/bin/python -m pytest tests/test_batch.py::test_child_uses_frozen_requested_spec_even_if_source_changes -q
       - run: mind2act-eval validate manifests/*.json
       - name: Clean wheel installation

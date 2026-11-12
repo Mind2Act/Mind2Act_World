@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
+from mind2act_eval.package_paths import source_files
 import struct
 import time
 import zlib
@@ -148,8 +149,8 @@ def run_probe_loop(spec, task, ctx, inputs, *, wall_s, native=None):
          "robot_policy": "native_initialization_targets_retained; no action commands",
          "clutter_physics_policy": ("not_applied_source_clean" if source_clean else
                                    "fixed_source_clutter_spawn_defaults; no task/robot/collider edits"),
-         "code_sha256": {p.relative_to(Path(__file__).parent).as_posix(): sha256(p)
-                         for p in sorted(Path(__file__).parent.rglob("*.py"))}}, error)
+         "code_sha256": {name.as_posix(): sha256(path)
+                         for name, path in sorted(source_files().items())}}, error)
     write_json(ctx.output_dir / "scene-probe-receipt.json", receipt)
     artifacts = {"scene_probe_receipt": "scene-probe-receipt.json", **dict(ctx.sim.artifacts)}
     for key, filename in (("before_head", before_head), ("after_head", after_head)):

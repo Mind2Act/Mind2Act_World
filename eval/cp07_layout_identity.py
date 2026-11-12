@@ -2,6 +2,7 @@
 import hashlib
 import json
 from pathlib import Path
+from importlib.resources import files
 
 MODE = 'train_layout_test'
 SOURCE = 'cp07-training-layout-v1'
@@ -14,7 +15,7 @@ def digest(value):
 
 def validate_identity(spec):
     from mind2act_eval.contracts import to_json
-    authority = json.loads(Path(__file__).parent.joinpath('tasks/CP07/config/train-layout-authority.json').read_text())
+    authority = json.loads(files('mind2act_eval.tasks').joinpath('CP07/config/train-layout-authority.json').read_text())
     row = authority['cases'].get(spec.instance_id)
     if (spec.task_id != 'CP07' or spec.source_id != SOURCE or spec.config.get('cp07_mode') != MODE
             or row is None or spec.seed != row['seed'] or spec.difficulty != row['difficulty']

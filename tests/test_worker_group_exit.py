@@ -20,7 +20,7 @@ def alive(pid):
 @pytest.mark.parametrize('tamper', [False, True])
 def test_sealed_worker_cleans_its_surviving_group_before_valid_settlement(tmp_path, monkeypatch, tamper):
     root=Path(__file__).parents[1]
-    monkeypatch.setenv('PYTHONPATH',os.pathsep.join([str(root/'src'),str(root/'tests'),os.environ.get('PYTHONPATH','')]))
+    monkeypatch.setenv('PYTHONPATH',os.pathsep.join([str(root/'.'),str(root/'tests'),os.environ.get('PYTHONPATH','')]))
     script=tmp_path/'worker.py'
     script.write_text('''import argparse,json,os,subprocess,sys
 from pathlib import Path
@@ -65,7 +65,7 @@ _successful_attempt(out,pid=os.getpid());seal_worker_outputs(out);os._exit(0)
 def test_unverifiable_group_cannot_return_effective_score_or_reclaim_scratch(tmp_path, monkeypatch):
     from mind2act_eval import episode_storage
     root=Path(__file__).parents[1]
-    monkeypatch.setenv('PYTHONPATH',str(root/'src'))
+    monkeypatch.setenv('PYTHONPATH',str(root/'.'))
     monkeypatch.setattr(episode_storage,'process_group_exited',lambda pid:False)
     spec=InstanceSpec('demo','demo-001','easy','synthetic-public-v1','v1','none','v1')
     source=tmp_path/'source.json'
@@ -104,7 +104,7 @@ def test_batch_does_not_release_slot_or_retry_unknown_exit(tmp_path, monkeypatch
 def test_settlement_uses_final_coherent_seal_and_rechecks_job_binding(tmp_path,monkeypatch,change):
     from mind2act_eval.sealing import seal_worker_outputs, validate_worker_seal
     root=Path(__file__).parents[1]
-    monkeypatch.setenv('PYTHONPATH',os.pathsep.join([str(root/'src'),str(root/'tests'),os.environ.get('PYTHONPATH','')]))
+    monkeypatch.setenv('PYTHONPATH',os.pathsep.join([str(root/'.'),str(root/'tests'),os.environ.get('PYTHONPATH','')]))
     script=tmp_path/'worker.py'
     script.write_text('''import argparse,json,os,subprocess,sys
 from pathlib import Path

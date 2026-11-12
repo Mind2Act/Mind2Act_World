@@ -109,7 +109,7 @@ with patch.object(runtime_release, 'validate_release_inputs', lambda *a, **k: No
 
 
 def run_cpu_worker(tmp_path, mode):
-    env = dict(os.environ, PYTHONPATH=str(Path(__file__).resolve().parents[1] / 'src'))
+    env = dict(os.environ, PYTHONPATH=str(Path(__file__).resolve().parents[1] / '.'))
     child = subprocess.run([sys.executable, '-c', CPU_WORKER, str(tmp_path), mode],
                            capture_output=True, text=True, env=env, timeout=20)
     events = (tmp_path / 'events.log').read_text().splitlines()

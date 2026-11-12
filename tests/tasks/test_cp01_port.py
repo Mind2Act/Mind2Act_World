@@ -4,7 +4,7 @@ from pathlib import Path
 from mind2act_eval.tasks import TaskRegistry
 from mind2act_eval.tasks.CP01 import DEFINITION
 
-ROOT = Path(__file__).resolve().parents[2] / "src/mind2act_eval/tasks/CP01"
+ROOT = Path(__file__).resolve().parents[2] / "task/CP01"
 
 
 def test_registers_through_explicit_registry():

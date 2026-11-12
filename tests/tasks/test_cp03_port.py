@@ -13,7 +13,7 @@ from mind2act_eval.tasks.CP03.instances import instance_document, verify_assets
 from mind2act_eval.tasks.CP03.mechanism.observable_quality import PlateQuality, plate_tilt_deg
 from mind2act_eval.tasks.CP03.scorer import RULE_VERSION, score
 
-ROOT = Path(__file__).resolve().parents[2] / "src/mind2act_eval/tasks/CP03"
+ROOT = Path(__file__).resolve().parents[2] / "task/CP03"
 
 
 def native(level, satisfied, wrong=0, success=False):

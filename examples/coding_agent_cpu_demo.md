@@ -6,7 +6,7 @@ Run from a source checkout (no server, model, GPU or private inputs):
 
 ```sh
 mkdir -p /tmp/coding_agent-demo-episode
-PYTHONPATH=src:examples python -m mind2act_eval.cli _worker \
+PYTHONPATH=.:examples python -m mind2act_eval.cli _worker \
   --backend demo --spec manifests/demo.json \
   --adapter mind2act_eval.adapters.coding_agent:create \
   --adapter-config examples/coding_agent_cpu_demo.json \

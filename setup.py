@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 import subprocess
 
-from setuptools import setup
+from setuptools import setup, find_packages
 from setuptools.command.build_py import build_py
 from setuptools.command.sdist import sdist
 
@@ -33,4 +33,20 @@ class SourceDist(sdist):
         (Path(base_dir) / 'SOURCE_COMMIT').write_text(source_commit())
 
 
-setup(cmdclass={'build_py': BuildPy, 'sdist': SourceDist})
+# Keep the public import namespace while exposing functional areas at repository root.
+PACKAGE_DIRS = {
+    'mind2act_eval': 'eval',
+    'mind2act_eval.tasks': 'task',
+    'mind2act_eval.sim': 'env',
+    'mind2act_eval.robot': 'env_cfg',
+    'mind2act_eval.adapters': 'policies',
+}
+packages = []
+for namespace, directory in PACKAGE_DIRS.items():
+    packages.append(namespace)
+    packages.extend(namespace + '.' + child for child in find_packages(directory))
+
+setup(packages=packages, package_dir=PACKAGE_DIRS,
+      package_data={'': ['*.json', 'config/*.json', 'mechanism/*.json', 'data/*.json'],
+                    'mind2act_eval': ['SOURCE_COMMIT']},
+      cmdclass={'build_py': BuildPy, 'sdist': SourceDist})

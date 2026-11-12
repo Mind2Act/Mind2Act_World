@@ -110,7 +110,7 @@ assert Path(sys.argv[2]).exists()
         for index in range(8):
             with cache_use_lock(cache, blocking=False) as fd:
                 env = dict(os.environ, PYTHONDONTWRITEBYTECODE='1',
-                    PYTHONPATH=str(Path(__file__).resolve().parents[1] / 'src'),
+                    PYTHONPATH=str(Path(__file__).resolve().parents[1] / '.'),
                     MIND2ACT_EVAL_NODE_CACHE=str(cache), MIND2ACT_EVAL_CACHE_LOCK_FD=str(fd))
                 children.append(subprocess.Popen([sys.executable, '-c', script,
                     str(tmp_path / f'ready-{index}'), str(release)], env=env,

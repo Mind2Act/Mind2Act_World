@@ -21,8 +21,10 @@ Scene and robot assets are downloaded separately. They currently require access 
 [Lustin5209/mind2act-assets](https://huggingface.co/datasets/Lustin5209/mind2act-assets).
 Use only an asset revision explicitly paired with this code revision. Historical
 asset releases remain bound to their original code; do not edit their identity files
-to bypass a mismatch. Use the `world-v1.0.0-candidate` asset revision for this candidate. Native GPU
-acceptance is pending. Verify the pair before running:
+to bypass a mismatch. This layout revision is being validated locally. The current
+`world-v1.0.0-candidate` asset revision remains paired with the preceding code;
+its pairing will be updated after layout checks pass. Native GPU acceptance is
+pending. Verify the selected pair before running:
 
 ```bash
 python tools/verify_release_pair.py --asset-root /path/to/assets --expect-release v1.0.0
@@ -95,18 +97,20 @@ own terms; the project licence does not relicense them.
 
 ## Code layout
 
-Runtime Python modules live in `src/mind2act_eval/`:
+| Top-level directory | Responsibility | Python import namespace |
+| --- | --- | --- |
+| `task/` | Task construction, mechanisms, task configuration and scoring | `mind2act_eval.tasks` |
+| `env/` | Isaac simulation, rendering, physics and materials | `mind2act_eval.sim` |
+| `env_cfg/` | Robot profiles, geometry configuration and robot integration | `mind2act_eval.robot` |
+| `eval/` | Episode runner, CLI, budgets and release checks | `mind2act_eval` |
+| `policies/` | Model adapters and coding-agent integration | `mind2act_eval.adapters` |
 
-| Area | Directory |
-| --- | --- |
-| Task construction, mechanisms and scoring | `tasks/` |
-| Isaac simulation, rendering and materials | `sim/` |
-| Robot configuration | `robot/` |
-| Model and coding-agent integration | `adapters/` |
-| Episode execution | `runner/` |
+`tools/`, `manifests/`, `examples/`, `tests/` and `docs/` remain at the top level.
+Scene payloads live in the separate asset repository. Task-specific JSON stays
+with its task so configuration and mechanisms can be reviewed together.
 
-Top-level `tools/` contains installation and scene-check commands; `manifests/`
-contains fixed configurations, `examples/` contains integration examples, and
-`tests/` and `docs/` contain checks and documentation. Scene payloads live in the
-separate asset repository. The `src` layout keeps one installable Python package;
-it does not merge the individual task or simulation modules.
+Setuptools maps these directories into one installable Python namespace. Install
+with `python -m pip install -e .` before running from a checkout; setting
+`PYTHONPATH` alone does not install the package mapping. CLI names, adapter module
+names and external model configuration remain unchanged. Wheels include the same
+package resources and can run from outside the checkout.

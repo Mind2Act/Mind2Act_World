@@ -17,18 +17,18 @@ Those two sites coupled recording and rendering to the declared RGB clock.
 
 | Consumer | Actual image consumption and source |
 | --- | --- |
-| G0.5 native | [`XPolicyLabAdapter.act` and `peek_next_action`](../src/mind2act_eval/adapters/xpolicylab.py) send public RGB only when `transport.needs_observation` and no prefetched action is pending. Otherwise they send `{}`. [`G05NativeTransport.action`](../src/mind2act_eval/adapters/g05_wire.py) enforces `need_obs` against the negotiated execution chunk, 1–32 rows. Each row remains 1/30s. |
+| G0.5 native | [`XPolicyLabAdapter.act` and `peek_next_action`](../policies/xpolicylab.py) send public RGB only when `transport.needs_observation` and no prefetched action is pending. Otherwise they send `{}`. [`G05NativeTransport.action`](../policies/g05_wire.py) enforces `need_obs` against the negotiated execution chunk, 1–32 rows. Each row remains 1/30s. |
 | G0.5 image history | Audited `source/scripts/serve_policy.py`, SHA256 `0abb08d716a8d11667f786b40c327d669b95f599f31fb174ff3e7ca7dc592cb9`: `build_obs_dict`, lines 262–311, expands the **single current image/state** along `num_obs_steps`; it does not collect intermediate camera frames. `ChunkedPolicyWrapper.need_obs/get_action`, lines 347–398, only reads images when recomputing a chunk. Handler lines 403–429 forwards the cache protocol. Rechecked against the existing source audit copy; see [policy clock source audit](policy-io-clock.md#native-g05-evidence). No real model was called. |
-| G0.5 capability clock | [`validate_clock`/`result_metadata`](../src/mind2act_eval/adapters/xpolicylab.py) continue requiring control/RGB 30/30, and [`public_observation`](../src/mind2act_eval/adapters/xpolicylab.py) still sends `frequency=30`. This is the policy row/profile identity, not a requirement to transmit or retain every simulated frame. |
-| Canonical XPolicyLab | [`XPolicyRPCTransport.needs_observation/action`](../src/mind2act_eval/adapters/xpolicy_rpc.py) sends `update_obs` when its local queue is empty, then consumes the returned action chunk in order. No intermediate frame history is sent. |
-| Coding agent, native coding agent | [`Nativecoding agentAdapter._load_chunk/act`](../src/mind2act_eval/adapters/coding_agent_native.py) invokes `integration.observe(public_observation(...))` and a new decision only after the FIFO drains. New decisions receive current three-camera RGB. Cached rows keep their original control clock. |
-| Coding agent, single-action bridge | [`coding agentAdapter.act`](../src/mind2act_eval/adapters/coding_agent.py) invokes the external public tool once per act. Every such decision continues receiving current RGB, independently of 6Hz video. |
-| Expert replay | [`H5Replay.act`](../src/mind2act_eval/replay.py) reads action datasets, not RGB. Tick-zero/recording images remain available; replay rows need no image reads. |
+| G0.5 capability clock | [`validate_clock`/`result_metadata`](../policies/xpolicylab.py) continue requiring control/RGB 30/30, and [`public_observation`](../policies/xpolicylab.py) still sends `frequency=30`. This is the policy row/profile identity, not a requirement to transmit or retain every simulated frame. |
+| Canonical XPolicyLab | [`XPolicyRPCTransport.needs_observation/action`](../policies/xpolicy_rpc.py) sends `update_obs` when its local queue is empty, then consumes the returned action chunk in order. No intermediate frame history is sent. |
+| Coding agent, native coding agent | [`Nativecoding agentAdapter._load_chunk/act`](../policies/coding_agent_native.py) invokes `integration.observe(public_observation(...))` and a new decision only after the FIFO drains. New decisions receive current three-camera RGB. Cached rows keep their original control clock. |
+| Coding agent, single-action bridge | [`coding agentAdapter.act`](../policies/coding_agent.py) invokes the external public tool once per act. Every such decision continues receiving current RGB, independently of 6Hz video. |
+| Expert replay | [`H5Replay.act`](../eval/replay.py) reads action datasets, not RGB. Tick-zero/recording images remain available; replay rows need no image reads. |
 | Other/future adapters | Omitted `requires_rgb` defaults to true. An adapter consuming images/history every action retains every requested observation; it gets no assumed chunk optimization. A model requesting every 30Hz control row still renders at 30Hz, with only its recorded video reduced to 6Hz. |
 
 ## Scoring evidence audit
 
-All 30 task ports under `src/mind2act_eval/tasks` were searched for `sim.rgb`,
+All 30 task ports under `task` were searched for `sim.rgb`,
 `capture`, `get_rgb/get_rgba`, camera/image consumers, and scorer/evidence inputs.
 No current task scorer/evidence reader consumes rendered camera pixels per tick.
 All existing physical measurements and evidence hooks continue at every physics
@@ -36,16 +36,16 @@ tick. Image-like or camera-related cases need the following distinction:
 
 | Task/evidence | Actual measurement |
 | --- | --- |
-| CP09 | [`NativeSensors.after_step`](../src/mind2act_eval/tasks/CP09/scene.py) uses native tool poses, board coordinates, contact pairs, pickup/cap events and contact-raster updates; [`RasterMetrics`](../src/mind2act_eval/tasks/CP09/evidence.py) scores that reconstructed raster. It does not score camera pixels. |
-| PR4 | [`ClothScene._sample/points`](../src/mind2act_eval/tasks/PR4/scene.py) reads USD simulation mesh nodes, optional FEM tensors, rigid contacts and poses. `render_physics_error_m` measures node-position agreement, not an RGB image difference. |
-| CP01 | [`CP01Scene._measure`](../src/mind2act_eval/tasks/CP01/scene.py) computes reference visibility with authored camera frustum / USD bounds, plus body poses and contacts. |
-| DR1 | [`evidence`](../src/mind2act_eval/tasks/DR1/scene.py) reads authored camera lens attributes, fixed transform errors and physical contact/transport records. |
-| S1 / E1 | [`S1.after_step/evidence`](../src/mind2act_eval/tasks/S1/scene.py) and [`E1.after_step/evidence`](../src/mind2act_eval/tasks/E1/scene.py) retain source timelines, measured bodies and physical ledgers. Cue visibility and material switches do not imply scoring camera images. |
+| CP09 | [`NativeSensors.after_step`](../task/CP09/scene.py) uses native tool poses, board coordinates, contact pairs, pickup/cap events and contact-raster updates; [`RasterMetrics`](../task/CP09/evidence.py) scores that reconstructed raster. It does not score camera pixels. |
+| PR4 | [`ClothScene._sample/points`](../task/PR4/scene.py) reads USD simulation mesh nodes, optional FEM tensors, rigid contacts and poses. `render_physics_error_m` measures node-position agreement, not an RGB image difference. |
+| CP01 | [`CP01Scene._measure`](../task/CP01/scene.py) computes reference visibility with authored camera frustum / USD bounds, plus body poses and contacts. |
+| DR1 | [`evidence`](../task/DR1/scene.py) reads authored camera lens attributes, fixed transform errors and physical contact/transport records. |
+| S1 / E1 | [`S1.after_step/evidence`](../task/S1/scene.py) and [`E1.after_step/evidence`](../task/E1/scene.py) retain source timelines, measured bodies and physical ledgers. Cue visibility and material switches do not imply scoring camera images. |
 | Other CP/DR/E/F/M/P/PR/S ports | Existing scene hooks/evidence derive from physical contacts, joint/body/mesh state and task mechanism records. No image acquisition call is present in their scoring path. |
 
 Existing task-owned visual refreshes are unchanged, including
-[`CP02` cue-transition renders](../src/mind2act_eval/tasks/CP02/scene.py).
-[`CP04` thermal display](../src/mind2act_eval/tasks/CP04/mechanism/thermal.py)
+[`CP02` cue-transition renders](../task/CP02/scene.py).
+[`CP04` thermal display](../task/CP04/mechanism/thermal.py)
 continues updating its source material/geometry state without invoking rendering.
 No task file, evidence format, scorer, threshold or scene was edited.
 

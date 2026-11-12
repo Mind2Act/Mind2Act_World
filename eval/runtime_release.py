@@ -15,7 +15,7 @@ NEW15_SOURCE_CLEAN_TASKS = frozenset((
 
 def guard_input_paths(args):
     # Preserve the original spelling until the shared guard has checked aliases.
-    code_root = Path(__file__).parents[2]
+    code_root = Path(__file__).parents[1]
     paths = [code_root]
     for key in ('spec', 'asset_root', 'h5', 'replay_metadata', 'adapter_config',
                 'probe_config', 'gpu_allocation', 'native_exit_debug_config'):

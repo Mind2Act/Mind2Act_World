@@ -193,9 +193,9 @@ COMMON_TESTS = (
     'tests/test_common_input_protocol.py',
     'tests/test_final_scoring_cpu_entrypoint.py',
 )
-RULES_PATH = 'src/mind2act_eval/scoring.py'
+RULES_PATH = 'eval/scoring.py'
 HASH_SUFFIXES = {'.py', '.json', '.csv', '.toml', '.yaml', '.yml', '.usda', '.sh'}
-SOURCE_DIRECTORIES = ('src', 'tests', 'tools', 'scripts', 'manifests',
+SOURCE_DIRECTORIES = ('eval', 'task', 'env', 'env_cfg', 'policies', 'tests', 'tools', 'scripts', 'manifests',
                       'tests/fixtures/recipes/baseline')
 
 
@@ -300,7 +300,7 @@ def source_snapshot(root):
 
 
 def _scoring_version(root):
-    tree = ast.parse((root/'src/mind2act_eval/scoring.py').read_text())
+    tree = ast.parse((root/'eval/scoring.py').read_text())
     for node in tree.body:
         if isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == 'SCORING_VERSION' for t in node.targets):
             value = ast.literal_eval(node.value)
@@ -368,7 +368,7 @@ def main(argv=None, *, root=ROOT):
                   selected_test_hashes={p: before['hashes'][p] for p in selection['paths']},
                   source_hashes=before['hashes'], source_snapshot_sha256=before['sha256'],
                   source_snapshot_after_sha256=after['sha256'],
-                  hash_scope='src/tests/tools/scripts/manifests code/config, test helpers, frozen public coding baseline, pytest config and final authority',
+                  hash_scope='eval/task/env/env_cfg/policies/tests/tools/manifests code/config, test helpers, frozen public coding baseline, pytest config and final authority',
                   code_sha=before_git.get('head'), git_dirty=before_git.get('dirty'),
                   git_after=after_git, worktree_changed_during_run=changed, fixed_head_verified=bool(clean_head),
                   tested_ref=('head:'+before_git['head']) if clean_head else 'worktree:'+before['sha256'],

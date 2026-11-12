@@ -78,13 +78,13 @@ def test_all150_original_sources_both_modes_use_actual_public_recipe_and_wire(sd
         unique_sources=150,rendered=300,cjk=0,source_code_commit=release.code_commit,
         candidate_code_commit=candidate_commit,
         source_sha256={name:hashlib.sha256((candidate/name).read_bytes()).hexdigest() for name in
-            ('src/mind2act_eval/adapters/agent_input/cp07.py',
-             'src/mind2act_eval/adapters/agent_input/data/cp07-source-test.json',
-             'src/mind2act_eval/adapters/agent_input/templates.py',
-             'src/mind2act_eval/adapters/agent_input/policy.py',
-             'src/mind2act_eval/adapters/coding_agent_common_input.py',
-             'src/mind2act_eval/adapters/coding_agent_client.py',
-             'src/mind2act_eval/runner/__init__.py')},
+            ('policies/agent_input/cp07.py',
+             'policies/agent_input/data/cp07-source-test.json',
+             'policies/agent_input/templates.py',
+             'policies/agent_input/policy.py',
+             'policies/coding_agent_common_input.py',
+             'policies/coding_agent_client.py',
+             'eval/runner/__init__.py')},
         scope='Actual source-qualified metadata and policy/native-wire builder; CPU state/RGB/station fixtures; no native/provider run.',
         opened_asset_roles=['test_source_request'],private_roles_opened=[],network_requests=0,cases=records)
     data=json.dumps(report,ensure_ascii=False,indent=2).encode();(out/'REPORT.json').write_bytes(data)

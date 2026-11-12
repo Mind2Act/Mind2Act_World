@@ -63,7 +63,7 @@ def main():
     from mind2act_eval.sealing import validate_worker_seal
     # Children run in their fresh attempt directory, so a relative PYTHONPATH
     # cannot identify the source checkout being measured.
-    os.environ['PYTHONPATH'] = str(Path(__file__).resolve().parents[1] / 'src')
+    os.environ['PYTHONPATH'] = str(Path(__file__).resolve().parents[1] / '.')
     args.output.mkdir(parents=True, exist_ok=False)
     spec = InstanceSpec('demo', 'storage-cpu-fixture', 'easy', 'synthetic-public-v1', 'v1', 'none', 'v1')
     rows = []

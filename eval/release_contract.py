@@ -227,7 +227,7 @@ def load_release(assetroot, *, verified_code_commit=None, code_root=None):
     descriptor, = reject_deprecated_paths((root / "RELEASE.json",))
     if descriptor.parent != root:
         raise ReleaseContractError("RELEASE.json must stay inside its asset root")
-    actual_root = Path(code_root) if code_root is not None else Path(__file__).resolve().parents[2]
+    actual_root = Path(code_root) if code_root is not None else Path(__file__).resolve().parents[1]
     reject_deprecated_paths((actual_root,))
     try:
         data = json.loads(descriptor.read_text())
@@ -261,7 +261,7 @@ def load_release(assetroot, *, verified_code_commit=None, code_root=None):
         if verified_code_commit is not None:
             identities.append(("verified code", _commit(verified_code_commit, "verified code identity")))
         sources = [actual_root / 'SOURCE_COMMIT']
-        if actual_root.resolve() == Path(__file__).resolve().parents[2]:
+        if actual_root.resolve() == Path(__file__).resolve().parents[1]:
             sources.append(Path(__file__).with_name('SOURCE_COMMIT'))
         for candidate in dict.fromkeys(sources):
             source, = reject_deprecated_paths((candidate,))

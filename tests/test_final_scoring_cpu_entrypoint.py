@@ -22,7 +22,7 @@ def repository(tmp_path):
         path = tmp_path / relative
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text('def test_fixture(): pass\n')
-    version = tmp_path / 'src/mind2act_eval/scoring.py'
+    version = tmp_path / 'eval/scoring.py'
     version.parent.mkdir(parents=True)
     version.write_text('SCORING_VERSION = "mind2act-final-scoring-20261105"\n')
     tool = tmp_path / 'tools/check_final_scoring_cpu.py'
@@ -92,7 +92,7 @@ def test_collect_only_uses_this_python_and_cannot_inherit_hidden_deselection(rep
 def test_source_change_during_run_cannot_certify_the_head(repository, tmp_path, monkeypatch):
     monkeypatch.setattr(entry, 'git_state', lambda root: {'head': 'a'*40, 'dirty': False})
     def run(command, **kwargs):
-        with (repository / 'src/mind2act_eval/scoring.py').open('a') as stream:
+        with (repository / 'eval/scoring.py').open('a') as stream:
             stream.write('# concurrent edit\n')
         return SimpleNamespace(returncode=0)
     monkeypatch.setattr(entry.subprocess, 'run', run)

@@ -124,7 +124,7 @@ def test_kit_start_gate_enforces_spacing_across_clean_processes(tmp_path):
         "with_gate = startup_gate(Path(sys.argv[1]), minimum_interval_s=.3); "
         "with_gate.__enter__(); with_gate.__exit__(None,None,None)"
     )
-    env = dict(os.environ, PYTHONPATH=str(Path(__file__).resolve().parents[1] / "src"))
+    env = dict(os.environ, PYTHONPATH=str(Path(__file__).resolve().parents[1] / "."))
     first_started = time.monotonic()
     subprocess.run([sys.executable, "-c", script, str(gate)], env=env, check=True)
     second_started = time.monotonic()
@@ -137,7 +137,7 @@ def test_kit_start_gate_crash_requires_fresh_cooldown(tmp_path):
     import time
 
     gate = tmp_path / "kit.lock"
-    env = dict(os.environ, PYTHONPATH=str(Path(__file__).resolve().parents[1] / "src"))
+    env = dict(os.environ, PYTHONPATH=str(Path(__file__).resolve().parents[1] / "."))
     crashing = (
         "from pathlib import Path; import os,sys; "
         "from mind2act_eval.sim import startup_gate; "

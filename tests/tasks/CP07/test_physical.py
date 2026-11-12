@@ -260,8 +260,7 @@ def test_catalog_is_lazy_and_no_old_world_or_expert_imports():
     from mind2act_eval.validation import check_sources
     from pathlib import Path
     assert load_task("CP07").task_id == "CP07"
-    root = Path(__file__).resolve().parents[3] / "src/mind2act_eval"
-    assert check_sources(root) == []
+    assert check_sources() == []
 
 
 def test_final_physical_press_launches_without_bridge_qualification_or_withdrawal():

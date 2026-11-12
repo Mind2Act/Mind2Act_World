@@ -13,7 +13,7 @@ from test_batch import demo_spec
 
 
 def test_native_reset_deadline_survives_gil_hold_and_is_not_a_model_zero(tmp_path, monkeypatch):
-    monkeypatch.setenv('PYTHONPATH', str(Path(__file__).resolve().parents[1]/'src'))
+    monkeypatch.setenv('PYTHONPATH', str(Path(__file__).resolve().parents[1]/'.'))
     script = tmp_path/'blocked_reset.py'
     script.write_text('''import ctypes
 from pathlib import Path
@@ -43,7 +43,7 @@ run_native_phase(World().reset, Path.cwd(), phase='CP02_RESET', timeout_s=.15)
 @pytest.mark.parametrize('raises', [False, True])
 def test_finished_phase_cancels_watchdog_before_future_work(tmp_path, monkeypatch, raises):
     import subprocess
-    monkeypatch.setenv('PYTHONPATH', str(Path(__file__).resolve().parents[1]/'src'))
+    monkeypatch.setenv('PYTHONPATH', str(Path(__file__).resolve().parents[1]/'.'))
     script = '''import json,time
 from pathlib import Path
 from mind2act_eval.runtime_diagnostics import run_native_phase

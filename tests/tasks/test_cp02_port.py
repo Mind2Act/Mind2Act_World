@@ -11,7 +11,7 @@ from mind2act_eval.tasks.CP02 import DEFINITION
 from mind2act_eval.tasks.CP02.evidence import MeasuredTask, quat_matrix, roll_deg
 from mind2act_eval.tasks.CP02.scorer import score
 
-ROOT = Path(__file__).resolve().parents[2] / "src/mind2act_eval/tasks/CP02"
+ROOT = Path(__file__).resolve().parents[2] / "task/CP02"
 RELAXED = {"evaluation_protocol": "physco-task-centric-v2", "protocol": {"max_food_gripper_tilt_deg": 30.0}}
 
 

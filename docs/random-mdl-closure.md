@@ -45,7 +45,7 @@ manifests after exact material SHA/name checks.
 ## Validate every material use
 
 ```sh
-PYTHONPATH=src python tools/materials/audit_random_mdl.py \
+PYTHONPATH=. python tools/materials/audit_random_mdl.py \
   --inventory /path/to/frozen-4050-layout-inputs.json \
   --compiler /path/to/nvidia/mdlc \
   --report /path/to/new-report.json
