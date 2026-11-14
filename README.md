@@ -37,7 +37,7 @@
 - 🤖 **Two kinds of policy, one runner** — end-to-end VLA / WAM policies connect through [XPolicyLab](docs/xpolicylab.md); agents act through declared motion tools from a separately installed, checksum-pinned runtime.
 - 🧪 **Clean episodes, honest batches** — each episode runs in a fresh Isaac Sim process; multi-GPU batches run at most one episode per GPU and keep failed attempts and infrastructure errors in the results.
 - 🔒 **Reproducible by construction** — explicit action budgets, code ↔ asset release pairing, and source stamps that reject stale or modified checkouts.
-- 🩺 **Diagnosis, not just a number** — the [diagnosis cards](https://mind2act-world.com/diagnosis.html) show how far each model gets, where failed episodes become unrecoverable, and why.
+- 🩺 **Model profile cards** — evaluation goes beyond a single score: every evaluated model gets a [model profile card](https://mind2act-world.com/diagnosis.html) that records where its failed episodes first break down and whether the failure lies in Mind, Act or their composition.
 
 ## 🧩 Tasks
 
