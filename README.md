@@ -26,7 +26,7 @@
 
 - **2026-11-11** — Per-task costs and timings, with inference benchmarks for the evaluated end-to-end models, are on the [leaderboard](https://mind2act-world.com/leaderboard.html#efficiency).
 - **2026-11-10** — Results for the first four end-to-end models (π0.5, KinRT, X-VLA, G0.5) are [live](https://mind2act-world.com/leaderboard.html#board-e2e).
-- **2026-11-09** — First results for multimodal agents acting through tools are [live](https://mind2act-world.com/leaderboard.html#board-agent).
+- **2026-11-09** — First results on the Agent leaderboard are [live](https://mind2act-world.com/leaderboard.html#board-agent).
 - **Coming soon** — Technical report and the full author list.
 
 ## ✨ Highlights
@@ -34,7 +34,7 @@
 - 🧠 **Three diagnostic views, 30 tasks** — 10 **Mind** tasks (memory and task decisions), 10 **Act** tasks (precise, timely, contact-rich execution) and 10 **Mind2Act** tasks where intent guides action and outcomes update the next decision.
 - 🎚️ **Progressive pressure** — every task has **Easy / Medium / Hard** fixed instances, each in a **Clean** scene and a frozen **Random** background variation: 180 task configurations in total.
 - 🔬 **Physics-verified, task-specific scoring** — native scorers read the simulated outcome (resistance within ±0.2 Ω, the right key sequence, a balanced scale…), not a hand-labelled success flag.
-- 🤖 **Two kinds of policy, one runner** — end-to-end VLA / WAM policies connect through [XPolicyLab](docs/xpolicylab.md); multimodal agents act through declared motion tools from a separately installed, checksum-pinned runtime.
+- 🤖 **Two kinds of policy, one runner** — end-to-end VLA / WAM policies connect through [XPolicyLab](docs/xpolicylab.md); agents act through declared motion tools from a separately installed, checksum-pinned runtime.
 - 🧪 **Clean episodes, honest batches** — each episode runs in a fresh Isaac Sim process; multi-GPU batches run at most one episode per GPU and keep failed attempts and infrastructure errors in the results.
 - 🔒 **Reproducible by construction** — explicit action budgets, code ↔ asset release pairing, and source stamps that reject stale or modified checkouts.
 - 🩺 **Diagnosis, not just a number** — the [diagnosis cards](https://mind2act-world.com/diagnosis.html) show how far each model gets, where failed episodes become unrecoverable, and why.
@@ -101,7 +101,7 @@ python tools/verify_release_pair.py --asset-root /path/to/assets --expect-releas
 
 ### Agent runtime
 
-For multimodal agents (the `coding-agent` extra), install the runtime from pinned upstream files and the robot assets:
+For agents (the `coding-agent` extra), install the runtime from pinned upstream files and the robot assets:
 
 ```bash
 python tools/install_coding_agent.py --out /path/to/agent-runtime --asset-root /path/to/assets
@@ -172,7 +172,7 @@ or contact a model service. Report skipped dependencies as well as failures.
 | [Task and adapter contract](docs/contracts.md) | Public types shared by tasks, adapters and the runner. |
 | [XPolicyLab adapter](docs/xpolicylab.md) | How end-to-end policies connect through XPolicyLab. |
 | [Policy I/O clock](docs/policy-io-clock.md) | Control and RGB rates expected by the supported model profile. |
-| [Run budgets](docs/e2e-budgets.md) | Frozen physics budgets for end-to-end policies and multimodal agents. |
+| [Run budgets](docs/e2e-budgets.md) | Frozen physics budgets for end-to-end policies and agents. |
 | [Frozen background variations](docs/variations.md) | How Random overlays a frozen Clean instance. |
 | [Asset release contract](docs/release-contract.md) | Code ↔ asset pairing checks. |
 | [Test instances](docs/test-instance-catalog.md) | Selecting frozen test instances by case ID. |
@@ -214,7 +214,7 @@ the external planner runtime's `env` namespace.
 
 ## 🏆 Leaderboard
 
-Live rankings are on the [Mind2Act World Leaderboard](https://mind2act-world.com/leaderboard.html), with separate boards for **VLA / WAM** end-to-end policies and **multimodal agents** acting through tools, each reported by Mind, Act and Mind2Act view, in Clean and Random settings.
+Live rankings are on the [Mind2Act World Leaderboard](https://mind2act-world.com/leaderboard.html), with separate boards for **End-to-end (VLA / WAM)** policies and **Agents** that act through tools, each reported by Mind, Act and Mind2Act view, in Clean and Random settings.
 
 ## 📝 Citation
 
