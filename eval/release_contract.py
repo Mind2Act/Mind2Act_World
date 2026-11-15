@@ -3,6 +3,7 @@
 This module does not launch workers, change files, hash the asset tree, or decide
 whether a campaign is authorized. Callers retain those existing responsibilities.
 """
+from mind2act_eval.package_paths import code_root as installed_code_root
 from dataclasses import dataclass
 from contextlib import contextmanager
 from contextvars import ContextVar
@@ -12,10 +13,10 @@ import os
 from pathlib import Path
 import re
 import stat
-import subprocess
 from types import MappingProxyType
 from typing import Any, Mapping
 from .verified_files import file_identity
+from .agent_names import agent_field
 
 
 class ReleaseContractError(ValueError):
@@ -154,13 +155,13 @@ class ReleaseConfig:
         return rows[0]
 
     def select_cases(self, instance_set='test50-r5'):
-        if (instance_set in {'test50-r5','coding-agent'} and self.test_source_index
+        if (instance_set in {'test50-r5','agent','coding-agent'} and self.test_source_index
                 and len(self.catalog) != len(self.test_source_index)):
             raise ReleaseContractError('full test campaign is incomplete; select explicit ready cases')
         if instance_set == 'test50-r5':
             return self.catalog
-        if instance_set == 'coding-agent':
-            return tuple(row for row in self.catalog if row['coding_agent_selected'])
+        if instance_set in {'agent', 'coding-agent'}:
+            return tuple(row for row in self.catalog if agent_field(row, 'agent_selected'))
         if instance_set == 'replay':
             return tuple(row for row in (*self.instances, *self.catalog) if row.get('replay_metadata'))
         raise ReleaseContractError('unknown instance set: ' + str(instance_set))
@@ -178,8 +179,8 @@ class ReleaseConfig:
         rows = tuple(r for r in self.catalog if task_id is None or r['task_id'] == task_id)
         if instance_set == 'test50-r5':
             return rows
-        if instance_set == 'coding-agent':
-            return tuple(r for r in rows if r['coding_agent_selected'])
+        if instance_set in {'agent', 'coding-agent'}:
+            return tuple(r for r in rows if agent_field(r, 'agent_selected'))
         raise ReleaseContractError('unknown task instance set: ' + str(instance_set))
 
 
@@ -228,7 +229,7 @@ def load_release(assetroot, *, verified_code_commit=None, code_root=None):
     descriptor, = reject_deprecated_paths((root / "RELEASE.json",))
     if descriptor.parent != root:
         raise ReleaseContractError("RELEASE.json must stay inside its asset root")
-    actual_root = Path(code_root) if code_root is not None else Path(__file__).resolve().parents[1]
+    actual_root = Path(code_root) if code_root is not None else installed_code_root()
     reject_deprecated_paths((actual_root,))
     try:
         data = json.loads(descriptor.read_text())
@@ -262,7 +263,7 @@ def load_release(assetroot, *, verified_code_commit=None, code_root=None):
         if verified_code_commit is not None:
             identities.append(("verified code", _commit(verified_code_commit, "verified code identity")))
         sources = [actual_root / 'SOURCE_COMMIT']
-        if actual_root.resolve() == Path(__file__).resolve().parents[1]:
+        if actual_root.resolve() == installed_code_root():
             sources.append(Path(__file__).with_name('SOURCE_COMMIT'))
         for candidate in dict.fromkeys(sources):
             source, = reject_deprecated_paths((candidate,))
@@ -275,16 +276,6 @@ def load_release(assetroot, *, verified_code_commit=None, code_root=None):
                 raise ReleaseContractError(f"cannot read actual SOURCE_COMMIT {source}: {exc}") from exc
             else:
                 identities.append(("SOURCE_COMMIT", _commit(actual, "SOURCE_COMMIT")))
-        # A persisted marker cannot override a newer or edited checkout.
-        if any(label == 'SOURCE_COMMIT' for label, _ in identities) and (actual_root / '.git').exists():
-            try:
-                head = subprocess.check_output(
-                    ['git', '-C', str(actual_root), 'rev-parse', 'HEAD'], text=True).strip()
-                subprocess.run(['git', '-C', str(actual_root), 'diff', '--quiet', 'HEAD', '--'],
-                               check=True, capture_output=True)
-            except (OSError, subprocess.CalledProcessError) as exc:
-                raise ReleaseContractError('cannot verify a clean Git checkout for SOURCE_COMMIT') from exc
-            identities.append(('Git HEAD', _commit(head, 'Git HEAD')))
         for label, actual in identities:
             if actual != expected:
                 raise ReleaseContractError(f"release code_commit differs from {label}")

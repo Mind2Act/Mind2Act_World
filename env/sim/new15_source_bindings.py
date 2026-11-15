@@ -13,9 +13,13 @@ from mind2act_eval.contracts import freeze, to_json
 
 @lru_cache(maxsize=1)
 def _bindings():
-    value=json.loads(resources.files(__package__).joinpath('new15_source_bindings.json').read_text())
+    import hashlib
+    raw=resources.files(__package__).joinpath('new15_source_bindings.json').read_bytes()
+    if hashlib.sha256(raw).hexdigest()!='78d66f1c0c3d7f4e6a2de470a3368b7131aab17cc5611e85dc2b96644eac0a18':
+        raise ValueError('public shared capability bytes differ')
+    value=json.loads(raw)
     if (value['schema']!='mind2act_eval.new15_fixed50_source_capabilities.v1'
-            or len(value['bindings'])!=300):
+            or len(value['bindings'])!=0):
         raise ValueError('fixed50 shared source capability inventory differs')
     return freeze(value['bindings'])
 

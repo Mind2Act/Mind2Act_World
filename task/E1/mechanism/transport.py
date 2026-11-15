@@ -1,6 +1,6 @@
 """Kinematic-carrier transport with independent dynamic items.
 
-Source: E-142 baseline engine/simulation/scripts/mind2act_dynamic_transport.py (verbatim, except that
+Source: E-142 baseline engine/simulation/scripts/physco_dynamic_transport.py (verbatim, except that
 `settle` receives hold/step callables instead of an Isaac World and robot articulations, so robot
 control stays in the shared robot module).
 The transport also retains its parent tensor simulation view after scene construction.

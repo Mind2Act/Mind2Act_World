@@ -15,6 +15,10 @@ class BalanceScene:
         validate(spec)
         self.spec,self.ctx,self.sensors=spec,ctx,sensors
         self.original_source={}
+        if spec.config.get('layout_split') == 'validation':
+            self.original_source['validation_source_spec']=to_json(spec)
+        if 'train_source' in spec.config:
+            self.original_source['training_source_spec']=to_json(spec)
         if 'test_source' in spec.config:
             from mind2act_eval.original_test_inputs import audit_source
             self.original_source=audit_source(spec,ctx.assets)
@@ -65,6 +69,12 @@ class BalanceScene:
         return Health(bool(np.isfinite(values).all()),'CP06 nonfinite native measurement' if not np.isfinite(values).all() else '')
 
     def result_metadata(self):
+        if self.spec.config.get('layout_split') == 'validation':
+            return dict(validation_source=self.spec.config['validation_source'],
+                source_spec_sha256=self.spec.config['source_spec_sha256'],
+                original_task_config_sha256=self.spec.config['declared_task_sha256'],
+                prepared_scene_sha256=self.spec.config['prepared_scene_sha256'],
+                public_parameters=public_parameters(self.config),native_validation='not_run')
         if 'test_source' in self.spec.config:
             return dict(source_spec_sha256=self.spec.config['source_spec_sha256'],
                 original_task_config_sha256=self.spec.config['declared_task_sha256'],

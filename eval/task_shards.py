@@ -5,6 +5,7 @@ from types import MappingProxyType
 
 from .instance_catalog import asset_descriptor, digest_field, file_descriptor, INSTANCE_SET, TIERS
 from .release_contract import ReleaseContractError
+from .agent_names import agent_field, with_agent_aliases
 
 
 def _seed_identity(root, data, row):
@@ -26,7 +27,8 @@ def _seed_identity(root, data, row):
         original = records.get(row.get('logical_slot'))
         if (original is None or any(row.get(k) != original[k] for k in
                 ('case_id','task_id','difficulty','seed','logical_slot','native_case_id',
-                 'source_configuration_sha256','coding_agent_selected'))
+                 'source_configuration_sha256'))
+                or agent_field(row, 'agent_selected') != agent_field(original, 'agent_selected')
                 or not isinstance(condition, dict)
                 or set(condition) != {'kind','phase_ticks','source_revision','original_formal_eligible'}
                 or condition['kind'] != 'initial_mechanism_phase'
@@ -58,7 +60,7 @@ def load_source_index(root, descriptor, *, tasks):
     data = _document(root, descriptor)
     if (data.get('schema') != 'mind2act_eval.test_source_index.v1'
             or data.get('instance_set') != INSTANCE_SET
-            or data.get('cases_per_cell') != 50 or data.get('coding_agent_per_cell') != 5
+            or data.get('cases_per_cell') != 50 or agent_field(data, 'agent_per_cell') != 5
             or not isinstance(data.get('tasks'), list) or len(data['tasks']) != len(tasks)
             or set(data['tasks']) != set(tasks)):
         raise ReleaseContractError('source index must retain the exact full test task grid')
@@ -69,12 +71,13 @@ def load_source_index(root, descriptor, *, tasks):
     for row in rows:
         if not isinstance(row, dict):
             raise ReleaseContractError('source index instance must be an object')
+        row = with_agent_aliases(row)
         case, task, tier = row.get('case_id'), row.get('task_id'), row.get('difficulty')
         seed = row.get('seed')
         seed_identity = _seed_identity(root, data, row)
         if (not isinstance(case, str) or not case or case in ids
                 or task not in tasks or tier not in TIERS or type(seed) is not int or seed < 0
-                or seed_identity in seeds or type(row.get('coding_agent_selected')) is not bool
+                or seed_identity in seeds or type(row.get('agent_selected')) is not bool
                 or any(not isinstance(row.get(k), str) or not row[k] for k in ('logical_slot','native_case_id'))):
             raise ReleaseContractError('source index has an invalid or duplicate case/seed identity')
         digest_field(row.get('source_configuration_sha256'))
@@ -89,11 +92,11 @@ def load_source_index(root, descriptor, *, tasks):
                 or any(type(limits[k]) is not int or limits[k] <= 0 for k in ('physics_ticks','wall_s'))):
             raise ReleaseContractError('source index requires explicit original budgets and zero retries')
         ids.add(case); seeds.add(seed_identity); cells[task,tier] += 1
-        coding[task,tier] += row['coding_agent_selected']
+        coding[task,tier] += row['agent_selected']
         result.append(MappingProxyType(dict(row)))
     expected = {(t,d) for t in tasks for d in TIERS}
     if set(cells) != expected or set(cells.values()) != {50} or set(coding.values()) != {5}:
-        raise ReleaseContractError('source index requires 50 cases and five coding cases per cell')
+        raise ReleaseContractError('source index requires 50 cases and five agent cases per cell')
     return tuple(result)
 
 
@@ -120,7 +123,7 @@ def load_task_shards(root, descriptor, *, tasks):
         for row in rows:
             original = by_id.get(row['case_id'])
             keys = ('task_id','difficulty','seed','logical_slot','native_case_id',
-                    'source_configuration_sha256','coding_agent_selected','limits',
+                    'source_configuration_sha256','agent_selected','limits',
                     'source_condition','source_document_id','limits_e2e','budget_version_e2e')
             if original is None or any(row.get(k) != original.get(k) for k in keys):
                 raise ReleaseContractError('ready task shard differs from its full source index')
@@ -141,10 +144,11 @@ def load_ready_catalog(root, descriptor, *, task):
     for row in rows:
         if not isinstance(row, dict):
             raise ReleaseContractError('ready catalog row must be an object')
+        row = with_agent_aliases(row)
         case = row.get('case_id')
         if (not isinstance(case,str) or not case or case in ids or row.get('task_id') != task
                 or row.get('difficulty') not in TIERS or row.get('instance_id',case) != case
-                or type(row.get('coding_agent_selected')) is not bool):
+                or type(row.get('agent_selected')) is not bool):
             raise ReleaseContractError('ready catalog has an invalid or duplicate case identity')
         ids.add(case)
         try:

@@ -1,14 +1,6 @@
 __pycache__/
 *.py[cod]
-*.egg-info/
-.pytest_cache/
-.venv/
 build/
 dist/
-*.h5
-*.hdf5
-*.mp4
-.env
-
-# Generated checkout identity; source archives include their own stamp.
-/SOURCE_COMMIT
+*.egg-info/
+SOURCE_COMMIT

@@ -1,4 +1,4 @@
-"""CP02 scene: unique build(spec, ctx) shared by XPolicyLab and CodingAgent.
+"""CP02 scene: unique build(spec, ctx) shared by XPolicyLab and RoboProbe.
 
 Sources (cp02-hard-support-v3; Easy/Medium identical flow in cp02-em-qualified-batch):
 cases_unified/CP02/world.py (build, measure, cover_force_telemetry) and timeline.py
@@ -154,9 +154,10 @@ class CP02Scene:
 
     def evidence(self, tick: int) -> NativeEvidence:
         grade = self._task.grade()
+        from mind2act_eval.cp02_validation_inputs import evidence_fields
         return NativeEvidence("CP02", self._spec.instance_id, tick, dict(
             grade, difficulty=self._spec.difficulty, stop_tick=self._task.stop_tick,
-            rotor_angular_velocity_z_rad_s=self._rotor_omega_z, phase=self._phase))
+            rotor_angular_velocity_z_rad_s=self._rotor_omega_z, phase=self._phase, **evidence_fields(self._spec)))
 
     def observe(self, tick: int) -> Observation:
         state = self._ctx.robot.observe()
@@ -180,6 +181,9 @@ class CP02Scene:
 
 
 def build(spec: InstanceSpec, ctx: BuildContext) -> CP02Scene:
+    if spec.instance_id.startswith('VAL-CP02-') or spec.config.get('layout_split')=='validation':
+        from mind2act_eval.cp02_validation_inputs import validate_assets
+        validate_assets(spec,ctx.assets)
     from mind2act_eval.tasks.CP02.mechanism.cake_scene import initialize
 
     if spec.clock.physics_hz != PHYSICS_HZ:

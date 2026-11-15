@@ -1,7 +1,7 @@
 """F1 physical-edge judge: completed probe history, reset/reveal and the shortest-route success check.
 
 Ported from source `task_evidence.Evidence` (source_id f-v4-original-train-camera-v1). Reads only native rows:
-joints, button depression/contact, slider pose, goal visibility, environment stage. Per CommonInput snapshot 20261101
+joints, button depression/contact, slider pose, goal visibility, environment stage. Per Feishu snapshot 20261101
 F1 section 5: every button needs at least one real press-release in exploration, in any order, repeats allowed
 (the source demanded the instance's recorded expert order); L* is a BFS over the real transition graph. Used online by the scene for termination and
 offline by the scorer; both see the same rows.

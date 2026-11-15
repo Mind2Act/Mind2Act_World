@@ -1,4 +1,4 @@
-"""CP01 scene: unique build(spec, ctx) shared by XPolicyLab and CodingAgent.
+"""CP01 scene: unique build(spec, ctx) shared by XPolicyLab and RoboProbe.
 
 Source: cp01-mh-single-place-keep-final-camera-v2 cases/CP/CP01/sdk_world.py
 (build, measure) and sdk_task.py (Timeline, Collector); Easy uses
@@ -111,8 +111,9 @@ class CP01Scene:
 
     def evidence(self, tick: int) -> NativeEvidence:
         grade = self._grade if self._grade is not None else self._evidence.grade()
+        from mind2act_eval.cp01_validation_inputs import evidence_fields
         return NativeEvidence("CP01", self._spec.instance_id, tick,
-                              dict(grade, difficulty=self._spec.difficulty))
+                              dict(grade, difficulty=self._spec.difficulty, **evidence_fields(self._spec)))
 
     def observe(self, tick: int) -> Observation:
         state = self._ctx.robot.observe()
@@ -139,6 +140,9 @@ class CP01Scene:
 
 
 def build(spec: InstanceSpec, ctx: BuildContext) -> CP01Scene:
+    if spec.instance_id.startswith('VAL-CP01-') or spec.config.get('layout_split')=='validation':
+        from mind2act_eval.cp01_validation_inputs import validate_assets
+        validate_assets(spec,ctx.assets)
     from mind2act_eval.tasks.CP01.mechanism.development_scene import initialize
 
     if spec.clock.physics_hz != PHYSICS_HZ:

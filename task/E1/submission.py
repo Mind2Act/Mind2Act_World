@@ -1,6 +1,6 @@
 """Submission occupancy for E1 (source_id E-142-e-current-reconstruction-camera-v2).
 
-Verbatim logic from engine mind2act_eval/e_submission.py; no answer identities or policy feedback.
+Verbatim logic from engine physco_eval/e_submission.py; no answer identities or policy feedback.
 """
 import numpy as np
 

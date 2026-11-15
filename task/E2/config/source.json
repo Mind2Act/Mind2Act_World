@@ -1,92 +1,7 @@
 {
-  "source_id": "e2-fingertip-quality-v2-frozen",
-  "source_files_sha256": {
-    "source/case.py": "8320a24b2988a5107325a65ef895c89a0d904e19993179c5bb15519ff0982753",
-    "source/scene.py": "67014ae373605e675dc27b49429f2332a1518bb3bf6854caece266872fb0bd2f",
-    "source/objects.py": "ef91cd3503067a1449e5589307c9b1a6f6d02955051b09faf9ccb7e572ec7b7d",
-    "source/arithmetic.py": "df66eaddb24f668979dee411a82193adf7395acd351ad974a49d27375c32c328",
-    "source/environment.py": "0fe1df1d3ba131c243e6c68523c8d16e1e4167bbfa82aeb4478a907601b3f7a5",
-    "world.py": "9a0fa0d30abada24344fbfe56860e2cbee8816df98a4e28c690179df93ed21c9",
-    "task.py": "58b2026a4a0bd3d73f8b2c212bc234d2084759e2965a18ce02a2da74a87bb63d",
-    "physco_f2_assets.py": "d18bc7602bac6f6bc08680e8f16772758df49bea3db0830d205640c1fd910e77",
-    "physco_station_scene.py": "3e99576f3285b40e04cb9471c54e0efd27b7506e6a09e39093ab9a1d21cf7df3"
-  },
   "instruction_source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
   "port_scope": "task geometry, physical key events and native display timeline; shared robot/station/clock services",
   "rubric": "e2-spec-20261030-v1",
-  "spec_snapshot": {
-    "doc_token": "NIPbdAX1TobdSwxAg1ecqYC6nRg",
-    "sha256": "7d6ffbcf7cb627372a4cfa421bfd75db665dd668bf9d9dd2acaec36925087129",
-    "sections": [
-      4,
-      5,
-      6
-    ]
-  },
-  "selected_training_episodes": [
-    {
-      "difficulty": "easy",
-      "episode_id": "e2-arithmetic-easy-2000-20f63c78109e",
-      "h5_sha256": "ece20c485414a01379ba983f6298b9cecb33dd59451f3ab1ac1aa91c4d8e795f",
-      "spec_sha256": "2be03fad135d4f4bae8863c33054c518bea07ef6b33f9e137e24032c7cab0b5d",
-      "frames": 418,
-      "projection": {
-        "state_first_physics_step": 0,
-        "state_last_physics_step": 1668,
-        "action_first_physics_step": 4,
-        "action_last_physics_step": 1672,
-        "rows": 418,
-        "physics_step_stride": 4,
-        "frequency_hz": 30,
-        "source_physics_hz": 120,
-        "gripper_representation": "common-mode q/.044; no clipping or historical losslessness claim",
-        "offset_policy": "preserve source state_control_steps; no consumer shift or tail hold"
-      }
-    },
-    {
-      "difficulty": "medium",
-      "episode_id": "e2-arithmetic-medium-2000-0ca129abd0d2",
-      "h5_sha256": "ff3df1c7e99597b4c67c8ffc02acb27db63e550843d70ee93df102ec6b8548eb",
-      "spec_sha256": "05591ab09fa4937657c2cde20c775450bbb31858a3baa9c91870a8850a13168d",
-      "frames": 502,
-      "projection": {
-        "state_first_physics_step": 0,
-        "state_last_physics_step": 2004,
-        "action_first_physics_step": 4,
-        "action_last_physics_step": 2008,
-        "rows": 502,
-        "physics_step_stride": 4,
-        "frequency_hz": 30,
-        "source_physics_hz": 120,
-        "gripper_representation": "common-mode q/.044; no clipping or historical losslessness claim",
-        "offset_policy": "preserve source state_control_steps; no consumer shift or tail hold"
-      }
-    },
-    {
-      "difficulty": "hard",
-      "episode_id": "e2-arithmetic-hard-2000-7bea6776cc75",
-      "h5_sha256": "cd3c76f2313798a92fa039d8cbf0acf2e60b14e14f8f7b76b47a5d1eae61220b",
-      "spec_sha256": "04df9fa91b069dd9825565407b60804dd7cee62a780d2e4a8bb9014a74cada4b",
-      "frames": 722,
-      "projection": {
-        "state_first_physics_step": 0,
-        "state_last_physics_step": 2884,
-        "action_first_physics_step": 4,
-        "action_last_physics_step": 2888,
-        "rows": 722,
-        "physics_step_stride": 4,
-        "frequency_hz": 30,
-        "source_physics_hz": 120,
-        "gripper_representation": "common-mode q/.044; no clipping or historical losslessness claim",
-        "offset_policy": "preserve source state_control_steps; no consumer shift or tail hold"
-      }
-    }
-  ],
-  "source_selection": {
-    "training_case_sha256": "8320a24b2988a5107325a65ef895c89a0d904e19993179c5bb15519ff0982753",
-    "rejected_evaluation_case_sha256": "af747c601d4a643ad1b1e518f93fe60f4548f06130c868c0fd0d6c4b235f648f",
-    "reason": "training scene stays paired to selected training H5; apply current sections 5–6 terminal rule explicitly rather than importing the drifted evaluation case"
-  },
   "rule_changes_from_training": [
     "Require all nine keys to satisfy four consecutive release ticks before normal completion.",
     "Score the exact released sequence as 100, otherwise 0; unfinished or extra presses earn no partial score.",
@@ -97,5 +12,31 @@
     "decision": "Native finger contact is eligible at any measured gripper opening; the source scorer has no numerical closure gate and the training reference uses open grippers.",
     "document_discrepancy": "Delivered instruction and current section 5 say closed fingertips; preserved verbatim pending task-owner revision.",
     "measurement_policy": "Retain real gripper positions and contact-side identities without inventing a closure threshold."
+  },
+  "source_files_sha256": {
+    "physco_f2_assets.py": "d18bc7602bac6f6bc08680e8f16772758df49bea3db0830d205640c1fd910e77",
+    "physco_station_scene.py": "3e99576f3285b40e04cb9471c54e0efd27b7506e6a09e39093ab9a1d21cf7df3",
+    "source/arithmetic.py": "df66eaddb24f668979dee411a82193adf7395acd351ad974a49d27375c32c328",
+    "source/case.py": "8320a24b2988a5107325a65ef895c89a0d904e19993179c5bb15519ff0982753",
+    "source/environment.py": "0fe1df1d3ba131c243e6c68523c8d16e1e4167bbfa82aeb4478a907601b3f7a5",
+    "source/objects.py": "ef91cd3503067a1449e5589307c9b1a6f6d02955051b09faf9ccb7e572ec7b7d",
+    "source/scene.py": "67014ae373605e675dc27b49429f2332a1518bb3bf6854caece266872fb0bd2f",
+    "task.py": "58b2026a4a0bd3d73f8b2c212bc234d2084759e2965a18ce02a2da74a87bb63d",
+    "world.py": "9a0fa0d30abada24344fbfe56860e2cbee8816df98a4e28c690179df93ed21c9"
+  },
+  "source_id": "e2-fingertip-quality-v2-frozen",
+  "source_selection": {
+    "reason": "training scene stays paired to selected training H5; apply current sections 5\u20136 terminal rule explicitly rather than importing the drifted evaluation case",
+    "rejected_evaluation_case_sha256": "af747c601d4a643ad1b1e518f93fe60f4548f06130c868c0fd0d6c4b235f648f",
+    "training_case_sha256": "8320a24b2988a5107325a65ef895c89a0d904e19993179c5bb15519ff0982753"
+  },
+  "spec_snapshot": {
+    "doc_token": "NIPbdAX1TobdSwxAg1ecqYC6nRg",
+    "sections": [
+      4,
+      5,
+      6
+    ],
+    "sha256": "7d6ffbcf7cb627372a4cfa421bfd75db665dd668bf9d9dd2acaec36925087129"
   }
 }

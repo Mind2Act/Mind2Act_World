@@ -11,8 +11,8 @@ import re
 
 import numpy as np
 
-from mind2act_eval.adapters.coding_payload import require_english, validate_input
-from mind2act_eval.adapters.coding_agent_kinematics import _quaternion_matrix
+from mind2act_eval.adapters.agent_payload import require_english, validate_input
+from mind2act_eval.adapters.roboprobe_kinematics import _quaternion_matrix
 from mind2act_eval.budgets import CallBudgetExhausted
 from mind2act_eval.contracts import PolicyStop, freeze
 from .templates import (VERSION, DECISION_LIMIT, DECISION_RETRY_LIMIT,
@@ -65,8 +65,8 @@ def create_policy(joint, types, eef, *, action_spec, env, client, planner, input
     object after runner binding. It is never inferred from native row counts.
     """
     import jsonschema
-    from XPolicyLab.policy.AgentRuntime_EEF import pose
-    from XPolicyLab.policy.AgentRuntime.trace import named_state
+    from XPolicyLab.policy.RoboDojo_Agent_L3_Inspect_EEF import pose
+    from XPolicyLab.policy.RoboDojo_Agent_L3_Inspect.trace import named_state
     from .memory import EpisodeMemory, prepare_memory_request
 
     class UnifiedPolicy(eef.EefAgentPolicy):

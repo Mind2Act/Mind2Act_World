@@ -2,7 +2,7 @@
 """CP01 task-owned scene initialization (Medium/Hard baseline).
 
 Source: cp01-mh-single-place-keep-final-camera-v2, cases/CP/CP01/runtime/development_scene.py
-(extracted from scripts/mind2act_cp01_meal_adaptive_replay.py, SHA256 4ba8e22a...).
+(extracted from scripts/physco_cp01_meal_adaptive_replay.py, SHA256 4ba8e22a...).
 No reference actions are loaded. Physics body is the selected baseline verbatim:
 scene CCD + TGS, tray CCD/SpeculativeCCD, tray ContactOffset 0.002, repair_foods/
 repair_fixture_primitives and initial_stack_clearance are all part of the baseline.
@@ -11,7 +11,7 @@ Changes from the source, all structural:
  * no SimulationApp / open_stage / World construction here; ctx.sim owns them.
  * X5 stage mounting, wrist cameras, rest-pose writes and native verification go
    through ctx.robot (reset_to_rest also zeroes the velocity target, which the baseline loop left implicit) (the single shared X5 service); no robot values in this file.
- * helper imports point at this package instead of mind2act_* scripts.
+ * helper imports point at this package instead of physco_* scripts.
  * setup arrives as a frozen mapping instead of the collector args namespace.
 """
 

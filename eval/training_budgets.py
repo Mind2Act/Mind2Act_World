@@ -184,8 +184,8 @@ def rebind_cp01_case_budgets(document, *, previous_table, table):
         return result
     # The exception is deliberately tied to the two reviewed immutable tables;
     # arbitrary changes under the unchanged budget-version string are rejected.
-    if (semantic(previous_table) != 'a58d0183ef5c2ba666d9f2adde394fb037144a5eac7aa90c8f6927c461c68bb4'
-            or semantic(table) != 'a81ba6f25f08d700145b581dd946c00610cdb38f98d2023a47a3bb23c03d5af7'):
+    if (semantic(previous_table) != 'e754acfa6a7bbf77eeacb7464e53e1cce66b622a439539f41ff337fafcc44aba'
+            or semantic(table) != 'ff4f87d6c732e0b1636b12941fa94a3469bc437b2b8b73f65d51fbd760becbd5'):
         raise ValueError('CP01 rebinding requires the approved previous and restored source tables')
     old, new = indexed(previous_table), indexed(table)
     if set(old) != set(new):

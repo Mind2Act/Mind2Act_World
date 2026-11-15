@@ -10,6 +10,7 @@ from mind2act_eval.contracts import (
     Action, Health, Observation, PolicyStop, Result, ConsumerKind, Termination, to_json,
 )
 from .completion import completion_kind, completed
+from mind2act_eval.budgets import AGENT_POLICY_KINDS
 
 
 @dataclass(frozen=True)
@@ -21,7 +22,8 @@ class EpisodeLimits:
 
     def __post_init__(self):
         from mind2act_eval.budgets import E2E_BUDGET_VERSION, AGENT_BUDGET_VERSION
-        versions = {'e2e': E2E_BUDGET_VERSION, 'coding_agent': AGENT_BUDGET_VERSION}
+        versions = {'e2e': E2E_BUDGET_VERSION, 'agent': AGENT_BUDGET_VERSION,
+                    'coding_agent': AGENT_BUDGET_VERSION}
         if ((self.policy_kind is None) != (self.budget_version is None)
                 or self.policy_kind is not None and versions.get(self.policy_kind) != self.budget_version):
             raise ValueError('explicit matching policy kind and budget version required')
@@ -124,7 +126,7 @@ def run_episode(spec, task, ctx, adapter, *, consumer_kind=ConsumerKind.MODEL,
         write_json(ctx.output_dir / 'call-budget.json', dict(
             schema='mind2act_eval.call_budget.v1', task_id=spec.task_id,
             instance_id=spec.instance_id, budget_version=limits.budget_version, **receipt))
-    calls = DecisionBudget(recorder=record_calls) if limits.policy_kind == 'coding_agent' else None
+    calls = DecisionBudget(recorder=record_calls) if limits.policy_kind in AGENT_POLICY_KINDS else None
     budget_receipt = dict(policy_kind=limits.policy_kind, budget_version=limits.budget_version,
                           physics_ticks=limits.physics_ticks, wall_s=limits.wall_s, retries=0)
     def check_task_completion():
@@ -152,7 +154,7 @@ def run_episode(spec, task, ctx, adapter, *, consumer_kind=ConsumerKind.MODEL,
             record_calls(calls.receipt())
             bind = getattr(adapter, 'bind_decision_budget', None)
             if not callable(bind):
-                raise ValueError('coding_agent adapter must bind framework decision accounting')
+                raise ValueError('agent adapter must bind framework decision accounting')
             bind(calls)
         from mind2act_eval.sim.video import DEFAULT_VIDEO_HZ, video_interval
         video_hz = getattr(ctx.sim, "video_hz", DEFAULT_VIDEO_HZ)

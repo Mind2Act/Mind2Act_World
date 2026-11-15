@@ -37,6 +37,8 @@ def _reader(stage, path: str):
 
 
 def validate(spec: InstanceSpec) -> None:
+    from mind2act_eval.public_layouts import validate as validate_public
+    validate_public(spec)
     levels, layout = _config('levels.json'), _config('layout.json')
     missing = [k for k in REQUIRED_CONFIG if k not in spec.config]
     if spec.task_id != 'PR2' or missing:
@@ -109,6 +111,9 @@ class VoltageScene:
 def build(spec: InstanceSpec, ctx: BuildContext) -> VoltageScene:
     from . import mechanism  # needs pxr; kept out of registration
     validate(spec)
+    if spec.config.get('layout_split') == 'validation':
+        from mind2act_eval.sim.source_assets import verify_source_file
+        verify_source_file(ctx.assets, 'station', spec.config['scene_sha256'])
     levels, layout = _config('levels.json'), _config('layout.json')
     cfg = spec.config
     z = layout['support_z_m']

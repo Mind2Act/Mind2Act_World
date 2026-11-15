@@ -1,7 +1,0 @@
-{
-  "task_id": "demo", "instance_id": "demo-easy-001", "difficulty": "easy",
-  "source_id": "synthetic-public-v1", "config_version": "v1", "asset_version": "none",
-  "protocol_version": "v1", "seed": 0,
-  "clock": {"physics_hz": 120, "control_hz": 30, "rgb_hz": 30},
-  "config": {}, "assets": {}
-}

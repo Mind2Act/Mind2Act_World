@@ -8,6 +8,7 @@ from types import MappingProxyType
 
 from .release_contract import ReleaseContractError, reject_deprecated_paths
 from .verified_files import verify_sha256
+from .agent_names import agent_field, with_agent_aliases
 
 SCHEMA = 'mind2act_eval.instance_catalog.v1'
 INSTANCE_SET = 'test50-r5'
@@ -111,7 +112,7 @@ def load_catalog(root, descriptor, *, tasks):
         raise ReleaseContractError('cannot read instance catalog') from exc
     if (not isinstance(data, dict) or data.get('schema') != SCHEMA
             or data.get('instance_set') != INSTANCE_SET
-            or data.get('cases_per_cell') != 50 or data.get('coding_agent_per_cell') != 5
+            or data.get('cases_per_cell') != 50 or agent_field(data, 'agent_per_cell') != 5
             or not isinstance(data.get('tasks'), list) or len(data['tasks']) != len(tasks)
             or set(data['tasks']) != set(tasks)):
         raise ReleaseContractError('catalog must declare its exact task grid and test50-r5 contract')
@@ -122,12 +123,13 @@ def load_catalog(root, descriptor, *, tasks):
     for row in rows:
         if not isinstance(row, dict):
             raise ReleaseContractError('catalog instance must be an object')
+        row = with_agent_aliases(row)
         case = row.get('case_id')
         cell = (row.get('task_id'), row.get('difficulty'))
         if (not isinstance(case, str) or not case.strip() or case in ids
                 or cell[0] not in tasks or cell[1] not in TIERS
                 or row.get('instance_id', case) != case
-                or type(row.get('coding_agent_selected')) is not bool):
+                or type(row.get('agent_selected')) is not bool):
             raise ReleaseContractError('catalog has duplicate/invalid case identity or subset')
         ids.add(case)
         try:
@@ -136,7 +138,7 @@ def load_catalog(root, descriptor, *, tasks):
         except ValueError as exc:
             raise ReleaseContractError(str(exc)) from exc
         cells[cell] += 1
-        coding[cell] += row['coding_agent_selected']
+        coding[cell] += row['agent_selected']
         file_descriptor(root, row.get('spec'))
         digest_field(row['spec'].get('semantic_sha256'))
         assets = row.get('assets')
@@ -152,7 +154,7 @@ def load_catalog(root, descriptor, *, tasks):
         result.append(MappingProxyType(normalized))
     expected = {(task, tier) for task in tasks for tier in TIERS}
     if set(cells) != expected or set(cells.values()) != {50} or set(coding.values()) != {5}:
-        raise ReleaseContractError('catalog requires fixed50 and five coding-agent cases in every cell')
+        raise ReleaseContractError('catalog requires fixed50 and five agent cases in every cell')
     return tuple(result)
 
 

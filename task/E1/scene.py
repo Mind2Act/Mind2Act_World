@@ -119,6 +119,9 @@ class EScene:
 
 
 def build(spec: InstanceSpec, ctx: BuildContext) -> Scene:
+    if spec.instance_id.startswith('VAL-E1-') or 'clean_validation_authority' in spec.config:
+        from .validation_inputs import validate
+        validate(spec, ctx.assets)
     require_physics_hz(spec)
     from pxr import Usd, UsdPhysics
     from scipy.spatial.transform import Rotation

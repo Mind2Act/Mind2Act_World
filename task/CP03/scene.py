@@ -1,4 +1,4 @@
-"""CP03 scene: unique build(spec, ctx) shared by XPolicyLab and CodingAgent.
+"""CP03 scene: unique build(spec, ctx) shared by XPolicyLab and RoboProbe.
 
 Sources (cp03-em-b-20261028 for Easy/Medium, cp03-hard-b-20261028 for Hard; the scene,
 world, quality and selector modules are byte-identical across them): cases_unified/CP03/
@@ -392,6 +392,7 @@ class CP03Scene:
         satisfied = len(credited) + int(started) + int(gear)
         wrong = sum(self._wrong.values()) + self._duplicates
         success = bool(all(gates.values()) and started and (level == "easy" or gear))
+        from mind2act_eval.cp03_validation_inputs import evidence_fields
         return NativeEvidence("CP03", self._spec.instance_id, tick, dict(
             difficulty=level, scoring_version=RULE_VERSION, task_success=success,
             terminal_placements=self._terminal_placements, slot_entries=self._slot_entries,
@@ -400,7 +401,7 @@ class CP03Scene:
             wrong_or_extra_items=wrong, credited_plates=len(credited), credited_sources=credited,
             valid_start=started, gear_qualified=gear if level!='easy' else True,
             gates=gates, diagnostic_process_grade=original, plate_quality=quality,
-            unexpected_robot_contacts=unexpected))
+            unexpected_robot_contacts=unexpected, **evidence_fields(self._spec)))
 
     def observe(self, tick: int) -> Observation:
         state = self._ctx.robot.observe()
@@ -432,6 +433,9 @@ class CP03Scene:
 
 
 def build(spec: InstanceSpec, ctx: BuildContext) -> CP03Scene:
+    if spec.instance_id.startswith('VAL-CP03-') or spec.config.get('layout_split')=='validation':
+        from mind2act_eval.cp03_validation_inputs import validate
+        validate(spec)
     from mind2act_eval.tasks.CP03.mechanism.rack_scene import create
 
     if spec.clock.physics_hz != PHYSICS_HZ:

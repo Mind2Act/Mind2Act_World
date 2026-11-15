@@ -1,129 +1,43 @@
 {
-  "source_id": "fr3-replay-new15-20261031",
-  "source_repository": "zgcazyz/mind2act-new-cases",
-  "source_revision": "b6432b408607981059acf36ee668b731e36d70a0",
-  "revision_evidence": "selected native spec binding declaration; source export has no git metadata",
-  "public_task_id": "CP08",
-  "native_task_id": "CP11",
   "files": {
     "chronological.py": "007e09fd239016a7779f244b788c28c9fbdba7a4d61aa05a6676872074e57fa1",
-    "world.py": "74e15077fb9a11ebc5332abb9321f3c47706cd7d3e07e4ebf903e36d4f5386ed",
+    "environment_events.py": "e06bf851effe1ba76f433b61825b87f117aecf5a7a92caff6c5aaa26663167c3",
+    "kinematics.py": "73a5f8b06863e7e10f16a3e63878c13bdc0f07e0440b9ddbeedfc3455ed72864",
+    "replay.py": "eb629e7448f8d3997675a4e73de2161ee4cda4f4915b8df451ea8f66f8487b5a",
+    "scene-config-easy.json": "78621b4440365a05fd852a5cb154ef0a1e62f1c13ba5be19e7e5f71f687e28bc",
     "scoring.py": "bc55859d3403f7b0917ef1effc458f34df3a3f0efaf294da784610c39b400c23",
     "source_authoring.py": "a0bba39de2ff83075a6ca6eb4b4df6ef4ba860cf101a994b801402d97dd5361c",
-    "replay.py": "eb629e7448f8d3997675a4e73de2161ee4cda4f4915b8df451ea8f66f8487b5a",
-    "environment_events.py": "e06bf851effe1ba76f433b61825b87f117aecf5a7a92caff6c5aaa26663167c3",
-    "scene-config-easy.json": "78621b4440365a05fd852a5cb154ef0a1e62f1c13ba5be19e7e5f71f687e28bc",
-    "kinematics.py": "73a5f8b06863e7e10f16a3e63878c13bdc0f07e0440b9ddbeedfc3455ed72864"
+    "world.py": "74e15077fb9a11ebc5332abb9321f3c47706cd7d3e07e4ebf903e36d4f5386ed"
+  },
+  "instruction_source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "isaac51_sdk_evidence": {
+    "rigid_prim": "f76e545741c98b7ddb716b627ca60c35e753240fe2a35bd2682722024f3b70a8",
+    "single_rigid_prim": "c9e1c309735ed7e97df802f1795f4ffb53eeaee3839bbfcf215cbda2ae9e58a4",
+    "xform_prim": "df60f2fa629a5876dca529b46609f56c743612ea6f018fd2c4c2cafdbd5f8fd2"
   },
   "migration": {
-    "shared_framework": "robot, simulation, clocks, cameras, lifecycle",
-    "source_reset_hold_ticks": 120,
-    "selected_state_offset_ticks": 72,
-    "offset_physics_hz": 120,
-    "matched_action_tick": 76,
-    "legacy_expert_events_consumed": false,
-    "source_physics_modified": false,
+    "flange_view_ownership": "RigidPrim actual pose view; require existing RigidBodyAPI and non-root articulation link before construction; reset_xform_properties=False, prepare_contact_sensors=False, track_contact_forces=False, disable_stablization=False, empty contact filters. Isaac5.1 SDK then reads existing APIs and skips non-root post-reset writes.",
     "formal_eval_profiles": "not supplied; selected train2000 only",
     "grading_adaptations": [
       "Section6 first out-of-order physical placement freezes the prefix",
       "Indirect disruption of completed assembly freezes the prefix",
       "Native fixed-grasp-arm measured jaw widening plus sustained bilateral separation and external support verifies release"
     ],
+    "legacy_expert_events_consumed": false,
+    "matched_action_tick": 76,
+    "offset_physics_hz": 120,
+    "selected_state_offset_ticks": 72,
+    "shared_framework": "robot, simulation, clocks, cameras, lifecycle",
+    "source_physics_modified": false,
+    "source_reset_hold_ticks": 120,
     "tcp_measurement": "source X5Kinematics.fk: actual joint6/link6 world frame plus rotated [.145,0,0]m; nearest measured TCP freezes grasp arm; raw flange pose independently checked by Replay",
-    "withdraw_interpretation": "飞书未给距离定义，按源实现：固定抓取臂实测jaw widening、持续双指分离、外部支撑，末窗稳定且无robot_contact；K0经Spec确认；无撤离距离或命令静止门",
-    "flange_view_ownership": "RigidPrim actual pose view; require existing RigidBodyAPI and non-root articulation link before construction; reset_xform_properties=False, prepare_contact_sensors=False, track_contact_forces=False, disable_stablization=False, empty contact filters. Isaac5.1 SDK then reads existing APIs and skips non-root post-reset writes."
+    "withdraw_interpretation": "\u98de\u4e66\u672a\u7ed9\u8ddd\u79bb\u5b9a\u4e49\uff0c\u6309\u6e90\u5b9e\u73b0\uff1a\u56fa\u5b9a\u6293\u53d6\u81c2\u5b9e\u6d4bjaw widening\u3001\u6301\u7eed\u53cc\u6307\u5206\u79bb\u3001\u5916\u90e8\u652f\u6491\uff0c\u672b\u7a97\u7a33\u5b9a\u4e14\u65e0robot_contact\uff1bK0\u7ecfSpec\u786e\u8ba4\uff1b\u65e0\u64a4\u79bb\u8ddd\u79bb\u6216\u547d\u4ee4\u9759\u6b62\u95e8"
   },
+  "native_task_id": "CP11",
+  "public_task_id": "CP08",
+  "revision_evidence": "selected native spec binding declaration; source export has no git metadata",
   "rule_authority": "feishu-20261101/CP08.md section6, 2026-10-29 final: success100 otherwise20*k/N",
-  "instruction_source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
-  "matched_h5_initial_metadata": {
-    "easy": {
-      "projection/state_control_steps": 72,
-      "projection/action_control_steps": 76,
-      "projection/state_source_steps": 73,
-      "projection/state_world_time_s": 1.6250000847503543,
-      "state/left_arm_joint_states": [
-        0.0,
-        1.1344640254974365,
-        1.7453292608261108,
-        -1.1344640254974365,
-        0.0,
-        0.0
-      ],
-      "state/right_arm_joint_states": [
-        0.0,
-        1.1344640254974365,
-        1.7453292608261108,
-        -1.1344640254974365,
-        0.0,
-        0.0
-      ],
-      "state/left_ee_joint_states": [
-        1.0
-      ],
-      "state/right_ee_joint_states": [
-        1.0
-      ]
-    },
-    "medium": {
-      "projection/state_control_steps": 72,
-      "projection/action_control_steps": 76,
-      "projection/state_source_steps": 73,
-      "projection/state_world_time_s": 1.6250000847503543,
-      "state/left_arm_joint_states": [
-        0.0,
-        1.1344640254974365,
-        1.7453292608261108,
-        -1.1344640254974365,
-        0.0,
-        0.0
-      ],
-      "state/right_arm_joint_states": [
-        0.0,
-        1.1344640254974365,
-        1.7453292608261108,
-        -1.1344640254974365,
-        0.0,
-        0.0
-      ],
-      "state/left_ee_joint_states": [
-        1.0
-      ],
-      "state/right_ee_joint_states": [
-        1.0
-      ]
-    },
-    "hard": {
-      "projection/state_control_steps": 72,
-      "projection/action_control_steps": 76,
-      "projection/state_source_steps": 73,
-      "projection/state_world_time_s": 1.6250000847503543,
-      "state/left_arm_joint_states": [
-        0.0,
-        1.1344640254974365,
-        1.7453292608261108,
-        -1.1344640254974365,
-        0.0,
-        0.0
-      ],
-      "state/right_arm_joint_states": [
-        0.0,
-        1.1344640254974365,
-        1.7453292608261108,
-        -1.1344640254974365,
-        0.0,
-        0.0
-      ],
-      "state/left_ee_joint_states": [
-        1.0
-      ],
-      "state/right_ee_joint_states": [
-        1.0
-      ]
-    }
-  },
-  "isaac51_sdk_evidence": {
-    "single_rigid_prim": "c9e1c309735ed7e97df802f1795f4ffb53eeaee3839bbfcf215cbda2ae9e58a4",
-    "rigid_prim": "f76e545741c98b7ddb716b627ca60c35e753240fe2a35bd2682722024f3b70a8",
-    "xform_prim": "df60f2fa629a5876dca529b46609f56c743612ea6f018fd2c4c2cafdbd5f8fd2"
-  }
+  "source_id": "fr3-replay-new15-20261031",
+  "source_repository": "zgcazyz/mind2act-new-cases",
+  "source_revision": "b6432b408607981059acf36ee668b731e36d70a0"
 }

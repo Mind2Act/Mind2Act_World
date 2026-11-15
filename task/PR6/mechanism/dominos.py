@@ -113,7 +113,7 @@ class Dominos:
                 restart = self.pushes > 0
                 self.pushes += 1
                 idle_ticks = self.tick-self.last_progress
-                # 2026-11-06 maintainer: only the first domino may be pushed; a stalled
+                # 2026-11-06 jclin: only the first domino may be pushed; a stalled
                 # chain is stood back up and restarted from the first domino.
                 if name != names[0]:
                     self.event('physical_chain_restart_rejected', item=name, pushes=self.pushes,

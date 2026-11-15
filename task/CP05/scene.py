@@ -6,7 +6,7 @@ from types import SimpleNamespace
 from collections import deque
 import numpy as np
 from mind2act_eval.tasks._instructions import public_instruction
-from mind2act_eval.contracts import NativeEvidence, Observation, Health
+from mind2act_eval.contracts import NativeEvidence, Observation, Health, to_json
 from .mechanism.keyboard_clock import KeyboardClock
 from .mechanism.key_press_policy import KeyPressPolicy, PRESS_M, RELEASE_M
 from .mechanism.stability import StablePlacement
@@ -162,7 +162,7 @@ class PianoScene:
                              returned=self.gates[s].complete,
                              released=not w.touch(p, robot_only=True)) for s,p in self.paths.items()])
         return NativeEvidence(self.spec.task_id, self.spec.instance_id, tick,
-            dict(difficulty=self.spec.difficulty, target_keys=self.spec.config['setup']['sequence'],
+            dict(public_source_spec=to_json(self.spec), difficulty=self.spec.difficulty, target_keys=self.spec.config['setup']['sequence'],
                  normal_termination=True, cp05_evidence=e))
 
     def events_complete(self):
@@ -188,7 +188,9 @@ class PianoScene:
         pass
 
 
-def build(spec, ctx):
+def validate(spec):
+    from mind2act_eval.public_layouts import validate as validate_public
+    validate_public(spec)
     if spec.clock.physics_hz != 120 or spec.clock.control_hz not in (30, 120) or spec.clock.rgb_hz != 30:
         raise ValueError('CP05 requires 120 Hz physics, explicit 30/120 Hz control and 30 Hz RGB')
     setup = spec.config['setup']
@@ -196,6 +198,18 @@ def build(spec, ctx):
         raise ValueError('CP05 tier/sequence mismatch')
     if setup['cloth'] or setup['lid'] or not setup['asset_package_scene']:
         raise ValueError('CP05 selected baseline requires authored no-cloth/no-lid scene')
+
+
+def validate_assets(spec, assets):
+    validate(spec)
+    if spec.config.get('layout_split') == 'validation':
+        from mind2act_eval.sim.source_assets import verify_source_file
+        verify_source_file(assets, 'station', spec.config['scene_sha256'])
+    return assets.resolve('station')
+
+
+def build(spec, ctx):
+    validate_assets(spec, ctx.assets)
     from pxr import Usd, UsdGeom, UsdShade, Gf, PhysxSchema, UsdPhysics
     from isaacsim.core.prims import SingleRigidPrim
     stage = ctx.sim.stage

@@ -50,6 +50,13 @@ class BridgeScene:
         if tick != self.facts.tick:
             raise ValueError("CP07 evidence tick mismatch")
         values = self.facts.snapshot()
+        if self.spec.config.get('layout_split')=='validation':
+            from mind2act_eval.contracts import to_json
+            values['validation_source_spec']=to_json(self.spec)
+        if 'train_source' in self.spec.config:
+            from mind2act_eval.contracts import to_json
+            values.update(seed=self.spec.seed,train_source=to_json(self.spec.config['train_source']),
+                          source_layout_sha256=self.spec.config['source_layout_sha256'])
         return NativeEvidence("CP07", self.spec.instance_id, tick, values)
 
     def is_success(self):
@@ -201,11 +208,13 @@ class NativeSensors:
 
 
 def build(spec, ctx):
+    from mind2act_eval.public_layouts import validate
+    validate(spec)
     mode = spec.config.get("cp07_mode")
     if mode == "train_layout_test":
         from mind2act_eval.cp07_layout_identity import validate_identity
         validate_identity(spec)
-    elif mode not in ("diagnostic_training","source_bound_test"):
+    elif mode not in ("diagnostic_training","source_bound_test","independent_validation"):
         raise ProfileBlocked("CP07 requires explicit diagnostic_training source binding")
     binding = load(spec, ctx.assets)
     return BridgeScene(spec, ctx, binding, NativeSensors(ctx, binding))

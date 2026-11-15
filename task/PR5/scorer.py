@@ -1,7 +1,7 @@
 from mind2act_eval.scoring import SCORING_VERSION
 """PR5 highest eligible stage from native physical measurements, on a 0–100 scale.
 
-Authority: maintainer 2026-11-04 16:10: imprint plus terminal stamp return only.
+Authority: jclin 2026-11-04 16:10: imprint plus terminal stamp return only.
 The source imprint and pose thresholds remain pinned in config/source.json.
 """
 from mind2act_eval.contracts import Score

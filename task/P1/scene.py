@@ -241,6 +241,9 @@ def _setup_stage(stage, manifest):
 
 
 def build(spec: InstanceSpec, ctx: BuildContext) -> Scene:
+    if spec.instance_id.startswith('VAL-P1-') or 'clean_validation_authority' in spec.config:
+        from .validation_inputs import validate
+        validate(spec, ctx.assets)
     require_physics_hz(spec)
     import trimesh
     from isaacsim.core.prims import SingleRigidPrim

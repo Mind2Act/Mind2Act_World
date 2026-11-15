@@ -168,53 +168,16 @@ def _validate_result_closure(root: Path, result: Result) -> None:
 
 
 def _completion_contract(root, result, expected_consumer=None):
-    """Keep scored episodes strict; a scene probe seals its own typed evidence."""
+    """Public output seals require a scored model run or trusted replay."""
     if not result.infra_valid:
         raise ValueError("only infrastructure-valid worker output can be sealed")
     if expected_consumer is not None and result.consumer_kind != ConsumerKind(expected_consumer):
         raise ValueError("worker consumer differs from the trusted parent job")
-    if result.consumer_kind != ConsumerKind.SCENE_PROBE:
-        if result.score is None:
-            raise ValueError("only a valid scored result can be sealed")
-        return ("spec.json", "result.json", "evidence.json", "score.json"), "run-episode-returned.json", "run_episode_returned"
-    from mind2act_eval.scene_probe import SceneProbeReceipt, ProbeInputs, SOURCE_CLEAN_PREVIEW, spec_digest, sha256
-    if expected_consumer is None:
-        raise ValueError("scene_probe sealing requires an explicit trusted expected consumer")
-    receipt = SceneProbeReceipt(**json.loads((root / "scene-probe-receipt.json").read_text()))
-    spec = InstanceSpec.from_dict(json.loads((root / "spec.json").read_text()))
-    if (not receipt.infra_valid or receipt.task_id != result.task_id or receipt.instance_id != result.instance_id
-            or receipt.source_spec_sha256 != spec_digest(spec) or result.ticks != 600
-            or result.consumer_kind != ConsumerKind.SCENE_PROBE or result.score is not None
-            or result.model_tested or result.score_components):
-        raise ValueError("scene probe envelope/receipt/source binding mismatch")
-    if receipt.projection == SOURCE_CLEAN_PREVIEW:
-        inputs = ProbeInputs.read(root / "probe-config.json", receipt.config_sha256, spec)
-        if not inputs.is_source_clean or result.task_metadata.get("diagnostic_projection") != SOURCE_CLEAN_PREVIEW:
-            raise ValueError("clean preview archived source/projection mismatch")
-        projection_inputs = ()
-    else:
-        if (sha256(root / "layout.json") != receipt.layout_sha256
-                or sha256(root / "probe-config.json") != receipt.config_sha256
-                or sha256(root / "probe-catalog.json") != receipt.provenance["catalog_sha256"]):
-            raise ValueError("scene probe archived inputs differ from their pins")
-        projection_inputs = ("probe-catalog.json", "layout.json")
-    if (root / "score.json").exists():
-        raise ValueError("scene probe cannot publish score.json")
-    for name in (receipt.before_head, receipt.after_head):
-        if (root / name).read_bytes()[:8] != b"\x89PNG\r\n\x1a\n":
-            raise ValueError("scene probe head frame is not PNG")
-    count = 0
-    with (root / "scene-probe-samples.jsonl").open() as stream:
-        for index, line in enumerate(stream):
-            row = json.loads(line)
-            if row["tick"] != index or row["clock"]["tick"] != receipt.entry_clock["tick"] + index:
-                raise ValueError("scene probe samples are incomplete or reordered")
-            count += 1
-    if count != 601:
-        raise ValueError("scene probe requires entry and 600 physical samples")
-    return (("spec.json", "result.json", "scene-probe-receipt.json", "scene-probe-samples.jsonl",
-             "probe-config.json", *projection_inputs, "before-head.png", "after-head.png"),
-            "scene-probe-returned.json", "scene_probe_returned")
+    if result.consumer_kind == ConsumerKind.SCENE_PROBE:
+        raise ValueError("diagnostic consumers are not part of the public runtime")
+    if result.score is None:
+        raise ValueError("only a valid scored result can be sealed")
+    return ("spec.json", "result.json", "evidence.json", "score.json"), "run-episode-returned.json", "run_episode_returned"
 
 
 def flush_failed_worker_outputs(directory: Path, *, exit_code: int) -> None:

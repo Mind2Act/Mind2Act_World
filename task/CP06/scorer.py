@@ -11,7 +11,26 @@ def score(evidence):
     if evidence.task_id!='CP06' or type(evidence.tick) is not int or evidence.tick<0:
         raise ValueError('CP06 source physics evidence required')
     values=to_json(evidence.values)
-    if 'test_source' in values:
+    if 'validation_source_spec' in values:
+        from .validation import validate_evidence
+        spec=validate_evidence(evidence)
+        core=to_json(spec.config['source_task'])
+        row=dict(source_spec_sha256=spec.config['source_spec_sha256'])
+    elif 'training_source_spec' in values:
+        from mind2act_eval.contracts import InstanceSpec
+        from mind2act_eval.cp06_training_inputs import validate as validate_training
+        spec=InstanceSpec.from_dict(values['training_source_spec'])
+        validate_training(spec)
+        if ('test_source' in values or spec.variation.mode!='clean'
+                or spec.task_id!=evidence.task_id or spec.instance_id!=evidence.instance_id
+                or spec.difficulty!=values['difficulty']
+                or values['source_spec_sha256']!=spec.config['source_spec_sha256']
+                or values['source_task_sha256']!=spec.config['declared_task_sha256']
+                or values['source_task']!=to_json(spec.config['source_task'])):
+            raise ValueError('CP06 training scoring source identity/condition differs')
+        core=to_json(spec.config['source_task'])
+        row=dict(source_spec_sha256=spec.config['source_spec_sha256'])
+    elif 'test_source' in values:
         from types import SimpleNamespace
         from mind2act_eval.original_test_inputs import read_audit
         from .instances import original_core,signature

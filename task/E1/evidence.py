@@ -1,4 +1,4 @@
-"""Measured E1 batch sealing (CommonInput snapshot E1 section 5).
+"""Measured E1 batch sealing (Feishu snapshot E1 section 5).
 
 Each batch opens for submissions in phase `batch_execute`. Every item that is really placed inside the
 tray and released is registered for that batch (removing it later does not clear it). The batch seals at

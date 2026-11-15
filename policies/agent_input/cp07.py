@@ -10,9 +10,9 @@ from collections.abc import Mapping
 from mind2act_eval.original_test_inputs import checked_record, request_records
 from mind2act_eval.scoring import SCORING_VERSION
 
-TRAIN_LAYOUT_PROTOCOL = 'mind2act-common_input-coding-cp07-training-v3'
-TEST_PROTOCOL = 'mind2act-common_input-coding-cp07-original8-v2'
-LEGACY_PROTOCOL = 'mind2act-common_input-coding-v1'
+TRAIN_LAYOUT_PROTOCOL = 'mind2act-feishu-coding-cp07-training-v3'
+TEST_PROTOCOL = 'mind2act-feishu-coding-cp07-original8-v2'
+LEGACY_PROTOCOL = 'mind2act-feishu-coding-v1'
 PROFILE_SCHEMA = 'cp07.public-recipe.v1'
 TEST_SOURCE = 'cp07-original8-train-v2-cpu'
 TRAINING_SOURCE = 'cp07-bridge-car-canonical-fff77c74'

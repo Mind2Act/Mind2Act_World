@@ -14,11 +14,11 @@ def score(evidence:NativeEvidence):
     v=evidence.values
     if v.get('schema')!=SCHEMA or v.get('scoring_version')!=SCORING_VERSION:
         raise ValueError('CP07 measured final car evidence required; old aggregate cannot be rescored')
-    if v.get('binding_mode')=='source_bound_test':
-        from .original_inputs import authenticate
-        spec=SimpleNamespace(task_id='CP07',instance_id=evidence.instance_id,difficulty=v['difficulty'],
-            seed=v['test_source']['source_seed'],config=dict(test_source=v['test_source']))
-        authenticate(spec,v)
+    if 'validation_source_spec' in v:
+        from .validation import validate_evidence
+    else:
+        from mind2act_eval.cp07_training_inputs import validate_evidence
+    validate_evidence(evidence)
     car=v.get('terminal_car')
     if not isinstance(car,dict) and not hasattr(car,'keys'):raise ValueError('CP07 actual arrival measurements required')
     if not {'p_m','far_bank_supported','far_bank_center_inside'}<=car.keys():raise ValueError('CP07 actual arrival measurements required')

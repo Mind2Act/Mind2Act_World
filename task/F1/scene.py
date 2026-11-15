@@ -45,8 +45,9 @@ class SliderScene:
                            protocol_version=self.spec.protocol_version, **dict(self._ctx.robot.observe()))
 
     def evidence(self, tick: int) -> NativeEvidence:
+        from mind2act_eval.gap_composition_inputs import evidence_fields
         return NativeEvidence(self.spec.task_id, self.spec.instance_id, tick,
-                              dict(case=self.case, protocol=self.protocol, rows=self.rows,
+                              dict(case=self.case, protocol=self.protocol, rows=self.rows, **evidence_fields(self.spec),
                                    contact_summary=[dict(pair=list(p), **r) for p, r in self.contacts.pairs.items()]))
 
     def health(self) -> Health:
@@ -67,6 +68,12 @@ class SliderScene:
 
 
 def build(spec: InstanceSpec, ctx: BuildContext) -> SliderScene:
+    if spec.instance_id.startswith('VAL-F1-reuse-') or spec.config.get('gap_composition_authority')=='gap-composition-v1':
+        from mind2act_eval.gap_composition_inputs import validate as validate_gap
+        validate_gap(spec, ctx.assets)
+    if spec.instance_id.startswith('VAL-F1-gap-') or 'clean_validation_authority' in spec.config:
+        from .validation_inputs import validate
+        validate(spec, ctx.assets)
     import numpy as np
     from isaacsim.core.prims import SingleArticulation
     from pxr import Gf, UsdGeom

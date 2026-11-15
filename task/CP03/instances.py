@@ -13,13 +13,11 @@ verify the layer and texture before a run; a missing texture is an asset gap, ne
 """
 from __future__ import annotations
 
-import hashlib
 import re
-from pathlib import Path
 
 EXPECTED_UNITS = {"easy": 3, "medium": 5, "hard": 7}
 SOURCE_ID = {"easy": "cp03-em-b-20261028", "medium": "cp03-em-b-20261028", "hard": "cp03-hard-b-20261028"}
-# mind2act_precision_kinematics.HOME (degrees 0,65,100,-65,0,0) + open fingers 0.044 m, as used by the baseline scene
+# physco_precision_kinematics.HOME (degrees 0,65,100,-65,0,0) + open fingers 0.044 m, as used by the baseline scene
 BASELINE_ROBOT_REST = tuple(__import__("math").radians(v) for v in (0, 65, 100, -65, 0, 0)) + (.044, .044)
 CLOSURE_ROLES = {"station": ".usda", "texture_map": "texture_map.png"}
 
@@ -79,8 +77,11 @@ def _reject_private_paths(value, where="document"):
 
 def verify_assets(resolver, document: dict) -> None:
     """Check scene layer and texture bytes against the closure digests before building."""
+    if document.get('instance_id','').startswith('VAL-CP03-') or document['config'].get('layout_split')=='validation':
+        from mind2act_eval.cp03_validation_inputs import validate
+        validate(document)
     for asset_id in ("station", "texture_map"):
-        path = Path(resolver.resolve(asset_id))
         expected = document["config"]["asset_sha256"][document["assets"][asset_id]]
-        if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
-            raise ValueError(f"CP03 asset digest mismatch: {asset_id}")
+        from mind2act_eval.sim.source_assets import verify_source_file
+        verify_source_file(resolver, asset_id, expected,
+                           error=f"CP03 asset digest mismatch: {asset_id}")

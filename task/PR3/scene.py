@@ -27,6 +27,8 @@ def _layout() -> dict:
 
 
 def validate(spec: InstanceSpec) -> None:
+    from mind2act_eval.public_layouts import validate as validate_public
+    validate_public(spec)
     missing = [k for k in REQUIRED if k not in spec.config]
     if spec.task_id != 'PR3' or missing:
         raise ValueError(f'not a complete PR3 spec (missing {missing})')
@@ -121,6 +123,9 @@ def build(spec: InstanceSpec, ctx: BuildContext) -> TraceScene:
     layout = _layout()
     cfg = spec.config
     parameters = {k: cfg[k] for k in PATH_KEYS}
+    if spec.config.get('layout_split') == 'validation':
+        from mind2act_eval.sim.source_assets import verify_source_file
+        verify_source_file(ctx.assets, 'scene', spec.config['scene_sha256'])
     scene_path = Path(ctx.assets.resolve('scene')).resolve()
     ctx.sim.open_stage(scene_path)
     stage = ctx.sim.stage

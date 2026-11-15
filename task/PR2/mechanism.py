@@ -2,7 +2,7 @@
 
 Ported from the PR2 baseline, source_ids pr2-em-edge-side-grasp-run925de9-v1 (Easy/Medium) and
 pr2-hard-directional-grasp-run925de9-v1 (Hard; scene script identical):
-  geometry  legacy_sources/PR2/scripts/mind2act_precision_pr2_transformer_scene.py
+  geometry  legacy_sources/PR2/scripts/physco_precision_pr2_transformer_scene.py
   physics   cases_unified/PR1/world.py generic precision branch, task == 'PR2' (VoltageAxis angular drive)
 Not ported: station table/background/cameras, robot settings, previews/manifest/export. Every generated
 texture (dial, labels, earth symbol) is written under the given directory and decoded back at build time;

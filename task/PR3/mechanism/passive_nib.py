@@ -1,7 +1,7 @@
 """Passive spring nib: a small body sliding on the marker's X axis, driven only by a fixed spring and contacts.
 
 Ported from the baseline (source_id pr3-original-source-mainline-pro-sourcepath:
-cases_unified/PR3/source/mind2act_pr3_passive_nib.py). No action, target-path or policy access.
+cases_unified/PR3/source/physco_pr3_passive_nib.py). No action, target-path or policy access.
 """
 from . import physx
 

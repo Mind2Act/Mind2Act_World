@@ -10,6 +10,17 @@ TOOLS = {'easy':('single',),'medium':('left','right'),'hard':('left','right')}
 
 
 def score(evidence: NativeEvidence) -> Score:
+    from mind2act_eval.contracts import InstanceSpec, to_json
+    from mind2act_eval.public_layouts import validate as validate_public
+    if (evidence.task_id != 'CP05' or type(evidence.tick) is not int or evidence.tick < 0
+            or 'public_source_spec' not in evidence.values):
+        raise ValueError('CP05 public scoring requires the complete admitted producer spec')
+    spec=InstanceSpec.from_dict(to_json(evidence.values['public_source_spec']))
+    validate_public(spec)
+    if (spec.task_id != evidence.task_id or spec.instance_id != evidence.instance_id
+            or spec.difficulty != evidence.values['difficulty']
+            or tuple(spec.config['setup']['sequence']) != tuple(evidence.values['target_keys'])):
+        raise ValueError('CP05 public scoring identity or goal sequence differs')
     v=evidence.values; difficulty=v['difficulty']; target=tuple(v['target_keys'])
     if difficulty not in NOTES or len(target)!=NOTES[difficulty]:
         raise ValueError('CP05 difficulty/target note count differs')

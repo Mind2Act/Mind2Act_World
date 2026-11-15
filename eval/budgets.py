@@ -9,7 +9,8 @@ E2E_BUDGET_VERSION = 'e2e-p90x1.2-v1'
 AGENT_BUDGET_VERSION = 'coding-agent-e2e-x4-v1'
 E2E_WALL_S = 7200
 AGENT_WALL_S = 21600
-POLICY_KINDS = ('e2e', 'coding_agent')
+POLICY_KINDS = ('e2e', 'agent', 'coding_agent')
+AGENT_POLICY_KINDS = ('agent', 'coding_agent')
 
 
 class CallBudgetExhausted(PolicyStop):
@@ -74,15 +75,16 @@ def selected_limits(row, policy_kind=None, budget_version=None):
         if budget_version is not None:
             raise ValueError('budget_version requires policy_kind')
         return row['limits']
-    versions = {'e2e': E2E_BUDGET_VERSION, 'coding_agent': AGENT_BUDGET_VERSION}
+    versions = {'e2e': E2E_BUDGET_VERSION, 'agent': AGENT_BUDGET_VERSION,
+                    'coding_agent': AGENT_BUDGET_VERSION}
     if policy_kind not in versions or budget_version != versions[policy_kind]:
         raise ValueError('unknown policy kind or budget version')
     validate_e2e_fields(row)
     if row.get('budget_version_e2e') != E2E_BUDGET_VERSION:
         raise ValueError('case has no frozen e2e budget for this policy')
     ticks = row['limits_e2e']['physics_ticks']
-    return dict(physics_ticks=ticks * (4 if policy_kind == 'coding_agent' else 1),
-                wall_s=AGENT_WALL_S if policy_kind == 'coding_agent' else E2E_WALL_S,
+    return dict(physics_ticks=ticks * (4 if policy_kind in AGENT_POLICY_KINDS else 1),
+                wall_s=AGENT_WALL_S if policy_kind in AGENT_POLICY_KINDS else E2E_WALL_S,
                 retries=0)
 
 

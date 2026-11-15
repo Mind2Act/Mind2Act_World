@@ -1,7 +1,7 @@
 """Single-node batch resource opt-in, not a scheduler or memory reservation.
 
 The budget remains an aggregate current-UID RSS ceiling. Expansion normally
-needs finite cgroup-v2 evidence; cluster 4090 operators may explicitly warn on
+needs finite cgroup-v2 evidence; BSCC 4090 operators may explicitly warn on
 unavailable introspection. Default CPU use tolerates absent cgroups.
 """
 from dataclasses import dataclass
@@ -36,8 +36,8 @@ class BatchResourceConfig:
     def __post_init__(self):
         _positive_int(self.rss_limit_bytes, 'rss_limit_bytes', MAX_RSS_LIMIT_BYTES)
         _positive_int(self.max_parallel, 'max_parallel', 6)
-        if self.resource_introspection_policy not in ('strict', 'allocation_warn'):
-            raise ValueError('resource_introspection_policy must be strict or allocation_warn')
+        if self.resource_introspection_policy not in ('strict', 'bscc_4090_warn'):
+            raise ValueError('resource_introspection_policy must be strict or bscc_4090_warn')
 
     @classmethod
     def read(cls, path):
@@ -194,13 +194,13 @@ def resolve_resources(rss_limit, max_parallel, resource_config=None):
         rss_limit = resource_config.rss_limit_bytes
         max_parallel = resource_config.max_parallel
     policy = 'strict' if resource_config is None else resource_config.resource_introspection_policy
-    allocation_info = None
-    if policy == 'allocation_warn':
-        # This is an explicit operator policy for the cluster 4090 deployment, not
+    bscc_identity = None
+    if policy == 'bscc_4090_warn':
+        # This is an explicit operator policy for the BSCC 4090 deployment, not
         # automatic GPU-model detection. Reuse the real Slurm/storage binding;
         # the existing allocation UUID/PCI validation still runs at launch.
         from mind2act_eval.gpu_allocation import allocation_identity
-        allocation_info = allocation_identity()
+        bscc_identity = allocation_identity()
     snapshot = read_memory_snapshot()
     reserve = None if resource_config is None or snapshot.get('status') != 'verified' else max(8 * GIB, snapshot['effective_limit_bytes'] // 16)
     try:
@@ -219,11 +219,11 @@ def resolve_resources(rss_limit, max_parallel, resource_config=None):
                    parent_cuda_visible_devices=os.environ.get('CUDA_VISIBLE_DEVICES'))
     receipt['resource_introspection_policy'] = policy
     receipt['resource_warnings'] = []
-    if allocation_info is not None:
-        receipt['allocation_identity'] = allocation_info
+    if bscc_identity is not None:
+        receipt['bscc_allocation_identity'] = bscc_identity
     if resource_config is not None:
         if snapshot.get('status') != 'verified':
-            if policy != 'allocation_warn':
+            if policy != 'bscc_4090_warn':
                 raise ResourceAdmissionError('expanded batch resources require verified cgroup-v2 evidence: ' + snapshot.get('reason', 'unknown'), receipt)
             # An unreadable ancestor cannot erase an already observed finite
             # max/high contradiction. Only the proven reserve floor applies:

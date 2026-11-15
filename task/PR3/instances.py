@@ -3,7 +3,7 @@
 The scene is an instance asset (`scene`: prepared scene.usda, relocated offline from the original
 accepted scene); the target path is derived from the four path parameters. Expert-only fields (arm, writing
 yaw, grasp, lift goals) are not copied. `direction_gate` is explicit (no default): True only once the
-direction cue is proven visible to models in all three difficulties (CommonInput PR3.md section 9).
+direction cue is proven visible to models in all three difficulties (Feishu PR3.md section 9).
 """
 from mind2act_eval.contracts import ClockSpec, InstanceSpec
 

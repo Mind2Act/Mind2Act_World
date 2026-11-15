@@ -85,7 +85,7 @@ class DominoScene:
             source_spec_sha256=self.spec.config['source_spec_sha256'],
             source_config_sha256=self.spec.config['source_config_sha256'],
             scene_sha256=self.spec.config['scene_sha256'],public_notice_interface_pending=False,
-            public_notice_interface='coding-agent recipe and physical scene; no E2E instruction suffix',
+            public_notice_interface='agent recipe and physical scene; no E2E instruction suffix',
             e2e_instruction_version=E2E_INSTRUCTION_VERSION,
             task_protocol_version=TASK_PROTOCOL_VERSION,
             prompt_model_input='normal observation and control from tick zero',

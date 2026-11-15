@@ -1,5 +1,5 @@
 """Paper ink, visual only. Ported unchanged from the baseline (source_id pr3-original-source-mainline-pro-sourcepath:
-cases_unified/PR3/source/mind2act_pr3_live_ink.py). It never feeds physics or scoring."""
+cases_unified/PR3/source/physco_pr3_live_ink.py). It never feeds physics or scoring."""
 import math
 
 

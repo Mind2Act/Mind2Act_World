@@ -1,4 +1,0 @@
-{
-  "transport_factory": "coding_agent_cpu_demo:create",
-  "transport_config": {}
-}

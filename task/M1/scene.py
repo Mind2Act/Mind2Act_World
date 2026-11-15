@@ -82,6 +82,9 @@ class RouteScene:
 
 
 def build(spec: InstanceSpec, ctx: BuildContext) -> RouteScene:
+    if spec.instance_id.startswith('VAL-M1-') or 'clean_validation_authority' in spec.config:
+        from .validation_inputs import validate
+        validate(spec, ctx.assets)
     from isaacsim.core.prims import SingleRigidPrim
     from mind2act_eval.robot import normalized_observation
     from . import mechanism

@@ -16,7 +16,7 @@ def source_commit():
     if (ROOT / '.git').exists():
         value = subprocess.check_output(['git', '-C', str(ROOT), 'rev-parse', 'HEAD'], text=True).strip()
         if marker is not None and marker != value:
-            raise ValueError('SOURCE_COMMIT differs from Git HEAD; refresh it after checkout')
+            raise ValueError('SOURCE_COMMIT differs from Git HEAD')
         subprocess.run(['git', '-C', str(ROOT), 'diff', '--quiet', 'HEAD', '--'], check=True)
     else:
         value = marker
@@ -37,20 +37,19 @@ class SourceDist(sdist):
         (Path(base_dir) / 'SOURCE_COMMIT').write_text(source_commit())
 
 
-# Keep the public import namespace while exposing functional areas at repository root.
-PACKAGE_DIRS = {
+PACKAGE_ROOTS = {
     'mind2act_eval': 'eval',
     'mind2act_eval.tasks': 'task',
+    'mind2act_eval.robot': 'env/robot',
     'mind2act_eval.sim': 'env/sim',
-    'mind2act_eval.robot': 'env_cfg',
+    'mind2act_eval.variations': 'env/variations',
     'mind2act_eval.adapters': 'policies',
+    'mind2act_eval.env_cfg': 'env_cfg',
 }
 packages = []
-for namespace, directory in PACKAGE_DIRS.items():
-    packages.append(namespace)
-    packages.extend(namespace + '.' + child for child in find_packages(directory))
+for package, directory in PACKAGE_ROOTS.items():
+    packages.append(package)
+    packages.extend(package + '.' + child for child in find_packages(directory))
 
-setup(packages=packages, package_dir=PACKAGE_DIRS,
-      package_data={'': ['*.json', 'config/*.json', 'mechanism/*.json', 'data/*.json'],
-                    'mind2act_eval': ['SOURCE_COMMIT']},
+setup(packages=packages, package_dir=PACKAGE_ROOTS,
       cmdclass={'build_py': BuildPy, 'sdist': SourceDist})

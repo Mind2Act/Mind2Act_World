@@ -1,4 +1,4 @@
-"""Render a live E2E Goal with the reviewed per-tier CodingAgent Markdown recipe.
+"""Render a live E2E Goal with the reviewed per-tier RoboProbe Markdown recipe.
 
 The current input is literal per-tier Markdown. Legacy R compilation helpers
 remain for archival reproducibility only. Source Python is parsed as data,
@@ -13,7 +13,7 @@ import string
 from pathlib import Path
 
 from mind2act_eval.scoring import SCORING_VERSION
-from mind2act_eval.adapters.coding_payload import require_english
+from mind2act_eval.adapters.agent_payload import require_english
 
 LEVELS = ('easy', 'medium', 'hard')
 FIELDS = ('title', 'capability_en', 'goal_en', 'description_en', 'completion_en', 'scoring_en')
@@ -151,7 +151,7 @@ if CATALOG['scoring_version'] != SCORING_VERSION:
     raise ValueError('Coding recipe/scorer version mismatch')
 
 
-def compile_coding_agent_catalog(source_bytes):
+def compile_roboprobe_catalog(source_bytes):
     """Extract the single reviewed literal RECIPES assignment without execution."""
     tree = ast.parse(source_bytes)
     if (len(tree.body) != 1 or not isinstance(tree.body[0], ast.Assign)
@@ -160,26 +160,26 @@ def compile_coding_agent_catalog(source_bytes):
         raise ValueError('Expected only a literal RECIPES assignment')
     recipes = ast.literal_eval(tree.body[0].value)
     if not isinstance(recipes, dict) or set(recipes) != set(CATALOG['tasks']):
-        raise ValueError('CodingAgent recipes must contain all 30 tasks')
+        raise ValueError('RoboProbe recipes must contain all 30 tasks')
     for tiers in recipes.values():
         if not isinstance(tiers, dict) or set(tiers) != set(LEVELS):
-            raise ValueError('CodingAgent recipes require exactly three tiers')
+            raise ValueError('RoboProbe recipes require exactly three tiers')
         for text in tiers.values():
             if (not isinstance(text, str) or not text.startswith('# ')
                     or re.findall(r'^## (.+)$', text, re.M) != ['Capability dimension', 'Description', 'Scoring']
                     or '| Score | Condition |' not in text):
-                raise ValueError('Invalid CodingAgent Markdown recipe structure')
+                raise ValueError('Invalid RoboProbe Markdown recipe structure')
     require_english(recipes)
     return dict(scoring_version=SCORING_VERSION, goal_source='live_e2e_instruction',
-        recipe_format='coding_agent-markdown-per-tier',
-        source_path='reviews/final-version-20261105/final_coding_agent_recipes_coding_agent.py',
+        recipe_format='roboprobe-markdown-per-tier',
+        source_path='reviews/final-version-20261105/final_coding_agent_recipes_roboprobe.py',
         source_sha256=hashlib.sha256(source_bytes).hexdigest(), recipes=recipes)
 
 
-CODING_AGENT_CATALOG = json.loads(Path(__file__).with_name('data').joinpath('coding_agent-recipes.json').read_text())
-if CODING_AGENT_CATALOG['scoring_version'] != SCORING_VERSION:
-    raise ValueError('CodingAgent recipe/scorer version mismatch')
-RECIPES = CODING_AGENT_CATALOG['recipes']
+ROBOPROBE_CATALOG = json.loads(Path(__file__).with_name('data').joinpath('roboprobe-recipes.json').read_text())
+if ROBOPROBE_CATALOG['scoring_version'] != SCORING_VERSION:
+    raise ValueError('RoboProbe recipe/scorer version mismatch')
+RECIPES = ROBOPROBE_CATALOG['recipes']
 
 
 def render_public_text(task, difficulty, text, public_parameters):
@@ -216,7 +216,7 @@ def render_coding_input(task, difficulty, public_parameters, *, instruction=None
     if task not in RECIPES or difficulty not in LEVELS:
         raise ValueError('Unknown coding recipe task or difficulty')
     instruction = validate_runtime_instruction(instruction)
-    # Match pinned CodingAgent _goal_content: the recipe is literal Markdown,
+    # Match pinned RoboProbe _goal_content: the recipe is literal Markdown,
     # selected by the actual tier; only trailing whitespace is stripped.
     return f"Goal: {instruction}\n\nTASK RECIPE:\n{RECIPES[task][difficulty].rstrip()}"
 
@@ -224,10 +224,10 @@ def render_coding_input(task, difficulty, public_parameters, *, instruction=None
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser(description='Compile the final R data authority without executing it')
-    parser.add_argument('--format', choices=('coding_agent', 'legacy'), default='coding_agent')
+    parser.add_argument('--format', choices=('roboprobe', 'legacy'), default='roboprobe')
     parser.add_argument('--source', required=True)
     parser.add_argument('--output', required=True)
     args = parser.parse_args()
-    compiler = compile_coding_agent_catalog if args.format == 'coding_agent' else compile_catalog
+    compiler = compile_roboprobe_catalog if args.format == 'roboprobe' else compile_catalog
     result = compiler(Path(args.source).read_bytes())
     Path(args.output).write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')

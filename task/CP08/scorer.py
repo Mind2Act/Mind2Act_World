@@ -13,7 +13,23 @@ def score(evidence):
         raise ValueError('CP08 requires a nonnegative physics tick')
     values = to_json(evidence.values)
     config = values['source_case']
-    if 'test_source' in values:
+    if 'validation_source_spec' in values:
+        from .validation import validate_evidence
+        validate_evidence(evidence)
+    elif 'training_source_spec' in values:
+        from mind2act_eval.contracts import InstanceSpec
+        from mind2act_eval.cp08_training_inputs import validate as validate_training
+        from .projection import validate_training as validate_training_projection
+        spec=InstanceSpec.from_dict(values['training_source_spec'])
+        validate_training(spec)
+        if ('test_source' in values or spec.variation.mode!='clean'
+                or spec.task_id!=evidence.task_id or spec.instance_id!=evidence.instance_id
+                or spec.difficulty!=config['level']
+                or config!=to_json(spec.config['source_case'])
+                or values['source_projection']!=to_json(spec.config['source_projection'])):
+            raise ValueError('CP08 training scoring source identity/condition differs')
+        validate_training_projection(values['source_projection'],spec.difficulty,config)
+    elif 'test_source' in values:
         from types import SimpleNamespace
         from mind2act_eval.original_test_inputs import read_audit
         spec=SimpleNamespace(task_id='CP08',instance_id=evidence.instance_id,difficulty=config['level'],

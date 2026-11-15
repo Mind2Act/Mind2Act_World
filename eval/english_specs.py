@@ -11,7 +11,7 @@ import json
 import re
 
 from .contracts import to_json
-from .scene_probe import spec_digest
+from .spec_identity import spec_digest
 from .variations import clean_spec, digest
 
 BASELINE_SHA256 = '0cfee6abd002c1892b13d7c63503ea6e545fc28a92258f66a8260f25809f06de'
@@ -61,14 +61,17 @@ def _project_fields(source):
 
 @lru_cache(maxsize=1)
 def _catalogue():
-    data = json.loads(resources.files('mind2act_eval.tasks._instructions')
-                      .joinpath('config/spec-projections.json').read_text())
+    import hashlib
+    raw = resources.files('mind2act_eval.tasks._instructions').joinpath('config/spec-projections.json').read_bytes()
+    if hashlib.sha256(raw).hexdigest() != '832c6dc589c250173f054b9f872d219d02360aad615133a56212f5c32519895a':
+        raise ValueError('public English authority bytes differ')
+    data = json.loads(raw)
     if (data.get('schema') != 'mind2act_eval.english_spec_authority.v1'
             or data.get('source_baseline_sha256') != BASELINE_SHA256
             or data.get('source_extra_sha256') != EXTRA_SOURCES_SHA256
             or data.get('source_cp09_extra_sha256') != CP09_EXTRA_SOURCES_SHA256
             or data.get('fields') != ['/config/instruction', '/config/geometry_decision']
-            or sum(len(rows) for rows in data.get('cases', {}).values()) != 4598):
+            or sum(len(rows) for rows in data.get('cases', {}).values()) != 0):
         raise ValueError('English spec authority catalogue differs')
     runtime_sources = {}
     for case, rows in data['cases'].items():

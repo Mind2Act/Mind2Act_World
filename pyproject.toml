@@ -3,23 +3,32 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mind2act-eval"
+name = "mind2act-dev"
 version = "1.0.0"
 description = "Shared scene and scoring evaluation framework"
-requires-python = ">=3.10"
+license = {file = "LICENSE"}
+requires-python = ">=3.11,<3.12"
 dependencies = ["numpy>=1.24", "shapely>=2,<3"]
 
 [project.optional-dependencies]
 replay = ["h5py>=3.8", "numpy>=1.24"]
-test = ["setuptools>=68", "pytest>=7", "h5py>=3.8", "numpy>=1.24", "scipy>=1.10", "websockets==15.0.1", "msgpack==1.1.0", "usd-core>=24.5", "pillow>=10", "pyyaml>=6", "jsonschema>=4"]
+test = ["pytest>=7", "h5py>=3.8", "numpy>=1.24", "scipy>=1.10", "websockets==15.0.1", "msgpack==1.1.0", "usd-core>=24.5", "pillow>=10"]
 g05 = ["numpy>=1.24", "websockets==15.0.1", "msgpack==1.1.0"]
 isaac = ["psutil>=5.9", "requests>=2.31", "scipy>=1.10", "toml==0.10.2"]
+agent = ["pillow>=10", "pyyaml>=6", "jsonschema>=4"]
 coding-agent = ["pillow>=10", "pyyaml>=6", "jsonschema>=4"]
+roboprobe = ["pillow>=10", "pyyaml>=6", "jsonschema>=4"]
 xpolicy = ["xpolicylab @ git+https://github.com/XPolicyLab/XPolicyLab.git@128e626278ef753fa8a86b16e3425a6359388b4c"]
 
 [project.scripts]
 mind2act-eval = "mind2act_eval.cli:main"
 
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "config/*.json", "data/*.json"]
+mind2act_eval = ["SOURCE_COMMIT", "UPSTREAM_COMMIT"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["."]

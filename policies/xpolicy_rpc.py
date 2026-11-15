@@ -58,7 +58,7 @@ class XPolicyRPCTransport:
         return not self.queue
 
     def reset(self, seed):
-        # The episode seed is local case identity only (as in upstream robot runtime, which sends
+        # The episode seed is local case identity only (as in RoboDojo, which sends
         # no per-episode seed to the policy). The model's own randomness is the
         # service's business; record its checkpoint/config identity instead.
         self.queue.clear()

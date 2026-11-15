@@ -353,8 +353,9 @@ class Result:
     scoring_version: str = SCORING_VERSION
 
     def __post_init__(self):
-        from .budgets import POLICY_KINDS, E2E_BUDGET_VERSION, AGENT_BUDGET_VERSION
-        versions = {'e2e': E2E_BUDGET_VERSION, 'coding_agent': AGENT_BUDGET_VERSION}
+        from .budgets import POLICY_KINDS, AGENT_POLICY_KINDS, E2E_BUDGET_VERSION, AGENT_BUDGET_VERSION
+        versions = {'e2e': E2E_BUDGET_VERSION, 'agent': AGENT_BUDGET_VERSION,
+                    'coding_agent': AGENT_BUDGET_VERSION}
         if ((self.policy_kind is None) != (self.budget_version is None)
                 or self.policy_kind is not None and (self.policy_kind not in POLICY_KINDS
                     or self.budget_version != versions[self.policy_kind])):
@@ -368,9 +369,9 @@ class Result:
             raise ValueError('invalid per-decision retry allowance')
         if self.policy_kind == 'e2e' and (self.calls_limit is not None or self.decision_retry_limit is not None):
             raise ValueError('e2e has no decision call limit')
-        if self.policy_kind == 'coding_agent' and self.infra_valid and (
+        if self.policy_kind in AGENT_POLICY_KINDS and self.infra_valid and (
                 self.calls_used is None or self.calls_limit != 150 or self.decision_retry_limit != 12):
-            raise ValueError('valid coding agent result requires 150 decisions and 12 retries per decision')
+            raise ValueError('valid agent result requires 150 decisions and 12 retries per decision')
         object.__setattr__(self, 'budget_limits', freeze(self.budget_limits))
         if type(self.infra_valid) is not bool or type(self.model_tested) is not bool:
             raise ValueError("infra_valid/model_tested must be bool")

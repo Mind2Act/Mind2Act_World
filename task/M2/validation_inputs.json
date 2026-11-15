@@ -1,0 +1,635 @@
+{
+  "schema": "mind2act_eval.m2_validation_inputs.v1",
+  "instances": [
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-58cba9cb8d05ab72",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 5,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "20c0f859ad103af298fa71b8ed0b6cb4c551eb4676938445eb60cd71658b6168"
+      },
+      "binding_sha256": "cd160c82eea73a64595406fbc84fbca6f8752beb89d8781c8a670bac828b80c7",
+      "condition_sha256": "e6b70f0e1d3749bfe251c6495e96c12d381bb0438535a5306c9c9a04918fe699",
+      "scene_sha256": "794c3453949b94247c6006b4b68b765b4c7ec49d68f291e5755893de5c0ea7d6"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-fbb8f1f01aba4ae3",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 12,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "d1a1275a28ca05fead2011935ee47a7f4243361b6d7868b6ef2f5f851e3f64c1"
+      },
+      "binding_sha256": "1c09c796993a0bbcf53a4949e7f2a85ebe8eacc03487be34a40ca0d663a518ac",
+      "condition_sha256": "648af9bed62c8e531518291c0eb8942a07382ad20bd5185733955141b4feb586",
+      "scene_sha256": "aaf8d68da614f2167d193c387bce6ba8da76fbfb25194e4f75503b919b9ac998"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-ee1498e7bc51b608",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 0,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "fb114a1eb02d3236a4b0b2be53135f75f81f7e5ec58639f9ae42cc7c75bd7a80"
+      },
+      "binding_sha256": "1676187137bf9c928f0cca67bc769f49bdd3cd1e1a86c9e899f8eac4f17ed501",
+      "condition_sha256": "8ccda1842de3aff816e7d728cc9e460ad4f4e2b5bd80fca272971c582b2735a4",
+      "scene_sha256": "2e81b115eeb18b7133a7e61825c2bbe2a5336a6d7559c553bac4c2c705f7bda5"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-1f40f321e775753e",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 1,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "649e0a8b1642ef263fcae76bb45a2d98ac2998f802356dca092093dd8b1eb475"
+      },
+      "binding_sha256": "451675ee17bc99bc7e1fb0609dbc2405fecc021e27294366c4a1b8561c75e8dc",
+      "condition_sha256": "4057becd1213bc6e22f7d32fab0964c95cae8d1fb8aef427ec448af2df8db806",
+      "scene_sha256": "b77a1fa4954f2f43d0ac3d56d9f390d4de146c81ef8936fa1ef2a664ef0cb434"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-a5524f8fb9672206",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 6,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "1bafb67fd8b79731d0266133d60d613354871059b12ec2ea4e7bb44482bc9ca5"
+      },
+      "binding_sha256": "4f42817cbfbeadd05ed30decfcda2834e2a1f2b96a8f392b3a23da34ca39207b",
+      "condition_sha256": "edb28f09b8fba000bfce397e416a36d7366b75c8aa5e3c783cf06f009eb5f547",
+      "scene_sha256": "1da311d7daf608eaf91d960996507918ba49f0a0cc89ee27d594076ca82ad5fe"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-4465538f1b61869d",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 5,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "bdc8471291fcb727bdb7b992d05feea2b58f9691e7b231fb7952df8c25847e45"
+      },
+      "binding_sha256": "e893e4f9c200fa77364808fe73c09b9f54cff71e4179c27d352ac5e92ed9f3b5",
+      "condition_sha256": "5d7d31f866cb80486b1d01e420dc49a8f9c40288f2cf3f215d382aaa58c0fd9c",
+      "scene_sha256": "8d10ff60746ff426473193e12121e62e01676bd415e34b76c432ea8b45572ddf"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-083ca90b2fa6c23e",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 12,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "ec0a328f34ea349adea6e69096edbd757930c9e8d2b033e8627dfbfd3802dbc6"
+      },
+      "binding_sha256": "1860ea312a182cd43d231555516ae4dc181f0ce5cf6b71165c2303f74d2f4af0",
+      "condition_sha256": "25b55aa81a5dbd8da82332cfeee908b97d11a40dce028b89acf414d768f9ad32",
+      "scene_sha256": "c290cb450b6616a85c9aa77a50e60ff5ccf94d8cd24b61a7d548c4087f215058"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-781aaaa61fd1568c",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 2,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "e26f99ed5b3309dfd38fe37242456ee4f2d7a8b5f6ca170d9897417a54118fa6"
+      },
+      "binding_sha256": "9db78f27dc8af389f43518a26b51bb835b174dc293e29667f94c861e0ecefeed",
+      "condition_sha256": "7ba12e4fa24649d93e9776360422dd0fed8ff9ebbfca35b6ed57aa2b86b66f94",
+      "scene_sha256": "e33d9a6a7f0eda5e883ae808f9f4357f49c45d3da6e8eed5aecc4ca884695035"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-bcd994c4c4039cb1",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 1,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "df2b9858bfe1fbf8bd348ebdc18e419b436cd168650bec68a7e483ffb13a7a80"
+      },
+      "binding_sha256": "5f1755f0bb247cfe78d70fd1735f23c16658153bf1d05b57b15f5514429a0a84",
+      "condition_sha256": "716b805a1a8e5b03fe0a6502067afafc8de13cef897a8fcde2499f217fdff336",
+      "scene_sha256": "a543ad5c2c0a0c79c7902a6f8ceb23549b1cf13e52e6e09706be50716faf082b"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-easy-eef09876baa65f4d",
+        "difficulty": "easy",
+        "source_id": "memory-bridge-final",
+        "seed": 6,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "d06a3e3499e9112a531eb62e9048b5a603815fa92cddc00cdffbb0fde16f0f0f"
+      },
+      "binding_sha256": "dc7b67682bc1bc61a388e114bd7e82105688a796b1b20b4990e074c1783b099f",
+      "condition_sha256": "1e44efa58132cc1780563d902a95222c489ae73d7f008b2cd85dc29f446da777",
+      "scene_sha256": "625311832bf1969b6126474ead17e829c98870e55ff4ba0c2845549bcb76a5a8"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-1b9313ab860a2c1d",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 112,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "6b7e6300ba3741bdf4bec48a2c682aed42713d79c9f2aa9fb77d79f7e2c50b6d"
+      },
+      "binding_sha256": "858235cda97f051d8f08c9a187abd8d7fb1623ebf3d0cc1b1c83882bb85ce496",
+      "condition_sha256": "2b7513bf47bb480c34593a4fedf5fe3d44691ce6cefe0218d09a5138d7e6f256",
+      "scene_sha256": "4789c9f22b851b2704d91d1d1e9bf3edcc5a62d34f1c74f8535e10922d011b1a"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-1c27683a1f7f97f8",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 2777,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "9a8db312497e4e5016d06660739485d7ff420da1c726bd0e622b2b51c711ebc3"
+      },
+      "binding_sha256": "13ce38cbebb877061cf1dd5f9fa8575aff340612ccc50ad9ba0204f71c2a92d9",
+      "condition_sha256": "add78662fc9c79eac38ca4078a1c423f1e7ad5002c2999725c114cf25b7300a5",
+      "scene_sha256": "829d8d078a81f3af7411ce580066d25eabfe842bcdf2b6433c99b264be9d6268"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-3212a4b90d43b137",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 2445,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "c1147ff6d20f4a2bfdd08714ea64193985384edfa7e40fc60445326934331ab9"
+      },
+      "binding_sha256": "731462f1f7b3af9214f4289cdf3a57996a834e05b4e959f42b5f76a980a81cd0",
+      "condition_sha256": "03cd93faf27cf3ad287f249e5bda97d59275e7b49760ce87ae1d173ff2954f4e",
+      "scene_sha256": "9d7bb6eafb2a0d6f900111e36398dd9cf9d4b83dbe4ebb80fb644e9236401d73"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-5b6af1c2ba1221bf",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 454,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "6f94c438d33db4b478c86ce7446bf56c3880a4b95f8ee8bd6a015973f4e0834a"
+      },
+      "binding_sha256": "6c4afafe2599f88228b6e62f13938556df17ab46862bb4cbf489a5ff5daab246",
+      "condition_sha256": "13493a5badc76b22a26f75c0deda2d3957b6d67655599190c1b7738c9ad88f49",
+      "scene_sha256": "ead15204b4f66a3148bb7241abde158338b9db2d231957d2036f8a4b528e8ecc"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-8cba2d1d7212d5bd",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 1430,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "3a19ad35e673f83876b2b5132c98a1ad69fb7b0b7fe01e475aee24b4a973c3df"
+      },
+      "binding_sha256": "60dc1ee661118edb32b51d3495400e66bc65bc46a576bba44f71ae5966ffccb1",
+      "condition_sha256": "d35188cd9b5e6f704d4eca7faed7f36527cc086a9980cce602e57feb3d617eeb",
+      "scene_sha256": "15a93dd33f8f092d029d50b17f6fa2dec4eb3e51fea11694538fae93eb1a6eb7"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-969327fc8cdb78ad",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 11,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "bcbec38bc187bf1db295b04c64d2c16595b73d826e4f3446b41bad2c5876ce13"
+      },
+      "binding_sha256": "723310c8934470b4a12108678f41b04f6217d0a4ff79e272b26488f0df90656a",
+      "condition_sha256": "9651c1d58a2a30a17c4d0641819191096576f2379708f1135dbd9786aa12aa5c",
+      "scene_sha256": "f598aba70938a9baf26a3d97b844019ad328bb7f89409303036a73a901798756"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-9ee04073a7f9bd2f",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 1193,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "2f380244632ed09f0c81729bafdb1fd1282377d94161fa4e5849f31d4c7aa1e1"
+      },
+      "binding_sha256": "23d87e2c3ffa91947059894456447129bd53a46862405e195dd7aae5d3fb5bc0",
+      "condition_sha256": "0eba78c80c24a03ad24ff976dc9dc140b4a2c5f00112b9d27d497a502830ffc7",
+      "scene_sha256": "261cc02dc58c692cf87c7cac2541a1fc21e2c25d8d7b7a48bcd39094592f1833"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-c9e948ca17057300",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 756,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "5a9e490d5be5d11e49cb70376f3bad02057a31eb75942d1a5fe59f0b05ae0921"
+      },
+      "binding_sha256": "24be25849554c8364f8fbadb3657b1c0ec832f903d16b8e2df8147ee505344eb",
+      "condition_sha256": "207df69d5502d467bb93299d024628e1e7bebba36978c19a23ed3bd47d96fccb",
+      "scene_sha256": "0cfe44b6978322eaa85c270b24a57db4c5ffe10875699691621d0aed08bceb25"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-883bbd3a17a8d2b0",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 505,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "313cb740fc168bb1477666b45639180d55c47defadedc05aac5dfcb8e64803fa"
+      },
+      "binding_sha256": "ef4ddd36e27144232e1ccdc52e3456ba1c3c205f2b147a6ff566d954ad48f731",
+      "condition_sha256": "080a22c40d05e078d7b33a1a8af2c0c3a696806d1339ce748c0b515a939add85",
+      "scene_sha256": "818c1d7ea7c43f08d4a209c07c3494a6fd93e66a82a97113851d423a4fea4a95"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-medium-81d523410948e8ca",
+        "difficulty": "medium",
+        "source_id": "memory-bridge-final",
+        "seed": 1767,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "68af5566af5331b9e6b19903851e2a9afd1ea8a96541026650a6c9c972bd39b2"
+      },
+      "binding_sha256": "cedced9877716789457b5f699737af2e05fffd07d3b28cdea60ce90a0fd73ba2",
+      "condition_sha256": "56f88e8b782a8952160991be2f34649f549cf2a897e5a314879c421cdef4aaa8",
+      "scene_sha256": "ffb512852a3d7e8ac438010b6de60c0d76d9b76ce9eb70303426ec60d6c44c9d"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-b09d0d2e8337fcfb",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 1290,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "16b3916a9a1483042c91b431ca9757cd198fda35592ef8974a05dccdb0074a9e"
+      },
+      "binding_sha256": "397e9d710f0ef711a7bf7173495ef376ebc5d18f410f38acfabd487070f34c99",
+      "condition_sha256": "e12d8db6e6abe21e42682b5757d01e2cccdb9e1e82cf956f141ce9726c01bec5",
+      "scene_sha256": "dd580e07621a629b0d4e3a9ce2294a648f41d1a4e0c85abff1eaa219f1dc5b73"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-87e55b7a3b0f3620",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 1658,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "3f55c34705fb9424df9fe6b4b156288d554eadb35813bc2cbdc21b5e49f723c3"
+      },
+      "binding_sha256": "fca9bfa6d85067c96c4557f8a56a99054d9764caf428eeb12679cdabf7083c44",
+      "condition_sha256": "241cb95b929ed3d5f3064156786f3188518c9bdd48cfb65c014a3e9acc854e2e",
+      "scene_sha256": "0330360b22e0ddfe8efb24daab15997ca6e4e6f76c5445f0fcaf048a01ce97c0"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-6980d0b2e096d387",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 3138,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "aa4c14b6e9d7571475a3167b32594916d7b9b20cfdf0ab931e61096fdf1cf4a2"
+      },
+      "binding_sha256": "79c685cc6759567c9e26cb3a28fb497e9990ddf1ebd8dd884cab89198eb0762f",
+      "condition_sha256": "d8707a4b8228a1cf412b288f2a2be833c670885da50d60c1b4f5c00041d26130",
+      "scene_sha256": "79593313c44e9f03af6d1c284d82a4d00e9c73d3175661b8ad1e58d1991c42d7"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-52754df53dca8c2e",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 3469,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "f2028afb2f2db8f0d890792486b3e57579f7133f2d247e5b065a22f375cb24df"
+      },
+      "binding_sha256": "73b551ac4667778f7b71c2bffa14b1506beba4e40488e7eb9e7b248105b651a0",
+      "condition_sha256": "e88716cc94ce37bcd1e869c8b5a2243c8bc9e88b98cfa5d4f31d80157626c88d",
+      "scene_sha256": "55ad0240a59ee6ad354ecb62db75bc197b4cef8954b8ab25605454f0f553a640"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-3bd864550bec0ad8",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 2072,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "32646e73c48bb5d04314ac04f0bd7e5bba48b57ce816d1644cc84bd347efc283"
+      },
+      "binding_sha256": "f03d6a8cedc626e79f6c4825a77a408b16134f19a8ad2b06c5e2af59e13dcc61",
+      "condition_sha256": "c35f2ddb06fc29cb35bce17dcc0dc065b57302a1083028bc1159ce6186b5d87a",
+      "scene_sha256": "26df1af9e0fdc1bf2816d94e673ea180e738f6dd9aa0e5ffecd93e256e6acc10"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-3007d207651ac27a",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 374,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "25dc21c0b9c92b5254fdcbf4a45d15d3b732fdc826a2d2b278dc6d07dacbc883"
+      },
+      "binding_sha256": "4f558e8e9bff4d7d54d9eb5298ecb5a8ff2aab2addb10907421fe7055153fba9",
+      "condition_sha256": "6dc7d2a45d3e92323c09cc36dbec5325f163cecd2a8442a42e218d62e738e3ff",
+      "scene_sha256": "3453e83e54023e66aec6550697fec3ee4395e7f2caf3ae325bd1f6d880e09160"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-d54fdeb1be37f218",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 2792,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "73c4307b1d1a4d79e85a7fd2209428e1c99d5e97c403bd685a936ea7a1c720b5"
+      },
+      "binding_sha256": "ca4565d5e8d3247d53b97f8396728719f12d60655468f6fad37d7476066443cf",
+      "condition_sha256": "02363af842590239d0b8863eac03ddd94db23e68a2f32cd31efa93c78d77978e",
+      "scene_sha256": "c513bf0d71fe70065d375ac66eea96928c0e19ea9b7071cc3b47fa28338bfb51"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-0c8c77894a864fd1",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 3497,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "3552e3569fc1135fb1aab8688644c671132afd60b32d2afddebca67bc504fcfa"
+      },
+      "binding_sha256": "f6ea47e3e493cb0f06663bb2b0353bd8c4d52c14a10848c30dbd09a927bfd993",
+      "condition_sha256": "1e06b7cfdf9aee4902cdf93949e87ee8e200ff27089afafc690570b3d4a45e99",
+      "scene_sha256": "607baeb7165892dc848859260363a66609bee6f2a57aedee098481d8a9c923fe"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-36239de98236e963",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 2599,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "dc70d8f7b9c76a95b4580269e524f0dc1d3afb54f7202caa33b8dff22f747d32"
+      },
+      "binding_sha256": "6e140100649dfcbeadd6af59303258f2355900f5b8787bd254134c8387c9e2f1",
+      "condition_sha256": "fe64c75a9d5311ee45fdc43546ec043774f87e2c7f17561da42ee64044210605",
+      "scene_sha256": "42ef1c8c58982d03976b4c4ec162728ca9eba2177e55fd86657554c174327a50"
+    },
+    {
+      "identity": {
+        "task_id": "M2",
+        "instance_id": "VAL-M2-hard-b875323e3088c069",
+        "difficulty": "hard",
+        "source_id": "memory-bridge-final",
+        "seed": 362,
+        "config_version": "m2-spec-20261030-v1",
+        "asset_version": "validation-clean-original-memory-v1",
+        "protocol_version": "v1",
+        "clock": {
+          "physics_hz": 120,
+          "control_hz": 30,
+          "rgb_hz": 30
+        },
+        "config_sha256": "3eecdc0cdfc3caa8bf144ae14680daab6ed6f99bb0b79974c59bb00099ef4037"
+      },
+      "binding_sha256": "b25992adf91bbc9ce9abea9f3b30dae65face74039092472561597e492010545",
+      "condition_sha256": "ccaf3dae9a082e5360c618e9980b0357539037faee1e9664867163f1c549c1c6",
+      "scene_sha256": "322b66adae53d240e2b582be61a7f1bf7430fa35a23f2ebdbc677da6a3ba1b16"
+    }
+  ]
+}

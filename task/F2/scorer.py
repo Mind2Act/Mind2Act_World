@@ -8,6 +8,9 @@ from .evidence import validate_frame, read_rows
 
 
 def score(evidence: NativeEvidence) -> Score:
+    if evidence.instance_id.startswith('VAL-F2-composition-') or 'gap_composition_spec' in evidence.values:
+        from mind2act_eval.gap_composition_inputs import validate_evidence
+        validate_evidence(evidence)
     if evidence.task_id != 'F2':
         raise ValueError('F2 scorer received a different task')
     v = to_json(evidence.values)

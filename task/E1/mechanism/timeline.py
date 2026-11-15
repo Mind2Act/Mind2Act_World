@@ -1,7 +1,7 @@
 """Automatic E1 batch timeline: arrival -> observe -> (first batch departs) -> execute -> departure.
 
 Source: E-142 baseline `cases/E/sdk_task.py:Timeline`, decoupled from the SDK clock. Per the
-CommonInput snapshot a batch seals at its first 1 s stable placement (benchmark maintainer 10-30: no per-batch deadline; a batch
+Feishu snapshot a batch seals at its first 1 s stable placement (benchmark maintainer 10-30: no per-batch deadline; a batch
 with no submission waits until the episode budget ends and counts 0), and an incorrect batch does not
 end the episode. The phase is the
 task's own native state (batch conveyor schedule), not an expert label.

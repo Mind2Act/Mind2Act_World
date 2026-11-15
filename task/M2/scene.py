@@ -50,7 +50,7 @@ class MemoryScene:
 
     def result_metadata(self):
         return dict(binding_mode=self.binding["mode"],
-                    formal_evaluation_profile="not_claimed" if self.binding['mode']=='source_bound_test' else "blocked",
+                    formal_evaluation_profile="not_claimed" if self.binding['mode'] in ('source_bound_test', 'source_bound_validation') else "blocked",
                     rule="m2-spec-20261030-v1", initialization_physics_ticks=240,
                     source_manifest_sha256=self.binding["source_manifest_sha256"],
                     source_scene_sha256=self.binding["scene_sha256"],
@@ -132,7 +132,7 @@ class NativeSensors:
 
 
 def build(spec, ctx):
-    if spec.config.get("m2_mode") not in ("diagnostic_training", "source_bound_test"):
+    if spec.config.get("m2_mode") not in ("diagnostic_training", "source_bound_test", "source_bound_validation"):
         raise ProfileBlocked("M2 formal evaluation profiles/slots unavailable; no training substitution")
     binding = load(spec, ctx.assets)
     return MemoryScene(spec, ctx, binding, NativeSensors(ctx, binding))

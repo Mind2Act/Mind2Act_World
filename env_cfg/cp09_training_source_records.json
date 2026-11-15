@@ -1,0 +1,3255 @@
+{
+  "public_projection": {
+    "omitted_audit_roles": [
+      "train_source_raw"
+    ],
+    "omitted_original_bytes_not_verified_by_public_runtime": true,
+    "original_private_condition_validation_retained": true,
+    "schema": "mind2act.public_training_runtime_projection.v1",
+    "selected": 60,
+    "station_proof_projection": "Only two unconsumed audit fields omitted; all station semantics exact and original proof SHA retained"
+  },
+  "records": {
+    "CP09/easy/CP09-cov1-easy-f0-i0-l0": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f0-i0-l0.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i0-l0/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i0-l0/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "cfd01771119f57eb56953c429341512298a301b6551e59d29f8a712c7b862305",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f0-i0-l0",
+        "protocol_version": "v1",
+        "seed": 0,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "9aae2dec44e3ba4b93d694b515c035b23c5d0ed046296552a2de9e00ece780a1",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "2cd8a028e815a4e62f765c88646eff345ed982b2ce9274e99387c684f4013298",
+        "training_task": "e841e077944f2c0bcd27fae78ca0a137bf78f74633cff561701514a3f8daad4c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "b3cbedccf779e5d8753b1c39f23648c988c4ba4972e9bae8b99c930f193449ff",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f0-i0-l0/episode.hdf5",
+        "h5_sha256": "caaf12ece5fd836afda735ef4ba3296f63b6ea67e9fb51077ac7dd2e18bd275c",
+        "input_sha256": "77656e2d5ef962c22997ca4e58bfa8bb6ebbc340b53f712bad50059e6e815b09",
+        "native_case_id": "cp09-coverage-v1-easy-00-e7b7c8dc822f",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f0-i0-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f0-i0-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i0-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i0-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "ba158afd6be5fd41fff15ad4731d1026ef96c56aba8aec17873fba3fcbdcd060",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f0-i0-l1",
+        "protocol_version": "v1",
+        "seed": 1,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "11b966e8d00530fe8a463bbdb204608c9491ac7e36f7bd675d7c2930cf5ecee1",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "622ff2b7d5f17cd5e9687fbc2b345e66114ffca7643ce5055dbe9fe6c164ff4a",
+        "training_task": "cb732f8c933c9eeb64ac1a3e8389886755dc21c55a7709ab2ceab9df59f50b5c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "1e639f37ecf7c0ef1705fe7aaf7f6aba1ea8cadb8d5d6a3062636a9ea178515b",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f0-i0-l1/episode.hdf5",
+        "h5_sha256": "fd90f8409de38a71c7d4bf369bbfdd09778945562fc389b04d1f1cc3ceb7444a",
+        "input_sha256": "e55d8d1446ab2690bc1ed51eeb2281be7f70f4b891ea0dfaac8739c7dfc90701",
+        "native_case_id": "cp09-coverage-v1-easy-01-8f5551ba48b9",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f0-i1-l0": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f0-i1-l0.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i1-l0/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i1-l0/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "b9b2c3e6fdcbe8278d5d65e912b6b498d0f4b9f2b4ad0c9777dac2776c52c18b",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f0-i1-l0",
+        "protocol_version": "v1",
+        "seed": 2,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "ba64a6f6ed9de90198af1ccabf26d7ac596d7e2cec32c0f9afa050b9694ae600",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "e40d0c84c01521ed1e7fa34be59c9b5a356c5ddf2121a710da1fa7c824aec528",
+        "training_task": "e841e077944f2c0bcd27fae78ca0a137bf78f74633cff561701514a3f8daad4c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "e3b09beb9bf43a74a9436acd9469dc9734af921e58a7df64606c877d2d0f6517",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f0-i1-l0/episode.hdf5",
+        "h5_sha256": "545b666a2b2784ea5ff1ef74e922c40fe04bc9b959878cfc156c149f3c4be059",
+        "input_sha256": "fe02297968a6afe6c3114345ffff478e8dcdf2300d7ee31dc67a95d822349f2d",
+        "native_case_id": "cp09-coverage-v1-easy-02-6d1a338cdc0d",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f0-i1-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f0-i1-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i1-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i1-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "dc5023a4d7b4374edffaae5f1c57e154c9ec4475170020eb814e25ef68b6a673",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f0-i1-l1",
+        "protocol_version": "v1",
+        "seed": 3,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "9d4055e4bd19d4626971be9f46d75afc4d7c0f52bd91f47267dbb4341059d6f0",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "3c38a8bfa17823c06af0c96e23c055cf50029811d628beb18d51bb27c13ee7ed",
+        "training_task": "cb732f8c933c9eeb64ac1a3e8389886755dc21c55a7709ab2ceab9df59f50b5c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "823706ce46287cfeeb69c35872844d32e2a6f6d9e4990adfaf03e81275ad0168",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f0-i1-l1/episode.hdf5",
+        "h5_sha256": "2f0912c0cfc40e8e3cd396dbda9e932f168177da3716abe5a94da6a7c6a6a413",
+        "input_sha256": "adffc5d37d338f38f6222522dc71b5baf28e8f3d6275423f98646bf9d55b31c4",
+        "native_case_id": "cp09-coverage-v1-easy-03-bfad17a233e0",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f0-i4-l0": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f0-i4-l0.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i4-l0/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i4-l0/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "bd829c498f67e37e3896ac67560b93551e367e3924203c0ffbaef180ad323637",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f0-i4-l0",
+        "protocol_version": "v1",
+        "seed": 8,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "33483a437dc95cb449f56365f31310f6d06c105f3eff84558759a3d12e432d50",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "4ef46efa281c07cd01fabca87b15b7de006158543e3ab77322d67e74d84cb3ed",
+        "training_task": "e841e077944f2c0bcd27fae78ca0a137bf78f74633cff561701514a3f8daad4c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "05a5dee332312dcc0c63b5ea122aec0978200822d0898b868585457275d9f48a",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f0-i4-l0/episode.hdf5",
+        "h5_sha256": "e7fb5c12227fd2379f36d0de70f7d5d165221408877f9d23e1e9853e81c70c5c",
+        "input_sha256": "c78596ed73f17d4001c555a2600a28bc7cfc046eb3b7dc6854dc8f15f960b8e0",
+        "native_case_id": "cp09-coverage-v1-easy-08-efd1bfa139af",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f0-i4-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f0-i4-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i4-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f0-i4-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "7f7631a91df2c5dd74b64a4a0e8fb72cc49f923b66bebf3e9d16df10aff63995",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f0-i4-l1",
+        "protocol_version": "v1",
+        "seed": 9,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "0c5fcae0ff43e318df2b1d0d02f1cb7c5d404543361fcf008d57aad9ec388776",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "fb9bc1407b9ab0b1f25d9d66e93e5dd70187efdb6b0ee43e43be94173b6506b7",
+        "training_task": "cb732f8c933c9eeb64ac1a3e8389886755dc21c55a7709ab2ceab9df59f50b5c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "7ee0c952a071051771c6e256ca549017d144c9251081fa4d9a1e667e0019fd9b",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f0-i4-l1/episode.hdf5",
+        "h5_sha256": "c728265097e0dae36483ee143fda63fdcd80f43089b8b21d3e650aa411e7d16c",
+        "input_sha256": "fca35594ab328405238c5c3faa235620497c5b218128914e06d1b37616e267cd",
+        "native_case_id": "cp09-coverage-v1-easy-09-237b454bf422",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f2-i0-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f2-i0-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f2-i0-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f2-i0-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "c2731841aa6988c0e7dcfa67fd3a62b977d5495aa3f0e63363469d7ff0a343ba",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f2-i0-l1",
+        "protocol_version": "v1",
+        "seed": 21,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "ee6e178e572bd379b03b07be91de4d8b0dc357443e48304c2cc0c82e510e0436",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "b3e57d877010ff920718d9dca7465a6728b53ba89d95e219ca22716198a285a4",
+        "training_task": "b93454e5fc174bb47f126c233e11ba05d1768faca45a9ebb48420d7033a881f1",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "ab1213fb94e773d8976bdf874141b947f11557c83a81f5c9e841e715773fb854",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f2-i0-l1/episode.hdf5",
+        "h5_sha256": "464b189bb7cf2da05aea5819863a11a4fee1ee9d7e0dec369651fcdbdb49ed7e",
+        "input_sha256": "b6b828523457b26cd865f183ab13d27d06d876bad65d5e3f330b77d320075c61",
+        "native_case_id": "cp09-coverage-v1-easy-21-f8ba3fe4a6d0",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f2-i1-l0": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f2-i1-l0.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f2-i1-l0/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f2-i1-l0/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "84db8bebd36dfeaf53061d5d7630feb8469ac53c8b5bec9cfd756d397b8b9a29",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f2-i1-l0",
+        "protocol_version": "v1",
+        "seed": 22,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "39da47172e90279b80804a556cb29cd17425ad6af700539b8d99a78fd5c3d6df",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "4d578e29a627a6245caba7b476739826022119f64840d3f7f1fece7a387da8e2",
+        "training_task": "f54fcd2712d17240684291018080976bafcea3457385660c6581460d8ce48100",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "83dd6a2faf4b3d052e0a4a69f58678a056cca8056c6f12c74aa21a3bd55ee67d",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f2-i1-l0/episode.hdf5",
+        "h5_sha256": "608a2f805135cffa29778e8c21340f549cc7cf14669e8c95a20bc2dce1749d97",
+        "input_sha256": "1f7d00d0fd270fb3efdae019bc36cdcc78365aea76ba891a277ca48f04538d74",
+        "native_case_id": "cp09-coverage-v1-easy-22-6703b8867bce",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f3-i0-l0": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f3-i0-l0.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i0-l0/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i0-l0/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d3a9de0b1c330678d238effbae349de65b5658be6884dd89e155d2ff1aa41e9c",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f3-i0-l0",
+        "protocol_version": "v1",
+        "seed": 30,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "316ddc26c653fdb64772ecbeade387cde0262757c6508e13c9b970931a1a9eae",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "3a4ad2c41eb811ff767380604e7e6d424c34ff11381e7339d9ccd0727390e83b",
+        "training_task": "1385bc8e5f045653b36cbd18e67319b0f734e1b6ec542ee53d038493e9525714",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "1ffa7f23a923b926eaf8653a320fe5252a62dd83a3c35db62e90b6c7a0c19420",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f3-i0-l0/episode.hdf5",
+        "h5_sha256": "87459b4a5e8dc0a0556324ef9f08d4d633ab4a52a21a4cce01af0feb5dbbf794",
+        "input_sha256": "b5a8b051b82a741a013b1b53cdb9066265264d0cacf59a39a93c3d1fbb896ce3",
+        "native_case_id": "cp09-coverage-v1-easy-30-bf4de2e92436",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f3-i0-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f3-i0-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i0-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i0-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "dbe55b96d2915c9ab535c773a59076b822cedfaafe38718f6a44c656ed8155e8",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f3-i0-l1",
+        "protocol_version": "v1",
+        "seed": 31,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "564a61abdfbda82a2d363da6ce42d9cb7c2388657b9020e7c9ab20c440add0ae",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "5d678793122cc6131e5edc5e104976e0d0224ed61fb8cfca403d18fa2ddca293",
+        "training_task": "402a766325e23ca08c86115656fa3599b9c0e5f7fae4deda04a7e64c9f0db95d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "9a2f6108ad093ce06ba14f9017146a375b37e4e36b5b31aa64d641e2a75adad2",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f3-i0-l1/episode.hdf5",
+        "h5_sha256": "08e47582533944f6d84d980d1e26c9171c4285c853cd0891d78af06fb10e725d",
+        "input_sha256": "17d1b1b4b50553d1e635956858d23c1aa103faa6bb27a60580d58216d8a99e8a",
+        "native_case_id": "cp09-coverage-v1-easy-31-2b04ff92acaf",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f3-i1-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f3-i1-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i1-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i1-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "751feb6a464926e343ac3e530e4aaac8760af31df59dd9cdc664dda8961427b5",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f3-i1-l1",
+        "protocol_version": "v1",
+        "seed": 33,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "32b8996e538744bb651112712f46b542b92f74c8e90d7a48bbc31b87f013d5ef",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "1eaa6a59df3966a1abac5958a2d9765ee2602e5a5d33d67f5940391b1971ed0e",
+        "training_task": "402a766325e23ca08c86115656fa3599b9c0e5f7fae4deda04a7e64c9f0db95d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "e44d0ad8e740d5ed535e3be198425b06468b11ada47682a6787496faa091782e",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f3-i1-l1/episode.hdf5",
+        "h5_sha256": "42ff4d4bdf8c7677bafa67796351f6fd2ee254c31fabebd724a7902502bf2d71",
+        "input_sha256": "189a03634deffb9e3c064d711f57f641ae7f90b45ae1a99364ef525d5c7b08cd",
+        "native_case_id": "cp09-coverage-v1-easy-33-c4a1d8112da3",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f3-i2-l0": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f3-i2-l0.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i2-l0/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i2-l0/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "e31e2c5407bb312c1f6e1c96bccf1c0403c4e22e0c515d1029b490effdefe48c",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f3-i2-l0",
+        "protocol_version": "v1",
+        "seed": 34,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "31b7999ddbe54088ca77e9b3bfc29e150f1e330a0eef2660b792cd60500c28c4",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "b25e8d9b58271f58bc2568c3982e3862593c087a092703ba0caeb779a748bf2d",
+        "training_task": "1385bc8e5f045653b36cbd18e67319b0f734e1b6ec542ee53d038493e9525714",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "1cae5b712394dcb8269b1f9e7179fd03a088650e3703fb10329ab5a0d26292fc",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f3-i2-l0/episode.hdf5",
+        "h5_sha256": "9c4cdbe15737533a5005bcb0486d25199f5217e34bdd406719d6697a641144bc",
+        "input_sha256": "f64114f82651f3b20eea937e452e60b8419d11354d66b23b2f2beaf59900dc92",
+        "native_case_id": "cp09-coverage-v1-easy-34-eff2bc79db36",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f3-i2-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f3-i2-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i2-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i2-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f2ea8775a20fbe410a7b4635467cc04496e51274075a80debe5ce7438f44abe8",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f3-i2-l1",
+        "protocol_version": "v1",
+        "seed": 35,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "d248fa28419c165abe82462ace3e181a72b161608ed294ce3a6728651a39fd58",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "c652e947b3d2a178ab49b8b2383b7b039eeec6cf278debc6d26f5c9de0213a80",
+        "training_task": "402a766325e23ca08c86115656fa3599b9c0e5f7fae4deda04a7e64c9f0db95d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "cc396fd26ab611027e0556ac3f052aeecb684731bea5065b4670209f2b0fe5fd",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f3-i2-l1/episode.hdf5",
+        "h5_sha256": "beac2873bf19bc04466cfea48a447854c0737016a1fe4a215dcccfd29880deea",
+        "input_sha256": "07faf7f4c17372d8e61253e9c0dbb1c0919f349e2f8fbb0bf8976f87c9947ef0",
+        "native_case_id": "cp09-coverage-v1-easy-35-b015239c668f",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f3-i3-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f3-i3-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i3-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i3-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "9ca2d7a87398f5934eb701f91b09b3a6acb4043df2f09ef419376006f8b7c561",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f3-i3-l1",
+        "protocol_version": "v1",
+        "seed": 37,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "e26e684f5b9b4a6f415cb39f1e71ddea73d6e23bfdf58ffe82e974c002f6b81f",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "07bb458174e2442c89f9a19717ece1eff625411471ebdfc8436f16f28602cb4a",
+        "training_task": "402a766325e23ca08c86115656fa3599b9c0e5f7fae4deda04a7e64c9f0db95d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "0541601d0aed0a3b5be92cf42ef33acf58c42a6bc6d034f1d938d5e62ec6d38c",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f3-i3-l1/episode.hdf5",
+        "h5_sha256": "f2e021fb8bf461f06f3f8379a23324c85bb82e7a6549b943d63581a24ce0152c",
+        "input_sha256": "17e2abf46b7f88daf357abbe41074a262ce916b43f08c97d0aac4be5b9a88635",
+        "native_case_id": "cp09-coverage-v1-easy-37-8b82382e0886",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f3-i4-l0": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f3-i4-l0.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i4-l0/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i4-l0/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "0eccba08be87e65e632f444d2485287e3d22db53fcd108969d85887a67c86196",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f3-i4-l0",
+        "protocol_version": "v1",
+        "seed": 38,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "87900e79a3aa8a30f3a5479668c830dfd340d2f1f4522d37ae1def6a9de413e0",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "b31bb4e27aa06c083dcee119410d8d98824f31aa33f3837aaae6ebc902607e59",
+        "training_task": "1385bc8e5f045653b36cbd18e67319b0f734e1b6ec542ee53d038493e9525714",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "623e159718da42a543219514dfd8c5bdcfd8277626ceb8df11c5c12622712b10",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f3-i4-l0/episode.hdf5",
+        "h5_sha256": "3926262968ce37c5c634b90d13c92ccc5ab0e162a8e96ddb39681f319e520664",
+        "input_sha256": "9a6816a887cc38e8d85b2d5e7102abd3cafb96818cf6e90f9dcc209dc9672b9d",
+        "native_case_id": "cp09-coverage-v1-easy-38-afad8e0fdd68",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f3-i4-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f3-i4-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i4-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f3-i4-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "1863c29d0896adfcd24ca2e70e7cc8d732acf6032e75ed939f26ca35b271dacc",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f3-i4-l1",
+        "protocol_version": "v1",
+        "seed": 39,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "d0056b74ec2c6620978b86b896efd64fc559bcc038cc44e0e7710e282ba3de7a",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "4eec12a033dbff0d43ec1fb1817395f0bf6f7aaae0b86e734cc60902c08a905f",
+        "training_task": "402a766325e23ca08c86115656fa3599b9c0e5f7fae4deda04a7e64c9f0db95d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "7fdb06560144f322ceee1b46a45bb739f02e0b7756031391fd959978abba90ab",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f3-i4-l1/episode.hdf5",
+        "h5_sha256": "1197ef177356d470b292fcc63b41f37c5a1c50ac88f6231de0e9c04660d4849b",
+        "input_sha256": "c8e2cea2fdbb7c33c2b8f87368c3d06510e23e2605b0eb099f07bdfd6a2cd639",
+        "native_case_id": "cp09-coverage-v1-easy-39-a7abb127f0d0",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f4-i0-l0": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f4-i0-l0.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f4-i0-l0/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f4-i0-l0/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "ef11dd01dacbc6f90d2a1f71dd4464218019e4a73b83120fa3d031c08ffaff80",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f4-i0-l0",
+        "protocol_version": "v1",
+        "seed": 40,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "1f3d8f9b58b9d6f3abd14d0eaf64d7da4cb10273fbf8df9a936b3ad0decff265",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "d229343ccbbd34d51f6e7426aa70e927796b3e14c2932637fd29b56e8aaadb69",
+        "training_task": "b78bcd326ec204324cf4175c56086f58545d8e8b959b8b6dc7f4a63f48f60052",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "d4f556f318b3906f46df43080898bbe715dd249a665bccf5835826a981c0332e",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f4-i0-l0/episode.hdf5",
+        "h5_sha256": "713d4f6bd6f52cc48d0129470ee8235804106fb085c3421e12cc6473750b36a6",
+        "input_sha256": "2db3b71fba6faafc4d647bc59db90cf0b6e07afd1a8bc477d4c4c286e84f9c90",
+        "native_case_id": "cp09-coverage-v1-easy-40-7c195ff4a04d",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f4-i1-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f4-i1-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f4-i1-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f4-i1-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "1e476726b8b78530be8d1ab4f518f0e9a383de92b8b9e9a64b3e560c5f0020ef",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f4-i1-l1",
+        "protocol_version": "v1",
+        "seed": 43,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "46b384c9f896ba1420c88f5ed9be3193fa65b2f096d6dc2b0c74853d58211186",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "e9384728fd541fb0c1c5cedd6b3bed552dae20ab0822323f2a26ff72ff070bc2",
+        "training_task": "bbe1e040e2efc43eb59639868dbebec49339c3f2992864d6910b844214443c57",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "846003e50776c6aa39f7b4213c9705d5026a29dfdd5bb97dd6333948fc7040f7",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f4-i1-l1/episode.hdf5",
+        "h5_sha256": "d60c53056b08e4ad57997f398858973557018419637b80eb3e0a7d163848c486",
+        "input_sha256": "e1068bbc6d1d30c0b8166d3cba3d583a61e782d825a14367790d97573f07ba43",
+        "native_case_id": "cp09-coverage-v1-easy-43-2b09850d952e",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f4-i2-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f4-i2-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f4-i2-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f4-i2-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "1d00cae346ec85c620c8101a333aee5f1cdc0fe47ce7ec8e29c5422e4e56594d",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f4-i2-l1",
+        "protocol_version": "v1",
+        "seed": 45,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "adf232cd5ca91540125502ae115e68de4507f976edfdfaba595dffa2231c5e04",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "16ec20c4d961312c680d5ae5ce578e200fc41eedb08aa75e2596c07a29eff3f4",
+        "training_task": "bbe1e040e2efc43eb59639868dbebec49339c3f2992864d6910b844214443c57",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "ddac1d0d795c87b284f5b9101d3e2d0e8bf1df0c9f1327cd1398ba263afb8e24",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f4-i2-l1/episode.hdf5",
+        "h5_sha256": "26514d55a4955f448bb6e505d3f2919a1e601e0c3eeb75e558db53a088488237",
+        "input_sha256": "9e2d96d7d830e301b0f3dd93df4eba8f5c0e9dd96eefc432d67b21354102ef19",
+        "native_case_id": "cp09-coverage-v1-easy-45-b73c7a0ec8a7",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/easy/CP09-cov1-easy-f4-i3-l1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/easy/CP09-cov1-easy-f4-i3-l1.json",
+        "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
+        "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/easy/CP09-cov1-easy-f4-i3-l1/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/easy/CP09-cov1-easy-f4-i3-l1/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "86dadfeb216f9aac1f7d3f3d9f6f2b6c390c87a38938839e5e0127bf10d5c30c",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "easy",
+        "instance_id": "CP09-cov1-easy-f4-i3-l1",
+        "protocol_version": "v1",
+        "seed": 47,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "13c05776da70e4dc1e0773ef6a7ed16ecc0fd95d8234821c450ff35ffcee6235",
+        "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
+        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "training_geometry_proof": "b4149f3a2146a8b6c0e6e6f28d20bd78aba514016587835142d1f26a57e03b9f",
+        "training_task": "bbe1e040e2efc43eb59639868dbebec49339c3f2992864d6910b844214443c57",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "7476d7291f47ea0366e21d440fc079767ed8b4383a77907335eb931b8cec7750",
+        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP09/easy/CP09-cov1-easy-f4-i3-l1/episode.hdf5",
+        "h5_sha256": "510e2958b01a508f1afa03d9bad1d09565b7033ffdb95e64e1e517f739af8202",
+        "input_sha256": "6dfb81e9d15aea631e4c2e44d3b9030df0a9c26e07281205a277c0a7842937d1",
+        "native_case_id": "cp09-coverage-v1-easy-47-e38bdea30592",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed001": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed001.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed001/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed001/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d0b93b004b04cfbfdd671f20bc9b36f762685d8a678142030c485d5edaa6394d",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed001",
+        "protocol_version": "v1",
+        "seed": 1,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "c7f29ae2b4a92908ca41c59f7402c80faa91c3bf182a155072a807726c03a039",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "b22143cb14bb176f277a23a35e0e48f084225dfe03c7e87b7f583902821909b1",
+        "training_task": "3a1a725d6d062541ce7d4d3648adeef3292bb043a5fc74de6b7bb21858764003",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "ef405a2ea350229e4613c8639c1631906efad88de658bdb6fe0f225955ddb544",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed001/episode.hdf5",
+        "h5_sha256": "99ca772f2c5a503911d9f2e27b0febbd5df144e22e2dc64237e8f266db5b588e",
+        "input_sha256": "bc411b4630b70ee9d52ef7cd9b3bcf865553a2a2799f25e457ad2db1dfae969e",
+        "native_case_id": "cp09-coverage-v1-hard-01-8e2a3e23b0f7",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed003": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed003.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed003/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed003/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "bdf7c2115dc64b1a0921e8bfdda53b9964bb7d40e95e62a2510e43c6096648cf",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed003",
+        "protocol_version": "v1",
+        "seed": 3,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "4fbcd3894028a67008c04311415020e17b4d955a5e35bac62f0b2d013d02c107",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "0080ed1ddf95f6dcfa5f333a78566e2617607f6ba13af60f8e65d4658e840523",
+        "training_task": "3a1a725d6d062541ce7d4d3648adeef3292bb043a5fc74de6b7bb21858764003",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "05bbfcecacc168ab0e01c4698935b7a556e5946176e6f43a44362ce937e37ed2",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed003/episode.hdf5",
+        "h5_sha256": "9fa96266e1026c252f6b7307b4a3ac40bd3445c47804a1ec42b01bc3caabe306",
+        "input_sha256": "8849a7b3b40ec2e19a301fc47a732f27b4ee59693a2e0da2ebeac06fe776e350",
+        "native_case_id": "cp09-coverage-v1-hard-03-25b6411c6e09",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed004": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed004.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed004/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed004/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "3609043464d0b8ff7c70fecccd90de40f8b3bae31ad292593261b27b0addddff",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed004",
+        "protocol_version": "v1",
+        "seed": 4,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "6e4bd06c9fed8857f8504112a5c818f12e94b72b3ae536e03c169e907b43edd1",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "20751a334b127bea9ead1a81a66eb578fd03c33246e8dd866e178763a15248bd",
+        "training_task": "3263d205f0e04dfadddf4b531ecdcc8d1354cc9d50a3db490643a3ba5f8724dd",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "c46731930a13f22f3de8e56cdf04ee1094320e830c118da9f396b2cef6887e14",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed004/episode.hdf5",
+        "h5_sha256": "f74980cd8ceb8639dec1eb4487fd0b15d52f80e6ca41cf82db0c3a7ee8e5f6aa",
+        "input_sha256": "d0bbc71463ac485487111f55c3d7635659a5106cea5b5c4a346f1f79d76fe01b",
+        "native_case_id": "cp09-coverage-v1-hard-04-e813feb66636",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed007": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed007.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed007/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed007/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a89c00ca6a332da41aa768b8cb4e472549318accaa51d5665ceced9dd8d04777",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed007",
+        "protocol_version": "v1",
+        "seed": 7,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "5118f7327efc6417cc8aff12dedc9e8ccb31474005c3f9dd3ebdfe572f736c6f",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "8d815d75131662b8627649291053f8bc48160affd46e0473146f903373df8a9c",
+        "training_task": "3a1a725d6d062541ce7d4d3648adeef3292bb043a5fc74de6b7bb21858764003",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "d7eef7fd9db3a22dd49dc7ba3c2cbad5ce95a521f122f35fd4d7f2b7d2325fa4",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed007/episode.hdf5",
+        "h5_sha256": "beca3b8f19316df0a18e1ac0ba7b4306fb1b0a03713fc385df5ada1f9deff8cb",
+        "input_sha256": "f5514bc0d1a4a0bedeb6173ff2772d7cb8debc58bd089e6bdcd0400b6982dcfe",
+        "native_case_id": "cp09-coverage-v1-hard-07-0b40e6cdbe3c",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed010": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed010.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed010/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed010/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "07f59949bff95c51956843a4b4a6bc1e5f01381e07577b8fe5f5dd1697452297",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed010",
+        "protocol_version": "v1",
+        "seed": 10,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "f47fe176824e5611bd8bf7e11c7821dda9a40ea2821d8aafe9e861d7c7ca927d",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "a52ce0086d0eb99c0cc0d9f1f871c44b443bb219fe90653172c408271e7c99fe",
+        "training_task": "e08f882cbb2494a22eae6c604ebbcac8cd843a3b36bd4d0d29f4efb5b151deff",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "01542f82e59c40b5d460c8abac0cb54d65a32af5913368cfa6ea61a8b8bdce5d",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed010/episode.hdf5",
+        "h5_sha256": "dbe59d8f48bf6500c3b4d86e177d0c851701ef5fb46307f663c8918ef8f19851",
+        "input_sha256": "5649617f8f5ef60d6876dedee7431912753c4b178e9a9e7bcf72f7aaed1cc748",
+        "native_case_id": "cp09-coverage-v1-hard-10-ed87f041bc2c",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed012": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed012.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed012/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed012/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "0a4806e15078ff17cb248afcee69c3d0691d1e21652d19b5769920a87a07b825",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed012",
+        "protocol_version": "v1",
+        "seed": 12,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "20255c8358571ec27d142a55fe0e95d8865a0e65a914145271c386765b2c79e4",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "cbd0d690ae293c322366e6085c39a305609169ddb5934b1126b4c7e7221c9ff8",
+        "training_task": "e08f882cbb2494a22eae6c604ebbcac8cd843a3b36bd4d0d29f4efb5b151deff",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "962f183140a41026f019cc29ab4c8dfecab906d5a62620f9940f5eba5a78c2c8",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed012/episode.hdf5",
+        "h5_sha256": "4aae1254e28cd5bf796d4e40e40e45aa124c313dc27b546f5d3620d52c8f20c3",
+        "input_sha256": "93e46db8eedb919e8e4af9bb0b65b67a47761b6fb9d6f9a6019e640eace0b02b",
+        "native_case_id": "cp09-coverage-v1-hard-12-65716afb11f7",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed022": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed022.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed022/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed022/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "4d871f41f8c09d042a469d126fb9f422dcd0037633610f7ef80942141dcb736f",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed022",
+        "protocol_version": "v1",
+        "seed": 22,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "e3eb65d2a7986337c0ef45f4e30d607ec12eeb62e45c324f606188b640b53c05",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "1c407dbee667098f5333c393041ce591e11675448040df5dded9149bafd96e6e",
+        "training_task": "3f0b4041cb32d1a66394a971ddd8ab08abf9f7555fce1b38ad4c015938c55c49",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "1c9b751980e7aef9dbce7a6f062e192ce1c28fbb87c0649c93542960865e1035",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed022/episode.hdf5",
+        "h5_sha256": "f48253cb405bc56b0701a9daefee6b5469009699ddd5e1eb4c0c1e7b46948b26",
+        "input_sha256": "08dc0b3d01b448ac866d733da8c7499bca31712832668a4187f6d014de6b44fa",
+        "native_case_id": "cp09-coverage-v1-hard-22-b7e1212668d0",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed024": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed024.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed024/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed024/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "6410e54938f87e5f7a15fe803b8e08dd19869be4a1ef72eae802988355dd6f0f",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed024",
+        "protocol_version": "v1",
+        "seed": 24,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "40fe5182859eba33e68eb866ea31f806116de59bc0ff2bbc979b946f2ea547f5",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "764394e7fcd97a8d7d251185a640502a7fd76bc07a02850c31a91e8cfb2777f9",
+        "training_task": "3f0b4041cb32d1a66394a971ddd8ab08abf9f7555fce1b38ad4c015938c55c49",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "9fa9f9983f9b2f91ea39601fd44ee5604617efc8b171bd5892b60950dc2adb77",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed024/episode.hdf5",
+        "h5_sha256": "ba959d37533e9c7e5798c2923752b85394b9cacbed3113e800fc0aedd7f35a08",
+        "input_sha256": "f8ced299ca79ac16460755e48deb146a6e258b954321f7d2730f1080bfeff02d",
+        "native_case_id": "cp09-coverage-v1-hard-24-97b73faa97e6",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed025": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed025.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed025/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed025/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f81cc18a8ef88628b1d1a0956a7a96aa9a07b4595ca4d603e77c203b0b0ac841",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed025",
+        "protocol_version": "v1",
+        "seed": 25,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "d439e646476ef1bc0b88a9237ebf90b8a5066e700715cb924eaf8735ae371801",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "991aa53c2971942ef626c14ac91059aa87545b186296f6a6f0b424e2f5183cbc",
+        "training_task": "5e2308b9c3f63d514ae75b778a506292c05aaa370c073dcd930fe98d13d05e6e",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "0f3f0f5994ddb8100ee7c7b524f25336cc50f000e6cd0ae89082ac1eb232b542",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed025/episode.hdf5",
+        "h5_sha256": "7026376cecbbbe0c11cae671855e49b0d6725b198c326ae7fab6749ffebcf010",
+        "input_sha256": "b6d88dcc87746b7ca998758be0dae1011898c02ddc30cc40c821e223b3b2e6ad",
+        "native_case_id": "cp09-coverage-v1-hard-25-aa7774a3d122",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed027": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed027.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed027/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed027/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "2291eaa980acb53c7b67d363a0c6ba77dddccf5d83c78ecfec525de010708464",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed027",
+        "protocol_version": "v1",
+        "seed": 27,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "498a067d472bbb84e8d5d56aba647e1b50d0ea6a585d2c750d2194263a833d8d",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "4ccfeec2d741f444103b231333e25d3aae4fe1bb898429bdfad85c15174b8fb5",
+        "training_task": "5e2308b9c3f63d514ae75b778a506292c05aaa370c073dcd930fe98d13d05e6e",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "82e8e692bfd4e3b85f325fdc7d48b22ea0ba609e2da642b63e242ee067abf425",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed027/episode.hdf5",
+        "h5_sha256": "6392af7a6bd4a61c741519e3772904053daff062fc765c07aa86273b941cd99f",
+        "input_sha256": "156d397191ae96bdbd1b9fba3eac0d1d3936db01e55bba4bbd644e4f16e6c0b1",
+        "native_case_id": "cp09-coverage-v1-hard-27-6bb8ca4e0944",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed028": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed028.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed028/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed028/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "76756019c1d4d003621d76906e2a590158ab07275e36a7f464bcec5881753bf8",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed028",
+        "protocol_version": "v1",
+        "seed": 28,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "b0348a0d3d57d5cd6c562b52bbdcd13912aeddf5fb7637731b1d85ec8d7ae46a",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "e8b9705fbcde3b5a93017ea48f27acd5e836b6be8af930c0c4baa4298c8edb26",
+        "training_task": "3f0b4041cb32d1a66394a971ddd8ab08abf9f7555fce1b38ad4c015938c55c49",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "73f0ac9e9cabc1ec5bd4f529ea1f37cb4620163c43e97429050e49f643ae4cee",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed028/episode.hdf5",
+        "h5_sha256": "aa6027074decb383f73ab13c699604255d2cdd2d71416d8ecb9c7bb7fa015bc0",
+        "input_sha256": "c04832c665d7fdf2979e7f78c7373283a51f07c260a77513c8b75b73ea628ab3",
+        "native_case_id": "cp09-coverage-v1-hard-28-c0c54096ca4e",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed032": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed032.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed032/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed032/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "123b35bc9989a31a72980a1a80dee41145e01ddd58a66c8b2c81a09199dcb7d7",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed032",
+        "protocol_version": "v1",
+        "seed": 32,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "ef52b7feafce7f8f5fd0c6123a44b8de67e5aa0d55b714bf4d17a9a81fa7542c",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "87b5f4f06f4cc420032aad27deb87c873e5b4cca1fda1ebf698a62c5d1f89bcd",
+        "training_task": "9d4b4d0aa3c5cedd06f97d6ee672e7b34c4f261000c2749aa5ef3924a3d97aa1",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "06fc566c42584a7b6798138e6305b02773472a3a78dc3b200556b24ba6737acb",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed032/episode.hdf5",
+        "h5_sha256": "492cdc38d0c1fc19823ebd7fc6378ea3ed477f26300f9517577aefdcf04f8e31",
+        "input_sha256": "8726119e1f9904293bc0691e02ecde1b20bbe36c5fbdf9e19b22d635c5e42258",
+        "native_case_id": "cp09-coverage-v1-hard-32-bb097637df5e",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed033": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed033.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed033/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed033/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f72a47b272f090c430d872317d3ce9de1d6866c6b7d51184be4d9d8ccf6bb437",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed033",
+        "protocol_version": "v1",
+        "seed": 33,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "c5f4deeb52a65d677b7f2911d3a49dfbcb043205bd359ba055e1cfd52de18deb",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "8cdf71c131715c49115d94594c1cbc86872056b180015cb5923b4a54307a9581",
+        "training_task": "10f4c2f2aa385ff9dd9d50e338d9159c789117eb8964331d1263fb44c5b473f8",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "ae52d1c358b6e328edfc1ec18e252d8925f1f8a3c3c67939c298aeca281208c7",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed033/episode.hdf5",
+        "h5_sha256": "ad5164164b5629590c7939569dcbb3c700b95cb28afe581059bf4dbddb207ffa",
+        "input_sha256": "f58d048ab8f64f79c3d994441f12de603314e26096eae4cf0260996690ba56c2",
+        "native_case_id": "cp09-coverage-v1-hard-33-76404436f7c5",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed034": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed034.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed034/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed034/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "36c7c084f452481f2d26e16880fc7563ed9b87784899d7cda065d3edeb0d6464",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed034",
+        "protocol_version": "v1",
+        "seed": 34,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "52f0302888313eae9f87fc5c5da4a7c89267e29f39d9251f8b05ece61403cb07",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "3437660956855b2051b0a1c63b78cce380dde7e08aaf961319a5076063ba040a",
+        "training_task": "9d4b4d0aa3c5cedd06f97d6ee672e7b34c4f261000c2749aa5ef3924a3d97aa1",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "2eddc93f77a063fbedd67b4fbacb0c25796a15195a8435e5aac69f0b45c01a76",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed034/episode.hdf5",
+        "h5_sha256": "ef46803bcd9939e1458d3e1e65779c0051aba4675418e5bf5dead183889ed548",
+        "input_sha256": "630a0a20c9de396f66effc056ff5d21344a1f07e6861f232954d599f03fdce49",
+        "native_case_id": "cp09-coverage-v1-hard-34-a162a0c6be6f",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed035": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed035.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed035/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed035/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "94223ddc9057cbed7f21dbddeae4b55dcf5bc9b27f6d1da1379a3c7faaac77fa",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed035",
+        "protocol_version": "v1",
+        "seed": 35,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "770c31e5ef545f8587fae543bbbbf12dbc1dadcf4871eb61fb555bb280522365",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "97ff72195224c589d0325ec3bcfd65eaa76c0348a48da5e2d59c96e1e716cd4e",
+        "training_task": "10f4c2f2aa385ff9dd9d50e338d9159c789117eb8964331d1263fb44c5b473f8",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "e894c2a31fdd3f16065d415abd95b92b5b7e8d36aa6897382863ede733253f58",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed035/episode.hdf5",
+        "h5_sha256": "bf5c6aa0362cc0d211ce746a7304df84473cfd1b076b184d74ca96aa00fa4de3",
+        "input_sha256": "3057fbb8b97f0937faa45da1e872db669390c3f56c95b48c56ef6ffadaeb3f06",
+        "native_case_id": "cp09-coverage-v1-hard-35-74319cca43ea",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed036": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed036.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed036/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed036/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "cfb36beeaf843a522134052bc78278653790f505c81fdd2d72a174e1b3ba151c",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed036",
+        "protocol_version": "v1",
+        "seed": 36,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "ba28453013b6645cf5fc8829f52dcc72c87e0915e18f8429d6dcad02b0ad9e7b",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "07b5c63f7a474df13a11cb3b9e9d5c29a804285b098333d14d46d3ff523feba8",
+        "training_task": "9d4b4d0aa3c5cedd06f97d6ee672e7b34c4f261000c2749aa5ef3924a3d97aa1",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "a33ad8a86c84af12e149ef00e91d884836ecf03d5cadf9a0ece589ab988e8bcc",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed036/episode.hdf5",
+        "h5_sha256": "868676c0c5228c9d7016100f680257e0b49f4e4c06236959e61619bcdf1a659e",
+        "input_sha256": "8c74da138337153a778fe452150f6d5f51094a92fc1d50afdf23694d28e474aa",
+        "native_case_id": "cp09-coverage-v1-hard-36-64af5ad31760",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed038": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed038.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed038/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed038/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "c0d09f1a1e5000687bf4fc2adba2a7d2c1b37c939f4ebafe413823e34a013a9f",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed038",
+        "protocol_version": "v1",
+        "seed": 38,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "c2d81cdfed50065d9975028801052a8278dbfe832c968f23f0f610225c1824ec",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "016ca347bbbe2a71ff700f57bdd401bfc9ad000d5a72c9d8650ed1d7ad766a90",
+        "training_task": "9d4b4d0aa3c5cedd06f97d6ee672e7b34c4f261000c2749aa5ef3924a3d97aa1",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "3be5bf2ecdb43e0ed8cfb032ee04cb2301d90f4519d950bd3e60cad1ecad782a",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed038/episode.hdf5",
+        "h5_sha256": "f7124d56f3b56d312774dfc1ad9fe48e2ee0704744d849e089f5fbd813a6e4be",
+        "input_sha256": "3ff59e410ac9fd93badef377afa5f798b31b8bc61e475ecc75eff40442ab01c0",
+        "native_case_id": "cp09-coverage-v1-hard-38-b703c5c78c7f",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed041": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed041.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed041/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed041/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "36db8e86a71faf27dba0c4a0693a06aa689db67e0784d027830db049b6631f86",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed041",
+        "protocol_version": "v1",
+        "seed": 41,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "0c00ca07bcb922571c032a98517265f35f733856ee0d4ad1e2327176b79d3a66",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "16b316d9a911854957d49f5d4f9b7ded1f43dbe49eecbbcf92b85e637c4182b6",
+        "training_task": "9ca7243feb8b3e201bfc74952931da4be7addc7389d3d570b65c5ceee814a470",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "4a7ffba6deb7ecdc72d0f262c1b97c1500b3daf470cca5387e9d2e68c8f20181",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed041/episode.hdf5",
+        "h5_sha256": "d5ba3306afb9762cf56ba24b11e035fcda8bf024a159a21561b0744b40e320c8",
+        "input_sha256": "1e7e8caccc726ca4126136ce1faa3d9be3c2b89f0ad730c74d922aed36254f25",
+        "native_case_id": "cp09-coverage-v1-hard-41-fc7d8c84e8dc",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed043": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed043.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed043/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed043/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "35a8b9f2ce5b80805a0f6a4625410e0a21078e72e2aa8d3c670026b0c066e4a2",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed043",
+        "protocol_version": "v1",
+        "seed": 43,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "804e1ac4d888be639165c229e53a1362ebdc5cbc2a64ea96a55e2306b0268783",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "8e23b7abacfd4cdffbc6fa0cfa5e70fba70fec4a35ebf9da8eb7ad9ac506e7e7",
+        "training_task": "9ca7243feb8b3e201bfc74952931da4be7addc7389d3d570b65c5ceee814a470",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "1049add87a9ecc3d4c442c3b60677e3251a50e8ea85a390ce13eb53ed961c9b7",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed043/episode.hdf5",
+        "h5_sha256": "6c907cfbc471e1a4de452d81708de86e570ce9b0c0a1b7b1d78c4d338d739dac",
+        "input_sha256": "a5bf6d8980f3c7e988a3284119fea9026761c009c54828620382d231427ddd29",
+        "native_case_id": "cp09-coverage-v1-hard-43-8e6ff56ba67b",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/hard/seed047": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/hard/seed047.json",
+        "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
+        "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/hard/seed047/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/hard/seed047/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "1b014b93d1992852ef3391c7db15f5f5b4201a37c883604b9aeb737883347c78",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "hard",
+        "instance_id": "seed047",
+        "protocol_version": "v1",
+        "seed": 47,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "ef8e6281d36b74a9cd92ee31bb8470464a12d7e2e51317a94b67bdb0f2f2a20b",
+        "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
+        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "training_geometry_proof": "e0d9532a151afcf9d0503bca5d340037955a5d8b494576de4c3080cfb4ff8b2a",
+        "training_task": "9ca7243feb8b3e201bfc74952931da4be7addc7389d3d570b65c5ceee814a470",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "63a4d4775bf1ed3d7bd99f4e030c9b21c33ec556c4b95482dcd0f8412393c7da",
+        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP09/hard/seed047/episode.hdf5",
+        "h5_sha256": "9618ed60f1dd60cdae68f5fe06a6f68d63242f3b161fc12ca3a768f454bb0297",
+        "input_sha256": "04c454df0b3826a5465f8706b3cfc8f2504debb4523b7ade9be64b8f98e288de",
+        "native_case_id": "cp09-coverage-v1-hard-47-61bbfb83bde5",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed002": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed002.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed002/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed002/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "486cd7f4e3dea419f7126a794234edc669299ca71dfa47b7db314fd76192e50c",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed002",
+        "protocol_version": "v1",
+        "seed": 2,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "8722967a377b9650b1aab534041c589fb3404bc5658ff0a43cc0993648414a9a",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "6e32c48eb0844e062722581d953f49cdfc78586815d146feed9b2f2966a83bc0",
+        "training_task": "a32621f5528f64f098610effc805e07c960d44eb0182a58333d9f6f77b4a4778",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "22f5a58d3058f3bd4de79c6843af38efbd01345757a6e8ad29cecb4330cb9a4f",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed002/episode.hdf5",
+        "h5_sha256": "cab64db3ff8b8a464a2eea70b13ac3e04b8d0bda8cc186e055eaa1a74f9b1e98",
+        "input_sha256": "0864930a08eadec163dd91f44ba20a56c9f96aeac7f46d95ec3b284c8ab70c81",
+        "native_case_id": "cp09-coverage-v1-medium-02-b4de6f5b2646",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed003": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed003.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed003/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed003/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "0ffa7359818542cfef6b5fe5739b56fb08e0a7bb53d0258095e8eb920a09f2bb",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed003",
+        "protocol_version": "v1",
+        "seed": 3,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "e1c6b87741b7befadcbc1352c4aae4e24f6cf69042dc2b8871a96304b8832a43",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "80224804db508c26cef792e51bb982f3a08c5afb3b5ea332bdc5e1b2268187d0",
+        "training_task": "0b1b96ca81e517f659ee791b08403530b908feabc0752ad58e7519a548d1698d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "359608f59d6cc30819c82598a65e9c2ca84a638e1de138c48926370b8394abee",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed003/episode.hdf5",
+        "h5_sha256": "4913ff8f8b600444c49aa9d882600d4cd9790758667a4b57ea00644ec58706f9",
+        "input_sha256": "7ae860c0c4e9318d2129a75a0b640368a140449aa3cdb950dd63374415e50790",
+        "native_case_id": "cp09-coverage-v1-medium-03-5f5820b6ce38",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed005": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed005.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed005/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed005/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "aaf5785d237bcf99da125de8e2870d6bbab95f11f2d0fc8cb450a2523f696522",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed005",
+        "protocol_version": "v1",
+        "seed": 5,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "055571f4bd1468452cbcc6425e1033399223399943244804384f768ca92a51d9",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "177fea0843ec5b29b2237db3ec8b47bb45bc0cc42a577b3354b4f06f89f7139e",
+        "training_task": "0b1b96ca81e517f659ee791b08403530b908feabc0752ad58e7519a548d1698d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "2b755c2e1994461257a0096e9fe5ae04113185c67c95b11ab49ea174abfb263d",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed005/episode.hdf5",
+        "h5_sha256": "51b6ef8c0326bad0be3110d674540b90daaa4243c0aadcc1c60bb35d123cf797",
+        "input_sha256": "5782919ac47ab7449e8ad98fe10021465c6b2e7093c2f11e7d7d89554feacb9c",
+        "native_case_id": "cp09-coverage-v1-medium-05-fde8d3b16dc8",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed006": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed006.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed006/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed006/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "2ec2004786af2fc6070e357766a14cc2f668a7c98f36e5b1e2d2214ba1723b6e",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed006",
+        "protocol_version": "v1",
+        "seed": 6,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "646f8fb789d43501b830822b21eb586983e818895a9f36410f2aafea61573beb",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "499c508a01f6260ee8bc1158af31e1777857099757e5e0c730d4709415872292",
+        "training_task": "a32621f5528f64f098610effc805e07c960d44eb0182a58333d9f6f77b4a4778",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "8ddac66292a554929853af578ae6f15161576df57ecb315cb2b74992a4ce4f83",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed006/episode.hdf5",
+        "h5_sha256": "f30f38d03dbd17b2e27ef340852d3a001f119f09e06bd8257b0f5e0ed550fae2",
+        "input_sha256": "0aa837739a3ff1d3e89c34ec9a7ba47bd69b8c7faad1502fb80780c33a08a0c5",
+        "native_case_id": "cp09-coverage-v1-medium-06-526a435c154b",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed008": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed008.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed008/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed008/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d9d56e783633edfb84f4aaa580dda8863d672a29adb5701d91a39a7622058488",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed008",
+        "protocol_version": "v1",
+        "seed": 8,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "d9687dea962050a2644635b9c54a5e15835881bbc83071f5ea0209337306583f",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "ed73d1b1d28351139d42d6ffa39f3bb40ba43ea523b63bfa44067e3b3baae065",
+        "training_task": "a32621f5528f64f098610effc805e07c960d44eb0182a58333d9f6f77b4a4778",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "a21841b15cbd13ad52caff589908a4f739fb7b7d46553fc06322b51762d4afd0",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed008/episode.hdf5",
+        "h5_sha256": "978e3c1eee3fce89a348e3e6340edfcf37157d51c5ef8ce65c821dd7c1858559",
+        "input_sha256": "2c9ca62091d58c9f8c61bbf37d2cf7bdd74422595826d2335e98fdc46204245a",
+        "native_case_id": "cp09-coverage-v1-medium-08-9f0a4b11163d",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed010": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed010.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed010/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed010/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a1978a6cc8971cb9ebad08be0972383191984a6abf91d0b5e80d1212172453e4",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed010",
+        "protocol_version": "v1",
+        "seed": 10,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "dee27d946102a61496bab25a66d8becb148b513f540ae54c78256b094de98b37",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "4e6636589c0dfd686cf86d0898271215bda883f5993a4f3ff096e3d739bc2d5a",
+        "training_task": "5abfdab5521f83edde8e9106bbffa3f26ccc2a245d50fba99f7a5b14908aaf03",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "6e70c2464bfabc6de790ec4ea4c6239b83685e6342b4343da76d45d697b2482c",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed010/episode.hdf5",
+        "h5_sha256": "e33b3f91cc30a4c3c52309cdff4200c72feaa73eeddb1782d0f42160eed7dc46",
+        "input_sha256": "9f44a004d10abcd56bce51d35307510a643cb879a43fd4ffd970cfe865ff17bb",
+        "native_case_id": "cp09-coverage-v1-medium-10-bbc2073b0fb1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed011": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed011.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed011/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed011/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "ed5079aad2f731216807fcec5836d706594db85de684ad9a5e3175dbbc1cd6de",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed011",
+        "protocol_version": "v1",
+        "seed": 11,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "a8b2724aa7d32742648f83c6aaa57c772cf7b6a2ab84479d5f992c49b06f90d2",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "b89b06cdba5140aabf3b3a0638c2f2e88a237d185d1796591f7d77704d741ad8",
+        "training_task": "1531c9d6fbd854976270d5866d8beb84e573fb45e5492684f34493226d347796",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "ab3b5c39d5256de7bcb0994387f0ffe25f2ac6b027a233a2f0cf7cd6193256a4",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed011/episode.hdf5",
+        "h5_sha256": "60d131b1c74a6f1544b1a6346a82ca7c9131c6d1a3b156fa6b7f3052e81e7152",
+        "input_sha256": "94bd3218e65a9e48b7a49fa08329b1e3306c5ed7d5db63dad30222f4b725a019",
+        "native_case_id": "cp09-coverage-v1-medium-11-2285b9571d3c",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed012": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed012.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed012/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed012/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "794f4881b3b0f316bf9249f2215168238066c567b74acf41594ec9a73253637e",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed012",
+        "protocol_version": "v1",
+        "seed": 12,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "a2ba32e2e1fde8d1c354627d1ebe12f6408337f3d3f83c3ec6fa1c9489c1c167",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "f394a27aa9d315011bd2aa8c2dc9ceecd1f35dffde1ecfaae1f02ae367887b90",
+        "training_task": "5abfdab5521f83edde8e9106bbffa3f26ccc2a245d50fba99f7a5b14908aaf03",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "d24f286ffba719c99ca76d5f937b0654a0a7495c3642b6544e77c8aea91bc0dc",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed012/episode.hdf5",
+        "h5_sha256": "53b8b8019fb73848692c830bd390f758d87646028569ecd2018fce9e90edd723",
+        "input_sha256": "9abe696d9f9ed34e2390c398b736f5971951ce2e053feff235954c6ec6d9e533",
+        "native_case_id": "cp09-coverage-v1-medium-12-1f5c029c0393",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed019": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed019.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed019/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed019/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "0524f6f9f46ba7f6872b5c8a27e4d086a0e0f0f04dc1c6b72eda8e8a3f24f287",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed019",
+        "protocol_version": "v1",
+        "seed": 19,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "4379634b983a5b7934df4babe3c441f57be4f69d74a46fcad36b53935a8d917f",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "f5786ab0e6fa37cfd42ddfe93aa9be98dc6a7ae1666ea26ccbc81a8f3fdad11c",
+        "training_task": "1531c9d6fbd854976270d5866d8beb84e573fb45e5492684f34493226d347796",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "db3d6e8be0c8a01b42915a5ae9959e536d34807fdfd3678c92bb52611e2d755d",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed019/episode.hdf5",
+        "h5_sha256": "285b683a071c3ffc08da4d3a98fccf885f5fcf9d1030cdbda322b04efa6ff58b",
+        "input_sha256": "1e39e62d4a2b1e97568c3fc438fed55ee86cfb1c18defe583d72e0d4cfd6f1a7",
+        "native_case_id": "cp09-coverage-v1-medium-19-3d77565b2706",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed025": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed025.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed025/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed025/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "04b6e86ff2b04a3726788155aa8d3ed4d83a915545ccec12e2d3fc191bf4f29f",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed025",
+        "protocol_version": "v1",
+        "seed": 25,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "d7b84db82b6690f8d00815aefe7acf5e12eb4ffe9e021d4680bfaaca2ebf5a81",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "d0719b7fec9d8ff119459395bb8cfd3683348e316ad028193208a3786cfb39c2",
+        "training_task": "6ca669e124a89627aaa87cb3528a5a2b60a3f65bfc331f8538cb5f46adcdb52f",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "1a85bab2ca483f7b3820e649aaaeea2acea96c7983d069ed199b0461eabf15b0",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed025/episode.hdf5",
+        "h5_sha256": "23a095c9459cb0ed629fc9eb2dbf017835a912f2fa565ea5fbcf0a18e505263c",
+        "input_sha256": "713f4bd6bc9eb7fb409cb7767c2605a5a943edd67280ffdbe9d3e6c0ce453043",
+        "native_case_id": "cp09-coverage-v1-medium-25-cf4224a2f678",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed026": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed026.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed026/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed026/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "88744e6af9ca24aa86f3f5ac5526c6d86f6e70bba9ef291414d0f25296cca5e3",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed026",
+        "protocol_version": "v1",
+        "seed": 26,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "02c9d2ad90450a43f7a195c96c867dc8588d880006870a2389c18c931e0ffc5a",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "77587ac7061295fb2288a726a37631bcd976bb7884f6b1b90742f7cd01cb0fb6",
+        "training_task": "bb50a484fe3eb7cddf131a12699c52adc31d3f660302fc079195aefd5eab9e6c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "152e8a97cf115d856276fddc13a0886036d918c0a1bc40c4d81ea0f87c5c5bae",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed026/episode.hdf5",
+        "h5_sha256": "89b6877c3b2a141e60e0c7b7d38d4d05f97c038d9cc3b06b2b570035a34170aa",
+        "input_sha256": "011018e044f01f4748b208cd482cf2687fbb8c2f8b27f9f4f08d5d20cf0463de",
+        "native_case_id": "cp09-coverage-v1-medium-26-901dc1bcf31f",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed029": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed029.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed029/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed029/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a01ee7299f386b5c74d9475e81f7c0d2ab95928a7be1b37a8da2f983de7d2dd8",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed029",
+        "protocol_version": "v1",
+        "seed": 29,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "a0e9caeec900838784f2273123a303fc58a6b473d7c30e35651a08123e2e0d55",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "10b73d1d349d8aab3272740223c95e781f779fe6f7a79d14b423f72026b815c7",
+        "training_task": "6ca669e124a89627aaa87cb3528a5a2b60a3f65bfc331f8538cb5f46adcdb52f",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "e8611dd28a1e228708b3c9c5caa74921b73e612e1084105c6adb86820530b08a",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed029/episode.hdf5",
+        "h5_sha256": "33ffb9aae1174bc3b2f70b9d338dc6a4e3eeaf69bad2310b54a4d2f018d24e09",
+        "input_sha256": "87435429eb14e6ef4e72394d902bb933685c7a15f0d5a10c2286a419f4917059",
+        "native_case_id": "cp09-coverage-v1-medium-29-8cdfe1b9eba5",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed032": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed032.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed032/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed032/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "e031df99037369f39f5aa4e7df2d4f9cc2eb73ae53f99d1f98ffd03bb3b0f1c8",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed032",
+        "protocol_version": "v1",
+        "seed": 32,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "b37f834e3688be7993f5443abbcf4917d2e92f80191ba3719c72772db4928af5",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "2ae141f19f6ebd6f3dea530ee075a5376909c5d89828b9b90dcdec42ab4e0958",
+        "training_task": "636d2347211847dbbaa8bf9b8c080c34c16ca8b029e18134f438fdbd7370fa45",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "3f664e09b5bc93ddac82a67d9211d4b76db905677e1a290795f8bdc6e86adf20",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed032/episode.hdf5",
+        "h5_sha256": "dadc913bbf02c8f23d5ac41af5601b9b996df76e1b5bb70bd700809871e48340",
+        "input_sha256": "d69d9f5131954d22077df7704fb16a7c9da67b5c5416d761e912d2cff86c6a32",
+        "native_case_id": "cp09-coverage-v1-medium-32-821cffec3430",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed033": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed033.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed033/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed033/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "adeebafdeee8b8c147118b8ec10d66e19bcc668831e730587278fbb16cda4175",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed033",
+        "protocol_version": "v1",
+        "seed": 33,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "702f91e0db651a95d69d6e38b89feed238a439ab56f9f945e0a0fe6310edefcf",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "ee6e60680f94d3e879fcf705c7ca17cfb7c9bcd42e15444461514050e6806d1c",
+        "training_task": "2e3701ae72e7b1676ab47307e5cd4d61c8d16181716969f13ee54ed74d5ffad5",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "89d1719d1c1b0574314ed60163561b6dc047fd5a02b43472e85c9ae40b1f3ea3",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed033/episode.hdf5",
+        "h5_sha256": "127c5ae78c42635a337eda3dc539ebe47be8fe298d0590aa5fc51f1860d3e63a",
+        "input_sha256": "9ef37f3e63947ea976b6ba0e32b1a1ba26ebed019d4eeeb8c82529f653dc967a",
+        "native_case_id": "cp09-coverage-v1-medium-33-746a0854204c",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed034": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed034.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed034/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed034/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "0d0ad06dbbdbb6d772022aaeaba7eb8d0d36e0d460cc23c2f99fbec39e0b64b1",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed034",
+        "protocol_version": "v1",
+        "seed": 34,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "10987feec6c904de9a34190468ceae982e4fc03437b1c4e8e34b204d022af94a",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "977c085b22d66e46d75257b65e0d58e445b38f57834d8dca704889051021d92c",
+        "training_task": "636d2347211847dbbaa8bf9b8c080c34c16ca8b029e18134f438fdbd7370fa45",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "f8c6e3d600d7bc33abc028fcfe7580bf1c1d61e4b632534138fc389875465a45",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed034/episode.hdf5",
+        "h5_sha256": "974e02e8794946c2246521b95b6c4355122d174c47be3b1ce1cf5e9505088687",
+        "input_sha256": "5b77e85b0faa6cdba9191cc745929ff25551c8237ce581d1c78a8a03d7953993",
+        "native_case_id": "cp09-coverage-v1-medium-34-d80e1efae947",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed038": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed038.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed038/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed038/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "3d534377ee9e42adb0a3db9c8ffa76817bc390942b8fd36ccea7a9fa4f4923b8",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed038",
+        "protocol_version": "v1",
+        "seed": 38,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "888ddc31a7167fa53dcc5427a5f7bda4c9aae5d71a18edf84d18aababbdc37b6",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "99ef45e4e3f19ab76c30e91916db11f20101cb26c33b02bda2bef38953058ba5",
+        "training_task": "636d2347211847dbbaa8bf9b8c080c34c16ca8b029e18134f438fdbd7370fa45",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "ea65ae11a14ac6c09a0326f5c83ccfd00f531c5ef547e97f3cff1c4dc38e1300",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed038/episode.hdf5",
+        "h5_sha256": "d741845465b3fd09138608610b9c277e44d9833e021301bc0494cafc0bd5ab07",
+        "input_sha256": "b67fa822a45dd77fb8af34ac96baf6f9374ccf7f906ca676a376138891758470",
+        "native_case_id": "cp09-coverage-v1-medium-38-f85c80ca8730",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed040": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed040.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed040/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed040/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "4ef6711449b997424c112c43f0c8c1fef284e6926896448273f219b29f01068a",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed040",
+        "protocol_version": "v1",
+        "seed": 40,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "e30d78dd4d7c29dc073d5fb4a8ba6f0f69f17b0b042490110734fa049e8d8515",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "3f583aff56afff49907906e97e81c9f4ad5244a69d68a1ba4320641c12ff630a",
+        "training_task": "681556189ec6308e42e49d6dec0b7d4a340901c9be15243d28957e8c167173d2",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "f6462c07d32e5d441e963e4c4f7e509a19776cc2019783830add6bbb030b7916",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed040/episode.hdf5",
+        "h5_sha256": "db649f74f7eb282c6d548d7da83896910f7e246b5399cdd1bb0a0557867c30b2",
+        "input_sha256": "e88dad2d9369faf1a4027368c2a7a2f84d43d498a6a1c6317750c8da3917d8e8",
+        "native_case_id": "cp09-coverage-v1-medium-40-2e74fa5f1a3b",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed041": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed041.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed041/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed041/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "15f5cd0567def8ac3ad332288d942246bff3ce42b41c90c34bbefd659d5b0130",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed041",
+        "protocol_version": "v1",
+        "seed": 41,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "3fdc217a08be36546662beb0d2d9460b3af5fb0c606d9269af5e26c2c3713dbe",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "5b1b624a8c019d0e4bf6cbd5a66359ff1aed51b367fbea8982b153869410328d",
+        "training_task": "d6456315b89bdceba22beab90007f61eb13625a57dd44688e182edee66c70582",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "66d22e9e819d9d04022a44ddfa36c00184754802eddeeac42d69f09a16741fc0",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed041/episode.hdf5",
+        "h5_sha256": "6d05c76b63e7507ba275a7a7982e5387261e8b29e06605fedecd9c07924f8f30",
+        "input_sha256": "2d3a7a33a6e704eac36cf8d4b0d040bbb636c8323415a4961a9ba777774d2d87",
+        "native_case_id": "cp09-coverage-v1-medium-41-a002f5caa507",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed043": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed043.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed043/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed043/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "857e0e1102c21ea8d039412c7ea4063dacce016edfcacf6f4bf7c5efce33ee01",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed043",
+        "protocol_version": "v1",
+        "seed": 43,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "3e8d3c57e621dcef5a37c46e7d5b845697dd7b4b25a8a8c775c05749cc309000",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "a843eedf9a92737678aeecb05b5df5b9d38eff485a515a610191e6ac9e90cebd",
+        "training_task": "d6456315b89bdceba22beab90007f61eb13625a57dd44688e182edee66c70582",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "9c75932f72ebf422c956d3095874af25ac5ebe5febad7de8795005bd6ca3e545",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed043/episode.hdf5",
+        "h5_sha256": "19416b176dc2de85ddd4d0e5af9014d4e40c878e063f3cad62ced713311f8fcf",
+        "input_sha256": "f21aeea0f76fece1f7bf3ec630380cbf0c908c55ca90d64a696b6aa7823f7f1e",
+        "native_case_id": "cp09-coverage-v1-medium-43-13315f41c8b7",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    },
+    "CP09/medium/seed045": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "source_case": "CP09/cases/medium/seed045.json",
+        "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
+        "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+        "training_geometry_proof": "CP09/task-proofs/medium/seed045/cpu-geometry.json",
+        "training_task": "CP09/task-proofs/medium/seed045/task.usda",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "1344900a7853f25a371c45075b9e785fd05b0af27668936817cbe04a92cad9bf",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp09-acquisition-geometry-v1",
+        "difficulty": "medium",
+        "instance_id": "seed045",
+        "protocol_version": "v1",
+        "seed": 45,
+        "source_id": "cp09-coverage-v1",
+        "task_id": "CP09"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "CP09",
+      "runtime_asset_sha256": {
+        "source_case": "2b9d40595757141c080f2fad3a57b1b4d0dc18fda968d6381ae600e7d1b9278d",
+        "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
+        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "training_geometry_proof": "2536d94473d6b89c09041c7c982333fc06c69e13b871af6262e34cad84c20722",
+        "training_task": "d6456315b89bdceba22beab90007f61eb13625a57dd44688e182edee66c70582",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_case_sha256": "8f00f5e3b42f700b888c51ad65d4940a0b4c357ba64067266e9ecb2cf0f24373",
+        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP09/medium/seed045/episode.hdf5",
+        "h5_sha256": "bcec4566aec82387b49fd996cff78719557d9468608b408cd12a45c6db68bace",
+        "input_sha256": "afa4463b424eff8264c9c4a775cd8ca51baaf867ed49677bca6a6d15b32fff5c",
+        "native_case_id": "cp09-coverage-v1-medium-45-3cc18da3e9b0",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP09"
+      }
+    }
+  },
+  "schema": "mind2act_eval.training_source_records.v1"
+}

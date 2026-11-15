@@ -1,6 +1,6 @@
 """Released-hold rule shared by PR1 (ohm, 0.5 s) and PR2 (volt, 1 s).
 
-Authoritative text: CommonInput snapshot 20261101 (PR1.md / PR2.md section 5-6, 2026-10-29 correction): the measured
+Authoritative text: Feishu snapshot 20261101 (PR1.md / PR2.md section 5-6, 2026-10-29 correction): the measured
 value is within the tolerance of the target and the gripper no longer touches the device, continuously for
 the hold time; time spent holding before release does not count. Binary 100/0. The window must run up to
 the last sample (the episode ends as soon as it is met) and its length is the tick difference over tick_hz,

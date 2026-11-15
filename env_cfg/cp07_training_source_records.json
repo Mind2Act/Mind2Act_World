@@ -1,0 +1,3255 @@
+{
+  "public_projection": {
+    "omitted_audit_roles": [
+      "source_layout",
+      "train_source_raw"
+    ],
+    "omitted_original_bytes_not_verified_by_public_runtime": true,
+    "original_private_condition_validation_retained": true,
+    "schema": "mind2act.public_training_runtime_projection.v1",
+    "selected": 60
+  },
+  "records": {
+    "CP07/easy/bridge_easy_s000101": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000101.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/f92bd60ec533c123a6550ce9e55f79f07d26bf581908a803797e189a7df025ee/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000101.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a46be4741e291b513cf0c85d5118eecd42d74d501a87699b0d9c5469c2d541ce",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000101",
+        "protocol_version": "v1",
+        "seed": 101,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "6bf3aa010547a7285cd9d2d52f8669fa9d77a8ec44eafe0cd216f1b369897329",
+        "station": "5351b666c0d9d88fc2ac0ce2cf3f35b781d03ad59b44066697d445cae9790590",
+        "training_geometry_proof": "4fd4e554f7f0caae8617d9abf4a678c8c660c7612656b9882f99f5a1aa85559f",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "7fda621563e536f7f8624b49dbd8d4f7c5b872ee5c0218e8a5b07fc4c23b1597",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "211a57b1d14bd848490d8e53c0040aa40837e2d2f39926665d165057ce71f367",
+        "source_scene_sha256": "f92bd60ec533c123a6550ce9e55f79f07d26bf581908a803797e189a7df025ee"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "7fda621563e536f7f8624b49dbd8d4f7c5b872ee5c0218e8a5b07fc4c23b1597",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000101/episode.hdf5",
+        "h5_sha256": "77b1663362f513d23566c7517d7ed6acf3a6461b8e0a0b6a127e6baa889d069e",
+        "input_sha256": "7fda621563e536f7f8624b49dbd8d4f7c5b872ee5c0218e8a5b07fc4c23b1597",
+        "native_case_id": "bridge_easy_s000101",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000102": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000102.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/34a37392e8a8deee4849a97e30a78abe650bd8a57645b2cf7744320675b0b596/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000102.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "114f87c154bda90d4e52174012052e69c06fb5c13a0c50143b07b989fb01cecf",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000102",
+        "protocol_version": "v1",
+        "seed": 102,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "33510743187f71734d5424360506396eac4c0047fc40cb01d8552210b99fc8ef",
+        "station": "23e0b852ea7dab7b073515d0b04e5763d3d193beff85ae74dcbf0ab233c78446",
+        "training_geometry_proof": "fc98889da98a3634e2f7587c24abadd69f2334524329136d2b86f2ba6f5b12bb",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "aae12522cd5e61ccb864cc2aeeeb3a6695af9f8944634ba39d4ccf4c465e0a02",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "90612c70302c2bf80d339010b7157cf7a65e46dd7a9abc23cb3a7f504314fe46",
+        "source_scene_sha256": "34a37392e8a8deee4849a97e30a78abe650bd8a57645b2cf7744320675b0b596"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "aae12522cd5e61ccb864cc2aeeeb3a6695af9f8944634ba39d4ccf4c465e0a02",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000102/episode.hdf5",
+        "h5_sha256": "5e428d7aa9995f8d8005281ad3d3d14cfa244f97228d6fe27908850a22a653f6",
+        "input_sha256": "aae12522cd5e61ccb864cc2aeeeb3a6695af9f8944634ba39d4ccf4c465e0a02",
+        "native_case_id": "bridge_easy_s000102",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000103": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000103.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/47ca90aad1dbb81df46ade165fd981dc9589c82fb7b6abb28d895d17f79aa91b/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000103.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "e591bb4500d2e070a0c8cdae7a862b40f9f0f56ef9cb43a1b19569bfc4aa4594",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000103",
+        "protocol_version": "v1",
+        "seed": 103,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "610642b29e4bc31ad4dd49c7961a229ad75e1544aac1558f252914ebabf60bb9",
+        "station": "9c598753b1ec8123e96e5a04756c55d21dbdfce250670497dcb660954faa040a",
+        "training_geometry_proof": "47d68b0e44e9146bc9e04077562ff8a05689ee37e4b3f67a4f18761871ea71c7",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "7d15c514b09529e0a9a707abe629f849d21a7fcf0aa87e2befc376d80a50407f",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "f7ad8f7b7042281aea973fc98573a1a76a7868db8a63d8d96cda8f81d04f194f",
+        "source_scene_sha256": "47ca90aad1dbb81df46ade165fd981dc9589c82fb7b6abb28d895d17f79aa91b"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "7d15c514b09529e0a9a707abe629f849d21a7fcf0aa87e2befc376d80a50407f",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000103/episode.hdf5",
+        "h5_sha256": "a79e7c3367b9c0307cec80525fbdf5b5055fcbcfc0621e2f80f630f05db8b3db",
+        "input_sha256": "7d15c514b09529e0a9a707abe629f849d21a7fcf0aa87e2befc376d80a50407f",
+        "native_case_id": "bridge_easy_s000103",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000104": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000104.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/8c2cdc32b5d9a6e6cb5dbf6e102ecdbaecc73d8280868e5cc374adc3b2a06475/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000104.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f0dc304d0f242b15aa5bcdeb80606cc0f50b1240cdb504c6b34d446293ce11f1",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000104",
+        "protocol_version": "v1",
+        "seed": 104,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "788df3e3c3708f09f0a551b18f625da23a4aea023451ee671657e8f2308cc5f4",
+        "station": "9cc3da5c08a1632bf0cc4c1a013b6ea4e060d0b5d8b86f99882c94794511cd71",
+        "training_geometry_proof": "a38fab016685257a4934dd4de62ebd06b05ef5748ae082791edf3f91cbe9f169",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "617a5a602f9facfa7c2f0f27b80ec4cb671c88e52276c251bd23fd17076b26fa",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "42ffe8e633898b48a37bf6c33308afa5bd2c3e7aadb1c25111b08e6a94396dfe",
+        "source_scene_sha256": "8c2cdc32b5d9a6e6cb5dbf6e102ecdbaecc73d8280868e5cc374adc3b2a06475"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "617a5a602f9facfa7c2f0f27b80ec4cb671c88e52276c251bd23fd17076b26fa",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000104/episode.hdf5",
+        "h5_sha256": "0abb32a2b2c5e29ffb200b0aa18878efd4768b352e4dacb5e1f033ef7430cae9",
+        "input_sha256": "617a5a602f9facfa7c2f0f27b80ec4cb671c88e52276c251bd23fd17076b26fa",
+        "native_case_id": "bridge_easy_s000104",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000105": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000105.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/64823c10523f31c2e46b39f8307d065268e978bb6f72f117ad83dd5b09720eb3/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000105.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "0244ba6c2df35b210599f2998c34c0cc5a91238f095ddd1f92d5e4043f1597bc",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000105",
+        "protocol_version": "v1",
+        "seed": 105,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "5b3e2a5320860e74d86d7e51d7730176d01743922bf306bb37327e1167785df1",
+        "station": "874de75eda1cc0c273373ca10512c51dc90859b4268f85e0665d015c879526dc",
+        "training_geometry_proof": "225fa310cce66b97f6db6d8b4d353eca3b5a5a50e3084505677f806ec948a8e4",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "5bfa9d59b0bd14140c551f39e7c819c510dbb9c2f1afe29912354deb42111f37",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "13fb7f4444a1b346c6ac8521e55603e70029ba55bc34a05df59c7e369751854b",
+        "source_scene_sha256": "64823c10523f31c2e46b39f8307d065268e978bb6f72f117ad83dd5b09720eb3"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "5bfa9d59b0bd14140c551f39e7c819c510dbb9c2f1afe29912354deb42111f37",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000105/episode.hdf5",
+        "h5_sha256": "dbca4968b1b042b454cd7664befe43f73e663c65882554d78dbc8253b427b5de",
+        "input_sha256": "5bfa9d59b0bd14140c551f39e7c819c510dbb9c2f1afe29912354deb42111f37",
+        "native_case_id": "bridge_easy_s000105",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000106": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000106.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/77ef191e38af4857071abaa098afc343482533caacee37f6da882e18e95efc10/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000106.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "e18e70b80611bddae09ff14cfe5684575e17535f9bb5356409750f7a8ffe4b25",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000106",
+        "protocol_version": "v1",
+        "seed": 106,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "0cc0a2ce00f0b87a8b935cecbcf353c65a3d10d0005924e99ef559f88d6be389",
+        "station": "5771c5d6dce55c50f7c79e8a13be08f03beddfee5e88213494153d9dbbbff58d",
+        "training_geometry_proof": "ed8733b320ee8fea6fbe17cbab6e330e590ab033f59ab39cf19337a944c791f1",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "6a7cf7ae87c61f18fd3612558f6bcd13005482f7ded39c36c8071feb964c044d",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "0a8885818d51b2f87801980f00b616f3d1b71ef433f608fb48380a4a5a291336",
+        "source_scene_sha256": "77ef191e38af4857071abaa098afc343482533caacee37f6da882e18e95efc10"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "6a7cf7ae87c61f18fd3612558f6bcd13005482f7ded39c36c8071feb964c044d",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000106/episode.hdf5",
+        "h5_sha256": "f1b5b58be95246c9325642f698b66cec3a48c9ee2843f6b40ad2ad4b9beede0b",
+        "input_sha256": "6a7cf7ae87c61f18fd3612558f6bcd13005482f7ded39c36c8071feb964c044d",
+        "native_case_id": "bridge_easy_s000106",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000111": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000111.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/1b7a73b5760075c4b9a53950150b7e46e3ff6c54e9f4fddba1dbf431fea2f86b/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000111.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "bdfb84c94e488992ba75ad13c5964eb8046b4fba33d428308dd69c45e56857cd",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000111",
+        "protocol_version": "v1",
+        "seed": 111,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "e51c02d9be309fb747666b092f7ae282b387d6241e2d4bd4ccfa79ad199bff37",
+        "station": "2ba740775daffbd954a012cb783ad7d895d803948c5d5207fd9ad7853eedafb4",
+        "training_geometry_proof": "e11c9139efab80d1071c27183a226871c82ddcb29a4fe0f21169777d9a08af42",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "38b75b689c8eb32cbaeb0fdd2107404ed3ab44863d7d801c262d2aac93d3e0c8",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "e2db48fb3437e75a484b6098ef8f7d9fe577d05b7abfcedbd2fb7b7fa2264299",
+        "source_scene_sha256": "1b7a73b5760075c4b9a53950150b7e46e3ff6c54e9f4fddba1dbf431fea2f86b"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "38b75b689c8eb32cbaeb0fdd2107404ed3ab44863d7d801c262d2aac93d3e0c8",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000111/episode.hdf5",
+        "h5_sha256": "ac5d97a45b3c47932fd8e16d4008a9471034c3753943b4471a5007a5f2ce9a0b",
+        "input_sha256": "38b75b689c8eb32cbaeb0fdd2107404ed3ab44863d7d801c262d2aac93d3e0c8",
+        "native_case_id": "bridge_easy_s000111",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000112": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000112.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/7d4f2b18c241cb9e60291fbfa4e94cd7df8ac92b1f1fdc1cb5363978d29f8bc0/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000112.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "15f17138dc6deac737b634e7fd097d217002724f1979073b97445e03957fa47f",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000112",
+        "protocol_version": "v1",
+        "seed": 112,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "77fa9ee74c6f1c726fe31b723e587a8a3ff30641766d3a445657616e08136a39",
+        "station": "49125e6d1a781401f2c5cc31c39f56e287bee9da31afa23bf9ec7b193d95df18",
+        "training_geometry_proof": "fb0661d48a9624e228a006cd6890adc2b1e62ec4192e135668b0a264b521869b",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "0b0ff85b8ee426eb8e273cae2860e1bbb22f60f1fb40e3915a31fb2813e2578d",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "21886dbe6185d311fd51beb563f9ccecda40574ae7d8b76da3989ccad7d035a4",
+        "source_scene_sha256": "7d4f2b18c241cb9e60291fbfa4e94cd7df8ac92b1f1fdc1cb5363978d29f8bc0"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "0b0ff85b8ee426eb8e273cae2860e1bbb22f60f1fb40e3915a31fb2813e2578d",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000112/episode.hdf5",
+        "h5_sha256": "027fa12327b3d30c8035429a52e6d0a2013662b1b81196b340eb47e6c682e143",
+        "input_sha256": "0b0ff85b8ee426eb8e273cae2860e1bbb22f60f1fb40e3915a31fb2813e2578d",
+        "native_case_id": "bridge_easy_s000112",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000114": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000114.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/1544a5f434057f0bfd296b62a45e1c28b398cbb85bf5690e36a7ee47f0f6c4e6/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000114.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "4ceb1edc284aee72b18b082c45fe8b35bd29138f89f0ebc89cf9bc3a5b36eab2",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000114",
+        "protocol_version": "v1",
+        "seed": 114,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "8f0fb5593b33d149e1c2e13e166f9a22bfe514c4ba213f4ca833aca510b161b8",
+        "station": "c3373c270ea06d259b5d00ebb007284ca4f3ee3248805a0db3005d53bfc3b1b0",
+        "training_geometry_proof": "5dafb910e2cc59a11042542b385d25f16b32927a86f9f35265a925e382f0c900",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "7ce587bc65b3df7356ed527687bdd7cb2ec124fe7977992dda734953f10230d2",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "d9c904a150a17179e363fb58cae367e9beac7ebb9420a5d237551c45aa7c1f7a",
+        "source_scene_sha256": "1544a5f434057f0bfd296b62a45e1c28b398cbb85bf5690e36a7ee47f0f6c4e6"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "7ce587bc65b3df7356ed527687bdd7cb2ec124fe7977992dda734953f10230d2",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000114/episode.hdf5",
+        "h5_sha256": "23b2abb4474a6c8ade335aad33670fa0f08c15b108b9a0692841b6984ea36bed",
+        "input_sha256": "7ce587bc65b3df7356ed527687bdd7cb2ec124fe7977992dda734953f10230d2",
+        "native_case_id": "bridge_easy_s000114",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000118": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000118.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/8553fa4463573da50b460ad2729f4b284b2128005d48d5f9ff02e514b23bcbd3/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000118.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d91561f2c094ffb6741465fa91332a7ef2e2c6e837383d33388f90354a2e11c5",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000118",
+        "protocol_version": "v1",
+        "seed": 118,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "f9fd248fcc024670a6e5f3654c1c2e2d4c26061915d6fbff3334df89c30fc49a",
+        "station": "8b557b0c94e5d8b00727947ea919adf4dfde9877947edd2ead54be05197a7728",
+        "training_geometry_proof": "8aa7b0cb5484d672e9609df26d21554080d100e564937a673736895e48ce646a",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "534f9bd944ae88a3c29a545acf2c17c85cdbea4210671ce8aa6b75d579322bfb",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "eecda02ed262be2a5d3aa59ea2b5a6fefc076a35f982825ca327dc9039a18e75",
+        "source_scene_sha256": "8553fa4463573da50b460ad2729f4b284b2128005d48d5f9ff02e514b23bcbd3"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "534f9bd944ae88a3c29a545acf2c17c85cdbea4210671ce8aa6b75d579322bfb",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000118/episode.hdf5",
+        "h5_sha256": "15b71d9bdf12ebccff05fa464e1dcc122a68b60567048e0644449d9c713968c0",
+        "input_sha256": "534f9bd944ae88a3c29a545acf2c17c85cdbea4210671ce8aa6b75d579322bfb",
+        "native_case_id": "bridge_easy_s000118",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000119": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000119.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/15250492fe14906135b0021c861c910246088ed26eaf1f616f97566ce269d959/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000119.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "aa8c2cf7ced08dc8bddb4d5a8fb8aea00c49e4661ecffba8546e2c0011b173ec",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000119",
+        "protocol_version": "v1",
+        "seed": 119,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "dfaab2df4429b8392c2ae16c8255a305cda34eded84844c796e78117237b6e5d",
+        "station": "8474f97d84c1543a65e59c7970720da29ee9feab054fef441ee638eccb7c2887",
+        "training_geometry_proof": "94f1e34dc37a7dd5d45d60b5b854685429ac09441fc493d4047e69966f581f55",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "30a1f0383ab9a5dca1969bbdb9a2e0940901c55988272ebed320a3d58b0ccc3b",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "5df12ca2c1525f36bd4f898b64e6a9ac68c03bbe62ffb15b45fa3471654f327e",
+        "source_scene_sha256": "15250492fe14906135b0021c861c910246088ed26eaf1f616f97566ce269d959"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "30a1f0383ab9a5dca1969bbdb9a2e0940901c55988272ebed320a3d58b0ccc3b",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000119/episode.hdf5",
+        "h5_sha256": "99752b27519695bf0983baeaa687bce26a805706ac966062319d5e12a6e1d457",
+        "input_sha256": "30a1f0383ab9a5dca1969bbdb9a2e0940901c55988272ebed320a3d58b0ccc3b",
+        "native_case_id": "bridge_easy_s000119",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000124": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000124.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/2930a3b5bee638b54025fdb9311ae24848f4a8453827587d95d37c44fbaa7851/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000124.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "38b583e3d4f177339a9b4d82705103b5104e215de78abb101cfa669777f775c0",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000124",
+        "protocol_version": "v1",
+        "seed": 124,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "04f1199a53b0e600d961194ef23b7fae7272e9a97c8d35eaa80555e24fbd201a",
+        "station": "1fad531fe9ac0d967961177f967042e2d536c43654c3d3f9e6ab160828213795",
+        "training_geometry_proof": "6e6986f8fafa650fd6cb7200cc767560226be73bfd44545597a0b68d07a4dd52",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "eb16fa3da1cdb153c5277162c4c4f5a54285ad1119642b7987f49ce65567a160",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "f870e644618f39ce925b604c0c7d08d416c1aea295473133eea3eb8e9e34c855",
+        "source_scene_sha256": "2930a3b5bee638b54025fdb9311ae24848f4a8453827587d95d37c44fbaa7851"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "eb16fa3da1cdb153c5277162c4c4f5a54285ad1119642b7987f49ce65567a160",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000124/episode.hdf5",
+        "h5_sha256": "0427f154fd27b88b83c642240ddd30f6aa22bd5b3eb39059ea8d8537979122c0",
+        "input_sha256": "eb16fa3da1cdb153c5277162c4c4f5a54285ad1119642b7987f49ce65567a160",
+        "native_case_id": "bridge_easy_s000124",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000126": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000126.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/86a8187922b03ac38338304fc1dea94ad94e3ed4ff52916bf52d0d1d77129fad/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000126.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "7ec32ac577b0c08bdee8c70138b1a71c1dfb845b469cb5b4053c3666ded0eec6",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000126",
+        "protocol_version": "v1",
+        "seed": 126,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "f81ad2d32c6215da5837eac2ec67ec9a66b8926b373cbd8fbe26a293ca860060",
+        "station": "8be5002aa3f4758cc6f304e12823aeeedcbb04e7074f200c922edea36a797315",
+        "training_geometry_proof": "a9822d68cd7e1c3b5661017343c1c620eef6a77f59520fbb4961b5bc77c57868",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "513c361b89aa39b9c2198b1bfb040a238753459e3f4232cf849a12b5557f05bb",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "1bff7f4e68ce96b89d28724fe792905e1ad5becb8147f52c59ac1548b19d4353",
+        "source_scene_sha256": "86a8187922b03ac38338304fc1dea94ad94e3ed4ff52916bf52d0d1d77129fad"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "513c361b89aa39b9c2198b1bfb040a238753459e3f4232cf849a12b5557f05bb",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000126/episode.hdf5",
+        "h5_sha256": "e8e646fd519714c2f6b9e77ea134fb9cd5cc6c7016e64ae56c10463d86ffcccb",
+        "input_sha256": "513c361b89aa39b9c2198b1bfb040a238753459e3f4232cf849a12b5557f05bb",
+        "native_case_id": "bridge_easy_s000126",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000128": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000128.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/c0501daefa291be2bf3e4bd28014b40e52c316c0fa8da3ec60d6219096a91378/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000128.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "cba66a764a0352934909145bd43ca665681fcf374953291c2d9f574046fc36d8",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000128",
+        "protocol_version": "v1",
+        "seed": 128,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "18b21a28a6a2f3e942a6cef97193d3634b2a2cc99bf636b6c979c87ae3fe848e",
+        "station": "86b91fe5597e42bc2e2d3d018aab9d3a1e92b636c63fcee965a2f71579d354b7",
+        "training_geometry_proof": "96eaeba833bab391bba7541b5c76aad014775e981f235f37f2d15917c8280632",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "651dd138742caecbfb7c2e48fc7ffe63dce1dfd0f844d68e7e89654eea9895a2",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "66276ed608b398de74af361667297a65e5e69e6e81c032b72c7c5dac73846e28",
+        "source_scene_sha256": "c0501daefa291be2bf3e4bd28014b40e52c316c0fa8da3ec60d6219096a91378"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "651dd138742caecbfb7c2e48fc7ffe63dce1dfd0f844d68e7e89654eea9895a2",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000128/episode.hdf5",
+        "h5_sha256": "d56b94ad175eac45fc058a4a0ada59f35450fe60381d44865e38e0254a3e5e7a",
+        "input_sha256": "651dd138742caecbfb7c2e48fc7ffe63dce1dfd0f844d68e7e89654eea9895a2",
+        "native_case_id": "bridge_easy_s000128",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000132": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000132.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/bdd31a9937ca7808465ab6d76ec1a17a3ca6ba31e565670c7689102a75fb4864/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000132.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "2cffd527815d6e08f12c8f41fa33e9b0047ad904618f6da724eeebd98c31b395",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000132",
+        "protocol_version": "v1",
+        "seed": 132,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "0a98f75d5e315afac467bf3d8a2f7021ac3f01f481629d09425ed8a395fc6ee4",
+        "station": "8132778aff18f7bb57c28d6a0e1d8423dcf4f79e25de67e1e693d4e475f1500c",
+        "training_geometry_proof": "632e0cdda030d4af31bc2067ca5a1125cdb1b5c3915f7ea657116d797845ca98",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "9e28482b1e62aaaf364cb0bd24f698793ea15269b7d3edd41db5ba1f3dd807f9",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "c8c965b018c03b84eb326865926f807256667d0c4acee0529c20867325066028",
+        "source_scene_sha256": "bdd31a9937ca7808465ab6d76ec1a17a3ca6ba31e565670c7689102a75fb4864"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "9e28482b1e62aaaf364cb0bd24f698793ea15269b7d3edd41db5ba1f3dd807f9",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000132/episode.hdf5",
+        "h5_sha256": "f5ce47cc6936a4e57725f11e5d6fe386cc70299c7c6310a30a98825c81e1ba52",
+        "input_sha256": "9e28482b1e62aaaf364cb0bd24f698793ea15269b7d3edd41db5ba1f3dd807f9",
+        "native_case_id": "bridge_easy_s000132",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_easy_s000142": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_easy_s000142.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/a64459f12ad70f3c819397ed261cbcf4dfcd8761292a700a58d34300cbf5ace4/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_easy_s000142.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "4366c3df00c913f72247468ef7a07f4a290a5e89aae6deadaf0e11ba33d8ac3b",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_easy_s000142",
+        "protocol_version": "v1",
+        "seed": 142,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "6ad015fbb7d5f5ad374515437994682a28cceac8feddd2aadb301252ecff5403",
+        "station": "f9db2b5abb7ffcc02c0f472ee4aceedcaebc02daf75bfbcce356fde074272bf7",
+        "training_geometry_proof": "55103105075517549a3bcd20bea8040f52578e59fe2897eb054f77774353f03a",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "d11cdc5e20eecb865660048782eb983ffbef97497ddd6b53f35013f2435c50b3",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "dc8c3c41ca3b9441b45703901e9b6dc4754c76c7993390ddc3fa93597a166064",
+        "source_scene_sha256": "a64459f12ad70f3c819397ed261cbcf4dfcd8761292a700a58d34300cbf5ace4"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "d11cdc5e20eecb865660048782eb983ffbef97497ddd6b53f35013f2435c50b3",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_easy_s000142/episode.hdf5",
+        "h5_sha256": "ef8451e35f3c6cf8628915da53b4d215fd99f3f1d8bde51d191bf1c6fdac0631",
+        "input_sha256": "d11cdc5e20eecb865660048782eb983ffbef97497ddd6b53f35013f2435c50b3",
+        "native_case_id": "bridge_easy_s000142",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_train_supplement_v1_easy_s010001": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_train_supplement_v1_easy_s010001.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/d5df13eba99a8a4d6789d716b0eda8c75ca3ccc91547f616f0584464c12f181f/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_train_supplement_v1_easy_s010001.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "9ba31d51a203d1668fd0afdece1db9b7e0d65f0f11f131b8ad837b48ac380dcb",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_train_supplement_v1_easy_s010001",
+        "protocol_version": "v1",
+        "seed": 10001,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "f2ac48b1252b7da64dbc676a463a5ed2f423c688f7997d93f0e09ffee60c9c41",
+        "station": "34b59fceadf34b0c1057b7ac52306007bb27e70fcd3aa5ba867f55b087e39d70",
+        "training_geometry_proof": "624d88a101f28427ff0c02ed091cd0410ae153810b4fd3b45787ae60b25d204f",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "3c97a486c0c7fdd089b5f4e5ff3d0610380e5ea15cabf835d13222090ab7a4e8",
+        "historical_physical_signature": "c3fcbdf4145ae4566660c655752849d250347af8cc5e1e2e78b7df34ca8576ce",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "3a4ef903e393652483f5fcf0f5ee327156b27f45c2588b2443a996a9bea11bda",
+        "source_scene_sha256": "d5df13eba99a8a4d6789d716b0eda8c75ca3ccc91547f616f0584464c12f181f"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "3c97a486c0c7fdd089b5f4e5ff3d0610380e5ea15cabf835d13222090ab7a4e8",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_train_supplement_v1_easy_s010001/episode.hdf5",
+        "h5_sha256": "5ab9098ea3ec49fdaaea84918c64ccc62b2f19f36e5b73d0f939b7b09e6ceb4d",
+        "input_sha256": "84cea918b3484848af45c0336302e016da6ab1e670658789caf7fc92225f2a2d",
+        "native_case_id": "bridge_train_supplement_v1_easy_s010001",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_train_supplement_v1_easy_s010014": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_train_supplement_v1_easy_s010014.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/90ef110cc2c889f3ec10625cc07375a04ec279b84c1f7314484009ccac4c360e/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_train_supplement_v1_easy_s010014.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "7f92c3d7163bb1b124929863d038ea8e9c21790c647a651765d6d633b2812869",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_train_supplement_v1_easy_s010014",
+        "protocol_version": "v1",
+        "seed": 10014,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "4ee70fc1e1577445d4017876667305e24a2383d38682c1f58582b87cc7a9f724",
+        "station": "e4784ddb70e77b2c6e3db8a95c9311cdc22b53810ac84a6c7eac88c2295e3d3e",
+        "training_geometry_proof": "5e98c99dac979654ade86c4db3feef20e912d47b6925b95c20cfed22badc3b25",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "736adb372a24f0bd2009b3d805b31c600b8a9a390bd4635a199b3ac357f2cac1",
+        "historical_physical_signature": "08d3b60a1ceceb00e8f4f8f64b565d04ecdabf908504e725059a89db2e806c4b",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "1fb285d7bcd1d6e6508584fa78a49a478fd5074e40c10b9ea9ebbf3920fdca96",
+        "source_scene_sha256": "90ef110cc2c889f3ec10625cc07375a04ec279b84c1f7314484009ccac4c360e"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "736adb372a24f0bd2009b3d805b31c600b8a9a390bd4635a199b3ac357f2cac1",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_train_supplement_v1_easy_s010014/episode.hdf5",
+        "h5_sha256": "8c22cc1ae4b03158dabe993c0caac94d0eaf5a3958c2f37305c52ab652f34679",
+        "input_sha256": "c1dddae88943402f4beabe67a302973fd2d48f55b5364b77c13a2078b98264c5",
+        "native_case_id": "bridge_train_supplement_v1_easy_s010014",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_train_supplement_v1_easy_s010015": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_train_supplement_v1_easy_s010015.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/d3699b3433c83aa8448decab3388d6248ae9b77f255b3ee672b47e937e124d6e/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_train_supplement_v1_easy_s010015.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "24a68be492b446a27b59a2e93a148da1371fc0dc9beb1055a27fc3e7fee79d21",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_train_supplement_v1_easy_s010015",
+        "protocol_version": "v1",
+        "seed": 10015,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "54acab4d7417a49e8216ee1e9d8d1fa246bc8885fe0205c723617d3e8fadc232",
+        "station": "f4e9f6984b1c000673457127c04ed08a39ecb36990aadcb2dab129b63ef71600",
+        "training_geometry_proof": "436c500a8a41ab8031cc1b7f4a7670c86528ae02c8b9fcb48095d52b4ebfefd1",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "d11e28e4ae282ba87e7b410acae484fcc8ed2b3c81904ec86b77d8c3ecdd9934",
+        "historical_physical_signature": "ef16035ff50d0fd3d115daa0f31807f942412ef87c0c6f9142e96aad7b4ca9ee",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "26ab9f4dc46dd07da699ef4c608fe178c3210aabadab181e2d09a088191b8ebe",
+        "source_scene_sha256": "d3699b3433c83aa8448decab3388d6248ae9b77f255b3ee672b47e937e124d6e"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "d11e28e4ae282ba87e7b410acae484fcc8ed2b3c81904ec86b77d8c3ecdd9934",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_train_supplement_v1_easy_s010015/episode.hdf5",
+        "h5_sha256": "c6e5c31595d7311f4dd0cb55b440091a8ef6c6dee9ce7bd77d4df257698fab6f",
+        "input_sha256": "de6ba6dd92e3e893b9336c60add7a971ecdf5e4d980303e097b8dda88c281931",
+        "native_case_id": "bridge_train_supplement_v1_easy_s010015",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/easy/bridge_train_supplement_v1_easy_s010018": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/easy/bridge_train_supplement_v1_easy_s010018.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/3370684885525d57dca207f565143aeffaea66c3346b7d471505fc5db8fc7707/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/easy/bridge_train_supplement_v1_easy_s010018.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "736a552cf6fc67f228f97c8db22d4615d085c7fdebf711724bf5ef3ed8813076",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "easy",
+        "instance_id": "bridge_train_supplement_v1_easy_s010018",
+        "protocol_version": "v1",
+        "seed": 10018,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "2f7e1039fcbcb887a0109bfecae4c1dd167c5d0de9fdbcecf089e5ceaa4ccbfd",
+        "station": "8da82b58c25fa025c0fd48b6654d5663ffaacca47e7be8cba924f4798bd8bf39",
+        "training_geometry_proof": "210261b3529599455e0072d4a4586a1407584359620e9693c623f46165833f7d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "f6e3c98cce0e5ca576a523980674764e9435eae21c269a7ba17adc95db5b0031",
+        "historical_physical_signature": "312c9aa406894bcc237b358e64f33c686c28a9121f742c88b4364cf10dac7319",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "fc2445cffa5e49540cfac2395b69ba50e24b1707a43eba29632949deafc40e70",
+        "source_scene_sha256": "3370684885525d57dca207f565143aeffaea66c3346b7d471505fc5db8fc7707"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "f6e3c98cce0e5ca576a523980674764e9435eae21c269a7ba17adc95db5b0031",
+        "difficulty": "easy",
+        "h5_path": "data/CP07/easy/bridge_train_supplement_v1_easy_s010018/episode.hdf5",
+        "h5_sha256": "040e2bcd064650112c928539d6341f4158d3afae7fd94f9c15beaecdc228fad5",
+        "input_sha256": "5d29866273c7034b3752bcec8ccc374104e5c9368aaaaf4f67d0b35f61a5b9ef",
+        "native_case_id": "bridge_train_supplement_v1_easy_s010018",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_hard_s000127": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_hard_s000127.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/270139006204381356ac4e4d63474dc0c431b88f3b4a8163047dc44fdf34c93f/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_hard_s000127.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "8d5b9a1884b64e893d3c5c8aa209389cf6b67a5087fc140c18cc7c72b65f9e7f",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_hard_s000127",
+        "protocol_version": "v1",
+        "seed": 127,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "918de3dbc3ac2c0913471444828149391d94d97e1069295c886cc6def85c4392",
+        "station": "7a067340dbc99b7078fe14bfcac92e51f2bec770571e29dc7d5d4c2322ed5b13",
+        "training_geometry_proof": "2dfd9a927ba046d1eea302d92c90156da7123f1f39128bc0a0935f1cbe70d235",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "22487b9185c7490e1ffaa669ddc6fa03d3482061ff2e91a9c1e4edb3ab71223d",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "3ef6b82f7d66da66b62d26e2de07555b6af0f1ae1ee3dfb536bf87e727f66a5f",
+        "source_scene_sha256": "270139006204381356ac4e4d63474dc0c431b88f3b4a8163047dc44fdf34c93f"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "22487b9185c7490e1ffaa669ddc6fa03d3482061ff2e91a9c1e4edb3ab71223d",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_hard_s000127/episode.hdf5",
+        "h5_sha256": "92f69af26546036533784bdc166b2d11ceb9cd0486a22e793a6362d48940346d",
+        "input_sha256": "22487b9185c7490e1ffaa669ddc6fa03d3482061ff2e91a9c1e4edb3ab71223d",
+        "native_case_id": "bridge_hard_s000127",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_neighbour_v1_hard_s020000": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_neighbour_v1_hard_s020000.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/ab5cbe73668c59a0eaab60a0de615262e15196649cf05a16bafd2714459a4959/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_neighbour_v1_hard_s020000.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a28b595d3d1a07954637b04f0456d139e4bab7bb1fd63afc8a33dbeab464fadb",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_neighbour_v1_hard_s020000",
+        "protocol_version": "v1",
+        "seed": 20000,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "df8bd7dd7f056a56cc3b857afabc6e7e5dbb5d3245efc3ea33885c6473dd7051",
+        "station": "fbb286a303e992b2554ce8fcc9b1ddb7cd6ad20dcdcea81f36a1f1996b4f491c",
+        "training_geometry_proof": "dba2ba231633825037d8a1c7d0dfd8114ee7a48788e39e9e0a3d759773210cf8",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "0dc6e5da0aac25ebc41c98a1a4ba807f44af9c9df3a74f7873dd3d121be54c31",
+        "historical_physical_signature": "1e4b7284bca00bf90ff83a2fdb43812b62829b27b9d4e6ad5fe6522c7bc074e8",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "505ba3282197dc6632bb10ba341aa9daa9fbb4eb26a2cf95113f90b76265efc8",
+        "source_scene_sha256": "ab5cbe73668c59a0eaab60a0de615262e15196649cf05a16bafd2714459a4959"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "0dc6e5da0aac25ebc41c98a1a4ba807f44af9c9df3a74f7873dd3d121be54c31",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_neighbour_v1_hard_s020000/episode.hdf5",
+        "h5_sha256": "23497b0454dac380671c98f001f909cdba05f08a3f013b0b42035e82e091e632",
+        "input_sha256": "0dc6e5da0aac25ebc41c98a1a4ba807f44af9c9df3a74f7873dd3d121be54c31",
+        "native_case_id": "bridge_train_neighbour_v1_hard_s020000",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_neighbour_v1_hard_s020005": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_neighbour_v1_hard_s020005.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/614858ed2a0a85286d8894e1761195f40641952a457d89de5b4c3a6bd569b3c5/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_neighbour_v1_hard_s020005.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "414a11538ba474b0ebf1a5f9d43068331b7c44e568df2aff9e29e05025e3ee30",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_neighbour_v1_hard_s020005",
+        "protocol_version": "v1",
+        "seed": 20005,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "dd5dd342ec9292d2191901bcf6fcd153548db5d1d6cb65cd7fcac2b4a986b76f",
+        "station": "7cde2f7f741394f898eba344da1e0e86d61801267de56a2a8969ce273edc60b1",
+        "training_geometry_proof": "3a0906ed9e5fe9a39dbc84a59083e7be02d2ba888b58dfef6cb2419072c2de49",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "d27895b18b7780accdc13c37440eb9c09f135fc17e03b18adcc23841ab6f3176",
+        "historical_physical_signature": "999905df38a219d9544c69db6c584b2a19d83c583b1225de1be72840d90ec91f",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "516b7ed44828e2a51133f711de95fd7022e29803fa9c0ff81de3891191dc2211",
+        "source_scene_sha256": "614858ed2a0a85286d8894e1761195f40641952a457d89de5b4c3a6bd569b3c5"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "d27895b18b7780accdc13c37440eb9c09f135fc17e03b18adcc23841ab6f3176",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_neighbour_v1_hard_s020005/episode.hdf5",
+        "h5_sha256": "0388c871b021a3584cf67879dcae857fc3c6bd406131c7a1175bb5f8fb5b5cb4",
+        "input_sha256": "d27895b18b7780accdc13c37440eb9c09f135fc17e03b18adcc23841ab6f3176",
+        "native_case_id": "bridge_train_neighbour_v1_hard_s020005",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_neighbour_v1_hard_s020013": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_neighbour_v1_hard_s020013.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/5e434a9a9a01e3b0fc758e7f0c28eda5c27cf6773cb432064cb5e3dffff85e52/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_neighbour_v1_hard_s020013.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "9013365b9f53d0740d31cfde1e0e70ac4e99251f5562902ef6a06baf461cc169",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_neighbour_v1_hard_s020013",
+        "protocol_version": "v1",
+        "seed": 20013,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "1766fecd2ba59a0af31c438b1205b76d68dbad4cf6fa9380491bc006d5c910d6",
+        "station": "0d3500621e868627bc49e9b1d4b56bc486d9809a001bf8d73e195162f1fd5309",
+        "training_geometry_proof": "3246ae4b9c10cbd29160404866cc7feb643e7f40fe138058089d5668dad65668",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "978556c4c8421e0cde8a16dbc01f8135c8f411b30f2fb8ad6de4313a5846eeae",
+        "historical_physical_signature": "7c5ecd21bbedbbd6f91fc88d36a2426febda7da726c56e0d8cea6ba41f602ef3",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "282aba1ee886146d9625c2c8e1292b6f27bf069bdd16d42a169dd3b8573ab7cd",
+        "source_scene_sha256": "5e434a9a9a01e3b0fc758e7f0c28eda5c27cf6773cb432064cb5e3dffff85e52"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "978556c4c8421e0cde8a16dbc01f8135c8f411b30f2fb8ad6de4313a5846eeae",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_neighbour_v1_hard_s020013/episode.hdf5",
+        "h5_sha256": "76c2c1386303e3179127473cba96e55539ed21e9d2af3fe8236e321548c2f6fe",
+        "input_sha256": "978556c4c8421e0cde8a16dbc01f8135c8f411b30f2fb8ad6de4313a5846eeae",
+        "native_case_id": "bridge_train_neighbour_v1_hard_s020013",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_neighbour_v1_hard_s020014": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_neighbour_v1_hard_s020014.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/a22d69532c8f6423e6630b0eef456b044680f38bbcddac138804bf41239b408a/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_neighbour_v1_hard_s020014.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "431f5e6cd14dd66a17494ec93c1da89bd53bb37ca272df6ed80b90902db90e1a",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_neighbour_v1_hard_s020014",
+        "protocol_version": "v1",
+        "seed": 20014,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "ce6ae29efee408997d42650f2c8c0a605f0f3a7ec5c8b58de2a220eb85afe1f3",
+        "station": "d6220993bed4036fe866c59e3fa7d0566130f8f9fafc8496cdc19eea4e6b333d",
+        "training_geometry_proof": "995fb1c5e870c63e795b54e40ceb6490d04e9416bae75ae129b1268dfdf10d21",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "b0edf279c5c28a5e0bf43de93c448ab1934aa9b7fbe35f5937f3ac3814bf0816",
+        "historical_physical_signature": "9f119e66f78ec72a9f11a7a1fcf4e32fcf05c0b1c4e92b4eed12ad11ea1116e0",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "346134927f7814b9c91b0ae13fa293667f36a159b005c9c44b6f421f427c8f5b",
+        "source_scene_sha256": "a22d69532c8f6423e6630b0eef456b044680f38bbcddac138804bf41239b408a"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "b0edf279c5c28a5e0bf43de93c448ab1934aa9b7fbe35f5937f3ac3814bf0816",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_neighbour_v1_hard_s020014/episode.hdf5",
+        "h5_sha256": "666215f804aaf37567a04ae57aeebdc40118e97fc8483adab1788de2b866f191",
+        "input_sha256": "b0edf279c5c28a5e0bf43de93c448ab1934aa9b7fbe35f5937f3ac3814bf0816",
+        "native_case_id": "bridge_train_neighbour_v1_hard_s020014",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v1_hard_s010010": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v1_hard_s010010.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/b5bab6b1e8b61751db9efaaed5d125708754bfe2ae3989e9d0b445b6c64e55a2/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v1_hard_s010010.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "3feca26eea1fe4339cb9541b3d38f1cde3283b95e18de9e36cb5c8fb501f8710",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v1_hard_s010010",
+        "protocol_version": "v1",
+        "seed": 10010,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "68250d7e4caaa6e276b5c76d06e7afb2363e9ccd2d9248d2864948bc65228f0f",
+        "station": "29f6fef35cf01684cc130eb6f79ed3ebf2898d42bfedcc86bc53bd7a400bde76",
+        "training_geometry_proof": "4c0d8a7c1323b165e3cbfb74f65747338be84045ed59b57730f0f3b41dee483a",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "15ef3f71cbe6f6b57ac56384bd8c8c03d5153bd8cc44d7f69c28b0aaf2eef48d",
+        "historical_physical_signature": "5fb02a1f664138c090d0fe6bf245f45960894293a682335e080563cf269b7026",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "c7c6e3ecb21ccaecbf694cfcf89adc5914c6cf1d55503a8c11fd1da8419cc1fd",
+        "source_scene_sha256": "b5bab6b1e8b61751db9efaaed5d125708754bfe2ae3989e9d0b445b6c64e55a2"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "15ef3f71cbe6f6b57ac56384bd8c8c03d5153bd8cc44d7f69c28b0aaf2eef48d",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v1_hard_s010010/episode.hdf5",
+        "h5_sha256": "47af3a11b2ebd974cb328cf4429ea19f8143ba103f9b7dee1097b3ecd5ac3d57",
+        "input_sha256": "4096a0666a85d53e2d07b424c01d0076c159736f3dfa9fd432124683d4369e89",
+        "native_case_id": "bridge_train_supplement_v1_hard_s010010",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v1_hard_s010019": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v1_hard_s010019.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/d4c96b38678ebb77fc611f75e07ffba57db882b532e6869a63a78b8e512f57a8/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v1_hard_s010019.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "cc51fd95fc20fd369979e0edf7252441d988f086b7becbafed7f569995cdec35",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v1_hard_s010019",
+        "protocol_version": "v1",
+        "seed": 10019,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "76ab26059f1cff6aa1ecaad4eb6447ae3013d25c23bda908309a3ee5ea19df71",
+        "station": "1f51c5699238d64d85bcffabba43c0421be92c481d76997ab41628ddb0d6fe30",
+        "training_geometry_proof": "82f280b1d7a452a4dfad587a1cec1bbaecb723917291a2364c81f04f3755b89b",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "62bb113ee5740caff30473f0f37579f05d8524475972be175e46566c339d23e1",
+        "historical_physical_signature": "83ac93a8665569f461ebaa17e91983726420533c15ccb33f29101143fa9310bd",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "93b0476b9d1a060554938799a4cec0eb4801071ebc043d6ece6f12632fdc9f90",
+        "source_scene_sha256": "d4c96b38678ebb77fc611f75e07ffba57db882b532e6869a63a78b8e512f57a8"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "62bb113ee5740caff30473f0f37579f05d8524475972be175e46566c339d23e1",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v1_hard_s010019/episode.hdf5",
+        "h5_sha256": "b3eca6b9667d12546e19dd96ddb6b9be4222e0eabda7aa2bc0c99c5d021fc104",
+        "input_sha256": "0418865468a726d040fb38b32c9a85081d15821493b06cc485f9ccf27084e564",
+        "native_case_id": "bridge_train_supplement_v1_hard_s010019",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v1_hard_s010025": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v1_hard_s010025.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/3df7613906d44fee87cd065a9fa8f71e30d35a00381159eec585b8bcda84ff4d/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v1_hard_s010025.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "9272c6792c9a384795e1fd29445463186208a197001113adad24719a7a4a0230",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v1_hard_s010025",
+        "protocol_version": "v1",
+        "seed": 10025,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "38cb9b6af3d932c00b88fed32d208c6a1df6111b13709186dfa83d0d61e888fc",
+        "station": "840bff2a2be820af593fb9e3dde2251f5147a73f9239cfeca81e158482ec59a6",
+        "training_geometry_proof": "d580695aed2402a07110e307dfa1ee76bd13c161d7412c4473cdc2833f192ed2",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "425b2d5d4161fb7992d8d6c60d2f5b97a5583de50752d99fd3640f98ba472a28",
+        "historical_physical_signature": "61e943005fc42baa7ef3d0997783b62ef0fb4d969eb607231f72a5411fa58125",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "818a5a25579e29bd9983e17996164efee9c82a3d14d25c8c571163eaa678200f",
+        "source_scene_sha256": "3df7613906d44fee87cd065a9fa8f71e30d35a00381159eec585b8bcda84ff4d"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "425b2d5d4161fb7992d8d6c60d2f5b97a5583de50752d99fd3640f98ba472a28",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v1_hard_s010025/episode.hdf5",
+        "h5_sha256": "f8dbcd6117630dc4357b4b6bd6883f6bbe316044291093d001dc3ec168e9780a",
+        "input_sha256": "8a1acbdb316f746dde9cb306e7f2ae66dec8c89507e723c83e0f37f0a8d5725e",
+        "native_case_id": "bridge_train_supplement_v1_hard_s010025",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v1_hard_s010049": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v1_hard_s010049.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/8c24471663f1ff0acddfba6285405963f4bbc8f005a10f28e2837e2ba168dd21/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v1_hard_s010049.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "6f7606442f36e2e0178b78c45fc4164b344cd599afabf1961ce2b53799105698",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v1_hard_s010049",
+        "protocol_version": "v1",
+        "seed": 10049,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "f39a7136229c7ba6ccff4772a3fd1782169a429de523d42f9ca27310b8c4cad3",
+        "station": "e5f977fcb49512bb3e790b5fb5ea09c22ff81b0637d983a00162211bf6d0643a",
+        "training_geometry_proof": "f0bdccb0659af16bcafa5a87d9e17d33d3e996b43d13a5d9b1f23de03c0daf0f",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "6c5f1ceb4c6f3c1a0dfe832660ddb412e187e6c87d9fe1e0d3957b0e9c1a87d1",
+        "historical_physical_signature": "3d5468c775c7c3a3bfa7a564fcc562d5f608c37bf7501b2db8204988c34842e7",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "f74eb2646a1792b2c2a2e24b3ec9c58066df027848006810636e99822eda8197",
+        "source_scene_sha256": "8c24471663f1ff0acddfba6285405963f4bbc8f005a10f28e2837e2ba168dd21"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "6c5f1ceb4c6f3c1a0dfe832660ddb412e187e6c87d9fe1e0d3957b0e9c1a87d1",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v1_hard_s010049/episode.hdf5",
+        "h5_sha256": "16ddf48cf5fdfac44e641fb74f498c44e29aeac78f389b9d344b162bbb66eebf",
+        "input_sha256": "d3ce00133e4342714fbe23f73102111d9f00928df29fb40e981d4c8b61237598",
+        "native_case_id": "bridge_train_supplement_v1_hard_s010049",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v2_hard_s010064": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v2_hard_s010064.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/4b4f713012b7b0c8acc63b9e337b3e96d8a0f97b7709938f16e84c8387d34400/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v2_hard_s010064.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "5c984aac9ec04ade017207ac04416b1e5dbefd0cfabe37e31b33f8cb1d0292f0",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v2_hard_s010064",
+        "protocol_version": "v1",
+        "seed": 10064,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "b411745d5f254b35a8b59d155ac2fa0b7cfd4783cffc83e50b2ab84d60388def",
+        "station": "d1f33f6a7a23b7800d0262b0e8b51b9d16c75fd1e1bbe89493a4d70d225c0559",
+        "training_geometry_proof": "093be32f0570f587b5b6e79d3db7ccdb3bc96cc8c382efbc5295f04da5dc39e8",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "1fa38ddea831046622a1deb539306177617e8913f48325e5c6770d16291bed87",
+        "historical_physical_signature": "087b1bbc703956025f991c52db953af807ac60b348259ed74004e1883c306915",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "a9add3ee3c021acf13838c0cb3b93c1839cf9837558e04cd9084010724ebe3df",
+        "source_scene_sha256": "4b4f713012b7b0c8acc63b9e337b3e96d8a0f97b7709938f16e84c8387d34400"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "1fa38ddea831046622a1deb539306177617e8913f48325e5c6770d16291bed87",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v2_hard_s010064/episode.hdf5",
+        "h5_sha256": "54884788184933ac07905a9df7e7cbc67cb6bb94ac219dc985675d71c98eee30",
+        "input_sha256": "278ad279b40596a39d5d04908aab352010a4f7d8a83225b9421160d1190c3b50",
+        "native_case_id": "bridge_train_supplement_v2_hard_s010064",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v2_hard_s010091": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v2_hard_s010091.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/d2d2d7fa7ec026bb43443c75be91dea8b4ec74bde2ce33458da307a5c311048e/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v2_hard_s010091.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "8111c02c28209ceaefa50881501b62b03be1e5ac18a90a074c6d5d7edd454129",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v2_hard_s010091",
+        "protocol_version": "v1",
+        "seed": 10091,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "ec7e17e7eb0dcdde543cdbc0f3c93fe3a7b0a3445e826637f3a17d5e281d6db9",
+        "station": "529f9e115a13b16fc9a9c554909ddc9d4658c44e88ecc655ebaa116a0b05dce6",
+        "training_geometry_proof": "d8ed5852c35f3452a9acf1022a45d07df5fc89fe930ea95b82ebaa3ea6627034",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "03be33b298120b3247e570d6b2e1fdace711e54d3584053dac1e4ff1aa8f2577",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "d352296c45e4e0c9e9bd588638d28f76572006ea30936c9f7cf85b3472420f5b",
+        "source_scene_sha256": "d2d2d7fa7ec026bb43443c75be91dea8b4ec74bde2ce33458da307a5c311048e"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "03be33b298120b3247e570d6b2e1fdace711e54d3584053dac1e4ff1aa8f2577",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v2_hard_s010091/episode.hdf5",
+        "h5_sha256": "7fddbfb8ef8b7cd68b41004645b44ba0fdb37ea6d79ac62939a5daf0cb3dd72e",
+        "input_sha256": "03be33b298120b3247e570d6b2e1fdace711e54d3584053dac1e4ff1aa8f2577",
+        "native_case_id": "bridge_train_supplement_v2_hard_s010091",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v2_hard_s010118": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v2_hard_s010118.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/d89a9816d8d18ccb20e43621038b965064e1c461324894890a1a03ebcf5954ff/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v2_hard_s010118.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f6187f2fd36a64e52fc05bdd15f7e32fed29c5e34b3747cab537e4c4504b2f2a",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v2_hard_s010118",
+        "protocol_version": "v1",
+        "seed": 10118,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "5ba94b9daa44c066b1d1f2af8f8e9dfbb8e8d0ef82a1a7b8a58082d3ec758316",
+        "station": "d24d1c644820ea30078524944be9f3f6c65e24a36468a58da140514ab3e433d0",
+        "training_geometry_proof": "bea034b1cd81810ade4ba10551b2a4e1e4a7fc3e5a26e1b0d7d457adcbfb7518",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "347452ca0a5de32db2054b384ded2be054323a8d12538e034e73449803e56ceb",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "27ef67d0deb6343886e0cb10691f2117d5305bab4e28f2e55bf8a96797655776",
+        "source_scene_sha256": "d89a9816d8d18ccb20e43621038b965064e1c461324894890a1a03ebcf5954ff"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "347452ca0a5de32db2054b384ded2be054323a8d12538e034e73449803e56ceb",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v2_hard_s010118/episode.hdf5",
+        "h5_sha256": "41e300b10fc68eac950bc3b288b5504bd9735790c9db448761a696c452f8b220",
+        "input_sha256": "347452ca0a5de32db2054b384ded2be054323a8d12538e034e73449803e56ceb",
+        "native_case_id": "bridge_train_supplement_v2_hard_s010118",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v2_hard_s010155": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v2_hard_s010155.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/f0a05318a5cffb4b315df108bc3e3675e72d7c3eae165c253ea31b425ae50259/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v2_hard_s010155.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "74df8d2cea28b4860723ac3911fb0f0d42b9d631ff67ed416c08a4cfba0ccc42",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v2_hard_s010155",
+        "protocol_version": "v1",
+        "seed": 10155,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "da99162182738ecbaae74bfac19d9cc6e3b8e219040bb667ae26f5fb6a9ddb37",
+        "station": "ba62d7225265bf9aa67b216d631a67577c4a6547c5dfa77cfd6ae7370ee83f64",
+        "training_geometry_proof": "b5a21841d99840cff669cfdeb02219f626e912d8d887d0b3adff4f0425a80e1d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "71f8f15537b3f8ff2f5217811ad956dd012259812c5bf9b7771d53886ae7a16a",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "f7fbfaf92db6b997bbdcfe821e55e552552e595d1fe42fa4bb466d3fdb2fe4f2",
+        "source_scene_sha256": "f0a05318a5cffb4b315df108bc3e3675e72d7c3eae165c253ea31b425ae50259"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "71f8f15537b3f8ff2f5217811ad956dd012259812c5bf9b7771d53886ae7a16a",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v2_hard_s010155/episode.hdf5",
+        "h5_sha256": "8a7edab7a32f5154465e3f8d9f3bd713546f91b83353c1e24b0cd50c69b2b2e8",
+        "input_sha256": "71f8f15537b3f8ff2f5217811ad956dd012259812c5bf9b7771d53886ae7a16a",
+        "native_case_id": "bridge_train_supplement_v2_hard_s010155",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v3_hard_s010193": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v3_hard_s010193.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/02c7bc217f30292c8982bdd3b00c0db6abe72ea5530a8e86c3e88adde06efeb7/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v3_hard_s010193.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "0c32fc98cf940b49672791f098dd8ab7059266a39491bc57427ac4d62870ae00",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v3_hard_s010193",
+        "protocol_version": "v1",
+        "seed": 10193,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "16f55cb44b34773c123cc4098243613aeed430dbbd2508604055281ba8df5a62",
+        "station": "ae9db84bcba490e94ad634519bc5cd141ad49be3e216cb9046210e34a3cf52aa",
+        "training_geometry_proof": "de6056d006d7c02b841a74933716143e2444edd88ee07bb974e441e06d0aa3fa",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "9b480ce41c939113c1892b757f1fb5d46dff48749dffbb23fd94276595b75c2a",
+        "historical_physical_signature": "30f0cd18387082eee5488d244919387031949fe272b74c3bc9fccb695816bb90",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "bd677f1b00e72cfad68aef585ec59641d0dcb1678d9e2cc4bc6460600e36ddae",
+        "source_scene_sha256": "02c7bc217f30292c8982bdd3b00c0db6abe72ea5530a8e86c3e88adde06efeb7"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "9b480ce41c939113c1892b757f1fb5d46dff48749dffbb23fd94276595b75c2a",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v3_hard_s010193/episode.hdf5",
+        "h5_sha256": "94341809228718a7ed8bbdd2a3a7e96fe373b9ab021f40e209bc24d9b79d4da0",
+        "input_sha256": "9b480ce41c939113c1892b757f1fb5d46dff48749dffbb23fd94276595b75c2a",
+        "native_case_id": "bridge_train_supplement_v3_hard_s010193",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v3_hard_s010195": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v3_hard_s010195.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/f5666962a9484f0fc2efc027d0bc5f72e6bf609613f04e2d9f37518e2a220f04/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v3_hard_s010195.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f40659608b604869f45c5a67b7a8a189ae7ee92da217db8d02ecaa8d85baf571",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v3_hard_s010195",
+        "protocol_version": "v1",
+        "seed": 10195,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "785d6f468a6cf80d43347f7a80f439f57d95804bda2f641106da39ca421a324c",
+        "station": "4bcdd18fed8de18c252a11383d18eb37b43977bfbe3d0965f5252df50ce12a06",
+        "training_geometry_proof": "d2ef94d6f1779e6af6e721b678a18dafbc27de8e3b2e101dda824a2382168604",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "ff94ed88a42d66a9d802f37742e4d1df42afce6fea81791fc5937d73cb89b11d",
+        "historical_physical_signature": "50a23ed38429438b6ecb1237672fc8bd01cfd09b1ef15ec8c4deff06a03ebc4c",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "09ab6f92da28ecd473fda83edd567e5196c0eff414d42c1d9e57635117fdd20a",
+        "source_scene_sha256": "f5666962a9484f0fc2efc027d0bc5f72e6bf609613f04e2d9f37518e2a220f04"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "ff94ed88a42d66a9d802f37742e4d1df42afce6fea81791fc5937d73cb89b11d",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v3_hard_s010195/episode.hdf5",
+        "h5_sha256": "3c0507f190e2f6a5ded143af74c6ea66f5d35b098839aa4fcf13e12271bc9c8e",
+        "input_sha256": "ff94ed88a42d66a9d802f37742e4d1df42afce6fea81791fc5937d73cb89b11d",
+        "native_case_id": "bridge_train_supplement_v3_hard_s010195",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v3_hard_s010198": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v3_hard_s010198.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/2b14822e5c4865eac57d869ab947ade5d2305820253005bde49f6eb7f633311c/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v3_hard_s010198.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "9aff2fdaf5b62cc699249d5f28d0092dc0063d1009de249ff15b8d7df0a7b191",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v3_hard_s010198",
+        "protocol_version": "v1",
+        "seed": 10198,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "ace60c4a10a56ed05d1d610e22cf5573cd3067b53b26c1e79850f60ebd6e6652",
+        "station": "4db42178a5f3b68750b1ae9b24e03ddc747d105d8fbc9b8107ea0e9df9d3d7d7",
+        "training_geometry_proof": "e146759981d476a7ce6e94d6fd569b48a940f0f9f6d22417c60781a982640c15",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "63f6718a299c11d5b64005757906989ce33324529ae8686b1b4aa51bc64791a8",
+        "historical_physical_signature": "854a1e6f41625c9ac69b33ab386972e0d90307f34c391340bf65bd7b3d9e4ec1",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "15f51c398e6e876c5c64cd8ba7869700e1cd7a24880e2e2ae4fa77d7ef9b3fdb",
+        "source_scene_sha256": "2b14822e5c4865eac57d869ab947ade5d2305820253005bde49f6eb7f633311c"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "63f6718a299c11d5b64005757906989ce33324529ae8686b1b4aa51bc64791a8",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v3_hard_s010198/episode.hdf5",
+        "h5_sha256": "a73114af678a8f03f794b5f69f91dc13c3b4d3f764b27b17b8d9416553f8c2e3",
+        "input_sha256": "63f6718a299c11d5b64005757906989ce33324529ae8686b1b4aa51bc64791a8",
+        "native_case_id": "bridge_train_supplement_v3_hard_s010198",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v3_hard_s010203": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v3_hard_s010203.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/13d47f40363948972707479e0a66e1f0f01725b9d85f43985dd0f835d2e28aba/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v3_hard_s010203.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "3a5c628a29dc8715dc0c4db5568a19a2f5ac7ba8a568638146870c90fc5e43ea",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v3_hard_s010203",
+        "protocol_version": "v1",
+        "seed": 10203,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "61a9e253320fd04e41cc307207c9ef055e7e9c958a194c529e61ca594b48e405",
+        "station": "1a4ca61637b3c73f0e681bcfb959d44d1f789cc1958999761b02289acbb56e1a",
+        "training_geometry_proof": "1503086e6b28737db23c829aa91041bfe383dd3ef460c3a30783d2af98cd6ff8",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "70d5888ff878978060f940c277965a7ca86dc196a9876b7a841f45763e7ac8f6",
+        "historical_physical_signature": "1d66c88bada878b4cffec39f1182d771f51192250b56aeafbdeb6e871f11688c",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "484bb0c0aee3923d21e87b37d8f3b1993275df77cbc5d98b07580cb9fc877040",
+        "source_scene_sha256": "13d47f40363948972707479e0a66e1f0f01725b9d85f43985dd0f835d2e28aba"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "70d5888ff878978060f940c277965a7ca86dc196a9876b7a841f45763e7ac8f6",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v3_hard_s010203/episode.hdf5",
+        "h5_sha256": "d59ff5f57c5fad2f35d9a80cfe9abd59660cb8eb0f45b528e25da2b7f2c25c88",
+        "input_sha256": "70d5888ff878978060f940c277965a7ca86dc196a9876b7a841f45763e7ac8f6",
+        "native_case_id": "bridge_train_supplement_v3_hard_s010203",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v3_hard_s010207": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v3_hard_s010207.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/bb609308ee63ef0e6ab1c1ce69f316d32909d12c93c95501c16b491041622e5e/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v3_hard_s010207.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f49c69b6d4c9f5478ea7624b1955467b12ee27e8c6ca211819b5843aff30b71f",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v3_hard_s010207",
+        "protocol_version": "v1",
+        "seed": 10207,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "f9dc252dfbbb95122dd61aaabbfde04ad4d173e23bb9c02692f6411cc870cfaf",
+        "station": "73cf95acee1336150b2d40029e7843786860c202a77270d1cee758e08b9f3ed3",
+        "training_geometry_proof": "8e64c8b4e06e33f5207c0d856fc319d90d8be7fd8ebbae2c5fdd817e7a1993f8",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "0909dc33ece7143f5d94c2e541166d890029a7a18a2c43d76a95dd2c73112334",
+        "historical_physical_signature": "89b6f6f158f7b873cf1091b944a1bc9ff067734532a3aa62fa03a07ffea579b0",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "a801f804af21b79f1ea60beb02d9f33d5642c009c4c9fb62eafcb7dcfa1ca9f5",
+        "source_scene_sha256": "bb609308ee63ef0e6ab1c1ce69f316d32909d12c93c95501c16b491041622e5e"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "0909dc33ece7143f5d94c2e541166d890029a7a18a2c43d76a95dd2c73112334",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v3_hard_s010207/episode.hdf5",
+        "h5_sha256": "ad9911515d9e962b96be707cf800e0ff9e6cbde841ec5354588a2429c66c4077",
+        "input_sha256": "0909dc33ece7143f5d94c2e541166d890029a7a18a2c43d76a95dd2c73112334",
+        "native_case_id": "bridge_train_supplement_v3_hard_s010207",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v3_hard_s010210": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v3_hard_s010210.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/98278afffcbcc00ae51b168900508b3e3474c95f02ee91cd1cf7456c4aea350c/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v3_hard_s010210.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "0cf7ab4796fcf752ea9010963d403a7b6785c362cd365c59e193b7c717af2af3",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v3_hard_s010210",
+        "protocol_version": "v1",
+        "seed": 10210,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "4da96013a4bcb6bf5cb437faa35557c54a8fe3b6154b109dceb85afa133d0442",
+        "station": "a69def4edecafd264daa7448a480191aad1f2b70911370b03b9b5684517b53eb",
+        "training_geometry_proof": "975d215382171c2ddcb38f6684404ada25dcf69023090d4853dc421daba4814d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "7dedd17d3baf8af255f75f873840e80626fcf73d246bc582049c32050df0a8b3",
+        "historical_physical_signature": "2c618ad180aed23f3fc73ce0d48d1bcc00054bafa0f80d015eaeab2eedc06ff3",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "f409a488ea4f37990bddad12d6d2bac94bbf26c66839f6ccef22157c64d9021d",
+        "source_scene_sha256": "98278afffcbcc00ae51b168900508b3e3474c95f02ee91cd1cf7456c4aea350c"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "7dedd17d3baf8af255f75f873840e80626fcf73d246bc582049c32050df0a8b3",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v3_hard_s010210/episode.hdf5",
+        "h5_sha256": "b108657cdcca0890d871c80ab07536489f3c2db197608c38f1c1108c2a0c5391",
+        "input_sha256": "7dedd17d3baf8af255f75f873840e80626fcf73d246bc582049c32050df0a8b3",
+        "native_case_id": "bridge_train_supplement_v3_hard_s010210",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/hard/bridge_train_supplement_v3_hard_s010223": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/hard/bridge_train_supplement_v3_hard_s010223.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/368ce45bf392413c55d2c4b2fa8daa8a4f981cb0fdcb3f15552c04269f8cdcb2/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/hard/bridge_train_supplement_v3_hard_s010223.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "02ffdc12734e20a463cdc684140de7e0aa59467322edc0676adee086f62c98b7",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "hard",
+        "instance_id": "bridge_train_supplement_v3_hard_s010223",
+        "protocol_version": "v1",
+        "seed": 10223,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "56ef1b8483c01362179b145680c44597f2d6ab68f3ee510b656f74201786078b",
+        "station": "6b016f6fbe3c7c02780574a7ea5a9dc3f5d7c3c34379f595c197b0f7790c0bfa",
+        "training_geometry_proof": "4d870089796cda8dd292acc82dd5450c3e95bb42fa510067cd91024c492f585d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "2832d7c64d62903d080f67da30490b794f7c20034b5a5e76ea3ec9eb94f4987a",
+        "historical_physical_signature": "c673c7b3fa8e99dac4f30b298ea1e68a28580f62961ac7f7ba736c3b3756a4b6",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "edaf9ec505b0f3ef25d043768952ac825df959ab50cc5aa3ab0eb77fc37c7598",
+        "source_scene_sha256": "368ce45bf392413c55d2c4b2fa8daa8a4f981cb0fdcb3f15552c04269f8cdcb2"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "2832d7c64d62903d080f67da30490b794f7c20034b5a5e76ea3ec9eb94f4987a",
+        "difficulty": "hard",
+        "h5_path": "data/CP07/hard/bridge_train_supplement_v3_hard_s010223/episode.hdf5",
+        "h5_sha256": "beed03b59a989f1db7bb4800e3dee34d50fb34e34a3821dee38d00a3b6bd9132",
+        "input_sha256": "2832d7c64d62903d080f67da30490b794f7c20034b5a5e76ea3ec9eb94f4987a",
+        "native_case_id": "bridge_train_supplement_v3_hard_s010223",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_medium_s000102": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_medium_s000102.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/ee5505cd167184d9b91a35f9d3ac046622d9c678c84bfc18b1f243fd1bed61f8/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_medium_s000102.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "8ed3f00e732e7274ea567e5f27ffcb94f46f09f8fa56e4798db83cc06aaa5569",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_medium_s000102",
+        "protocol_version": "v1",
+        "seed": 102,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "c85432e5a6d5144c38e876de2e9946b1d1e75e75f0528f73dbc9c1ca68c33abe",
+        "station": "1aea45471c0e3a33f3b445f1b1bf79eb47cfcd32f16867d656b16b2022c12df4",
+        "training_geometry_proof": "e9d8fd0916b60eff24247352aaa54d1c87d97a7140eb390dccdf535b26f6c527",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "13feea7741d84e9377114790e6f51e35420ad1e4bef5ebc5b4482a7ea3f70efa",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "fe673105086c9c0320450cea09594dae3157274398c9ff8119a54586e41faff9",
+        "source_scene_sha256": "ee5505cd167184d9b91a35f9d3ac046622d9c678c84bfc18b1f243fd1bed61f8"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "13feea7741d84e9377114790e6f51e35420ad1e4bef5ebc5b4482a7ea3f70efa",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_medium_s000102/episode.hdf5",
+        "h5_sha256": "968c5fedc01d7e7bf82fba8aa20729c55bb3c920557d538f783d1014a3ec71fb",
+        "input_sha256": "13feea7741d84e9377114790e6f51e35420ad1e4bef5ebc5b4482a7ea3f70efa",
+        "native_case_id": "bridge_medium_s000102",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_medium_s000104": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_medium_s000104.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/8264c21ffcee0b2148bbc502366ff7b53fc755d8224cb4668a834e7377839e81/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_medium_s000104.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "74c5830a28f425e3148a2c0f75ba0340bf8cd79fd8b0f67d2e9dc4a11ae7774d",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_medium_s000104",
+        "protocol_version": "v1",
+        "seed": 104,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "0982c67001aad80b86d1e2db808c61b88363be39c4a70685a1b15fafc38581f9",
+        "station": "825d6dd958f220da51bf1959958a98d9a1d0d3c2a8f4447a0216029d534dddff",
+        "training_geometry_proof": "af2da3ed22a27f2b7f79a3f022ac76db1af493e9fd12749719cad02dcedd208b",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "9246fa144b1bfa176de37d98e213dff113c6691e62eab4c091b3fb4177e1c3e6",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "367f80dd5d6c16e546c3315a358179e8edbe75f09c75d7bf52a96700deb718ac",
+        "source_scene_sha256": "8264c21ffcee0b2148bbc502366ff7b53fc755d8224cb4668a834e7377839e81"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "9246fa144b1bfa176de37d98e213dff113c6691e62eab4c091b3fb4177e1c3e6",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_medium_s000104/episode.hdf5",
+        "h5_sha256": "51b3815173c8d2d1cb315940556c0b9e2f95a9a6b34893e01131984a35251c6f",
+        "input_sha256": "9246fa144b1bfa176de37d98e213dff113c6691e62eab4c091b3fb4177e1c3e6",
+        "native_case_id": "bridge_medium_s000104",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_medium_s000131": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_medium_s000131.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/c8003bfec8e60dfbd47ab6ce2bb2554cf7274221170ef13768d558770b8149f9/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_medium_s000131.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "6f4ef1b719cfda8c4e9c0112a04d1bdfa8999ea41e5ccd25c23ff1f3dd8b118f",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_medium_s000131",
+        "protocol_version": "v1",
+        "seed": 131,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "35610947c26e6aa2b93da703a8c57b1ee3952d5f0dbf83a020366186926f996e",
+        "station": "5ee599d6b3cb465b7a43249e0eef4fbdcbcf8ed1184e74e308cf932554bc5f8b",
+        "training_geometry_proof": "91bb0b556f681b933caab086bf8401a966cda7c52703db9c0261bc2c4787a44f",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "d5da15cded4bb89c865e1835e84a45831f63e4aa5d62c26612ccd82b9ebc0370",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "6ba5b95eb690c717c0dc5e9373209cd332299785f96c0286c13f9dd2615b1554",
+        "source_scene_sha256": "c8003bfec8e60dfbd47ab6ce2bb2554cf7274221170ef13768d558770b8149f9"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "d5da15cded4bb89c865e1835e84a45831f63e4aa5d62c26612ccd82b9ebc0370",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_medium_s000131/episode.hdf5",
+        "h5_sha256": "176bf0eea57dc9b3c008566386898ccd58194bc7f261c17ad50456b2f6f19fa7",
+        "input_sha256": "d5da15cded4bb89c865e1835e84a45831f63e4aa5d62c26612ccd82b9ebc0370",
+        "native_case_id": "bridge_medium_s000131",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_medium_s000138": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_medium_s000138.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/7bbbfcdcb82da1b8731c542484f76c99307d47bc026c101420e69035df6b4976/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_medium_s000138.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "0995bbdbea5eee20607d9b92708830215a6518d22690f85bd68f125a66115720",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_medium_s000138",
+        "protocol_version": "v1",
+        "seed": 138,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "c5f417302a2cc74702af3344047c83ffb9d4743f3579252b4abd53a6609c51f8",
+        "station": "eb79af73ab1fcaa60d90f87479d3b54bf7aae54da982c9577d8ebc1625036e3d",
+        "training_geometry_proof": "64f444a0a572e842f1dfdc967c0311bfe639c3f9b89c7bb149387737c3d21eef",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "141f84b16c22ed91707ad3eecee0af8077fdccfffabb266e4990ab5b6270c6cb",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "8e928875859b7f9ab71dd9b2e04a9f81816336f026bd295bafb1a6da45f6cde9",
+        "source_scene_sha256": "7bbbfcdcb82da1b8731c542484f76c99307d47bc026c101420e69035df6b4976"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "141f84b16c22ed91707ad3eecee0af8077fdccfffabb266e4990ab5b6270c6cb",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_medium_s000138/episode.hdf5",
+        "h5_sha256": "99ca5501f3baf17d7257b2d8e5c2148a5f971dfdacca8305e62b670d0b2ad3dd",
+        "input_sha256": "141f84b16c22ed91707ad3eecee0af8077fdccfffabb266e4990ab5b6270c6cb",
+        "native_case_id": "bridge_medium_s000138",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_medium_s000139": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_medium_s000139.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/461b00453bff5c876d5c05287785489087310a9809b62c3e9bee8642343ba95e/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_medium_s000139.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "497e90bfbbd7de1bce1538f1fed3649192e86521d5fd8290e0b6844fa5e358dd",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_medium_s000139",
+        "protocol_version": "v1",
+        "seed": 139,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "0a0a197fc766d022f8a93c6860915914b32dcb507dc70bf2eeb32e65ddbbed78",
+        "station": "45957c5c04ea5e9b999ddbf94087541d7d178d1f7d0923105063a1ebc693b7df",
+        "training_geometry_proof": "7a3e3f40b7a54bbcd6b0646c1f5f5e535d97e45b7326fb9f393f0afb65d3d06d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "ff148c97d61bf8dfad65bb3ce8d8e5f411f35b6bd9dcfea3462d5368f1358edc",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "b8ab872ebb23f9090ad6a52d62aea8e6d361bcd018e6cdd86d42255abc71b5eb",
+        "source_scene_sha256": "461b00453bff5c876d5c05287785489087310a9809b62c3e9bee8642343ba95e"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "ff148c97d61bf8dfad65bb3ce8d8e5f411f35b6bd9dcfea3462d5368f1358edc",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_medium_s000139/episode.hdf5",
+        "h5_sha256": "def1a86127b24c5f93c281a7ab1878093b97ab2b0f91bcee5f7706a43b36a3a2",
+        "input_sha256": "ff148c97d61bf8dfad65bb3ce8d8e5f411f35b6bd9dcfea3462d5368f1358edc",
+        "native_case_id": "bridge_medium_s000139",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_medium_s000146": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_medium_s000146.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/acb8a6033ec3d135318ad0f51d7c0a352ffb3d71c2536fbb620fa38b56a477c4/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_medium_s000146.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "701a04591134edd8dd64614c0994a50a1efea09d20815e05b663bef7c40661f7",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_medium_s000146",
+        "protocol_version": "v1",
+        "seed": 146,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "31b5caf57191213fe6a51a3cc3b1ec90631fe5c6e26398d94e34142dc409454c",
+        "station": "7c2eceec1e8fa32ea5a45050a9468ffa51946150b22d0505f42d2a3fcc85f51a",
+        "training_geometry_proof": "093adf973e47784015f3303ed5ba23e7c1a3d68d607070c45bbadd23b4a2eb4c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "304ea2e0a7b8c6684f3e283898fe564a21d6c215a20ee1b0a9bfb6a265cbe85a",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "005eff56d4d17de1906a2c38baa743174659ed376224f70074ccc6a6c230471c",
+        "source_scene_sha256": "acb8a6033ec3d135318ad0f51d7c0a352ffb3d71c2536fbb620fa38b56a477c4"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "304ea2e0a7b8c6684f3e283898fe564a21d6c215a20ee1b0a9bfb6a265cbe85a",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_medium_s000146/episode.hdf5",
+        "h5_sha256": "529055cfe9a9ee76eb20ebb7fd828a0a8dc33482d141464ffa73526cedede38d",
+        "input_sha256": "304ea2e0a7b8c6684f3e283898fe564a21d6c215a20ee1b0a9bfb6a265cbe85a",
+        "native_case_id": "bridge_medium_s000146",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v1_medium_s010000": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v1_medium_s010000.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/3ba401cae7c50f9c3342e783890c2f59d0802ca9019cef71ac800ec96b8d09ae/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v1_medium_s010000.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "dd76f02eb8b80b5931f97c6ac27fe7eade6539ab70b09aa4496fe0a0d59de847",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v1_medium_s010000",
+        "protocol_version": "v1",
+        "seed": 10000,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "a3fcd5c0a50f41a0fce9949ad59a338119f852bac8303299d160b1710e9e2d7d",
+        "station": "c2488448841195f655f9d3ddacdfa0d79d656ad2e4aa0866eea7a8d14622779f",
+        "training_geometry_proof": "b1c732f05fea21db98577f8b617944151de3178dbd7f5ffe2f4cd16b2c230672",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "1870b286071827431148635ce95a40d2c95ef9ff56838d7b442e1aaa1af34751",
+        "historical_physical_signature": "06ac0b1f71e28584c6dae36e2a2404f2b2bfac2797db9f731155e1b57b9e7621",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "660afbf9c7207ea9c580fb22c756d4ffc34a642fc4ead485b5a4e4b21232f7a5",
+        "source_scene_sha256": "3ba401cae7c50f9c3342e783890c2f59d0802ca9019cef71ac800ec96b8d09ae"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "1870b286071827431148635ce95a40d2c95ef9ff56838d7b442e1aaa1af34751",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v1_medium_s010000/episode.hdf5",
+        "h5_sha256": "b76c041e5e623c342d90295e6189f7b224d6c8268ae4c7919c5c7c8e2f886f69",
+        "input_sha256": "bc54336c81be5b09af725eee6cff342267fe1e6baeae7ad4910446445656d3e4",
+        "native_case_id": "bridge_train_supplement_v1_medium_s010000",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v1_medium_s010003": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v1_medium_s010003.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/aa6fb403fa4bb473609dd553b1fccac161fc463323f7e4f1462d4c1a66abd35c/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v1_medium_s010003.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "44624d21c5ab5f4d6488e453c9db82f4ea250238a03b440f7b5e1c60c13e9b25",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v1_medium_s010003",
+        "protocol_version": "v1",
+        "seed": 10003,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "1c7870e079a2e4bf506ffe6033972362f86f318284c0ac28d14c032d26a20bfd",
+        "station": "2df253a51214f38a43632d14e76957a0d12bb9dacbc30d4280d854e7f5f20d8a",
+        "training_geometry_proof": "48aab5b62e6401202c71de9f25fab7e18a616277d2778f36461d576273ea7401",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "807b4944d7098e52ba290d9a1162e0a9c1f91ebe5105ed9f462cddc431bbfa73",
+        "historical_physical_signature": "318aa1812974522261543ec85423c60bad04a048ec8dd9042a4704d105df5d30",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "4ee5d69171eeee373762078849200ef933b3f6a88079d2110f9e2c1787042f37",
+        "source_scene_sha256": "aa6fb403fa4bb473609dd553b1fccac161fc463323f7e4f1462d4c1a66abd35c"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "807b4944d7098e52ba290d9a1162e0a9c1f91ebe5105ed9f462cddc431bbfa73",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v1_medium_s010003/episode.hdf5",
+        "h5_sha256": "63def7504d35d2c42905fd745333b6fd3b94a2e3c83934cb7d279b4a08d1fd82",
+        "input_sha256": "efa48d43562b74a4d7343d856a8b99b92174da67147a33528308d60866a21a68",
+        "native_case_id": "bridge_train_supplement_v1_medium_s010003",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v1_medium_s010041": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v1_medium_s010041.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/1c9ebc36c5666dbea4347f33b8aa2d01521c69363f14b9d1f8afb7ea7487c6aa/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v1_medium_s010041.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "03cd290064d1497f08a6ef582efffdad0746d738a9a15bffafd10b10984b0c34",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v1_medium_s010041",
+        "protocol_version": "v1",
+        "seed": 10041,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "3336b64eecefa25574bfee98fb7b507304681f8d652f651f8189981ee5c7b450",
+        "station": "909a509f59f446cce914d37daefc2726864f887125a6518c3b1d018bb343ea61",
+        "training_geometry_proof": "caecf0f0c0ff46d060bbbb32d29c6357400e695b919f4bd364147b4e3d1def32",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "da0f969cbf5472b8088b4db2b119579d45a961063ff4130a46b3e72a716c0cd7",
+        "historical_physical_signature": "0dc044e33d128b08c44c1413cde0bff34ccb174c66f9a7d71646700d7cbd1f21",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "d3e4700a8436c3125ff5152d1e9d91169404e4bf58eacb83543154ac5eadc24c",
+        "source_scene_sha256": "1c9ebc36c5666dbea4347f33b8aa2d01521c69363f14b9d1f8afb7ea7487c6aa"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "da0f969cbf5472b8088b4db2b119579d45a961063ff4130a46b3e72a716c0cd7",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v1_medium_s010041/episode.hdf5",
+        "h5_sha256": "01d89278f8e14f06f360681b456685ff128e04cdddbaaf4f55fe563f69aa8868",
+        "input_sha256": "d453abad8f039796e7d73af0759617a7f3c213e7a2f83e54492dbfc2b33b2bb2",
+        "native_case_id": "bridge_train_supplement_v1_medium_s010041",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v1_medium_s010045": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v1_medium_s010045.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/8779b00cfc89d4198160f11556ac0fe5a9021df63224ec0b305fd23f53591234/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v1_medium_s010045.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "32004601fb0c455b65a93579f0fac61a8e81521bca05349248f4e2842618dafc",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v1_medium_s010045",
+        "protocol_version": "v1",
+        "seed": 10045,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "8bf850227fbae56d5b64d1604902cbedace69e39ea3f6dfd294f69cc688b321d",
+        "station": "02256ca67878e41af0db944472debb84a9d790af5641ffa288daf7e0fd5fb2c7",
+        "training_geometry_proof": "452021b62fd5f273d285c5e80f123a8d0ad3cebea6c70fb59f2befa29ee33cd6",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "a4666cc7c8d954b9785b1e7ca8002e00dfa76c4437eb677f5b47227c21f98952",
+        "historical_physical_signature": "8de3eb1a1beb6bf0e61f4cebdc05e0548d8ba320a4d50ce856d2cf30f192683e",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "cf7a7c75393eb188937a26aa584fbc95692d408bbdf1867a5db1ae6c03a2ac61",
+        "source_scene_sha256": "8779b00cfc89d4198160f11556ac0fe5a9021df63224ec0b305fd23f53591234"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "a4666cc7c8d954b9785b1e7ca8002e00dfa76c4437eb677f5b47227c21f98952",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v1_medium_s010045/episode.hdf5",
+        "h5_sha256": "24bb9394ad79af63f8fcab10c420ff057a93fcb54255dada72a80f3ef7139924",
+        "input_sha256": "df14ea2d2fd1738f70040fd01bf1f6aab0c6f98d6e72dc369484c46cf215fd8d",
+        "native_case_id": "bridge_train_supplement_v1_medium_s010045",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v1_medium_s010054": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v1_medium_s010054.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/0a9fbb1cb869606fdb38e0988817ee865a44c38b886e622cce53aba874108402/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v1_medium_s010054.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "3b09b591042dd823cd98a5de9a729c4bf804ae8465dc398b41b4268a282c5a23",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v1_medium_s010054",
+        "protocol_version": "v1",
+        "seed": 10054,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "c6441473c93fd3355d492bc323cda8fac0ae23718da95b92740dc2a210a9a08d",
+        "station": "6a2e116b8fd3923f81087bfc4c46e1a906060b830b55eeadf5b5dd3d073e4366",
+        "training_geometry_proof": "8642c018c8e1dfbf691897f8258212b112093b04f7329d4fdfaf814162344aa3",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "93dccbe15e6a8d56f779bbb3d9a188a4f0c0bc3a7e69c5abdf969f6a3a325c48",
+        "historical_physical_signature": "367361d61ddc80a5d5ac308c4daf70c20d18e672f8fa24d5aedde06b35eba9b1",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "626c019d24946faa4765d02069ff1c70d309188f1d5d841105f0cf4ffc196efa",
+        "source_scene_sha256": "0a9fbb1cb869606fdb38e0988817ee865a44c38b886e622cce53aba874108402"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "93dccbe15e6a8d56f779bbb3d9a188a4f0c0bc3a7e69c5abdf969f6a3a325c48",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v1_medium_s010054/episode.hdf5",
+        "h5_sha256": "a07b8c64408c2d7632dcc6989b6ea5d3489215fa0fc2fdaa978b2a77da6a9404",
+        "input_sha256": "be6922f68a1d0d75ba25c341570e0194edfe3863cc6ecdda635655343c142fc4",
+        "native_case_id": "bridge_train_supplement_v1_medium_s010054",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v1_medium_s010061": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v1_medium_s010061.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/59aadfc6f98c08d5c8e56cae279b484b5d53cdcbcce638dd886733afa2740e02/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v1_medium_s010061.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "842817c3e579a4060266e490fc95030150e1fb2ba3a52b8be75197dc35f802ad",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v1_medium_s010061",
+        "protocol_version": "v1",
+        "seed": 10061,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "feb029a8bc343f71cd2ec6185a4677a528a424bec9b01462d13abb745d7701cf",
+        "station": "5714fac20cf7263499ec9a98f3d760b98acb13eca8be7530c808a12c2c96720f",
+        "training_geometry_proof": "7d8206c59ddc508e3835492fb0124488bcc069663ae9e32d5bd4652d85da8c1d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "bdbdbb7ed6de9e2790ea8b770104da913cffb79d1f4b6709dcf0182919c4bb78",
+        "historical_physical_signature": "e5f6a03c91cbafcf44869fd1c92e3ef26f64db7b6103a6cf476704ada1ebbc79",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "973c3dae122a5fa5bc5421ce9357ae8f4ef9b166774e0b7511220afbed8e7d32",
+        "source_scene_sha256": "59aadfc6f98c08d5c8e56cae279b484b5d53cdcbcce638dd886733afa2740e02"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "bdbdbb7ed6de9e2790ea8b770104da913cffb79d1f4b6709dcf0182919c4bb78",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v1_medium_s010061/episode.hdf5",
+        "h5_sha256": "aee9b94b0f656ada42ebba22918a7d10c1dfca503388629d0b19b483d4ce921c",
+        "input_sha256": "54bd09cc6a0a9fa7e71201bfafe5779731b88515f69fea00e7bd14847d0ecc0f",
+        "native_case_id": "bridge_train_supplement_v1_medium_s010061",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v2_medium_s010064": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v2_medium_s010064.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/f8ba3cd3fa33aa18a26460d24889d6c3c4194c0ecac3acd539a7219682cc1865/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v2_medium_s010064.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "8bb6e45a8439a05b0c319b33c5f6896c13ae77a651056e841465e7e7a9f4451b",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v2_medium_s010064",
+        "protocol_version": "v1",
+        "seed": 10064,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "b2fce974f4270ca39a8c929ff7b260d723777a3c54aecea0bb58915c616bd71d",
+        "station": "002ba3f80ffdcb4947ba175e1e67d874071b965f3f546223b6722e6e099ad1fc",
+        "training_geometry_proof": "a5be448151b73273af58959b45c02261353260b2405d28e1af16b761c92b1f9a",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "303ac9480a8d782a13847a9e226b6cbdf1928a0e3f5d5e181fcf74c601dbbc16",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "588e1fffc4610ac6b00005c25aa8333f2e7f391992fec5b944ae70a64f448a57",
+        "source_scene_sha256": "f8ba3cd3fa33aa18a26460d24889d6c3c4194c0ecac3acd539a7219682cc1865"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "303ac9480a8d782a13847a9e226b6cbdf1928a0e3f5d5e181fcf74c601dbbc16",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v2_medium_s010064/episode.hdf5",
+        "h5_sha256": "9afd1dcc6e690d73cd604e07b7f56cc0fd3ed35177f83d9c86e85175358343c2",
+        "input_sha256": "303ac9480a8d782a13847a9e226b6cbdf1928a0e3f5d5e181fcf74c601dbbc16",
+        "native_case_id": "bridge_train_supplement_v2_medium_s010064",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v2_medium_s010079": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v2_medium_s010079.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/dcba3f27a0e1a37e19a546d3f9d2dc8a98573559eabc49266445a971455c6053/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v2_medium_s010079.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "5f5677507dbd556fe5d023d14df66d60ae9e1b97c5563e39f19a858e1195c4a4",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v2_medium_s010079",
+        "protocol_version": "v1",
+        "seed": 10079,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "2f467cba3ed24e0cd1f0ec8e1c82fd8fffd0de8f6f10da1f1b6435f2f8f40371",
+        "station": "5c87db7b0a5a5c5873dc4faf445cd2411c77ff83b3e95fb9c92cdeda36c8c9dc",
+        "training_geometry_proof": "cc3525a49905c3a279cb7f19fb6440c760554938be43067d16b64978ea0afd2f",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "b00b113ddaaca44418967868371ba3a6888a09248c9f7667f67640fc96356661",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "7b5b5597635f784977b775533b7f24266e5f22b9c18d1c0fc7e80c6290587d71",
+        "source_scene_sha256": "dcba3f27a0e1a37e19a546d3f9d2dc8a98573559eabc49266445a971455c6053"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "b00b113ddaaca44418967868371ba3a6888a09248c9f7667f67640fc96356661",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v2_medium_s010079/episode.hdf5",
+        "h5_sha256": "4adb6ddcc1ac8d5f1514dc5cb299c77f938da03f1950446716be831efc06e144",
+        "input_sha256": "b00b113ddaaca44418967868371ba3a6888a09248c9f7667f67640fc96356661",
+        "native_case_id": "bridge_train_supplement_v2_medium_s010079",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v2_medium_s010081": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v2_medium_s010081.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/1272a9faa9b86aae887a1e850c9f2de68d796d72f0493a372c65adbda6a965e9/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v2_medium_s010081.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "1d062b529d855265742cd1a1c221c54d8b1447952f8c8b6f5b49ae7c4242402b",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v2_medium_s010081",
+        "protocol_version": "v1",
+        "seed": 10081,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "29e85f321048e9964a49f27f3858117f8b3d1cfa4d4e42234d3bc9a7877fa594",
+        "station": "792dc3666ec29ba2477bd58115bbbb820b988c8731ec8693eb13b9bf797e44bc",
+        "training_geometry_proof": "d4ff47a0b287af0ade807f6f0a466fe21687f6c6b7b4ed6b7c42ebcba45399c0",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "56e80ac1f02a4334ed53d0a48b2006e0214fdbc0c1f836ee518170695525c909",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "1888837d75a09d5ab013ca65f268a785ee2b6e2904d915bf25294db98956ef51",
+        "source_scene_sha256": "1272a9faa9b86aae887a1e850c9f2de68d796d72f0493a372c65adbda6a965e9"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "56e80ac1f02a4334ed53d0a48b2006e0214fdbc0c1f836ee518170695525c909",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v2_medium_s010081/episode.hdf5",
+        "h5_sha256": "92b5fe20f5f4541d68782c6c9e8a30911b8945b0a536046f600bb3099a02d14f",
+        "input_sha256": "56e80ac1f02a4334ed53d0a48b2006e0214fdbc0c1f836ee518170695525c909",
+        "native_case_id": "bridge_train_supplement_v2_medium_s010081",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v2_medium_s010104": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v2_medium_s010104.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/4d195c8bd0eef1521e5131e9a4b316071dea89ec076dba2450da3604f4ef6c4c/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v2_medium_s010104.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f850b31ae1b359e30d4a836803c04b00b5d8672828cc5e7ed33b8077b0c73115",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v2_medium_s010104",
+        "protocol_version": "v1",
+        "seed": 10104,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "378ad84407ba92f22efd0971c22964d4633ba6f0cf2a84cea53ad9e24582d454",
+        "station": "474ba5785d42bcc3e311972020c6a330679c2299f93b49823940dfb9b6e75fa9",
+        "training_geometry_proof": "ee17cec19f95f31f7e6943eaaebb132a6f6a25da337e4edff2e41eee2dd3eed6",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "a6cd6e9ee708375ade0b0a5ce715de0687d839762f5b7b28c7bf17d5261c821d",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "f4e2ce016756d740bd54cccca3348d8e50d320ab319b3d0292caa19dd72e8577",
+        "source_scene_sha256": "4d195c8bd0eef1521e5131e9a4b316071dea89ec076dba2450da3604f4ef6c4c"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "a6cd6e9ee708375ade0b0a5ce715de0687d839762f5b7b28c7bf17d5261c821d",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v2_medium_s010104/episode.hdf5",
+        "h5_sha256": "4a93fe71b4630d19fb69a1d3d1545ac36746f0030c8715c33b38ea64e155bbac",
+        "input_sha256": "a6cd6e9ee708375ade0b0a5ce715de0687d839762f5b7b28c7bf17d5261c821d",
+        "native_case_id": "bridge_train_supplement_v2_medium_s010104",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v2_medium_s010118": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v2_medium_s010118.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/e918aee38268991abbd892c71b15197023a0e9acc69ac1f814aee7e09c2cd88d/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v2_medium_s010118.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "5057bb3525300bb0f83e1e560ca70432546a34b169554130f3a5494d360ce6d8",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v2_medium_s010118",
+        "protocol_version": "v1",
+        "seed": 10118,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "b54999b9b362429d00358d6492a3ecd176b7826009f05757a4132608066f4c54",
+        "station": "8eb7627422317273671f8b14aac1a599b1d087f86b49c25a57ded009d487390b",
+        "training_geometry_proof": "73119c3740ff7edea9439eb4a963b7be36af00ff4c1a4aee2fe6410de73e3155",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "73dee5feafeb874663cfb87e35d60dae3b99bc75c736523c809f5aa51415ed3a",
+        "historical_physical_signature": null,
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "51ca4c74fc576b9b3ad0bd97c0d9987d153cf631dbe2a608433553db46cbaea2",
+        "source_scene_sha256": "e918aee38268991abbd892c71b15197023a0e9acc69ac1f814aee7e09c2cd88d"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "73dee5feafeb874663cfb87e35d60dae3b99bc75c736523c809f5aa51415ed3a",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v2_medium_s010118/episode.hdf5",
+        "h5_sha256": "798f3ad380d58d045a7dc46b31f68fc4a2fef3299db33a532158251d8802a3e8",
+        "input_sha256": "73dee5feafeb874663cfb87e35d60dae3b99bc75c736523c809f5aa51415ed3a",
+        "native_case_id": "bridge_train_supplement_v2_medium_s010118",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v2_medium_s010121": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v2_medium_s010121.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/4e5416e04d28d890a36ad426bde52ce00a4cfdb512a7b3a34259f893ac5b0ce2/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v2_medium_s010121.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "b7e46a22b69bab8e484efe3edc59ef286056a91d7d0eb8f8467923f8aef98cf3",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v2_medium_s010121",
+        "protocol_version": "v1",
+        "seed": 10121,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "0b721432dc7245b6996df0f048fd91a2172414f5a92be3a83c30f513f20ba9e6",
+        "station": "f1fabf07b7aa71d9df3a750a96bd11fe052473430109e0c3e2527d010d270127",
+        "training_geometry_proof": "e64f165b34974dc4777e1ffde876bac5551bfc72d07f9939e7c1fe4fa574aaea",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "f0e949ab39508fa8c431c5bcd7e275c5e6e6712c6e8d2f11222408401f4c7904",
+        "historical_physical_signature": "4ea90d087517c50a0e62d5499470304ac460289cd86ecbee45ce0bd65b345a6c",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "29530bf6b48db7cb94e743c1d186369e9f6f91fe3f7d9ac8483db364d90231e6",
+        "source_scene_sha256": "4e5416e04d28d890a36ad426bde52ce00a4cfdb512a7b3a34259f893ac5b0ce2"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "f0e949ab39508fa8c431c5bcd7e275c5e6e6712c6e8d2f11222408401f4c7904",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v2_medium_s010121/episode.hdf5",
+        "h5_sha256": "675dc5ff5fde4a234b8a0a1d821b025bb5ac75361244bd58617ca1d85371a07e",
+        "input_sha256": "a7b9625ca7c624ee7ef18088454e6130c7dd038dfa0194f51147bece1bc8f1d3",
+        "native_case_id": "bridge_train_supplement_v2_medium_s010121",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v2_medium_s010124": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v2_medium_s010124.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/330d2fe8ed238286dc7ce06a8da641e6da0fd92eeb5f1d74212ea3d4f515d72f/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v2_medium_s010124.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "1a4e1f2a7dc061bb80cc5c7b2de3f65f5fc300852c6adbb2ec4f0a632c63a64e",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v2_medium_s010124",
+        "protocol_version": "v1",
+        "seed": 10124,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": null,
+      "runtime_asset_sha256": {
+        "cp07_binding": "c4dfa99ba27db34cceb752df9c6fba5e0f0bc25fd70785bc1d4ebcb5ba8a2ea2",
+        "station": "1e774a0172605544931e272055e3a72f1b43bad82fcb4127dcbd8aac97b775b4",
+        "training_geometry_proof": "fa1329324ad7ea61b3d18942ab7ae331945f6fc714ce2e1f048f0b1c52d3135c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "a91d3d46c2e9330576a7443859b939a10097abb59eb62f2c48fffa700876f8c8",
+        "historical_physical_signature": "7ee2a3c2252f8a8bf484c9c54283db100a491ddc56772bb7ea3a2d3be6c947e5",
+        "original_wrapper_bytes": false,
+        "source_layout_sha256": "5db487e35ec21bc490a80e6cda2a2fc0b919767202e7b75f8d3da9e42635506f",
+        "source_scene_sha256": "330d2fe8ed238286dc7ce06a8da641e6da0fd92eeb5f1d74212ea3d4f515d72f"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "a91d3d46c2e9330576a7443859b939a10097abb59eb62f2c48fffa700876f8c8",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v2_medium_s010124/episode.hdf5",
+        "h5_sha256": "81a1cd0d5c782038f7f43fe6176662436631968bba6137e708a1d35705ef8c7d",
+        "input_sha256": "d20ea77cfe2cfa5764a611a6bde26f3fdeaeef90da7b810f39571dcd20a7f649",
+        "native_case_id": "bridge_train_supplement_v2_medium_s010124",
+        "original_wrapper_bytes": false,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    },
+    "CP07/medium/bridge_train_supplement_v4_medium_s010130": {
+      "assets": {
+        "cp07_binding": "CP07/bindings/medium/bridge_train_supplement_v4_medium_s010130.json",
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "station": "CP07-assets/d6c584dca7c23d7a2b7892b59885d946bd55b21941adf6e13a0306fde2b0fb9d/scene.usda",
+        "training_geometry_proof": "CP07/geometry-proofs/medium/bridge_train_supplement_v4_medium_s010130.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a480faa9bf57574ab682bc4e02ec9396cccdd5a65b7f787fcbf012faf9438a2b",
+      "identity": {
+        "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp07-source-binding-v2",
+        "difficulty": "medium",
+        "instance_id": "bridge_train_supplement_v4_medium_s010130",
+        "protocol_version": "v1",
+        "seed": 10130,
+        "source_id": "cp07-bridge-car-canonical-fff77c74",
+        "task_id": "CP07"
+      },
+      "public_runtime_only": true,
+      "raw_task_id": "BRIDGE_CAR",
+      "runtime_asset_sha256": {
+        "cp07_binding": "2ae607029457845364877c655db47d92241645ee9f2440eae86609469d4cf376",
+        "station": "b32ed8c2d39169d1183c199285b6dd9ddfe06b2506b5b5f901f5ed67d20edef5",
+        "training_geometry_proof": "a5534eba78e40d4e10b2ad08b012c41d7bee9b02788e33a91232ac6b5b0f9506",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "condition_artifact_sha256": "0a949929cd136599b41a92912d31122bc51eb32cd49a1da93a93a177bffec673",
+        "historical_physical_signature": "621508e26179fadca0281c29f990d354e9378c6d6017dffaf34f61cc41f573f1",
+        "original_wrapper_bytes": true,
+        "source_layout_sha256": "42d65134216a787663bd06405d576ec164e70bb2eea392fa076fbfc09682d028",
+        "source_scene_sha256": "d6c584dca7c23d7a2b7892b59885d946bd55b21941adf6e13a0306fde2b0fb9d"
+      },
+      "train_source": {
+        "condition_artifact_sha256": "0a949929cd136599b41a92912d31122bc51eb32cd49a1da93a93a177bffec673",
+        "difficulty": "medium",
+        "h5_path": "data/CP07/medium/bridge_train_supplement_v4_medium_s010130/episode.hdf5",
+        "h5_sha256": "5500a60220dbaf89286c2f1c7bf228b6007bbe6a3244817b4691940c20cf5c7c",
+        "input_sha256": "0a949929cd136599b41a92912d31122bc51eb32cd49a1da93a93a177bffec673",
+        "native_case_id": "bridge_train_supplement_v4_medium_s010130",
+        "original_wrapper_bytes": true,
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP07"
+      }
+    }
+  },
+  "schema": "mind2act_eval.training_source_records.v1"
+}

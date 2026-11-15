@@ -1,0 +1,4075 @@
+{
+  "records": {
+    "CP04/easy/VAL-CP04-easy-0d5a3c891a8c8ed8": {
+      "effective_signature": "0d5a3c891a8c8ed82d71fc4e5c7dd7921b645dec345ae706994743fe8c859b3e",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-0d5a3c891a8c8ed8.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-0d5a3c891a8c8ed8.usda": "d6009dd456b7feab5a6263fde45b5e1366caeea6967fae500c79aedc6d157a21"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.065,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "garlic"
+          ],
+          "recipe_indices": [
+            0,
+            1
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "0d5a3c891a8c8ed82d71fc4e5c7dd7921b645dec345ae706994743fe8c859b3e",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-0d5a3c891a8c8ed8",
+        "protocol_version": "v1",
+        "seed": 610002,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "eb9aeb21cb02e00b2f2e495585b25c52990f879dca7632b10d2b3d594581c39b"
+    },
+    "CP04/easy/VAL-CP04-easy-106bfaca5142f64b": {
+      "effective_signature": "106bfaca5142f64bcac1ea2316875b2e51e5da25bf035c1faa734b16bc1e9340",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-106bfaca5142f64b.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-106bfaca5142f64b.usda": "692448fb27360279b64d3d3bf03f81fd8d757baa99b1b64e75a6d8ae3526f4c8"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.065,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "garlic",
+            "ginger"
+          ],
+          "recipe_indices": [
+            1,
+            2
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "106bfaca5142f64bcac1ea2316875b2e51e5da25bf035c1faa734b16bc1e9340",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-106bfaca5142f64b",
+        "protocol_version": "v1",
+        "seed": 610005,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "30d946cc4fcd4e83d2f1a6acdc8600a7ddbaa17529dd6d326ff270fa31dc5cd1"
+    },
+    "CP04/easy/VAL-CP04-easy-11a6d83bc00a223c": {
+      "effective_signature": "11a6d83bc00a223cea673cb08710e40d85f6b8dbe59f4e63c09da25e9132fca1",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-11a6d83bc00a223c.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-11a6d83bc00a223c.usda": "5565967cae61e140b87cd06625e71882bf325e48feb5ad6d4328f824a221151b"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.065,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "ginger",
+            "onion"
+          ],
+          "recipe_indices": [
+            2,
+            3
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "11a6d83bc00a223cea673cb08710e40d85f6b8dbe59f4e63c09da25e9132fca1",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-11a6d83bc00a223c",
+        "protocol_version": "v1",
+        "seed": 610009,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "d0eb3f19dbf9b624d424b3a614a9cf9594ef039f05b75849b8cf8a63634f45d6"
+    },
+    "CP04/easy/VAL-CP04-easy-2d584eb51dedd222": {
+      "effective_signature": "2d584eb51dedd2223a94e8f50d64f4a7e23504df1f1353a820363bf9751c7f20",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-2d584eb51dedd222.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-2d584eb51dedd222.usda": "abbaa139e7249d2823c10b98bd101fbc153978094966646d258d66572e7b6b1d"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.065,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "garlic",
+            "onion"
+          ],
+          "recipe_indices": [
+            1,
+            3
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "2d584eb51dedd2223a94e8f50d64f4a7e23504df1f1353a820363bf9751c7f20",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-2d584eb51dedd222",
+        "protocol_version": "v1",
+        "seed": 610006,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "c26d683f75346ec03b748b512985c549e48f3fa3e8507613fd4181abf889b3a1"
+    },
+    "CP04/easy/VAL-CP04-easy-529bd6fb94ef7c82": {
+      "effective_signature": "529bd6fb94ef7c820f9763333cfb6c4ce1ee546134162cd43347b8fec60c204d",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-529bd6fb94ef7c82.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-529bd6fb94ef7c82.usda": "59e3d143eb7482df5d74f8010a26cad2dfa3a8156ac0a0357a37c4289b0d44c4"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.065,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "garlic",
+            "chili"
+          ],
+          "recipe_indices": [
+            1,
+            0
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "529bd6fb94ef7c820f9763333cfb6c4ce1ee546134162cd43347b8fec60c204d",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-529bd6fb94ef7c82",
+        "protocol_version": "v1",
+        "seed": 610004,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "4757b4b7d3803d128f0567bf60795fa949763cf7a7b8ebd5b575a528d25cfa1d"
+    },
+    "CP04/easy/VAL-CP04-easy-53035371a950cf03": {
+      "effective_signature": "53035371a950cf032da5a76801ced5976bfe5232ce6a8c81ddc25ad4b85a0eb9",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-53035371a950cf03.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-53035371a950cf03.usda": "0d892b032f22d3cec7366b398063dc96f659647c23f9d1e517e0e2c83c737c40"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.065,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "ginger",
+            "garlic"
+          ],
+          "recipe_indices": [
+            2,
+            1
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "53035371a950cf032da5a76801ced5976bfe5232ce6a8c81ddc25ad4b85a0eb9",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-53035371a950cf03",
+        "protocol_version": "v1",
+        "seed": 610008,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "b2e979c78e7532c955baa4791f6ee1801bd33df154f8a4b9e749443c850ebe3e"
+    },
+    "CP04/easy/VAL-CP04-easy-9b5148b876620d68": {
+      "effective_signature": "9b5148b876620d68b82e790f690ce2082078771525d1465137d3a0e0a1207eed",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-9b5148b876620d68.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-9b5148b876620d68.usda": "d0fbf2dee70fefdc9662528817a55eba4fd74c59fd790083a99ea285173c46d7"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.065,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "ginger",
+            "chili"
+          ],
+          "recipe_indices": [
+            2,
+            0
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "9b5148b876620d68b82e790f690ce2082078771525d1465137d3a0e0a1207eed",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-9b5148b876620d68",
+        "protocol_version": "v1",
+        "seed": 610007,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "59a8c5a0455fe0c9e025389b93b02bf7a309b1aca996678c25de08ab65bddba8"
+    },
+    "CP04/easy/VAL-CP04-easy-a9226fab9a152e6d": {
+      "effective_signature": "a9226fab9a152e6df6f865bddb5195a14a4b8e29874495a1e4b11ba2414df694",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-a9226fab9a152e6d.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-a9226fab9a152e6d.usda": "95fa8d318949544f077915ce8ef1fb478b4b94afe88406e54163bf7911d7b18e"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.065,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "onion"
+          ],
+          "recipe_indices": [
+            0,
+            3
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "a9226fab9a152e6df6f865bddb5195a14a4b8e29874495a1e4b11ba2414df694",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-a9226fab9a152e6d",
+        "protocol_version": "v1",
+        "seed": 610003,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "4f80182c3fef4817d2466ea051db21a7b2399d5f1dc10df0e9d722b74ea8af25"
+    },
+    "CP04/easy/VAL-CP04-easy-b9ef5eb9f3ec2b93": {
+      "effective_signature": "b9ef5eb9f3ec2b93d254a12d155a6589e9f9a72e68eecca3817ab71c735fe7a1",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-b9ef5eb9f3ec2b93.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-b9ef5eb9f3ec2b93.usda": "ee867f3bd08c618be08894446dec495474266feeffb86c056fe1f0f84835ad76"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.065,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "ginger"
+          ],
+          "recipe_indices": [
+            0,
+            2
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "b9ef5eb9f3ec2b93d254a12d155a6589e9f9a72e68eecca3817ab71c735fe7a1",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-b9ef5eb9f3ec2b93",
+        "protocol_version": "v1",
+        "seed": 610000,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "8b908b2549b327527223387885231a51348a1c9c2e03f294b20553a7f4a0ed87"
+    },
+    "CP04/easy/VAL-CP04-easy-f15b96a171ac2aa9": {
+      "effective_signature": "f15b96a171ac2aa9673b99ed70ba5491926096e890358aa920fce5ce0a4f4dac",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/easy/VAL-CP04-easy-f15b96a171ac2aa9.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/easy/VAL-CP04-easy-f15b96a171ac2aa9.usda": "56032172086df4ea42dd78b01f012491318dddff132a95639b520ac93dbd4897"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "easy",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              -0.10499999999999998,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.065,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.065,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              -0.10499999999999998,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "onion",
+            "chili"
+          ],
+          "recipe_indices": [
+            3,
+            0
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "easy",
+            "green_max_C": 90.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 4.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "f15b96a171ac2aa9673b99ed70ba5491926096e890358aa920fce5ce0a4f4dac",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "easy",
+        "instance_id": "VAL-CP04-easy-f15b96a171ac2aa9",
+        "protocol_version": "v1",
+        "seed": 610001,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "eb6038befd4dd61ec8acc90d4f5bc334ca648406a62c529ec56cd6d3703450e7"
+    },
+    "CP04/hard/VAL-CP04-hard-0b9b88e8641221d7": {
+      "effective_signature": "0b9b88e8641221d72b16f497645906ed1f47c670179d8f7d37a1a28d6c4d1f14",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-0b9b88e8641221d7.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-0b9b88e8641221d7.usda": "bae8ccddeed10a70e67d706d026342ef4838011a3d657be8505b434c8103d601"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "ginger",
+            "onion"
+          ],
+          "recipe_indices": [
+            0,
+            2,
+            3
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "0b9b88e8641221d72b16f497645906ed1f47c670179d8f7d37a1a28d6c4d1f14",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-0b9b88e8641221d7",
+        "protocol_version": "v1",
+        "seed": 610012,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "5892579d62ac12d465def5dda715755b882cd7f0cc77b51b1791332ac8940d93"
+    },
+    "CP04/hard/VAL-CP04-hard-145cb9fd4974eb1d": {
+      "effective_signature": "145cb9fd4974eb1dc6155b517f89a0e96e812877d6f76ed4ea628e82f0c31d8c",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-145cb9fd4974eb1d.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-145cb9fd4974eb1d.usda": "dd5255f1ce6bf4a1ef9739b6d41606c4f9185167d8aa3ad81c81926fedc4f37c"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "garlic",
+            "ginger",
+            "chili"
+          ],
+          "recipe_indices": [
+            1,
+            2,
+            0
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "145cb9fd4974eb1dc6155b517f89a0e96e812877d6f76ed4ea628e82f0c31d8c",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-145cb9fd4974eb1d",
+        "protocol_version": "v1",
+        "seed": 610016,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "668f3e4aefe275e6d72f68193a1ca401cc6cd7bcbd2247c088e07e08cdfe9987"
+    },
+    "CP04/hard/VAL-CP04-hard-1b30c770ea45a16d": {
+      "effective_signature": "1b30c770ea45a16d916d45b2c05f0cbc4373db9ce12d8206e2c75ffcef69a96e",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-1b30c770ea45a16d.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-1b30c770ea45a16d.usda": "a4867d9e5f57abb7f64fc7ab1497dd372ae50eecef68c9ab04d20b43fbf83c40"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "ginger",
+            "garlic"
+          ],
+          "recipe_indices": [
+            0,
+            2,
+            1
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "1b30c770ea45a16d916d45b2c05f0cbc4373db9ce12d8206e2c75ffcef69a96e",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-1b30c770ea45a16d",
+        "protocol_version": "v1",
+        "seed": 610011,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "b189b1bb155dadfb95431e41254a181569c7aca3740d22c5a7c314fe189cf21a"
+    },
+    "CP04/hard/VAL-CP04-hard-211ba84a18746c79": {
+      "effective_signature": "211ba84a18746c796e888ef7bdc42ccf85277deb89456e47d3425e8a3f970eae",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-211ba84a18746c79.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-211ba84a18746c79.usda": "94b7ea5c2d2b71585b5b3a7f6431cf95eb84f881756a6358a439af6265601d16"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "ginger",
+            "garlic",
+            "chili"
+          ],
+          "recipe_indices": [
+            2,
+            1,
+            0
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "211ba84a18746c796e888ef7bdc42ccf85277deb89456e47d3425e8a3f970eae",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-211ba84a18746c79",
+        "protocol_version": "v1",
+        "seed": 610019,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "c5656a958b5cd02a6a1572ecdd4d64174f670c05f3dc1f732b3a721b9b40b3bc"
+    },
+    "CP04/hard/VAL-CP04-hard-2de94bd7b6f66025": {
+      "effective_signature": "2de94bd7b6f6602540a1fde8d6d3da4b33aed38fe33b886663fa6c9b01aface8",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-2de94bd7b6f66025.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-2de94bd7b6f66025.usda": "3f0dc8cf1a4ddad590ec58c7c9147398ff887dcb8d864e86d9796dacbeb597c7"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "garlic",
+            "chili",
+            "onion"
+          ],
+          "recipe_indices": [
+            1,
+            0,
+            3
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "2de94bd7b6f6602540a1fde8d6d3da4b33aed38fe33b886663fa6c9b01aface8",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-2de94bd7b6f66025",
+        "protocol_version": "v1",
+        "seed": 610015,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "99350658e976200db0e10268a6b1ad8ad8b4426fcbaaa5546f793471449f4b62"
+    },
+    "CP04/hard/VAL-CP04-hard-7854948c2b5114a2": {
+      "effective_signature": "7854948c2b5114a2ec17efd52913c722d94717abecff83700aedcfe5f311e10a",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-7854948c2b5114a2.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-7854948c2b5114a2.usda": "94135255066ebf9c9f82074ce61b7cc26ae7664de10310084dd0e98aa1c5abbc"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "ginger",
+            "chili",
+            "onion"
+          ],
+          "recipe_indices": [
+            2,
+            0,
+            3
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "7854948c2b5114a2ec17efd52913c722d94717abecff83700aedcfe5f311e10a",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-7854948c2b5114a2",
+        "protocol_version": "v1",
+        "seed": 610018,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "e60bdae9b02938c121fb167fe5ffdaceaeb74dac64b8b4326722c154224eeb87"
+    },
+    "CP04/hard/VAL-CP04-hard-a845a7c7acbdaa42": {
+      "effective_signature": "a845a7c7acbdaa427d8919b3c19ad11a07d988bc8f7aacd30b95c70a569567bc",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-a845a7c7acbdaa42.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-a845a7c7acbdaa42.usda": "1a92ba77e87b1ca8ff3676f44cb3b8856a34a29e37e019317d0a29bf937011b3"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "garlic",
+            "ginger"
+          ],
+          "recipe_indices": [
+            0,
+            1,
+            2
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "a845a7c7acbdaa427d8919b3c19ad11a07d988bc8f7aacd30b95c70a569567bc",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-a845a7c7acbdaa42",
+        "protocol_version": "v1",
+        "seed": 610010,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "359063c11d79480587fef7caf0bdc280580dea51b21e10a3e41accbe5dbdc9cc"
+    },
+    "CP04/hard/VAL-CP04-hard-c312e57f27b91287": {
+      "effective_signature": "c312e57f27b912877361792a1c733fe4817218ce2aa4602de80641f2dca46cc0",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-c312e57f27b91287.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-c312e57f27b91287.usda": "ecab3641630a1913d5d845a5bb3e07363543795c52be986af603909de1ac3777"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "ginger",
+            "chili",
+            "garlic"
+          ],
+          "recipe_indices": [
+            2,
+            0,
+            1
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "c312e57f27b912877361792a1c733fe4817218ce2aa4602de80641f2dca46cc0",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-c312e57f27b91287",
+        "protocol_version": "v1",
+        "seed": 610017,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "aa03f690252d48166a61f9ff7956934c7c9c814ab771238d1e7db9941a5608f0"
+    },
+    "CP04/hard/VAL-CP04-hard-d94929ff4070ed15": {
+      "effective_signature": "d94929ff4070ed15354d7e588b3a8fea221ef97a41529d75f369c2879d94941e",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-d94929ff4070ed15.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-d94929ff4070ed15.usda": "be6f08d7d03236b28bf84bfb249e9b900021d5484755bfe30c904c8f271f4dfd"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "garlic",
+            "chili",
+            "ginger"
+          ],
+          "recipe_indices": [
+            1,
+            0,
+            2
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "d94929ff4070ed15354d7e588b3a8fea221ef97a41529d75f369c2879d94941e",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-d94929ff4070ed15",
+        "protocol_version": "v1",
+        "seed": 610014,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "278e677912c672d52e44a595967d54ff3954e8cfc8d774591b2398c74df11d8f"
+    },
+    "CP04/hard/VAL-CP04-hard-e8ea86b1062c931c": {
+      "effective_signature": "e8ea86b1062c931ca4609d6a6db452de53fbea4f56feb8bd7184b4328c7a8ca8",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/hard/VAL-CP04-hard-e8ea86b1062c931c.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/hard/VAL-CP04-hard-e8ea86b1062c931c.usda": "e449ada7443a3d984ead402d0868c5d2af28bf2fd2645d9b83f85264abcaf907"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "hard",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.52,
+              0.49,
+              0.798
+            ],
+            "3": [
+              -0.29,
+              0.32,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "onion",
+            "ginger"
+          ],
+          "recipe_indices": [
+            0,
+            3,
+            2
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "hard",
+            "green_max_C": 85.0,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 2.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "e8ea86b1062c931ca4609d6a6db452de53fbea4f56feb8bd7184b4328c7a8ca8",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "hard",
+        "instance_id": "VAL-CP04-hard-e8ea86b1062c931c",
+        "protocol_version": "v1",
+        "seed": 610013,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "9f254e4481cccc32df01fa78fbfddfa63d5b0899da7daf28d6f41774c9c2366e"
+    },
+    "CP04/medium/VAL-CP04-medium-0b6d5cbb6f9edca4": {
+      "effective_signature": "0b6d5cbb6f9edca414e24641eca67d82a17e5add6ca2a94a31e56cecac5132a2",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-0b6d5cbb6f9edca4.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-0b6d5cbb6f9edca4.usda": "81c7d39abf2546c15e07819b80abefb722e9b21224e8ba14796a4e634e7a90b7"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "ginger",
+            "onion"
+          ],
+          "recipe_indices": [
+            2,
+            3
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "0b6d5cbb6f9edca414e24641eca67d82a17e5add6ca2a94a31e56cecac5132a2",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-0b6d5cbb6f9edca4",
+        "protocol_version": "v1",
+        "seed": 610027,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "001ddaca62771144d78013da2f0955994e8563b5490c116026e140203256d77f"
+    },
+    "CP04/medium/VAL-CP04-medium-20ad7b457fa2fccb": {
+      "effective_signature": "20ad7b457fa2fccb7b7f866be0c5367659c617f8a1a8dd10fb97a9a7a596e6a3",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-20ad7b457fa2fccb.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-20ad7b457fa2fccb.usda": "92e34cfa5314cdc8ad9bb830bc1467562c136aa2a4bff5d1e459991fcb1aaa90"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "ginger"
+          ],
+          "recipe_indices": [
+            0,
+            2
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "20ad7b457fa2fccb7b7f866be0c5367659c617f8a1a8dd10fb97a9a7a596e6a3",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-20ad7b457fa2fccb",
+        "protocol_version": "v1",
+        "seed": 610021,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "f8b79b1e8d6a105732683bdb396298bb00aea73787fd28eb07cd5ebb1928bae3"
+    },
+    "CP04/medium/VAL-CP04-medium-372b7fca90240739": {
+      "effective_signature": "372b7fca902407392a1055d2b2c22f40c8289cd3d92b17929ea960b13ba1fd1a",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-372b7fca90240739.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-372b7fca90240739.usda": "1def501b62303b9969885b87d3d770c7d50a231883af3b783b7462d1f874fcbb"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "garlic"
+          ],
+          "recipe_indices": [
+            0,
+            1
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "372b7fca902407392a1055d2b2c22f40c8289cd3d92b17929ea960b13ba1fd1a",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-372b7fca90240739",
+        "protocol_version": "v1",
+        "seed": 610020,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "dee6ac001ed3ef648fad8c2016b52daa8975edc5daf8c685b283b99d0cb7b3a3"
+    },
+    "CP04/medium/VAL-CP04-medium-4c1a1a5b5d33b749": {
+      "effective_signature": "4c1a1a5b5d33b749963bedc5125f6ef2c6d07da19430ed0209cc6749a553511c",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-4c1a1a5b5d33b749.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-4c1a1a5b5d33b749.usda": "01104edea02a09243618f7d8a071f98eadd9756d02b6dc59f7aa79cc6dcb180c"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "ginger",
+            "chili"
+          ],
+          "recipe_indices": [
+            2,
+            0
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "4c1a1a5b5d33b749963bedc5125f6ef2c6d07da19430ed0209cc6749a553511c",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-4c1a1a5b5d33b749",
+        "protocol_version": "v1",
+        "seed": 610026,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "9e46de47c1c4a0534c1dc3a1aa255b9b44c724ed21c3764d77921f238e9716d9"
+    },
+    "CP04/medium/VAL-CP04-medium-53dea7b1fbc501a7": {
+      "effective_signature": "53dea7b1fbc501a7a80d80d6c13ba602dfe2423a51229c94d1be9b6c6ccd4f50",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-53dea7b1fbc501a7.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-53dea7b1fbc501a7.usda": "74eaccb9693eff79002d143155d8f51085e2fc5bb0e28cca98175f812940571b"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "garlic",
+            "onion"
+          ],
+          "recipe_indices": [
+            1,
+            3
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "53dea7b1fbc501a7a80d80d6c13ba602dfe2423a51229c94d1be9b6c6ccd4f50",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-53dea7b1fbc501a7",
+        "protocol_version": "v1",
+        "seed": 610025,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "5de10d097ca2fc3f511721e9e16e499f10eaeb9417fc7d29bfd0104a22f05a4b"
+    },
+    "CP04/medium/VAL-CP04-medium-a1c39fd21c2dbcd5": {
+      "effective_signature": "a1c39fd21c2dbcd5c7b6a3b1835a3a736bcd249a8dc429f72f2b438c330ac141",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-a1c39fd21c2dbcd5.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-a1c39fd21c2dbcd5.usda": "514ccab3937bc9f3dcca49ce85a0d82fe4901cd3a8a4337588f1953cf7d85352"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "garlic",
+            "chili"
+          ],
+          "recipe_indices": [
+            1,
+            0
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "a1c39fd21c2dbcd5c7b6a3b1835a3a736bcd249a8dc429f72f2b438c330ac141",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-a1c39fd21c2dbcd5",
+        "protocol_version": "v1",
+        "seed": 610023,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "0244cef90e8ce846bd1d6f3794c97ded6fc898cabfaa110d543fded8a89989ac"
+    },
+    "CP04/medium/VAL-CP04-medium-bffc1db83afd87c4": {
+      "effective_signature": "bffc1db83afd87c45e1c6ecb834d69b55b4d507d1999c116e6ed0f75a05f8808",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-bffc1db83afd87c4.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-bffc1db83afd87c4.usda": "fe92bc6cb32c033f51062db5281d1d2f828a4ab7b317e1355f69bda1f19739f6"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "garlic",
+            "ginger"
+          ],
+          "recipe_indices": [
+            1,
+            2
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "bffc1db83afd87c45e1c6ecb834d69b55b4d507d1999c116e6ed0f75a05f8808",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-bffc1db83afd87c4",
+        "protocol_version": "v1",
+        "seed": 610024,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "27c8164752789fe1d2c4a8478273c4fef82c580219686b46cc685728fdc12773"
+    },
+    "CP04/medium/VAL-CP04-medium-f04b5b025d24720e": {
+      "effective_signature": "f04b5b025d24720eb3d79cf0b9f1d4e3d8d35381840e8e4934449fdf8051b2c4",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-f04b5b025d24720e.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-f04b5b025d24720e.usda": "f44efe5b41df391091fbdc703dd408d5f6b97ba8d997dedee0844cf69463d709"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "onion",
+            "ginger"
+          ],
+          "recipe_indices": [
+            3,
+            2
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "f04b5b025d24720eb3d79cf0b9f1d4e3d8d35381840e8e4934449fdf8051b2c4",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-f04b5b025d24720e",
+        "protocol_version": "v1",
+        "seed": 610029,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "c180c31c3b16f7a7280b100b5e746f3b1934f6c954d533832b525dec21b0b761"
+    },
+    "CP04/medium/VAL-CP04-medium-f0c43a4b6135d302": {
+      "effective_signature": "f0c43a4b6135d30203b465e0c29f47b43e7e414a175817f4bff7816250e220ad",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-f0c43a4b6135d302.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-f0c43a4b6135d302.usda": "6aec4d7c3741736d1e5bc61216823215d121c5fa048068752d92eec76a4cd1d5"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "chili",
+            "onion"
+          ],
+          "recipe_indices": [
+            0,
+            3
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "f0c43a4b6135d30203b465e0c29f47b43e7e414a175817f4bff7816250e220ad",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-f0c43a4b6135d302",
+        "protocol_version": "v1",
+        "seed": 610022,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "8dc640abe1fdd59fc4c7160bae1a1a84d5c9f62d99fbf35a3aa922a57dab305e"
+    },
+    "CP04/medium/VAL-CP04-medium-f312479ae76c63bb": {
+      "effective_signature": "f312479ae76c63bbc09cb312d3b45df6c4d95d6cb397207c42f4d1ac3ac60a70",
+      "full_spec": {
+        "asset_version": "validation-clean-original-geometry-v1",
+        "assets": {
+          "portable-mdl-0": "mdl-sdk/core/Base",
+          "portable-mdl-1": "mdl-sdk/core/mdl",
+          "portable-mdl-2": "mdl-sdk/rtx",
+          "station": "scenes/medium/VAL-CP04-medium-f312479ae76c63bb.usda",
+          "x5": "robot/ARX.usd"
+        },
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config": {
+          "asset_sha256": {
+            "scenes/medium/VAL-CP04-medium-f312479ae76c63bb.usda": "540d8f041b433715f2141fc77541d1ed2ccde55e460496bde68d67011e2834b5"
+          },
+          "cameras": {
+            "head": {
+              "path": "/World/HeadCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "left_wrist": {
+              "path": "/World/RobotLeft/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            },
+            "right_wrist": {
+              "path": "/World/RobotRight/Asset/camera/PhysCoWristCamera",
+              "resolution": [
+                640,
+                480
+              ]
+            }
+          },
+          "cp04_clock_profile": "cp04-evaluation-physics120-v1",
+          "difficulty": "medium",
+          "ingredient_identities": {
+            "0": "chili",
+            "1": "garlic",
+            "2": "ginger",
+            "3": "onion"
+          },
+          "instruction": "Use the remembered ordered recipe, physically prepare the ingredients, switch HEAT to KEEP WARM within the observed green window, then turn OFF and return the used jars and caps.",
+          "jar_world_positions": {
+            "0": [
+              -0.52,
+              0.32,
+              0.798
+            ],
+            "1": [
+              -0.29,
+              0.49,
+              0.798
+            ],
+            "2": [
+              -0.29,
+              0.32,
+              0.798
+            ],
+            "3": [
+              -0.52,
+              0.49,
+              0.798
+            ]
+          },
+          "layout_profile": "clean",
+          "layout_split": "validation",
+          "material_mdl_search_asset_ids": [
+            "portable-mdl-0",
+            "portable-mdl-1",
+            "portable-mdl-2"
+          ],
+          "recipe": [
+            "onion",
+            "garlic"
+          ],
+          "recipe_indices": [
+            3,
+            1
+          ],
+          "replay_source_frequency_hz": 30,
+          "robot_rest": [
+            0.0,
+            1.1344640254974365,
+            1.7453292608261108,
+            -1.1344640254974365,
+            0.0,
+            0.0,
+            0.042,
+            0.042
+          ],
+          "task_id": "CP04",
+          "thermal_profile": {
+            "bounds": "inclusive; floating point tolerance 1e-8 C",
+            "cooling_C_per_s": 0.0,
+            "difficulty": "medium",
+            "green_max_C": 87.5,
+            "green_min_C": 80.0,
+            "heating_C_per_s": 2.5,
+            "scope": "train_and_test",
+            "shutdown": "physical OFF after observed hold confirmation; freeze actual temperature without cooling; no added deadline",
+            "trigger": "measured HEAT_to_KEEP_WARM",
+            "version": "cooking_thermal497_v3_4_3_2_off_freeze",
+            "window_seconds": 3.0
+          },
+          "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+          "validation_source": {
+            "effective_signature": "f312479ae76c63bbc09cb312d3b45df6c4d95d6cb397207c42f4d1ac3ac60a70",
+            "exclusion_summary_sha256": "2a3e697f23108f8395be12d58928d42742966eaff6fef8d68e28826964cbd04a",
+            "generator_sha256": "5b9cb538c9e8412e5353b780ff0804959ecb2510274628a03d5790fe98a4cb83",
+            "profile": "clean",
+            "schema": "mind2act_eval.validation_source.v1",
+            "split": "validation",
+            "task_id": "CP04"
+          }
+        },
+        "config_version": "native-scene-port-v1",
+        "difficulty": "medium",
+        "instance_id": "VAL-CP04-medium-f312479ae76c63bb",
+        "protocol_version": "v1",
+        "seed": 610028,
+        "source_id": "cp04-validation-clean-v1",
+        "task_id": "CP04"
+      },
+      "full_spec_sha256": "33817e184b5f27a0609e8dd97b0cad2b64b4b7ac1c9d2bf1e8270f8c06f873ab"
+    }
+  },
+  "schema": "mind2act_eval.validation_specs.v1"
+}

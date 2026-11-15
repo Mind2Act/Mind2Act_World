@@ -32,6 +32,13 @@ def goal_pose(slot, piece_id):
 
 
 def validate(spec, binding):
+    validation=spec.config.get('layout_split')=='validation'
+    if validation:
+        from .validation import validate as validate_validation
+        validate_validation(spec)
+    else:
+        from mind2act_eval.cp07_training_inputs import validate as finite_validate
+        finite_validate(spec)
     expected = {key: getattr(spec, key) for key in
                 ("task_id", "instance_id", "difficulty", "source_id", "seed", "asset_version")}
     if spec.task_id != "CP07" or binding["identity"] != expected:
@@ -42,6 +49,8 @@ def validate(spec, binding):
         raise ValueError("CP07 binding schema mismatch")
     # Diagnostic selected-source loading needs no formal slots or Hard inventory.
     # The explicit mode prevents a private known subset claiming completeness.
+    if validation and binding['mode']!='independent_validation':
+        raise ProfileBlocked('CP07 independent validation mode differs')
     training_test=spec.config.get('cp07_mode')=='train_layout_test'
     test=spec.config.get('cp07_mode')=='source_bound_test'
     if training_test and binding['mode']!='train_layout_test':
@@ -50,7 +59,7 @@ def validate(spec, binding):
         from .original_inputs import validate_binding
         if binding['mode']!='source_bound_test':raise ProfileBlocked('CP07 original test mode differs')
         count,stock=validate_binding(spec,binding)
-    elif not training_test and ('test_source' in spec.config or binding["mode"] != "diagnostic_training"
+    elif not training_test and not validation and ('test_source' in spec.config or binding["mode"] != "diagnostic_training"
             or spec.config.get("cp07_mode") != "diagnostic_training"):
         raise ProfileBlocked("CP07 requires explicit diagnostic_training source binding")
     if not test and binding["solutions_scope"] != "known-source-solutions":
@@ -117,6 +126,11 @@ def validate(spec, binding):
 
 
 def load(spec, assets):
+    if spec.config.get('layout_split')=='validation':
+        from .validation import load as load_validation
+        return load_validation(spec,assets)
+    from mind2act_eval.cp07_training_inputs import validate_assets
+    validate_assets(spec, assets)
     training_test=spec.config.get('cp07_mode')=='train_layout_test'
     test=spec.config.get('cp07_mode')=='source_bound_test'
     if (not test and not training_test and ('test_source' in spec.config or spec.config.get("cp07_mode") != "diagnostic_training")):

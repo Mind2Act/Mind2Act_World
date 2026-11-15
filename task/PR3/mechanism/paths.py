@@ -1,5 +1,5 @@
 """Millimetre-space PR3 target path. Ported unchanged from the baseline (source_id
-pr3-original-source-mainline-pro-sourcepath: cases_unified/PR3/source/mind2act_pr3_marker_paths.py) plus
+pr3-original-source-mainline-pro-sourcepath: cases_unified/PR3/source/physco_pr3_marker_paths.py) plus
 `reference` from cases_unified/PR3/geometry.py, without scipy."""
 import math
 import numpy as np

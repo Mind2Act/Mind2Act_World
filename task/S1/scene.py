@@ -1,7 +1,7 @@
 """S1 scene: the single `build(spec, ctx)` shared by every consumer.
 
 Baseline: S-147 `direct-continuous-340aff8-run925de9` (builder `cases/S/runtime/builder.py` digest 79a0b996a4ad;
-native world `mind2act_eval/worlds_v2/s.py`). The prepared scene (scene.usda + private_manifest.json) is an
+native world `physco_eval/worlds_v2/s.py`). The prepared scene (scene.usda + private_manifest.json) is an
 asset of the instance produced offline by that builder. Carousel drive, block collider/mass/friction and
 station-static setup are taken unchanged from the baseline world. Robot stage preparation (fixed base,
 articulation root, actuator gains) is NOT done here: the shared X5 robot module owns it.
@@ -204,6 +204,9 @@ def _setup_stage(stage, tables, manifest):
 
 
 def build(spec: InstanceSpec, ctx: BuildContext) -> Scene:
+    if spec.instance_id.startswith('VAL-S1-') or 'clean_validation_authority' in spec.config:
+        from .validation_inputs import validate
+        validate(spec, ctx.assets)
     require_physics_hz(spec)
     from isaacsim.core.prims import SingleArticulation, SingleRigidPrim
     from omni.physx import get_physx_simulation_interface

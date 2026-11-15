@@ -19,7 +19,37 @@ _hashes = {}
 
 @lru_cache(maxsize=1)
 def _catalogue():
-    value = json.loads(Path(__file__).with_name('source_asset_approvals.json').read_text())
+    raw = Path(__file__).with_name('source_asset_approvals.json').read_bytes()
+    if hashlib.sha256(raw).hexdigest() != 'd1576a79d02a9b74599dbbce34a759bbbeaa45d298cdf324b496ec9850ba6fea':
+        raise ValueError('code-owned public base approval catalogue changed')
+    value = json.loads(raw)
+    # Immutable training extension generated from reviewed per-instance proofs.
+    training_raw = Path(__file__).with_name('training_source_asset_approvals.json').read_bytes()
+    if hashlib.sha256(training_raw).hexdigest() != 'e6fcb462bf9fb26ae1523b6319a702e792ed3ce95653d8fe9c9d172df5aee8d4':
+        raise ValueError('code-owned training source approval catalogue changed')
+    training = json.loads(training_raw)
+    if training.get('schema') != 'mind2act_eval.source_asset_approvals.v1':
+        raise ValueError('unsupported training source asset approval catalogue')
+    for key in ('approvals', 'deployments', 'public_recipe_rebindings'):
+        value.setdefault(key, []).extend(training.get(key, []))
+    for key, closure in training.get('closures', {}).items():
+        if key in value.setdefault('closures', {}) and value['closures'][key] != closure:
+            raise ValueError('training source closure conflicts with base catalogue')
+        value['closures'][key] = closure
+    # Independently approved clean validation identities; never train/test.
+    raw = Path(__file__).with_name('validation_source_asset_approvals.json').read_bytes()
+    if hashlib.sha256(raw).hexdigest() != '8a8782d20a56e75eac470f525e3befc953a06825aac1a859b012cbf56f179d11':
+        raise ValueError('code-owned public validation approvals changed')
+    validation = json.loads(raw)
+    if validation.get('schema') != 'mind2act_eval.source_asset_approvals.v1' or len(validation['approvals']) != 190:
+        raise ValueError('public validation inventory differs')
+    if len(training['approvals']) != 1380 or len(value['approvals']) != 1380:
+        raise ValueError('public training inventory differs')
+    value['approvals'].extend(validation['approvals'])
+    for key, closure in validation['closures'].items():
+        if key in value['closures'] and value['closures'][key] != closure:
+            raise ValueError('public validation closure conflicts')
+        value['closures'][key] = closure
     if value.get('schema') != 'mind2act_eval.source_asset_approvals.v1':
         raise ValueError('unsupported source asset approval catalogue')
     if any(not isinstance(r.get('identity'), dict) for r in value['approvals']):
@@ -205,6 +235,10 @@ def _projection(path, expected, actual, assets):
             continue
         roots = [p for p in path.parents if p.name == row['asset_name']]
         for root in roots:
+            # A caller may itself store the package below another 'assets'
+            # directory. Only its exact approved relative path is a candidate.
+            if path.relative_to(root) != Path(row['runtime_path']):
+                continue
             if path == _contained(root, row['runtime_path']):
                 matches.append((row, root))
     if len(matches) != 1:
@@ -371,15 +405,18 @@ def source_layer(assets, asset_id, expected_sha256):
         if obj is None:
             return
         for field in obj.ListInfoKeys():
-            if field == 'subLayers':
+            if field in ('subLayers', 'subLayerOffsets'):
                 continue
             value, changed = restore(obj.GetInfo(field), str(path) + '#' + field)
             if changed:
                 obj.SetInfo(field, value)
 
     layer.Traverse(Sdf.Path.absoluteRootPath, visit)
+    offsets = list(layer.subLayerOffsets)
     layer.subLayerPaths = [token(raw, '/#subLayers/' + str(i))
                            for i, raw in enumerate(layer.subLayerPaths)]
+    for i, offset in enumerate(offsets):
+        layer.subLayerOffsets[i] = offset
     if seen != set(changes):
         raise ValueError('approved USD token locations are incomplete')
     return layer

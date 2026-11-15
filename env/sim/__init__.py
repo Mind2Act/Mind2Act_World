@@ -24,6 +24,9 @@ class LocalAssets:
     def __init__(self, root: Path, entries, *, spec=None):
         self.root = Path(root).resolve(strict=True)
         self.entries = dict(entries)
+        if spec is not None:
+            from mind2act_eval.public_layouts import validate
+            validate(spec)
         self.spec = spec
 
     def resolve(self, asset_id: str) -> Path:
@@ -248,7 +251,7 @@ class IsaacSimulator:
             original_argv = sys.argv[:]
             try:
                 sys.argv.extend(("--portable-root", str(runtime_dir)))
-                from mind2act_eval.startup_gate import simulator_gates
+                from mind2act_eval.pro_startup import simulator_gates
                 gate, constructor_gate = simulator_gates(paths, physical_gpu, output_dir,
                                                          gpu_selection=gpu_selection)
                 mark_started = gate.__enter__()
@@ -258,6 +261,13 @@ class IsaacSimulator:
                 active_gpu = physical_gpu if gpu_selection is None else gpu_selection.renderer_index
                 physics_gpu = 0 if gpu_selection is None else gpu_selection.cuda_index
                 with constructor_gate as mark_constructor:
+                    from mind2act_eval.cluster_profile import load_cluster_profile
+                    if load_cluster_profile() is not None:
+                        # Retain startup admission and the aggregate-RSS guard.
+                        # Encoders start before Kit grows this process by GiB;
+                        # late vfork briefly charges the large image twice.
+                        self.recorder.prepare({name: tuple(config["resolution"])
+                                               for name, config in self._camera_config.items()})
                     self.app = SimulationApp({"headless": headless, "active_gpu": active_gpu,
                                               "physics_gpu": physics_gpu, "multi_gpu": False,
                                               # Kit's native fast-shutdown path may terminate the

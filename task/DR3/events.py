@@ -51,7 +51,7 @@ def _center_in_tray(center_xy, tray):
     edges = np.roll(triangles, -1, axis=1)-triangles
     offset = np.asarray(center_xy)-triangles
     cross = edges[..., 0]*offset[..., 1]-edges[..., 1]*offset[..., 0]
-    area = (triangles[:, 1, 0]-triangles[:, 0, 0])*(triangles[:, 2, 1]-triangles[:, 0, 1])\
+    area = (triangles[:, 1, 0]-triangles[:, 0, 0])*(triangles[:, 2, 1]-triangles[:, 0, 1]) \
         - (triangles[:, 1, 1]-triangles[:, 0, 1])*(triangles[:, 2, 0]-triangles[:, 0, 0])
     return bool(np.any((area != 0) & (np.all(cross >= 0, axis=1) | np.all(cross <= 0, axis=1))))
 

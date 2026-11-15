@@ -1,7 +1,7 @@
 """Load the unchanged, pinned official XPolicyLab WebSocket implementation.
 
 This module adds no wire protocol. Install requirements-ws.txt or pass a checkout
-of the official pin. A loaded CodingAgent package with the same name is rejected.
+of the official pin. A loaded RoboProbe package with the same name is rejected.
 """
 from __future__ import annotations
 import hashlib
@@ -38,7 +38,7 @@ def load_xpolicy(source=None):
         path = root / relative
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise RuntimeError(f"Official XPolicyLab pin differs: {path}")
-    # Catch an already imported same-name package from CodingAgent or another tree.
+    # Catch an already imported same-name package from RoboProbe or another tree.
     image_module = importlib.import_module("XPolicyLab.utils.process_data")
     if Path(image_module.__file__).resolve() != root / "utils/process_data.py":
         raise RuntimeError("XPolicyLab image codec was imported from a different source")

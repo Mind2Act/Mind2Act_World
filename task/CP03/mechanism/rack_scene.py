@@ -2,7 +2,7 @@
 """CP03 rack/selector scene construction.
 
 Source: cp03-em-b-20261028 and cp03-hard-b-20261028 cases_unified/CP03/scene.py
-(byte-identical in both), frozen from project-v8/scripts/mind2act_dish_collection_replay.py,
+(byte-identical in both), frozen from project-v8/scripts/physco_dish_collection_replay.py,
 SHA256 192b8e65... The scene USD (red YCB029 texture variant) is the prepared station
 asset opened by ctx.sim; this file only modifies it as the baseline did.
 

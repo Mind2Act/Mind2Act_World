@@ -20,6 +20,9 @@ def _count(values, key):
 
 def score(evidence: NativeEvidence) -> Score:
     v = evidence.values
+    if evidence.instance_id.startswith('VAL-CP03-') or 'validation_source' in v:
+        from mind2act_eval.cp03_validation_inputs import validate_evidence
+        validate_evidence(evidence)
     if v.get('scoring_version') != RULE_VERSION:
         raise ValueError('CP03 terminal placement evidence version required; old aggregate cannot be rescored')
     n = _RULE["required_steps"][v["difficulty"]]

@@ -7,6 +7,9 @@ from .judge import Judge
 
 
 def score(evidence: NativeEvidence) -> Score:
+    if evidence.instance_id.startswith('VAL-F1-reuse-') or 'gap_composition_spec' in evidence.values:
+        from mind2act_eval.gap_composition_inputs import validate_evidence
+        validate_evidence(evidence)
     v = evidence.values
     rows = v['rows']
     if not rows:

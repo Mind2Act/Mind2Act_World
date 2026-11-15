@@ -17,7 +17,19 @@ class RestorationScene:
         self.replay=Replay(spec.difficulty,spec.seed,sensors.case);self.tick=0
         if signature(self.replay.case)!=spec.config['source_case_sha256']:raise ValueError('CP09 selected source case differs')
         self.original_source={}
-        if 'test_source' in spec.config:
+        if spec.config.get('layout_split')=='validation':
+            from .instances import original_case
+            from mind2act_eval.contracts import to_json
+            if signature(sensors.case)!=signature(original_case(spec,ctx.assets)):
+                raise ValueError('CP09 physical scene differs from finite validation geometry')
+            self.original_source=dict(validation_source=to_json(spec.config['validation_source']))
+        elif 'train_source' in spec.config:
+            from .instances import original_case
+            from mind2act_eval.contracts import to_json
+            if signature(sensors.case)!=signature(original_case(spec,ctx.assets)):
+                raise ValueError('CP09 physical scene differs from original training geometry')
+            self.original_source=dict(train_source=to_json(spec.config['train_source']))
+        elif 'test_source' in spec.config:
             from .instances import original_case
             from mind2act_eval.original_test_inputs import audit_source
             if signature(sensors.case)!=signature(original_case(spec,ctx.assets)):

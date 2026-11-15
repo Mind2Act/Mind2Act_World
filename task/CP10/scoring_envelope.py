@@ -13,6 +13,10 @@ TRAINING_CONFIG_SHA256 = MappingProxyType({level: row['source_config_canonical_s
 
 def scoring_evidence(evidence):
     values = evidence.values
+    validation_case=evidence.instance_id.startswith('VAL-CP10-') or 'validation_source' in values
+    if validation_case:
+        from mind2act_eval.cp10_validation_inputs import validate_evidence
+        validate_evidence(evidence)
     if any(key in values for key in ('physical_prefix_receipt', 'scored_until_tick',
             'native_terminal_tick', 'frozen_native_snapshot')):
         if 'trace_contract' not in values or 'source_config' not in values:
@@ -36,7 +40,14 @@ def scoring_evidence(evidence):
         # accepted by scene.validate_binding, not arbitrary receipt metadata.
         raw=json.dumps(to_json(values['source_config']),sort_keys=True,
             separators=(',', ':'),allow_nan=False).encode()
-        if hashlib.sha256(raw).hexdigest()!=TRAINING_CONFIG_SHA256.get(values['difficulty']):
+        from mind2act_eval.cp10_training_inputs import admitted_config_sha256
+        if validation_case:
+            from mind2act_eval.cp10_validation_inputs import scoring_config_sha256
+            expected=scoring_config_sha256(evidence)
+        else:
+            expected=admitted_config_sha256(evidence.instance_id,values['difficulty'])
+        if expected is None:expected=TRAINING_CONFIG_SHA256.get(values['difficulty'])
+        if hashlib.sha256(raw).hexdigest()!=expected:
             raise ValueError('CP10 native prefix lacks original audit or selected training source')
     if 'trace_contract' not in values:
         return evidence

@@ -56,6 +56,12 @@ def validate(spec, binding):
         if (binding['button_rest_m'] != [.8055]*count
                 or binding['faceup_quaternions_wxyz'] != [target]*count):
             raise ValueError('M2 original physical button rest or face-up target differs')
+    elif spec.config.get('m2_mode') == 'source_bound_validation':
+        row = _validation_record(spec)
+        if (binding['mode'] != 'source_bound_validation'
+                or binding['source_manifest_sha256'] != row['condition_sha256']
+                or binding['scene_sha256'] != row['scene_sha256']):
+            raise ValueError('M2 finite VAL binding/condition/scene differs')
     elif binding["mode"] != "diagnostic_training" or spec.config.get("m2_mode") != "diagnostic_training":
         raise ProfileBlocked("M2 formal evaluation profiles/slots unavailable; no training substitution")
     for key in ("source_manifest_sha256", "scene_sha256"):
@@ -77,7 +83,30 @@ def validate(spec, binding):
     return binding
 
 
+def _validation_record(spec):
+    """Authenticate only the finite independently qualified clean VAL records."""
+    from pathlib import Path
+    from mind2act_eval.verified_files import verified_bytes
+    from mind2act_eval.sim.source_assets import _identity
+    raw = verified_bytes(Path(__file__).with_name('validation_inputs.json'),
+                         '9d8a7ddcdcb86dd21d2b1e7c9923bdaa31ac492d69e8b4a417f989a37fa18105')
+    data = json.loads(raw)
+    if data.get('schema') != 'mind2act_eval.m2_validation_inputs.v1':
+        raise ValueError('M2 finite validation catalogue schema differs')
+    identity = _identity(spec)
+    matches = [row for row in data['instances'] if row['identity'] == identity]
+    if (len(matches) != 1 or not spec.instance_id.startswith('VAL-M2-')
+            or spec.config.get('layout_split') != 'validation'
+            or spec.config.get('layout_profile') != 'clean'
+            or 'test_source' in spec.config):
+        raise ProfileBlocked('M2 requires an exact admitted independent clean VAL identity')
+    return matches[0]
+
+
 def load(spec, assets):
+    if spec.config.get("m2_public_runtime_only"):
+        from .public_training import validate_runtime
+        validate_runtime(spec, assets)
     from mind2act_eval.sim.source_assets import read_source_bytes, verify_source_file
     if 'test_source' in spec.config and spec.config.get('m2_mode')!='source_bound_test':
         raise ProfileBlocked('M2 original test identity requires source_bound_test mode')
@@ -91,6 +120,26 @@ def load(spec, assets):
         from .original_geometry import validate_geometry
         validate_geometry(spec, assets, binding, read_audit(spec, binding['original_source']))
         verify_source_file(assets,'station',binding['scene_sha256'],error='M2 original test scene SHA mismatch')
+        return binding
+    if spec.config.get('m2_mode') == 'source_bound_validation':
+        row = _validation_record(spec)
+        if (spec.config['m2_binding_sha256'] != row['binding_sha256']
+                or spec.config['m2_validation_condition_sha256'] != row['condition_sha256']):
+            raise ValueError('M2 finite VAL declared source SHA differs')
+        raw = read_source_bytes(assets, 'm2_binding', row['binding_sha256'])
+        binding = validate(spec, json.loads(raw))
+        condition = read_source_bytes(assets, 'm2_validation_condition', row['condition_sha256'])
+        source = json.loads(condition)
+        if (source['instance_id'] != spec.instance_id or source['difficulty'] != spec.difficulty
+                or source['seed'] != spec.seed or source['split'] != 'validation'
+                or source['profile'] != 'clean' or source['task'] != 'M2'
+                or source['native_task'] != 'MEMORY_CARDS'
+                or source['layout']['card_types'] != binding['card_identities']):
+            raise ValueError('M2 finite VAL source condition differs')
+        from .validation_geometry import validate_geometry
+        validate_geometry(spec, assets, binding, source)
+        verify_source_file(assets, 'station', row['scene_sha256'],
+                           error='M2 finite VAL scene SHA mismatch')
         return binding
     if spec.config.get("m2_mode") != "diagnostic_training":
         raise ProfileBlocked("M2 formal evaluation profiles/slots unavailable; no training substitution")

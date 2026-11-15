@@ -16,7 +16,7 @@ def signature(value):
 
 
 def selected(difficulty):
-    return json.loads(resources.files(__package__).joinpath('config/selected.json').read_text())[difficulty]
+    raise ValueError('CP08 legacy prototype is unavailable in the public clean subset; use an explicitly admitted instance')
 
 
 def instructions(difficulty):
@@ -31,12 +31,22 @@ def instructions(difficulty):
 
 
 def validate(spec):
+    from mind2act_eval.public_layouts import validate as validate_public
+    validate_public(spec)
+    if spec.config.get('layout_split') == 'validation':
+        from .validation import validate as validate_validation
+        return validate_validation(spec)
+    training="train_source" in spec.config
+    if training:
+        from mind2act_eval.cp08_training_inputs import validate as training_validate
+        row=training_validate(spec)
     test='test_source' in spec.config
-    if spec.task_id != 'CP08' or (not test and spec.source_id != SOURCE_ID) or spec.config_version != 'cp08-source-projection-v1':
+    if spec.task_id != 'CP08' or (not (test or training) and spec.source_id != SOURCE_ID) or spec.config_version != 'cp08-source-projection-v1':
         raise ValueError('CP08 source identity differs')
-    if spec.clock.physics_hz != 120 or spec.clock.control_hz != 30 or (not test and spec.seed != 0):
+    if spec.clock.physics_hz != 120 or spec.clock.control_hz != 30 or (not (test or training) and spec.seed != 0):
         raise ValueError('CP08 selected clock/seed differs')
-    row = selected(spec.difficulty)
+    if not training:
+        row = selected(spec.difficulty)
     c = spec.config
     if test:
         from mind2act_eval.original_test_inputs import source_identity
@@ -44,13 +54,16 @@ def validate(spec):
         if c['source_spec_sha256']!=source['source_configuration_sha256']:
             raise ValueError('CP08 original test spec SHA differs')
         validate_projection(to_json(c['source_projection']),spec.difficulty,original_case=to_json(c['source_case']))
-    elif (spec.instance_id != row['instance_id'] or signature(c['source_case']) != signature(row['source_case'])
+    elif not training and (spec.instance_id != row['instance_id'] or signature(c['source_case']) != signature(row['source_case'])
             or c['scene_sha256'] != row['scene_sha256'] or c['physics_budget'] != row['physics_budget']
             or c['source_spec_sha256'] != row['source_spec_sha256']):
         raise ValueError('CP08 selected training instance differs')
     if c['instruction'] not in (instructions(spec.difficulty)['en'], instructions(spec.difficulty)['zh']):
         raise ValueError('CP08 requires delivered difficulty instruction')
-    if not test:validate_projection(to_json(c['source_projection']), spec.difficulty)
+    if training:
+        from .projection import validate_training
+        validate_training(to_json(c['source_projection']),spec.difficulty,to_json(c['source_case']))
+    if not (test or training):validate_projection(to_json(c['source_projection']), spec.difficulty)
     for value in spec.assets.values():
         path = PurePosixPath(value)
         if not value or path.is_absolute() or '..' in path.parts or '\\' in value:
@@ -71,6 +84,34 @@ def original_case(spec,assets):
 
 
 def validate_assets(spec,assets):
+    if spec.config.get('layout_split') == 'validation':
+        from .validation import validate_assets as validate_validation_assets
+        return validate_validation_assets(spec,assets)
+    if "train_source" in spec.config:
+        validate(spec)
+        from mind2act_eval.cp08_training_inputs import validate_assets as training_validate_assets
+        row=training_validate_assets(spec,assets)
+        from mind2act_eval.sim.source_assets import read_source_bytes,verify_source_file,source_layer
+        raw=json.loads(read_source_bytes(assets,'train_source_raw',spec.config['source_spec_sha256']))
+        original={k:v for k,v in raw['config']['source_case'].items() if k!='expert_staging'}
+        if (original!=to_json(spec.config['source_case'])
+                or raw['binding']['declared_version']!=spec.source_id
+                or raw['binding']['source_seed']['index']!=spec.seed
+                or raw['config']['physics_budget']!=spec.config['physics_budget']
+                or raw['config']['scene_sha256']!=row['scene_sha256']
+                or spec.config['scene_sha256']!=row['scene_sha256']):
+            raise ValueError('CP08 original training source condition differs')
+        closure=raw['config']['native_inputs']['manifest']['asset_closure']
+        textures={name:[r['sha256'] for r in closure if PurePosixPath(r['path']).name==name]
+                  for name in ('plan.png','screen-idle.png')}
+        if any(len(v)!=1 or row['cue_texture_sha256'][k]!=v[0] for k,v in textures.items()):
+            raise ValueError('CP08 original training cue provenance differs')
+        verify_source_file(assets,'station',row['scene_sha256'],error='CP08 original training scene differs')
+        if source_layer(assets,'station',row['scene_sha256']) is None:
+            raise ValueError('CP08 original training scene proof missing')
+        for role,name in (('cue_plan','plan.png'),('cue_idle','screen-idle.png')):
+            verify_source_file(assets,role,textures[name][0],error='CP08 original training cue differs')
+        return row
     row=validate(spec)
     if 'test_source' not in spec.config:return row
     raw=original_case(spec,assets)
@@ -95,21 +136,4 @@ def validate_assets(spec,assets):
 
 def spec_for_selected(difficulty, *, instance_id, scene_asset, x5_asset, plan_asset,
                       idle_asset, asset_version, language='en', protocol_version='v1'):
-    from mind2act_eval.contracts import InstanceSpec
-    import math
-    row=selected(difficulty)
-    if instance_id != row['instance_id'] or language not in ('en','zh'):
-        raise ValueError('CP08 requires explicit selected instance and delivered language')
-    from .projection import H5_SHA256
-    spec=InstanceSpec(task_id='CP08',instance_id=instance_id,difficulty=difficulty,
-        source_id=SOURCE_ID,config_version='cp08-source-projection-v1',asset_version=asset_version,
-        protocol_version=protocol_version,seed=0,assets=dict(station=scene_asset,x5=x5_asset,
-        cue_plan=plan_asset,cue_idle=idle_asset),config=dict(
-        source_case=row['source_case'],scene_sha256=row['scene_sha256'],
-        source_spec_sha256=row['source_spec_sha256'],physics_budget=row['physics_budget'],
-        instruction=instructions(difficulty)[language],
-        robot_rest=[math.radians(v) for v in (0,65,100,-65,0,0)]+[.044,.044],
-        source_projection=dict(source_physics_hz=120,source_state_tick=72,source_action_tick=76,
-            source_h5_row=18,source_cue_hide_tick=360,h5_sha256=H5_SHA256[difficulty])))
-    validate(spec)
-    return spec
+    raise ValueError('CP08 legacy prototype is unavailable in the public clean subset; use an explicitly admitted instance')

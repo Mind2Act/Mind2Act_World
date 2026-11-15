@@ -1,21 +1,21 @@
 """Common input renderer transplanted from agent-input/english-v1 765189d.
 
 The mainline seam supplies an allowlisted public profile, the live end-to-end
-instruction as Goal and the reviewed per-tier CodingAgent-format recipe. System/tools and the
+instruction as Goal and the reviewed per-tier RoboProbe-format recipe. System/tools and the
 independent end-to-end instruction catalog remain unchanged.
 """
 from copy import deepcopy
 from pathlib import Path
 import json
-from mind2act_eval.adapters.coding_payload import require_english
+from mind2act_eval.adapters.agent_payload import require_english
 from .cp07 import TRAIN_LAYOUT_PROTOCOL as CP07_TRAIN_LAYOUT_PROTOCOL, TEST_PROTOCOL as CP07_TEST_PROTOCOL, validate_parameters as cp07_parameters
 from .recipes import RECIPES, render_coding_input
 
-VERSION = 'mind2act-common_input-coding-v1'
+VERSION = 'mind2act-feishu-coding-v1'
 DATA = Path(__file__).with_name('data')
 TEMPLATE = json.loads((DATA / 'common.json').read_text())
 GOALS = json.loads((DATA / 'goals.json').read_text())
-CP07_TEST = json.loads((DATA / 'cp07-source-test.json').read_text())
+CP07_TEST = {}  # No CP07 public authority is present in this candidate.
 DECISION_LIMIT = 150
 DECISION_RETRY_LIMIT = 12
 
@@ -23,6 +23,8 @@ def goals(task):
     return RECIPES[task]
 
 def render_goal(compiled):
+    if compiled['task'] in ('CP07','CP09'):
+        raise ValueError('task has no admitted public clean layouts')
     params = compiled['environment_parameters']
     if compiled['task'] == 'CP07':
         # Keep source/asset cohort authentication, without selecting old prose.

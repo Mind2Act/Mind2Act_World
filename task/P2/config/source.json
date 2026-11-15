@@ -1,111 +1,52 @@
 {
-  "source_id": "p-steamer-wrist-continuous",
-  "public_task_id": "P2",
+  "base_policy": {
+    "meaning": "Preplaced base displacement is diagnostic only; historical1e-7m is not a scoring veto."
+  },
+  "dismantling_ruling": {
+    "authority": "benchmark maintainer approved 2026-11-01 23:30",
+    "canonical_instruction_unchanged": true,
+    "effect": "The source mat/assigned target_drop/landing-region rule is superseded. Dismantled baskets may rest at any supported stable position on the table or wooden board. No mat or designated landing coordinate is scored.",
+    "source_snapshot_unchanged": true,
+    "version": "p2-table-board-dismantling-20261101-2330-v1"
+  },
+  "distractor_ruling": {
+    "authority": "jclin 2026-11-04 17:40",
+    "effect": "Only terminal stack identity/order/lid affects distractor scoring. Historical contact and displacement never independently veto a stage.",
+    "version": "p2-terminal-stack-20261104-v3"
+  },
+  "evaluation_mode": "formal",
+  "instruction_authority": {
+    "hard_discrepancy": "2026-11-04 jclin ruling: score terminal target identities/order/lid; a distractor in the stack is misplaced. No independent movement/use veto. Preserve delivered E2E and historical H5.",
+    "sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae"
+  },
+  "measurement_policy": "Native poses, quaternions, velocities, signed raw contact manifolds and measured joint states; no expert phase, target, side or action-index annotations.",
   "native_task_id": "P_STEAMER",
   "original_task_id": "P",
-  "source_framework_commit": "fbe12ebdf5fc928807b556f737a04f3b137ddfac",
-  "source_package_manifest_sha256": "dd1ed4a8bde3d8c7973da1c2345b0af4ce37bf3cae5dfd36ba9fc9b3e8e64d0a",
+  "public_task_id": "P2",
+  "qualification": "No legacy robot/video qualification gates. The original960 held-rest pre-record physics steps are preserved as initialization, never a score gate or episode budget.",
   "rubric": "p2-spec-20261030-v1",
+  "scoring_version": "p2-terminal-stack-20261104-v3",
   "source_files_sha256": {
-    "world.py": "230f14a7d5ded5483066e97df74938f2c8677ba69d1f5325d750960c7f9a462d",
-    "task.py": "c072de1db548c324080806f617542f33d610e818127332bcf8885a0e2d1ab31a",
-    "coverage.py": "1bc7b59c65592991ce846308aa8a7f1e5d41cfde21cb8588aed4e093208c3334",
     "annotate.py": "7af399b9418440ab80fd98f6bf2c4b54985c7c246331990a4157bf12510f3d88",
-    "placement.py": "e6c1d6bc2717adb294fd5a78ed73def24a408d83e5770399e3a11f424842ca10",
-    "provenance.py": "07f966c370915258478e2eaa9b9a7bef8f8b38e0360424f0b56136d62c476b42",
+    "coverage.py": "1bc7b59c65592991ce846308aa8a7f1e5d41cfde21cb8588aed4e093208c3334",
     "evidence.py": "6f8e89570e858a8371da72d3c84a53a35d0496ee8bff9913577e2d4d317cbce4",
-    "preparation.py": "5fcb64254843db2718c5d9fa5e6b74bad04d2c2f8ca7563d48b7604384c8de56"
+    "placement.py": "e6c1d6bc2717adb294fd5a78ed73def24a408d83e5770399e3a11f424842ca10",
+    "preparation.py": "5fcb64254843db2718c5d9fa5e6b74bad04d2c2f8ca7563d48b7604384c8de56",
+    "provenance.py": "07f966c370915258478e2eaa9b9a7bef8f8b38e0360424f0b56136d62c476b42",
+    "task.py": "c072de1db548c324080806f617542f33d610e818127332bcf8885a0e2d1ab31a",
+    "world.py": "230f14a7d5ded5483066e97df74938f2c8677ba69d1f5325d750960c7f9a462d"
   },
+  "source_framework_commit": "fbe12ebdf5fc928807b556f737a04f3b137ddfac",
+  "source_id": "p-steamer-wrist-continuous",
+  "source_package_manifest_sha256": "dd1ed4a8bde3d8c7973da1c2345b0af4ce37bf3cae5dfd36ba9fc9b3e8e64d0a",
   "spec_snapshot": {
     "doc_token": "K5cDdSRieoSQI7xOVFUccqAgnyd",
-    "sha256": "1a7488fd8efe46e868b7636b0dbb1385d3e1f23f84cfda80cbe7351f6b9edd38",
     "sections": [
       4,
       5,
       6
-    ]
+    ],
+    "sha256": "1a7488fd8efe46e868b7636b0dbb1385d3e1f23f84cfda80cbe7351f6b9edd38"
   },
-  "instruction_authority": {
-    "sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
-    "hard_discrepancy": "2026-11-04 maintainer ruling: score terminal target identities/order/lid; a distractor in the stack is misplaced. No independent movement/use veto. Preserve delivered E2E and historical H5."
-  },
-  "source_witnesses": [
-    {
-      "cell": "P2-easy",
-      "source_h5_sha256": "d59083e358648a65e8f65fe1247d6293fe09364660001d37ff226bac47c518bf",
-      "source_h5_instance_sha256": "764a58b10bd480e566a1bfa58551d26019e4588a6b5266a17d945aa0c3cd1eb2",
-      "metadata_witnesses": [
-        {
-          "kind": "selected-original",
-          "sha256": "730adeab66aa54eab8f723df50436521d1e5aa8dad4f2b9dfaa21570dfa27384",
-          "case_id_matches_index": true,
-          "matches_original_h5_instance_sha256": false
-        },
-        {
-          "kind": "selected-replay",
-          "sha256": "8a47709f2cd02d24a75a9e770bfa20e0a4a3c0e61a56c154d6024a6fd5e3d6c5",
-          "case_id_matches_index": true,
-          "matches_original_h5_instance_sha256": false
-        }
-      ]
-    },
-    {
-      "cell": "P2-medium",
-      "source_h5_sha256": "f9a1c04b47316b0146b036458c8891f3a02c0b444d181557738e5b43a658e9e1",
-      "source_h5_instance_sha256": "33ec6c648b7388a8a67c0fe59e62e8239565741d4f21d7eef3bae6664effa7a0",
-      "metadata_witnesses": [
-        {
-          "kind": "selected-original",
-          "sha256": "2db8fb538e51009b51c840cb6c95288811a4dd5fa07785aa2c2fea89fc87a88b",
-          "case_id_matches_index": true,
-          "matches_original_h5_instance_sha256": false
-        },
-        {
-          "kind": "selected-replay",
-          "sha256": "a031eab9d6ae65ecdd74095b228c8a31bb0b40468580fb60a9912872bb559ef5",
-          "case_id_matches_index": true,
-          "matches_original_h5_instance_sha256": false
-        }
-      ]
-    },
-    {
-      "cell": "P2-hard",
-      "source_h5_sha256": "7ba536decbb20382a66d519598850543147cadfe05329cf39564a7e17a18f6f9",
-      "source_h5_instance_sha256": "5a84565978184fb958363e7fe32056b67d56b67baf33dced12e26b59873cc391",
-      "metadata_witnesses": [
-        {
-          "kind": "selected-original",
-          "sha256": "a5471d8731eb659fa119e76ee72e5cec96a8d23539ea9d5b47107ee14820edab",
-          "case_id_matches_index": true,
-          "matches_original_h5_instance_sha256": false
-        },
-        {
-          "kind": "selected-replay",
-          "sha256": "c2c5c2e8d1fc8c4290a4109d5d0953c92900f53ff8ee727a68384ccac8dc0cf0",
-          "case_id_matches_index": true,
-          "matches_original_h5_instance_sha256": false
-        }
-      ]
-    }
-  ],
-  "measurement_policy": "Native poses, quaternions, velocities, signed raw contact manifolds and measured joint states; no expert phase, target, side or action-index annotations.",
-  "base_policy": {
-    "meaning": "Preplaced base displacement is diagnostic only; historical1e-7m is not a scoring veto."
-  },
-  "qualification": "No legacy robot/video qualification gates. The original960 held-rest pre-record physics steps are preserved as initialization, never a score gate or episode budget.",
-  "dismantling_ruling": {
-    "version": "p2-table-board-dismantling-20261101-2330-v1",
-    "authority": "benchmark maintainer approved 2026-11-01 23:30",
-    "effect": "The source mat/assigned target_drop/landing-region rule is superseded. Dismantled baskets may rest at any supported stable position on the table or wooden board. No mat or designated landing coordinate is scored.",
-    "source_snapshot_unchanged": true,
-    "canonical_instruction_unchanged": true
-  },
-  "stage_mapping_status": "benchmark maintainer 2026-11-02 confirmed source provider 2026-10-30 p2-spec-20261030-v1 section6: formal 0/10/20/30/100, highest eligible stage, no rescaling. The 10-point dismantling stage accepts stable support anywhere on the table or wooden board. This supersedes the temporary diagnostic classification.",
-  "evaluation_mode": "formal",
-  "scoring_version": "p2-terminal-stack-20261104-v3",
-  "distractor_ruling": {
-    "version": "p2-terminal-stack-20261104-v3",
-    "authority": "maintainer 2026-11-04 17:40",
-    "effect": "Only terminal stack identity/order/lid affects distractor scoring. Historical contact and displacement never independently veto a stage."
-  }
+  "stage_mapping_status": "benchmark maintainer 2026-11-02 confirmed source provider 2026-10-30 p2-spec-20261030-v1 section6: formal 0/10/20/30/100, highest eligible stage, no rescaling. The 10-point dismantling stage accepts stable support anywhere on the table or wooden board. This supersedes the temporary diagnostic classification."
 }

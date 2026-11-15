@@ -6,7 +6,7 @@ from mind2act_eval.tasks import TaskDefinition
 TASK_MODULES = MappingProxyType({
     task_id: f"mind2act_eval.tasks.{task_id}"
     for task_id in ("PR1", "PR2", "PR3", "PR4", "PR5", "PR6", "DR1", "DR2", "DR4", "E1", "S1", "P1", "F1", "M1", "M2",
-                    "CP01", "CP02", "CP03", "CP04", "CP05", "CP06", "CP07", "CP08", "CP09", "CP10", "E2", "DR3", "F2", "S2", "P2", "demo")
+                    "CP01", "CP02", "CP03", "CP04", "CP05", "CP06", "CP07", "CP08", "CP09", "CP10", "E2", "DR3", "F2", "S2", "P2")
 })
 
 

@@ -31,6 +31,9 @@ def _valid_transition(thermal, difficulty):
 
 def score(evidence: NativeEvidence) -> Score:
     v = evidence.values
+    if evidence.instance_id.startswith('VAL-CP04-') or 'validation_source' in v:
+        from mind2act_eval.cp04_validation_inputs import validate_evidence
+        validate_evidence(evidence)
     difficulty, recipe, e = v['difficulty'], tuple(v['recipe']), v['cp04_evidence']
     if difficulty not in N_STEPS or len(recipe) != (3 if difficulty == 'hard' else 2):
         raise ValueError('CP04 difficulty/recipe count differs')

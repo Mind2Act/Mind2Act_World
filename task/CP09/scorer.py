@@ -57,20 +57,11 @@ def score(evidence: NativeEvidence) -> Score:
     rows=read(values['audit'],evidence.tick)
     from .instances import config,signature
     initial=rows[0]
-    if 'test_source' in values:
-        from types import SimpleNamespace
-        from mind2act_eval.original_test_inputs import read_audit
-        spec=SimpleNamespace(task_id='CP09',instance_id=evidence.instance_id,
-            difficulty=values['difficulty'],seed=values['seed'],config=dict(test_source=values['test_source']))
-        original=read_audit(spec,values)
-        if (original['task_id']!='CP09' or original['split']!='eval'
-                or signature(initial['source_case'])!=signature(original['config']['source_case'])):
-            raise ValueError('CP09 original test audit geometry differs')
+    if evidence.instance_id.startswith('VAL-CP09-') or 'validation_source' in values:
+        from mind2act_eval.cp09_validation_inputs import validate_evidence
     else:
-        selected=config('selected')[values['difficulty']]
-        if (evidence.instance_id!=selected['instance_id'] or values['seed']!=selected['seed']
-                or signature(initial['source_case'])!=selected['source_case_sha256']):
-            raise ValueError('CP09 initial audit/source binding differs')
+        from mind2act_eval.cp09_training_inputs import validate_evidence
+    validate_evidence(evidence,initial['source_case'])
     if initial['contract']!=CONTRACT:
         raise ValueError('CP09 initial audit/source binding differs')
     replay=Replay(values['difficulty'],values['seed'],initial['source_case'])

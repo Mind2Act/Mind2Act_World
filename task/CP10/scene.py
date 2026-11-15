@@ -157,6 +157,8 @@ class ArenaScene:
                       rule_version=self.spec.config['rule_version'], normal_termination=True)
         if getattr(self,'original_inputs',None) is not None:
             values.update(input_binding_kind='original_test',original_test_inputs=self.original_inputs)
+        from mind2act_eval.cp10_validation_inputs import evidence_fields
+        values.update(evidence_fields(self.spec))
         return NativeEvidence('CP10', self.spec.instance_id, tick, values)
 
     def health(self):
@@ -287,6 +289,13 @@ def validate_binding(spec, assets):
     validate(spec.config['collection_protocol'], spec.config['rule_version'])
     if spec.task_id != 'CP10' or c['task'] != 'CP10' or c['difficulty'] != spec.difficulty or c['seed'] != spec.seed:
         raise ValueError('CP10 spec/source instance binding differs')
+    if spec.instance_id.startswith('VAL-CP10-') or spec.config.get('layout_split')=='validation':
+        from mind2act_eval.cp10_validation_inputs import validate_assets as validation_assets
+        return validation_assets(spec,assets)
+    if 'train_source' in spec.config:
+        from mind2act_eval.cp10_training_inputs import validate_assets as training_validate_assets
+        training_validate_assets(spec, assets)
+        return c
     if 'test_source' in spec.config:
         from .original_inputs import validate_binding as original_binding
         return original_binding(spec,assets)

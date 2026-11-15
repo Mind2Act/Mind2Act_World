@@ -1,8 +1,8 @@
 """USD authoring helpers for the precision fixtures.
 
 Ported from the PR1 baseline (source_id pr1-original-source-uniform-run925de9):
-legacy_sources/PR1/scripts/mind2act_f2_assets.py (rounded, cylinder) and
-mind2act_station_scene.py (material). The only change is that the stage is an
+legacy_sources/PR1/scripts/physco_f2_assets.py (rounded, cylinder) and
+physco_station_scene.py (material). The only change is that the stage is an
 argument instead of a module global. Importing needs pxr, so import lazily.
 """
 import math

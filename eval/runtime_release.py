@@ -1,4 +1,5 @@
 """Release checks shared by CPU admission and the native worker entrypoint."""
+from mind2act_eval.package_paths import code_root as installed_code_root
 import hashlib
 from collections.abc import Mapping
 from pathlib import Path
@@ -15,7 +16,7 @@ NEW15_SOURCE_CLEAN_TASKS = frozenset((
 
 def guard_input_paths(args):
     # Preserve the original spelling until the shared guard has checked aliases.
-    code_root = Path(__file__).parents[1]
+    code_root = installed_code_root()
     paths = [code_root]
     for key in ('spec', 'asset_root', 'h5', 'replay_metadata', 'adapter_config',
                 'probe_config', 'gpu_allocation', 'native_exit_debug_config'):
@@ -29,11 +30,13 @@ def guard_input_paths(args):
 @path_check_session()
 def validate_release_inputs(spec, args, *, require_code_identity=False,
                             verified_code_commit=None):
-    """Bind a selected release; unmarked unmarked inputs keep their defaults.
+    """Bind a selected release; unmarked legacy L20 inputs keep their defaults.
 
     The producer owns asset hashing. Only the selected small spec/metadata and
     RELEASE descriptor are read here, before importing a model or native SDK.
     """
+    from mind2act_eval.public_layouts import validate
+    validate(spec)
     code_root = guard_input_paths(args)
     root, = reject_deprecated_paths((args.asset_root,))
     paths = [root / value for value in spec.assets.values()]
@@ -48,7 +51,8 @@ def validate_release_inputs(spec, args, *, require_code_identity=False,
         return None
     release = load_release(root, code_root=code_root,
                            verified_code_commit=verified_code_commit)
-    from mind2act_eval.scene_probe import SOURCE_CLEAN_TASKS, spec_digest
+    from mind2act_eval.spec_identity import spec_digest
+    SOURCE_CLEAN_TASKS = frozenset(("CP01", "CP02", "CP03", "CP04", "CP05", "DR1", "DR2", "E1", "F1", "M1", "P1", "PR1", "PR2", "PR3", "S1"))
     task_grids = {'old15-release-v1': SOURCE_CLEAN_TASKS,
                   'new15-release-v1': NEW15_SOURCE_CLEAN_TASKS}
     if (release.asset_name not in task_grids
@@ -84,12 +88,7 @@ def validate_release_inputs(spec, args, *, require_code_identity=False,
     limits = row.get('limits') if 'case_id' in row else None
     if getattr(args, 'policy_kind', None) is not None and limits is None:
         raise ReleaseContractError('versioned model case requires original frozen limits')
-    if getattr(args, 'consumer', None) == 'scene_probe':
-        # Diagnostics have their own fixed 600-tick admission, never a model score.
-        # Code, case and asset identity checks below still apply unchanged.
-        from .cli import _probe_inputs
-        _probe_inputs(args, spec)
-    elif limits is not None:
+    if limits is not None:
         from .budgets import selected_limits, validate_execution_limits
         kind = getattr(args, 'policy_kind', None)
         try:

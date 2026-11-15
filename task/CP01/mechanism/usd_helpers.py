@@ -1,8 +1,8 @@
 """USD helpers for CP01 foods/trays.
 
 Sources (A:code/legacy-cp01-run925de9/engine/simulation/scripts, md5 identical to
-the Easy collection engine): mind2act_f2_assets.rounded/cylinder and
-mind2act_station_scene.material. `material` takes the stage explicitly instead of
+the Easy collection engine): physco_f2_assets.rounded/cylinder and
+physco_station_scene.material. `material` takes the stage explicitly instead of
 the original module-global.
 """
 import math

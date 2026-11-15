@@ -7,6 +7,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import stat
 import sys
 
 from mind2act_eval.contracts import BuildContext, ConsumerKind, InstanceSpec
@@ -31,25 +32,19 @@ def _write_worker_stage(output, stage, **details):
 
 
 def read_spec(path):
-    return InstanceSpec.from_dict(json.loads(Path(path).read_text()))
+    spec = InstanceSpec.from_dict(json.loads(Path(path).read_text()))
+    from mind2act_eval.public_layouts import validate
+    validate(spec)
+    return spec
 
 
-def _probe_inputs(args, spec):
-    from mind2act_eval.scene_probe import ProbeInputs
-    fields = (getattr(args, "probe_config", None), getattr(args, "probe_config_sha256", None))
-    if (args.backend != "isaac" or args.h5 or args.replay_metadata or args.adapter_config
-            or args.adapter != "mind2act_eval.adapters.demo:create" or args.physics_ticks != 600
-            or args.retries != 0 or not all(fields) or type(args.gpu) is not int or args.gpu < 0
-            or args.h5_sha256 or args.replay_metadata_sha256 or args.adapter_config_sha256):
-        raise ValueError("scene_probe requires Isaac, explicit GPU, 600 ticks, no retries/H5/model adapter, pinned probe config")
-    return ProbeInputs.read(*fields, spec)
 
 
 def _gpu_selection_kwargs(args):
     path = getattr(args, "gpu_allocation", None)
     expected = getattr(args, "gpu_allocation_sha256", None)
     if path is None and expected is None:
-        return {}  # Preserve the original call signature and single-machine defaults.
+        return {}  # Preserve the original call signature and L20 defaults.
     if not path or not expected:
         raise ValueError("--gpu-allocation and --gpu-allocation-sha256 must be supplied together")
     if args.backend != "isaac":
@@ -74,6 +69,19 @@ def _episode_assets(spec, args):
     return LocalAssets(Path(args.asset_root), entries, spec=spec)
 
 
+def _material_search_asset_ids(spec):
+    from mind2act_eval.public_layouts import validate
+    validate(spec)
+    if 'material_mdl_search_asset_ids' in spec.config:
+        return spec.config['material_mdl_search_asset_ids']
+    return {
+        'P2': ('mdl0', 'mdl1', 'mdl2'),
+        'CP06': ('portable-mdl-0', 'portable-mdl-1', 'portable-mdl-2'),
+        'CP08': ('portable-mdl-0', 'portable-mdl-1', 'portable-mdl-2'),
+        'CP09': ('portable-mdl-0', 'portable-mdl-1', 'portable-mdl-2'),
+    }.get(spec.task_id, ())
+
+
 def _worker(args):
     global _WORKER_FAILURE_EXIT_READY
     _WORKER_FAILURE_EXIT_READY = False
@@ -87,17 +95,8 @@ def _worker(args):
     if getattr(args, 'policy_kind', None) and (args.h5 or getattr(args, 'consumer', None)):
         raise ValueError('policy kind is reserved for scored model consumers')
     gpu_kwargs = _gpu_selection_kwargs(args)
-    if getattr(args, "consumer", None) not in (None, "scene_probe"):
-        raise ValueError("unsupported explicit consumer")
-    if getattr(args, "consumer", None) == "scene_probe":
-        _probe_inputs(args, read_spec(args.spec))
-        from mind2act_eval.worker import run_scene_probe
-        result = run_scene_probe(args, **gpu_kwargs)
-        _write_worker_stage(args.output, "scene_probe_returned", infra_valid=result.infra_valid,
-                            ticks=result.ticks)
-        return 0 if result.infra_valid else 1
-    if getattr(args, "probe_config", None) or getattr(args, "probe_config_sha256", None):
-        raise ValueError("probe configuration requires explicit --consumer scene_probe")
+    if any(getattr(args, key, None) is not None for key in ('consumer', 'probe_config', 'probe_config_sha256')):
+        raise ValueError("diagnostic consumers are not part of the public runtime")
     from mind2act_eval.sim import LocalAssets, IsaacSimulator
     from mind2act_eval.tasks.catalog import load_task
     spec = read_spec(args.spec)
@@ -117,9 +116,10 @@ def _worker(args):
             x5_path = assets.resolve("x5")
             station_path = assets.resolve("station") if "station" in spec.assets else None
             material_receipt = None
-            if 'material_mdl_search_asset_ids' in spec.config:
+            material_ids = _material_search_asset_ids(spec)
+            if material_ids:
                 from mind2act_eval.sim.material_closure import configure_mdl_search
-                material_receipt = configure_mdl_search(assets, spec.config['material_mdl_search_asset_ids'])
+                material_receipt = configure_mdl_search(assets, material_ids)
             if spec.variation.mode == "random":
                 from mind2act_eval.variations import configure_material_search
                 variation_materials = configure_material_search(spec, assets,
@@ -221,7 +221,7 @@ def _worker(args):
 
 
 def _job(args):
-    from mind2act_eval.batch import EpisodeJob, NativeExitDebugConfig
+    from mind2act_eval.batch import EpisodeJob
     from mind2act_eval.runtime_release import guard_input_paths, validate_release_inputs, resolve_case_arguments
     resolve_case_arguments(args)
     guard_input_paths(args)
@@ -234,15 +234,9 @@ def _job(args):
                   getattr(args, 'budget_version', None))
     if getattr(args, 'policy_kind', None) and (args.h5 or getattr(args, 'consumer', None)):
         raise ValueError('policy kind is reserved for scored model consumers')
-    if getattr(args, "consumer", None) not in (None, "scene_probe"):
-        raise ValueError("unsupported explicit consumer")
+    if any(getattr(args, key, None) is not None for key in ('consumer', 'probe_config', 'probe_config_sha256')):
+        raise ValueError("diagnostic consumers are not part of the public runtime")
     _gpu_selection_kwargs(args)  # Explicit mappings are admitted before child launch.
-    probe = getattr(args, "consumer", None) == "scene_probe"
-    probe_fields = (getattr(args, "probe_config", None), getattr(args, "probe_config_sha256", None))
-    if probe:
-        _probe_inputs(args, spec)
-    elif any(probe_fields):
-        raise ValueError("probe configuration requires explicit --consumer scene_probe")
     expected_spec_sha = getattr(args, "spec_sha256", None)
     if expected_spec_sha and hashlib.sha256(spec_bytes).hexdigest() != expected_spec_sha:
         raise ValueError("batch instance spec digest mismatch")
@@ -252,7 +246,7 @@ def _job(args):
         if (adapter_config_bytes is None
                 or hashlib.sha256(adapter_config_bytes).hexdigest() != adapter_config_sha):
             raise ValueError("batch adapter config digest mismatch")
-    if not probe and args.backend == "isaac" and not args.h5 and args.adapter == "mind2act_eval.adapters.demo:create":
+    if args.backend == "isaac" and not args.h5 and args.adapter == "mind2act_eval.adapters.demo:create":
         raise ValueError("Isaac model runs require an explicit model adapter")
     if args.backend == "isaac" and args.gpu is None:
         raise ValueError("Isaac episodes require an explicit idle GPU index")
@@ -280,19 +274,15 @@ def _job(args):
                 raise ValueError("set instance clock to the recorded replay clock explicitly")
         finally:
             replay.close()
-    consumer = ConsumerKind.SCENE_PROBE if probe else (ConsumerKind.EXPERT_REPLAY if args.h5 else (ConsumerKind.DIAGNOSTIC if args.backend == "demo" else ConsumerKind.MODEL))
-    debug_path = getattr(args, "native_exit_debug_config", None)
-    native_exit_debug = NativeExitDebugConfig.read(debug_path) if debug_path else None
+    consumer = ConsumerKind.EXPERT_REPLAY if args.h5 else (ConsumerKind.DIAGNOSTIC if args.backend == "demo" else ConsumerKind.MODEL)
     return EpisodeJob(spec, _worker_argv(args), consumer, args.wall_s, args.retries, args.gpu,
-                      native_exit_debug, policy_kind=getattr(args, 'policy_kind', None),
+                      policy_kind=getattr(args, 'policy_kind', None),
                       budget_version=getattr(args, 'budget_version', None),
                       physics_ticks=args.physics_ticks if getattr(args, 'policy_kind', None) else None)
 
 
 def _worker_argv(args):
-    """One standard worker command, including the trusted scene-probe path."""
-    probe = getattr(args, "consumer", None) == "scene_probe"
-    probe_fields = (getattr(args, "probe_config", None), getattr(args, "probe_config_sha256", None))
+    """One worker command for admitted model runs and trusted replay."""
     argv = [sys.executable, "-m", "mind2act_eval.cli", "_worker", "--spec", str(Path(args.spec).resolve()),
             "--asset-root", str(Path(args.asset_root).resolve()), "--backend", args.backend,
             "--adapter", args.adapter, "--wall-s", str(args.wall_s), "--physics-ticks", str(args.physics_ticks),
@@ -309,9 +299,6 @@ def _worker_argv(args):
     if getattr(args, "gpu_allocation", None) is not None:
         argv.extend(["--gpu-allocation", str(Path(args.gpu_allocation).resolve()),
                      "--gpu-allocation-sha256", args.gpu_allocation_sha256])
-    if probe:
-        argv.extend(["--consumer", "scene_probe", "--probe-config", str(Path(probe_fields[0]).resolve()),
-                     "--probe-config-sha256", probe_fields[1]])
     for flag in ("h5", "replay_metadata", "adapter_config"):
         value = getattr(args, flag)
         if value:
@@ -332,32 +319,60 @@ def _job_defaults():
         "adapter": "mind2act_eval.adapters.demo:create", "adapter_config": None,
         "adapter_config_sha256": None, "h5": None, "replay_metadata": None,
         "h5_sha256": None, "replay_metadata_sha256": None, "physics_ticks": None,
-        "wall_s": None, "video_hz": 6, "retries": 0, "gpu": None, "native_exit_debug_config": None,
-        "consumer": None, "probe_config": None, "probe_config_sha256": None,
+        "wall_s": None, "video_hz": 6, "retries": 0, "gpu": None,
         "gpu_allocation": None, "gpu_allocation_sha256": None,
         "variation_manifest": None,
         "policy_kind": None, "budget_version": None,
     }
 
 
+def _queue_job(entry, gpu):
+    values = _job_defaults()
+    values.update(entry["options"])
+    values["gpu"] = gpu
+    # The queue owns its single infrastructure retry outside run_attempt.
+    values["retries"] = 0
+    job = _job(argparse.Namespace(**values))
+    actual_key = {"task_id": job.spec.task_id, "instance_id": job.spec.instance_id,
+                  "difficulty": job.spec.difficulty}
+    if job.spec.variation.mode == "random":
+        from mind2act_eval.variations import digest
+        actual_key["variation_sha256"] = digest(job.spec.variation)
+    if actual_key != entry["episode_key"]:
+        raise ValueError("queue episode_key does not match its pinned spec")
+    return job
+
+
 @path_check_session()
-def _batch_jobs(entries, defaults):
-    """Admit explicit episode inputs before launching workers."""
+def _batch_jobs(entries, defaults, *, distributed=False):
+    """The same CPU input admission for the CLI and quarantine repair."""
     jobs = []
     for entry in entries:
         values = defaults.copy()
         allowed = {"spec", "spec_sha256", "case_id", "asset_root", "backend", "adapter", "adapter_config",
                    "adapter_config_sha256", "h5", "replay_metadata", "physics_ticks", "wall_s", "video_hz",
-                   "retries", "gpu", "h5_sha256", "replay_metadata_sha256", "native_exit_debug_config",
+                   "retries", "gpu", "h5_sha256", "replay_metadata_sha256",
                    "episode_key"}
-        allowed.update({"consumer", "probe_config", "probe_config_sha256"})
         allowed.update({"gpu_allocation", "gpu_allocation_sha256"})
         allowed.add("variation_manifest")
         allowed.update({'policy_kind', 'budget_version'})
         if not isinstance(entry, dict) or set(entry) - allowed:
             raise ValueError("invalid batch manifest options")
+        if distributed:
+            required = {"spec", "spec_sha256", "episode_key", "asset_root", "backend", "adapter",
+                "physics_ticks", "wall_s", "retries", "gpu"}
+            if not required <= set(entry):
+                raise ValueError("distributed campaign job is missing pinned execution options")
+            if entry.get("h5") and not entry.get("h5_sha256"):
+                raise ValueError("distributed expert replay jobs require a pinned h5_sha256")
+            if entry.get("adapter_config") and not entry.get("adapter_config_sha256"):
+                raise ValueError("distributed model jobs require a pinned adapter_config_sha256")
+            if entry.get("replay_metadata") and not entry.get("replay_metadata_sha256"):
+                raise ValueError("distributed replay metadata requires a pinned digest")
         values.update(entry)
         jobs.append(_job(argparse.Namespace(**values)))
+    if distributed and any(type(job.gpu) is not int or job.gpu < 0 for job in jobs):
+        raise ValueError("distributed campaign jobs must assign each episode a nonnegative GPU")
     return jobs
 
 
@@ -370,6 +385,27 @@ def main(argv=None):
     commands = parser.add_subparsers(dest="command", required=True)
     validate = commands.add_parser("validate")
     validate.add_argument("spec", nargs="+")
+    queue = commands.add_parser("queue")
+    queue.add_argument("--manifest", required=True, help="Pinned shared dynamic queue JSON")
+    queue.add_argument("--sha256", required=True, help="Expected SHA256 of the queue manifest")
+    queue.add_argument("--publish-job", help="Prepared new generation JSON; updates queue state and exits")
+    queue.add_argument("--dispatch-control", help="PRO rolling intake CAS request JSON; requires frozen controller identity")
+    queue.add_argument("--register-catalog", action="store_true", help="Append this immutable PRO rolling catalog without changing existing cases or active profiles")
+    queue.add_argument("--catalog-revision", type=int, help="Expected central catalog revision for registration")
+    queue.add_argument("--evidence", help="Required evidence for publishing a new generation")
+    queue.add_argument("--review-job")
+    queue.add_argument("--decision", choices=("pass", "fail"))
+    queue.add_argument("--reviewer")
+    queue.add_argument("--correct-review", help="JSON audit correction bound to an exact generation, attempt and prior review")
+    queue.add_argument("--quarantine-job", help="JSON request to fence an exact queued-zero generation as blocked")
+    queue.add_argument("--quarantine-completion", help="JSON external completion audit; retains the blocked quarantine")
+    queue.add_argument("--quarantine-gpu-amendment", help="Pinned never-launched external campaign GPU-omission repair JSON")
+    queue.add_argument("--initialize", action="store_true", help="Explicit first creation of a new queue only; never recovery")
+    queue.add_argument("--adopt-legacy", action="store_true", help="Guard exact reviewed legacy state during full maintenance; does not restore state")
+    queue.add_argument("--expected-state-sha256")
+    queue.add_argument("--restore-checkpoint", help="Explicit exact checkpoint recovery plan; stopped owners and all maintenance gates required")
+    queue.add_argument("--recovery-plan-sha256")
+    queue.add_argument("--check-restore", action="store_true", help="Validate recovery prerequisites without replacing state")
     for name in ("run", "replay", "_worker", "batch"):
         command = commands.add_parser(name)
         command.add_argument("--spec")
@@ -381,11 +417,9 @@ def main(argv=None):
         command.add_argument("--adapter", default="mind2act_eval.adapters.demo:create")
         command.add_argument("--adapter-config")
         command.add_argument("--adapter-config-sha256")
-        command.add_argument("--consumer", choices=("scene_probe",), help="Explicit unscored native scene diagnostic")
-        command.add_argument('--policy-kind', choices=('e2e', 'coding_agent'))
+        command.add_argument('--policy-kind', choices=('e2e', 'agent', 'coding_agent'),
+                             help='agent: multimodal agents acting through tools; coding_agent is a legacy alias')
         command.add_argument('--budget-version')
-        command.add_argument("--probe-config")
-        command.add_argument("--probe-config-sha256")
         command.add_argument("--gpu", type=int)
         command.add_argument("--gpu-allocation")
         command.add_argument("--gpu-allocation-sha256")
@@ -397,20 +431,17 @@ def main(argv=None):
         command.add_argument("--wall-s", type=float, default=3600)
         command.add_argument("--video-hz", type=int, default=6, help="Recording Hz; independent of the instance RGB/control clock")
         command.add_argument("--retries", type=int, default=1)
-        if name in ("run", "replay", "batch"):
-            command.add_argument("--native-exit-debug-config")
         if name == "_worker":
             command.add_argument("--output", required=True)
         if name == "batch":
             command.add_argument("--max-parallel", type=int)
             command.add_argument("--resource-config", help="Explicit single-node RSS/parallel config JSON; do not combine with --max-parallel overrides")
             command.add_argument("--manifest", help="JSON list of explicit CLI option dictionaries")
-            command.add_argument("--gpus", help="Comma-separated physical GPUs; one episode per GPU")
+            command.add_argument("--campaign-manifest", help="Immutable multi-node static partition manifest")
+            command.add_argument("--campaign-sha256", help="Expected SHA256 of --campaign-manifest")
     args = parser.parse_args(argv)
     if args.command == "_worker":
         _WORKER_LIFECYCLE_OUTPUT = Path(args.output)
-        if args.consumer == "scene_probe":
-            _WORKER_EXPECTED_CONSUMER = ConsumerKind.SCENE_PROBE
     try:
         if args.command == "validate":
             for path in args.spec:
@@ -421,47 +452,120 @@ def main(argv=None):
             exit_code = _worker(args)
             _write_worker_stage(args.output, "worker_returned", exit_code=exit_code)
             return exit_code
+        if args.command == "queue":
+            from mind2act_eval.shared_queue import load_queue, run_queue_driver
+            if any(value is not None and not value for value in (args.quarantine_job, args.quarantine_completion, args.quarantine_gpu_amendment)):
+                raise ValueError('quarantine request path must be nonempty')
+            queue_spec = load_queue(args.manifest, expected_sha256=args.sha256)
+            if sum(bool(value) for value in (args.register_catalog, args.dispatch_control, args.publish_job, args.review_job, args.correct_review, args.initialize, args.adopt_legacy, args.restore_checkpoint, args.quarantine_job, args.quarantine_completion, args.quarantine_gpu_amendment)) > 1:
+                raise ValueError("initialization, publish, review and correction are separate queue transactions")
+            if args.catalog_revision is not None and not args.register_catalog:
+                raise ValueError('--catalog-revision requires --register-catalog')
+            if args.register_catalog:
+                from mind2act_eval.shared_queue import QueueStore
+                from mind2act_eval.pro_rolling_queue import append_catalog
+                print(json.dumps(append_catalog(QueueStore(queue_spec), expected_revision=args.catalog_revision,
+                                               evidence=args.evidence), sort_keys=True))
+                return 0
+            if args.dispatch_control:
+                from mind2act_eval.shared_queue import QueueStore
+                from mind2act_eval.pro_rolling_queue import set_control
+                request = json.loads(Path(args.dispatch_control).read_text())
+                print(json.dumps(set_control(QueueStore(queue_spec), **request), sort_keys=True))
+                return 0
+            if (args.recovery_plan_sha256 or args.check_restore) and not args.restore_checkpoint:
+                raise ValueError("recovery options require --restore-checkpoint")
+            if args.restore_checkpoint:
+                from mind2act_eval.queue_checkpoint_recovery import restore_checkpoint
+                receipt = restore_checkpoint(queue_spec, args.restore_checkpoint,
+                    expected_plan_sha256=args.recovery_plan_sha256, check_only=args.check_restore)
+                print(json.dumps(receipt, sort_keys=True))
+                return 0
+            if args.expected_state_sha256 and not args.adopt_legacy:
+                raise ValueError("--expected-state-sha256 requires --adopt-legacy")
+            if args.adopt_legacy:
+                from mind2act_eval.shared_queue import QueueStore
+                QueueStore(queue_spec).adopt_legacy(expected_state_sha256=args.expected_state_sha256,
+                                                    evidence=args.evidence)
+                return 0
+            if args.initialize:
+                from mind2act_eval.shared_queue import QueueStore
+                QueueStore(queue_spec).initialize(evidence=args.evidence)
+                return 0
+            if args.quarantine_job or args.quarantine_completion or args.quarantine_gpu_amendment:
+                from mind2act_eval.shared_queue import QueueStore
+                path = args.quarantine_job or args.quarantine_completion or args.quarantine_gpu_amendment
+                fd = os.open(path, os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0) | os.O_NONBLOCK)
+                with os.fdopen(fd) as stream:
+                    if not stat.S_ISREG(os.fstat(stream.fileno()).st_mode):
+                        raise ValueError('quarantine request must be a regular file')
+                    request = json.load(stream)
+                store = QueueStore(queue_spec)
+                operation = (store.amend_quarantine_external_batch if args.quarantine_gpu_amendment else
+                             store.quarantine_queued if args.quarantine_job else store.record_quarantine_completion)
+                print(json.dumps(operation(**request), sort_keys=True))
+                return 0
+            if args.correct_review:
+                from mind2act_eval.shared_queue import QueueStore
+                request = json.loads(Path(args.correct_review).read_text())
+                QueueStore(queue_spec).correct_review(**request)
+                return 0
+            if args.review_job:
+                from mind2act_eval.shared_queue import QueueStore
+                QueueStore(queue_spec).review(args.review_job, decision=args.decision,
+                                              reviewer=args.reviewer, evidence=args.evidence)
+                return 0
+            if args.publish_job:
+                from mind2act_eval.shared_queue import QueueStore
+                QueueStore(queue_spec).publish_generation(json.loads(Path(args.publish_job).read_text()), evidence=args.evidence)
+                return 0
+            exit_code = run_queue_driver(queue_spec, job_factory=_queue_job)
+            print(json.dumps({"queue_id": queue_spec.queue_id,
+                              "hostname": queue_spec.node.hostname,
+                              "state_file": str(queue_spec.state_root / f"queue-{queue_spec.queue_id}.json"),
+                              "exit_code": exit_code}, sort_keys=True), flush=True)
+            return exit_code
         from mind2act_eval.batch import run_batch
-        if args.backend == "isaac" and not args.h5 and args.adapter == "mind2act_eval.adapters.demo:create" and args.command != "batch" and args.consumer != "scene_probe":
+        if args.backend == "isaac" and not args.h5 and args.adapter == "mind2act_eval.adapters.demo:create" and args.command != "batch":
             raise ValueError("Isaac model runs require an explicit model adapter")
-        from mind2act_eval.batch_resources import BatchResourceConfig
-        resource_path = getattr(args, "resource_config", None)
-        resource_config = BatchResourceConfig.read(resource_path) if resource_path else None
+        distributed_partition = None
+        resource_path = None
+        resource_config = None
         if args.command == "batch":
-            if not args.manifest:
-                raise ValueError("batch requires --manifest")
-            entries = json.loads(Path(args.manifest).read_text())
-            if args.gpus:
-                gpus = [int(value) for value in args.gpus.split(",")]
-                if not gpus or min(gpus) < 0 or len(set(gpus)) != len(gpus):
-                    raise ValueError("--gpus requires distinct nonnegative GPU indices")
-                if args.max_parallel is not None or resource_path or args.gpu is not None:
-                    raise ValueError("--gpus owns GPU assignment and parallelism")
-                if any(entry.get("gpu") is not None for entry in entries):
-                    raise ValueError("--gpus cannot override manifest GPU assignments")
-                # Keep each task on one GPU; each GPU executes its jobs serially.
-                assignments = {}
-                for entry in entries:
-                    spec_path = entry.get("spec")
-                    if spec_path:
-                        key = read_spec(spec_path).task_id
-                    else:
-                        from mind2act_eval.release_contract import load_release
-                        release = load_release(entry.get("asset_root", args.asset_root))
-                        key = release.resolve_case(entry["case_id"])["task_id"]
-                    if key not in assignments:
-                        assignments[key] = gpus[len(assignments) % len(gpus)]
-                    entry["gpu"] = assignments[key]
-                args.max_parallel = len(gpus)
-            jobs = _batch_jobs(entries, vars(args))
+            resource_path = getattr(args, "resource_config", None)
+            if args.campaign_manifest:
+                if args.manifest or resource_path or args.max_parallel is not None or args.campaign_sha256 is None:
+                    raise ValueError("distributed campaign requires its SHA and cannot be combined with manifest/resource/parallel overrides")
+                from mind2act_eval.distributed_campaign import load_partition
+                distributed_partition = load_partition(
+                    args.campaign_manifest, expected_sha256=args.campaign_sha256)
+                entries = json.loads(distributed_partition.manifest_bytes)
+                resource_config = distributed_partition.resource_config
+            else:
+                if not args.manifest or args.campaign_sha256:
+                    raise ValueError("batch requires --manifest, or --campaign-manifest with --campaign-sha256")
+                manifest_path = Path(args.manifest)
+                entries = json.loads(manifest_path.read_text())
+            jobs = _batch_jobs(entries, vars(args) if distributed_partition is None else _job_defaults(),
+                               distributed=distributed_partition is not None)
         else:
             jobs = [_job(args)]
         if not jobs:
             raise ValueError("batch manifest must contain at least one episode")
-        native = any(job.spec.task_id != "demo" for job in jobs)
-        campaign, summary = run_batch(jobs, Path(args.output_root), require_shared=False,
-                                      max_parallel=getattr(args, "max_parallel", None) or 1,
-                                      start_interval_s=60. if native else 0., resource_config=resource_config)
+        require_shared = any(job.spec.task_id != "demo" or job.gpu is not None for job in jobs)
+        if distributed_partition is None:
+            from mind2act_eval.batch_resources import BatchResourceConfig
+            resource_config = BatchResourceConfig.read(resource_path) if resource_path else None
+        max_parallel_override = getattr(args, "max_parallel", None)
+        max_parallel = max_parallel_override if max_parallel_override is not None else 1
+        if distributed_partition is not None:
+            require_shared = True
+            if any(type(job.gpu) is not int or job.gpu < 0 for job in jobs):
+                raise ValueError("distributed campaign jobs must assign each episode a nonnegative GPU")
+        campaign, summary = run_batch(jobs, Path(args.output_root), require_shared=require_shared,
+                                      max_parallel=max_parallel,
+                                      start_interval_s=60. if require_shared else 0., resource_config=resource_config,
+                                      distributed_partition=distributed_partition)
         print(campaign)
         final = {}
         for attempt in summary:

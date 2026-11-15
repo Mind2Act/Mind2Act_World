@@ -13,7 +13,7 @@ def signature(value):
 
 
 def selected(level):
-    return json.loads(resources.files(__package__).joinpath('config/selected.json').read_text())[level]
+    raise ValueError('CP06 legacy prototype is unavailable in the public clean subset; use an explicitly admitted instance')
 
 
 def instruction(level, language='en'):
@@ -58,9 +58,17 @@ def original_core(raw):
 
 
 def validate(spec):
+    if spec.config.get('layout_split') == 'validation':
+        from .validation import validate as validate_validation
+        return validate_validation(spec)
+    training="train_source" in spec.config
+    if training:
+        from mind2act_eval.cp06_training_inputs import validate as training_validate
+        row=training_validate(spec)
     import math
     from pathlib import PurePosixPath
-    row=selected(spec.difficulty);c=to_json(spec.config)
+    if not training:row=selected(spec.difficulty)
+    c=to_json(spec.config)
     test='test_source' in c
     if (spec.task_id!='CP06' or spec.config_version!=CONFIG_VERSION
             or spec.clock.physics_hz!=120 or spec.clock.control_hz!=30):
@@ -72,7 +80,7 @@ def validate(spec):
         if (c['source_task']['difficulty']!=spec.difficulty or c['source_task']['candidate']['seed']!=spec.seed
                 or c['source_task']['framework_commit']!=FRAMEWORK or c['source_task']['physics_hz']!=120):
             raise ValueError('CP06 original test core identity differs')
-    else:
+    elif not training:
         if spec.instance_id!=row['instance_id'] or spec.seed!=row['seed'] or spec.source_id!=SOURCE_ID:
             raise ValueError('CP06 selected original instance/seed/clock differs')
         validate_core(c['source_task'],spec.difficulty)
@@ -87,10 +95,13 @@ def validate(spec):
         raise ValueError('CP06 public inventory/green interval differs from selected source')
     rest=[math.radians(v) for v in (0,65,100,-65,0,0)]+[.044,.044]
     if c['robot_rest']!=rest:raise ValueError('CP06 selected source robot rest differs')
-    if not test and c['station_relocation_manifest']!='station_mapping':
+    if not (test or training) and c['station_relocation_manifest']!='station_mapping':
         raise ValueError('CP06 explicit asset-library station projection required')
+    if training and (c['source_task']['difficulty']!=spec.difficulty or c['source_task']['candidate']['seed']!=spec.seed or c['source_task']['framework_commit']!=FRAMEWORK or c['source_task']['physics_hz']!=120):
+        raise ValueError('CP06 training core identity/clock differs')
     required=({'station','task_source','test_source_request','test_source_raw','source_geometry_proof','x5'}
               if test else {'station','task_source','original_spec','station_mapping','projection_proof','x5'})
+    if training:required={'station','task_source','train_source_raw','training_geometry_proof','x5'}
     if not required<=set(spec.assets):
         raise ValueError('CP06 original/portable resources incomplete')
     for value in spec.assets.values():
@@ -135,8 +146,45 @@ def original_case(spec,assets):
 
 
 def validate_assets(spec, assets):
+    if spec.config.get('layout_split') == 'validation':
+        from .validation import validate_assets as validate_validation
+        return validate_validation(spec, assets)
     from mind2act_eval.sim.source_assets import read_source_bytes, source_layer, verify_source_file
     row=validate(spec)
+    if 'train_source' in spec.config:
+        from mind2act_eval.cp06_training_inputs import validate_assets as training_validate_assets
+        row=training_validate_assets(spec,assets)
+        raw=json.loads(read_source_bytes(assets,'train_source_raw',spec.config['source_spec_sha256']))
+        if (raw['binding']['declared_version']!=spec.source_id
+                or signature(raw['config']['task'])!=raw['binding']['config_sha256']
+                or raw['binding']['config_sha256']!=spec.config['declared_task_sha256']
+                or signature(original_core(raw))!=signature(spec.config['source_task'])
+                or raw['config']['task']['materialization']['scene_sha256']!=spec.config['original_task_layer_sha256']):
+            raise ValueError('CP06 original training condition differs')
+        for role,expected in (('station',spec.config['prepared_scene_sha256']),
+                              ('task_source',spec.config['original_task_layer_sha256'])):
+            verify_source_file(assets,role,expected,error='CP06 original training resource differs: '+role)
+            if source_layer(assets,role,expected) is None:
+                raise ValueError('CP06 original training typed restoration missing: '+role)
+        from pxr import Sdf
+        from pathlib import Path
+        layer=Sdf.Layer.FindOrOpen(str(assets.resolve('station')))
+        task=layer.GetPrimAtPath('/World/Task')
+        refs=list(task.referenceList.GetAddedOrExplicitItems()) if task else []
+        if (task is None or task.nameChildren or len(refs)!=1
+                or refs[0].primPath or refs[0].layerOffset!=Sdf.LayerOffset()
+                or Path(Sdf.ComputeAssetPathRelativeToLayer(layer,refs[0].assetPath)).resolve()!=Path(assets.resolve('task_source')).resolve()):
+            raise ValueError('CP06 training station must reference this exact original Task only')
+        proof=json.loads(read_source_bytes(assets,'training_geometry_proof',spec.config['resource_projection_proof_sha256']))
+        if (proof.get('schema')!='cp06.training_station_reuse.v1'
+                or proof['source_input_sha256']!=spec.config['source_spec_sha256']
+                or proof['original_task_layer_sha256']!=spec.config['original_task_layer_sha256']
+                or proof['prepared_source_sha256']!=spec.config['prepared_scene_sha256']
+                or proof['station_builder_sha256']!='3e99576f3285b40e04cb9471c54e0efd27b7506e6a09e39093ab9a1d21cf7df3'
+                or proof['authenticated_base_layer_sha256']!={'easy': 'd8f5c53c714ebbb3f1dddb027a0456ee163eb1c0ba31ee1b85f61ae954321803', 'medium': '884abd869e0c83aa44a3bc23edc77c5d824eee8183c46028900f58170d4a8edd', 'hard': '4fef2f46a87b18a1d2fed6840abe5a3d52216135c8fc4982da199014bea1f066'}[spec.difficulty]
+                or proof['no_selected_task_reuse'] is not True):
+            raise ValueError('CP06 training shared-station composition proof differs')
+        return row
     if 'test_source' in spec.config:
         from mind2act_eval.original_test_inputs import geometry
         raw=original_case(spec,assets)

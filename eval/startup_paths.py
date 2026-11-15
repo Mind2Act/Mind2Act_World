@@ -11,13 +11,7 @@ import os
 from pathlib import Path
 import socket
 
-def _canonical_hostname(value):
-    return value.lower()
-
-
-def node_lock_key(hostname):
-    return hashlib.sha256(_canonical_hostname(hostname).encode()).hexdigest()
-
+from mind2act_eval.distributed_campaign import _canonical_hostname, node_lock_key
 
 GATE_SCHEMA = 'mind2act_eval.kit_start_gate.v1'
 DOMAIN_SCHEMA = 'mind2act_eval.node_startup.v1'
@@ -92,6 +86,20 @@ def startup_paths(lock_root):
         marker is not None and marker['legacy']['kit']['state'] in {'active', 'cooling'})
 
 
+def startup_lock_paths(lock_root, hostnames):
+    """Startup-only maintenance locks; caller also holds global batch/node/queue/attempt guards.
+
+    Foreign hostnames are accepted only here to cover all reviewed nodes during
+    maintenance. Runtime callers always use startup_paths()' actual hostname.
+    Paths may not exist yet; create without truncation and use NOFOLLOW + EX/NB.
+    """
+    root = Path(lock_root).resolve()
+    paths = [root / 'worker-launch.lock', root / 'kit.lock']
+    if _marker(root)[0] is not None:
+        for key in sorted({node_lock_key(host) for host in hostnames}):
+            directory = root / 'startup-nodes' / key
+            paths.extend((directory / 'worker-launch.lock', directory / 'kit.lock'))
+    return tuple(paths)
 
 
 def verify_startup_domain(paths):
@@ -117,3 +125,45 @@ def startup_compatibility(paths, *, cancel_event=None):
         yield
 
 
+def activate_node_startup(lock_root, *, all_prior_owners_stopped, evidence):
+    """Maintenance only: caller must verify all old owners exited and disable old launchers.
+
+    Free gates cannot prove that an old ready worker exited. This explicit
+    operator attestation is required in addition to nonblocking exclusive locks.
+    Existing state bytes are read, hashed and preserved; no timestamps migrate.
+    """
+    if all_prior_owners_stopped is not True or not isinstance(evidence, str) or not evidence.strip():
+        raise ValueError('node startup activation requires reviewed exit evidence for all prior owners')
+    import fcntl
+    root = Path(lock_root).resolve()
+    root.mkdir(parents=True, exist_ok=True)
+    with ExitStack() as locks:
+        descriptors = {}
+        for name in ('batch.lock', 'worker-launch.lock', 'kit.lock'):
+            fd = os.open(root / name, os.O_CREAT | os.O_RDWR | getattr(os, 'O_NOFOLLOW', 0), 0o600)
+            locks.callback(os.close, fd)
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            descriptors[name] = fd
+        if _marker(root)[0] is not None:
+            raise RuntimeError('node startup is already activated; maintenance receipt is immutable')
+        legacy = {}
+        for name in ('worker-launch', 'kit'):
+            fd = descriptors[name + '.lock']
+            os.lseek(fd, 0, os.SEEK_SET)
+            raw = os.read(fd, 65537)
+            if len(raw) > 65536:
+                raise RuntimeError('legacy startup gate state is oversized')
+            legacy[name] = dict(sha256=hashlib.sha256(raw).hexdigest(), state=read_gate_state(raw))
+        value = dict(schema=DOMAIN_SCHEMA, uid=os.getuid(), evidence=evidence, legacy=legacy)
+        payload = (json.dumps(value, sort_keys=True) + '\n').encode()
+        fd = os.open(root / MARKER, os.O_CREAT | os.O_EXCL | os.O_WRONLY | getattr(os, 'O_NOFOLLOW', 0), 0o600)
+        with os.fdopen(fd, 'wb') as stream:
+            stream.write(payload)
+            stream.flush()
+            os.fsync(stream.fileno())
+        directory_fd = os.open(root, os.O_RDONLY | getattr(os, 'O_DIRECTORY', 0))
+        try:
+            os.fsync(directory_fd)
+        finally:
+            os.close(directory_fd)
+    return value

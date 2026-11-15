@@ -14,6 +14,8 @@ from .scorer import RULE_VERSION
 
 
 def checked_inputs(spec, assets):
+    from mind2act_eval.public_layouts import validate as validate_public
+    validate_public(spec)
     case = validate(spec)
     paths = {}
     for asset_id in ('station', 'scene_config', 'authoring_receipt', 'ink_clean', 'ink_smeared'):

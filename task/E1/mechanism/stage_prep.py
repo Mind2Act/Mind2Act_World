@@ -1,6 +1,6 @@
 """USD-side E1 mechanism: camera visibility intervals, station colliders, item dynamics, tray colliders.
 
-Sources (E-142 baseline): engine mind2act_e2_long_transport.py (intervals, verbatim),
+Sources (E-142 baseline): engine physco_e2_long_transport.py (intervals, verbatim),
 cases/E/runtime/development_world.py (collider/item setup), cases/E/runtime/training_scene.py
 (`align_colliders` only). No Carrier alignment of the scene is done here: the prepared scene asset
 already carries the aligned stage (done offline by the E1 scene-preparation tool).

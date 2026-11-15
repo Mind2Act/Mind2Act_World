@@ -1,4 +1,4 @@
-"""DR2 score from native button measurements only (CommonInput snapshot 20261101 DR2 sections 5-6).
+"""DR2 score from native button measurements only (Feishu snapshot 20261101 DR2 sections 5-6).
 
 k = independently correct cues. All ten correct without unlit presses scores 100;
 otherwise each correct cue earns 3 / 2.2 / 1.5 points in Easy / Medium / Hard.

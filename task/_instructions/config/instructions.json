@@ -1,5 +1,4 @@
 {
-  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
   "instructions": {
     "CP01": [
       {
@@ -10,7 +9,7 @@
         ],
         "en": "At the start, watch the reference meal trays pass on the conveyor and remember the three food types on each. Then prepare the corresponding empty meal trays on the table and fill each with the same three food types from the continuously moving supply.",
         "ex": "",
-        "zh": "开场先观察传送带上经过的参考餐盘，记住每盘的三种食物；随后在桌面上准备好对应的空餐盘，从持续移动的供料中取食物，给每盘配上与其参考餐盘相同的三种食物。"
+        "zh": "\u5f00\u573a\u5148\u89c2\u5bdf\u4f20\u9001\u5e26\u4e0a\u7ecf\u8fc7\u7684\u53c2\u8003\u9910\u76d8\uff0c\u8bb0\u4f4f\u6bcf\u76d8\u7684\u4e09\u79cd\u98df\u7269\uff1b\u968f\u540e\u5728\u684c\u9762\u4e0a\u51c6\u5907\u597d\u5bf9\u5e94\u7684\u7a7a\u9910\u76d8\uff0c\u4ece\u6301\u7eed\u79fb\u52a8\u7684\u4f9b\u6599\u4e2d\u53d6\u98df\u7269\uff0c\u7ed9\u6bcf\u76d8\u914d\u4e0a\u4e0e\u5176\u53c2\u8003\u9910\u76d8\u76f8\u540c\u7684\u4e09\u79cd\u98df\u7269\u3002"
       }
     ],
     "CP02": [
@@ -20,7 +19,7 @@
         ],
         "en": "Remember each macaron and its place on the still cake shown for three seconds. Recreate the arrangement as the cake rotates.",
         "ex": "",
-        "zh": "记住静止展示三秒的蛋糕上每个马卡龙及其位置。在蛋糕旋转时复原摆放。"
+        "zh": "\u8bb0\u4f4f\u9759\u6b62\u5c55\u793a\u4e09\u79d2\u7684\u86cb\u7cd5\u4e0a\u6bcf\u4e2a\u9a6c\u5361\u9f99\u53ca\u5176\u4f4d\u7f6e\u3002\u5728\u86cb\u7cd5\u65cb\u8f6c\u65f6\u590d\u539f\u6446\u653e\u3002"
       },
       {
         "d": [
@@ -28,7 +27,7 @@
         ],
         "en": "Remember each macaron and its place on the still cake shown for three seconds. Open the ingredient-box lid, press the green button and recreate the arrangement as the cake rotates.",
         "ex": "",
-        "zh": "记住静止展示三秒的蛋糕上每个马卡龙及其位置。打开配料盒盖，按绿色按钮，在蛋糕旋转时复原摆放。"
+        "zh": "\u8bb0\u4f4f\u9759\u6b62\u5c55\u793a\u4e09\u79d2\u7684\u86cb\u7cd5\u4e0a\u6bcf\u4e2a\u9a6c\u5361\u9f99\u53ca\u5176\u4f4d\u7f6e\u3002\u6253\u5f00\u914d\u6599\u76d2\u76d6\uff0c\u6309\u7eff\u8272\u6309\u94ae\uff0c\u5728\u86cb\u7cd5\u65cb\u8f6c\u65f6\u590d\u539f\u6446\u653e\u3002"
       },
       {
         "d": [
@@ -36,7 +35,7 @@
         ],
         "en": "Remember each macaron and its place on the still cake shown for three seconds. Open the ingredient-box lid, press the green button and recreate the arrangement as the cake rotates. Then press the red button, wait for the cake to stop, and place the cake cover over it.",
         "ex": "",
-        "zh": "记住静止展示三秒的蛋糕上每个马卡龙及其位置。打开配料盒盖，按绿色按钮，在蛋糕旋转时复原摆放。然后按红色按钮，等蛋糕停下后盖上蛋糕罩。"
+        "zh": "\u8bb0\u4f4f\u9759\u6b62\u5c55\u793a\u4e09\u79d2\u7684\u86cb\u7cd5\u4e0a\u6bcf\u4e2a\u9a6c\u5361\u9f99\u53ca\u5176\u4f4d\u7f6e\u3002\u6253\u5f00\u914d\u6599\u76d2\u76d6\uff0c\u6309\u7eff\u8272\u6309\u94ae\uff0c\u5728\u86cb\u7cd5\u65cb\u8f6c\u65f6\u590d\u539f\u6446\u653e\u3002\u7136\u540e\u6309\u7ea2\u8272\u6309\u94ae\uff0c\u7b49\u86cb\u7cd5\u505c\u4e0b\u540e\u76d6\u4e0a\u86cb\u7cd5\u7f69\u3002"
       }
     ],
     "CP03": [
@@ -46,7 +45,7 @@
         ],
         "en": "Load <N> upright plates into the moving empty slots without disturbing other plates. Press the green button before loading.",
         "ex": "",
-        "zh": "把 <N> 个竖立餐盘装入移动中的空槽，不要扰动其他餐盘；装盘前先按绿色按钮。"
+        "zh": "\u628a <N> \u4e2a\u7ad6\u7acb\u9910\u76d8\u88c5\u5165\u79fb\u52a8\u4e2d\u7684\u7a7a\u69fd\uff0c\u4e0d\u8981\u6270\u52a8\u5176\u4ed6\u9910\u76d8\uff1b\u88c5\u76d8\u524d\u5148\u6309\u7eff\u8272\u6309\u94ae\u3002"
       },
       {
         "d": [
@@ -54,7 +53,7 @@
         ],
         "en": "Load <N> upright plates into the moving empty slots without disturbing other plates. Move the lever to its upright middle position, release it, then press the green button before loading.",
         "ex": "",
-        "zh": "把 <N> 个竖立餐盘装入移动中的空槽，不要扰动其他餐盘；先把拨杆拨到竖直居中的位置并松手，再按绿色按钮开始装盘。"
+        "zh": "\u628a <N> \u4e2a\u7ad6\u7acb\u9910\u76d8\u88c5\u5165\u79fb\u52a8\u4e2d\u7684\u7a7a\u69fd\uff0c\u4e0d\u8981\u6270\u52a8\u5176\u4ed6\u9910\u76d8\uff1b\u5148\u628a\u62e8\u6746\u62e8\u5230\u7ad6\u76f4\u5c45\u4e2d\u7684\u4f4d\u7f6e\u5e76\u677e\u624b\uff0c\u518d\u6309\u7eff\u8272\u6309\u94ae\u5f00\u59cb\u88c5\u76d8\u3002"
       },
       {
         "d": [
@@ -62,7 +61,7 @@
         ],
         "en": "Load <N> upright plates into the moving empty slots without disturbing other plates. Tilt the lever fully toward the back of the machine, away from the robot, release it, then press the green button before loading.",
         "ex": "",
-        "zh": "把 <N> 个竖立餐盘装入移动中的空槽，不要扰动其他餐盘；先把拨杆向机器后方（远离机器人）拨到底并松手，再按绿色按钮开始装盘。"
+        "zh": "\u628a <N> \u4e2a\u7ad6\u7acb\u9910\u76d8\u88c5\u5165\u79fb\u52a8\u4e2d\u7684\u7a7a\u69fd\uff0c\u4e0d\u8981\u6270\u52a8\u5176\u4ed6\u9910\u76d8\uff1b\u5148\u628a\u62e8\u6746\u5411\u673a\u5668\u540e\u65b9\uff08\u8fdc\u79bb\u673a\u5668\u4eba\uff09\u62e8\u5230\u5e95\u5e76\u677e\u624b\uff0c\u518d\u6309\u7eff\u8272\u6309\u94ae\u5f00\u59cb\u88c5\u76d8\u3002"
       }
     ],
     "CP04": [
@@ -70,25 +69,25 @@
         "d": [
           "easy"
         ],
-        "en": "Pour each required jar into the pot in the remembered recipe order, returning jars upright and caps to the tray. Turn the black knob to HEAT and press the green button; within 4 s after 80 °C, switch to KEEP WARM, then press it again.",
+        "en": "Pour each required jar into the pot in the remembered recipe order, returning jars upright and caps to the tray. Turn the black knob to HEAT and press the green button; within 4 s after 80 \u00b0C, switch to KEEP WARM, then press it again.",
         "ex": "",
-        "zh": "按记住的菜谱顺序把每个需要的罐子倒进锅里，空罐竖直放回、盖子放到托盘上。把黑色旋钮转到 HEAT 并按绿色按钮；到 80 °C 后 4 秒内转到 KEEP WARM，再按一次绿色按钮关闭。"
+        "zh": "\u6309\u8bb0\u4f4f\u7684\u83dc\u8c31\u987a\u5e8f\u628a\u6bcf\u4e2a\u9700\u8981\u7684\u7f50\u5b50\u5012\u8fdb\u9505\u91cc\uff0c\u7a7a\u7f50\u7ad6\u76f4\u653e\u56de\u3001\u76d6\u5b50\u653e\u5230\u6258\u76d8\u4e0a\u3002\u628a\u9ed1\u8272\u65cb\u94ae\u8f6c\u5230 HEAT \u5e76\u6309\u7eff\u8272\u6309\u94ae\uff1b\u5230 80 \u00b0C \u540e 4 \u79d2\u5185\u8f6c\u5230 KEEP WARM\uff0c\u518d\u6309\u4e00\u6b21\u7eff\u8272\u6309\u94ae\u5173\u95ed\u3002"
       },
       {
         "d": [
           "medium"
         ],
-        "en": "Open the drawer. Pour each required jar into the pot in the remembered recipe order, returning jars upright and caps to the tray, then cover the pot. Turn the black knob to HEAT and press the green button; within 3 s after 80 °C, switch to KEEP WARM, then press it again.",
+        "en": "Open the drawer. Pour each required jar into the pot in the remembered recipe order, returning jars upright and caps to the tray, then cover the pot. Turn the black knob to HEAT and press the green button; within 3 s after 80 \u00b0C, switch to KEEP WARM, then press it again.",
         "ex": "",
-        "zh": "拉开抽屉。按记住的菜谱顺序把每个需要的罐子倒进锅里，空罐竖直放回、盖子放到托盘上，再盖上锅盖。把黑色旋钮转到 HEAT 并按绿色按钮；到 80 °C 后 3 秒内转到 KEEP WARM，再按一次绿色按钮关闭。"
+        "zh": "\u62c9\u5f00\u62bd\u5c49\u3002\u6309\u8bb0\u4f4f\u7684\u83dc\u8c31\u987a\u5e8f\u628a\u6bcf\u4e2a\u9700\u8981\u7684\u7f50\u5b50\u5012\u8fdb\u9505\u91cc\uff0c\u7a7a\u7f50\u7ad6\u76f4\u653e\u56de\u3001\u76d6\u5b50\u653e\u5230\u6258\u76d8\u4e0a\uff0c\u518d\u76d6\u4e0a\u9505\u76d6\u3002\u628a\u9ed1\u8272\u65cb\u94ae\u8f6c\u5230 HEAT \u5e76\u6309\u7eff\u8272\u6309\u94ae\uff1b\u5230 80 \u00b0C \u540e 3 \u79d2\u5185\u8f6c\u5230 KEEP WARM\uff0c\u518d\u6309\u4e00\u6b21\u7eff\u8272\u6309\u94ae\u5173\u95ed\u3002"
       },
       {
         "d": [
           "hard"
         ],
-        "en": "Open the drawer. Pour each required jar into the pot in the remembered recipe order, returning jars upright and caps to the tray, then cover the pot. Turn the black knob to HEAT and press the green button; within 2 s after 80 °C, switch to KEEP WARM, then press it again.",
+        "en": "Open the drawer. Pour each required jar into the pot in the remembered recipe order, returning jars upright and caps to the tray, then cover the pot. Turn the black knob to HEAT and press the green button; within 2 s after 80 \u00b0C, switch to KEEP WARM, then press it again.",
         "ex": "",
-        "zh": "拉开抽屉。按记住的菜谱顺序把每个需要的罐子倒进锅里，空罐竖直放回、盖子放到托盘上，再盖上锅盖。把黑色旋钮转到 HEAT 并按绿色按钮；到 80 °C 后 2 秒内转到 KEEP WARM，再按一次绿色按钮关闭。"
+        "zh": "\u62c9\u5f00\u62bd\u5c49\u3002\u6309\u8bb0\u4f4f\u7684\u83dc\u8c31\u987a\u5e8f\u628a\u6bcf\u4e2a\u9700\u8981\u7684\u7f50\u5b50\u5012\u8fdb\u9505\u91cc\uff0c\u7a7a\u7f50\u7ad6\u76f4\u653e\u56de\u3001\u76d6\u5b50\u653e\u5230\u6258\u76d8\u4e0a\uff0c\u518d\u76d6\u4e0a\u9505\u76d6\u3002\u628a\u9ed1\u8272\u65cb\u94ae\u8f6c\u5230 HEAT \u5e76\u6309\u7eff\u8272\u6309\u94ae\uff1b\u5230 80 \u00b0C \u540e 2 \u79d2\u5185\u8f6c\u5230 KEEP WARM\uff0c\u518d\u6309\u4e00\u6b21\u7eff\u8272\u6309\u94ae\u5173\u95ed\u3002"
       }
     ],
     "CP05": [
@@ -98,7 +97,7 @@
         ],
         "en": "Pick up the central mallet, press the triangle-marked button and watch the demonstration while holding it, then reproduce the eight key presses in order. Return and release the mallet, release all keys, and withdraw your arms.",
         "ex": "",
-        "zh": "拿起中间的槌，按下带三角标记的按钮，拿着槌看示范，然后按顺序复现 8 次按键；放回并松开槌，松开所有键，收回手臂。"
+        "zh": "\u62ff\u8d77\u4e2d\u95f4\u7684\u69cc\uff0c\u6309\u4e0b\u5e26\u4e09\u89d2\u6807\u8bb0\u7684\u6309\u94ae\uff0c\u62ff\u7740\u69cc\u770b\u793a\u8303\uff0c\u7136\u540e\u6309\u987a\u5e8f\u590d\u73b0 8 \u6b21\u6309\u952e\uff1b\u653e\u56de\u5e76\u677e\u5f00\u69cc\uff0c\u677e\u5f00\u6240\u6709\u952e\uff0c\u6536\u56de\u624b\u81c2\u3002"
       },
       {
         "d": [
@@ -106,7 +105,7 @@
         ],
         "en": "Pick up both side mallets, press the triangle-marked button and watch the demonstration while holding both, then reproduce the eight key presses in order using either mallet. Return and release both mallets, release all keys, and withdraw your arms.",
         "ex": "",
-        "zh": "拿起两侧的槌，按下带三角标记的按钮，拿着两根槌看示范，然后用任一根槌按顺序复现 8 次按键；放回并松开两根槌，松开所有键，收回手臂。"
+        "zh": "\u62ff\u8d77\u4e24\u4fa7\u7684\u69cc\uff0c\u6309\u4e0b\u5e26\u4e09\u89d2\u6807\u8bb0\u7684\u6309\u94ae\uff0c\u62ff\u7740\u4e24\u6839\u69cc\u770b\u793a\u8303\uff0c\u7136\u540e\u7528\u4efb\u4e00\u6839\u69cc\u6309\u987a\u5e8f\u590d\u73b0 8 \u6b21\u6309\u952e\uff1b\u653e\u56de\u5e76\u677e\u5f00\u4e24\u6839\u69cc\uff0c\u677e\u5f00\u6240\u6709\u952e\uff0c\u6536\u56de\u624b\u81c2\u3002"
       },
       {
         "d": [
@@ -114,7 +113,7 @@
         ],
         "en": "Set volume to MAX and release the slider. Pick up both side mallets, press the triangle-marked button and watch the demonstration while holding both, then reproduce the twelve key presses in order using either mallet. Return and release both mallets, release all keys, withdraw your arms, and keep volume at MAX.",
         "ex": "",
-        "zh": "先把音量推到 MAX 并松开推杆。拿起两侧的槌，按下带三角标记的按钮，拿着两根槌看示范，然后用任一根槌按顺序复现 12 次按键；放回并松开两根槌，松开所有键，收回手臂，音量保持 MAX。"
+        "zh": "\u5148\u628a\u97f3\u91cf\u63a8\u5230 MAX \u5e76\u677e\u5f00\u63a8\u6746\u3002\u62ff\u8d77\u4e24\u4fa7\u7684\u69cc\uff0c\u6309\u4e0b\u5e26\u4e09\u89d2\u6807\u8bb0\u7684\u6309\u94ae\uff0c\u62ff\u7740\u4e24\u6839\u69cc\u770b\u793a\u8303\uff0c\u7136\u540e\u7528\u4efb\u4e00\u6839\u69cc\u6309\u987a\u5e8f\u590d\u73b0 12 \u6b21\u6309\u952e\uff1b\u653e\u56de\u5e76\u677e\u5f00\u4e24\u6839\u69cc\uff0c\u677e\u5f00\u6240\u6709\u952e\uff0c\u6536\u56de\u624b\u81c2\uff0c\u97f3\u91cf\u4fdd\u6301 MAX\u3002"
       }
     ],
     "DR1": [
@@ -126,7 +125,7 @@
         ],
         "en": "Pick up all <N> packages on the conveyor belt and place them in the central collection tray.",
         "ex": "Pick up all 3 packages on the conveyor belt and place them in the central collection tray.",
-        "zh": "把传送带上的 <N> 个包裹全部拿起，放进中间的收集托盘。"
+        "zh": "\u628a\u4f20\u9001\u5e26\u4e0a\u7684 <N> \u4e2a\u5305\u88f9\u5168\u90e8\u62ff\u8d77\uff0c\u653e\u8fdb\u4e2d\u95f4\u7684\u6536\u96c6\u6258\u76d8\u3002"
       }
     ],
     "DR2": [
@@ -138,7 +137,7 @@
         ],
         "en": "Press the currently illuminated button within <N> seconds and release within <N> second. Respond correctly to all <N> cues; never press an unlit button.",
         "ex": "Press the currently illuminated button within 4.0 seconds and release within 1 second. Respond correctly to all 10 cues; never press an unlit button.",
-        "zh": "在 <N> 秒内按下当前亮起的按钮，并在 <N> 秒内松开。对全部 <N> 次提示都正确响应；不要按没亮的按钮。"
+        "zh": "\u5728 <N> \u79d2\u5185\u6309\u4e0b\u5f53\u524d\u4eae\u8d77\u7684\u6309\u94ae\uff0c\u5e76\u5728 <N> \u79d2\u5185\u677e\u5f00\u3002\u5bf9\u5168\u90e8 <N> \u6b21\u63d0\u793a\u90fd\u6b63\u786e\u54cd\u5e94\uff1b\u4e0d\u8981\u6309\u6ca1\u4eae\u7684\u6309\u94ae\u3002"
       }
     ],
     "E1": [
@@ -148,7 +147,7 @@
         ],
         "en": "Observe and remember each batch of items. After the first batch, place the one item that appeared in the immediately preceding batch into the submission tray.",
         "ex": "",
-        "zh": "观察并记住每一批物品。从第二批开始，把在紧邻上一批中出现过的那一个物品放进提交托盘。"
+        "zh": "\u89c2\u5bdf\u5e76\u8bb0\u4f4f\u6bcf\u4e00\u6279\u7269\u54c1\u3002\u4ece\u7b2c\u4e8c\u6279\u5f00\u59cb\uff0c\u628a\u5728\u7d27\u90bb\u4e0a\u4e00\u6279\u4e2d\u51fa\u73b0\u8fc7\u7684\u90a3\u4e00\u4e2a\u7269\u54c1\u653e\u8fdb\u63d0\u4ea4\u6258\u76d8\u3002"
       },
       {
         "d": [
@@ -156,7 +155,7 @@
         ],
         "en": "Observe and remember each batch of items. After the first batch, place the one item that appeared in any of the previous three batches into the submission tray.",
         "ex": "",
-        "zh": "观察并记住每一批物品。从第二批开始，把在之前三批中任一批出现过的那一个物品放进提交托盘。"
+        "zh": "\u89c2\u5bdf\u5e76\u8bb0\u4f4f\u6bcf\u4e00\u6279\u7269\u54c1\u3002\u4ece\u7b2c\u4e8c\u6279\u5f00\u59cb\uff0c\u628a\u5728\u4e4b\u524d\u4e09\u6279\u4e2d\u4efb\u4e00\u6279\u51fa\u73b0\u8fc7\u7684\u90a3\u4e00\u4e2a\u7269\u54c1\u653e\u8fdb\u63d0\u4ea4\u6258\u76d8\u3002"
       },
       {
         "d": [
@@ -164,7 +163,7 @@
         ],
         "en": "Observe and remember each batch of items. After the first batch, place the one item that appeared in any of the previous five batches into the submission tray.",
         "ex": "",
-        "zh": "观察并记住每一批物品。从第二批开始，把在之前五批中任一批出现过的那一个物品放进提交托盘。"
+        "zh": "\u89c2\u5bdf\u5e76\u8bb0\u4f4f\u6bcf\u4e00\u6279\u7269\u54c1\u3002\u4ece\u7b2c\u4e8c\u6279\u5f00\u59cb\uff0c\u628a\u5728\u4e4b\u524d\u4e94\u6279\u4e2d\u4efb\u4e00\u6279\u51fa\u73b0\u8fc7\u7684\u90a3\u4e00\u4e2a\u7269\u54c1\u653e\u8fdb\u63d0\u4ea4\u6258\u76d8\u3002"
       }
     ],
     "F1": [
@@ -174,7 +173,7 @@
         ],
         "en": "Probe the two unmarked buttons and remember how each moves the slider. After the slider resets and the goal appears, reach the visible goal using the fewest presses.",
         "ex": "",
-        "zh": "试按两个无标记按钮，记住各自如何移动滑块。滑块复位、目标出现后，用最少的按压次数到达可见目标。"
+        "zh": "\u8bd5\u6309\u4e24\u4e2a\u65e0\u6807\u8bb0\u6309\u94ae\uff0c\u8bb0\u4f4f\u5404\u81ea\u5982\u4f55\u79fb\u52a8\u6ed1\u5757\u3002\u6ed1\u5757\u590d\u4f4d\u3001\u76ee\u6807\u51fa\u73b0\u540e\uff0c\u7528\u6700\u5c11\u7684\u6309\u538b\u6b21\u6570\u5230\u8fbe\u53ef\u89c1\u76ee\u6807\u3002"
       },
       {
         "d": [
@@ -183,7 +182,7 @@
         ],
         "en": "Probe the four unmarked buttons and remember how each moves the slider. After the slider resets and the goal appears, reach the visible goal on the <N> by <N> grid using the fewest presses.",
         "ex": "Probe the four unmarked buttons and remember how each moves the slider. After the slider resets and the goal appears, reach the visible goal on the 3 by 3 grid using the fewest presses.",
-        "zh": "试按四个无标记按钮，记住各自如何移动滑块。滑块复位、目标出现后，在 <N>×<N> 网格上用最少的按压次数到达可见目标。"
+        "zh": "\u8bd5\u6309\u56db\u4e2a\u65e0\u6807\u8bb0\u6309\u94ae\uff0c\u8bb0\u4f4f\u5404\u81ea\u5982\u4f55\u79fb\u52a8\u6ed1\u5757\u3002\u6ed1\u5757\u590d\u4f4d\u3001\u76ee\u6807\u51fa\u73b0\u540e\uff0c\u5728 <N>\u00d7<N> \u7f51\u683c\u4e0a\u7528\u6700\u5c11\u7684\u6309\u538b\u6b21\u6570\u5230\u8fbe\u53ef\u89c1\u76ee\u6807\u3002"
       }
     ],
     "M1": [
@@ -195,7 +194,7 @@
         ],
         "en": "Remember the target location and station route. Track the target through the cover exchanges, uncover it, and move it through the required stations in order.",
         "ex": "",
-        "zh": "记住目标位置和站点路线。在罩子交换过程中追踪目标，打开罩子取出它，并按顺序把它移过要求的站点。"
+        "zh": "\u8bb0\u4f4f\u76ee\u6807\u4f4d\u7f6e\u548c\u7ad9\u70b9\u8def\u7ebf\u3002\u5728\u7f69\u5b50\u4ea4\u6362\u8fc7\u7a0b\u4e2d\u8ffd\u8e2a\u76ee\u6807\uff0c\u6253\u5f00\u7f69\u5b50\u53d6\u51fa\u5b83\uff0c\u5e76\u6309\u987a\u5e8f\u628a\u5b83\u79fb\u8fc7\u8981\u6c42\u7684\u7ad9\u70b9\u3002"
       }
     ],
     "P1": [
@@ -205,7 +204,7 @@
         ],
         "en": "Remember the initial orders and place all requested ingredients into the indicated containers.",
         "ex": "",
-        "zh": "记住初始订单，把所有要求的食材放进指定的容器。"
+        "zh": "\u8bb0\u4f4f\u521d\u59cb\u8ba2\u5355\uff0c\u628a\u6240\u6709\u8981\u6c42\u7684\u98df\u6750\u653e\u8fdb\u6307\u5b9a\u7684\u5bb9\u5668\u3002"
       },
       {
         "d": [
@@ -213,7 +212,7 @@
         ],
         "en": "Remember the initial orders and one additional order shown later. Place all requested ingredients into the indicated containers; the additional order adds to earlier demand.",
         "ex": "",
-        "zh": "记住初始订单以及之后出现的一个追加订单。把所有要求的食材放进指定容器；追加订单在之前的需求上累加。"
+        "zh": "\u8bb0\u4f4f\u521d\u59cb\u8ba2\u5355\u4ee5\u53ca\u4e4b\u540e\u51fa\u73b0\u7684\u4e00\u4e2a\u8ffd\u52a0\u8ba2\u5355\u3002\u628a\u6240\u6709\u8981\u6c42\u7684\u98df\u6750\u653e\u8fdb\u6307\u5b9a\u5bb9\u5668\uff1b\u8ffd\u52a0\u8ba2\u5355\u5728\u4e4b\u524d\u7684\u9700\u6c42\u4e0a\u7d2f\u52a0\u3002"
       },
       {
         "d": [
@@ -221,7 +220,7 @@
         ],
         "en": "Remember the initial orders and two additional orders shown later. Place all requested ingredients into the indicated containers; each additional order adds to earlier demand.",
         "ex": "",
-        "zh": "记住初始订单以及之后出现的两个追加订单。把所有要求的食材放进指定容器；每个追加订单在之前的需求上累加。"
+        "zh": "\u8bb0\u4f4f\u521d\u59cb\u8ba2\u5355\u4ee5\u53ca\u4e4b\u540e\u51fa\u73b0\u7684\u4e24\u4e2a\u8ffd\u52a0\u8ba2\u5355\u3002\u628a\u6240\u6709\u8981\u6c42\u7684\u98df\u6750\u653e\u8fdb\u6307\u5b9a\u5bb9\u5668\uff1b\u6bcf\u4e2a\u8ffd\u52a0\u8ba2\u5355\u5728\u4e4b\u524d\u7684\u9700\u6c42\u4e0a\u7d2f\u52a0\u3002"
       }
     ],
     "PR3": [
@@ -233,7 +232,7 @@
         ],
         "en": "Grasp the marker and trace the complete visible path, then lift.",
         "ex": "",
-        "zh": "抓起马克笔，沿可见路径完整描画，然后抬笔。"
+        "zh": "\u6293\u8d77\u9a6c\u514b\u7b14\uff0c\u6cbf\u53ef\u89c1\u8def\u5f84\u5b8c\u6574\u63cf\u753b\uff0c\u7136\u540e\u62ac\u7b14\u3002"
       }
     ],
     "S1": [
@@ -245,8 +244,9 @@
         ],
         "en": "Remember the four colored slots, observe the carousel rotation, then place each colored block into its original matching slot after the carousel stops.",
         "ex": "",
-        "zh": "记住四个彩色槽位，观察转盘旋转，在转盘停下后把每个彩色方块放回它原来对应的槽位。"
+        "zh": "\u8bb0\u4f4f\u56db\u4e2a\u5f69\u8272\u69fd\u4f4d\uff0c\u89c2\u5bdf\u8f6c\u76d8\u65cb\u8f6c\uff0c\u5728\u8f6c\u76d8\u505c\u4e0b\u540e\u628a\u6bcf\u4e2a\u5f69\u8272\u65b9\u5757\u653e\u56de\u5b83\u539f\u6765\u5bf9\u5e94\u7684\u69fd\u4f4d\u3002"
       }
     ]
-  }
+  },
+  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae"
 }

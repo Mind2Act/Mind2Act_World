@@ -1,6 +1,6 @@
 """CP03 pure evidence helpers: stable-placement tracker and dish target predicate.
 
-Source: shared coupling module (mind2act_eval.coupling_v2 StablePlacement / dish_target), the
+Source: shared coupling module (physco_eval.coupling_v2 StablePlacement / dish_target), the
 tracker as used by cp03-em-b-20261028 cases_unified/CP03/world.py.
 """
 from collections import deque

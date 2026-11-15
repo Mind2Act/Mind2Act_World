@@ -72,6 +72,8 @@ def spec_from_source(raw, *, source_spec_sha256, assets, asset_version, station_
 
 
 def validate(spec):
+    from mind2act_eval.public_layouts import validate as validate_public
+    validate_public(spec)
     c = spec.config
     if (spec.task_id != 'PR6' or spec.source_id != SOURCE_ID or spec.config_version != CONFIG_VERSION
             or spec.clock != ClockSpec(120,30,30) or spec.seed != c['source_case']['seed']):

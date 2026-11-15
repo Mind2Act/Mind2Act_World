@@ -17,6 +17,9 @@ def instruction():
 
 
 def validate(spec, ctx):
+    if spec.instance_id.startswith('VAL-F2-composition-') or spec.config.get('gap_composition_authority')=='gap-composition-v1':
+        from mind2act_eval.gap_composition_inputs import validate as validate_gap
+        validate_gap(spec, ctx.assets)
     if spec.task_id != 'F2' or spec.source_id != SOURCE_ID or spec.config_version != VERSION:
         raise ValueError('F2 source/rule identity mismatch')
     if spec.clock.physics_hz != 120 or spec.clock.control_hz not in (30,120) or spec.clock.rgb_hz != 30:
@@ -108,7 +111,8 @@ class ExperimentScene:
                            protocol_version=self.spec.protocol_version)
 
     def evidence(self,tick):
-        return NativeEvidence('F2',self.spec.instance_id,tick,dict(source_case=self.source,
+        from mind2act_eval.gap_composition_inputs import evidence_fields
+        return NativeEvidence('F2',self.spec.instance_id,tick,dict(source_case=self.source,**evidence_fields(self.spec),
             input_protocol_version=self.spec.config['input_protocol_version'],source_start_tick=self.start,
             source_origin_receipt=self.origin_receipt,initial=self.initial,
             measurements=self.rows.receipt(),terminal_tick=self.terminal_tick))

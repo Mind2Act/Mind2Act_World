@@ -1,0 +1,2885 @@
+{
+  "records": {
+    "CP10/easy/CP10-easy-seed100000-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca/scene.usda",
+        "station": "assets/88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca/scene.usda",
+        "train_source_raw": "inputs/3d55aa33a35c9ae793888a79c0092c47ee934f263972cda1ff5266a9ac22b85d.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "dd73299a72e808ad786319eccd6770e059c8825ab9031896d8119226b3d7435b",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed100000-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100000,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "34eb025f94d8f42b4de402d38b568215b488f7d90a4239662dbcf0b23c549afc",
+        "station": "34eb025f94d8f42b4de402d38b568215b488f7d90a4239662dbcf0b23c549afc",
+        "train_source_raw": "3d55aa33a35c9ae793888a79c0092c47ee934f263972cda1ff5266a9ac22b85d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "af55d844bf6ee2c59f19c72e6926fac660739780c7b4e0a8b75ca1a1f056a397"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed100000-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "1036ea43aa184d11a41234ae551c8fa946710184b27849f58f36f56f844ca116",
+        "input_sha256": "3d55aa33a35c9ae793888a79c0092c47ee934f263972cda1ff5266a9ac22b85d",
+        "instance_id": "CP10-easy-seed100000-train-supplement-v1",
+        "native_case_id": "CP10-easy-seed100000-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1038-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/d9c5fa7d1400be11fe22ce046152a3e02fd2a66f2a9c66b98a9e28e16fdc0464/scene.usda",
+        "station": "assets/d9c5fa7d1400be11fe22ce046152a3e02fd2a66f2a9c66b98a9e28e16fdc0464/scene.usda",
+        "train_source_raw": "inputs/33a4cf43cc7f51a6cbd03330e4a4a761217a2649c05f10c89cbf32fc2a231811.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "62a5e851541a6e4943663f985f86282fc077d5d6bc7f230923d79148a384ca95",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1038-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1038,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "daa5b04d7cd4804f1b52b5e43f395c012b46ab9bbc9d573da86603a9129af2a5",
+        "station": "daa5b04d7cd4804f1b52b5e43f395c012b46ab9bbc9d573da86603a9129af2a5",
+        "train_source_raw": "33a4cf43cc7f51a6cbd03330e4a4a761217a2649c05f10c89cbf32fc2a231811",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "ac61e489675319530b85b8c3d110270f479aeb680ff931e2cb05b149d2f35ed4"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1038-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "dc97f142e574b968b4599194fc12e0fa5a0363f7f5abd43b1abae0dac6c0e8a4",
+        "input_sha256": "33a4cf43cc7f51a6cbd03330e4a4a761217a2649c05f10c89cbf32fc2a231811",
+        "instance_id": "CP10-easy-seed1038-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1038-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1277-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/39f8dbbf1df451fa757d2a33d86921c1c8739f930b40284db03babdf09e926b8/scene.usda",
+        "station": "assets/39f8dbbf1df451fa757d2a33d86921c1c8739f930b40284db03babdf09e926b8/scene.usda",
+        "train_source_raw": "inputs/4a90945c06e017b4bc85c0510690f7e7e0cf5cbdf4b8a8cebf03da7afc52601a.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "46bcb2935649016c312b7d6236f200ddeab3664d7e145d096834d12948bf7b8b",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1277-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1277,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "539dc8eb6404c2cf271682dd4dd1efa1afc68e2988aa229ea0cb2924ac562b9a",
+        "station": "539dc8eb6404c2cf271682dd4dd1efa1afc68e2988aa229ea0cb2924ac562b9a",
+        "train_source_raw": "4a90945c06e017b4bc85c0510690f7e7e0cf5cbdf4b8a8cebf03da7afc52601a",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "00ad60420ba19c40bf5c59aaff5aef318e12224b744a3be09219630c012a2d0e"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1277-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "ff830b131be94bce637b5a293ae9fef32a4bca81db8bf261c818cc065b5c07c5",
+        "input_sha256": "4a90945c06e017b4bc85c0510690f7e7e0cf5cbdf4b8a8cebf03da7afc52601a",
+        "instance_id": "CP10-easy-seed1277-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1277-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1278-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/f4a8faeb711c82c38307be1cb0979672668ef194ba481104e33b59d336dd1562/scene.usda",
+        "station": "assets/f4a8faeb711c82c38307be1cb0979672668ef194ba481104e33b59d336dd1562/scene.usda",
+        "train_source_raw": "inputs/e70de49d90731a34c0382e72bd619911f88772f83e81582fd01963a62054e148.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "95e2171d356b2689cd58c668a100e1c74178fcb6c249ecc80901b0f54d42b7d8",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1278-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1278,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "90f22994eefa7e5236b2ea2c69a24d1569e56eeefb63e162f750de16aee5ac8f",
+        "station": "90f22994eefa7e5236b2ea2c69a24d1569e56eeefb63e162f750de16aee5ac8f",
+        "train_source_raw": "e70de49d90731a34c0382e72bd619911f88772f83e81582fd01963a62054e148",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "253d98187d284a7c6c1fcd5eaafde598e77adb26e6674bb6e5cd6d361c6acd32"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1278-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "322c5e1799ff711f39cbe70b3990c1e8c705baa41d8a7e57bac3ec65331d5707",
+        "input_sha256": "e70de49d90731a34c0382e72bd619911f88772f83e81582fd01963a62054e148",
+        "instance_id": "CP10-easy-seed1278-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1278-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1446-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/b4f63cfc9dab28bd49a7e4ffbb69f59e895bb33ca2107d0677444c94b5794c89/scene.usda",
+        "station": "assets/b4f63cfc9dab28bd49a7e4ffbb69f59e895bb33ca2107d0677444c94b5794c89/scene.usda",
+        "train_source_raw": "inputs/865b4ccd9ff520f2254119990d0bda09405814dd0c86178b1ad98d73b765dd47.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "5c3f946117f1af69702f68c74d5fe055cb1c67a567e38b4c987b4e955b03e18c",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1446-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1446,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "de81097d273db9e2caac120982ab583ff5135375cd0902f2cd0b8df44d0a2714",
+        "station": "de81097d273db9e2caac120982ab583ff5135375cd0902f2cd0b8df44d0a2714",
+        "train_source_raw": "865b4ccd9ff520f2254119990d0bda09405814dd0c86178b1ad98d73b765dd47",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "8b9915e1affd35899fa77d9cc16ae9f9e8f0ad6506b57f0e96665960ad47516c"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1446-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "a8237c99915eba8f2411059f7b9a55b52a61407e3d9730b3a677eec613e81125",
+        "input_sha256": "865b4ccd9ff520f2254119990d0bda09405814dd0c86178b1ad98d73b765dd47",
+        "instance_id": "CP10-easy-seed1446-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1446-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1517-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/391631094b3a51e8646ee48024f22671063a1eb487acca1547a24a8a4a46ae5b/scene.usda",
+        "station": "assets/391631094b3a51e8646ee48024f22671063a1eb487acca1547a24a8a4a46ae5b/scene.usda",
+        "train_source_raw": "inputs/993cb701c86ce683931d150a59281cb90481582004d4d082e162726d14cc727e.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "3197eac328ed3dfa04413448eb5c38946aee5ed14128937796b012639d1797f2",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1517-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1517,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "dc5446573e302c4b58afca98d2672ebf45e1df58933af831a567b95c11e120ad",
+        "station": "dc5446573e302c4b58afca98d2672ebf45e1df58933af831a567b95c11e120ad",
+        "train_source_raw": "993cb701c86ce683931d150a59281cb90481582004d4d082e162726d14cc727e",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "23fde24ce23df583ea4d28f5d943479d0fa2c561b9ac8ac0f72ef3a04322b723"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1517-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "16a32d1fb5ad5223f1afd8538fdd06c6b55a7b51a8ceed830d9192717183e899",
+        "input_sha256": "993cb701c86ce683931d150a59281cb90481582004d4d082e162726d14cc727e",
+        "instance_id": "CP10-easy-seed1517-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1517-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1555-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/e69513af615b72debd33ca1a68ff4bfe894744fc26b4b023f36c05386d79c0f1/scene.usda",
+        "station": "assets/e69513af615b72debd33ca1a68ff4bfe894744fc26b4b023f36c05386d79c0f1/scene.usda",
+        "train_source_raw": "inputs/0ff4fb9ac4d0b60436e05a83cc10a2ed19492d6349e21e568398730ef7932f80.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a76cb3b8673024c5f90704a0f3c595f0c758060059d5f98da716d22e149960ca",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1555-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1555,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "3f6f04ca2057bfdb4768382d246940309bc561a6cfbc2bb1e842f226916a36f6",
+        "station": "3f6f04ca2057bfdb4768382d246940309bc561a6cfbc2bb1e842f226916a36f6",
+        "train_source_raw": "0ff4fb9ac4d0b60436e05a83cc10a2ed19492d6349e21e568398730ef7932f80",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "99cdda4102646f1b354535f25038c3e56ef27d544ae4b070dca2d2baf34845df"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1555-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "dc0d8d69dbeb2c2744fb34d0e32dcf11f4fc7570fc1e1b465f79a3823d5ff58f",
+        "input_sha256": "0ff4fb9ac4d0b60436e05a83cc10a2ed19492d6349e21e568398730ef7932f80",
+        "instance_id": "CP10-easy-seed1555-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1555-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1690-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/ae346725eb39414051081de6734adef8d678e00e69c5cbe275635c6afaa582c5/scene.usda",
+        "station": "assets/ae346725eb39414051081de6734adef8d678e00e69c5cbe275635c6afaa582c5/scene.usda",
+        "train_source_raw": "inputs/37cacecbaca02d1c577ce33cb9e1565e912889bfbf48d41d2558552f418b9b14.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "6a71e73c62ae10b5dd986bd755527e6f58480f1bb6931da2bf6c82732314e3d5",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1690-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1690,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "91fc0d4af4211922d8b34661f06bf107520d28981bccb7787ae47bb6f45a120a",
+        "station": "91fc0d4af4211922d8b34661f06bf107520d28981bccb7787ae47bb6f45a120a",
+        "train_source_raw": "37cacecbaca02d1c577ce33cb9e1565e912889bfbf48d41d2558552f418b9b14",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "2d2b037926b88465005658c7b00d28975f1561ea0d99101264c0fd3e4fdfddd5"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1690-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "8f1711b11756d9b5c9e6f770406d899186c7d7ba6d236e82b5cea6668cbcd30c",
+        "input_sha256": "37cacecbaca02d1c577ce33cb9e1565e912889bfbf48d41d2558552f418b9b14",
+        "instance_id": "CP10-easy-seed1690-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1690-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1701-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/69ce90bd3646b7e1582b693a6ef142a140e4607aac54edc2e6229c95828185d4/scene.usda",
+        "station": "assets/69ce90bd3646b7e1582b693a6ef142a140e4607aac54edc2e6229c95828185d4/scene.usda",
+        "train_source_raw": "inputs/5693a6aaed77ece3cda93eb0d3e13f7ad56fd2299208b1d2fa7994dde087aaf7.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "c779cdc1c5bc27addbb25f97eec733fc1d2d19f7bd4dda356c4140bfaac123ad",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1701-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1701,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "cedcbdc46e1d3377618a59b63055ee814a5355ba7f4c19b749f26de4367460bd",
+        "station": "cedcbdc46e1d3377618a59b63055ee814a5355ba7f4c19b749f26de4367460bd",
+        "train_source_raw": "5693a6aaed77ece3cda93eb0d3e13f7ad56fd2299208b1d2fa7994dde087aaf7",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "2208a4198b407e04b63cb49a4a12f5f199ae4a5b3b0053701f7726ea45e52778"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1701-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "4964db25f81a12804392ed5956f1afb7a52b3be62779ada82ad59aa12848e628",
+        "input_sha256": "5693a6aaed77ece3cda93eb0d3e13f7ad56fd2299208b1d2fa7994dde087aaf7",
+        "instance_id": "CP10-easy-seed1701-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1701-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed171-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/d068c5601b049e54ea6655618bcaa28ea58b8c4c159d321772cf11406f95657f/scene.usda",
+        "station": "assets/d068c5601b049e54ea6655618bcaa28ea58b8c4c159d321772cf11406f95657f/scene.usda",
+        "train_source_raw": "inputs/ddde5b14f17f7daa6b47cf8cbd38b30d0c45dbba2c04577c91bee82173d82951.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "42a6ef654df21b7f11ed683a2638444aba907d412e1984938f043a84a014eee6",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed171-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 171,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "9946e9c327822834fc03ec88be501f987742b2beeaa71859b06fd695557d7c2d",
+        "station": "9946e9c327822834fc03ec88be501f987742b2beeaa71859b06fd695557d7c2d",
+        "train_source_raw": "ddde5b14f17f7daa6b47cf8cbd38b30d0c45dbba2c04577c91bee82173d82951",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "f1e85b51c7e29f6838b4c0f76aa02b933eea0da7870f3387c392606942276c39"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed171-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "92937df0eeb77e9317a19aa55105a8dc0306a5d562a8b8d428a2a28d955b7320",
+        "input_sha256": "ddde5b14f17f7daa6b47cf8cbd38b30d0c45dbba2c04577c91bee82173d82951",
+        "instance_id": "CP10-easy-seed171-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed171-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1757-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/acb4c88dd5b70cf3f17277b319e237dc4e43d5f342a345a533de8c527acf6422/scene.usda",
+        "station": "assets/acb4c88dd5b70cf3f17277b319e237dc4e43d5f342a345a533de8c527acf6422/scene.usda",
+        "train_source_raw": "inputs/9441b572cc352dbd5d072f1b4a0345bd47ffbd1de37eb8c4574f1dcff13e9732.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "24c68a61df0287afbf3744e1f3c6a20e04e20d72a5a164fc052d265d857429fd",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1757-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1757,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "bc510a9ee5cc842e279d512181392217c60bb306729ce8fc090e6d74e889be2d",
+        "station": "bc510a9ee5cc842e279d512181392217c60bb306729ce8fc090e6d74e889be2d",
+        "train_source_raw": "9441b572cc352dbd5d072f1b4a0345bd47ffbd1de37eb8c4574f1dcff13e9732",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "92850a5081c37266d71599e9b8e15e69bf4d07fe4a4f32215af68ac0cfcf5d97"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1757-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "80f7c599d8b98b195512b89e7accb0324ec3f0343eac6027f806f148573729ef",
+        "input_sha256": "9441b572cc352dbd5d072f1b4a0345bd47ffbd1de37eb8c4574f1dcff13e9732",
+        "instance_id": "CP10-easy-seed1757-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1757-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed1847-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/63e71d0eabe59f79231657637571b8909851cd3d09b02e3f6a9d1c718cce2ace/scene.usda",
+        "station": "assets/63e71d0eabe59f79231657637571b8909851cd3d09b02e3f6a9d1c718cce2ace/scene.usda",
+        "train_source_raw": "inputs/6168974c7d2e52dcadf52263794a908c14d18529d18f7322db950bd9af4ea313.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "c90fc7fc2e48a64c82a39e7120ab5019c790952f7bf91e03a42fc3f282ccdc06",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed1847-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1847,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "837815854c485eb2e34b6e3f2f9a50826787f3f918e545fdcfaa5674f8c4f9af",
+        "station": "837815854c485eb2e34b6e3f2f9a50826787f3f918e545fdcfaa5674f8c4f9af",
+        "train_source_raw": "6168974c7d2e52dcadf52263794a908c14d18529d18f7322db950bd9af4ea313",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "c822280ca8a55ca1e08db5a4cafa196c9f20856f572df064b5efe06cdbad05d2"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed1847-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "09d566c98896157d070f1692e480d8d8a535930c09009a37648b1e8960ea9562",
+        "input_sha256": "6168974c7d2e52dcadf52263794a908c14d18529d18f7322db950bd9af4ea313",
+        "instance_id": "CP10-easy-seed1847-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed1847-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed20-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/464a7070e4cd7d395043a84a07e255ebf0c2507db306b43b638111a97bd78f6f/scene.usda",
+        "station": "assets/464a7070e4cd7d395043a84a07e255ebf0c2507db306b43b638111a97bd78f6f/scene.usda",
+        "train_source_raw": "inputs/57c329a7707d1e2c272d6b057f07c289e6540b6099e58323e26a38c58941bb1f.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "7fa40463594a83e8cd48f91134fd30440c1287033de15bb0fabaf1f4e9ec0a49",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed20-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 20,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "dc2c56ce3eb593eb316e19f3fb75a24880d2d2d5a13d42ecd9063cc319ea3c1e",
+        "station": "dc2c56ce3eb593eb316e19f3fb75a24880d2d2d5a13d42ecd9063cc319ea3c1e",
+        "train_source_raw": "57c329a7707d1e2c272d6b057f07c289e6540b6099e58323e26a38c58941bb1f",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "01aeb51749225f9f627446491672bd99c5a2199ee1af39d1197401c0acc9fc60"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed20-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "65d2d01ea3c5b0a924f014cf4d241ceef3726b9212bd6a172f6b361509c11794",
+        "input_sha256": "57c329a7707d1e2c272d6b057f07c289e6540b6099e58323e26a38c58941bb1f",
+        "instance_id": "CP10-easy-seed20-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed20-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed357-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/7790c66c877079e269b37ffdfbd08a41727c294c5f587a91ea3ca3f507e041d4/scene.usda",
+        "station": "assets/7790c66c877079e269b37ffdfbd08a41727c294c5f587a91ea3ca3f507e041d4/scene.usda",
+        "train_source_raw": "inputs/727e75a8c822067a6c77a036580f0cbeee364941d55ca4c7a60d6eae390ad818.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f0c5bade603190ed9385ad2a5550563b85677883f061b964b005bafeb44098e3",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed357-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 357,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "1ecef3b39edd26c4763036afab5483c1b4d7abf81a2a13160c68d137c4bdfefb",
+        "station": "1ecef3b39edd26c4763036afab5483c1b4d7abf81a2a13160c68d137c4bdfefb",
+        "train_source_raw": "727e75a8c822067a6c77a036580f0cbeee364941d55ca4c7a60d6eae390ad818",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "9c8022738a27ac4a155b5a45d72c8588e205a31a1aad9bf3e4756b73fac231cf"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed357-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "0ebaff946ac570f05cdf8a8c603fe1d6903938b126223e260fd846f8f1f9fd0b",
+        "input_sha256": "727e75a8c822067a6c77a036580f0cbeee364941d55ca4c7a60d6eae390ad818",
+        "instance_id": "CP10-easy-seed357-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed357-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed416-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/a4f526278e2d29c62ced2308384be2efff4a02c0dfb322343a6fa7bc72d56ba5/scene.usda",
+        "station": "assets/a4f526278e2d29c62ced2308384be2efff4a02c0dfb322343a6fa7bc72d56ba5/scene.usda",
+        "train_source_raw": "inputs/9c90591039b82a21f1069767795e63ecb15004cdefa2a17636a82fcd7c0b55d8.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a61cb3161aef236456b927b451ea35534aa63dcbc5964a4cf767d76a41922c23",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed416-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 416,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "ed0b0e163e52a05bb0f2d361e3e1a22c6c6a999673df1b409a0073cc33f0d918",
+        "station": "ed0b0e163e52a05bb0f2d361e3e1a22c6c6a999673df1b409a0073cc33f0d918",
+        "train_source_raw": "9c90591039b82a21f1069767795e63ecb15004cdefa2a17636a82fcd7c0b55d8",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "3b8d8c82cc7174f7444b09c79878f8ae8b27c34674a6a825594dd7d9a2b5f0a3"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed416-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "4b23d1fa119cd54fec97dba77a7a85e085816115adc339254f4936265cc5c279",
+        "input_sha256": "9c90591039b82a21f1069767795e63ecb15004cdefa2a17636a82fcd7c0b55d8",
+        "instance_id": "CP10-easy-seed416-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed416-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed496-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/469dcd10f233519663b48ea2c80152e9e90d0689394a0384e91a4b22b12ba304/scene.usda",
+        "station": "assets/469dcd10f233519663b48ea2c80152e9e90d0689394a0384e91a4b22b12ba304/scene.usda",
+        "train_source_raw": "inputs/59bae5369f980ae358e32c812c3bf774ed954232a3f956929eda9df65d1a5e58.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "c0d80a8bb48272c833218adb455688a19107cb698c020841cbb97a8baf4083a0",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed496-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 496,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "d2215f5e51ca63adac1f2b984d3cabf5bf584aab42aa874ac7e1fc6e3e755201",
+        "station": "d2215f5e51ca63adac1f2b984d3cabf5bf584aab42aa874ac7e1fc6e3e755201",
+        "train_source_raw": "59bae5369f980ae358e32c812c3bf774ed954232a3f956929eda9df65d1a5e58",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "3c3bf4f6934a7e66924d233ef206116daa1b2e23e95406701a26559d733b9adb"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed496-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "8819c676d43e467a4244b1893d468bb49c977d79c00a6e918dbfc63ffc16eec3",
+        "input_sha256": "59bae5369f980ae358e32c812c3bf774ed954232a3f956929eda9df65d1a5e58",
+        "instance_id": "CP10-easy-seed496-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed496-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed572-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/dba7056ba829253f82be8382ba3ef61b8235bda1a18fde617182202ba129f80e/scene.usda",
+        "station": "assets/dba7056ba829253f82be8382ba3ef61b8235bda1a18fde617182202ba129f80e/scene.usda",
+        "train_source_raw": "inputs/9c6b422451edb0521d1ae80d47023db3145f4036e8b10369edc9ad8547267af1.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a3ba36b55ce809d7ea7e842f6b5973faf2911124cc4a2ef65bf2da27fed1b854",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed572-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 572,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "b8c5ad475b1e9dd6dfd59e1fe9ee08a89ef33601256831cedcb3f52c1aa10cf6",
+        "station": "b8c5ad475b1e9dd6dfd59e1fe9ee08a89ef33601256831cedcb3f52c1aa10cf6",
+        "train_source_raw": "9c6b422451edb0521d1ae80d47023db3145f4036e8b10369edc9ad8547267af1",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "4e917dcb17c1c103810527c696c6efa77cd0042229bedb21b4e0e48ec49b72ee"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed572-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "a159ef91db80ee96ddb369829a25228433e31ed720e02af9320733a51e1ef708",
+        "input_sha256": "9c6b422451edb0521d1ae80d47023db3145f4036e8b10369edc9ad8547267af1",
+        "instance_id": "CP10-easy-seed572-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed572-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed617-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/377461ae40cde87bd72ba1a97070d5b707b8cdd9497447fa1ca20ba50b02f697/scene.usda",
+        "station": "assets/377461ae40cde87bd72ba1a97070d5b707b8cdd9497447fa1ca20ba50b02f697/scene.usda",
+        "train_source_raw": "inputs/2a1aecee3db946660f443a2e7eb2d05c03c230b792a746525335323409f87f0a.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "aa4d5fdd230771c6c71e68dce4a3cd157e2b3b6455df43d8cf62f64fabf3f468",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed617-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 617,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "5002f8eb79a67ed35bd5bcbe43ea71f4bbe72a0e089114f23fe62d201da271df",
+        "station": "5002f8eb79a67ed35bd5bcbe43ea71f4bbe72a0e089114f23fe62d201da271df",
+        "train_source_raw": "2a1aecee3db946660f443a2e7eb2d05c03c230b792a746525335323409f87f0a",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "46ab57e4cd91eb2cf1d3ec012ac98810a65b7be4e3e9764ef5e7b79ba10ae67c"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed617-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "90281b377458068819190862de1497070e98b19b50e815a24a84da735fba8326",
+        "input_sha256": "2a1aecee3db946660f443a2e7eb2d05c03c230b792a746525335323409f87f0a",
+        "instance_id": "CP10-easy-seed617-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed617-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed783-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/ccbbdcf07614d5f6cb7a8c23f58eca8bd7e8b7992e22e15eeb95f7dca396219d/scene.usda",
+        "station": "assets/ccbbdcf07614d5f6cb7a8c23f58eca8bd7e8b7992e22e15eeb95f7dca396219d/scene.usda",
+        "train_source_raw": "inputs/537a705182445c1d364814d574779bdd3911a3bf62bbb5f4b1fc35e1b67a3bdb.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "534cf2a49cfc383adf9af2872f3a183e81b3259d4351c1b704104fbc0aceb04c",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed783-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 783,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "19dbe8dfe93ecd7e6f5ce929a262f0bd9272031ff35a254f13e18d1d33614227",
+        "station": "19dbe8dfe93ecd7e6f5ce929a262f0bd9272031ff35a254f13e18d1d33614227",
+        "train_source_raw": "537a705182445c1d364814d574779bdd3911a3bf62bbb5f4b1fc35e1b67a3bdb",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "fd263677b1b0a236812a84db6911f3e3f4c58a84f20b896178dcd98e685fc850"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed783-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "f193885326d9109e23d3c357e3c7d5be13e435818b5f5a2464c2608255df6b4b",
+        "input_sha256": "537a705182445c1d364814d574779bdd3911a3bf62bbb5f4b1fc35e1b67a3bdb",
+        "instance_id": "CP10-easy-seed783-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed783-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/easy/CP10-easy-seed955-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/0be656c9b5f673385cceb1e9735ffe8b8e814cb2bce879dabeed04a7473495fb/scene.usda",
+        "station": "assets/0be656c9b5f673385cceb1e9735ffe8b8e814cb2bce879dabeed04a7473495fb/scene.usda",
+        "train_source_raw": "inputs/aa85c831aa6bf466ffe444b47be86e51ac5541a5307cc7edbd226fb12d5d222e.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "f5301d230f4a91fd70c8373895c1e55613b84d5dfe8aad9eec2a75654aad88d4",
+      "identity": {
+        "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "easy",
+        "instance_id": "CP10-easy-seed955-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 955,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "1890da9c9de540d2c16753aec65186f17f3cf5fad9f096e59d7059b5b38adfea",
+        "station": "1890da9c9de540d2c16753aec65186f17f3cf5fad9f096e59d7059b5b38adfea",
+        "train_source_raw": "aa85c831aa6bf466ffe444b47be86e51ac5541a5307cc7edbd226fb12d5d222e",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "4a9b60916343c3e9c891032b7b927c221545f42fe2ec456e2e929f66906302fc"
+      },
+      "train_source": {
+        "difficulty": "easy",
+        "h5_path": "data/CP10/easy/CP10-easy-seed955-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "f392da05a7f028d66f8dafa47694a9cff1f28f62b1cafd55d9fb4cef201a084d",
+        "input_sha256": "aa85c831aa6bf466ffe444b47be86e51ac5541a5307cc7edbd226fb12d5d222e",
+        "instance_id": "CP10-easy-seed955-cp10-semantic50-v1",
+        "native_case_id": "CP10-easy-seed955-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100011-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/5b2cfe9b04ff5b4bbbd641b15817b4a65a63b4cd0953258d6c35f22b91faaad1/scene.usda",
+        "station": "assets/5b2cfe9b04ff5b4bbbd641b15817b4a65a63b4cd0953258d6c35f22b91faaad1/scene.usda",
+        "train_source_raw": "inputs/4913f45587ad7e061c85611b7caf40e4352bb5cba376287639949aa5c99c6f96.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "68cadfd182c253995b995464faea5b25a0977b6edcf27b612fddef14a1d9cd64",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100011-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100011,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "5704f4ece87d691a75a93a4a3da603a741d915e4bf3c37e0efe6d71fadc044b3",
+        "station": "5704f4ece87d691a75a93a4a3da603a741d915e4bf3c37e0efe6d71fadc044b3",
+        "train_source_raw": "4913f45587ad7e061c85611b7caf40e4352bb5cba376287639949aa5c99c6f96",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "8e7547166c400cf25322368c92d95dc2b6260f5cd3a8f6e551bfc1c9638c1ad0"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100011-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "2ab8faf1ae8c64e5d66c30423b70811027ee785623248a1a94f76feced46965a",
+        "input_sha256": "4913f45587ad7e061c85611b7caf40e4352bb5cba376287639949aa5c99c6f96",
+        "instance_id": "CP10-hard-seed100011-train-supplement-v1",
+        "native_case_id": "CP10-hard-seed100011-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100012-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/6332fd9bc4561e037889715b91f37e08074f9139d5f387958817e8509dc5a5a5/scene.usda",
+        "station": "assets/6332fd9bc4561e037889715b91f37e08074f9139d5f387958817e8509dc5a5a5/scene.usda",
+        "train_source_raw": "inputs/30211686512bc2d403f86baaf598beaf55560cb5374cfa0747c434a11cc4a13e.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "777586e5c2b2f3f3d4583e14cf96c1fccbae695137753f40a5607b168d4525a1",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100012-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100012,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "76b5d0367acba529df0d7ae1bf7576489a3758ef7dec416817842b1207c06914",
+        "station": "76b5d0367acba529df0d7ae1bf7576489a3758ef7dec416817842b1207c06914",
+        "train_source_raw": "30211686512bc2d403f86baaf598beaf55560cb5374cfa0747c434a11cc4a13e",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "3d878e873f5f47141a991f08b6482aff7cd0d75b49988e7e8938c9b45fa67221"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100012-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "28e481c582b8804510e438a9b7deca068f55bed9959cef5a902c51abdbf46899",
+        "input_sha256": "30211686512bc2d403f86baaf598beaf55560cb5374cfa0747c434a11cc4a13e",
+        "instance_id": "CP10-hard-seed100012-train-supplement-v1",
+        "native_case_id": "CP10-hard-seed100012-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100030-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/cb8dd3c782e8bc4c9e79fae1cbfb1cfc7cd4bb5e4c73353fa245804c19e04e6c/scene.usda",
+        "station": "assets/cb8dd3c782e8bc4c9e79fae1cbfb1cfc7cd4bb5e4c73353fa245804c19e04e6c/scene.usda",
+        "train_source_raw": "inputs/d5a21bbf8224f7b83b730ec1ae5492251ddb503aeedb68666edbb6ccd691be2c.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d264596bc73471c61c97eca2975f778762a498e017971d7a59ad69a94a7d78a2",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100030-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100030,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "a7905aac7982e8919d334f4ec6f2836eb0913af6990097afb3ec7c94797468b6",
+        "station": "a7905aac7982e8919d334f4ec6f2836eb0913af6990097afb3ec7c94797468b6",
+        "train_source_raw": "d5a21bbf8224f7b83b730ec1ae5492251ddb503aeedb68666edbb6ccd691be2c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "80ce75ab1a84ded19e25207d6fb0933b5f5252a5d3e4f8c7642545c1a03c0c21"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100030-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "d8756f42cf2bdcda6bdde9a6dd4a96a15db5b54c987c837d154dcf530dbeaf7f",
+        "input_sha256": "d5a21bbf8224f7b83b730ec1ae5492251ddb503aeedb68666edbb6ccd691be2c",
+        "instance_id": "CP10-hard-seed100030-train-supplement-v1",
+        "native_case_id": "CP10-hard-seed100030-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100031-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/5e0c6fb372736c26f18ec2c240514dbac9e0ddd29dd60f364e0b48c5600677d4/scene.usda",
+        "station": "assets/5e0c6fb372736c26f18ec2c240514dbac9e0ddd29dd60f364e0b48c5600677d4/scene.usda",
+        "train_source_raw": "inputs/2f911d395a0f2ce88ca7bce6d6b6206a7bc6b864eb38c3b9f7efcba96edd6047.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d44d1e8e2a3c0e29deab1f0b7a0f25bff65025102743b53e8c137db74053b9b9",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100031-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100031,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "d0a1d4fbf698226597e21e857e7edcc935e2b3d21c2f0e4af0db4d41510b6497",
+        "station": "d0a1d4fbf698226597e21e857e7edcc935e2b3d21c2f0e4af0db4d41510b6497",
+        "train_source_raw": "2f911d395a0f2ce88ca7bce6d6b6206a7bc6b864eb38c3b9f7efcba96edd6047",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "d23bb622c87d2b471a40e5b7606adb3f220525844b0bb35bb8963374840549df"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100031-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "e2eb643871934039f1f7be181acd4b720c4c34f2a850b70145b31e91f4b2ba5f",
+        "input_sha256": "2f911d395a0f2ce88ca7bce6d6b6206a7bc6b864eb38c3b9f7efcba96edd6047",
+        "instance_id": "CP10-hard-seed100031-train-supplement-v1",
+        "native_case_id": "CP10-hard-seed100031-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100039-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/52b651d978ed9a836552b7a102d4752293393ea949fab73cc30069912d72529d/scene.usda",
+        "station": "assets/52b651d978ed9a836552b7a102d4752293393ea949fab73cc30069912d72529d/scene.usda",
+        "train_source_raw": "inputs/dadfbbbd7642385706c9321c125ac4c5927586cef5ef9c8383a3e7824d8354e3.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "97caa4f412dcefa6a36739812bc7ae47583c378f306aaf10654b875911a1d4d3",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100039-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100039,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "2bc4bcc16632922eb7548520188a6c00af187c1c61e8149c1e5d5d585f7e1d5c",
+        "station": "2bc4bcc16632922eb7548520188a6c00af187c1c61e8149c1e5d5d585f7e1d5c",
+        "train_source_raw": "dadfbbbd7642385706c9321c125ac4c5927586cef5ef9c8383a3e7824d8354e3",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "4e45715af7a4754990ca8d148f3d684b245597235cf334fcb261b6dc1966079b"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100039-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "2835a301e70758e67fb3a3cfc1aa3aa8eeeaeae34c3549cae0661fb52e5fa273",
+        "input_sha256": "dadfbbbd7642385706c9321c125ac4c5927586cef5ef9c8383a3e7824d8354e3",
+        "instance_id": "CP10-hard-seed100039-train-supplement-v1",
+        "native_case_id": "CP10-hard-seed100039-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100042-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/3381d962f5c83bbcf03febfff2dd2c63bd0db6dae69ae206691b3ee2231dfab0/scene.usda",
+        "station": "assets/3381d962f5c83bbcf03febfff2dd2c63bd0db6dae69ae206691b3ee2231dfab0/scene.usda",
+        "train_source_raw": "inputs/cf3f4e3cf13b83909149bbfa01bc30c5b377529810cf8cb973105bbaf7dc761c.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "31491fe841bdf8383f6d0502fdaaba3098df28a07f8dffa3387c11a80517c90e",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100042-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100042,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "9dd80d49ab10c9776edf04300221e53db1ec1d86c6b60601f2de8df1eee468d9",
+        "station": "9dd80d49ab10c9776edf04300221e53db1ec1d86c6b60601f2de8df1eee468d9",
+        "train_source_raw": "cf3f4e3cf13b83909149bbfa01bc30c5b377529810cf8cb973105bbaf7dc761c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "4e62588f4e580bbb1f63eb74e723e11df0a5dfdaad9d480c3de279f79733e4a2"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100042-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "10a13cb7bccebbfc29424b6f2d9f950bb3fcff54ea3845d79439d68bd5f53b24",
+        "input_sha256": "cf3f4e3cf13b83909149bbfa01bc30c5b377529810cf8cb973105bbaf7dc761c",
+        "instance_id": "CP10-hard-seed100042-train-supplement-v1",
+        "native_case_id": "CP10-hard-seed100042-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100044-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/ec1491c51eefdcaa0207f8dd227ec744445a13c88ff8d7eb6c9fb7323afa6685/scene.usda",
+        "station": "assets/ec1491c51eefdcaa0207f8dd227ec744445a13c88ff8d7eb6c9fb7323afa6685/scene.usda",
+        "train_source_raw": "inputs/f94cf5cf47c5c8ecb7188babe56f396339c3eb0e4990c44d0de747499abe171e.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d46a6f4f4edd6bb25874da8fc48305ae4855393b56552afca8e821caf6c56434",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100044-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100044,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "cc4d4a7b07b461efc023e07b52e900487b8a6cfee2a6307313dc9c2cfa63fbf5",
+        "station": "cc4d4a7b07b461efc023e07b52e900487b8a6cfee2a6307313dc9c2cfa63fbf5",
+        "train_source_raw": "f94cf5cf47c5c8ecb7188babe56f396339c3eb0e4990c44d0de747499abe171e",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "150f45f0c9b7f91968e10dc6f3d481fcb9fa2446aceea7c23b1c421ca60657c2"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100044-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "1aa171f385e7bb7379229929403797b3c3b750a61f98505739433e2f3ff43d07",
+        "input_sha256": "f94cf5cf47c5c8ecb7188babe56f396339c3eb0e4990c44d0de747499abe171e",
+        "instance_id": "CP10-hard-seed100044-train-supplement-v1",
+        "native_case_id": "CP10-hard-seed100044-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100059-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/66491726e2253e80a4c68e7eac7f36bd3803a0ff7e17945101a1f9913c60b07f/scene.usda",
+        "station": "assets/66491726e2253e80a4c68e7eac7f36bd3803a0ff7e17945101a1f9913c60b07f/scene.usda",
+        "train_source_raw": "inputs/affda9c513973ac33d3f47120735421731316e2a2642346b7a68806b5f85f758.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "adf59cd164dd4bdc1672b534ebc4a72a61df017a0ddfc7171f974c25fce52c41",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100059-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100059,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "9d8d46296baeb682780f8aa6aea60ed78d1b2ba2d0a13b9ea7178398001d34d4",
+        "station": "9d8d46296baeb682780f8aa6aea60ed78d1b2ba2d0a13b9ea7178398001d34d4",
+        "train_source_raw": "affda9c513973ac33d3f47120735421731316e2a2642346b7a68806b5f85f758",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "a8412e0dbb9ce07a292a937bd2d9de83e26d57f15e39caa97b1f37b7f0d2095d"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100059-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "a8e158c4bce149748840b576817f42b59d885768c82a13a1b15e75e73aaaac9a",
+        "input_sha256": "affda9c513973ac33d3f47120735421731316e2a2642346b7a68806b5f85f758",
+        "instance_id": "CP10-hard-seed100059-train-supplement-v1",
+        "native_case_id": "CP10-hard-seed100059-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100060-train-supplement-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/c77d82d215e06e3211a53bacb4c566d962b68a7e918bec3dbd94c2d48110df8b/scene.usda",
+        "station": "assets/c77d82d215e06e3211a53bacb4c566d962b68a7e918bec3dbd94c2d48110df8b/scene.usda",
+        "train_source_raw": "inputs/c02d9ec8e3d6071ab0b5f1406ca0ddf1a4d78f8e0b025847fbc33eb727a7462a.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "1e984fecf5116f96af4eb0ad016151dc10bd6ffc253e245e420573393a8f3b3d",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100060-train-supplement-v1",
+        "protocol_version": "v1",
+        "seed": 100060,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "26d56951a0fd255c89d4f8d2f829c94d1d575b8e8866585f07b75242b2e7db80",
+        "station": "26d56951a0fd255c89d4f8d2f829c94d1d575b8e8866585f07b75242b2e7db80",
+        "train_source_raw": "c02d9ec8e3d6071ab0b5f1406ca0ddf1a4d78f8e0b025847fbc33eb727a7462a",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "5a0296cf0b95063087c3a4cbee24e886371d168edc5c55394c7ce3707ece35af"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100060-train-supplement-v1/episode.hdf5",
+        "h5_sha256": "fb2c3dd9507c3ac2145e17a97b2d20f82009da650d037be2692413df3ea9a95d",
+        "input_sha256": "c02d9ec8e3d6071ab0b5f1406ca0ddf1a4d78f8e0b025847fbc33eb727a7462a",
+        "instance_id": "CP10-hard-seed100060-train-supplement-v1",
+        "native_case_id": "CP10-hard-seed100060-train-supplement-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100069-train-supplement-v3": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/1b77f65039925436c0b883b62af031e16cbaa64635bf2c7973b21bdf91fb0de3/scene.usda",
+        "station": "assets/1b77f65039925436c0b883b62af031e16cbaa64635bf2c7973b21bdf91fb0de3/scene.usda",
+        "train_source_raw": "inputs/c5b0b10aecbd76ba5d284be912ad583481bbd07f1f4292c2d973b8b6d95039d4.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "c56cdac5c664a755cc4a8a47fe76f074022b5d93bd4fcc4e397c6c3cf4b7887e",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100069-train-supplement-v3",
+        "protocol_version": "v1",
+        "seed": 100069,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "2320e181828a77b5020c200aedaa23abb0e935de8ec37e99ed7e68181aaf437e",
+        "station": "2320e181828a77b5020c200aedaa23abb0e935de8ec37e99ed7e68181aaf437e",
+        "train_source_raw": "c5b0b10aecbd76ba5d284be912ad583481bbd07f1f4292c2d973b8b6d95039d4",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "1d44100cc01f45943515c83a861421f46573afc69d6239a52030ea052993f85a"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100069-train-supplement-v3/episode.hdf5",
+        "h5_sha256": "2b9da9d655382f14f8e254aba7de8a9fc50f667988986f01b0d01977845edfde",
+        "input_sha256": "c5b0b10aecbd76ba5d284be912ad583481bbd07f1f4292c2d973b8b6d95039d4",
+        "instance_id": "CP10-hard-seed100069-train-supplement-v3",
+        "native_case_id": "CP10-hard-seed100069-train-supplement-v3",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100075-train-supplement-v8": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/8af91e93501a1281a2685298172bf728e14e9806ad3a3854b2bb3dcad0547fb3/scene.usda",
+        "station": "assets/8af91e93501a1281a2685298172bf728e14e9806ad3a3854b2bb3dcad0547fb3/scene.usda",
+        "train_source_raw": "inputs/8a90459d238253fc1580ec914f4d1b0e119ccc79a31483fada0cb873e70dfcb4.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "be2585f4f7b8fe054b7b9a12f0cb6def64b3cf7cfe7b6f97060476c5d6f84930",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100075-train-supplement-v8",
+        "protocol_version": "v1",
+        "seed": 100075,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "f114b4ea8cad8a75ea7bd4a2a1b36627dc006cb7f223768765061276b2f0854f",
+        "station": "f114b4ea8cad8a75ea7bd4a2a1b36627dc006cb7f223768765061276b2f0854f",
+        "train_source_raw": "8a90459d238253fc1580ec914f4d1b0e119ccc79a31483fada0cb873e70dfcb4",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "15c156e5361790b48e17868948a863b45b891375100b1ea1aafb2b48bb0421a5"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100075-train-supplement-v8/episode.hdf5",
+        "h5_sha256": "d7bc68a86bf88d22b29841b45ad9562db81095b43c0ac011dc1dad3d2356e18f",
+        "input_sha256": "8a90459d238253fc1580ec914f4d1b0e119ccc79a31483fada0cb873e70dfcb4",
+        "instance_id": "CP10-hard-seed100075-train-supplement-v8",
+        "native_case_id": "CP10-hard-seed100075-train-supplement-v8",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100085-train-supplement-v8": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/cd6302b6c3d0d7d3913229ba3930c34b302059f3d1b69740235432f2cac1d978/scene.usda",
+        "station": "assets/cd6302b6c3d0d7d3913229ba3930c34b302059f3d1b69740235432f2cac1d978/scene.usda",
+        "train_source_raw": "inputs/12bb70e35d59f43fc7189d3a108ad92281beac08396effc6df9b2db1fd7b80d2.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "e7efcd2cc436d797a3a885e97e8b1b2a565b4a640c92169f4dbd68367d06cf9b",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100085-train-supplement-v8",
+        "protocol_version": "v1",
+        "seed": 100085,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "4960e5d45cc427f4aa7e4975efd3a167c1b91f8d0dc8e91a50756058c1b17c02",
+        "station": "4960e5d45cc427f4aa7e4975efd3a167c1b91f8d0dc8e91a50756058c1b17c02",
+        "train_source_raw": "12bb70e35d59f43fc7189d3a108ad92281beac08396effc6df9b2db1fd7b80d2",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "425b152f0c612f2bc6e94b0de9bec85013cd41fd4376619b7d02a3d681cd5025"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100085-train-supplement-v8/episode.hdf5",
+        "h5_sha256": "460a56ea909f47a0808f4eb73b6729b80b0f0c80a3466d847345a08b31093740",
+        "input_sha256": "12bb70e35d59f43fc7189d3a108ad92281beac08396effc6df9b2db1fd7b80d2",
+        "instance_id": "CP10-hard-seed100085-train-supplement-v8",
+        "native_case_id": "CP10-hard-seed100085-train-supplement-v8",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed100089-train-supplement-v8": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/ae97b28d4dd67882a1df3fbee855d365c876839c41ca795984860b5e02056ec3/scene.usda",
+        "station": "assets/ae97b28d4dd67882a1df3fbee855d365c876839c41ca795984860b5e02056ec3/scene.usda",
+        "train_source_raw": "inputs/24e446615f9df9d05ddf2281143943ffd943d6390d00025c1aac68bf77541562.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "c4b833f8b97c72201a38c33e76cb84bf465208b060acbcecc30403f9e5066d68",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed100089-train-supplement-v8",
+        "protocol_version": "v1",
+        "seed": 100089,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "f7bbcdfd3eac9b0066bc6a46b059b077ae6f25153a159a4244141f7935003afc",
+        "station": "f7bbcdfd3eac9b0066bc6a46b059b077ae6f25153a159a4244141f7935003afc",
+        "train_source_raw": "24e446615f9df9d05ddf2281143943ffd943d6390d00025c1aac68bf77541562",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "6282fdf811a41b5190190977cc0e481fe4d6fdffc6f7abe462c3fb81b1d3575a"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed100089-train-supplement-v8/episode.hdf5",
+        "h5_sha256": "b6f7f15b82c2afcfee39a52a8f14d03585e4cc4054f0d469fd24f9b39f4ba00f",
+        "input_sha256": "24e446615f9df9d05ddf2281143943ffd943d6390d00025c1aac68bf77541562",
+        "instance_id": "CP10-hard-seed100089-train-supplement-v8",
+        "native_case_id": "CP10-hard-seed100089-train-supplement-v8",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed119-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/7a3bc7a7754dca0dab5660f91896abe80bba140a8ef5999c4065c2ecc71bb357/scene.usda",
+        "station": "assets/7a3bc7a7754dca0dab5660f91896abe80bba140a8ef5999c4065c2ecc71bb357/scene.usda",
+        "train_source_raw": "inputs/ab36fb928fae35834bf242074a7634f8502213a48ea1963c9ee5f1ff1fc21b1a.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "b2424915efaf4e71a54a2ff39721c4144d204dcd6d0d059bd1289cbabc29a87b",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed119-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 119,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "6b03ab7629c39aeb02c82024f41a375273ddf7fad3976d8d8cc1784f06756b44",
+        "station": "6b03ab7629c39aeb02c82024f41a375273ddf7fad3976d8d8cc1784f06756b44",
+        "train_source_raw": "ab36fb928fae35834bf242074a7634f8502213a48ea1963c9ee5f1ff1fc21b1a",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "de7b11eae5c683ef097c0d63e9da73cace2cd4d8cb2d701f76f011892bb8655e"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed119-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "d48d64907103239c8ca7c8a9efaae115ae7e95f209aa1ad246e111691326edf2",
+        "input_sha256": "ab36fb928fae35834bf242074a7634f8502213a48ea1963c9ee5f1ff1fc21b1a",
+        "instance_id": "CP10-hard-seed119-cp10-semantic50-v1",
+        "native_case_id": "CP10-hard-seed119-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed1278-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/03f721bf82b09b3f1f97f7e0ab3504daf3587dbf4ef90fb7e2926c3fed46deff/scene.usda",
+        "station": "assets/03f721bf82b09b3f1f97f7e0ab3504daf3587dbf4ef90fb7e2926c3fed46deff/scene.usda",
+        "train_source_raw": "inputs/f6a17f83e291d96e0982fea2c706edcf45b9beb069c26bede437628761cb1151.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "63e61f554b7c3df6fe5748e847d50611c83bd8b30b690c89fcd8ebf5d6715b0c",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed1278-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1278,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "506680bf5fc9b549667e146666e63d90c188f4eb62930a248e4266099e9ac1b2",
+        "station": "506680bf5fc9b549667e146666e63d90c188f4eb62930a248e4266099e9ac1b2",
+        "train_source_raw": "f6a17f83e291d96e0982fea2c706edcf45b9beb069c26bede437628761cb1151",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "ec32ce2a4f9e25d8888ed29493f279a3065faeab04dc138f73d13827aeaadda0"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed1278-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "aa0398c20ea5961435636f7f9e38dd755ef6596421f3d33063088ea8e7e2c1a4",
+        "input_sha256": "f6a17f83e291d96e0982fea2c706edcf45b9beb069c26bede437628761cb1151",
+        "instance_id": "CP10-hard-seed1278-cp10-semantic50-v1",
+        "native_case_id": "CP10-hard-seed1278-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed152-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/acaa796fa424976deced924f47833f630ddd37766d0205e052b0e645444d78b9/scene.usda",
+        "station": "assets/acaa796fa424976deced924f47833f630ddd37766d0205e052b0e645444d78b9/scene.usda",
+        "train_source_raw": "inputs/9fabe0e9a6d97a11f918a3e742e8ed318e5981d09389ac4140954347d43c47af.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "3139c1c8b27d72cd4171755eb92570af80afeaa7fa1270aa77fb52fdef73f3db",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed152-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 152,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "76f6a418266034f5855fdf30d5622dc5dda73ebb6b19dee15ddea30aa21f4401",
+        "station": "76f6a418266034f5855fdf30d5622dc5dda73ebb6b19dee15ddea30aa21f4401",
+        "train_source_raw": "9fabe0e9a6d97a11f918a3e742e8ed318e5981d09389ac4140954347d43c47af",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "a9ab9e699633c1904635354b6e9aa992ff6c5faa6ac612b80f07bc0dfa091c47"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed152-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "b2529b5032fcdc89b121c18c05840a2aab4eac6610c248fed31660599fa8f95f",
+        "input_sha256": "9fabe0e9a6d97a11f918a3e742e8ed318e5981d09389ac4140954347d43c47af",
+        "instance_id": "CP10-hard-seed152-cp10-semantic50-v1",
+        "native_case_id": "CP10-hard-seed152-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed1661-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/221c179fc4936baf1bf8b84ce400fce8f19c90037a1b2845d8456c2601159ea6/scene.usda",
+        "station": "assets/221c179fc4936baf1bf8b84ce400fce8f19c90037a1b2845d8456c2601159ea6/scene.usda",
+        "train_source_raw": "inputs/070b677575e44278c4db67fa0c16b82c108b80605cdf8c4b21c5abf566592916.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "e4e1848720ca0b5b1708927cc91213c5d47e26212c2941d4fa442f42548ad1d8",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed1661-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1661,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "b25683a95dfd84805455c456b1084ba54208e77236b15c497f8ed9b81a3cd323",
+        "station": "b25683a95dfd84805455c456b1084ba54208e77236b15c497f8ed9b81a3cd323",
+        "train_source_raw": "070b677575e44278c4db67fa0c16b82c108b80605cdf8c4b21c5abf566592916",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "fcf41e880ce0bdfdba1ab160aa3552ed48d66e050d21f29c00f092381e185ad4"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed1661-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "75359d67575b3c6107d1b056d9a6591dc53bacf3005b78736d3f0efae2c34a92",
+        "input_sha256": "070b677575e44278c4db67fa0c16b82c108b80605cdf8c4b21c5abf566592916",
+        "instance_id": "CP10-hard-seed1661-cp10-semantic50-v1",
+        "native_case_id": "CP10-hard-seed1661-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed529-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/87824df2e280dd3989aa64aaf6c8f5eb189be49de9a1b3bcdefabff30ea24a57/scene.usda",
+        "station": "assets/87824df2e280dd3989aa64aaf6c8f5eb189be49de9a1b3bcdefabff30ea24a57/scene.usda",
+        "train_source_raw": "inputs/1d9c9b75b024c810285bdcea7b4ff62086074cf6d7627844cdd3691667889cec.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "5ed43fda2d02d4b916a7d8cd1f9383bb6c658d955a3066258deaa673eff79ea1",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed529-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 529,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "f8d66204ce4fe2968e75192944dbeff1b37704b6f58ef2ea9f6a50cd648003aa",
+        "station": "f8d66204ce4fe2968e75192944dbeff1b37704b6f58ef2ea9f6a50cd648003aa",
+        "train_source_raw": "1d9c9b75b024c810285bdcea7b4ff62086074cf6d7627844cdd3691667889cec",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "addaaedf903eb3e90e9ab66bd5c7350652c5c51d06663f3282a63fbe7b0f8b0c"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed529-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "f33f7ee621c281ed9e6c90c0c18efa9db578c29bb5ed086eab50bb5932c97fd7",
+        "input_sha256": "1d9c9b75b024c810285bdcea7b4ff62086074cf6d7627844cdd3691667889cec",
+        "instance_id": "CP10-hard-seed529-cp10-semantic50-v1",
+        "native_case_id": "CP10-hard-seed529-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed571-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/287d894bb5d227e714ab194c2315a54d9958a5ea1c6adb1b0f85142b5d7680f9/scene.usda",
+        "station": "assets/287d894bb5d227e714ab194c2315a54d9958a5ea1c6adb1b0f85142b5d7680f9/scene.usda",
+        "train_source_raw": "inputs/44f5255f1f3bb6b7bafcd58816b96a9620bbb404e8b41b41a077e65510b1bf99.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d0fb52b5551e89eaeba31a6670cea70c459a1125fb7622bab73d5af23114de40",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed571-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 571,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "e5bf707b3aba3cd22ec6795337f4cf876a1d13f477a7138a6412068cba1aa8bb",
+        "station": "e5bf707b3aba3cd22ec6795337f4cf876a1d13f477a7138a6412068cba1aa8bb",
+        "train_source_raw": "44f5255f1f3bb6b7bafcd58816b96a9620bbb404e8b41b41a077e65510b1bf99",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "bd43ccc1d510a29f6613e28263fdc2dfd22cf58480b10e1a970f7d71cf66d692"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed571-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "1bf4f041b240f98839d44da42277f3b1031570f1f3030ab28d9ea0eb9c050bfe",
+        "input_sha256": "44f5255f1f3bb6b7bafcd58816b96a9620bbb404e8b41b41a077e65510b1bf99",
+        "instance_id": "CP10-hard-seed571-cp10-semantic50-v1",
+        "native_case_id": "CP10-hard-seed571-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/hard/CP10-hard-seed858-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/89504869ddf0004f916c0e7cf5891fdb5272eeb5efe557434128b3f468e2b964/scene.usda",
+        "station": "assets/89504869ddf0004f916c0e7cf5891fdb5272eeb5efe557434128b3f468e2b964/scene.usda",
+        "train_source_raw": "inputs/9222913c5a6336c0b523eff0bfc7249e5f63b46cfe093f57750a24fc9513dbfa.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "5ab53c1b182add84ad1ac1a3a1a6c8c42fb2c1d249a957ed54e064e58b0520a8",
+      "identity": {
+        "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "hard",
+        "instance_id": "CP10-hard-seed858-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 858,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "1ecb1c4257bd9d245c16dea52d7948764baba71c379901a8c23d2231e603e619",
+        "station": "1ecb1c4257bd9d245c16dea52d7948764baba71c379901a8c23d2231e603e619",
+        "train_source_raw": "9222913c5a6336c0b523eff0bfc7249e5f63b46cfe093f57750a24fc9513dbfa",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "2b7415d5db6f979a6526e6c864709dbbbd95ea90488668386681bd3f933d19b0"
+      },
+      "train_source": {
+        "difficulty": "hard",
+        "h5_path": "data/CP10/hard/CP10-hard-seed858-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "a2d210bfcafafbe1e7780b4600db4e0e2a4e70c9c3edd02e76922f095367464b",
+        "input_sha256": "9222913c5a6336c0b523eff0bfc7249e5f63b46cfe093f57750a24fc9513dbfa",
+        "instance_id": "CP10-hard-seed858-cp10-semantic50-v1",
+        "native_case_id": "CP10-hard-seed858-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1075-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/1097cda3121818c5f64fc74efbff32d0039df97c7f0233996ec1e8c9edc0825d/scene.usda",
+        "station": "assets/1097cda3121818c5f64fc74efbff32d0039df97c7f0233996ec1e8c9edc0825d/scene.usda",
+        "train_source_raw": "inputs/568e31b634e3a7d7270e66aeab79879fe4ee3c88ecf98454abcf8494a4bba902.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "13fb62186e5ac0b814427aafb77cd1f3bc7d80a5c5523fb229b645b7faa37b6c",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1075-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1075,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "627649a73f04ebbc800da0c11f53357803eca7ed82436c649ffa8c7d73f9a621",
+        "station": "627649a73f04ebbc800da0c11f53357803eca7ed82436c649ffa8c7d73f9a621",
+        "train_source_raw": "568e31b634e3a7d7270e66aeab79879fe4ee3c88ecf98454abcf8494a4bba902",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "2896702419158a16c26bc041f611ca8d22244061e2d01e0d0002f150fbf26691"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1075-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "0075631960d265c38b721624453c824c6b402fe09b69ea859796e6e90b34c8d7",
+        "input_sha256": "568e31b634e3a7d7270e66aeab79879fe4ee3c88ecf98454abcf8494a4bba902",
+        "instance_id": "CP10-medium-seed1075-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1075-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1166-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/c08bdab15d82233e29d6854870254a8749977903c2ae0b2d0ae6757f1a1aaad8/scene.usda",
+        "station": "assets/c08bdab15d82233e29d6854870254a8749977903c2ae0b2d0ae6757f1a1aaad8/scene.usda",
+        "train_source_raw": "inputs/5636e52c5068b6ad10e3d971da9f02a12f434d4a51ebe7b63c84d41753de8f46.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "736d9612058631b8a8363eb27c2117fcbb61761914339a3f8eccda2db231a52f",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1166-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1166,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "409558f5098e0f3ceb4caf04834bdff2e4e1be60ede5418ac1a219d7e97802aa",
+        "station": "409558f5098e0f3ceb4caf04834bdff2e4e1be60ede5418ac1a219d7e97802aa",
+        "train_source_raw": "5636e52c5068b6ad10e3d971da9f02a12f434d4a51ebe7b63c84d41753de8f46",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "8bb410457d4402f486ab962118e0dff9fd5e84b04ac2406755cdcac87cfb8a45"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1166-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "679fe2bf2058c1fcf687e9d79fddae23786879fafe385d87c798375881bd7764",
+        "input_sha256": "5636e52c5068b6ad10e3d971da9f02a12f434d4a51ebe7b63c84d41753de8f46",
+        "instance_id": "CP10-medium-seed1166-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1166-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1251-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/d5c05de39f8c1954f8049a1780c8fa18e470252b20feda3e4b4e4b30583b5cd7/scene.usda",
+        "station": "assets/d5c05de39f8c1954f8049a1780c8fa18e470252b20feda3e4b4e4b30583b5cd7/scene.usda",
+        "train_source_raw": "inputs/94835a0c704795128fb7b16cc69a39201d78f22052bea4e8ac3dbd12374e7553.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "82a770644dc65901471344ed7cfbbbd04c34839e4c535a2b208cb455e389023b",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1251-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1251,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "9b791e14da64386c1bc7e3ab24f1e6f252f10d45cab36e40b6ab2657633fc42e",
+        "station": "9b791e14da64386c1bc7e3ab24f1e6f252f10d45cab36e40b6ab2657633fc42e",
+        "train_source_raw": "94835a0c704795128fb7b16cc69a39201d78f22052bea4e8ac3dbd12374e7553",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "a2eb39d888b3c36d46ff6058ee5c334eef12dba5efb39e97d219119b6d799e49"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1251-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "fb8e563833d469bc2afe488eb49b44b97252dc46c3385ebef48c387f67bcbb92",
+        "input_sha256": "94835a0c704795128fb7b16cc69a39201d78f22052bea4e8ac3dbd12374e7553",
+        "instance_id": "CP10-medium-seed1251-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1251-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1337-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/1526209a8a343a898408b8b86760e425e7f424224860baf1245cdf38278453ed/scene.usda",
+        "station": "assets/1526209a8a343a898408b8b86760e425e7f424224860baf1245cdf38278453ed/scene.usda",
+        "train_source_raw": "inputs/53ada781c6eb6bd8b0848467f3b743789f2870ce436e129b19c859f3919a001c.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "3dc42cf44fb30888a7c87d19f75be1b0e442cc945f6a969a63c93449eb20202b",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1337-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1337,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "334f407c141b6694a69ea11a45967522a892e657664c9ef0efe62c390b844096",
+        "station": "334f407c141b6694a69ea11a45967522a892e657664c9ef0efe62c390b844096",
+        "train_source_raw": "53ada781c6eb6bd8b0848467f3b743789f2870ce436e129b19c859f3919a001c",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "503af0130ee41b084879b6ca9189dec703f93dcd4a83ae9d5e3037cd615db9ea"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1337-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "737ee53b8dfdef7d25f0fafe32080cd031263a947040d682a40c78a9d8641666",
+        "input_sha256": "53ada781c6eb6bd8b0848467f3b743789f2870ce436e129b19c859f3919a001c",
+        "instance_id": "CP10-medium-seed1337-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1337-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1378-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/ea64653f7353bbfdc57fd7d4594bc5a1e3e3330c8e7d4004e14d1ca19fde6d6d/scene.usda",
+        "station": "assets/ea64653f7353bbfdc57fd7d4594bc5a1e3e3330c8e7d4004e14d1ca19fde6d6d/scene.usda",
+        "train_source_raw": "inputs/5cbcc2328bec66c20d3af41fd5cf4d17b17e5c6c51220990e3795f5bd34b4303.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "8563b9b0d378a797c93d01487d668b51d27b1d831f0ff3c1bb5451522bc93b4b",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1378-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1378,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "e992e3b13a2df6435d9f841842f0070295803dfe4ecf489cc428277a453463ba",
+        "station": "e992e3b13a2df6435d9f841842f0070295803dfe4ecf489cc428277a453463ba",
+        "train_source_raw": "5cbcc2328bec66c20d3af41fd5cf4d17b17e5c6c51220990e3795f5bd34b4303",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "06b987e95b1d6b34d87643226072ac5aa98dab451ebe67c8ef7f1bb8c46f6270"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1378-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "ad3efcceaedcccf1262d07be39c1db2dbd013fb05bacde6812aba6adb85deeba",
+        "input_sha256": "5cbcc2328bec66c20d3af41fd5cf4d17b17e5c6c51220990e3795f5bd34b4303",
+        "instance_id": "CP10-medium-seed1378-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1378-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1516-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/ee568ec849fc1ffb316b929f774fbb62415937a2df4e080983cab9d2b638b542/scene.usda",
+        "station": "assets/ee568ec849fc1ffb316b929f774fbb62415937a2df4e080983cab9d2b638b542/scene.usda",
+        "train_source_raw": "inputs/41d59da5c431779d0bcc7571a7855c697ad4fef20e9398413a24e4453335f69f.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d38566a0f356268fa9a4ebb003e727d6f6f9dea6d5feb4d15492303e7402d321",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1516-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1516,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "19eec81fff482a85cc5af549808e5caa3775b8df310542dd47192c2d80985a8a",
+        "station": "19eec81fff482a85cc5af549808e5caa3775b8df310542dd47192c2d80985a8a",
+        "train_source_raw": "41d59da5c431779d0bcc7571a7855c697ad4fef20e9398413a24e4453335f69f",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "c301576abd25ec909e7cd617ce574c2c121e069ea1602ec9bd66ef75a25dc9ad"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1516-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "798765c8485cbfc182d095cc390735e11ec55f96f592e40046f68813d3f38b09",
+        "input_sha256": "41d59da5c431779d0bcc7571a7855c697ad4fef20e9398413a24e4453335f69f",
+        "instance_id": "CP10-medium-seed1516-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1516-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1552-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/8110052e8d664127cba80cbfb97e395b331e32db75ba718da66f7e63381d9e2d/scene.usda",
+        "station": "assets/8110052e8d664127cba80cbfb97e395b331e32db75ba718da66f7e63381d9e2d/scene.usda",
+        "train_source_raw": "inputs/643e70daeae17a1e5a6fbd1dcc595ff9cd76a02f5c1e6b489c4de27e0c8ed2e9.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "66cff1259a6fa5584dbcccd864d105b09d5d249699bfa80290c57d3f8b8230f8",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1552-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1552,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "76c39d557c970bbbc446bebb756305c375594bd78ee6c74d2ccf542adfacb946",
+        "station": "76c39d557c970bbbc446bebb756305c375594bd78ee6c74d2ccf542adfacb946",
+        "train_source_raw": "643e70daeae17a1e5a6fbd1dcc595ff9cd76a02f5c1e6b489c4de27e0c8ed2e9",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "b1dd7b5e49f112d0bfc0bda244c7630732bedd17a1fa57c88cc89c60b3abab77"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1552-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "fbce6a6febae4a7588d21ff3a9c0a3bc336182175f3361794a1cd6fd177470c4",
+        "input_sha256": "643e70daeae17a1e5a6fbd1dcc595ff9cd76a02f5c1e6b489c4de27e0c8ed2e9",
+        "instance_id": "CP10-medium-seed1552-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1552-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1859-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/77a3864bc09bbb199fa1d60069096454f779657e4e5b26f3f66f64aa088a2af4/scene.usda",
+        "station": "assets/77a3864bc09bbb199fa1d60069096454f779657e4e5b26f3f66f64aa088a2af4/scene.usda",
+        "train_source_raw": "inputs/7e5b2304f72ae3c8d7419d3c261e7fdea0871896809d6e9403f6fc09d6b4e23d.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "4e65ae7457a071a06ae2bc81f73f39698eb419e2f7bcc4bfc7bb9f768741ba4c",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1859-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1859,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "bb5b95d8c46d60ac8d1ca0bb2291c8f11ec079bc559d8f0b21092ead1e623bc1",
+        "station": "bb5b95d8c46d60ac8d1ca0bb2291c8f11ec079bc559d8f0b21092ead1e623bc1",
+        "train_source_raw": "7e5b2304f72ae3c8d7419d3c261e7fdea0871896809d6e9403f6fc09d6b4e23d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "736d7efdb153f085bda0ee43aeffa7737277fdae76ef4979d58cb536db34396d"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1859-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "435e65a1b3a80f42c7f1ddb358b9c7b5a626cce7206e7968032a5adab1caa73b",
+        "input_sha256": "7e5b2304f72ae3c8d7419d3c261e7fdea0871896809d6e9403f6fc09d6b4e23d",
+        "instance_id": "CP10-medium-seed1859-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1859-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1872-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/a4a995ef9389edbfaa65fd1cb3da95c906879fdff125975173b87338109a16a9/scene.usda",
+        "station": "assets/a4a995ef9389edbfaa65fd1cb3da95c906879fdff125975173b87338109a16a9/scene.usda",
+        "train_source_raw": "inputs/312b21beac9a422d73c6f094bb3d6cd07bf2c2bb4ebe02ff7c8356a46bea8958.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "c6955d8a99c560af5376c3359f5b3898318b97122abc6f354cb3dfff42209d08",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1872-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1872,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "02a3eba5d83cf7ca1cf2e52375f77bcb299c16103399dc3f28538b9f32081046",
+        "station": "02a3eba5d83cf7ca1cf2e52375f77bcb299c16103399dc3f28538b9f32081046",
+        "train_source_raw": "312b21beac9a422d73c6f094bb3d6cd07bf2c2bb4ebe02ff7c8356a46bea8958",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "b5684c88b2c77d34824499a6a2c43ac2b387ab7a13c394366b4699831393bfd0"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1872-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "2577b1fc275f002b0e6e8cd2d1767e5878c2692bfe7782e26651474fa9c328ed",
+        "input_sha256": "312b21beac9a422d73c6f094bb3d6cd07bf2c2bb4ebe02ff7c8356a46bea8958",
+        "instance_id": "CP10-medium-seed1872-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1872-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed1913-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/bd63278558a9f907627d6ebd18935d4339b2bfe07e641d6f6d9bd2ca3a7bbf0f/scene.usda",
+        "station": "assets/bd63278558a9f907627d6ebd18935d4339b2bfe07e641d6f6d9bd2ca3a7bbf0f/scene.usda",
+        "train_source_raw": "inputs/0eb125f68f0f7d682c65235845806faa24640730b2b1acf90d06a5cdf37920be.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "d4d77d7f7df6ae8ea2db42f4812482aee08fe81e94bcc1f5e29cb001be4b2187",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed1913-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 1913,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "3abbfb55cd4e9172acb4d303f6c3076a16039aba3d04ee33d6ad829ab5f90838",
+        "station": "3abbfb55cd4e9172acb4d303f6c3076a16039aba3d04ee33d6ad829ab5f90838",
+        "train_source_raw": "0eb125f68f0f7d682c65235845806faa24640730b2b1acf90d06a5cdf37920be",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "bc4ed7dc6f71f0e5c0ae02661991d636457fd5679e3902bd46817c78c6dffe6c"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed1913-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "c9a0039f7b9c7f52251633b8cce99060345d35304c20e98149ee65db5d77c0dd",
+        "input_sha256": "0eb125f68f0f7d682c65235845806faa24640730b2b1acf90d06a5cdf37920be",
+        "instance_id": "CP10-medium-seed1913-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed1913-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed2002-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/a11ce059623123f1a1a89e0a70da5538d1fd9b0bd5371de89dfa50cf3a95c99c/scene.usda",
+        "station": "assets/a11ce059623123f1a1a89e0a70da5538d1fd9b0bd5371de89dfa50cf3a95c99c/scene.usda",
+        "train_source_raw": "inputs/a003bf1fcc2353d76588d6e46e854d4e1290f805d70dea714ab5dc2fc32f5469.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "8b4eaba4c02d3d4c63e7bafc28022be647765d976f75a89ff67ab3e433a8247c",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed2002-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 2002,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "eb1f100c4c6beea87b29ddd04124e41671dee3824ada110c17970b865378dc95",
+        "station": "eb1f100c4c6beea87b29ddd04124e41671dee3824ada110c17970b865378dc95",
+        "train_source_raw": "a003bf1fcc2353d76588d6e46e854d4e1290f805d70dea714ab5dc2fc32f5469",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "943921e56c8ef090e81d0b9c40d7e07f940a8c469e073e3ef6731436d8f6a525"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed2002-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "c06dad8d644abc4b8189e8ab8492c2e913798e5a5770749818d4a24ebcc058d5",
+        "input_sha256": "a003bf1fcc2353d76588d6e46e854d4e1290f805d70dea714ab5dc2fc32f5469",
+        "instance_id": "CP10-medium-seed2002-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed2002-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed2045-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/adfdb03d99c859e950cc9ba5579d56ada035138d66f345cc253aa7464b0f1440/scene.usda",
+        "station": "assets/adfdb03d99c859e950cc9ba5579d56ada035138d66f345cc253aa7464b0f1440/scene.usda",
+        "train_source_raw": "inputs/b9d8dff41ecdcb430244e552b1796f6106497a195044859ce8b803c2cfea1e24.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "1a6439c4005ddb51f1a220bf5d25b8d2161606000468f056fab33db5fdf94adc",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed2045-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 2045,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "68ac2afa955b305d6eb8f6bf492ea93e5703db6e450af5bff2a1dec90183d440",
+        "station": "68ac2afa955b305d6eb8f6bf492ea93e5703db6e450af5bff2a1dec90183d440",
+        "train_source_raw": "b9d8dff41ecdcb430244e552b1796f6106497a195044859ce8b803c2cfea1e24",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "22a2a4e17c6fc42994a3d3df72f5aae7833289e90439586e0613954f2ccfa573"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed2045-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "9729421cb0218b923481934789708ea8883b19fe487f1de89387c355169854f8",
+        "input_sha256": "b9d8dff41ecdcb430244e552b1796f6106497a195044859ce8b803c2cfea1e24",
+        "instance_id": "CP10-medium-seed2045-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed2045-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed330-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/ed577d89d1fcd70f09a13a909dbc2a29d6c029c0dc5a69e131bb2ff9d350adfd/scene.usda",
+        "station": "assets/ed577d89d1fcd70f09a13a909dbc2a29d6c029c0dc5a69e131bb2ff9d350adfd/scene.usda",
+        "train_source_raw": "inputs/d4615eacad839791926ff078256cca60b5420995a0ca16318d33b7937d25ccac.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "5311b17d88067e23f6c77384c1f244f1e21cf57c70598d40e82f4f98af87cdac",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed330-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 330,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "c3756a0c03ebe7d8f8704a5f44dee8750c336ea630f05f2fee8f308298f10fba",
+        "station": "c3756a0c03ebe7d8f8704a5f44dee8750c336ea630f05f2fee8f308298f10fba",
+        "train_source_raw": "d4615eacad839791926ff078256cca60b5420995a0ca16318d33b7937d25ccac",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "29693e0cb229b295b6fdf7fa0c7a4a48b2e0f42977924e513073c61d144bc1b9"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed330-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "e0e32b744322c556e82cc16f1632e139f63348e7afee2df04660444d7001e282",
+        "input_sha256": "d4615eacad839791926ff078256cca60b5420995a0ca16318d33b7937d25ccac",
+        "instance_id": "CP10-medium-seed330-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed330-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed360-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/13c3fd7bae1049a87989719c9f487c8ab200acd47111aad79c055568689c35a6/scene.usda",
+        "station": "assets/13c3fd7bae1049a87989719c9f487c8ab200acd47111aad79c055568689c35a6/scene.usda",
+        "train_source_raw": "inputs/7f4f050bb04969ddb46be649c342d6c37bbd367be5be3c5b2e45f9ab56ec36f0.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "a3c3c0fe020a79f1dfe32c226ed156c8936e0cc3af393d660dad34f5e4f63355",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed360-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 360,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "5c2bd369ce6977c76a679cb557a3db68f5da56cf3af774422db92caddb81df54",
+        "station": "5c2bd369ce6977c76a679cb557a3db68f5da56cf3af774422db92caddb81df54",
+        "train_source_raw": "7f4f050bb04969ddb46be649c342d6c37bbd367be5be3c5b2e45f9ab56ec36f0",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "df269bfb8658a42d8248d484284a636cbd56b998c491688cd9c2f420aab4348d"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed360-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "8115014d37690c429f5fb6cb45e31857f11ec4a33ea2cab289bd7d66605db264",
+        "input_sha256": "7f4f050bb04969ddb46be649c342d6c37bbd367be5be3c5b2e45f9ab56ec36f0",
+        "instance_id": "CP10-medium-seed360-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed360-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed383-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/4c65bdccf9379a8c8ff8a0020a759e1c8e3c37515ef657bc4c6f555a50251e58/scene.usda",
+        "station": "assets/4c65bdccf9379a8c8ff8a0020a759e1c8e3c37515ef657bc4c6f555a50251e58/scene.usda",
+        "train_source_raw": "inputs/402a4265d6841af8423223c980d2b11af9e26b4d92a13967e4fca80d514b1d8a.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "b167e5c49072e31845b54669bea983f09b74a7b76aedfa1da89211f862891c23",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed383-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 383,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "f31e0602196fe80fa45c44597f3ab4cbba2b094bf02138fadbd911f5afc3a13a",
+        "station": "f31e0602196fe80fa45c44597f3ab4cbba2b094bf02138fadbd911f5afc3a13a",
+        "train_source_raw": "402a4265d6841af8423223c980d2b11af9e26b4d92a13967e4fca80d514b1d8a",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "f814e1713875a634cac021c90c1b427462a173be049aad8f194f0453cec2ae48"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed383-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "16d0c69d9a5d2249dc4bbc31295f035d6c0cead85b083e57be787580bd1959b4",
+        "input_sha256": "402a4265d6841af8423223c980d2b11af9e26b4d92a13967e4fca80d514b1d8a",
+        "instance_id": "CP10-medium-seed383-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed383-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed572-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/8b468f145c29420ec433195e6af1d05863efe3cae467e8c99182798d5e7fb947/scene.usda",
+        "station": "assets/8b468f145c29420ec433195e6af1d05863efe3cae467e8c99182798d5e7fb947/scene.usda",
+        "train_source_raw": "inputs/7ba72aea2418837fa688d9dd46bbfd5d7ad979f3fba549e58f492f47125faf23.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "55b13a0c5ea948a831a2b6540b5e1feb648bcc7d88d3643f9104ff1b5d591a5a",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed572-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 572,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "49e82cb4a90a58f40ebfa4f2520e22872de42dc37d2951d4a1e4719ae0a87204",
+        "station": "49e82cb4a90a58f40ebfa4f2520e22872de42dc37d2951d4a1e4719ae0a87204",
+        "train_source_raw": "7ba72aea2418837fa688d9dd46bbfd5d7ad979f3fba549e58f492f47125faf23",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "19edabeb8bcbad01a4ee84bfd4b35548fa4d90859f37587a0ff478c75f405e9d"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed572-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "3a207545ba0595f0548c1387fe3fb7a8dfff3447c4f92512f5a591a5ca0eb423",
+        "input_sha256": "7ba72aea2418837fa688d9dd46bbfd5d7ad979f3fba549e58f492f47125faf23",
+        "instance_id": "CP10-medium-seed572-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed572-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed582-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/a340046d158f4ff5be75b2f8eca51c72db4500ee2ac8651ba8c06e03e8cae818/scene.usda",
+        "station": "assets/a340046d158f4ff5be75b2f8eca51c72db4500ee2ac8651ba8c06e03e8cae818/scene.usda",
+        "train_source_raw": "inputs/69b31670565a745dc3a9a577703c6d85d0450898cc7850eb869c141b1a0f2e80.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "3ce1b4637c570ccedff265af0e17585afb670692ee1578a182a36981c7db4f8d",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed582-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 582,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "d999f440d258da1664e25282a3ffa474edbf48257ebc5a2ec68ca4ef5409160c",
+        "station": "d999f440d258da1664e25282a3ffa474edbf48257ebc5a2ec68ca4ef5409160c",
+        "train_source_raw": "69b31670565a745dc3a9a577703c6d85d0450898cc7850eb869c141b1a0f2e80",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "249482df42c7bc0f93db365d33e7538d05f6ecc0878a619eda473ae1cbda6c74"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed582-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "67c49915c693df27cc0e68819bc1b37f103011b7f5b7894f8d974979b8e95620",
+        "input_sha256": "69b31670565a745dc3a9a577703c6d85d0450898cc7850eb869c141b1a0f2e80",
+        "instance_id": "CP10-medium-seed582-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed582-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed851-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/dc0c622fb86f100b7bbdedb874f1991a3f71d27252d7d9d90648348b6de29c41/scene.usda",
+        "station": "assets/dc0c622fb86f100b7bbdedb874f1991a3f71d27252d7d9d90648348b6de29c41/scene.usda",
+        "train_source_raw": "inputs/74dbaa9ba8eb35b246b6a604d8e9b0b446b990bced5024638f18a8bf2f2e0730.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "78c14ddc5bf5f4e784e3d74b00fa99c5e4392a94b6c17feb9576d497073374f8",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed851-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 851,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "3ea22065bf79b06c41ddce9a24e7b97c20ce6e5b396e4f7d752f029fc0c9f1c9",
+        "station": "3ea22065bf79b06c41ddce9a24e7b97c20ce6e5b396e4f7d752f029fc0c9f1c9",
+        "train_source_raw": "74dbaa9ba8eb35b246b6a604d8e9b0b446b990bced5024638f18a8bf2f2e0730",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "a32aab08029798df22419f2e35bb8b4d4e5d77b2ec18071aec4e7e06b3119b44"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed851-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "808493762980d0b7611923dc17459a608e41834d5cf336522a2df53f38f0ad0e",
+        "input_sha256": "74dbaa9ba8eb35b246b6a604d8e9b0b446b990bced5024638f18a8bf2f2e0730",
+        "instance_id": "CP10-medium-seed851-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed851-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed900-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/a3d1aedcfff766fa38d672896ebb5c8d5df37ae77a23308f282e2bd9687da8d2/scene.usda",
+        "station": "assets/a3d1aedcfff766fa38d672896ebb5c8d5df37ae77a23308f282e2bd9687da8d2/scene.usda",
+        "train_source_raw": "inputs/6a8628c30901f79cf525eaa7163054973524050250a09709663cd74f08b0bead.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "9ac78490f4307d37b1b194e8595bfe60b16460e6934746d944249aec44e317c5",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed900-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 900,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "e8efeb55af0b8840ccf6e35a550a5f62c747104742397c4cedf348f5e29607d9",
+        "station": "e8efeb55af0b8840ccf6e35a550a5f62c747104742397c4cedf348f5e29607d9",
+        "train_source_raw": "6a8628c30901f79cf525eaa7163054973524050250a09709663cd74f08b0bead",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "350aaa46bbc905b6e7e348e8ded83d025b7cd47b8d1330520af907d6bd5dc9e7"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed900-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "87f20479b84759d8fc7212a69edad46b0e10f14fb69b7eeba861ba6e3b8739fa",
+        "input_sha256": "6a8628c30901f79cf525eaa7163054973524050250a09709663cd74f08b0bead",
+        "instance_id": "CP10-medium-seed900-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed900-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    },
+    "CP10/medium/CP10-medium-seed951-cp10-semantic50-v1": {
+      "assets": {
+        "portable-mdl-0": "mdl-sdk/core/Base",
+        "portable-mdl-1": "mdl-sdk/core/mdl",
+        "portable-mdl-2": "mdl-sdk/rtx",
+        "scene": "assets/c15ff553215897754501db49dfe26d50fe936ecb62e62f6d8c409dae9a25b02f/scene.usda",
+        "station": "assets/c15ff553215897754501db49dfe26d50fe936ecb62e62f6d8c409dae9a25b02f/scene.usda",
+        "train_source_raw": "inputs/2ef4ad24c06411f30513774431389d4eb3922c33ebe8c6ccc80b82ab73906b5d.json",
+        "x5": "robot/ARX.usd"
+      },
+      "config_sha256": "cd2dc62f0b7770345cf8d456111db8604bdbde00ba757182b56a6c752101013f",
+      "identity": {
+        "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
+        "clock": {
+          "control_hz": 30,
+          "physics_hz": 120,
+          "rgb_hz": 30
+        },
+        "config_version": "cp10-four-case-native-v7",
+        "difficulty": "medium",
+        "instance_id": "CP10-medium-seed951-cp10-semantic50-v1",
+        "protocol_version": "v1",
+        "seed": 951,
+        "source_id": "cp10-four-case-native-v7",
+        "task_id": "CP10"
+      },
+      "raw_task_id": "CP10",
+      "runtime_asset_sha256": {
+        "scene": "bb3e786b2fc4f2bab4d26d92b0e19bcee475fa662cdd58cf5abf80922b60a172",
+        "station": "bb3e786b2fc4f2bab4d26d92b0e19bcee475fa662cdd58cf5abf80922b60a172",
+        "train_source_raw": "2ef4ad24c06411f30513774431389d4eb3922c33ebe8c6ccc80b82ab73906b5d",
+        "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+      },
+      "runtime_row": {
+        "source_config_canonical_sha256": "2a1e582fa69c5e9adef393f3b4e4559c0de9953a8148af9af68e4bcc6e70a91c"
+      },
+      "train_source": {
+        "difficulty": "medium",
+        "h5_path": "data/CP10/medium/CP10-medium-seed951-cp10-semantic50-v1/episode.hdf5",
+        "h5_sha256": "acb1168956ab8dc8cd6ec6593f2fa7afcbb6135a6a3c41f0fd894d81094b43d4",
+        "input_sha256": "2ef4ad24c06411f30513774431389d4eb3922c33ebe8c6ccc80b82ab73906b5d",
+        "instance_id": "CP10-medium-seed951-cp10-semantic50-v1",
+        "native_case_id": "CP10-medium-seed951-cp10-semantic50-v1",
+        "schema": "mind2act_eval.training_source.v1",
+        "split": "train",
+        "task_id": "CP10"
+      }
+    }
+  },
+  "schema": "mind2act_eval.training_source_records.v1"
+}

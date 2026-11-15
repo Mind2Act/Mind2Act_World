@@ -14,6 +14,10 @@ class StructureScene:
         validate(spec)
         self.spec, self.ctx, self.sensors = spec, ctx, sensors
         self.original_source={}
+        if spec.config.get('layout_split') == 'validation':
+            self.original_source['validation_source_spec']=to_json(spec)
+        if 'train_source' in spec.config:
+            self.original_source['training_source_spec']=to_json(spec)
         if 'test_source' in spec.config:
             from .instances import original_case
             from mind2act_eval.original_test_inputs import audit_source

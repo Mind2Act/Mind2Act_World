@@ -208,9 +208,10 @@ class CookingScene:
     def evidence(self, tick):
         if self.native['observer'].latest_sample_tick != self.native['counter']['step']:
             self.native['sample']()
+        from mind2act_eval.cp04_validation_inputs import evidence_fields
         return NativeEvidence(self.spec.task_id, self.spec.instance_id, tick,
             dict(difficulty=self.spec.difficulty, recipe=self.spec.config['recipe'],
-                 normal_termination=True, cp04_evidence=self.native['observer'].evidence()))
+                 normal_termination=True, cp04_evidence=self.native['observer'].evidence(), **evidence_fields(self.spec)))
 
     def events_complete(self):
         e=self.evidence(self.native['counter']['step']*self.clock.substeps).values['cp04_evidence']
@@ -238,6 +239,9 @@ class CookingScene:
 
 
 def build(spec, ctx):
+    if spec.instance_id.startswith('VAL-CP04-') or spec.config.get('layout_split')=='validation':
+        from mind2act_eval.cp04_validation_inputs import validate
+        validate(spec)
     clock = resolve(spec)
     binding = bind_recipe(spec)
     if tuple(spec.config['recipe']) != binding.recipe:

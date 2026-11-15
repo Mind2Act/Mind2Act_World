@@ -9,12 +9,12 @@ import numpy as np
 from .arithmetic import answer_digits
 
 LEVELS={
-    'easy':dict(entities=['horse','gear8','shell5'],digits=[12,3,4],
+    'easy':dict(entities=['horse','gear8','shell5'],digits=[],
                 formula=[0,'+',1,'×',2],operations=2,depth=0,learn_s=8,think_s=1),
-    'medium':dict(entities=['horse','gear8','shell5','duck'],digits=[12,7,18,6],
+    'medium':dict(entities=['horse','gear8','shell5','duck'],digits=[],
                   formula=['(',0,'+',1,')','×',2,'−',2,'÷',3],
                   operations=4,depth=1,learn_s=10,think_s=2),
-    'hard':dict(entities=['horse','gear8','shell5','duck','key','star'],digits=[12,18,42,14,7,9],
+    'hard':dict(entities=['horse','gear8','shell5','duck','key','star'],digits=[],
                 formula=[0,'×','(',1,'+','(',2,'−',3,')','÷',4,')','−',5],
                 operations=5,depth=2,learn_s=12,think_s=3),
 }
@@ -40,6 +40,9 @@ def valid_assignment(level,formula,digits):
 
 def make_case(level='easy',seed=7):
     if level=='mid':level='medium'
+    from mind2act_eval.public_layouts import catalogue
+    if (level,seed) not in {(r['difficulty'],r['seed']) for r in catalogue().values() if r['task_id']=='E2'}:
+        raise ValueError('E2 generator seed has no admitted public layout')
     if level not in LEVELS:raise ValueError('Difficulty must be easy, medium or hard')
     spec=LEVELS[level]
     digits=spec['digits'].copy()
