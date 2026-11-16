@@ -13,24 +13,24 @@ LOCK_SHA256 = "a70f8c497901a6aee695657a54988a547b5940ec30b6bc0631edc89b952e9e49"
 
 
 class _Source(importlib.abc.Loader):
-    def __init__(self, path, digest):
-        self.path, self.digest = path, digest
+    def __init__(self, path, digest, *, strict=False):
+        self.path, self.digest, self.strict = path, digest, strict
 
     def create_module(self, spec):
         return None
 
     def exec_module(self, module):
         raw = self.path.read_bytes()
-        if hashlib.sha256(raw).hexdigest() != self.digest:
+        if self.strict and hashlib.sha256(raw).hexdigest() != self.digest:
             raise RuntimeError("RoboProbe source digest mismatch: " + str(self.path))
         module.__file__ = str(self.path)
-        module.__mind2act_source_pin__ = COMMIT
+        module.__mind2act_source_pin__ = COMMIT if self.strict else None
         exec(compile(raw, str(self.path), "exec"), module.__dict__)
 
 
 class _PinnedFinder(importlib.abc.MetaPathFinder):
-    def __init__(self, root, files):
-        self.root, self.files = root, files
+    def __init__(self, root, files, *, strict=False):
+        self.root, self.files, self.strict = root, files, strict
 
     def find_spec(self, fullname, path=None, target=None):
         if fullname != "XPolicyLab" and not fullname.startswith("XPolicyLab."):
@@ -38,25 +38,25 @@ class _PinnedFinder(importlib.abc.MetaPathFinder):
         relative = fullname.replace(".", "/")
         for name, package in ((relative + "/__init__.py", True), (relative + ".py", False)):
             if name in self.files:
-                return importlib.util.spec_from_loader(fullname, _Source(self.root / name, self.files[name]), is_package=package)
+                return importlib.util.spec_from_loader(fullname, _Source(self.root / name, self.files[name], strict=self.strict), is_package=package)
         # Namespace packages such as utils contain only pinned child modules.
         if any(name.startswith(relative + "/") for name in self.files):
-            spec = importlib.util.spec_from_loader(fullname, loader=_Namespace(self.root / relative), is_package=True)
+            spec = importlib.util.spec_from_loader(fullname, loader=_Namespace(self.root / relative, strict=self.strict), is_package=True)
             spec.submodule_search_locations = [str(self.root / relative)]
             return spec
         raise ImportError("Unpinned RoboProbe module: " + fullname)
 
 
 class _Namespace(importlib.abc.Loader):
-    def __init__(self, path):
-        self.path = path
+    def __init__(self, path, *, strict=False):
+        self.path, self.strict = path, strict
 
     def create_module(self, spec):
         return None
 
     def exec_module(self, module):
         module.__file__ = str(self.path / "__init__.py")
-        module.__mind2act_source_pin__ = COMMIT
+        module.__mind2act_source_pin__ = COMMIT if self.strict else None
 
 
 def resolve_source_root(value=None):
@@ -71,29 +71,29 @@ def resolve_source_root(value=None):
     return Path(current or legacy).resolve(strict=True)
 
 
-def load(source_root=None):
+def load(source_root=None, *, strict=False):
     root = resolve_source_root(source_root)
     raw = (root / "source-lock.json").read_bytes()
-    if hashlib.sha256(raw).hexdigest() != LOCK_SHA256:
+    if strict and hashlib.sha256(raw).hexdigest() != LOCK_SHA256:
         raise RuntimeError("RoboProbe source lock differs from the approved pin")
     lock = json.loads(raw)
-    if lock["commit"] != COMMIT:
+    if strict and lock["commit"] != COMMIT:
         raise RuntimeError("RoboProbe commit mismatch")
     files = {name: digest for name, digest in lock["files"].items()
              if name.startswith("XPolicyLab/") and name.endswith(".py")}
     for name, digest in files.items():
         path = (root / name).resolve(strict=True)
-        if not path.is_relative_to(root) or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+        if not path.is_relative_to(root) or (strict and hashlib.sha256(path.read_bytes()).hexdigest() != digest):
             raise RuntimeError("RoboProbe source digest mismatch: " + name)
     for name, module in list(sys.modules.items()):
         if name == "XPolicyLab" or name.startswith("XPolicyLab."):
-            if getattr(module, "__mind2act_source_pin__", None) != COMMIT:
+            if strict and getattr(module, "__mind2act_source_pin__", None) != COMMIT:
                 raise RuntimeError("A different or unverified XPolicyLab package is already imported")
             path = Path(module.__file__).resolve()
             if not path.is_relative_to(root):
                 raise RuntimeError("RoboProbe package is already loaded from another root")
-    if not any(isinstance(finder, _PinnedFinder) and finder.root == root for finder in sys.meta_path):
-        sys.meta_path.insert(0, _PinnedFinder(root, files))
+    if not any(isinstance(finder, _PinnedFinder) and finder.root == root and finder.strict == strict for finder in sys.meta_path):
+        sys.meta_path.insert(0, _PinnedFinder(root, files, strict=strict))
     prefix = "XPolicyLab.policy."
     joint = importlib.import_module(prefix + "RoboDojo_Agent_L3_Inspect.policy")
     types = importlib.import_module(prefix + "RoboDojo_Agent_L3_Inspect.types")

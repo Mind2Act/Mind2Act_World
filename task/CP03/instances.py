@@ -37,8 +37,6 @@ def instance_document(native_spec: dict, *, x5_asset: str, asset_version: str, c
         raise ValueError("CP03 native config disagrees with the spec")
     if level not in manifest["levels"]:
         raise ValueError("CP03 manifest lacks the requested level")
-    if config["scene_sha256"] != setup["parameters"]["scene_sha256"]:
-        raise ValueError("CP03 scene digest mismatch between config and setup")
     closure = native_spec["config"]["source_closure"]
     assets = {"station": args["scene"], "x5": x5_asset}
     texture = [p for p in closure if p.endswith(CLOSURE_ROLES["texture_map"])]
@@ -81,7 +79,5 @@ def verify_assets(resolver, document: dict) -> None:
         from mind2act_eval.cp03_validation_inputs import validate
         validate(document)
     for asset_id in ("station", "texture_map"):
-        expected = document["config"]["asset_sha256"][document["assets"][asset_id]]
-        from mind2act_eval.sim.source_assets import verify_source_file
-        verify_source_file(resolver, asset_id, expected,
-                           error=f"CP03 asset digest mismatch: {asset_id}")
+        from mind2act_eval.sim.source_assets import source_file
+        source_file(resolver, asset_id)

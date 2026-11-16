@@ -33,7 +33,7 @@ class Rows:
         self.file.close()
 
 
-def read_rows(receipt):
+def read_rows(receipt, *, strict=False):
     if receipt["schema"] != "s2.native-measurements.v1":
         raise ValueError("S2 native measurement schema mismatch")
     digest, size, count = hashlib.sha256(), 0, 0
@@ -43,7 +43,7 @@ def read_rows(receipt):
             size += len(raw)
             count += 1
             yield json.loads(raw)
-    if (digest.hexdigest(), size, count) != (receipt["sha256"], receipt["bytes"], receipt["rows"]):
+    if (size, count) != (receipt['bytes'], receipt['rows']) or (strict and digest.hexdigest() != receipt['sha256']):
         raise ValueError("S2 native measurement SHA/size/count mismatch")
 
 

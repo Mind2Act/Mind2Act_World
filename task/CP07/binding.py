@@ -135,9 +135,9 @@ def load(spec, assets):
     test=spec.config.get('cp07_mode')=='source_bound_test'
     if (not test and not training_test and ('test_source' in spec.config or spec.config.get("cp07_mode") != "diagnostic_training")):
         raise ProfileBlocked("CP07 requires explicit diagnostic_training source binding")
-    from mind2act_eval.sim.source_assets import read_source_bytes, verify_source_file
+    from mind2act_eval.sim.source_assets import asset_bytes, source_file
     try:
-        raw = read_source_bytes(assets, "cp07_binding", spec.config["cp07_binding_sha256"])
+        raw = asset_bytes(assets, "cp07_binding")
     except ValueError as exc:
         raise ValueError("CP07 binding SHA mismatch: " + str(exc)) from exc
     binding=json.loads(raw)
@@ -153,7 +153,7 @@ def load(spec, assets):
         from .original_inputs import authenticate
         validate_geometry(spec, assets, binding, authenticate(spec, binding['original_source']))
     try:
-        verify_source_file(assets, "station", binding["scene_sha256"])
+        source_file(assets, "station")
     except ValueError as exc:
         raise ValueError("CP07 prepared scene SHA mismatch: " + str(exc)) from exc
     return binding

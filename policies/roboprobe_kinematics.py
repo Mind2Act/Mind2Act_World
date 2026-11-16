@@ -40,9 +40,9 @@ def _matrix_quaternion(matrix):
 
 
 class X5Kinematics:
-    def __init__(self, urdf, mounts):
+    def __init__(self, urdf, mounts, *, strict=False):
         raw = Path(urdf).read_bytes()
-        if hashlib.sha256(raw).hexdigest() != URDF_SHA256:
+        if strict and hashlib.sha256(raw).hexdigest() != URDF_SHA256:
             raise ValueError("official public X5 URDF digest mismatch")
         tree = ET.fromstring(raw)
         self.joints = []

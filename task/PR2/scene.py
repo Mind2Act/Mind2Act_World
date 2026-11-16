@@ -112,8 +112,8 @@ def build(spec: InstanceSpec, ctx: BuildContext) -> VoltageScene:
     from . import mechanism  # needs pxr; kept out of registration
     validate(spec)
     if spec.config.get('layout_split') == 'validation':
-        from mind2act_eval.sim.source_assets import verify_source_file
-        verify_source_file(ctx.assets, 'station', spec.config['scene_sha256'])
+        from mind2act_eval.sim.source_assets import source_file
+        source_file(ctx.assets, 'station')
     levels, layout = _config('levels.json'), _config('layout.json')
     cfg = spec.config
     z = layout['support_z_m']

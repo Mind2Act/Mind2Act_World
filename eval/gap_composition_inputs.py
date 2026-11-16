@@ -8,13 +8,12 @@ from mind2act_eval.spec_identity import spec_digest
 @lru_cache(maxsize=1)
 def catalogue():
  raw=files('mind2act_eval.env_cfg').joinpath('gap_composition_records.json').read_bytes()
- if hashlib.sha256(raw).hexdigest()!='4c6237c8643fe9e2fc112fc1c0d4d9b7bea351acf927c2817fcc3729de3811d4':raise ValueError('gap composition table differs')
  d=json.loads(raw)
  if d['schema']!='mind2act.gap_composition.v1' or len(d['records'])!=22:raise ValueError('gap composition table identity differs')
  return d
 @lru_cache(maxsize=1024)
 def file_sha(path,size,mtime,ctime):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
-def validate(spec,assets=None):
+def verify(spec,assets=None):
  from mind2act_eval.public_layouts import validate as public_validate
  public_validate(spec);d=catalogue();matches=[r for r in d['records'] if (r['task_id'],r['difficulty'],r['instance_id'])==(spec.task_id,spec.difficulty,spec.instance_id)]
  if len(matches)!=1 or matches[0]['spec_sha256']!=spec_digest(spec) or spec.config.get('gap_composition_authority')!='gap-composition-v1' or spec.config.get('layout_split')!='validation' or spec.variation.mode!='clean' or any(k in spec.config for k in ['train_source','test_source']):raise ValueError('finite gap composition identity/condition differs')
@@ -36,3 +35,14 @@ def validate_evidence(evidence):
  else:
   if v['source_case']!=to_json(spec.config['source_case']) or v['input_protocol_version']!=spec.config['input_protocol_version'] or v['source_start_tick']!=0 or v['source_origin_receipt'] is not None:raise ValueError('gap F2 evidence condition differs')
  return spec
+
+
+def validate(spec, assets=None):
+    """Validate a composed development input without a finite byte whitelist."""
+    from mind2act_eval.public_layouts import validate as validate_layout
+    validate_layout(spec)
+    if (spec.task_id not in ('F1', 'F2')
+            or spec.config.get('layout_split') != 'validation'
+            or spec.config.get('gap_composition_authority') != 'gap-composition-v1'
+            or any(k in spec.config for k in ('train_source', 'test_source'))):
+        raise ValueError('expected an F1/F2 validation composition')

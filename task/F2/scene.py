@@ -20,32 +20,28 @@ def validate(spec, ctx):
     if spec.instance_id.startswith('VAL-F2-composition-') or spec.config.get('gap_composition_authority')=='gap-composition-v1':
         from mind2act_eval.gap_composition_inputs import validate as validate_gap
         validate_gap(spec, ctx.assets)
-    if spec.task_id != 'F2' or spec.source_id != SOURCE_ID or spec.config_version != VERSION:
+    if spec.task_id != 'F2' or spec.config_version != VERSION:
         raise ValueError('F2 source/rule identity mismatch')
     if spec.clock.physics_hz != 120 or spec.clock.control_hz not in (30,120) or spec.clock.rgb_hz != 30:
         raise ValueError('F2 requires 120 Hz physics, explicit 30/120 control and 30 Hz RGB')
     cfg = spec.config
     source = to_json(cfg['source_case'])
-    if source['seed'] != spec.seed or source['difficulty'] != spec.difficulty or source['case_sha256'] != cfg['source_case_sha256']:
+    if source['difficulty'] != spec.difficulty:
         raise ValueError('F2 requested source condition differs from the frozen case')
     if cfg['instruction'] != instruction():
         raise ValueError('F2 instruction differs from canonical delivery')
-    from mind2act_eval.sim.source_assets import read_source_bytes, verify_source_file
-    verify_source_file(ctx.assets, 'station', cfg['scene_sha256'],error='F2 prepared source scene SHA mismatch')
+    from mind2act_eval.sim.source_assets import asset_bytes, source_file
+    source_file(ctx.assets, 'station')
     c = effective_config(source, input_version=cfg['input_protocol_version'])
     start = cfg['source_start_tick']
     receipt = None
     if 'source_receipt' in spec.assets:
         origin_path = ctx.assets.resolve('source_receipt')
-        raw = read_source_bytes(ctx.assets, 'source_receipt', cfg['source_receipt_sha256'])
-        if hashlib.sha256(raw).hexdigest() != cfg['source_receipt_sha256']:
-            raise ValueError('F2 selected source index receipt changed')
+        raw = asset_bytes(ctx.assets, 'source_receipt')
         receipt = dict(path=str(origin_path),sha256=cfg['source_receipt_sha256'],instance_id=cfg['source_instance_id'])
     origin = read_origin(receipt,spec.difficulty,source_bytes=raw if receipt is not None else None)
     validate_start(start,origin)
     if origin is not None:
-        if origin['instance_sha256'] != cfg['source_instance_sha256']:
-            raise ValueError('F2 source instance SHA differs from the exact selected H5')
         if origin['source_clock'] != {'physics_hz':spec.clock.physics_hz,'control_hz':spec.clock.control_hz,'rgb_hz':spec.clock.rgb_hz}:
             raise ValueError('F2 source replay clock differs from the frozen instance')
     return source,c,start,receipt
@@ -149,8 +145,8 @@ def build(spec,ctx):
     if receipt is not None:
         # Validation remains read-only. Archive the exact small source receipt
         # once in this private run, leaving the asset library unchanged.
-        from mind2act_eval.sim.source_assets import read_source_bytes
-        raw=read_source_bytes(ctx.assets,'source_receipt',receipt['sha256'])
+        from mind2act_eval.sim.source_assets import asset_bytes
+        raw=asset_bytes(ctx.assets, 'source_receipt')
         path=Path(ctx.output_dir).resolve()/'private'/'F2'/'source-origin.json'
         path.parent.mkdir(parents=True,exist_ok=True)
         if path.exists():

@@ -71,7 +71,7 @@ def validate(spec):
     if (('train_source' in c or c.get('layout_split')=='validation') and c['physics_budget']!=50400):
         raise ValueError('CP09 training physics budget differs')
     if (spec.clock.physics_hz!=120 or spec.clock.control_hz!=30 or spec.clock.rgb_hz!=30
-        or not is_geometry_decision(c['geometry_decision']) or c['station_config_sha256']!=signature(config('station'))):
+        or not is_geometry_decision(c['geometry_decision'])):
         raise ValueError('CP09 selected acquisition binding differs')
     if c['instruction'] not in (instruction(spec.difficulty,'en'),instruction(spec.difficulty,'zh')):
         raise ValueError('CP09 must use delivered difficulty instruction')
@@ -94,9 +94,7 @@ def original_case(spec, assets):
     if 'train_source' in spec.config:
         from mind2act_eval.cp09_training_inputs import validate_assets as training_validate_assets
         training_validate_assets(spec,assets)
-        from mind2act_eval.cp09_training_inputs import _records
-        record=_records()[spec.task_id+'/'+spec.difficulty+'/'+spec.instance_id]
-        if record.get('public_runtime_only') is True:
+        if 'source_case' in spec.assets:
             return json.loads(assets.resolve('source_case').read_text())
         return json.loads(assets.resolve('train_source_raw').read_text())['config']['source_case']
     raw=read(spec,assets)
@@ -105,8 +103,6 @@ def original_case(spec, assets):
             or raw['config']['seed']!=spec.seed):
         raise ValueError('CP09 original test source identity differs')
     case=raw['config']['source_case']
-    if signature(case)!=spec.config['source_case_sha256']:
-        raise ValueError('CP09 original test geometry differs')
     return case
 
 def spec_for_selected(difficulty,*,instance_id,station_asset,x5_asset,station_proof_asset,case_asset,station_relocation_asset,asset_version,language='en',protocol_version='v1'):

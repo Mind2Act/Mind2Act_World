@@ -13,8 +13,6 @@
   "body_contact_offset_m": 0.001,
   "body_solver_iterations": 16,
   "stand_visual": {"diffuse_rgb": [0.08, 0.08, 0.08], "roughness": 0.6},
-  "ledger": {"stable_s": 1.0, "max_speed_m_s": 0.02, "max_angular_rad_s": 0.15, "height_tol_m": 0.008,
-             "window_drift_m": 0.003, "revisit_clearance_m": 0.025},
   "uncover_lift_m": 0.04,
   "extraction_lift_m": 0.03,
   "extraction_hold_s": 0.5,

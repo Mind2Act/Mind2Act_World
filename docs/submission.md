@@ -2,7 +2,7 @@
 
 External teams develop against the public training and validation layouts. Hidden
 evaluation layouts, seeds, episodes, expert trajectories and diagnostic tools stay
-with the benchmark maintainers.
+with the evaluation organizers.
 
 A submission supplies a checkpoint and the adapter configuration needed to produce
 the public observation/action interface. The maintainers run it internally on the

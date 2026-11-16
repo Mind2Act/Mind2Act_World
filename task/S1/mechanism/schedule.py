@@ -10,10 +10,10 @@ TIMELINE_KEYS = ('cue_seconds', 'rotation_seconds', 'stop_seconds', 'cue_gap_s')
 
 
 def timeline_config(spec):
-    """Apply the formal cue ruling without rewriting the original case.
+    """Apply the formal cue timing without rewriting the original case.
 
     Source-bound fixed50 inputs inherit the acquisition's two-second cue.
-    The 2026-11-01 ruling uses one second and no gap for formal evaluation;
+    Formal evaluation uses one second and no gap;
     training replay keeps its explicitly supplied acquisition timeline.
     The scene records this effective timeline in evidence/result metadata.
     """

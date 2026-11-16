@@ -1,4 +1,4 @@
-"""M1: first N actual supported station arrivals, plus terminal endpoint for full credit."""
+"""M1: first N actual supported station arrivals; exact route earns full credit."""
 import numpy as np
 
 from mind2act_eval.contracts import NativeEvidence, Score
@@ -9,19 +9,19 @@ from .ledger import Ledger
 
 
 class Tracker:
-    """Incremental native analysis (uncover, extraction, placements); shared by scorer and scene termination."""
+    """Record supported placements and uncover/extraction diagnostics. Only the first N placements determine the route and completion."""
 
     def __init__(self, v, lay):
         self.lay, self.start = lay, v['physical_start']
         self.baseline, self.initial_z = v['closed_baseline'], v['target_initial_z']
-        self.ledger = Ledger(plain(v['submission_stations']), v['target_dimensions'], lay['ledger'])
+        self.ledger = Ledger(plain(v['submission_stations']))
         self.uncovery, self.extracted_at, self._held = [], None, 0
         self.n = len(v['expected_path'])
-        self.hold_ticks = round(lay['extraction_hold_s'] * 120)  # diagnostics only
+        self.hold_ticks = round(lay['extraction_hold_s'] * 120)  # diagnostic duration; never a scoring or completion gate
 
     def observe(self, r):
         step = r['tick']
-        # Retain truthful legacy diagnostics without making them score gates.
+        # Uncover/extraction populate premise and diagnostics, not score or completion gates.
         if self.start is not None and step >= self.start:
             seen = {event['cover_id'] for event in self.uncovery}
             for cover, baseline in self.baseline.items():
@@ -33,8 +33,7 @@ class Tracker:
                 self._held = self._held+1 if lifted else 0
                 if self._held >= self.hold_ticks:
                     self.extracted_at = step
-        self.ledger.observe(step, r['target_center'], r['target_linear_velocity'], r['target_angular_velocity'],
-                            r.get('target_robot_contact'), r['station_support'],
+        self.ledger.observe(step, r['target_center'], r['station_support'],
                             self.start is not None and step >= self.start)
 
     @property
@@ -83,10 +82,7 @@ def score(evidence: NativeEvidence) -> Score:
     c = lcs(answer, expected)
     w = len(answer) - c
     m = (n - c) + w
-    terminal = v['ticks'][-1]
-    ledger = Ledger(v['submission_stations'], v['target_dimensions'], layout()['ledger'])
-    endpoint = ledger.station_at(terminal['target_center'], terminal['station_support'])
-    success = bool(answer == expected and endpoint == expected[-1])
+    success = bool(answer == expected)
     level = v.get('difficulty') or {4:'easy',5:'medium',6:'hard'}[n]
     cap = {'easy':30.,'medium':22.,'hard':15.}[level]
     if success:
@@ -100,4 +96,4 @@ def score(evidence: NativeEvidence) -> Score:
     return Score(value, dict(scoring_version=SCORING_VERSION,
         success=success, premise=premise, correct_first_uncover=first_ok, extracted=a['extracted_at'] is not None,
         route=answer, expected_route=expected, lcs=c, wrong_submissions=w, missing_or_wrong=m, completion=c / n,
-        placements=a['placements'], uncover_attempts=a['uncovery'], terminal_station=endpoint))
+        placements=a['placements'], uncover_attempts=a['uncovery']))

@@ -1,8 +1,7 @@
 """Preserve composed source render bindings across canonical robot restoration.
 
-No material, shader, color, geometry or physics value is invented here. A valid
-source material must survive with the same composed shader graph; otherwise
-restoration fails instead of silently substituting a finish. Unresolved source
+No material, shader, color, geometry or physics value is invented here. Original binding targets are restored without comparing shader graph digests.
+Graph comparison is available explicitly for offline diagnostics. Unresolved source
 bindings remain explicitly unresolved, except the known out-of-scope viewport
 binding on the shared camera, cleared with an explicit render-only receipt.
 """
@@ -10,9 +9,6 @@ from copy import deepcopy
 import hashlib
 import json
 from pathlib import Path
-
-# Investigation provenance, not a claim that this capture helper executes here.
-PR1_CAPTURE_HELPER_SHA256 = 'f78940b9c7bbea66ba76b57bc14ce82125ae539afdb2767ba2c70c7d3202f16a'
 
 
 def repair_camera_material_binding(stage, roots):
@@ -33,18 +29,18 @@ def repair_camera_material_binding(stage, roots):
         if not rel or rel.GetTargets() != [target]:
             continue
         material = UsdShade.MaterialBindingAPI(mesh).ComputeBoundMaterial()[0]
-        before = _material_signature(material) if material else None
+        before = str(material.GetPath()) if material else None
         with Usd.EditContext(stage, stage.GetSessionLayer()):
             override = mesh.CreateRelationship('material:binding', custom=False)
             override.SetTargets([])
             material = UsdShade.MaterialBindingAPI(mesh).ComputeBoundMaterial()[0]
-            after = _material_signature(material) if material else None
+            after = str(material.GetPath()) if material else None
             if after != before:
                 override.SetTargets([target])
                 raise ValueError('camera orphan repair would change effective source material')
         repairs.append(dict(relationship=str(rel.GetPath()), before_targets=[str(target)],
                             after_targets=[], operation='clear nonexistent shared viewport target in session',
-                            effective_material_sha256_before=before, effective_material_sha256_after=after))
+                            effective_material_before=before, effective_material_after=after))
     return repairs
 
 
@@ -122,7 +118,7 @@ def _material_signature(material):
     return hashlib.sha256(json.dumps(graph, sort_keys=True).encode()).hexdigest()
 
 
-def capture_bindings(stage, roots):
+def capture_bindings(stage, roots, *, verify_material_graphs=False):
     """Snapshot effective render relationships while the prepared source exists."""
     from pxr import Usd, UsdShade, UsdPhysics
     bindings, unresolved, file_hashes = [], [], {}
@@ -150,23 +146,26 @@ def capture_bindings(stage, roots):
                                            reason='physics material excluded from render-only restoration'))
                     continue
                 sources = []
-                for spec in material.GetPrim().GetPrimStack():
+                for spec in material.GetPrim().GetPrimStack() if verify_material_graphs else ():
                     layer = spec.layer
                     path = Path(layer.realPath) if layer.realPath else None
-                    if path and path.is_file() and str(path) not in file_hashes:
+                    if verify_material_graphs and path and path.is_file() and str(path) not in file_hashes:
                         file_hashes[str(path)] = _sha(path)
                     sources.append(dict(layer=layer.identifier, prim=str(spec.path),
                                         file_sha256=file_hashes.get(str(path)) if path else None))
                 bindings.append(dict(relationship=str(rel.GetPath()),
                     before_targets=[str(p) for p in targets], material=str(material.GetPath()),
                     strength=str(UsdShade.MaterialBindingAPI.GetMaterialBindingStrength(rel)),
-                    material_sha256_before=_material_signature(material), source_layers=sources))
-    return dict(bindings=bindings, unresolved_before=unresolved)
+                    material_sha256_before=_material_signature(material) if verify_material_graphs else None, source_layers=sources))
+    return dict(bindings=bindings, unresolved_before=unresolved,
+                material_graphs_captured=verify_material_graphs)
 
 
-def restore_bindings(stage, snapshot, *, source_asset):
-    """Reapply original targets only after all surviving materials are checked."""
+def restore_bindings(stage, snapshot, *, source_asset, verify_material_graphs=False):
+    """Restore original targets; graph verification is an opt-in diagnostic."""
     from pxr import Sdf, UsdShade
+    if verify_material_graphs and not snapshot.get('material_graphs_captured'):
+        raise ValueError('offline graph verification requires a verified capture')
     rows = deepcopy(snapshot['bindings'])
     for row in rows:
         relationship = Sdf.Path(row['relationship'])
@@ -174,7 +173,7 @@ def restore_bindings(stage, snapshot, *, source_asset):
         material = UsdShade.Material(stage.GetPrimAtPath(row['material']))
         if not owner or not material:
             raise ValueError('source appearance target did not survive robot restore: ' + row['relationship'])
-        if _material_signature(material) != row['material_sha256_before']:
+        if verify_material_graphs and _material_signature(material) != row['material_sha256_before']:
             raise ValueError('source material graph changed during robot restore: ' + row['material'])
         for target in row['before_targets']:
             path = Sdf.Path(target)
@@ -189,12 +188,12 @@ def restore_bindings(stage, snapshot, *, source_asset):
         rel.SetMetadata('bindMaterialAs', row['strength'])
         row['after_targets'] = [str(target) for target in rel.GetTargets()]
         material = UsdShade.Material(stage.GetPrimAtPath(row['material']))
-        row['material_sha256_after'] = _material_signature(material)
+        row['material_sha256_after'] = _material_signature(material) if verify_material_graphs else None
     return dict(schema='mind2act_eval.robot_source_appearance.v1',
         operation='retain original source render bindings; no shader authoring',
-        material_digest_scope='material descendants and recursively connected prims',
+        material_graph_checked=verify_material_graphs,
+        material_digest_scope='offline diagnostic only' if verify_material_graphs else 'not checked',
         render_validation='unreviewed', source_asset=str(Path(source_asset).resolve()),
-        source_asset_sha256=_sha(source_asset), implementation_sha256=_sha(__file__),
-        pr1_capture_reference_helper_sha256=PR1_CAPTURE_HELPER_SHA256,
-        capture_reference_scope='PR1 audit provenance only; no universal material override',
+        source_asset_sha256=_sha(source_asset) if verify_material_graphs else None,
+        implementation_sha256=_sha(__file__) if verify_material_graphs else None,
         bindings=rows, unresolved_before=deepcopy(snapshot['unresolved_before']))

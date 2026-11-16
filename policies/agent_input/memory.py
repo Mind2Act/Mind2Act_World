@@ -29,7 +29,9 @@ def _digest(uri):
 
 
 class EpisodeMemory:
-    def __init__(self):
+    """Captured observations; strict=True also checks stored image digests."""
+    def __init__(self, *, strict=False):
+        self.strict = strict
         self.reset()
 
     def reset(self):
@@ -68,7 +70,7 @@ class EpisodeMemory:
         if cursor!=0 or ref not in self.events:
             raise ValueError('Unknown or future public observation, or invalid open cursor')
         record = self.events[ref]['images'][camera]
-        if _digest(record['uri'])!=record['sha256']:
+        if self.strict and _digest(record['uri'])!=record['sha256']:
             raise ValueError('Public image hash mismatch')
         self.open_calls += 1
         key = (ref,camera)
@@ -81,7 +83,7 @@ class EpisodeMemory:
     def request_images(self):
         content,refs = [],[]
         for row in self.retained.values():
-            if _digest(row['uri'])!=row['sha256']:
+            if self.strict and _digest(row['uri'])!=row['sha256']:
                 raise ValueError('Retrieved public image changed after opening')
             content.extend([dict(type='text',text=f"HISTORICAL RETRIEVED observation {row['ref']}; "
                 f"environment tick {row['sim_step']}; camera {row['camera']}. This is not the current scene."),

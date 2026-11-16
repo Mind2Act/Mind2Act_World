@@ -1,8 +1,8 @@
 # Isaac Sim image definition
 
 This Dockerfile targets the official Isaac Sim 5.1.0 image and its Python 3.11
-interpreter. Image build and native GPU execution have **not** been validated in
-this preparation session. The full task validation remains the team's responsibility.
+interpreter. Validate the built image on the target GPU and driver before using
+it for task execution. Building an image does not verify native physics or rendering.
 
 From a clean committed checkout, create a real source stamp and build:
 

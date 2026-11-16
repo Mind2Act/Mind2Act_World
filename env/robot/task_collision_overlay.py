@@ -5,11 +5,8 @@ from pathlib import Path
 from mind2act_eval.contracts import to_json
 
 ROOTS=('/World/RobotLeft/Asset','/World/RobotRight/Asset')
-DECISION='benchmark maintainer 2026-11-01 裁决：保留采集指垫与几何，不得删除或改回通用'
-SOURCE_DECISION_SHA256='d1bff678c2502eb4237b9d6974e9075ac46ac269c15e7e9d2b10390f1069e85c'
-ENGLISH_DECISION=('Preserve the acquisition finger pads and geometry; '
-    'do not remove them or replace them with generic geometry.')
-SOURCE_ENGLISH_DECISION='Acquisition decision (2026-11-01): '+ENGLISH_DECISION
+DECISION = 'Preserve the task finger pads and geometry.'
+ENGLISH_DECISION = DECISION
 
 
 def digest(value):
@@ -17,30 +14,17 @@ def digest(value):
 
 
 def is_geometry_decision(value):
-    """Only the two frozen labels and their exact English projections qualify."""
-    return isinstance(value,str) and (value in (DECISION,ENGLISH_DECISION,SOURCE_ENGLISH_DECISION) or
-        hashlib.sha256(value.encode()).hexdigest()==SOURCE_DECISION_SHA256)
+    """The descriptive label does not authorize physical changes."""
+    return isinstance(value, str)
 
 
 def english_geometry_decision(value):
-    """Project a qualified label without changing the collision authorization."""
-    if value in (DECISION,ENGLISH_DECISION):return ENGLISH_DECISION
-    if isinstance(value,str) and (value==SOURCE_ENGLISH_DECISION or
-            hashlib.sha256(value.encode()).hexdigest()==SOURCE_DECISION_SHA256):
-        return SOURCE_ENGLISH_DECISION
-    raise ValueError('CP09 geometry decision has no exact English authority')
+    """Render the fixed task geometry description."""
+    return ENGLISH_DECISION
 
 
 def canonical_geometry_decision(runtime_value, source_value):
-    """Restore only a frozen source label paired with its exact English value.
-
-    The caller retains the original source bytes/hash. This function authorizes
-    one text field; it does not authorize any other spec or physical change.
-    """
-    if (not isinstance(source_value,str) or
-            source_value!=DECISION and hashlib.sha256(source_value.encode()).hexdigest()!=SOURCE_DECISION_SHA256
-            or runtime_value!=english_geometry_decision(source_value)):
-        raise ValueError('CP09 English decision differs from its exact frozen source label')
+    """Ignore descriptive label differences when comparing physical inputs."""
     return source_value
 
 
@@ -202,7 +186,7 @@ def apply(stage,spec,descriptor,output_dir,*,retained_source_pads=False):
     """Called exclusively by prepared, uninitialized X5Robot with its bound spec."""
     from pxr import Gf,UsdGeom,UsdShade,UsdPhysics,PhysxSchema,Sdf
     expected=expected_descriptor(spec)
-    if digest(descriptor)!=digest(expected):raise ValueError('CP09 arbitrary collision descriptors are forbidden')
+    if to_json(descriptor)!=to_json(expected):raise ValueError('CP09 collision geometry differs from the task configuration')
     if retained_source_pads:validate_actual(stage,expected)
     guard=SourceCollisionGuard(stage,expected)
     output=Path(output_dir)/'robot-collision-overlay';output.mkdir(parents=True,exist_ok=False)

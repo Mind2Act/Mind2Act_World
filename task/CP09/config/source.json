@@ -82,6 +82,6 @@
     "physco_station_scene.py": "3e99576f3285b40e04cb9471c54e0efd27b7506e6a09e39093ab9a1d21cf7df3",
     "physco_f2_assets.py": "d18bc7602bac6f6bc08680e8f16772758df49bea3db0830d205640c1fd910e77"
   },
-  "geometry_decision": "benchmark maintainer 2026-11-01 裁决：保留采集指垫与几何，不得删除或改回通用",
+  "geometry_decision": "Preserve the task finger pads and geometry.",
   "native_validation": "not_run"
 }

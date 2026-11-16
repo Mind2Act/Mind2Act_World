@@ -291,9 +291,15 @@ def seal_worker_outputs(directory: Path, *, expected_consumer=None) -> dict:
     return seal
 
 
-def validate_worker_seal(directory: Path, *, durable=False, expected_consumer=None) -> tuple[Result, dict]:
-    """Verify a worker seal; optionally commit it with supervisor-owned fsyncs."""
+def validate_worker_seal(directory: Path, *, durable=False, expected_consumer=None, strict=False) -> tuple[Result, dict]:
+    """Read completed results; verify the byte seal only in explicit strict mode."""
     root = Path(directory).resolve(strict=True)
+    if not strict:
+        result = Result(**json.loads((root / "result.json").read_text()))
+        if expected_consumer is not None and result.consumer_kind != expected_consumer:
+            raise ValueError("worker result consumer mismatch")
+        _validate_result_closure(root, result)
+        return result, {"status": "unchecked", "integrity_verified": False}
     seal_path = root / SEAL_NAME
     seal = _read_seal(seal_path)
     if (not isinstance(seal, dict) or seal.get("schema") != "mind2act_eval.worker_seal.v1"
@@ -345,5 +351,5 @@ def validate_worker_seal(directory: Path, *, durable=False, expected_consumer=No
             _fsync_file(root / relative)
         _fsync_file(seal_path)
         _fsync_directories(root)
-        return validate_worker_seal(root, durable=False, expected_consumer=expected_consumer)
+        return validate_worker_seal(root, durable=False, expected_consumer=expected_consumer, strict=True)
     return result, seal

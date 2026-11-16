@@ -11,7 +11,7 @@ import sys
 import time
 from mind2act_eval.timing import phases_for
 from mind2act_eval.startup_paths import (GATE_SCHEMA, read_gate_state, startup_paths,
-                                      startup_compatibility, verify_startup_domain)
+                                      startup_configuration)
 
 CAMERA_WARMUP_RENDER_LIMIT = 8
 CAPTURE_GRAPH_WARMUP_STEPS = 2
@@ -147,6 +147,57 @@ def startup_gate(path: Path, *, shared=False, minimum_interval_s=0.0, cancel_eve
                     fcntl.flock(lock, fcntl.LOCK_UN)
 
 
+
+@contextmanager
+def kit_startup_gate(paths):
+    """Bound concurrent initialization and stagger starts within one node."""
+    slots, interval = startup_configuration()
+    if slots == 1:
+        with startup_gate(paths.kit, minimum_interval_s=interval) as mark:
+            yield mark
+        return
+    import fcntl
+    # Shared ownership excludes any old/default serial initializer. Each slot
+    # remains held through ready(), not just SimulationApp construction.
+    with startup_gate(paths.kit, shared=True):
+        lease = None
+        try:
+            while lease is None:
+                for index in range(slots):
+                    candidate = (paths.root / f'kit-init-{index}.lock').open('a+')
+                    try:
+                        fcntl.flock(candidate, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                    except BlockingIOError:
+                        candidate.close()
+                    else:
+                        lease = candidate
+                        break
+                if lease is None:
+                    time.sleep(.1)
+            # This small gate is released before construction; it must not
+            # serialize the full initialization lifetime across all slots.
+            with startup_gate(paths.root / 'kit-start.lock', minimum_interval_s=interval) as mark:
+                mark()
+            yield lambda: None
+        finally:
+            if lease is not None:
+                fcntl.flock(lease, fcntl.LOCK_UN)
+                lease.close()
+
+
+def recording_cameras(cameras, *, include_wrists=False):
+    """Extra recording views do not extend the policy observation contract."""
+    configured = dict(cameras or {'head': {'path': '/World/HeadCamera', 'resolution': [640, 480]}})
+    observations = tuple(configured)
+    if include_wrists:
+        for side, root in (('left', 'RobotLeft'), ('right', 'RobotRight')):
+            configured.setdefault(side + '_wrist', {
+                'path': f'/World/{root}/Asset/camera/PhysCoWristCamera',
+                'resolution': [640, 480],
+            })
+    return configured, observations
+
+
 def _require_isaac_extension_dependencies():
     for module in ("psutil", "requests", "scipy", "toml", "torch"):
         try:
@@ -161,31 +212,15 @@ def _require_isaac_extension_dependencies():
 
 class IsaacSimulator:
     """One app/world per child process. Call ready() after build/reset completes."""
-    def __init__(self, clock, output_dir: Path, *, physical_gpu, headless=True, cameras=None, ffmpeg="ffmpeg", gpu_selection=None, video_hz=6):
+    def __init__(self, clock, output_dir: Path, *, physical_gpu, headless=True, cameras=None, ffmpeg="ffmpeg", video_hz=6, record_wrist_cameras=False):
         if type(physical_gpu) is not int or physical_gpu < 0:
             raise ValueError("explicit nonnegative physical GPU index required")
-        if gpu_selection is None:
-            if os.environ.get("SLURM_JOB_ID"):
-                raise ValueError("Slurm simulation requires explicit verified GPU allocation")
-            if os.environ.get("CUDA_VISIBLE_DEVICES") != str(physical_gpu):
-                raise ValueError("CUDA visibility must match the assigned physical GPU")
-        else:
-            from mind2act_eval.gpu_allocation import SlurmGpuSelection
-            if type(gpu_selection) is not SlurmGpuSelection:
-                raise ValueError("verified Slurm GPU selection required")
-            gpu_selection.assert_current(physical_gpu)
+        if os.environ.get("CUDA_VISIBLE_DEVICES") != str(physical_gpu):
+            raise ValueError("CUDA visibility must match the assigned physical GPU")
         output_dir = Path(output_dir).resolve()
         output_dir.mkdir(parents=True, exist_ok=True)
         self._output_dir = output_dir
-        lock_root = os.environ.get("MIND2ACT_EVAL_LOCK_ROOT")
-        if not lock_root:
-            raise ValueError("native simulation requires the supervisor's writable lock root")
-        lock_root = Path(lock_root).resolve()
-        if not output_dir.is_relative_to(lock_root.parent):
-            raise ValueError("native simulation lock root must share the writable runs parent")
-        self._lock_root = lock_root
         self._gate = None
-        self._startup_compat = None
         self._ready = False
         self._contacts = None
         self._cameras = {}
@@ -199,7 +234,8 @@ class IsaacSimulator:
         self._physics_profile_receipt = None
         self._world_creation_started = False
         self._world_configuration_error = None
-        self._camera_config = cameras or {"head": {"path": "/World/HeadCamera", "resolution": [640, 480]}}
+        self._camera_config, self._observation_camera_names = recording_cameras(
+            cameras, include_wrists=record_wrist_cameras)
         self.timings = {"physics_s": 0., "render_s": 0., "video_s": 0.}
         from mind2act_eval.sim.video import RGBRecorder, video_interval
         # Runtime output configuration is deliberately outside InstanceSpec.clock.
@@ -209,10 +245,7 @@ class IsaacSimulator:
         self.app = None
         try:
             _require_isaac_extension_dependencies()
-            paths = startup_paths(lock_root)
-            compatibility = startup_compatibility(paths)
-            compatibility.__enter__()
-            self._startup_compat = compatibility
+            paths = startup_paths()
             from isaacsim import SimulationApp
             runtime_dir = output_dir / "kit"
             from mind2act_eval.episode_storage import worker_cache
@@ -245,42 +278,24 @@ class IsaacSimulator:
                 # documents and credentials remain per-attempt.
                 extra_args.append("--/app/extensions/registryCache=" + str(Path(shared_cache) / "extensions"))
                 extra_args.append("--/rtx-transient/resourcemanager/localTextureCachePath=" + str(shared_cache / "textures"))
-            gpu_log = runtime_dir / "kit.log"
-            if gpu_selection is not None and gpu_log.exists():
-                raise ValueError("Slurm GPU readback requires a fresh owned Kit log")
             original_argv = sys.argv[:]
             try:
                 sys.argv.extend(("--portable-root", str(runtime_dir)))
-                from mind2act_eval.pro_startup import simulator_gates
-                gate, constructor_gate = simulator_gates(paths, physical_gpu, output_dir,
-                                                         gpu_selection=gpu_selection)
+                gate = kit_startup_gate(paths)
                 mark_started = gate.__enter__()
                 self._gate = gate
-                if gpu_selection is not None:
-                    gpu_selection.assert_current(physical_gpu)
-                active_gpu = physical_gpu if gpu_selection is None else gpu_selection.renderer_index
-                physics_gpu = 0 if gpu_selection is None else gpu_selection.cuda_index
-                with constructor_gate as mark_constructor:
-                    from mind2act_eval.cluster_profile import load_cluster_profile
-                    if load_cluster_profile() is not None:
-                        # Retain startup admission and the aggregate-RSS guard.
-                        # Encoders start before Kit grows this process by GiB;
-                        # late vfork briefly charges the large image twice.
-                        self.recorder.prepare({name: tuple(config["resolution"])
-                                               for name, config in self._camera_config.items()})
-                    self.app = SimulationApp({"headless": headless, "active_gpu": active_gpu,
-                                              "physics_gpu": physics_gpu, "multi_gpu": False,
-                                              # Kit's native fast-shutdown path may terminate the
-                                              # process before the worker can persist final artifacts.
-                                              "fast_shutdown": False,
-                                              "extra_args": extra_args})
-                    mark_started()
-                    mark_constructor()
-                if gpu_selection is not None:
-                    from mind2act_eval.gpu_allocation import verify_kit_gpu_table
-                    from mind2act_eval.runner import write_json
-                    readback = verify_kit_gpu_table(gpu_log, gpu_selection)
-                    write_json(output_dir / "gpu-allocation-readback.json", readback)
+                active_gpu = physical_gpu
+                physics_gpu = 0
+                # Start encoders before Kit grows the process image.
+                self.recorder.prepare({name: tuple(config["resolution"])
+                                       for name, config in self._camera_config.items()})
+                self.app = SimulationApp({"headless": headless, "active_gpu": active_gpu,
+                                          "physics_gpu": physics_gpu, "multi_gpu": False,
+                                          # Kit's native fast-shutdown path may terminate the
+                                          # process before the worker can persist final artifacts.
+                                          "fast_shutdown": False,
+                                          "extra_args": extra_args})
+                mark_started()
                 if shared_cache:
                     # Keep the startup GPU table, then stop duplicating verbose
                     # per-frame Info into kit.log. Warnings/errors continue on
@@ -531,17 +546,20 @@ class IsaacSimulator:
         if initial is not None:
             # Tick zero must use precisely the image already sent to the
             # recorder, even if a sensor updates between ready() and observe().
-            return {name: pixels.copy() for name, pixels in initial.items()}
+            return {name: pixels.copy() for name, pixels in initial.items()
+                    if name in getattr(self, "_observation_camera_names", initial)}
         sampled = getattr(self, "_sampled_rgb", None)
         if sampled is not None:
-            return {name: pixels.copy() for name, pixels in sampled.items()}
+            return {name: pixels.copy() for name, pixels in sampled.items()
+                    if name in getattr(self, "_observation_camera_names", sampled)}
         result, observations = self._sample_cameras()
         unavailable = [name for name, row in observations.items() if not row["valid"]]
         if unavailable:
             raise RuntimeError("native RGB unavailable: " + ", ".join(unavailable))
         if not result and self._ready:
             raise RuntimeError("native RGB sensors not initialized")
-        return result
+        return {name: pixels for name, pixels in result.items()
+                if name in getattr(self, "_observation_camera_names", result)}
 
     def prepare_observation(self, requires_rgb):
         """Refresh only images a consumer will read; never advance physics."""
@@ -925,15 +943,6 @@ class IsaacSimulator:
                     persist_shutdown_receipt()
             persist_shutdown_receipt("closed" if call_app_close else "os_exit_prepared")
         finally:
-            try:
-                self._release_gate()
-            finally:
-                # Sealed workers exit via os._exit: keep SH guards until the
-                # OS closes their FDs. Failed close likewise is not exit proof.
-                if call_app_close and not errors:
-                    compatibility = getattr(self, '_startup_compat', None)
-                    self._startup_compat = None
-                    if compatibility is not None:
-                        compatibility.__exit__(None, None, None)
+            self._release_gate()
         if errors:
             raise RuntimeError("; ".join(errors))

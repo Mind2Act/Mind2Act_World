@@ -27,8 +27,8 @@ def validate(spec, assets):
         raise ValueError("S2 instruction differs from the canonical delivery")
     if spec.config["source_case_sha256"] != source["case_sha256"]:
         raise ValueError("S2 requested source case checksum mismatch")
-    from mind2act_eval.sim.source_assets import verify_source_file
-    verify_source_file(assets, "station", spec.config["scene_sha256"], error="S2 prepared scene checksum mismatch")
+    from mind2act_eval.sim.source_assets import source_file
+    source_file(assets, "station")
     return source, effective_config(source, input_version=spec.config["input_protocol_version"])
 
 

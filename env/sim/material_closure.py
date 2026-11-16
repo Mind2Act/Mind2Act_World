@@ -153,7 +153,7 @@ def audit_material_graph(stage):
     return issues
 
 
-def audit_scene(assets, scene_asset_ids, *, relocation_asset_id=None, mdl_search_asset_ids=()):
+def audit_scene(assets, scene_asset_ids, *, relocation_asset_id=None, mdl_search_asset_ids=(), strict=False):
     from pxr import Ar, Sdf, UsdUtils
 
     mappings = {}
@@ -177,7 +177,7 @@ def audit_scene(assets, scene_asset_ids, *, relocation_asset_id=None, mdl_search
     def checked(path, expected):
         if path not in checked_hashes:
             checked_hashes[path] = _sha(path)
-        if checked_hashes[path] != expected:
+        if strict and checked_hashes[path] != expected:
             raise ValueError('material closure target SHA mismatch: ' + str(path))
 
     def visit_mdl(path):

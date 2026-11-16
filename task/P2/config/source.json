@@ -3,20 +3,18 @@
     "meaning": "Preplaced base displacement is diagnostic only; historical1e-7m is not a scoring veto."
   },
   "dismantling_ruling": {
-    "authority": "benchmark maintainer approved 2026-11-01 23:30",
     "canonical_instruction_unchanged": true,
     "effect": "The source mat/assigned target_drop/landing-region rule is superseded. Dismantled baskets may rest at any supported stable position on the table or wooden board. No mat or designated landing coordinate is scored.",
     "source_snapshot_unchanged": true,
     "version": "p2-table-board-dismantling-20261101-2330-v1"
   },
   "distractor_ruling": {
-    "authority": "jclin 2026-11-04 17:40",
     "effect": "Only terminal stack identity/order/lid affects distractor scoring. Historical contact and displacement never independently veto a stage.",
     "version": "p2-terminal-stack-20261104-v3"
   },
   "evaluation_mode": "formal",
   "instruction_authority": {
-    "hard_discrepancy": "2026-11-04 jclin ruling: score terminal target identities/order/lid; a distractor in the stack is misplaced. No independent movement/use veto. Preserve delivered E2E and historical H5.",
+    "hard_discrepancy": "score terminal target identities/order/lid; a distractor in the stack is misplaced. No independent movement/use veto. Preserve delivered E2E and historical H5.",
     "sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae"
   },
   "measurement_policy": "Native poses, quaternions, velocities, signed raw contact manifolds and measured joint states; no expert phase, target, side or action-index annotations.",
@@ -48,5 +46,5 @@
     ],
     "sha256": "1a7488fd8efe46e868b7636b0dbb1385d3e1f23f84cfda80cbe7351f6b9edd38"
   },
-  "stage_mapping_status": "benchmark maintainer 2026-11-02 confirmed source provider 2026-10-30 p2-spec-20261030-v1 section6: formal 0/10/20/30/100, highest eligible stage, no rescaling. The 10-point dismantling stage accepts stable support anywhere on the table or wooden board. This supersedes the temporary diagnostic classification."
+  "stage_mapping_status": "Stages score 0/10/20/30/100 using the highest eligible stage without rescaling. The 10-point dismantling stage accepts stable support anywhere on the table or wooden board."
 }

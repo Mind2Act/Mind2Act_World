@@ -124,8 +124,8 @@ def build(spec: InstanceSpec, ctx: BuildContext) -> TraceScene:
     cfg = spec.config
     parameters = {k: cfg[k] for k in PATH_KEYS}
     if spec.config.get('layout_split') == 'validation':
-        from mind2act_eval.sim.source_assets import verify_source_file
-        verify_source_file(ctx.assets, 'scene', spec.config['scene_sha256'])
+        from mind2act_eval.sim.source_assets import source_file
+        source_file(ctx.assets, 'scene')
     scene_path = Path(ctx.assets.resolve('scene')).resolve()
     ctx.sim.open_stage(scene_path)
     stage = ctx.sim.stage

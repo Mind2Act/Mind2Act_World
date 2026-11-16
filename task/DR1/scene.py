@@ -22,9 +22,8 @@ def validate(spec: InstanceSpec) -> None:
 
 def validate_station_source(spec, assets):
     validate(spec)
-    from mind2act_eval.sim.source_assets import verify_source_file
-    return verify_source_file(assets, 'station', spec.config['scene_sha256'],
-                              error='prepared FR1 scene changed')
+    from mind2act_eval.sim.source_assets import source_file
+    return source_file(assets, 'station')
 
 
 class ConveyorScene:

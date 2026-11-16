@@ -202,6 +202,19 @@
       ],
       "title": "Balance-Scale Calibration"
     },
+    "CP07": {
+      "capability_en": "Select and assemble a functional structure, then verify it works.",
+      "completion_en": "Success: the car reaches the opposite bank. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "description_en": "Easy uses all 8 pieces; Medium/Hard use 13 of the stock pieces, and any working choice counts. The car starts after the button is pressed and must reach the opposite bank; only arrival is scored.",
+      "difficulty_groups": [],
+      "goal_en": "Goal: Build a bridge across the gap with continuous wheel paths on both sides (Medium/Hard: choose suitable pieces from a stock that includes extras), then press and release the button and let the car drive to the opposite bank.",
+      "kind": "A",
+      "scoring_en": [
+        "100: the car reaches the opposite bank.",
+        "0: otherwise."
+      ],
+      "title": "Bridge Construction and Car Crossing"
+    },
     "CP08": {
       "capability_en": "Retain a visual structure and perform hierarchical assembly and rework.",
       "completion_en": "Success: the whole structure is correct. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
@@ -239,6 +252,36 @@
         "Otherwise: 15 / 10 / 7 \u00d7 (correct blocks) / N."
       ],
       "title": "Structure Reconstruction and Rework"
+    },
+    "CP09": {
+      "capability_en": "Retain visual content and restore it with tools.",
+      "completion_en": "Success: every colour repaired. After each of your actions the environment checks the 100-point condition; as soon as it holds the episode ends with 100. Otherwise the episode runs until the budget is used and the final state is scored.",
+      "description_en": "1 / 2 / 3 colours. A colour is repaired when its ink matches the original with precision and recall \u226595% (within 1.5 mm) and extra ink \u22643%; an intact colour counts automatically. How much you erase is not limited. Ink must come from real tool contact.",
+      "difficulty_groups": [
+        {
+          "source": "1 / 2 / 3",
+          "values": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "source": "15 / 10 / 7",
+          "values": [
+            "15",
+            "10",
+            "7"
+          ]
+        }
+      ],
+      "goal_en": "Goal: Remember the briefly shown original drawing on the whiteboard, erase the added strokes and redraw any original strokes you erased (Medium/Hard: uncap the pens of the colours needed), so the board matches the original.",
+      "kind": "A",
+      "scoring_en": [
+        "100: all colours repaired.",
+        "Otherwise: 15 / 10 / 7 \u00d7 (repaired colours) / (colours)."
+      ],
+      "title": "Whiteboard Restoration"
     },
     "CP10": {
       "capability_en": "Predict trajectories and act on delayed colour information.",

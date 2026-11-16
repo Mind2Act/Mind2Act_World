@@ -194,27 +194,29 @@ def _manifest_rules(manifest):
     return expected_source, rules
 
 
-def prepare_station(original_station, assets, manifest_asset_id, output_dir):
-    """Compose a tiny episode layer over a verified immutable station projection.
+def prepare_station(original_station, assets, manifest_asset_id, output_dir, *, strict=False):
+    """Relocate current assets into this episode.
 
-    The original relocation/approval checks still build the exact projection.
-    Only its storage moves to a node cache; no release or SDK file is edited.
-    Every cache hit rehashes all release inputs and generated layers.
+    Explicit strict mode additionally verifies provenance and uses the immutable
+    node cache. Normal runs rebuild the projection to avoid stale cached bytes.
     """
+    if not strict:
+        return _prepare_station(original_station, assets, manifest_asset_id, output_dir)
     if manifest_asset_id is None:
         return original_station
     if not isinstance(manifest_asset_id, str) or not manifest_asset_id:
         raise ValueError('station_relocation_manifest must be an asset ID')
     from pxr import Sdf
-    from .source_assets import read_source_bytes, prepared_projection
+    from .source_assets import asset_bytes
+    from .asset_provenance import prepared_projection
     from mind2act_eval.episode_storage import node_cache, durable_json, _physical
     import fcntl
 
     source = Path(original_station).resolve(strict=True)
-    manifest_bytes = read_source_bytes(assets, manifest_asset_id)
+    manifest_bytes = asset_bytes(assets, manifest_asset_id)
     manifest = json.loads(manifest_bytes)
     expected_source, _ = _manifest_rules(manifest)
-    prepared = prepared_projection(source, assets, expected_source)
+    prepared = prepared_projection(source, assets, expected_source) if strict else None
     if prepared is not None:
         return prepared
     output = _physical(output_dir)
@@ -230,7 +232,7 @@ def prepare_station(original_station, assets, manifest_asset_id, output_dir):
         fcntl.flock(lock, fcntl.LOCK_EX)
         if not entry.exists():
             entry.mkdir()
-            _prepare_station(original_station, assets, manifest_asset_id, entry)
+            _prepare_station(original_station, assets, manifest_asset_id, entry, strict=True)
             # Cache publication is durable and immutable; failed partial builds
             # remain diagnostic evidence and cannot be used on a later attempt.
             built = json.loads(cache_receipt.read_text())
@@ -288,7 +290,7 @@ def prepare_station(original_station, assets, manifest_asset_id, output_dir):
         os.close(lock)
 
 
-def _prepare_station(original_station, assets, manifest_asset_id, output_dir):
+def _prepare_station(original_station, assets, manifest_asset_id, output_dir, *, strict=False):
     """Return the original path without I/O when no manifest is configured."""
     if manifest_asset_id is None:
         return original_station
@@ -298,11 +300,12 @@ def _prepare_station(original_station, assets, manifest_asset_id, output_dir):
 
     source = Path(original_station).resolve(strict=True)
     manifest_path = assets.resolve(manifest_asset_id)
-    from .source_assets import read_source_bytes, prepared_projection
-    manifest_bytes = read_source_bytes(assets, manifest_asset_id)
+    from .source_assets import asset_bytes
+    from .asset_provenance import prepared_projection
+    manifest_bytes = asset_bytes(assets, manifest_asset_id)
     manifest = json.loads(manifest_bytes)
     expected_source, rules = _manifest_rules(manifest)
-    prepared = prepared_projection(source, assets, expected_source)
+    prepared = prepared_projection(source, assets, expected_source) if strict else None
     if prepared is not None:
         return prepared
     output = Path(output_dir).resolve()
@@ -318,7 +321,9 @@ def _prepare_station(original_station, assets, manifest_asset_id, output_dir):
 
     def checked(path, expected):
         path = Path(path).resolve(strict=True)
-        if not path.is_file() or _sha(path) != expected:
+        if not path.is_file():
+            raise FileNotFoundError(path)
+        if strict and _sha(path) != expected:
             raise ValueError('relocation source/target SHA mismatch: ' + str(path))
         pins[path] = expected
         return path
@@ -367,6 +372,15 @@ def _prepare_station(original_station, assets, manifest_asset_id, output_dir):
                     target_sha256=rule['target_sha256'], runtime_asset_path=replacement))
                 return replacement
             if raw in composition or suffix in GEOMETRY_SUFFIXES:
+                if not strict:
+                    resolved = Sdf.ComputeAssetPathRelativeToLayer(original, outer)
+                    target = Path(resolved)
+                    if not target.is_absolute():
+                        target = path.parent / target
+                    target = target.resolve(strict=True)
+                    runtime_target = derive(target, _sha(target)) if suffix in USD_SUFFIXES | {'.usdz'} else checked(target, None)
+                    token = os.path.relpath(runtime_target, destination.parent)
+                    return Ar.JoinPackageRelativePath(token, member) if member else token
                 raise ValueError('missing exact geometry/composition mapping: ' + str(path) + ' -> ' + raw)
             # SDK symbolic MDLs must keep their tokens. Other relative soft
             # assets keep the ORIGINAL layer anchor when the derived file moves.
@@ -405,7 +419,7 @@ def _prepare_station(original_station, assets, manifest_asset_id, output_dir):
 
     try:
         derived = derive(source, expected_source)
-        if set(rules) != used_rules:
+        if strict and set(rules) != used_rules:
             raise ValueError('manifest contains unused layer/path mappings')
         receipt['generated_layer_portability'] = audit_generated_layers([directory])
         if not receipt['generated_layer_portability']['passed']:

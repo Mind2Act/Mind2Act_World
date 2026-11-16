@@ -1,7 +1,7 @@
 """Map an instance-table row of a PR2 baseline source to an InstanceSpec.
 
-Easy/Medium come from the em-edge-side-grasp source, Hard from hard-directional-grasp (K0 decision
-2026-11-01; the sources differ only in expert lineage, not in the scene). Expert-only fields
+Easy/Medium use em-edge-side-grasp; Hard uses hard-directional-grasp.
+The sources differ in expert lineage, not scene geometry. Expert-only fields
 (grasp yaw, contact tilt, arm) are not copied.
 """
 import json

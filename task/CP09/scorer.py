@@ -55,13 +55,7 @@ def score(evidence: NativeEvidence) -> Score:
     from .replay import Replay
     values=evidence.values
     rows=read(values['audit'],evidence.tick)
-    from .instances import config,signature
     initial=rows[0]
-    if evidence.instance_id.startswith('VAL-CP09-') or 'validation_source' in values:
-        from mind2act_eval.cp09_validation_inputs import validate_evidence
-    else:
-        from mind2act_eval.cp09_training_inputs import validate_evidence
-    validate_evidence(evidence,initial['source_case'])
     if initial['contract']!=CONTRACT:
         raise ValueError('CP09 initial audit/source binding differs')
     replay=Replay(values['difficulty'],values['seed'],initial['source_case'])

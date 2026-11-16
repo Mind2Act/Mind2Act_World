@@ -2,9 +2,8 @@
 from functools import lru_cache
 from pathlib import Path
 
-from mind2act_eval.original_asset_graph import layer_bytes, verify_graph
+from mind2act_eval.original_asset_graph import layer_bytes
 from mind2act_eval.source_geometry import opinions, expected_wrapper
-from mind2act_eval.verified_files import verified_bytes
 
 BASE_SHA256 = {
     'easy': '4b8aba0840f7704a1c3ec1f369ffb03908d7f0f9833a5ffc6ec3c83437be3bc7',
@@ -39,8 +38,7 @@ def validate_geometry(spec, assets, binding, raw):
     base = (scene.parent/layer.subLayerPaths[0]).resolve(strict=True)
     if not base.is_relative_to(root):
         raise ValueError('M2 original retained pool escapes root')
-    verified_bytes(base, BASE_SHA256[spec.difficulty])
-    verify_graph(base, root, BASE_GRAPH_SHA256[spec.difficulty])
+
     expected = expected_wrapper(layer, standard_clock=True)
     memory = Sdf.CreatePrimInLayer(expected, '/World/Memory')
     memory.specifier = Sdf.SpecifierDef

@@ -24,11 +24,11 @@ def validate(spec):
 
 def validate_assets(spec,assets):
     row=validate(spec)
-    from mind2act_eval.sim.source_assets import verify_source_file,read_source_bytes
-    verify_source_file(assets,'station',row['scene_sha256'])
+    from mind2act_eval.sim.source_assets import source_file,asset_bytes
+    source_file(assets, 'station')
     for role,name in [('cue_plan','plan.png'),('cue_idle','screen-idle.png')]:
-        verify_source_file(assets,role,row['cue_texture_sha256'][name])
-    source=json.loads(read_source_bytes(assets,'validation_case',spec.config['source_spec_sha256']))
+        source_file(assets, role)
+    source=json.loads(asset_bytes(assets, 'validation_case'))
     expected=dict(schema='mind2act.cp08.validation_runtime_case.v1',task_id='CP08',
         difficulty=spec.difficulty,instance_id=spec.instance_id,
         source_case=to_json(spec.config['source_case']),source_projection=to_json(spec.config['source_projection']))

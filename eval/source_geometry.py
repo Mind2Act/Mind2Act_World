@@ -146,8 +146,7 @@ def retained_namespace(base, code_owned_sha, roots):
 
 def validate_composition(spec, assets, proof, base_sha, graph_sha, roots, *, skip_retired_children=False):
     from pxr import Sdf
-    from .original_asset_graph import layer_bytes, verify_graph
-    from .verified_files import verified_bytes
+    from .original_asset_graph import layer_bytes
     root = Path(assets.root).resolve(strict=True)
     if any(k in spec.config for k in ('station_relocation_manifest', 'station_material_relocation_manifest')):
         raise ValueError('original test must open the authenticated derived station')
@@ -164,8 +163,7 @@ def validate_composition(spec, assets, proof, base_sha, graph_sha, roots, *, ski
             or task != Path(assets.resolve('task_source')).resolve(strict=True)
             or proof['common_station']['sha256'] != base_sha):
         raise ValueError('original composition actual role or retained pool differs')
-    verified_bytes(base, base_sha)
-    verify_graph(base, root, graph_sha)
+
     _, layer = layer_bytes(scene)
     _, task_layer = layer_bytes(task)
     if len(layer.subLayerPaths) != 2 or [(scene.parent/p).resolve(strict=True) for p in layer.subLayerPaths] != [task, base]:

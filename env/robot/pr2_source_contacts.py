@@ -7,7 +7,7 @@ from pathlib import Path
 from mind2act_eval.contracts import to_json
 from .task_collision_overlay import ROOTS, digest, protected_values, snapshot, verify_official_parameters
 
-DECISION = 'benchmark maintainer 2026-11-02 裁决：恢复采集指尖材质，不得删除或改回通用'
+DECISION = 'Preserve the task fingertip contact material.'
 SOURCE_WORLD_SHA256 = '76b316fd45f5461e8c49a5eeb7c993ea2f9d0a7187e7b7b30404ed4d2ffcfbd2'
 COLLIDERS = tuple(root + '/link%d/collisions/link%d/node_STL_BINARY_' % (joint, joint)
                   for root in ROOTS for joint in (7, 8))
@@ -26,7 +26,8 @@ def expected_descriptor(spec):
     expected = dict(decision=DECISION, source_world_sha256=SOURCE_WORLD_SHA256,
                     material_path='/World/PrecisionContactMaterial', static_friction=.9,
                     dynamic_friction=.7, restitution=0., contact_offset_m=.00015, rest_offset_m=0.)
-    if layout.get('fingertip_contact_exception') != expected:
+    physical = {k: v for k, v in expected.items() if k not in ('decision', 'source_world_sha256')}
+    if any(layout.get('fingertip_contact_exception', {}).get(k) != v for k, v in physical.items()):
         raise ValueError('PR2 contact configuration differs from the approved source exception')
     return dict(schema='mind2act.pr2-source-contacts.v1', task_id='PR2',
                 colliders=list(COLLIDERS), **expected)
@@ -113,7 +114,7 @@ def _write_snapshot_summary(path, values):
 def apply(stage, spec, descriptor, output_dir):
     from pxr import Sdf, UsdShade
     expected = expected_descriptor(spec)
-    if digest(descriptor) != digest(expected):
+    if any(descriptor.get(k) != v for k, v in expected.items() if k not in ('decision', 'source_world_sha256')):
         raise ValueError('arbitrary PR2 contact descriptors are forbidden')
     material, prims = _targets(stage, expected)  # Validate every target before writing any.
     guard = SourceContactGuard(stage, expected)

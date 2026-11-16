@@ -8,10 +8,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/29d9efdb14cd43e7e1cf40109a62ca0b0345f222a8c564009d4457c1eff548a7/scene.usda",
-        "train_source_raw": "inputs/34283911627808327c7fefff0a77aca5116f803314c40ae117be503d0f6d187e.json",
+        "train_source_raw": "inputs/c982746a9d259161206f6c8b89de725d3d2ed2fd212c13b134afcef44c859a22.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "93d7d19198db5bff1e96a0b8fc991530cc9887f3735b9b73b0aee2f1cbf469e6",
+      "config_sha256": "31a48cf17d46ce42b35168b04cd1751675860d572a5ce971695b071321776441",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -32,7 +32,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "57f6d112fad30932d627a19213d772291bd604dd5efed4697ccdd450f452ce08",
         "station": "eacdd9c48737c56eb167d25117d42cc8d77db00136d3f87a6845b4771b8d5026",
-        "train_source_raw": "34283911627808327c7fefff0a77aca5116f803314c40ae117be503d0f6d187e",
+        "train_source_raw": "c982746a9d259161206f6c8b89de725d3d2ed2fd212c13b134afcef44c859a22",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -46,7 +46,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2002-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "1f0902f7c8c156b72297f2822fad11e65dea70f29ed2ca24620bc453b4b2cb06",
-        "input_sha256": "34283911627808327c7fefff0a77aca5116f803314c40ae117be503d0f6d187e",
+        "input_sha256": "c982746a9d259161206f6c8b89de725d3d2ed2fd212c13b134afcef44c859a22",
         "native_case_id": "CP08-easy-train-2002-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -61,10 +61,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/f83de7d6563f9aa47da9d89e5ff6acbc8b92fe9cd2f91bc0e4e1a5cd51dbc301/scene.usda",
-        "train_source_raw": "inputs/25331557b9bb84444550102cd5aba554779ceed86b90e9187180015290e14ab5.json",
+        "train_source_raw": "inputs/a2722374de34757578ce8308e98a2509522d4d342073f18b553b914e6bbd5959.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "43280b955e7fc9f4c3aa51b0c952663e3a264f1acb8f8c1bb10597505ae757d9",
+      "config_sha256": "329e521f5b1da2aa1a4ddcf0bc2d946d6ae2e263086e1f077d3421cd089132f3",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -85,7 +85,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "57f6d112fad30932d627a19213d772291bd604dd5efed4697ccdd450f452ce08",
         "station": "786417bbe14feb4c3d0dbe29bab69914a53d54c1fe827d260fd47f2984b28cc1",
-        "train_source_raw": "25331557b9bb84444550102cd5aba554779ceed86b90e9187180015290e14ab5",
+        "train_source_raw": "a2722374de34757578ce8308e98a2509522d4d342073f18b553b914e6bbd5959",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -99,7 +99,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2004-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "299968481882c907b90bd8a48f8031657d9c3d11b8a996079dd093d5ea7249ec",
-        "input_sha256": "25331557b9bb84444550102cd5aba554779ceed86b90e9187180015290e14ab5",
+        "input_sha256": "a2722374de34757578ce8308e98a2509522d4d342073f18b553b914e6bbd5959",
         "native_case_id": "CP08-easy-train-2004-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -114,10 +114,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/8e0cf9b5b6a22a0e3971b2f221f3bc114bc404dedb3c3f9afc2ef7c6a87130d8/scene.usda",
-        "train_source_raw": "inputs/9c5ad479f08d68b3a6230ea5969c5691ea2f2bba7741a55e370386a0f7874e0e.json",
+        "train_source_raw": "inputs/d3dcccaf3fda7a3e0bc5ecebea17e58f592836e5bfeb65dcafc07469e6b0dcad.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "83e1272757550423b04fda9143c12cea8c762d5af72c0b557dc0c064770542df",
+      "config_sha256": "49c304799d37ddaa3d5fcc53625993155a67e83c977580afb84acedd46c9dfe3",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -138,7 +138,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "57f6d112fad30932d627a19213d772291bd604dd5efed4697ccdd450f452ce08",
         "station": "1c4736cf632c4c8a1f513aa27a25e42761def634f5366d4b33fe49a77a24f863",
-        "train_source_raw": "9c5ad479f08d68b3a6230ea5969c5691ea2f2bba7741a55e370386a0f7874e0e",
+        "train_source_raw": "d3dcccaf3fda7a3e0bc5ecebea17e58f592836e5bfeb65dcafc07469e6b0dcad",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -152,7 +152,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2006-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "fce1ab7b74861233203da8a8dcc4a80072debc5624ac9e282a3ed285e62ce645",
-        "input_sha256": "9c5ad479f08d68b3a6230ea5969c5691ea2f2bba7741a55e370386a0f7874e0e",
+        "input_sha256": "d3dcccaf3fda7a3e0bc5ecebea17e58f592836e5bfeb65dcafc07469e6b0dcad",
         "native_case_id": "CP08-easy-train-2006-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -167,10 +167,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/3db99d7b2479479f21828e53f205c2344b8da3451cee8f0e735780d5d668461e/scene.usda",
-        "train_source_raw": "inputs/d153e072d3730aab1aaeaefe5dd14b312c989461f9de8d0b1252303582948889.json",
+        "train_source_raw": "inputs/74486285e43327817852c7e7d3ec0246a6baa063609c6553fe7d3cd089240dd4.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "f322eae39554786183d757497f1e388bb6fb2ab6380c3fd6c573cfb1d4286dce",
+      "config_sha256": "a92fc64d14379ac3a9dc1a2dc096dbfebb75644312e0ca507806f84281614c8b",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -191,7 +191,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "7aecdbaca2a6dd3584803ca96e66570c6e00040f5af79faf6239ce3f873a58e0",
-        "train_source_raw": "d153e072d3730aab1aaeaefe5dd14b312c989461f9de8d0b1252303582948889",
+        "train_source_raw": "74486285e43327817852c7e7d3ec0246a6baa063609c6553fe7d3cd089240dd4",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -205,7 +205,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2007-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "746ce8d2559662fd052e1643e4f098426acf62ba0960a44872c3fd9c0fdc62d9",
-        "input_sha256": "d153e072d3730aab1aaeaefe5dd14b312c989461f9de8d0b1252303582948889",
+        "input_sha256": "74486285e43327817852c7e7d3ec0246a6baa063609c6553fe7d3cd089240dd4",
         "native_case_id": "CP08-easy-train-2007-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -220,10 +220,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/a1aa173a25e88f6ad87a60fe5915e2817f19448bea7ca75b598881c648d61e7c/scene.usda",
-        "train_source_raw": "inputs/9360f2e8fbcad934a636e2c10c4141ef1820033b2f21819af9aa80d64b02d9d3.json",
+        "train_source_raw": "inputs/1f588ab9c2f0f0c85c624c4adfe99477c3e0b581204d3d7c6f5fdd2bd4880462.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "c12f8b03475601c3ff56f1065aa08e0de1080c5af119b8215956ddfaa8bce707",
+      "config_sha256": "a0025dd96d256aa5cb369825e5821040bc8ba11e3a51515d614839006471b37e",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -244,7 +244,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "de9ea6483f6e0c3411d2173f2dbfecd7453f6a86a0003960e3c6aab278f7d09e",
-        "train_source_raw": "9360f2e8fbcad934a636e2c10c4141ef1820033b2f21819af9aa80d64b02d9d3",
+        "train_source_raw": "1f588ab9c2f0f0c85c624c4adfe99477c3e0b581204d3d7c6f5fdd2bd4880462",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -258,7 +258,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2013-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "1899336dc7946652c61f3036b528ad61501062b6149db6b8f40fd87979a00957",
-        "input_sha256": "9360f2e8fbcad934a636e2c10c4141ef1820033b2f21819af9aa80d64b02d9d3",
+        "input_sha256": "1f588ab9c2f0f0c85c624c4adfe99477c3e0b581204d3d7c6f5fdd2bd4880462",
         "native_case_id": "CP08-easy-train-2013-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -273,10 +273,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/8a2fe0a84f8eae4629a131123d7b04a6444fb14f65d64ede952ea63faffb0e52/scene.usda",
-        "train_source_raw": "inputs/b7cb7558975371bd3bb928fbfac2d0c187ba01a92f6df24f6aaf5a44eb6fd1a1.json",
+        "train_source_raw": "inputs/aefa3ca87f5e892c2f1787cd9f57149f9a6778fb5dc24795d1e9cc7ac35b2093.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "a3d1ded13170b1d74a01433f551d1f1cdb144fe0c2c760051d3e7d817c30b0a9",
+      "config_sha256": "f60aeca10eb90f6953b291310775b1d88550bc56d899daed8f3ec024f4bb3740",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -297,7 +297,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "4eb06afd4057e73f6e0060e6c9573708e3584c3ddc6ba102a41cdc33942f13c3",
-        "train_source_raw": "b7cb7558975371bd3bb928fbfac2d0c187ba01a92f6df24f6aaf5a44eb6fd1a1",
+        "train_source_raw": "aefa3ca87f5e892c2f1787cd9f57149f9a6778fb5dc24795d1e9cc7ac35b2093",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -311,7 +311,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2015-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "3e3e94b0c93e61ad03461c67da6f53e4561b7d025731edeedf955da85e94902d",
-        "input_sha256": "b7cb7558975371bd3bb928fbfac2d0c187ba01a92f6df24f6aaf5a44eb6fd1a1",
+        "input_sha256": "aefa3ca87f5e892c2f1787cd9f57149f9a6778fb5dc24795d1e9cc7ac35b2093",
         "native_case_id": "CP08-easy-train-2015-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -326,10 +326,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/e9bae620ab1219d9077c367c53a807ffb58994c267db28d6436d1551876ffa91/scene.usda",
-        "train_source_raw": "inputs/a1d894222ccb7574da04573d6c2cc58e32f154df053c69acf8f98d204fd9436e.json",
+        "train_source_raw": "inputs/f5b4a6f4aeb093ee40d217bb2914be7568ae08515e2afa93ea3fb01f9c71da7c.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "01744e9f66cadab75ff199d5e31bdd98c5bb125501c1b48560cce6c5e2e23989",
+      "config_sha256": "e42c53eb283f7fa2ff30b2e910da481266724e224418f61ade153ae4f1d2f91a",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -350,7 +350,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "57f6d112fad30932d627a19213d772291bd604dd5efed4697ccdd450f452ce08",
         "station": "e48108b57d7a583a27216bcd6f4d51ff0985b0c5f261c388ebef85835b48ce16",
-        "train_source_raw": "a1d894222ccb7574da04573d6c2cc58e32f154df053c69acf8f98d204fd9436e",
+        "train_source_raw": "f5b4a6f4aeb093ee40d217bb2914be7568ae08515e2afa93ea3fb01f9c71da7c",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -364,7 +364,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2016-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "9d74225e4a78e6ded22c75604f6ab0e370a2f18a7d563ee15550492039e90da0",
-        "input_sha256": "a1d894222ccb7574da04573d6c2cc58e32f154df053c69acf8f98d204fd9436e",
+        "input_sha256": "f5b4a6f4aeb093ee40d217bb2914be7568ae08515e2afa93ea3fb01f9c71da7c",
         "native_case_id": "CP08-easy-train-2016-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -379,10 +379,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/acca94f641b969a120b3c2a8cfdb38f01f882296f7221d44f74cb55dd6a1c406/scene.usda",
-        "train_source_raw": "inputs/7c666fda5b5a5b8c235956e96e095fa2565fec29618a719817034060815fd52c.json",
+        "train_source_raw": "inputs/bd25b640c1b8222b9914bfb476a8aaa533c8548c32484449e3d535bb40d6dbd2.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "6607249abcf487a45e5f22b6c66075a5fc0d570389f36f50d55b80d2e4e5f262",
+      "config_sha256": "0323eb531d6c7cf10773a6fc1e21d9083367f2ad46c883a227640b7cd25991d7",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -403,7 +403,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "81a7e7b0f277e0bfe0105175ed9479d68c25803fc5e85ac84d42d91fae1dac43",
-        "train_source_raw": "7c666fda5b5a5b8c235956e96e095fa2565fec29618a719817034060815fd52c",
+        "train_source_raw": "bd25b640c1b8222b9914bfb476a8aaa533c8548c32484449e3d535bb40d6dbd2",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -417,7 +417,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2019-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "8a5cc864d210d6e765c19bd4d10cd2bbb465427fcb2e0d3e32ccdc7b9ecc88db",
-        "input_sha256": "7c666fda5b5a5b8c235956e96e095fa2565fec29618a719817034060815fd52c",
+        "input_sha256": "bd25b640c1b8222b9914bfb476a8aaa533c8548c32484449e3d535bb40d6dbd2",
         "native_case_id": "CP08-easy-train-2019-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -432,10 +432,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/1c89ac289205cb019127f891ff638c8abbf3ba687a499ff8656fd804670eb25b/scene.usda",
-        "train_source_raw": "inputs/8447c74eb7199b50067b27ceb68fafa68b3f04f785296cd63b7821d2924cd8e4.json",
+        "train_source_raw": "inputs/68668a30a77dd68f02dde1e96f57641838ffe9f5c67864265432e42a22c37637.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "29abedfe9156236775739ce74a3f798bbda63e5ca228175573d1557563d0e882",
+      "config_sha256": "3770be32e307d39e052214e33601b7e74400dc52162f6676fb3d17363028718c",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -456,7 +456,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "5f34c23af05f82113af25c93fe4d0ab6150287df7ce1ca9184e5b71d75b1e186",
-        "train_source_raw": "8447c74eb7199b50067b27ceb68fafa68b3f04f785296cd63b7821d2924cd8e4",
+        "train_source_raw": "68668a30a77dd68f02dde1e96f57641838ffe9f5c67864265432e42a22c37637",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -470,7 +470,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2025-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "e4968050c7bce8e018fe8005164cf4c147192463ad090579e2a983d25bb526db",
-        "input_sha256": "8447c74eb7199b50067b27ceb68fafa68b3f04f785296cd63b7821d2924cd8e4",
+        "input_sha256": "68668a30a77dd68f02dde1e96f57641838ffe9f5c67864265432e42a22c37637",
         "native_case_id": "CP08-easy-train-2025-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -485,10 +485,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/25baaeac35d1a7b1277f4b669e44a8a3995ed0a15a5121c8ca4bc1479bba58e4/scene.usda",
-        "train_source_raw": "inputs/5f472c113268d54070e60d715f1fc2be5f9744602ebd7d80d0f75e4de772664a.json",
+        "train_source_raw": "inputs/48c8dfa5e92f167516054d7ab7756cacb2ed9cbdd3088b26db75617622c3e869.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "480b392b60f6234e45c76772e5cd11bc6bfccd560d044fd5da04a5817c09591f",
+      "config_sha256": "fffab19cd19f586f3cecd15fdf8076f20da1179a12187d28c82a10ceaf4f9572",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -509,7 +509,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "bdf7c2af444f1f717f77c56693c3f1d775455d669cf2e3f3d563630386e3a95c",
-        "train_source_raw": "5f472c113268d54070e60d715f1fc2be5f9744602ebd7d80d0f75e4de772664a",
+        "train_source_raw": "48c8dfa5e92f167516054d7ab7756cacb2ed9cbdd3088b26db75617622c3e869",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -523,7 +523,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2029-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "46369de611ee048b1bc6df525d1399512d49f434fdf8639909ce58a4a8124b0d",
-        "input_sha256": "5f472c113268d54070e60d715f1fc2be5f9744602ebd7d80d0f75e4de772664a",
+        "input_sha256": "48c8dfa5e92f167516054d7ab7756cacb2ed9cbdd3088b26db75617622c3e869",
         "native_case_id": "CP08-easy-train-2029-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -538,10 +538,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/475fb9c73592ea5b4c6ad9d5a37cd0587a0d7bb3fee38c3633ed1fd26cde1cf9/scene.usda",
-        "train_source_raw": "inputs/83251c6b05e013ede7d5ebaf9471d3d24760667cf2b5047825abf69b6b7c8c93.json",
+        "train_source_raw": "inputs/381e2c3c6fe6cee4c5e06888dfc5e3aa75a89e884ff9e7855633044d0f504868.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "5034fbd961988deebc34fae61f045d5ebda2d40088d6911e6d69cfc1222a424d",
+      "config_sha256": "17c617aa25ea57ff67e0c9305725bbe11320fb5c60e3954d1cf0432c0db48663",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -562,7 +562,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "57f6d112fad30932d627a19213d772291bd604dd5efed4697ccdd450f452ce08",
         "station": "3afea63517d4528a469c922279a51f5849e8cc472254689a41714ab7dcba7e40",
-        "train_source_raw": "83251c6b05e013ede7d5ebaf9471d3d24760667cf2b5047825abf69b6b7c8c93",
+        "train_source_raw": "381e2c3c6fe6cee4c5e06888dfc5e3aa75a89e884ff9e7855633044d0f504868",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -576,7 +576,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2030-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "736fa1075632de36d411932e7aa9d840f41e78b6b02976e8fe7b670b1761d8a0",
-        "input_sha256": "83251c6b05e013ede7d5ebaf9471d3d24760667cf2b5047825abf69b6b7c8c93",
+        "input_sha256": "381e2c3c6fe6cee4c5e06888dfc5e3aa75a89e884ff9e7855633044d0f504868",
         "native_case_id": "CP08-easy-train-2030-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -591,10 +591,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/612cdba13b088f8e0d98ffff12ea7f7718e329bf8269e0399b064d7866deae10/scene.usda",
-        "train_source_raw": "inputs/a237c77474233d46a3d9611d479c41b1e28a795d24933788f3f409a72cc5cc0b.json",
+        "train_source_raw": "inputs/fabe6fbd1984ca592f281065ef8ac99a372f9be7e9e1e4b20929ccbe85c57c42.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "1abcca29e7378d31b70727d4073e5778a3d551bb8c3bb6d220053cf16571f4aa",
+      "config_sha256": "27377aed870a4e6427c8a2c47a0e4b2730b851928de8afa77eb2bc005a7e8c04",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -615,7 +615,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "77eb4fee10fc7bf8dc99854996f8d8832636af37824a4c7203c06d3be2ca8732",
-        "train_source_raw": "a237c77474233d46a3d9611d479c41b1e28a795d24933788f3f409a72cc5cc0b",
+        "train_source_raw": "fabe6fbd1984ca592f281065ef8ac99a372f9be7e9e1e4b20929ccbe85c57c42",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -629,7 +629,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2031-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "76ef333212454c01a5e71263f2ad5493060251398870477cac3402e7c8881218",
-        "input_sha256": "a237c77474233d46a3d9611d479c41b1e28a795d24933788f3f409a72cc5cc0b",
+        "input_sha256": "fabe6fbd1984ca592f281065ef8ac99a372f9be7e9e1e4b20929ccbe85c57c42",
         "native_case_id": "CP08-easy-train-2031-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -644,10 +644,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/c15d8a1fc1ac930dadf0a1c16af09fb1879a4bea211e86ba0c9f3dfaad4f66bd/scene.usda",
-        "train_source_raw": "inputs/373a639864e71bacd86e69d445827ba5fa6cbc5342b572644b4ff84f7ea09ea6.json",
+        "train_source_raw": "inputs/eab12d1d8ec7c8f57440767d6665f84c4db06230c7bb549b3beea7c9ec00d0c3.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "5b912760a0dafec1e23a20c880ac07eb766d6e104cf197aac7dd23c42e37d4d9",
+      "config_sha256": "d05a6adbd0926eb354c8b0e60bd0ac321efd15b46a64defc0d99a5c01b87ffcc",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -668,7 +668,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "57f6d112fad30932d627a19213d772291bd604dd5efed4697ccdd450f452ce08",
         "station": "47ca8bf43432478fdaa62a6ef9e6e257abe69e62b8980d0d01c9a91abc15ace7",
-        "train_source_raw": "373a639864e71bacd86e69d445827ba5fa6cbc5342b572644b4ff84f7ea09ea6",
+        "train_source_raw": "eab12d1d8ec7c8f57440767d6665f84c4db06230c7bb549b3beea7c9ec00d0c3",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -682,7 +682,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2042-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "cbafa1869249056911e174cb8fe5745196069a352422513ed40fa47e89fa2290",
-        "input_sha256": "373a639864e71bacd86e69d445827ba5fa6cbc5342b572644b4ff84f7ea09ea6",
+        "input_sha256": "eab12d1d8ec7c8f57440767d6665f84c4db06230c7bb549b3beea7c9ec00d0c3",
         "native_case_id": "CP08-easy-train-2042-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -697,10 +697,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/6da5404804f54361257e45350e721c3b7cbf5254439e00f46635e1d02a876863/scene.usda",
-        "train_source_raw": "inputs/2222084b897418466119a06817a952c81c87dec712b5398c33aae41397c9a673.json",
+        "train_source_raw": "inputs/10d7eb4e33bba59a5f5473aab671e650e449b005d3a5a486a4f2292e3420f9d9.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "03fcbee6a1df07738d78a744b75ff4861f0d4f7929e5a1ac48a2fee609b855b7",
+      "config_sha256": "70ad771b56b0989f84a78fcf272ba93f088216d75b7c75e262cb0f35d1452a06",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -721,7 +721,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "03cfef8fc479867f20ea1c78e3ab8e31bdd135d7fec7e625a0e2be3c07556f71",
-        "train_source_raw": "2222084b897418466119a06817a952c81c87dec712b5398c33aae41397c9a673",
+        "train_source_raw": "10d7eb4e33bba59a5f5473aab671e650e449b005d3a5a486a4f2292e3420f9d9",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -735,7 +735,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2043-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "266d01a74f5ae6a2490e4dbe1192e2e1617309981deed8e2278df32ef46e4f46",
-        "input_sha256": "2222084b897418466119a06817a952c81c87dec712b5398c33aae41397c9a673",
+        "input_sha256": "10d7eb4e33bba59a5f5473aab671e650e449b005d3a5a486a4f2292e3420f9d9",
         "native_case_id": "CP08-easy-train-2043-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -750,10 +750,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/12f58a32f71713b92ad7965c36dc16ceab5246c4c96dcaa91c009c0357a3d5e9/scene.usda",
-        "train_source_raw": "inputs/fef9ecb7c4d3d3bcd16127cfa63465e50d2c3795679483f8580297528b327488.json",
+        "train_source_raw": "inputs/884324f462340baf003455b51ea1badaca62a2d6af670a777350f034b36d0f4b.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "0507feba7b3bbf7908a136ea21bb29d5f804802658150a4c8c47620b670a9cfe",
+      "config_sha256": "c25ee156321a6f5b1a86f04b6f2c7dc424f3fd40a838a13a2385b6d1c0b83926",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -774,7 +774,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "0629c71fee82423ab8d3c0ba6284241181d47aa0952095c9c19773ef4a8f4072",
-        "train_source_raw": "fef9ecb7c4d3d3bcd16127cfa63465e50d2c3795679483f8580297528b327488",
+        "train_source_raw": "884324f462340baf003455b51ea1badaca62a2d6af670a777350f034b36d0f4b",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -788,7 +788,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2047-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "d9aa1c9f600991a05280040570b5c24691d09f2364df9d5d2e3123f03b273fe3",
-        "input_sha256": "fef9ecb7c4d3d3bcd16127cfa63465e50d2c3795679483f8580297528b327488",
+        "input_sha256": "884324f462340baf003455b51ea1badaca62a2d6af670a777350f034b36d0f4b",
         "native_case_id": "CP08-easy-train-2047-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -803,10 +803,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/a520c0744d898d94d123f54206088e2dee1cb2477d4ae0ae221dbecc26426b6f/scene.usda",
-        "train_source_raw": "inputs/6192db2611f91fe52805813b298df230c26b0530fcc19396f2bed5d19c09ed44.json",
+        "train_source_raw": "inputs/c3cbb30fd7b4678f210ff355bdaf3fe36fe85d036be1b9a683b98fa973ba6d64.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "a814454e4e5f6e0db66bdc33cbf1d4aee87136499fc3a4c6e40573a956b41a2b",
+      "config_sha256": "2564664d097b7b554b847953d1c41309667df344cd8be92cf033ed0614ed5778",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -827,7 +827,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "57f6d112fad30932d627a19213d772291bd604dd5efed4697ccdd450f452ce08",
         "station": "0ba675b57858b0af3317d0094df96cc8ac216d1ff10ca05bdc07d003e361f98b",
-        "train_source_raw": "6192db2611f91fe52805813b298df230c26b0530fcc19396f2bed5d19c09ed44",
+        "train_source_raw": "c3cbb30fd7b4678f210ff355bdaf3fe36fe85d036be1b9a683b98fa973ba6d64",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -841,7 +841,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2054-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "bcfda2a1c8c90f20a57a83ad68f40a7fa7e8f0bb86cb1d4e923a30aada792776",
-        "input_sha256": "6192db2611f91fe52805813b298df230c26b0530fcc19396f2bed5d19c09ed44",
+        "input_sha256": "c3cbb30fd7b4678f210ff355bdaf3fe36fe85d036be1b9a683b98fa973ba6d64",
         "native_case_id": "CP08-easy-train-2054-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -856,10 +856,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/b1e5ac6acb5e5c9f0305e1c917ccbd941dcf2334a33702bf0990d25793397d56/scene.usda",
-        "train_source_raw": "inputs/cd061f5d0ba364dfa3759bfbffc64c116553a22045f08ceaecff6594c8982350.json",
+        "train_source_raw": "inputs/ce1d7ace2be5c0a33cb45d9fd7dbaf5504b13f96d2733a5ace6f44ef389503e0.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "7cd7eb73a7c4563b8c5fb7e0e6aa1c4e7b71e8632fe3bd80386416dd79dad688",
+      "config_sha256": "b369d69c86dc3bcb61bdffb29bfdac276a79e6e9d1d029824c7c81bd1e5ef952",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -880,7 +880,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "57f6d112fad30932d627a19213d772291bd604dd5efed4697ccdd450f452ce08",
         "station": "432657f8623269c91d4085b02cce48ea027291fffbbb51ff43038e4ee0f6432a",
-        "train_source_raw": "cd061f5d0ba364dfa3759bfbffc64c116553a22045f08ceaecff6594c8982350",
+        "train_source_raw": "ce1d7ace2be5c0a33cb45d9fd7dbaf5504b13f96d2733a5ace6f44ef389503e0",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -894,7 +894,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2060-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "843ff0d2ffaa3b9c456207ad1e6f12747ec7f263e8dfc948fe6c8a701ad90a7c",
-        "input_sha256": "cd061f5d0ba364dfa3759bfbffc64c116553a22045f08ceaecff6594c8982350",
+        "input_sha256": "ce1d7ace2be5c0a33cb45d9fd7dbaf5504b13f96d2733a5ace6f44ef389503e0",
         "native_case_id": "CP08-easy-train-2060-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -909,10 +909,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/0617dd8dcb2ce5f92ae55b84a4b8cfda98a100c2c136f55112db08dcdec4730e/scene.usda",
-        "train_source_raw": "inputs/f4cc721514d97f31ee402cd6b8cf83b2b60595e865a0cd9eef401c24addf6493.json",
+        "train_source_raw": "inputs/6d99e64219c296f1af48a0c33fbacc0d02a2cd55c67742bd7a87083feb031fe3.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "a9670f46a52dae35bdfc5a95608e311407b52523a5a1f4f4dc54761ea941457f",
+      "config_sha256": "40a49641f3145395e67fa3786e5da71acc64f468d123561b27423a13444b836b",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -933,7 +933,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "2539fde7f9dea575cb884c621ab40dd64bc210234d4eb7e84edc17745793ab75",
-        "train_source_raw": "f4cc721514d97f31ee402cd6b8cf83b2b60595e865a0cd9eef401c24addf6493",
+        "train_source_raw": "6d99e64219c296f1af48a0c33fbacc0d02a2cd55c67742bd7a87083feb031fe3",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -947,7 +947,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2061-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "82311ce5c7ebbd484a20d33065b9ecdaee8513fc8b25d59aa9c048205b4f6727",
-        "input_sha256": "f4cc721514d97f31ee402cd6b8cf83b2b60595e865a0cd9eef401c24addf6493",
+        "input_sha256": "6d99e64219c296f1af48a0c33fbacc0d02a2cd55c67742bd7a87083feb031fe3",
         "native_case_id": "CP08-easy-train-2061-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -962,10 +962,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/698e1a0418a0a3ec1b975d3d71ab69ffac11a45c93d0d5fbc920c3c6e83fd09d/scene.usda",
-        "train_source_raw": "inputs/26f226f34bd96ad80e27a36c71014f623f9ca628c612f39b85e9cbf58065aa40.json",
+        "train_source_raw": "inputs/21153295c961036626413182916d37ad7c6aca4ad6d637b6d3853f271757b769.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "b298407d7c680d581bcb99e198286801cfb8f6c52c209be4aaa0d29df02e14a9",
+      "config_sha256": "7f38fed278e39677ab7b54f9db053ae2c4135e21ced2436d3d8c8e7caeb528db",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -986,7 +986,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "55c2403abbe4042ecae6aec8e15e7e4bb29a34a0c0c2047ef3ae9158f35ef01a",
         "station": "5e98e5f20ed7e4b276ee89f5bb6c45f199c94c2fcb3baddfbd85848836e6321f",
-        "train_source_raw": "26f226f34bd96ad80e27a36c71014f623f9ca628c612f39b85e9cbf58065aa40",
+        "train_source_raw": "21153295c961036626413182916d37ad7c6aca4ad6d637b6d3853f271757b769",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1000,7 +1000,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2071-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "f4042f8cc4cd3479e1ff73790397dc5b77564db39dd15481eb98112f3033813c",
-        "input_sha256": "26f226f34bd96ad80e27a36c71014f623f9ca628c612f39b85e9cbf58065aa40",
+        "input_sha256": "21153295c961036626413182916d37ad7c6aca4ad6d637b6d3853f271757b769",
         "native_case_id": "CP08-easy-train-2071-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1015,10 +1015,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/56a7896760de58b5e5386c896de65b94d90362e830ddb5b8fcd59091f19e9457/scene.usda",
-        "train_source_raw": "inputs/849cde717712e3eb0acae80c2004d910ee85dd5d651c2ea04c02563d19cb83e4.json",
+        "train_source_raw": "inputs/1f83a9570e33d8ed3f4ee7ecce7116590cd57d844e47e6282cb085797cc0d10e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "0b86d15314e45c69bf75f72e21414915033788eef65f973124eafdae0f2d97c6",
+      "config_sha256": "d060d7188cb844de274f5eda45d65c133feed74c648e5124dfa2953b87e015ef",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1039,7 +1039,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "57f6d112fad30932d627a19213d772291bd604dd5efed4697ccdd450f452ce08",
         "station": "131c316e67d5292d0c6b09728b71f7d25e94dc6102fcbebe6b044821f7f27c72",
-        "train_source_raw": "849cde717712e3eb0acae80c2004d910ee85dd5d651c2ea04c02563d19cb83e4",
+        "train_source_raw": "1f83a9570e33d8ed3f4ee7ecce7116590cd57d844e47e6282cb085797cc0d10e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1053,7 +1053,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP08/easy/CP08-easy-train-2160-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "4f9477d7951335dc7d4fb18700e353bbe5fc8a0e6dc0a7821f44466912d0d12d",
-        "input_sha256": "849cde717712e3eb0acae80c2004d910ee85dd5d651c2ea04c02563d19cb83e4",
+        "input_sha256": "1f83a9570e33d8ed3f4ee7ecce7116590cd57d844e47e6282cb085797cc0d10e",
         "native_case_id": "CP08-easy-train-2160-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1068,10 +1068,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/b8563a0281a8a079dabb50f35599e4e3a50082e38aeb76b1d536457e11a2ff92/scene.usda",
-        "train_source_raw": "inputs/49d0f9ab949acd50edd0e17787c8fa0c01422ec62f14a7296c151a6f84253ebf.json",
+        "train_source_raw": "inputs/7f4088e7c7c12e79d461d44ed507285de754d9f603cccb4a50954185bcc21fff.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "1d661799ee32d750d6433b2b2126590e726ff9b8d18509ac42653dc26f50a92c",
+      "config_sha256": "3eb7646f7367686022bbd87e2b5042b92199df7f5d8614213605182e6afca2c6",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1092,7 +1092,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "9fd0065218e4e3575885ead6ce00d51ae16bcfec3c502d8aea080cff93b17314",
-        "train_source_raw": "49d0f9ab949acd50edd0e17787c8fa0c01422ec62f14a7296c151a6f84253ebf",
+        "train_source_raw": "7f4088e7c7c12e79d461d44ed507285de754d9f603cccb4a50954185bcc21fff",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1106,7 +1106,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2001-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "9a825636bab0cd1cf4bef04730696abb8ceed63ebb070521286143db84f2d46f",
-        "input_sha256": "49d0f9ab949acd50edd0e17787c8fa0c01422ec62f14a7296c151a6f84253ebf",
+        "input_sha256": "7f4088e7c7c12e79d461d44ed507285de754d9f603cccb4a50954185bcc21fff",
         "native_case_id": "CP08-hard-train-2001-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1121,10 +1121,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/bad320b48a02da6eba2752d7150cb75ba79601d3f11b3c482a6244879bced44e/scene.usda",
-        "train_source_raw": "inputs/c8edda17d4c73f66278fecbdd47e2f4a856b9abd8b2824305484257891d40d35.json",
+        "train_source_raw": "inputs/eef122618f8fe1803920a05fb04ebc537117126ce95af3209876cb6aedb85239.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "91ebec3b8e2572244ebe6612ec8335c0bdcc807645bcca3edefe01941aaa28e6",
+      "config_sha256": "c94dd8a6df674a1aec19c035920387a1f9f4d0397017369868683c5008342b8e",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1145,7 +1145,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "311e561ef4d07b9af16cec25bed107e4483952bbf9672a98609ca159d4591c32",
-        "train_source_raw": "c8edda17d4c73f66278fecbdd47e2f4a856b9abd8b2824305484257891d40d35",
+        "train_source_raw": "eef122618f8fe1803920a05fb04ebc537117126ce95af3209876cb6aedb85239",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1159,7 +1159,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2002-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "c2197e7355496c17be3c82ed65370cfc383de7bba0e36508fb15a1033c61c48f",
-        "input_sha256": "c8edda17d4c73f66278fecbdd47e2f4a856b9abd8b2824305484257891d40d35",
+        "input_sha256": "eef122618f8fe1803920a05fb04ebc537117126ce95af3209876cb6aedb85239",
         "native_case_id": "CP08-hard-train-2002-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1174,10 +1174,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/fa4047e77409cb243fed2dba6aae089f18b51b67592024a405999f93d0dfc19e/scene.usda",
-        "train_source_raw": "inputs/b867c308c48872dddcd581a92c05573ff35c9511ea93c6de12de9c0659fee6c8.json",
+        "train_source_raw": "inputs/65bf4544b0cbf332d690498e7c7e334eb1cabf1587409e1725d3f699c429287e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "b9e201a6a9498418d9ff7f1d3ad59ac5c6d116caeb720e3adc382fd0e84096e9",
+      "config_sha256": "fbb9ee3902ac9b788a06b9f5779b0c7b746fa6239736b8bf038bf7987c80c540",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1198,7 +1198,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "4ccffb7c2bff995be010c65dee3167713a702a67e0e2ffee6e6653840c37df9c",
-        "train_source_raw": "b867c308c48872dddcd581a92c05573ff35c9511ea93c6de12de9c0659fee6c8",
+        "train_source_raw": "65bf4544b0cbf332d690498e7c7e334eb1cabf1587409e1725d3f699c429287e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1212,7 +1212,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2003-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "e51468cb163355d8b00726ee0aa8f690e3401981bee946d2635a7d89480a7dc6",
-        "input_sha256": "b867c308c48872dddcd581a92c05573ff35c9511ea93c6de12de9c0659fee6c8",
+        "input_sha256": "65bf4544b0cbf332d690498e7c7e334eb1cabf1587409e1725d3f699c429287e",
         "native_case_id": "CP08-hard-train-2003-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1227,10 +1227,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/0144c96c52c9520154e18b0a45e67a3f1f859f01a8f9f2b008858f1368f35f9f/scene.usda",
-        "train_source_raw": "inputs/bb7dd2ed194f0852aee065fef9933653406de925e1ad3cece75172ba2840c3ed.json",
+        "train_source_raw": "inputs/f6ae35654ef8253272b1b44c73df997b432d0ae6880ff108e8dae8487773b604.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "0c74004890245ffd3e5a118780d19c923c46bb824fdc76a0433d454da91c9997",
+      "config_sha256": "03f7fc982ebffb1bf110433e0f299903952fd5f612ede25d4fa41981aa0d74b8",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1251,7 +1251,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "15dcfb286d31ba16cf2eae967ee3d5d3551fa13efe76b92b39a5a34fd9e123fc",
-        "train_source_raw": "bb7dd2ed194f0852aee065fef9933653406de925e1ad3cece75172ba2840c3ed",
+        "train_source_raw": "f6ae35654ef8253272b1b44c73df997b432d0ae6880ff108e8dae8487773b604",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1265,7 +1265,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2004-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "12ceea950b5f6eeed279464c92b8c19b2230e73daef6bd2ed72bc515bc02a032",
-        "input_sha256": "bb7dd2ed194f0852aee065fef9933653406de925e1ad3cece75172ba2840c3ed",
+        "input_sha256": "f6ae35654ef8253272b1b44c73df997b432d0ae6880ff108e8dae8487773b604",
         "native_case_id": "CP08-hard-train-2004-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1280,10 +1280,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/8fa0b3bb29cc85c0bb7689d1a6c2fe902c820332f88be3cc06e2c4c640225de8/scene.usda",
-        "train_source_raw": "inputs/798d4c4cf1e6ea3f62a78cfd776e17fe6f63665311c16207e40cda0e0262f851.json",
+        "train_source_raw": "inputs/1278f2422133c8436fa7b479d8d6bc26324d9ae529b024e128e1055680a7c165.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "04c78aef993c5d84447fc6fa8bc66478fd708072912795d86a9c9ae2fd1be88a",
+      "config_sha256": "28a16e52c8c1cd45a64dbe8efaa4b1efd45a1091341b3030e31ef54ff004c588",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1304,7 +1304,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "92e5f8abb4a6dd469699360fab4fd094a6fce0fdfd162ca70dc76679d368c4ba",
-        "train_source_raw": "798d4c4cf1e6ea3f62a78cfd776e17fe6f63665311c16207e40cda0e0262f851",
+        "train_source_raw": "1278f2422133c8436fa7b479d8d6bc26324d9ae529b024e128e1055680a7c165",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1318,7 +1318,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2007-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "cf8acc8a715e42d3ad3404554795612eb39415d0fe5ca3d7d35ee9c59346e3f8",
-        "input_sha256": "798d4c4cf1e6ea3f62a78cfd776e17fe6f63665311c16207e40cda0e0262f851",
+        "input_sha256": "1278f2422133c8436fa7b479d8d6bc26324d9ae529b024e128e1055680a7c165",
         "native_case_id": "CP08-hard-train-2007-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1333,10 +1333,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/607838915c109eada91181c2f7bb95b349a609bf868a1033133b9ebcb72165ec/scene.usda",
-        "train_source_raw": "inputs/29c1c9c3807434084f6c7b8d6fc74b052bacdedb48e22be188738d99d912b4b1.json",
+        "train_source_raw": "inputs/71c41d8e93fd07b635f0e60c6dc3ece5ae2fdb32cf243db65285c5b4f22ea02c.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "b92ddd8503aa96d01ac1077b1f44f70df18d1895d96efe4877d13e7748e77320",
+      "config_sha256": "cf0db8b72e3bd156557560b29ae02e32865a7634295662072c7145860233cf87",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1357,7 +1357,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "6a405507d7292d38e5a2c9dc88598c22a44da1310862aecf48ab9aa82a433fc1",
-        "train_source_raw": "29c1c9c3807434084f6c7b8d6fc74b052bacdedb48e22be188738d99d912b4b1",
+        "train_source_raw": "71c41d8e93fd07b635f0e60c6dc3ece5ae2fdb32cf243db65285c5b4f22ea02c",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1371,7 +1371,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2010-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "56b17928f87e57e7af9507f37995cc3e5514b661190d829b17a59b1bcb80911c",
-        "input_sha256": "29c1c9c3807434084f6c7b8d6fc74b052bacdedb48e22be188738d99d912b4b1",
+        "input_sha256": "71c41d8e93fd07b635f0e60c6dc3ece5ae2fdb32cf243db65285c5b4f22ea02c",
         "native_case_id": "CP08-hard-train-2010-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1386,10 +1386,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/4186dda672e93431117bc2d5dd03095b837b8a5742cf5004ecc136de1efbe37c/scene.usda",
-        "train_source_raw": "inputs/7c51bda5ea4a5c0cbddb0b05f60e67a1fb9d248886d88f26eecde1b8eb562133.json",
+        "train_source_raw": "inputs/3e9c2bd5bf307ab9355981c9ccfed983d02e65eccb0c960d8c29c38e1b01b3dc.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "3d512fbff45c72960645c27d6fdcb12f284fca5dc426361532c973e0952aae99",
+      "config_sha256": "cfd2261842c1f4c1e40f097eb2db76361a157a4bcf2da0185ba05862093017a5",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1410,7 +1410,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "cf231a70dc757a076ac160e956bd002f9e99ae64ee951a4020849360ebdba2a1",
-        "train_source_raw": "7c51bda5ea4a5c0cbddb0b05f60e67a1fb9d248886d88f26eecde1b8eb562133",
+        "train_source_raw": "3e9c2bd5bf307ab9355981c9ccfed983d02e65eccb0c960d8c29c38e1b01b3dc",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1424,7 +1424,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2013-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "0c7c5bfe66e46a05fbf4ae75629ff385618b41d9394474e9c863a9602a567d97",
-        "input_sha256": "7c51bda5ea4a5c0cbddb0b05f60e67a1fb9d248886d88f26eecde1b8eb562133",
+        "input_sha256": "3e9c2bd5bf307ab9355981c9ccfed983d02e65eccb0c960d8c29c38e1b01b3dc",
         "native_case_id": "CP08-hard-train-2013-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1439,10 +1439,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/69fa360f82f0958fa0fe670b47a8a24ed1134522a3b25eed1d6251bab452b8a2/scene.usda",
-        "train_source_raw": "inputs/f7ea0c3944a0dced0583fa3b64a33743240d4d1fbbb6e170782648c71d3171cb.json",
+        "train_source_raw": "inputs/99007444d67e86113866d47d89f49bb7c851f3917f98c8672e5a0c123261c81b.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "af78b5a8e5cc26399783854e6180bc636f394a2aca86647c70c6b9fd9e40b712",
+      "config_sha256": "cc71d86832a6db69cf9fb378f4253c6e5dcb3f2c192b0cb9c16bb0a215df2383",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1463,7 +1463,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "b528be0a0314569b6758f908f38e58fdf6a8cd0504fb281c2a8e11076d9ea348",
-        "train_source_raw": "f7ea0c3944a0dced0583fa3b64a33743240d4d1fbbb6e170782648c71d3171cb",
+        "train_source_raw": "99007444d67e86113866d47d89f49bb7c851f3917f98c8672e5a0c123261c81b",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1477,7 +1477,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2016-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "d804f383482e481b4725e4b97b462cfb7a587ea9e14eff33515fd55ab6c59c55",
-        "input_sha256": "f7ea0c3944a0dced0583fa3b64a33743240d4d1fbbb6e170782648c71d3171cb",
+        "input_sha256": "99007444d67e86113866d47d89f49bb7c851f3917f98c8672e5a0c123261c81b",
         "native_case_id": "CP08-hard-train-2016-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1492,10 +1492,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/51f0c28bd84f30e12178754e1fef3e4140cedfc78859a1fc3c8f35c4297ee3d4/scene.usda",
-        "train_source_raw": "inputs/59839ebecfefd5930b88d050d4d0fab2c7bb2cf6cc47884c674055bd4ff2642a.json",
+        "train_source_raw": "inputs/48746328476f4563ce673d0fb6334ba77a8268627e92f22383c1ab624d575029.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "4a927289bd3a99d93c163105cf85e13d5d75f0b4d0bf9b7e989fac5ef71b2d7f",
+      "config_sha256": "3f857d166cc235a0d50789f53a8ecd7f0e271486b3bd9ac3a10b5e93267a7295",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1516,7 +1516,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "48611cde94bc75e095da7dd5377702c04c32a29d12587e3089ec62b012a6be79",
-        "train_source_raw": "59839ebecfefd5930b88d050d4d0fab2c7bb2cf6cc47884c674055bd4ff2642a",
+        "train_source_raw": "48746328476f4563ce673d0fb6334ba77a8268627e92f22383c1ab624d575029",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1530,7 +1530,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2024-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "bcbccdeda8d1cec845ab208da743d680cca4a8df3f9d7349c72ae6a89cc22af1",
-        "input_sha256": "59839ebecfefd5930b88d050d4d0fab2c7bb2cf6cc47884c674055bd4ff2642a",
+        "input_sha256": "48746328476f4563ce673d0fb6334ba77a8268627e92f22383c1ab624d575029",
         "native_case_id": "CP08-hard-train-2024-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1545,10 +1545,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/6cd1c2bfb85c57b9c4185738817711d84e82a798cdf0bd9af85b522b4d495b54/scene.usda",
-        "train_source_raw": "inputs/ef8647de406433dfe0f5140be12392787ef621e7186591f6a5ba5bc15c9fc439.json",
+        "train_source_raw": "inputs/234eb33d07fc58f56150af820e9b6e9ce00cd39b3a7a9d57261cbc8d3ce2a39a.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "7270e799013b2fd93d64e30f9586d18476e5b7c6bb458babd9921a407e4cac20",
+      "config_sha256": "5ccea79760aa1d2f4156c7e0394a09170e0c69262ecddabdaecc56119998c814",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1569,7 +1569,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "e110f397cbc23cb933544bcb012b0533cb381f39fe62f59e9205dd9933e09fba",
-        "train_source_raw": "ef8647de406433dfe0f5140be12392787ef621e7186591f6a5ba5bc15c9fc439",
+        "train_source_raw": "234eb33d07fc58f56150af820e9b6e9ce00cd39b3a7a9d57261cbc8d3ce2a39a",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1583,7 +1583,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2028-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "531b83165ee550398e496341efe748113f98f8b19441554a6e6d80877b35661d",
-        "input_sha256": "ef8647de406433dfe0f5140be12392787ef621e7186591f6a5ba5bc15c9fc439",
+        "input_sha256": "234eb33d07fc58f56150af820e9b6e9ce00cd39b3a7a9d57261cbc8d3ce2a39a",
         "native_case_id": "CP08-hard-train-2028-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1598,10 +1598,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/64a85aaba91ea791fa4e0fae1c724fe05eddd290586ffb087bfa08727f308499/scene.usda",
-        "train_source_raw": "inputs/fa59ca334f11f95ae983ebc57dd4b43bf2dd369be19058a47d92ce77d706ca01.json",
+        "train_source_raw": "inputs/183be428dbdc8037e4a177e98e474dd20a2e9e31680c6c2d58cc40b6e8407d01.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "270f366ad0b1e278523dbb57e24050eb29307d11a88df9de17d869dc4672d9fe",
+      "config_sha256": "dcd111e3b749b0bc632b5a1c9f2212a143f97ba37870948a86000315f8cf5fff",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1622,7 +1622,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "b0aa02f6b50fa784b03b19b8dda79f6998992213b6f591380ffdfbf8f2de4b81",
-        "train_source_raw": "fa59ca334f11f95ae983ebc57dd4b43bf2dd369be19058a47d92ce77d706ca01",
+        "train_source_raw": "183be428dbdc8037e4a177e98e474dd20a2e9e31680c6c2d58cc40b6e8407d01",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1636,7 +1636,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2033-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "8308c443fd7a00fa9e3afcb168e7a77a24b69b88cb2497346008073d4ef2afd2",
-        "input_sha256": "fa59ca334f11f95ae983ebc57dd4b43bf2dd369be19058a47d92ce77d706ca01",
+        "input_sha256": "183be428dbdc8037e4a177e98e474dd20a2e9e31680c6c2d58cc40b6e8407d01",
         "native_case_id": "CP08-hard-train-2033-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1651,10 +1651,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/62a9c3f35e2dd20716ae2c7bb2facc370c11dc06bffba97fafc00a70329d82b0/scene.usda",
-        "train_source_raw": "inputs/87e4aa63751d4638b1b08f06966cc0a4d54c5b1db3b289e21b7335c620459502.json",
+        "train_source_raw": "inputs/c24e9b09557d41954942c013e92c21a75cff55ad6353d57c19478612de6495e4.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "80650c61d60012f359582779d48d00a452f219c61871e445eb7b7297bff59057",
+      "config_sha256": "3a0d4a44806d58a7bbd41703f691d8e9aaf6981f1d730d96e359da3bd7c060a7",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1675,7 +1675,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "e842f04ef10166e888834d99205fcc7f01fd49ead18bb00af1aafb04e8117831",
-        "train_source_raw": "87e4aa63751d4638b1b08f06966cc0a4d54c5b1db3b289e21b7335c620459502",
+        "train_source_raw": "c24e9b09557d41954942c013e92c21a75cff55ad6353d57c19478612de6495e4",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1689,7 +1689,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2036-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "2e12eb4d3f0df8805ccb98bfb54e08869e429fc2fc762c6556cbcf8ce0164cdd",
-        "input_sha256": "87e4aa63751d4638b1b08f06966cc0a4d54c5b1db3b289e21b7335c620459502",
+        "input_sha256": "c24e9b09557d41954942c013e92c21a75cff55ad6353d57c19478612de6495e4",
         "native_case_id": "CP08-hard-train-2036-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1704,10 +1704,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/dd1611abadbe33e2164b7871ad67588dd9690ccc1c56375ccffb74f7ebb12e05/scene.usda",
-        "train_source_raw": "inputs/db8b18bd8917ca8345fd5e3c754f1584779df76cfb577df515a87d7831aeadb7.json",
+        "train_source_raw": "inputs/419ef50c548431103bdb775e5b59c4fd2d3f8d181a74fb9d08dca545a33921ac.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "95f400fb66ccb159815fe2e33d3bf7e86bcc22feb6e2a64192d7e7bf40a5e0c8",
+      "config_sha256": "11917348197ad279007f67a8d5ecee034dd7a7b4992edbee826e651865a95fb3",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1728,7 +1728,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "1cc70368026c3b69fed87a0895f27edee8fb15222c2dca00b1b5d1c2eae9eaf6",
-        "train_source_raw": "db8b18bd8917ca8345fd5e3c754f1584779df76cfb577df515a87d7831aeadb7",
+        "train_source_raw": "419ef50c548431103bdb775e5b59c4fd2d3f8d181a74fb9d08dca545a33921ac",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1742,7 +1742,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2047-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "7dc77665b480dfaa5af2f41e311a38fe73392ed205b2470407ed459ce3673e8d",
-        "input_sha256": "db8b18bd8917ca8345fd5e3c754f1584779df76cfb577df515a87d7831aeadb7",
+        "input_sha256": "419ef50c548431103bdb775e5b59c4fd2d3f8d181a74fb9d08dca545a33921ac",
         "native_case_id": "CP08-hard-train-2047-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1757,10 +1757,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/c9c5663e4cc25f152540258b07a6cf8c71ec5c768747f75ea018cba8110c8f60/scene.usda",
-        "train_source_raw": "inputs/8adf786cd5012a592f3fe8218f85d1d64c94419038b385e550cf5fcc80774f1e.json",
+        "train_source_raw": "inputs/be853ac676092e2e32c6420789bcc8f1ddbe10257071822ead37143e022c9e23.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "07768aa81eb54510780d5be76190d8adf9363e887a41df1dc5450aaf15072b94",
+      "config_sha256": "a015a5d7d7129249f4234dfc02bfbcd4720b63bad9b9f0a8369f11ca76b53756",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1781,7 +1781,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "e822cbbdff921be1f0790219aa58f0db008c1f22d1f2066f8ed801b9c57fff08",
-        "train_source_raw": "8adf786cd5012a592f3fe8218f85d1d64c94419038b385e550cf5fcc80774f1e",
+        "train_source_raw": "be853ac676092e2e32c6420789bcc8f1ddbe10257071822ead37143e022c9e23",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1795,7 +1795,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2057-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "baeaf2d0e5f5b09c2e8117ec0b2825715334c379edbc53d72a50423d46e19388",
-        "input_sha256": "8adf786cd5012a592f3fe8218f85d1d64c94419038b385e550cf5fcc80774f1e",
+        "input_sha256": "be853ac676092e2e32c6420789bcc8f1ddbe10257071822ead37143e022c9e23",
         "native_case_id": "CP08-hard-train-2057-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1810,10 +1810,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/df1bde3bfc6ef18500ec27aace5e17f81e1035081a4414da43b76bbac8096d56/scene.usda",
-        "train_source_raw": "inputs/78f023939a7637c745955fcc43b49296ea0667077a3b4879308867a848aa4418.json",
+        "train_source_raw": "inputs/727ce13a8106cfe0d04f5b1ec2a5f1932de631280859a8b58791e4c7ad204709.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "f1650c33b784bf924f9cb6d73d1a2ed79a30ae1ad63af7d9c1dba34e80232345",
+      "config_sha256": "6b5a384fecde552bdaf5d77b948d4d6bfaea970ad8e3bb40bd374ba487445c2c",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1834,7 +1834,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "4e5f2e733a4cb885e9bb540caf57a70fcd5c0cb22f05f1d93870aae946cfaa1c",
-        "train_source_raw": "78f023939a7637c745955fcc43b49296ea0667077a3b4879308867a848aa4418",
+        "train_source_raw": "727ce13a8106cfe0d04f5b1ec2a5f1932de631280859a8b58791e4c7ad204709",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1848,7 +1848,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2060-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "c9a5bd2a7902f37201d5674d1adcc664768fba10312c779aabc628cfcc14f749",
-        "input_sha256": "78f023939a7637c745955fcc43b49296ea0667077a3b4879308867a848aa4418",
+        "input_sha256": "727ce13a8106cfe0d04f5b1ec2a5f1932de631280859a8b58791e4c7ad204709",
         "native_case_id": "CP08-hard-train-2060-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1863,10 +1863,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/4d4e4b5be8398077be88f9c1c4115ea34e4e9f9b9087bb182ad261c416345de1/scene.usda",
-        "train_source_raw": "inputs/b7798f3e86a2610d31d59dad64632605507fe4dffb08dcebeffea7edbe579d92.json",
+        "train_source_raw": "inputs/3b3c3f061f763a7ee4f1c89156aad5c807cc58fbd6cdbe6e831e045b40ee2a3e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "8e6437cceed2b2d32fb3a67bf470ff294597367ca4de076f3c20077134b17759",
+      "config_sha256": "b8f98e8ce7ad222be9a70ff9c614ef0ed179536945a3799c84eea86a5911865f",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1887,7 +1887,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "a2b646cb59e9045c0f5f83ca52afb17beeb8be5c72e9b5bfaafd47c44e3d8c45",
-        "train_source_raw": "b7798f3e86a2610d31d59dad64632605507fe4dffb08dcebeffea7edbe579d92",
+        "train_source_raw": "3b3c3f061f763a7ee4f1c89156aad5c807cc58fbd6cdbe6e831e045b40ee2a3e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1901,7 +1901,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2073-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "89508a2b4764bd802711bcb994d7dde3df5262e709e5cd59d10b5702f9f689ce",
-        "input_sha256": "b7798f3e86a2610d31d59dad64632605507fe4dffb08dcebeffea7edbe579d92",
+        "input_sha256": "3b3c3f061f763a7ee4f1c89156aad5c807cc58fbd6cdbe6e831e045b40ee2a3e",
         "native_case_id": "CP08-hard-train-2073-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1916,10 +1916,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/1d85f58ee668b7b5c1d66654ffc6cdca939d504d45a28530e0d9d57385f08470/scene.usda",
-        "train_source_raw": "inputs/16af834339ac9fe1777f06a4d45e1133c7c76c8e088c7d7de03093001454b17d.json",
+        "train_source_raw": "inputs/0363c010878179bf209ec8d14165bd6deb1c7b9a353b1aa8b690228fc39c2126.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "79ba24d9f39bea40a64b96f6e3314119b87536a3ad33397f63284db72e3f19c5",
+      "config_sha256": "293b664cf4b18054b480edbfddae81316137c43adeb735989db9b457f698a075",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1940,7 +1940,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "c3a21fe3771a8f31d27fb78bd826810c43a8840992c07ce74316565fee3eebd2",
-        "train_source_raw": "16af834339ac9fe1777f06a4d45e1133c7c76c8e088c7d7de03093001454b17d",
+        "train_source_raw": "0363c010878179bf209ec8d14165bd6deb1c7b9a353b1aa8b690228fc39c2126",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1954,7 +1954,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2124-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "abe529182cbef982195dd6b8d1ba49f174a7a9bb84f60c39e20582b39f0f399c",
-        "input_sha256": "16af834339ac9fe1777f06a4d45e1133c7c76c8e088c7d7de03093001454b17d",
+        "input_sha256": "0363c010878179bf209ec8d14165bd6deb1c7b9a353b1aa8b690228fc39c2126",
         "native_case_id": "CP08-hard-train-2124-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -1969,10 +1969,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/81a0ac8dc76dbde41de06e0513f49f528374261281a6b8238e9296d05d46831d/scene.usda",
-        "train_source_raw": "inputs/54c0e333b40f05930fdc08d96fd59616aea32e40c874f0982a0a89be5c63526b.json",
+        "train_source_raw": "inputs/ad775efe0afc57177bc19edbbdaa983ec42a1485d6078e438e04e74b84b37e9e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "b7dcf38b2fa768c46d99eac4d440bc1fdc730da00146d2820b0957da89fcaa21",
+      "config_sha256": "1bd5f7a449f2166a3792a0a08cfc1b21698d35858c6702cf6231158cd5b246fc",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -1993,7 +1993,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "581be2aa80a1fc4c6ce5475a839f7a8fa7e6699e8b1e47dfd054589ed85fca97",
-        "train_source_raw": "54c0e333b40f05930fdc08d96fd59616aea32e40c874f0982a0a89be5c63526b",
+        "train_source_raw": "ad775efe0afc57177bc19edbbdaa983ec42a1485d6078e438e04e74b84b37e9e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2007,7 +2007,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2125-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "8bc9f5e95278b199e63cf0e6d318bfa48a728833bdfad870c01d2ca33d733d73",
-        "input_sha256": "54c0e333b40f05930fdc08d96fd59616aea32e40c874f0982a0a89be5c63526b",
+        "input_sha256": "ad775efe0afc57177bc19edbbdaa983ec42a1485d6078e438e04e74b84b37e9e",
         "native_case_id": "CP08-hard-train-2125-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2022,10 +2022,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/97392d98dfadbbfbf9dc31a91d43d282635d4ce1b8d3f29fbf768c2f7dbfd29d/scene.usda",
-        "train_source_raw": "inputs/f60404cc5c2688db2348c78afbe72b810d594cdc6e78570082e9558d3e7b07e1.json",
+        "train_source_raw": "inputs/875e0b72a3d4ff34a5ff902596d786fb2f66e5bd2bf56d49d14ed67a298d3a52.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "437e5971edc6b099d3f51047e46924be2ebdd93e64b3c687a4a1ae7bd8d6cac7",
+      "config_sha256": "254814aacd908e43f5a58c0f39dedeb3fc54e3fa8f33471adc2d480b72ef8222",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2046,7 +2046,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "8ee08fb4e457f84a17269dd63b25e724483028101e5f7f2f2fcae9964370f60d",
         "station": "41c0696925aa8145182b73215795cf552307ea505140a1b00666ea7126ba2a2b",
-        "train_source_raw": "f60404cc5c2688db2348c78afbe72b810d594cdc6e78570082e9558d3e7b07e1",
+        "train_source_raw": "875e0b72a3d4ff34a5ff902596d786fb2f66e5bd2bf56d49d14ed67a298d3a52",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2060,7 +2060,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2142-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "f388134490017265b53127303d0defc978d5f6867f93fa849cf1f2b5a3ddddbb",
-        "input_sha256": "f60404cc5c2688db2348c78afbe72b810d594cdc6e78570082e9558d3e7b07e1",
+        "input_sha256": "875e0b72a3d4ff34a5ff902596d786fb2f66e5bd2bf56d49d14ed67a298d3a52",
         "native_case_id": "CP08-hard-train-2142-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2075,10 +2075,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/39b35f97b0d9419bf9747df06ef8f53802a524580b75c7993b3a8f2d2a1874a0/scene.usda",
-        "train_source_raw": "inputs/c86c79ad229c125b061ab479c71df3c1f8ba6b4a15bdf95fe77b9e23151ccd39.json",
+        "train_source_raw": "inputs/675ab96c37a1b460239e7761da54c58a8e702a8ccb9b342da1972d77fecb0b1f.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "deae7c374463e022a087f5196c1981b2a2e3cc672534242c1b69e07392d244dd",
+      "config_sha256": "ece9fa191150c08faae8e2368ae21e5d4459597923cf2fa2f39a7139f8ee60e9",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2099,7 +2099,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7d54e59805a25637f790fedaa3fe1b651025b4bb9573404c9089df209ebdeb2d",
         "station": "97c2f3cd6451210c60300a1a67d528bae5371c5dbb7012c1a4b1ba3d05fb5831",
-        "train_source_raw": "c86c79ad229c125b061ab479c71df3c1f8ba6b4a15bdf95fe77b9e23151ccd39",
+        "train_source_raw": "675ab96c37a1b460239e7761da54c58a8e702a8ccb9b342da1972d77fecb0b1f",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2113,7 +2113,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP08/hard/CP08-hard-train-2143-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "2dbc4537575f6c3a70d8411c5cf30c800ffe7912bf94cbb27118976cdfde63ec",
-        "input_sha256": "c86c79ad229c125b061ab479c71df3c1f8ba6b4a15bdf95fe77b9e23151ccd39",
+        "input_sha256": "675ab96c37a1b460239e7761da54c58a8e702a8ccb9b342da1972d77fecb0b1f",
         "native_case_id": "CP08-hard-train-2143-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2128,10 +2128,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/085ef42d738f877a9a4a5ece29ba747199eeedf24d9214eb0188ee68924399c6/scene.usda",
-        "train_source_raw": "inputs/7dde14090029fad14e0f84e229d2d9d4c2506e1cf2112be6487f2ef0368ffb25.json",
+        "train_source_raw": "inputs/61e7b594929930134c2406e3ab251efdf9be8295d3e58f1e7640d5edb915941b.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "80f835413fd7bcd2d4ddfec39d48a7f7fe2e10b7a7e9a2d71b61fb9d5abf1e90",
+      "config_sha256": "3b2e822ff35f46624ee901f4a19838ba574a50026e0c98b7775a329a7fd7f89c",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2152,7 +2152,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "32c6ead958b53643a3ed688dc1d21bbf811e0de1c24dd572e764408394746c81",
         "station": "062593b94fc82675ba8258c2f7e3340b5b00a81d1def725060534e34d39d3f74",
-        "train_source_raw": "7dde14090029fad14e0f84e229d2d9d4c2506e1cf2112be6487f2ef0368ffb25",
+        "train_source_raw": "61e7b594929930134c2406e3ab251efdf9be8295d3e58f1e7640d5edb915941b",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2166,7 +2166,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2000-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "f5248ab1b15135fe429b5788b9ac68642c196a08cfc51d549558c673b3f0214c",
-        "input_sha256": "7dde14090029fad14e0f84e229d2d9d4c2506e1cf2112be6487f2ef0368ffb25",
+        "input_sha256": "61e7b594929930134c2406e3ab251efdf9be8295d3e58f1e7640d5edb915941b",
         "native_case_id": "CP08-medium-train-2000-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2181,10 +2181,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/4c22d60eb3c957f6822bfbd5c16362c3397804c752063d9e31e255cc167895cd/scene.usda",
-        "train_source_raw": "inputs/9d6896c24392d12a145a0417cee1723baea18a8a1024b87bd09962cb10763664.json",
+        "train_source_raw": "inputs/ac5814baac821b8f6d15938490cc828a8c4a91d311176697aeb7dc08a6c55239.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "e9ceefc1b850b31626866c2680757f39c01c999b2c06e07e8fc7e4e72dfab87c",
+      "config_sha256": "d46d537309eaa1485757561a4e31dc1960d2c3df207e406b17b50c63ddbf95e3",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2205,7 +2205,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "32c6ead958b53643a3ed688dc1d21bbf811e0de1c24dd572e764408394746c81",
         "station": "e57c7d65fe5a3684ce53750fd643dc7d0600345673d4596b32ffbc5ae0842882",
-        "train_source_raw": "9d6896c24392d12a145a0417cee1723baea18a8a1024b87bd09962cb10763664",
+        "train_source_raw": "ac5814baac821b8f6d15938490cc828a8c4a91d311176697aeb7dc08a6c55239",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2219,7 +2219,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2002-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "33f38979a56a9a045d83d24eb89dcb21c2ac921878f07b4a7e5cc65b75f770d0",
-        "input_sha256": "9d6896c24392d12a145a0417cee1723baea18a8a1024b87bd09962cb10763664",
+        "input_sha256": "ac5814baac821b8f6d15938490cc828a8c4a91d311176697aeb7dc08a6c55239",
         "native_case_id": "CP08-medium-train-2002-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2234,10 +2234,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/8aaa02f9d1702e66f74ff044593b747643bea7f6d9ac4c9efe28c0c17160f3ed/scene.usda",
-        "train_source_raw": "inputs/b908e568848f5e5ae78b0a842689e243c6a0ae375a8cfa2cfee14af3539f96a2.json",
+        "train_source_raw": "inputs/b4514dbe60f26cc73678819317b56c7574022851c8139d3784ad82c48173f1eb.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "519aa81c22e51726e178252eeb32490508a1237ded0dd1a586b1121cbd422153",
+      "config_sha256": "a83e8d70ff372402b33321895bcb89c0bd32c798623a0bcfc9d82f0d4aacad71",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2258,7 +2258,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "0ed9bf211d25f0594488d9ca405042f1c5476de82f8f6f6be0785e3cb0f24edb",
-        "train_source_raw": "b908e568848f5e5ae78b0a842689e243c6a0ae375a8cfa2cfee14af3539f96a2",
+        "train_source_raw": "b4514dbe60f26cc73678819317b56c7574022851c8139d3784ad82c48173f1eb",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2272,7 +2272,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2003-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "a356113b5c4667152688547cfb82e3e0f3eff84ab9108d52b37cfab05c38404d",
-        "input_sha256": "b908e568848f5e5ae78b0a842689e243c6a0ae375a8cfa2cfee14af3539f96a2",
+        "input_sha256": "b4514dbe60f26cc73678819317b56c7574022851c8139d3784ad82c48173f1eb",
         "native_case_id": "CP08-medium-train-2003-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2287,10 +2287,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/6c1f849880cd7c0a215292e941d6b36890a6bf86d227723b18541db3272a9695/scene.usda",
-        "train_source_raw": "inputs/fec39678afb091f0ad2165175038cf6b25c35e3ba41132aeccf8af01a6348f3e.json",
+        "train_source_raw": "inputs/a0a91e08cfd000e4c55df52e3dbb89d1efbed1fce6f5e28f683741b7705d93f4.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "81e5a02f2ff0b644d4d1ea4792d1a53c48e9378d44cea44b9cde82cd39624228",
+      "config_sha256": "74bb32573d2f4571c8862fa4040defbfe526a6f5d9018bcfed73feaf4cf04518",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2311,7 +2311,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "32c6ead958b53643a3ed688dc1d21bbf811e0de1c24dd572e764408394746c81",
         "station": "9a8b5203a4b14d9cc9c71fd419a0877d159f38037b6f6d9cd31474c188b18b05",
-        "train_source_raw": "fec39678afb091f0ad2165175038cf6b25c35e3ba41132aeccf8af01a6348f3e",
+        "train_source_raw": "a0a91e08cfd000e4c55df52e3dbb89d1efbed1fce6f5e28f683741b7705d93f4",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2325,7 +2325,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2004-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "c289dd4837d6acd74b8846d8ec6cdc75bb91d774fcb34c6e21995cdafc9a4f93",
-        "input_sha256": "fec39678afb091f0ad2165175038cf6b25c35e3ba41132aeccf8af01a6348f3e",
+        "input_sha256": "a0a91e08cfd000e4c55df52e3dbb89d1efbed1fce6f5e28f683741b7705d93f4",
         "native_case_id": "CP08-medium-train-2004-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2340,10 +2340,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/979d389c6981d0c2b1f98803d6b7423fda25fb486ada56ef1202375207e9ee5e/scene.usda",
-        "train_source_raw": "inputs/04716a1d32c69b34702c4e59488f92117e6229acbb44db4df63c9f74d25051e8.json",
+        "train_source_raw": "inputs/aeaf7daf521f571686708fb277c5ceabb3a4bc8f98beff57ca0f728992bd1145.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "5f7ae573ee8564536ef0cad9494dc55b693ac3ebc06c478a2002f972c5520b9a",
+      "config_sha256": "08603a7b0f2746b8f3a0c7f7048d9c8c3deeba28004d7b62b930845aca7c5934",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2364,7 +2364,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "dbe505f3e6228cdecc0c1302496226f2f584484e0d0bccbf01e84c1d0238a06c",
-        "train_source_raw": "04716a1d32c69b34702c4e59488f92117e6229acbb44db4df63c9f74d25051e8",
+        "train_source_raw": "aeaf7daf521f571686708fb277c5ceabb3a4bc8f98beff57ca0f728992bd1145",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2378,7 +2378,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2007-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "cb4c810cde58b9644ca207823b722f052ead0ed3224d255a57b9af5657c4a3b4",
-        "input_sha256": "04716a1d32c69b34702c4e59488f92117e6229acbb44db4df63c9f74d25051e8",
+        "input_sha256": "aeaf7daf521f571686708fb277c5ceabb3a4bc8f98beff57ca0f728992bd1145",
         "native_case_id": "CP08-medium-train-2007-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2393,10 +2393,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/0331be4239795f059d4181eb870484a4eceb27efd1b7ce0d0dfde7ff476be193/scene.usda",
-        "train_source_raw": "inputs/771f102fb5b71ca18a6736ddd9bf6b322f997098530b4ed7d80d2e788bd66719.json",
+        "train_source_raw": "inputs/94b081af157b605d535c1d09f2a735e43335b83f0201ab9a8b3cee2cfd3d9d81.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "37e5865652de39493547129a67f85edf590af32ec9707e995d86b1adebd830cd",
+      "config_sha256": "0c2180feb57903a49b753b96aaab613fd4a39429b7e9a976867441cbe9437b2e",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2417,7 +2417,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "69d82737c49edd4e3fe599228135bdebbcf35e726c4082cb72e9ad9e52580fa3",
-        "train_source_raw": "771f102fb5b71ca18a6736ddd9bf6b322f997098530b4ed7d80d2e788bd66719",
+        "train_source_raw": "94b081af157b605d535c1d09f2a735e43335b83f0201ab9a8b3cee2cfd3d9d81",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2431,7 +2431,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2009-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "d51c9da511644d2cdc95aa48ca0ee8b4fc66823d0a96929dfbfcb7ed1cf4504d",
-        "input_sha256": "771f102fb5b71ca18a6736ddd9bf6b322f997098530b4ed7d80d2e788bd66719",
+        "input_sha256": "94b081af157b605d535c1d09f2a735e43335b83f0201ab9a8b3cee2cfd3d9d81",
         "native_case_id": "CP08-medium-train-2009-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2446,10 +2446,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/f1475710ab9f72abfd87ac7f945d16dcdc61d0d2d3d92cd998bc010afdf89139/scene.usda",
-        "train_source_raw": "inputs/88e89d7a780eff512dfb468f53168fe3035ca3f7161d5cb5481f35dbb1b9fc7d.json",
+        "train_source_raw": "inputs/f5818cd1add879b58e2a0c32e8b377795a7fb5b5210c3c6d4a7d92381ba5c9f8.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "27ef65073afde7aaf54dfcf11e04c2565242931d89e3fd6516e6dda6171df775",
+      "config_sha256": "482309c99f6ce44e8e5f050866ad362555850a52b269544d4228dd0a581ce4eb",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2470,7 +2470,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "32c6ead958b53643a3ed688dc1d21bbf811e0de1c24dd572e764408394746c81",
         "station": "4b286beefe1e5a294f18254a48e599d6df64599dab45718d87a41e5bce17f886",
-        "train_source_raw": "88e89d7a780eff512dfb468f53168fe3035ca3f7161d5cb5481f35dbb1b9fc7d",
+        "train_source_raw": "f5818cd1add879b58e2a0c32e8b377795a7fb5b5210c3c6d4a7d92381ba5c9f8",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2484,7 +2484,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2010-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "0d09b4b08c00e068ea6991997c6dd835fd145448c381252976aa5da78a701489",
-        "input_sha256": "88e89d7a780eff512dfb468f53168fe3035ca3f7161d5cb5481f35dbb1b9fc7d",
+        "input_sha256": "f5818cd1add879b58e2a0c32e8b377795a7fb5b5210c3c6d4a7d92381ba5c9f8",
         "native_case_id": "CP08-medium-train-2010-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2499,10 +2499,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/64438c6635038232907b8efa7d7611553224399169316649c2fc6eea3ab8a209/scene.usda",
-        "train_source_raw": "inputs/98cbb4e4752538be49710288c48d405e3703e7d17ac5b2d899300137d7ef4fd1.json",
+        "train_source_raw": "inputs/23dde11ceeb680cebf3a6dcf42b0f5fb437d48a638220dbe763207cd44007b9e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "324afcf4155bbc2a79d18fb24ff75e04b3c68356fdcbd731068c6762e046f93f",
+      "config_sha256": "c16d91efbd7c4a5d40a55c6cd49fc3d2c13a59ad15d615b60b3953dd70e1e37f",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2523,7 +2523,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "32c6ead958b53643a3ed688dc1d21bbf811e0de1c24dd572e764408394746c81",
         "station": "4dca76ea79a163ab7c3fd6eef184fb47d261c8d32c094cb1c47abdca192fd440",
-        "train_source_raw": "98cbb4e4752538be49710288c48d405e3703e7d17ac5b2d899300137d7ef4fd1",
+        "train_source_raw": "23dde11ceeb680cebf3a6dcf42b0f5fb437d48a638220dbe763207cd44007b9e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2537,7 +2537,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2014-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "a59b0fa310842fb5af7a8bf26129b878472541328b6b01b287cce064385864ec",
-        "input_sha256": "98cbb4e4752538be49710288c48d405e3703e7d17ac5b2d899300137d7ef4fd1",
+        "input_sha256": "23dde11ceeb680cebf3a6dcf42b0f5fb437d48a638220dbe763207cd44007b9e",
         "native_case_id": "CP08-medium-train-2014-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2552,10 +2552,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/d05ffdfd718d2292b8511809a3059f93574bbc6460d01aeb45a344917bd1aa60/scene.usda",
-        "train_source_raw": "inputs/4e166557dde1e71f4dae3fe8328a1395acf61c3f2169680ae47051c32170b348.json",
+        "train_source_raw": "inputs/beddca6a5d0a5ed36f705c95551793563fd5095e99bbc947bdbf7d7ac05639a2.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "72280251dfe3211e41a833285031777e2d165cfcfff2466766c5df2859ad8dc4",
+      "config_sha256": "9de08af48bbcaf26fb63e71b3009480173dd7364c0b95686d12dba825546d0ca",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2576,7 +2576,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "32c6ead958b53643a3ed688dc1d21bbf811e0de1c24dd572e764408394746c81",
         "station": "a6e7d221085a22f6a50452935d9aae87f44d3c0602047188754fdc368e317055",
-        "train_source_raw": "4e166557dde1e71f4dae3fe8328a1395acf61c3f2169680ae47051c32170b348",
+        "train_source_raw": "beddca6a5d0a5ed36f705c95551793563fd5095e99bbc947bdbf7d7ac05639a2",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2590,7 +2590,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2016-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "1456cfe0f4abd70a8e363b43c225d12a690fd31c08589305453e9fd8d4ff5c9f",
-        "input_sha256": "4e166557dde1e71f4dae3fe8328a1395acf61c3f2169680ae47051c32170b348",
+        "input_sha256": "beddca6a5d0a5ed36f705c95551793563fd5095e99bbc947bdbf7d7ac05639a2",
         "native_case_id": "CP08-medium-train-2016-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2605,10 +2605,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/de37a64f95b919aba553f7669a01ba3dd4b33dde49aa84d6c59ab1f7eb042b24/scene.usda",
-        "train_source_raw": "inputs/3d96f0bdbe3c88c8d57a49745082f5c9e5de04b2c04d961a008930c0bc12eb9d.json",
+        "train_source_raw": "inputs/065c2554d5dbd1cdddcb2a521b6c96c82c869cfd34949a1f83ca4be6b32123f4.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "615f7fc8325bf73b6d34d10008998543acb34e630d88356ede95850ea4709623",
+      "config_sha256": "5d556348a5aa97f1aef2d3be09324e5e4680d0abccb2902e487beed3527dd5c8",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2629,7 +2629,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "bbe4c3b32cfa262a96c594bbb0f48b57f45ee8b6b158875e1bddf8e5b11221c0",
-        "train_source_raw": "3d96f0bdbe3c88c8d57a49745082f5c9e5de04b2c04d961a008930c0bc12eb9d",
+        "train_source_raw": "065c2554d5dbd1cdddcb2a521b6c96c82c869cfd34949a1f83ca4be6b32123f4",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2643,7 +2643,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2017-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "2130add55d11a560c48f97ba6e3cc6e921922e5a73f2ac3886ab31b5f5a588d3",
-        "input_sha256": "3d96f0bdbe3c88c8d57a49745082f5c9e5de04b2c04d961a008930c0bc12eb9d",
+        "input_sha256": "065c2554d5dbd1cdddcb2a521b6c96c82c869cfd34949a1f83ca4be6b32123f4",
         "native_case_id": "CP08-medium-train-2017-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2658,10 +2658,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/62308ce9be7fa71dfa956c88f37892e0b531e4215239b83a9c6ce9b782eeca5c/scene.usda",
-        "train_source_raw": "inputs/d026c7dd71f646eea330c1969de3237fa6f2c67f5175b4519f500d67e7183360.json",
+        "train_source_raw": "inputs/a64a8353289a9de18f865fb4508b8a249ec71120b6fa303dce320ba55bd95819.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "1db9496da2d58d6d50a56521d4f3bcc3fd3cc587a3ad5c92cf21e25656121e6a",
+      "config_sha256": "305199ea7a038e77235ff7b5f1ac86d687789e54303b920daf10950baf47786c",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2682,7 +2682,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "a54c8243027bec353532779417eb6552859ea577ad1ef11d84948a9298b53535",
-        "train_source_raw": "d026c7dd71f646eea330c1969de3237fa6f2c67f5175b4519f500d67e7183360",
+        "train_source_raw": "a64a8353289a9de18f865fb4508b8a249ec71120b6fa303dce320ba55bd95819",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2696,7 +2696,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2023-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "6f3064fa381ad6c1b50e7a7718c3c56491fd5cde0e7c542b43a656849867a9d2",
-        "input_sha256": "d026c7dd71f646eea330c1969de3237fa6f2c67f5175b4519f500d67e7183360",
+        "input_sha256": "a64a8353289a9de18f865fb4508b8a249ec71120b6fa303dce320ba55bd95819",
         "native_case_id": "CP08-medium-train-2023-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2711,10 +2711,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/d56d0705ab882282cfceb5ffc86b75aad8fb9f3bdeb67056654864d697a3b31e/scene.usda",
-        "train_source_raw": "inputs/7191f89ffb795a06ac58476761097a54c14a445b9788c930af7370337b39cf90.json",
+        "train_source_raw": "inputs/dc83b18260c832e903b43266df2249b02d54a9dc59248b8141fe4d59e9e6c988.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "c4540405485930c045d34ececb8d8a5c878840909c58504ad12a88c42c81e00b",
+      "config_sha256": "6719f8222bb30622e6910066b8fbfb6c838f81d3ef00f4f5c8cae8fa6e23dab7",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2735,7 +2735,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "05cf3c3821b87244d427595d46a56a38d6ba70250e3327dc0b58ff30ca69b386",
-        "train_source_raw": "7191f89ffb795a06ac58476761097a54c14a445b9788c930af7370337b39cf90",
+        "train_source_raw": "dc83b18260c832e903b43266df2249b02d54a9dc59248b8141fe4d59e9e6c988",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2749,7 +2749,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2033-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "a1e936209759d453f4bd9c3e51718b8bc5e79c93ec4bae92f2b0db57cba9a250",
-        "input_sha256": "7191f89ffb795a06ac58476761097a54c14a445b9788c930af7370337b39cf90",
+        "input_sha256": "dc83b18260c832e903b43266df2249b02d54a9dc59248b8141fe4d59e9e6c988",
         "native_case_id": "CP08-medium-train-2033-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2764,10 +2764,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/cf803650e280e814111b8eaa78df47686a36f6f02d5117b8898345b28b283fc2/scene.usda",
-        "train_source_raw": "inputs/5f7f0bf061e005605cf13832b7d92ceb0d9b4525440d6ecd1945b9bb8dc8e551.json",
+        "train_source_raw": "inputs/061baf0bb39e4b9833a8c14c47bc60a7344232ce25f0e722b44e90dbe1bf327c.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "6d6a340bd557d2ecf584b5e1be1fb87bd25b567720a9105a42fa7c1db8f87ef9",
+      "config_sha256": "85bf2541909f991efca7c7dfa9ca91fa4a77941b368e66199a705095396b3aec",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2788,7 +2788,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "d5451b82e29e2d64f9ac0c5cc37145a3eddcf9b9fc09f281c12acea164c36262",
-        "train_source_raw": "5f7f0bf061e005605cf13832b7d92ceb0d9b4525440d6ecd1945b9bb8dc8e551",
+        "train_source_raw": "061baf0bb39e4b9833a8c14c47bc60a7344232ce25f0e722b44e90dbe1bf327c",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2802,7 +2802,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2035-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "4e6b784cf1672ddb27f342db429a484f70a7a30e5a1d9f469a66bbdac752f919",
-        "input_sha256": "5f7f0bf061e005605cf13832b7d92ceb0d9b4525440d6ecd1945b9bb8dc8e551",
+        "input_sha256": "061baf0bb39e4b9833a8c14c47bc60a7344232ce25f0e722b44e90dbe1bf327c",
         "native_case_id": "CP08-medium-train-2035-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2817,10 +2817,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/4c7b28c4d8d2a5410d5555100a3989de496d75e9105a7bc16722269f1cc8b3dd/scene.usda",
-        "train_source_raw": "inputs/264b278bcce1d8c9d47bbf1d4b14234ef921cbbcc84607ea5a071be94eb49e3b.json",
+        "train_source_raw": "inputs/0d008eb3e4aa267efd759378b38c7ffcda04ef61f137dc50460ea572e247fb21.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "53969b84bce9d2a143418c98700262433191a6ff9e45abe5916360c7c3d0ac24",
+      "config_sha256": "65743912b648764aee9fff4df53165d35dbfc5e3a65abcc50707487f0ce49384",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2841,7 +2841,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "3a1c47e8c82a9bb57e315168b6f99087f9250350364c603fb7c23aa1de4119a6",
-        "train_source_raw": "264b278bcce1d8c9d47bbf1d4b14234ef921cbbcc84607ea5a071be94eb49e3b",
+        "train_source_raw": "0d008eb3e4aa267efd759378b38c7ffcda04ef61f137dc50460ea572e247fb21",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2855,7 +2855,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2037-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "8ff4c59267e2c79f4cb231ccd37944a7f6497ba535934010e3f73a13421cdd7e",
-        "input_sha256": "264b278bcce1d8c9d47bbf1d4b14234ef921cbbcc84607ea5a071be94eb49e3b",
+        "input_sha256": "0d008eb3e4aa267efd759378b38c7ffcda04ef61f137dc50460ea572e247fb21",
         "native_case_id": "CP08-medium-train-2037-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2870,10 +2870,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/45264a14a8f16832abd132ac818f7977d20af4aafd08dd8fc36651463c3cf0f5/scene.usda",
-        "train_source_raw": "inputs/8343eb0757580326a889b752d0d56b93a568cca9587bc1c709088e0df83c792a.json",
+        "train_source_raw": "inputs/e789991e6c266ea775e09e93ecade0c9be0983a3b9be44e7d3da08aa7588a9dc.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "b285feb5b096f2be952381d72a8fef5f96796b11bb8b957d3ce3bdc2d21588ce",
+      "config_sha256": "032708b312dba246101b71d42b652402bd0e472f003367b71b791c62680309cb",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2894,7 +2894,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "32c6ead958b53643a3ed688dc1d21bbf811e0de1c24dd572e764408394746c81",
         "station": "7d08a967632abd18cd737ea877181e3d71a02eee6f86297050a1a3d3210d3ced",
-        "train_source_raw": "8343eb0757580326a889b752d0d56b93a568cca9587bc1c709088e0df83c792a",
+        "train_source_raw": "e789991e6c266ea775e09e93ecade0c9be0983a3b9be44e7d3da08aa7588a9dc",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2908,7 +2908,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2038-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "ba7e9cc480e28436ab7f14edb199faeb48fc408fa7469438118ff41eb471bad9",
-        "input_sha256": "8343eb0757580326a889b752d0d56b93a568cca9587bc1c709088e0df83c792a",
+        "input_sha256": "e789991e6c266ea775e09e93ecade0c9be0983a3b9be44e7d3da08aa7588a9dc",
         "native_case_id": "CP08-medium-train-2038-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2923,10 +2923,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/818d4407ec1650cd50559ae000b41606d8d5f381c0c4e1a58594b545a554d28f/scene.usda",
-        "train_source_raw": "inputs/82356683f2f3da199da97daba4f3b7cda6a85c9571201da949d978f2550d0e95.json",
+        "train_source_raw": "inputs/756b9d15e1e96aa6b9e87b3ec1c6fc633b13c998b444c57bea2c3048516e70ae.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "f28dab215fa8ce80c8d056ace9844243c67c76565c3298701982d418b6e3eb3c",
+      "config_sha256": "d31e4fd95c33558d02445b8f14890d02fd7c5597fe68b02946432e94cff406e9",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -2947,7 +2947,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "29895a67b80f2f927f16f16f461afaaaca9b15f10140da3b9f65201515da136e",
-        "train_source_raw": "82356683f2f3da199da97daba4f3b7cda6a85c9571201da949d978f2550d0e95",
+        "train_source_raw": "756b9d15e1e96aa6b9e87b3ec1c6fc633b13c998b444c57bea2c3048516e70ae",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2961,7 +2961,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2061-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "6d1cb1eb34ebbac4ac888aa6d1079421f1b38695f7730c876b525c81cbb9c308",
-        "input_sha256": "82356683f2f3da199da97daba4f3b7cda6a85c9571201da949d978f2550d0e95",
+        "input_sha256": "756b9d15e1e96aa6b9e87b3ec1c6fc633b13c998b444c57bea2c3048516e70ae",
         "native_case_id": "CP08-medium-train-2061-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -2976,10 +2976,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/f6b31bda3bc6ccc8aaf6a53655a20c9885c576b7fa93887c2955c0df0dab6311/scene.usda",
-        "train_source_raw": "inputs/c83e34f24bdfb081c51ecada3b03e6523977059cf8a9e48b5242a11625b72ccb.json",
+        "train_source_raw": "inputs/025780e594ca815098666b3a25585b76a591a16c11cb4021438ee9f6589e1da0.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "590dcf3acc86470e08b4351cbabc04eee3ed65ebb6f515de79a129aa071466af",
+      "config_sha256": "afca838e0f87f754c2c6aa722d5a233517c2cf8924345c3d25b0b2d7d88e5626",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -3000,7 +3000,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "534b19a3008458f71738522a7bc450ab5453500df593ead0ecc9dbba935fa8a6",
-        "train_source_raw": "c83e34f24bdfb081c51ecada3b03e6523977059cf8a9e48b5242a11625b72ccb",
+        "train_source_raw": "025780e594ca815098666b3a25585b76a591a16c11cb4021438ee9f6589e1da0",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -3014,7 +3014,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2065-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "124145ce8af4c10b8fe8e018a5c2a2e90e9f5b74f3f63ff841ae1e911ff01153",
-        "input_sha256": "c83e34f24bdfb081c51ecada3b03e6523977059cf8a9e48b5242a11625b72ccb",
+        "input_sha256": "025780e594ca815098666b3a25585b76a591a16c11cb4021438ee9f6589e1da0",
         "native_case_id": "CP08-medium-train-2065-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -3029,10 +3029,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/791faf3ae617225240c8c793a2c1fc031f7f0a1fdafd1802b5e202c1f0e9a395/scene.usda",
-        "train_source_raw": "inputs/831bfb5cc4b7e4eb52bea440ec41247986ad02ee99339583c8d684835968fe1e.json",
+        "train_source_raw": "inputs/7d26b5a38d5f98944195054139ccb9c33188d6365cfc9bc9adca98a9b667f648.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "89a8be0a93cb198714de8a12fd5da5d637fd2b4fbffc6cf5951985ff3387e736",
+      "config_sha256": "1752a1be222443bb5c8fdd8446ceebe59361bbcd88c25d39d421d665f9d5ba16",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -3053,7 +3053,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "28d39a369a64eae0f8330392e0bde85268be7fdacded1b6cfba96d35fe90814e",
-        "train_source_raw": "831bfb5cc4b7e4eb52bea440ec41247986ad02ee99339583c8d684835968fe1e",
+        "train_source_raw": "7d26b5a38d5f98944195054139ccb9c33188d6365cfc9bc9adca98a9b667f648",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -3067,7 +3067,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2071-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "3656fee7e70609a48439554abb1bfa8297fcd5234044753e90191dcfcaaa1a6c",
-        "input_sha256": "831bfb5cc4b7e4eb52bea440ec41247986ad02ee99339583c8d684835968fe1e",
+        "input_sha256": "7d26b5a38d5f98944195054139ccb9c33188d6365cfc9bc9adca98a9b667f648",
         "native_case_id": "CP08-medium-train-2071-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -3082,10 +3082,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/8bbdfba361402174a262557d9d2f4155f54b5066f89bf1bc107c09363fa31f29/scene.usda",
-        "train_source_raw": "inputs/304e8e4f958e096d34d22ae5f5baaf80e1e865c3f06597f94b4ae9ccd67a8b3a.json",
+        "train_source_raw": "inputs/144a258dcd6dd80dbf56760d44950b81a0edd9c002a7917009eaf9a00b7c984a.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "102d601f92943bad57a3d1681651a202f059f48b7a07fda5c26118e7ac6b6fcb",
+      "config_sha256": "396bbc6bb1d405dc195ec5d29c4953bebd0ad0784edab7f6f46993041f630530",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -3106,7 +3106,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "7b72cd90032eeb49096135e4dad964e0942e235f748e219d04d9869f0be4e86d",
         "station": "fb5250af5ee14deae4b15e53c4045697c62e2dce43a200f4a973d091c5633a15",
-        "train_source_raw": "304e8e4f958e096d34d22ae5f5baaf80e1e865c3f06597f94b4ae9ccd67a8b3a",
+        "train_source_raw": "144a258dcd6dd80dbf56760d44950b81a0edd9c002a7917009eaf9a00b7c984a",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -3120,7 +3120,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2089-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "01225f553679dcbc6fd322d8206d71d7c3b8e7806eb07c43424f0a97c16ca99c",
-        "input_sha256": "304e8e4f958e096d34d22ae5f5baaf80e1e865c3f06597f94b4ae9ccd67a8b3a",
+        "input_sha256": "144a258dcd6dd80dbf56760d44950b81a0edd9c002a7917009eaf9a00b7c984a",
         "native_case_id": "CP08-medium-train-2089-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",
@@ -3135,10 +3135,10 @@
         "portable-mdl-1": "mdl-sdk/core/mdl",
         "portable-mdl-2": "mdl-sdk/rtx",
         "station": "assets/5e9bc75b501eff505bd5dcf7e6b401345b84634e19409b8d4b8e97c23d1389e3/scene.usda",
-        "train_source_raw": "inputs/c9e32e37f36ec580137934a40743699affe3b1e235b0387c5e578c1a2c1ccafe.json",
+        "train_source_raw": "inputs/6d2e3a465e41a405c85d78f277167de479a7c5dc0b86e791a6964d4dcf29df79.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "2fc8a38c576933f55a46c9657b4b9191b67e2d28b6ed1b9dd9049d389454d5ff",
+      "config_sha256": "3adfe8069abdfcb0f4d816311dd183ac9cb3ffa314d1049e7e0ffaa30003f38c",
       "identity": {
         "asset_version": "assets-final-20261029-with-selected-baseline-overlay",
         "clock": {
@@ -3159,7 +3159,7 @@
         "cue_idle": "5037f7e800dbe2bb009273f069bf09662f4b685212288cd94b39339389ba6f85",
         "cue_plan": "32c6ead958b53643a3ed688dc1d21bbf811e0de1c24dd572e764408394746c81",
         "station": "7f733451b428b911f5e1191559472cd1f9cb1408e766b7d078efc00e6b395237",
-        "train_source_raw": "c9e32e37f36ec580137934a40743699affe3b1e235b0387c5e578c1a2c1ccafe",
+        "train_source_raw": "6d2e3a465e41a405c85d78f277167de479a7c5dc0b86e791a6964d4dcf29df79",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -3173,7 +3173,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP08/medium/CP08-medium-train-2106-source-semantic-coverage-v1/episode.hdf5",
         "h5_sha256": "e56aa2b3572f95bdb5224f8626b7f0550c4b1cc825bb92f4e3cd25d4569e2580",
-        "input_sha256": "c9e32e37f36ec580137934a40743699affe3b1e235b0387c5e578c1a2c1ccafe",
+        "input_sha256": "6d2e3a465e41a405c85d78f277167de479a7c5dc0b86e791a6964d4dcf29df79",
         "native_case_id": "CP08-medium-train-2106-source-semantic-coverage-v1",
         "schema": "mind2act_eval.training_source.v1",
         "split": "train",

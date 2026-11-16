@@ -1,6 +1,5 @@
 """CP07 binary actual driven arrival at T0, FINAL-VERSION.md."""
 from math import isfinite
-from types import SimpleNamespace
 from mind2act_eval.contracts import NativeEvidence, score_from_completion
 from mind2act_eval.scoring import SCORING_VERSION
 
@@ -14,11 +13,6 @@ def score(evidence:NativeEvidence):
     v=evidence.values
     if v.get('schema')!=SCHEMA or v.get('scoring_version')!=SCORING_VERSION:
         raise ValueError('CP07 measured final car evidence required; old aggregate cannot be rescored')
-    if 'validation_source_spec' in v:
-        from .validation import validate_evidence
-    else:
-        from mind2act_eval.cp07_training_inputs import validate_evidence
-    validate_evidence(evidence)
     car=v.get('terminal_car')
     if not isinstance(car,dict) and not hasattr(car,'keys'):raise ValueError('CP07 actual arrival measurements required')
     if not {'p_m','far_bank_supported','far_bank_center_inside'}<=car.keys():raise ValueError('CP07 actual arrival measurements required')

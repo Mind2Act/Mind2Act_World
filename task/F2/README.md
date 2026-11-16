@@ -60,4 +60,4 @@ budget boundaries, score reconstruction, contact/clock/hash contradictions and
 the shared-physics boundary. They do not establish Isaac loading, replay or
 visual parity. Exact selected training instance/scene association remains an
 input-bridge requirement; native replay, three decodable videos and a same-view
-first-frame comparison belong to the coordinator's shared queue.
+first-frame comparison require separate GPU validation.

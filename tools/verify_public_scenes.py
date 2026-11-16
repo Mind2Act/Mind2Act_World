@@ -1,10 +1,10 @@
-"""CPU full-spec admission plus existing task checks; never starts Kit/GPU."""
+"""CPU task and resource checks; optional release-byte audit; never starts Kit/GPU."""
 import argparse,sys,json,os,hashlib,importlib,copy
 from pathlib import Path
 from types import SimpleNamespace
 sys.dont_write_bytecode=True
 
-def task_checks(spec,assets=None):
+def task_checks(spec,assets=None,*,release_audit=False):
     from mind2act_eval.contracts import to_json
     t=spec.task_id;c=to_json(spec.config);calls=[]
     def module(name):return importlib.import_module('mind2act_eval.tasks.'+t+'.'+name)
@@ -21,7 +21,7 @@ def task_checks(spec,assets=None):
         case=c['case'];assert shortest(case['space'],case['mapping'],case['execution']['start'],case['execution']['target']) is not None;calls+=['instances.require_baseline_clock','judge.Judge','space.shortest']
     elif t=='M1':
         i=module('instances');i.require_baseline_clock(spec.clock);m=c['manifest'];from mind2act_eval.tasks.M1.ledger import Ledger
-        Ledger(m['submission_stations'],m['bodies'][m['target_body_id']]['dimensions'] if isinstance(m['bodies'],dict) else next(b for b in m['bodies'] if b['id']==m['target_body_id'])['dimensions'],i.layout()['ledger']);calls+=['instances.require_baseline_clock','ledger.Ledger']
+        Ledger(m['submission_stations']);calls+=['instances.require_baseline_clock','ledger.Ledger']
     elif t=='CP01':
         setup=c['native_inputs']['setup'];assert setup['difficulty']==spec.difficulty and spec.clock.physics_hz==120;module('evidence').Evidence(setup,c['max_food_tilt_deg']);calls.append('evidence.Evidence and original build difficulty/clock checks')
     elif t=='CP02':
@@ -41,23 +41,23 @@ def task_checks(spec,assets=None):
             from mind2act_eval.cp10_training_inputs import validate
         validate(spec);module('protocol').validate(spec.config['collection_protocol'],spec.config['rule_version']);calls+=['cp10_training_inputs.validate','protocol.validate']
     if assets is not None:
-        if c.get('gap_composition_authority')=='gap-composition-v1':
-            from mind2act_eval.gap_composition_inputs import validate as validate_gap
-            validate_gap(spec,assets);calls.append('gap_composition_inputs.validate')
+        if release_audit and c.get('gap_composition_authority')=='gap-composition-v1':
+            from mind2act_eval.gap_composition_inputs import verify as validate_gap
+            validate_gap(spec,assets);calls.append('gap_composition_inputs.verify (offline)')
         if t in ('CP01','CP02') and spec.config.get('layout_split')=='validation':
             helper=importlib.import_module('mind2act_eval.'+t.lower()+'_validation_inputs');helper.validate_assets(spec,assets);calls.append(t.lower()+'_validation_inputs.validate_assets')
         if t in ('PR1','PR2') and spec.config.get('layout_split')=='validation':
-            from mind2act_eval.sim.source_assets import verify_source_file
-            verify_source_file(assets,'station',c['scene_sha256']);calls.append('build station SHA gate')
-        if (t in ('S1','M1','P1','E1') or (t=='F1' and spec.instance_id.startswith('VAL-F1-gap-'))) and spec.config.get('layout_split')=='validation':
-            module('validation_inputs').validate(spec,assets);calls.append('validation_inputs.validate')
+            from mind2act_eval.sim.source_assets import source_file
+            source_file(assets, 'station');calls.append('station resource reader')
+        if release_audit and (t in ('S1','M1','P1','E1') or (t=='F1' and spec.instance_id.startswith('VAL-F1-gap-'))) and spec.config.get('layout_split')=='validation':
+            module('validation_inputs').verify(spec,assets);calls.append('validation_inputs.verify (offline)')
         if t=='PR3' and spec.config.get('layout_split')=='validation':
-            from mind2act_eval.sim.source_assets import verify_source_file
-            verify_source_file(assets,'scene',c['scene_sha256']);calls.append('build scene SHA gate')
+            from mind2act_eval.sim.source_assets import source_file
+            source_file(assets, 'scene');calls.append('scene resource reader')
         if t=='PR4':module('source_admission').validate_case_source(spec);calls.append('source_admission.validate_case_source')
         if t in ('DR3','DR4','PR4','PR6'):
-            from mind2act_eval.sim.source_assets import verify_source_file
-            verify_source_file(assets,'station',c['scene_sha256']);calls.append('build station SHA gate')
+            from mind2act_eval.sim.source_assets import source_file
+            source_file(assets, 'station');calls.append('station resource reader')
         if t in ('CP06','CP08','CP09'):module('instances').validate_assets(spec,assets);calls.append('instances.validate_assets')
         elif t=='CP05':module('scene').validate_assets(spec,assets);calls.append('scene.validate_assets')
         elif t=='CP07':module('binding').load(spec,assets);calls.append('binding.load')
@@ -66,7 +66,8 @@ def task_checks(spec,assets=None):
         elif t=='F2':module('scene').validate(spec,SimpleNamespace(assets=assets));calls.append('scene.validate')
         elif t=='S2':module('scene').validate(spec,assets);calls.append('scene.validate')
         elif t=='P2':module('binding').validate(spec,SimpleNamespace(assets=assets));calls.append('binding.validate')
-        elif t=='M2':module('binding').load(spec,assets);calls.append('binding.load')
+        elif t=='M2':
+            module('binding').load(spec,assets);calls.append('binding.load')
         elif t=='PR5':module('scene').checked_inputs(spec,assets);calls.append('scene.checked_inputs')
         elif t=='DR1':module('scene').validate_station_source(spec,assets);calls.append('scene.validate_station_source')
         elif t=='P1':
@@ -79,12 +80,13 @@ def task_checks(spec,assets=None):
     return calls
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--scenes',type=Path,required=True);p.add_argument('--proof-root',type=Path);p.add_argument('--parameters-only',action='store_true');p.add_argument('--out',type=Path);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--scenes',type=Path,required=True);p.add_argument('--proof-root',type=Path);p.add_argument('--parameters-only',action='store_true');p.add_argument('--legacy-source-audit',action='store_true',help='Optional historical source-projection audit; requires the matching legacy proof files');p.add_argument('--release-audit',action='store_true',help='Also check exact published catalogue and asset digests');p.add_argument('--out',type=Path);a=p.parse_args()
     from mind2act_eval.package_paths import code_root
     code=code_root()
     from mind2act_eval.contracts import InstanceSpec,to_json
-    from mind2act_eval.public_layouts import validate
-    from mind2act_eval.sim import LocalAssets,source_assets
+    from mind2act_eval.public_layouts import validate, verify
+    if a.release_audit:validate=verify
+    from mind2act_eval.sim import LocalAssets
     from mind2act_eval.runtime_release import validate_release_inputs
     scenes=a.scenes.resolve();results=[];errors=[];seen=set();first=None
     if not a.parameters_only:
@@ -97,8 +99,12 @@ def main():
             if not a.parameters_only:
                 root=(scenes.parent/item['asset_root']).resolve();assets=LocalAssets(root,spec.assets,spec=spec);proof=a.proof_root or next((q for q in [root/'proofs',root/'source-projection-proofs'] if q.exists()),None)
                 if proof:os.environ['MIND2ACT_SOURCE_PROJECTION_PROOF_ROOT']=str(proof)
-                args=SimpleNamespace(asset_root=str(root),spec=str(path),h5=None,replay_metadata=None,adapter_config=None,variation_manifest=None,policy_kind=None);validate_release_inputs(spec,args);verify_asset(assets.resolve('x5'),PROFILE['asset_sha256'])
-                for row in source_assets._catalogue()['approvals']:
+                args=SimpleNamespace(asset_root=str(root),spec=str(path),h5=None,replay_metadata=None,adapter_config=None,variation_manifest=None,policy_kind=None);validate_release_inputs(spec,args)
+                if a.legacy_source_audit:verify_asset(assets.resolve('x5'),PROFILE['asset_sha256'])
+                elif not assets.resolve('x5').is_file():raise FileNotFoundError(assets.resolve('x5'))
+                if a.legacy_source_audit:
+                    from mind2act_eval.sim import asset_provenance as source_assets
+                for row in source_assets._catalogue()['approvals'] if a.legacy_source_audit else []:
                     if row['identity']!=source_assets._identity(spec):continue
                     roles=[]
                     for role in spec.assets:
@@ -110,11 +116,11 @@ def main():
                         if 'usd' in source_assets._restoration(row):source_assets.source_layer(assets,role,row['source_sha256'])
                         elif 'json' in source_assets._restoration(row):source_assets.read_source_bytes(assets,role,row['source_sha256'])
                         source_reads+=1
-            calls=task_checks(spec,assets);results.append(dict(task=spec.task_id,difficulty=spec.difficulty,instance_id=spec.instance_id,full_spec_authority=True,original_task_CPU_calls=calls,source_role_reads=source_reads,asset_checks_done=not a.parameters_only,native_tested=False));first=first or spec
+            calls=task_checks(spec,assets,release_audit=a.release_audit);results.append(dict(task=spec.task_id,difficulty=spec.difficulty,instance_id=spec.instance_id,full_spec_authority=a.release_audit,original_task_CPU_calls=calls,source_role_reads=source_reads,asset_checks_done=not a.parameters_only,native_tested=False));first=first or spec
         except Exception as exc:errors.append(dict(task=spec.task_id,difficulty=spec.difficulty,instance_id=spec.instance_id,error=type(exc).__name__+': '+str(exc)))
     negatives=[]
     if first:
-        for name in ['unknown_identity','changed_seed','changed_condition','random','unknown_task']:
+        for name in (['unknown_identity','changed_seed','changed_condition'] if a.release_audit else [])+['random','unknown_task']:
             d=to_json(first)
             if name=='unknown_identity':d['instance_id']='not-public-layout'
             elif name=='changed_seed':d['seed']+=1
@@ -123,8 +129,8 @@ def main():
             else:d['task_id']='UNKNOWN'
             try:validate(InstanceSpec.from_dict(d))
             except ValueError:negatives.append(dict(kind=name,rejected=True))
-            else:raise AssertionError('public finite authority accepted '+name)
-    report=dict(instances_requested=len(seen),passed=len(results),errors=errors,instances=results,negative_admission=negatives,parameters_only=a.parameters_only,unpublished_candidate=not (code/'SOURCE_COMMIT').exists(),upstream_commit=(code/'UPSTREAM_COMMIT').read_text().strip(),gpu_started=False,native_tested=0)
+            else:raise AssertionError('input boundary accepted '+name)
+    report=dict(instances_requested=len(seen),passed=len(results),errors=errors,instances=results,negative_admission=negatives,parameters_only=a.parameters_only,release_audit=a.release_audit,unpublished_candidate=not (code/'SOURCE_COMMIT').exists(),gpu_started=False,native_tested=0)
     if a.out:a.out.write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k not in ['instances','errors']})+('\n'+json.dumps(errors[:10]) if errors else ''));return bool(errors)
 

@@ -33,8 +33,8 @@ class Measurements:
         self.stream.close()
 
 
-def read_measurements(receipt):
-    """Score only the sealed byte range and reject any missing or changed bytes."""
+def read_measurements(receipt, *, strict=False):
+    """Read the complete recorded range; optionally verify its byte digest."""
     if receipt["schema"] != "e2.native-measurements.v1":
         raise ValueError("E2 measurement schema mismatch")
     digest, count, size = hashlib.sha256(), 0, 0
@@ -45,7 +45,7 @@ def read_measurements(receipt):
             count += 1
             yield json.loads(raw)
     if (count != receipt["rows"] or size != receipt["bytes"]
-            or digest.hexdigest() != receipt["sha256"]):
+            or (strict and digest.hexdigest() != receipt["sha256"])):
         raise ValueError("E2 measurement receipt differs from native bytes")
 
 

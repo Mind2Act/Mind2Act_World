@@ -1,12 +1,8 @@
 """PR1 sliding rheostat: geometry, scale texture and slider physics.
 
-Ported from the PR1 baseline, source_id pr1-original-source-uniform-run925de9
-(A:code/legacy-precision-7de3fd8-run925de9-v2):
-  geometry  legacy_sources/PR1/scripts/physco_precision_pr1_rheostat_scene.py
-  winding   legacy_sources/PR1/scripts/physco_precision_rheostat_winding.py
-  physics   cases_unified/PR1/world.py (carriage body, SlideJoint drive, contact material)
-Not ported: station table/background/cameras and every robot setting (owned by sim/ and robot/),
-preview renders, and the manifest/export step. Importing needs pxr.
+The task owns the rheostat geometry, winding, carriage drive and contact material.
+The environment owns the station, background, cameras and robot settings.
+Importing requires pxr.
 """
 import math
 from pathlib import Path

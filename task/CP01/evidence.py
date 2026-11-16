@@ -5,6 +5,7 @@ actual tray support and its measured geometric center inside the tray cavity.
 """
 from collections import Counter,deque
 from copy import deepcopy
+from itertools import permutations
 from mind2act_eval.scoring import SCORING_VERSION
 import numpy as np
 from mind2act_eval.scoring import container_contains
@@ -107,15 +108,24 @@ class Evidence:
         Tray table support/separation and food placement count independently.
         First-ready timestamps do not gate terminal credit.
         """
-        matches=[];credited=0;wrong=0;tray_steps=0
         easy=self.setup['difficulty']=='easy'
-        for j,(ids,order) in enumerate(zip(self.inside,self.setup['orders'])):
-            kinds=Counter(self.setup['items'][i]['kind'] for i in ids)
-            matches.append(kinds==Counter(order))
-            wrong+=len(ids)-sum((kinds&Counter(order)).values())
-            if self.ready[j] and not easy:tray_steps+=1
-            complete=[i for i in ids if self.foods[i].complete]
-            credited+=sum((Counter(self.setup['items'][i]['kind'] for i in complete)&Counter(order)).values())
+        tray_steps=0 if easy else sum(bool(ready) for ready in self.ready)
+        best=None
+        # Index permutations are lexicographic; keep the first on a tie.
+        # Tray appearance does not identify a particular reference order.
+        for permutation in permutations(range(len(self.setup['orders']))):
+            matches=[];credited=0;wrong=0
+            for ids,order_index in zip(self.inside,permutation):
+                order=Counter(self.setup['orders'][order_index])
+                kinds=Counter(self.setup['items'][i]['kind'] for i in ids)
+                matches.append(kinds==order)
+                wrong+=len(ids)-sum((kinds&order).values())
+                complete=Counter(self.setup['items'][i]['kind'] for i in ids if self.foods[i].complete)
+                credited+=sum((complete&order).values())
+            objective=credited-wrong
+            if best is None or objective>best[0]:
+                best=(objective,matches,credited,wrong)
+        _,matches,credited,wrong=best
         n=sum(map(len,self.setup['orders']));selected=[i for ids in self.inside for i in ids]
         success=bool(self.phase=='execution' and self.ready and all(self.ready)
             and all(matches) and all(self.foods[i].complete for i in selected) )

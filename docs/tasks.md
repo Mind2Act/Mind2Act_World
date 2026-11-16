@@ -34,3 +34,27 @@ Every task has Easy, Medium and Hard layouts: 20 public training and 10 validati
 | PR6 | Stand the dominos anywhere inside the continuous curve band, in order along the curve | [scene](../task/PR6/scene.py) / [score](../task/PR6/scorer.py) |
 | S1 | Remember the four colored slots, observe the carousel rotation, then place each colored block into its original matching slot after the carousel stops. | [scene](../task/S1/scene.py) / [score](../task/S1/scorer.py) |
 | S2 | Remember the briefly lit forbidden cells | [scene](../task/S2/scene.py) / [score](../task/S2/scorer.py) |
+
+## Scoring notes
+
+These notes describe the implemented scorer. They do not replace the fixed model instructions or add new scoring gates. Scores use `mind2act-final-scoring-20261105`.
+
+| Task | Implemented rule or boundary |
+| --- | --- |
+| M1 | The first N supported placements form the submitted route; placement N ends the round. An exact route succeeds. Let C be its longest common subsequence with the expected route, W = submitted placements − C, and m = N − C + W. For m = 1 / 2, Easy earns 15 / 7.5, Medium 11 / 5.5, and Hard 7.5 / 3.75; other incomplete routes earn 0. Uncover/extraction diagnostics do not gate these scores. |
+| F1 | At the goal, an unreleased last key earns cap/4, including when extra presses were made. “Goal reached with extra presses” earns cap/2 only after that key has returned; full success also requires the shortest route and protocol prerequisites. |
+| P1 | Replacing a requested item with a wrong type counts both one missing and one wrong item: 7.5 / 5.5 / 3.75 for Easy / Medium / Hard. Missing items are counted against the fixed total N even before all additional orders have appeared. |
+| P2 | The intermediate tier requires ceil(N/2) ≤ p < N, where p is the consecutive correct prefix from the bottom. Distractor baskets must be absent from the final stack; they may be moved aside earlier. Visiting each mat is not a scoring gate. |
+| CP04 | Recipe order is credited by longest common subsequence. Jar uprightness is not scored; the other ingredient and thermal gates remain in force. |
+| CP05 | Mallet contact, last-key release and final withdrawal are not scoring gates. Hard checks MAX before Play and at the terminal sample, not continuously between them. |
+| PR1 / PR2 | Scoring reads the final T0 resistance/voltage. Release and holding are not scoring gates; the released-hold window controls scene termination only. PR1 tolerances are ±0.2 / ±0.15 / ±0.12 Ω. PR2 tolerances are ±1 / ±0.5 / ±0.5 V; Hard tightens the partial-credit zero distance, not the voltage tolerance. |
+| PR5 | Reject missing, repeated, dragged or out-of-box imprints first; then grade heading, then stamp return. |
+| DR3 | Ordered physical aperture passage and terminal delivery are scored. Gripper withdrawal is not a scoring gate. |
+| DR4 | Ball touching is not a scoring gate. Easy / Medium / Hard have 2 / 3 / 4 balls and 0 / 1 / 2 columns respectively. Retention, terminal delivery and obstacle-contact rules still apply. |
+| E1 | The tray accepts one submission per round; a wrong submission still settles that round and cannot be replaced with another answer. |
+| E2 | Remember the objects and their values, calculate the expression, and enter its result. Fingertip contact is not a scoring gate; the fixed short instruction does not specify a key-return requirement. |
+| S1 | Early placement is recorded but does not itself force a zero. Easy uses two rotations in the same direction. Original training demonstrations use a 2-second cue; formal evaluation uses a 1-second cue. |
+
+PR3 short-stroke partial credit and the remaining source rules are unchanged. A stricter phrase in an instruction does not silently introduce an additional scoring condition.
+
+CP01 assigns reference orders to trays by the correspondence that maximizes credited foods minus wrong or extra foods. Ties use the first order-index permutation. Tray support, separation and placement rules are unchanged.

@@ -83,16 +83,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-1d46c05a31daf0f4.json",
@@ -968,7 +968,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-1d46c05a31daf0f4.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-1d46c05a31daf0f4/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-1d46c05a31daf0f4/task.usda",
           "x5": "robot/ARX.usd"
@@ -982,7 +982,7 @@
           "authored_task_source_sha256": "bbe1e040e2efc43eb59639868dbebec49339c3f2992864d6910b844214443c57",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -1026,17 +1026,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "e58a66714f06e81dad0da145be18610eeb1feebe3689dd632087be5b051c6997",
+      "full_spec_sha256": "b2dccb9ac24dcd8451b503424128ab4b33256908105f96e0beca30b9c5fd8edc",
       "runtime_asset_sha256": {
         "source_case": "d456bdf37ef8c64e139dd3d38f3714fe82291cc94a1e41dbca2c50ea5e03e2fe",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "bb923c1f1ba26e769c2cf488e92178bae1476015a8c28717c19a526527a41cd3",
         "validation_task": "bbe1e040e2efc43eb59639868dbebec49339c3f2992864d6910b844214443c57",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -1124,16 +1124,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-2f7d281abc180261.json",
@@ -2009,7 +2009,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-2f7d281abc180261.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-2f7d281abc180261/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-2f7d281abc180261/task.usda",
           "x5": "robot/ARX.usd"
@@ -2023,7 +2023,7 @@
           "authored_task_source_sha256": "e841e077944f2c0bcd27fae78ca0a137bf78f74633cff561701514a3f8daad4c",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -2067,17 +2067,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "3caa09d62be73260b8a5a68dee900cf317eccf1f2a6247c9b9d6ef0bf2cd3a23",
+      "full_spec_sha256": "4fe862623ba444e452c81f7e5231461339189ab83f20290338153500822c829f",
       "runtime_asset_sha256": {
         "source_case": "224c831734e934f15ec28144f99b506778048ed94ebedeb42f37b2d71119cddf",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "f731e78390334f9c54993c83c98e27ea279777dcd8c7302947af6fb58cfc2a7f",
         "validation_task": "e841e077944f2c0bcd27fae78ca0a137bf78f74633cff561701514a3f8daad4c",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -2165,16 +2165,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-379ad3b40db9d9fa.json",
@@ -3050,7 +3050,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-379ad3b40db9d9fa.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-379ad3b40db9d9fa/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-379ad3b40db9d9fa/task.usda",
           "x5": "robot/ARX.usd"
@@ -3064,7 +3064,7 @@
           "authored_task_source_sha256": "b93454e5fc174bb47f126c233e11ba05d1768faca45a9ebb48420d7033a881f1",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -3108,17 +3108,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "e26472e7ac34180d08b797b02dc7da46cac21c60e644b4acef455ce87e6b2d3c",
+      "full_spec_sha256": "c85648ed4e35e5ed1f449e945f403da9feb04a93aa79ffcf9fa0f1e7eb30110f",
       "runtime_asset_sha256": {
         "source_case": "4d810b5c5fba14240918ca64bb4d638e29842dd4f78ce54fdd1acf4c3bbb523c",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "1db32d020b576b06c0f2ca746d09c8e3f5fb1106a705de146d133d06f6454f15",
         "validation_task": "b93454e5fc174bb47f126c233e11ba05d1768faca45a9ebb48420d7033a881f1",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -3206,16 +3206,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-5edeab987bb3ad46.json",
@@ -4091,7 +4091,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-5edeab987bb3ad46.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-5edeab987bb3ad46/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-5edeab987bb3ad46/task.usda",
           "x5": "robot/ARX.usd"
@@ -4105,7 +4105,7 @@
           "authored_task_source_sha256": "1385bc8e5f045653b36cbd18e67319b0f734e1b6ec542ee53d038493e9525714",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -4149,17 +4149,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "c6a13ab1717ff44704899c94eeb26983f754670efd41c70830df97aa622c5843",
+      "full_spec_sha256": "a7dfb452911e30eb31c68d1ff2b55aaa3c3f4284b7c4c1b7a738d5d500c50d54",
       "runtime_asset_sha256": {
         "source_case": "b3e7431229ce6d7fe026e9d13c3f7b2eefb1a55445f12f14b36e50a9e70158b7",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "06704447570d45dadf5fe7b8b36efa64eea6c4ddc413e650164ba12928492fdd",
         "validation_task": "1385bc8e5f045653b36cbd18e67319b0f734e1b6ec542ee53d038493e9525714",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -4247,16 +4247,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-61f02303a284706a.json",
@@ -5132,7 +5132,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-61f02303a284706a.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-61f02303a284706a/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-61f02303a284706a/task.usda",
           "x5": "robot/ARX.usd"
@@ -5146,7 +5146,7 @@
           "authored_task_source_sha256": "bbe1e040e2efc43eb59639868dbebec49339c3f2992864d6910b844214443c57",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -5190,17 +5190,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "f1eed3776fa96575097941337c927a6502a5658e3de7eed0462ee508866e79d6",
+      "full_spec_sha256": "d73cf51157ef300c720949efea93d09fd934bb9f64ee047f5fb61fbdd779bc03",
       "runtime_asset_sha256": {
         "source_case": "e71aaf92acb254cb0017a262f4652de7ee088be76aa493f9c09488eb8449b131",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "b329bb806a0cd098fe38959c08d815a08cd6ea4cb77965f6eaf5475262fb8567",
         "validation_task": "bbe1e040e2efc43eb59639868dbebec49339c3f2992864d6910b844214443c57",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -5288,16 +5288,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-63657e16720ee67b.json",
@@ -6173,7 +6173,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-63657e16720ee67b.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-63657e16720ee67b/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-63657e16720ee67b/task.usda",
           "x5": "robot/ARX.usd"
@@ -6187,7 +6187,7 @@
           "authored_task_source_sha256": "1385bc8e5f045653b36cbd18e67319b0f734e1b6ec542ee53d038493e9525714",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -6231,17 +6231,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "86b4b009ed7e7cc7ad7a9e7554d1c9c11f3fccb7967c24476f85d40d5f9d1e5c",
+      "full_spec_sha256": "d0c6804c9df6bf20a786f97d7da71199737556e2919507b36c26650441af992b",
       "runtime_asset_sha256": {
         "source_case": "b9487baaff1802c295acfa6a376b6408afc55d4ea0438309e2a036115fec8983",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "fc7ad18489fd404cdbb68bf0e1b90f2df42cba0b5c66b023f4dc3dd85b23c28c",
         "validation_task": "1385bc8e5f045653b36cbd18e67319b0f734e1b6ec542ee53d038493e9525714",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -6329,16 +6329,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-6dca68155af5e3d3.json",
@@ -7214,7 +7214,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-6dca68155af5e3d3.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-6dca68155af5e3d3/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-6dca68155af5e3d3/task.usda",
           "x5": "robot/ARX.usd"
@@ -7228,7 +7228,7 @@
           "authored_task_source_sha256": "402a766325e23ca08c86115656fa3599b9c0e5f7fae4deda04a7e64c9f0db95d",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -7272,17 +7272,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "fb1891f6ab662d7827c7cb1a721a155db27f538d604e42ef583eaa67100894b6",
+      "full_spec_sha256": "fd0c783ceaf873004fe391142a75a60bd3e8df9960984f5b4ffad022e4e9da47",
       "runtime_asset_sha256": {
         "source_case": "d00d54b450e4fb144ff7c2b597d5ab4464f23cfc302821ce1c1ac64ee5b1b4d9",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "4152fe653fd7fc740ed5b08235919cc164dfc92ba57ee5ef6b92cb7e0c284fdd",
         "validation_task": "402a766325e23ca08c86115656fa3599b9c0e5f7fae4deda04a7e64c9f0db95d",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -7370,16 +7370,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-7db9fbbc66da42bc.json",
@@ -8255,7 +8255,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-7db9fbbc66da42bc.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-7db9fbbc66da42bc/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-7db9fbbc66da42bc/task.usda",
           "x5": "robot/ARX.usd"
@@ -8269,7 +8269,7 @@
           "authored_task_source_sha256": "cb732f8c933c9eeb64ac1a3e8389886755dc21c55a7709ab2ceab9df59f50b5c",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -8313,17 +8313,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "10c95fe44edd3940e124c13cb90ca02b1d8a43d46248165f2a72eea20dbca9a9",
+      "full_spec_sha256": "139bd8ffb5d8baa1e4a9d6e29bec1fd70ca5dbd04f3e75b6e0d8702df905d0a0",
       "runtime_asset_sha256": {
         "source_case": "155575388b58c08cbce500b9134d111b87028a7de55dc1a8d9e8e0e4229f382e",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "c70ef310f263c2a92c29fc626e1a9260edc78c8d8fd496e8f293af3f38c0196b",
         "validation_task": "cb732f8c933c9eeb64ac1a3e8389886755dc21c55a7709ab2ceab9df59f50b5c",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -8411,16 +8411,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-9935146d7e05cecb.json",
@@ -9296,7 +9296,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-9935146d7e05cecb.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-9935146d7e05cecb/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-9935146d7e05cecb/task.usda",
           "x5": "robot/ARX.usd"
@@ -9310,7 +9310,7 @@
           "authored_task_source_sha256": "f54fcd2712d17240684291018080976bafcea3457385660c6581460d8ce48100",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -9354,17 +9354,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "68d1725dd3df3b458d5bf858759f0ce407968d47db8ccb9c1a39e89a620804a2",
+      "full_spec_sha256": "a1ebcce4d656fc6c399f33186f44c6b10547bed009256482418a1b16e49385dc",
       "runtime_asset_sha256": {
         "source_case": "8c4e79f1fa9f547abe5167bf129953944b27ef3f617702a0ffd1b9fa38ab74d8",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "b05033b2cf4d0a6ff88e002d7c4be639acaca3313d89bdc0f4a41e8aa0bfb9bf",
         "validation_task": "f54fcd2712d17240684291018080976bafcea3457385660c6581460d8ce48100",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -9452,16 +9452,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/easy/VAL-CP09-easy-a81e6dfbb951e983.json",
@@ -10337,7 +10337,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/easy/VAL-CP09-easy-a81e6dfbb951e983.json",
           "station": "CP09-assets/7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948/0000.usda",
-          "station_proof": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
+          "station_proof": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
           "validation_geometry_proof": "tasks/easy/VAL-CP09-easy-a81e6dfbb951e983/geometry.json",
           "validation_task": "tasks/easy/VAL-CP09-easy-a81e6dfbb951e983/task.usda",
           "x5": "robot/ARX.usd"
@@ -10351,7 +10351,7 @@
           "authored_task_source_sha256": "b78bcd326ec204324cf4175c56086f58545d8e8b959b8b6dc7f4a63f48f60052",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -10395,17 +10395,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "58c18a5519b6a869f62ddd21b1129548e549c3bd476c324df7725e3bbe668a10",
+      "full_spec_sha256": "cbda15bd047cff04909da73d87848e4a2d0c00c217ac33231d3c86939c1823d7",
       "runtime_asset_sha256": {
         "source_case": "d03990a9cd4e4da1fcd656f03b85fb3924e1bd7b26378b21cb2a160d9a356827",
         "station": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
-        "station_proof": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "validation_geometry_proof": "4f37b07d6149d60ff2419228316636dc6709160146f3040e842a8e6bab794e64",
         "validation_task": "b78bcd326ec204324cf4175c56086f58545d8e8b959b8b6dc7f4a63f48f60052",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c",
+        "station_proof_sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332",
         "station_runtime_sha256": "1bb4900e3c681480e5e438f6f5cceebbcde4f573598103104ecdcda3a267187b",
         "station_source_sha256": "7afb4488dded1bf5f9e9bdc1b499cfd4092042677705869c00ed0d7b86fe2948"
       }
@@ -10493,16 +10493,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-26ccd01cca745805.json",
@@ -11378,7 +11378,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-26ccd01cca745805.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-26ccd01cca745805/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-26ccd01cca745805/task.usda",
           "x5": "robot/ARX.usd"
@@ -11392,7 +11392,7 @@
           "authored_task_source_sha256": "5e2308b9c3f63d514ae75b778a506292c05aaa370c073dcd930fe98d13d05e6e",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -11436,17 +11436,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "01603665ca24f318d0395c634df1435ccb9436e318238c1493146af5b6066d71",
+      "full_spec_sha256": "ca8ad62d5229d09c9e90f8f5b0550e45d3d9471f3ecf086bd01e870de6dd60a2",
       "runtime_asset_sha256": {
         "source_case": "697520954090fdab8e8c78c13f35e2543cf32bf26cc4f0a6a1df31eed91b3402",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "33a8e2a0dd07ad234d6feaaf9330a80c29555aaf8a3ba01cffaee283e0ecac77",
         "validation_task": "5e2308b9c3f63d514ae75b778a506292c05aaa370c073dcd930fe98d13d05e6e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -11534,16 +11534,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-455187b31c2d2336.json",
@@ -12419,7 +12419,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-455187b31c2d2336.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-455187b31c2d2336/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-455187b31c2d2336/task.usda",
           "x5": "robot/ARX.usd"
@@ -12433,7 +12433,7 @@
           "authored_task_source_sha256": "e08f882cbb2494a22eae6c604ebbcac8cd843a3b36bd4d0d29f4efb5b151deff",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -12477,17 +12477,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "dab180bdb3637532ee8cfdb287b1fcdeb92d36d13959c0b3e394699b5dd9cc3e",
+      "full_spec_sha256": "58060f685466af359b331f9dca889dc2d6a34f6779428c23fd11e0507c118989",
       "runtime_asset_sha256": {
         "source_case": "36d7c7bef1784bc6f7bc73954d6834c5c2d66113ddc07433341229a9b4531ab1",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "4c5f46ab0ae71bfc8a018ef57b2790f5937bd698f81b67376f60eb70a0b11e88",
         "validation_task": "e08f882cbb2494a22eae6c604ebbcac8cd843a3b36bd4d0d29f4efb5b151deff",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -12575,16 +12575,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-4d499c637c43200e.json",
@@ -13460,7 +13460,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-4d499c637c43200e.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-4d499c637c43200e/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-4d499c637c43200e/task.usda",
           "x5": "robot/ARX.usd"
@@ -13474,7 +13474,7 @@
           "authored_task_source_sha256": "9d4b4d0aa3c5cedd06f97d6ee672e7b34c4f261000c2749aa5ef3924a3d97aa1",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -13518,17 +13518,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "17b074719d820e4b82214f434014f6cde03f4d0c2a894dce04f87866bd01539c",
+      "full_spec_sha256": "1bfeda72ff50767e5436460cc1e2fae79221cb63ffc636dab5d3dd441d35676d",
       "runtime_asset_sha256": {
         "source_case": "4b3098f60fda60ab963eab283711ba81c2aaac322313aedf9112233e1fdcce97",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "d3482615a73db0391a3f287604ddaf993aaa1adb24827bc8b144e8fe592e9248",
         "validation_task": "9d4b4d0aa3c5cedd06f97d6ee672e7b34c4f261000c2749aa5ef3924a3d97aa1",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -13616,16 +13616,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-555de17a44886975.json",
@@ -14501,7 +14501,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-555de17a44886975.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-555de17a44886975/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-555de17a44886975/task.usda",
           "x5": "robot/ARX.usd"
@@ -14515,7 +14515,7 @@
           "authored_task_source_sha256": "3f0b4041cb32d1a66394a971ddd8ab08abf9f7555fce1b38ad4c015938c55c49",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -14559,17 +14559,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "21f44a5ed03ef57ec8a73cd295da41c365f2e984a9b785a47486412c508f5d14",
+      "full_spec_sha256": "f96cd5044d01afc6b70ab1043daae06e2e932436d9c5c3f3ce5349539658dad8",
       "runtime_asset_sha256": {
         "source_case": "19c9bf87258916e230cbeef71625f4c246c4753a5c714ab43a2e46819a1802e5",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "8d2e3dabb425d2878d2024e7688354857b05a267613f55a3ad643b2d284f85dd",
         "validation_task": "3f0b4041cb32d1a66394a971ddd8ab08abf9f7555fce1b38ad4c015938c55c49",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -14657,16 +14657,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-599f38fcf8742608.json",
@@ -15542,7 +15542,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-599f38fcf8742608.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-599f38fcf8742608/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-599f38fcf8742608/task.usda",
           "x5": "robot/ARX.usd"
@@ -15556,7 +15556,7 @@
           "authored_task_source_sha256": "10f4c2f2aa385ff9dd9d50e338d9159c789117eb8964331d1263fb44c5b473f8",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -15600,17 +15600,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "1441c27db84213bcd15a77dea0455131711931c5b086fe856b97983c24b642dd",
+      "full_spec_sha256": "30cb5036d7bdda5a897aa315a97e26a1c38628039847cb8a1c7b4c2e12457ca8",
       "runtime_asset_sha256": {
         "source_case": "3a33113769e013ac791baf80601292cba690abea827951462cc63aae52523b19",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "96e7284f6666ae2c2d0d70116d3354824e8efa19879dcbad62aa10fe89371fda",
         "validation_task": "10f4c2f2aa385ff9dd9d50e338d9159c789117eb8964331d1263fb44c5b473f8",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -15698,16 +15698,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-67835d3626415f89.json",
@@ -16583,7 +16583,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-67835d3626415f89.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-67835d3626415f89/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-67835d3626415f89/task.usda",
           "x5": "robot/ARX.usd"
@@ -16597,7 +16597,7 @@
           "authored_task_source_sha256": "9ca7243feb8b3e201bfc74952931da4be7addc7389d3d570b65c5ceee814a470",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -16641,17 +16641,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "5a7b4944ac93dd9a1664cae5ed4e38d1f8f4d1f8325505237b6b9f6fef7c9d24",
+      "full_spec_sha256": "dd466d1bd13ef63d23b0ecbaced1de58ac65d4610e6f5de7a491fff1b9f91bac",
       "runtime_asset_sha256": {
         "source_case": "bda10b61601f153e38fe4e07eed7fd3ba5c5e76d5bfd50f1c361c0c979edd782",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "eb12c97a8a6d7b4a1146beeb30eb8677efa4896aa5c5eb98f3942e09147b0b35",
         "validation_task": "9ca7243feb8b3e201bfc74952931da4be7addc7389d3d570b65c5ceee814a470",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -16739,16 +16739,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-8464afb66a64cd32.json",
@@ -17624,7 +17624,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-8464afb66a64cd32.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-8464afb66a64cd32/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-8464afb66a64cd32/task.usda",
           "x5": "robot/ARX.usd"
@@ -17638,7 +17638,7 @@
           "authored_task_source_sha256": "3a1a725d6d062541ce7d4d3648adeef3292bb043a5fc74de6b7bb21858764003",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -17682,17 +17682,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "24dc936a7247eb55dfcbd18900d5ea1809edc5b9b3a7766bf63b96efd03880b5",
+      "full_spec_sha256": "4a745e4f27df89e95a9f94c79ebd406405ad73180508156fb2112476721413eb",
       "runtime_asset_sha256": {
         "source_case": "6e3b21a1c7270b7134f7094696b86678c51f6dc8ed076b730b8bafb6b88986b3",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "d278b8418099b47fb611c594d0d76cdb542fdc9c05cde73ae8321ce8242335ed",
         "validation_task": "3a1a725d6d062541ce7d4d3648adeef3292bb043a5fc74de6b7bb21858764003",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -17780,16 +17780,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-885fd28ac9cf6e45.json",
@@ -18665,7 +18665,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-885fd28ac9cf6e45.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-885fd28ac9cf6e45/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-885fd28ac9cf6e45/task.usda",
           "x5": "robot/ARX.usd"
@@ -18679,7 +18679,7 @@
           "authored_task_source_sha256": "5e2308b9c3f63d514ae75b778a506292c05aaa370c073dcd930fe98d13d05e6e",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -18723,17 +18723,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "e729e44b3f01e4a84c532c7cd4d00892d3924c61f44ca004f6f96b3a307f18a9",
+      "full_spec_sha256": "b08ca63d8553bcce94644f56f2e03836d70b23401f0e7e710a1d5c7eda77010d",
       "runtime_asset_sha256": {
         "source_case": "c2cd1e8b743e8dc8cb429d52c2795c3e758e88ddde84de7772e0e9cf7cdeec6b",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "8f4350a74212743a3d14939e0846aaf90b6f7c22b16ed569f5f0aff3f99a4faa",
         "validation_task": "5e2308b9c3f63d514ae75b778a506292c05aaa370c073dcd930fe98d13d05e6e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -18821,16 +18821,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-dca39e54fb1212f2.json",
@@ -19706,7 +19706,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-dca39e54fb1212f2.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-dca39e54fb1212f2/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-dca39e54fb1212f2/task.usda",
           "x5": "robot/ARX.usd"
@@ -19720,7 +19720,7 @@
           "authored_task_source_sha256": "3263d205f0e04dfadddf4b531ecdcc8d1354cc9d50a3db490643a3ba5f8724dd",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -19764,17 +19764,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "c9dd0a138edeae1ba59bdd2bc423cded9f56ff8df991fc3e74905da8f2fbcd4e",
+      "full_spec_sha256": "831612dde824369fc6433b97cb9b2c7229e4244430fcb402503bd84bb5af0025",
       "runtime_asset_sha256": {
         "source_case": "23ba7041cc7fc100a152a1e967aa42a6e3787ab32ec9faafe373609543fe0aa3",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "6f0511faccdbc0556e786a659024e92a3088bea611dddc7dd98e373e589e243c",
         "validation_task": "3263d205f0e04dfadddf4b531ecdcc8d1354cc9d50a3db490643a3ba5f8724dd",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -19862,16 +19862,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/hard/VAL-CP09-hard-ee7bb227ed0ed404.json",
@@ -20747,7 +20747,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/hard/VAL-CP09-hard-ee7bb227ed0ed404.json",
           "station": "CP09-assets/30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64/0000.usda",
-          "station_proof": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
+          "station_proof": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
           "validation_geometry_proof": "tasks/hard/VAL-CP09-hard-ee7bb227ed0ed404/geometry.json",
           "validation_task": "tasks/hard/VAL-CP09-hard-ee7bb227ed0ed404/task.usda",
           "x5": "robot/ARX.usd"
@@ -20761,7 +20761,7 @@
           "authored_task_source_sha256": "3a1a725d6d062541ce7d4d3648adeef3292bb043a5fc74de6b7bb21858764003",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -20805,17 +20805,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "800f78ef51f6912b6a8f83f54828f9337e6da545c1c3e17f9495ed506ada64a9",
+      "full_spec_sha256": "7be4f54082529bc700199aa4cb55cf6002409d9661cd371cafeaa2e7c6d63e97",
       "runtime_asset_sha256": {
         "source_case": "30174879316527f978e68e3dd973c68d68ba5092310eaae330c01d2db9a901f1",
         "station": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
-        "station_proof": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "validation_geometry_proof": "8ba55bbe877a6e476fb70ae70096bb8a5409dba0df31f208839b4fa3122f0004",
         "validation_task": "3a1a725d6d062541ce7d4d3648adeef3292bb043a5fc74de6b7bb21858764003",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07",
+        "station_proof_sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab",
         "station_runtime_sha256": "df122bfd5a9e51d5e9a15c3ae1ab5064e0cfc905db1c6946542b692d38f2bf0f",
         "station_source_sha256": "30a42cef57b4751d846c50157d2bdebf5955776d7e06d4d08e70afaec3b88e64"
       }
@@ -20903,16 +20903,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-2110e5a0efd03be4.json",
@@ -21788,7 +21788,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-2110e5a0efd03be4.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-2110e5a0efd03be4/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-2110e5a0efd03be4/task.usda",
           "x5": "robot/ARX.usd"
@@ -21802,7 +21802,7 @@
           "authored_task_source_sha256": "5abfdab5521f83edde8e9106bbffa3f26ccc2a245d50fba99f7a5b14908aaf03",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -21846,17 +21846,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "6d1d8f0bc406b1e571aec3f25ca9b1e57205e01492fdf10083263d02220f9b8e",
+      "full_spec_sha256": "e2748593971f7a8b1500444b4bca99f980ece77767577ff0f19532675a265231",
       "runtime_asset_sha256": {
         "source_case": "b65dd84a19ec2a8573ee76b0140d5856462b8de23ae1e63c71bd41332d67a788",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "c6bb3b1a0ec2cfe177e7baee7e7b754f2a7c00f8cf16a883a515b59408b70672",
         "validation_task": "5abfdab5521f83edde8e9106bbffa3f26ccc2a245d50fba99f7a5b14908aaf03",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }
@@ -21944,16 +21944,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-221a2e6f76048b29.json",
@@ -22829,7 +22829,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-221a2e6f76048b29.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-221a2e6f76048b29/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-221a2e6f76048b29/task.usda",
           "x5": "robot/ARX.usd"
@@ -22843,7 +22843,7 @@
           "authored_task_source_sha256": "0b1b96ca81e517f659ee791b08403530b908feabc0752ad58e7519a548d1698d",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -22887,17 +22887,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "4fad02230d4a067a86d03f6237ad6f66e421b8584a946eb98150f129582361fc",
+      "full_spec_sha256": "975f574c31b7ea7327c38cd1ec5e058333bc01538623d900a3167614c77ce9eb",
       "runtime_asset_sha256": {
         "source_case": "8fb9aae0759786d8a04407436e1d8b5624b7cd16edbc5ff16c940bd2fff7258e",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "9ade6b4c7ddbca5b26df4c61a7e3801aa052a0a637a012b32dfcbac029a4b852",
         "validation_task": "0b1b96ca81e517f659ee791b08403530b908feabc0752ad58e7519a548d1698d",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }
@@ -22985,16 +22985,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-2cea39456c474b95.json",
@@ -23870,7 +23870,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-2cea39456c474b95.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-2cea39456c474b95/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-2cea39456c474b95/task.usda",
           "x5": "robot/ARX.usd"
@@ -23884,7 +23884,7 @@
           "authored_task_source_sha256": "bb50a484fe3eb7cddf131a12699c52adc31d3f660302fc079195aefd5eab9e6c",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -23928,17 +23928,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "3471c190580d1b67f9a9e28c141e2fd4cfd0856f2cbe804f4d2375fa55563acf",
+      "full_spec_sha256": "973a305e1f091e55a42d2c0b37fb824ab5404ec908091035ed36be0ea96767c1",
       "runtime_asset_sha256": {
         "source_case": "b78ec78b806fe3f56ac35bb380c4958daf70c992da7041693cc1f764b407e239",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "d5072acb150e503f8831d8f6f5523504faef398bfd04ad39799e38dd24150b65",
         "validation_task": "bb50a484fe3eb7cddf131a12699c52adc31d3f660302fc079195aefd5eab9e6c",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }
@@ -24026,16 +24026,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-30c4f78e9a4da39b.json",
@@ -24911,7 +24911,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-30c4f78e9a4da39b.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-30c4f78e9a4da39b/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-30c4f78e9a4da39b/task.usda",
           "x5": "robot/ARX.usd"
@@ -24925,7 +24925,7 @@
           "authored_task_source_sha256": "a32621f5528f64f098610effc805e07c960d44eb0182a58333d9f6f77b4a4778",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -24969,17 +24969,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "c2379fd22d598d7262d0793a8b358d407314c5667091bce1d3d7e76bd0251cf3",
+      "full_spec_sha256": "fcefd529b8a16e17081b73cf1fb17175284d13a80cda28c9d7d9eeba2b9ea451",
       "runtime_asset_sha256": {
         "source_case": "45fb47d74784868f6509161878b534a28314993c68e19b93db106ab87207d5f3",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "a4f3b8c4b99564ac6667719b26f00f7d7e45350e6474294aa0319355a9981920",
         "validation_task": "a32621f5528f64f098610effc805e07c960d44eb0182a58333d9f6f77b4a4778",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }
@@ -25067,16 +25067,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-49c345a6ecc393fd.json",
@@ -25952,7 +25952,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-49c345a6ecc393fd.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-49c345a6ecc393fd/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-49c345a6ecc393fd/task.usda",
           "x5": "robot/ARX.usd"
@@ -25966,7 +25966,7 @@
           "authored_task_source_sha256": "636d2347211847dbbaa8bf9b8c080c34c16ca8b029e18134f438fdbd7370fa45",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -26010,17 +26010,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "5fc71c50f42e8b7749922fd81b6c44430f043053193259cf3a3bb33997f8d909",
+      "full_spec_sha256": "9f98ddab7911e03a0747265b3eee7ae69830d74df3a6a3416ec625a9ab4f7b24",
       "runtime_asset_sha256": {
         "source_case": "b1cb6e433f9e41630af3e76f1f744936e25ea524aa78b446b0544cde51220b5b",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "2b46c7c0f0747484910bf218cd64ef8796553b6dab9f34055e481bb3fd1ec920",
         "validation_task": "636d2347211847dbbaa8bf9b8c080c34c16ca8b029e18134f438fdbd7370fa45",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }
@@ -26108,16 +26108,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-7a53ac5540ea8347.json",
@@ -26993,7 +26993,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-7a53ac5540ea8347.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-7a53ac5540ea8347/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-7a53ac5540ea8347/task.usda",
           "x5": "robot/ARX.usd"
@@ -27007,7 +27007,7 @@
           "authored_task_source_sha256": "681556189ec6308e42e49d6dec0b7d4a340901c9be15243d28957e8c167173d2",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -27051,17 +27051,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "61e5c2700610f13a1ba61d64e092dedb6e7c0c2526a2112b1fe5dd188f70cd53",
+      "full_spec_sha256": "12b9828d9cd0b3102fb4803a3f5ecb4cb4dfb06d873f5510016a81d163e7cfaa",
       "runtime_asset_sha256": {
         "source_case": "00dfb3456e4520eee989d15d1db86703b2171bb646c79f88aa724638e35175a7",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "67cb25360b1856a96d180c74d486c50560c87157f441050645816de7b16b5ab4",
         "validation_task": "681556189ec6308e42e49d6dec0b7d4a340901c9be15243d28957e8c167173d2",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }
@@ -27149,16 +27149,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-a18451aa3b287115.json",
@@ -28034,7 +28034,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-a18451aa3b287115.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-a18451aa3b287115/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-a18451aa3b287115/task.usda",
           "x5": "robot/ARX.usd"
@@ -28048,7 +28048,7 @@
           "authored_task_source_sha256": "1531c9d6fbd854976270d5866d8beb84e573fb45e5492684f34493226d347796",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -28092,17 +28092,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "86b7140f19f74cd57d829c9066ed618e9f094729387019a914cf93b90828d2c8",
+      "full_spec_sha256": "1f2fae72faa9c2f1bf1fea28fc88a8117217c7071a413fb3f824f083191b0b8d",
       "runtime_asset_sha256": {
         "source_case": "f9dcc470e29adfa15a6f3e6fb8d00039419d72d5425a3e5e46a61bd7afac48f8",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "aef75ddd54e88f46acd145109742e0009221c68006b77284800acfd00b02fbf8",
         "validation_task": "1531c9d6fbd854976270d5866d8beb84e573fb45e5492684f34493226d347796",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }
@@ -28190,16 +28190,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-c6901d9c4648c0f3.json",
@@ -29075,7 +29075,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-c6901d9c4648c0f3.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-c6901d9c4648c0f3/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-c6901d9c4648c0f3/task.usda",
           "x5": "robot/ARX.usd"
@@ -29089,7 +29089,7 @@
           "authored_task_source_sha256": "2e3701ae72e7b1676ab47307e5cd4d61c8d16181716969f13ee54ed74d5ffad5",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -29133,17 +29133,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "29a36fd689aa0db052a41a0cb1cb4972d5e2ccf4f9232def03869087e0d47ff8",
+      "full_spec_sha256": "892f088ab4624dfd8129cc31acbb99e7df5a1a0738b9880011e861dac9691b98",
       "runtime_asset_sha256": {
         "source_case": "a767a7cfafea47a3f61d0e7f80ff7b0b838a8846b546eb73053627c8c9cbcaad",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "b202eddb7f859674ab03b39eba07c6844363a3ad56bdd9a1a8402f08527e13bc",
         "validation_task": "2e3701ae72e7b1676ab47307e5cd4d61c8d16181716969f13ee54ed74d5ffad5",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }
@@ -29231,16 +29231,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-d6db55080ebaf2be.json",
@@ -30116,7 +30116,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-d6db55080ebaf2be.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-d6db55080ebaf2be/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-d6db55080ebaf2be/task.usda",
           "x5": "robot/ARX.usd"
@@ -30130,7 +30130,7 @@
           "authored_task_source_sha256": "d6456315b89bdceba22beab90007f61eb13625a57dd44688e182edee66c70582",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -30174,17 +30174,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "8de3178f044dae8bb51988bf0b8ff71e3b92359a69b41517067cdeab9213ad0b",
+      "full_spec_sha256": "2c58bfd42544c4a7b29894f40f04f3ba592f0b59d2e37d638530b9acf5d3724c",
       "runtime_asset_sha256": {
         "source_case": "9a7ca9ad16ae53d5603bcb581b457c7377d35d1c04fdf967ea25408d9ff03ccc",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "1b1c3facdf5ca148ff84bffb7bbafb38f931dc1f81fe695e6ba35ef68b8b29f0",
         "validation_task": "d6456315b89bdceba22beab90007f61eb13625a57dd44688e182edee66c70582",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }
@@ -30272,16 +30272,16 @@
           "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f"
         },
         {
-          "path": "CP09-public-proofs/642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07/station_proof.json",
-          "sha256": "642eb85042c82da25c076ec745dea6c562eb768b43e279fd4f8d1287914d7c07"
+          "path": "CP09-public-proofs/a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab/station_proof.json",
+          "sha256": "a215d0137b4a3ae453370e9b821f2296a533a7026d2fca207a9b54f88fc5c4ab"
         },
         {
-          "path": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
-          "sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa"
+          "path": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
+          "sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880"
         },
         {
-          "path": "CP09-public-proofs/e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c/station_proof.json",
-          "sha256": "e031532f864ca9268d7708cbb22e016f6f9dab530d78c47975c8a32c7cc5033c"
+          "path": "CP09-public-proofs/ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332/station_proof.json",
+          "sha256": "ff74789b0e7a2c017031a2f8b69ff2354e24352b5424708696322e7f9efd4332"
         },
         {
           "path": "cases/medium/VAL-CP09-medium-f78052cf68a2b7b4.json",
@@ -31157,7 +31157,7 @@
           "portable-mdl-2": "mdl-sdk/rtx",
           "source_case": "cases/medium/VAL-CP09-medium-f78052cf68a2b7b4.json",
           "station": "CP09-assets/10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7/0000.usda",
-          "station_proof": "CP09-public-proofs/c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa/station_proof.json",
+          "station_proof": "CP09-public-proofs/86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880/station_proof.json",
           "validation_geometry_proof": "tasks/medium/VAL-CP09-medium-f78052cf68a2b7b4/geometry.json",
           "validation_task": "tasks/medium/VAL-CP09-medium-f78052cf68a2b7b4/task.usda",
           "x5": "robot/ARX.usd"
@@ -31171,7 +31171,7 @@
           "authored_task_source_sha256": "6ca669e124a89627aaa87cb3528a5a2b60a3f65bfc331f8538cb5f46adcdb52f",
           "composition_kind": "new_validation_composition",
           "dock_rule_status": "provisional_source_retrieval_facts",
-          "geometry_decision": "benchmark maintainer 2026-11-01 \u88c1\u51b3\uff1a\u4fdd\u7559\u91c7\u96c6\u6307\u57ab\u4e0e\u51e0\u4f55\uff0c\u4e0d\u5f97\u5220\u9664\u6216\u6539\u56de\u901a\u7528",
+          "geometry_decision": "Preserve the task finger pads and geometry.",
           "instruction": "Remember the briefly shown original drawing on the whiteboard. Erase the added strokes, uncap the pens of the colors needed, and redraw any original strokes you erased, so the board matches the original.",
           "layout_profile": "clean",
           "layout_split": "validation",
@@ -31215,17 +31215,17 @@
         "source_id": "cp09-validation-composition-v1",
         "task_id": "CP09"
       },
-      "full_spec_sha256": "8a3adeae34ba45f377b819472f4feea625c1ecdcaf467f9b144e6c47977eec03",
+      "full_spec_sha256": "d3222cfbace95232b165a000f6c3def5d0649be8dffee8487f35f98cc6bd7ac6",
       "runtime_asset_sha256": {
         "source_case": "ee567c7c9c711531b292858b9ceaf7fd92bceb0868cddda5e7c5eceacf6ba8dc",
         "station": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
-        "station_proof": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "validation_geometry_proof": "d6d9c0db86dc93af8f451ee09c90ea5ca74874a4657fb136e95395f1c3a96650",
         "validation_task": "6ca669e124a89627aaa87cb3528a5a2b60a3f65bfc331f8538cb5f46adcdb52f",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
-        "station_proof_sha256": "c6930b1603a132477f7da36add97116c05239e42490390d81fa31efd66882daa",
+        "station_proof_sha256": "86ec97d0fd7225b5b40eedb7d26c5cb776bf8eae8003433ccf568a810a612880",
         "station_runtime_sha256": "03490bbd78a1d3480a3ff53e3360c21f8e60b1023cc093b22cf49eae42bc62d3",
         "station_source_sha256": "10fb1146b9303c3d426b2c0ec1360aa12bf158a163e0286695833580788d94f7"
       }

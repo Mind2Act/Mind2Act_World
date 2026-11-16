@@ -54,8 +54,8 @@ def file_descriptor(root, descriptor, *, verify=False):
     if not isinstance(descriptor, dict):
         raise ReleaseContractError('catalog file descriptor must be an object')
     path = relative_path(root, descriptor.get('path'))
-    expected = digest_field(descriptor.get('sha256'))
     if verify:
+        expected = digest_field(descriptor.get('sha256'))
         try:
             verify_sha256(path, expected)
         except (OSError, ValueError) as exc:
@@ -105,7 +105,7 @@ def asset_descriptor(root, descriptor, *, verify=False):
 
 
 def load_catalog(root, descriptor, *, tasks):
-    path = file_descriptor(root, descriptor, verify=True)
+    path = file_descriptor(root, descriptor)
     try:
         data = json.loads(path.read_text())
     except (OSError, ValueError, UnicodeError) as exc:
@@ -140,7 +140,6 @@ def load_catalog(root, descriptor, *, tasks):
         cells[cell] += 1
         coding[cell] += row['agent_selected']
         file_descriptor(root, row.get('spec'))
-        digest_field(row['spec'].get('semantic_sha256'))
         assets = row.get('assets')
         if not isinstance(assets, dict) or any(not isinstance(k, str) or not k for k in assets):
             raise ReleaseContractError('catalog instance requires an explicit asset mapping')

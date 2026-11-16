@@ -1,4 +1,4 @@
-include README.md LICENSE THIRD_PARTY.md UPSTREAM_COMMIT BASE_PUBLIC_COMMIT .dockerignore
+include README.md LICENSE THIRD_PARTY.md .dockerignore
 recursive-include docs *.md
 recursive-include docker *
 recursive-include task *.md

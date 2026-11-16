@@ -5,7 +5,6 @@ from mind2act_eval.contracts import NativeEvidence, Score
 from mind2act_eval.scoring import SCORING_VERSION
 from mind2act_eval.tasks._precision.stability import KEYS
 
-TOLERANCE_V = 1.0
 TOLERANCES = {'easy': 1.0, 'medium': 0.5, 'hard': 0.5}
 ZERO_DISTANCES = {'easy': 40.0, 'medium': 20.0, 'hard': 10.0}
 CAPS = {'easy': 30.0, 'medium': 22.0, 'hard': 15.0}
@@ -21,7 +20,7 @@ def difficulty(evidence):
         raise ValueError('unknown precision difficulty')
     return level
 
-HOLD_SECONDS = 1.0  # Source instruction/measurement storage; not a scoring gate.
+HOLD_SECONDS = 1.0  # Recorder termination window only; scoring reads the final T0 value.
 
 
 def score(evidence: NativeEvidence) -> Score:

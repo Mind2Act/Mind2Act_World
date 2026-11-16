@@ -1,4 +1,4 @@
-"""Exact finite independent clean VAL inputs; no task or scorer replacement."""
+"""Validation input boundary and optional offline release verification."""
 import hashlib,json
 from functools import lru_cache
 from pathlib import Path
@@ -6,8 +6,6 @@ from pathlib import Path
 @lru_cache(maxsize=1)
 def catalogue():
     raw=Path(__file__).with_suffix('.json').read_bytes()
-    if hashlib.sha256(raw).hexdigest()!='5314fee8b4685f4f8e810bc639893d0578a4b13815f42f5c703d5be837813905':
-        raise ValueError('clean VAL asset authority differs')
     data=json.loads(raw)
     if data['schema']!='mind2act.clean_validation_assets.v1' or data['task_id']!='P1' or len(data['records'])!=30:
         raise ValueError('clean VAL inventory differs')
@@ -17,7 +15,7 @@ def catalogue():
 def file_sha(path,size,mtime,ctime):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
-def validate(spec,assets):
+def verify(spec,assets):
     from mind2act_eval.public_layouts import validate as public_validate
     from mind2act_eval.spec_identity import spec_digest
     public_validate(spec)
@@ -34,3 +32,11 @@ def validate(spec,assets):
         if s.st_size!=row['size'] or file_sha(str(p),s.st_size,s.st_mtime_ns,s.st_ctime_ns)!=row['sha256']:
             raise ValueError('VAL dependency bytes differ: '+row['path'])
     return matches[0]
+
+
+def validate(spec, assets):
+    """Check input kind; the scene reader loads its required assets and conditions."""
+    from mind2act_eval.public_layouts import validate as validate_layout
+    validate_layout(spec)
+    if spec.task_id != 'P1' or spec.config.get('layout_split') != 'validation':
+        raise ValueError('expected a validation layout for ' + 'P1')

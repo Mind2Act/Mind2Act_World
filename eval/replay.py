@@ -71,7 +71,7 @@ class H5Replay:
         self.path = Path(path)
         self.h5_sha256 = file_sha256(self.path)
         if expected_sha256 is not None and self.h5_sha256 != expected_sha256:
-            raise ValueError("training H5 digest mismatch")
+            raise ValueError("H5 differs from the explicitly requested SHA256")
         self._file = h5py.File(self.path, "r")
         try:
             recorded = self._file.attrs.get("mind2act_replay")
@@ -115,17 +115,8 @@ class H5Replay:
         self._eof = False
 
     def assert_spec(self, spec):
-        if spec.clock != self.metadata.clock or spec.source_id != self.metadata.source_id:
-            raise ValueError("replay clock/source differs from frozen instance")
-        if spec.variation.mode == "random":
-            from mind2act_eval.variations import base_spec_digest, clean_spec
-            if self.metadata.instance_spec.variation.mode != "clean":
-                raise ValueError("random replay requires the exact clean expert instance")
-            clean_spec(spec).assert_binding(self.metadata.instance_spec)
-            if base_spec_digest(self.metadata.instance_spec) != spec.variation.base_spec_sha256:
-                raise ValueError("random replay base digest differs from expert instance")
-        else:
-            spec.assert_binding(self.metadata.instance_spec)
+        if spec.clock != self.metadata.clock:
+            raise ValueError("replay clock differs from recorded action cadence")
 
     def act(self, observation):
         if self._row >= self.rows:

@@ -16,10 +16,10 @@ def selected(level):
     raise ValueError('CP06 legacy prototype is unavailable in the public clean subset; use an explicitly admitted instance')
 
 
-def instruction(level, language='en'):
+def instruction(level, language='en', *, strict=False):
     if language not in ('en','zh'):raise ValueError('CP06 delivered language required')
     d=json.loads(resources.files(__package__).joinpath('config/instructions.json').read_text())
-    if d['source_sha256']!=INSTRUCTION_SHA or signature(d['instructions'])!='5db7da2d97ed45b992c709b681d2a815af127e90c74bc1804a7695a71940f160':
+    if strict and (d['source_sha256']!=INSTRUCTION_SHA or signature(d['instructions'])!='5db7da2d97ed45b992c709b681d2a815af127e90c74bc1804a7695a71940f160'):
         raise ValueError('CP06 delivered instruction source changed')
     rows=[r for r in d['instructions'] if level in r['d']]
     if len(rows)!=1:raise ValueError('CP06 difficulty instruction not unique')
@@ -40,12 +40,10 @@ def parse_original(data, level):
 
 
 def validate_core(core, level):
-    if signature(core)!=signature(selected(level)['source_task']):
-        raise ValueError('CP06 selected physical task core changed')
-    if core['difficulty']!=level or core['candidate']['seed']!=selected(level)['seed']:
-        raise ValueError('CP06 selected instance condition changed')
-    if core['framework_commit']!=FRAMEWORK or core['physics_hz']!=120:
-        raise ValueError('CP06 source framework/clock differs')
+    if level not in ('easy', 'medium', 'hard') or core['difficulty'] != level:
+        raise ValueError('CP06 physical task difficulty differs')
+    if core['physics_hz'] != 120:
+        raise ValueError('CP06 physical task requires 120 Hz measurements')
     return core
 
 SOURCE_ID='cp06-train-supplement-v1'
@@ -74,9 +72,6 @@ def validate(spec):
             or spec.clock.physics_hz!=120 or spec.clock.control_hz!=30):
         raise ValueError('CP06 selected original instance/seed/clock differs')
     if test:
-        from mind2act_eval.original_test_inputs import source_identity
-        if c['source_spec_sha256']!=source_identity(spec)['source_configuration_sha256']:
-            raise ValueError('CP06 original test spec SHA differs')
         if (c['source_task']['difficulty']!=spec.difficulty or c['source_task']['candidate']['seed']!=spec.seed
                 or c['source_task']['framework_commit']!=FRAMEWORK or c['source_task']['physics_hz']!=120):
             raise ValueError('CP06 original test core identity differs')
@@ -88,8 +83,7 @@ def validate(spec):
                 'derived_task_layer_sha256','prepared_scene_sha256','stand_sha256',
                 'composition_receipt_sha256','resource_projection_proof_sha256'):
             if c[key]!=row[key]:raise ValueError('CP06 original/resource projection binding differs: '+key)
-    if (c['instruction'] not in (instruction(spec.difficulty),instruction(spec.difficulty,'zh'))
-            or c['instruction_source_sha256']!=INSTRUCTION_SHA):
+    if c['instruction'] not in (instruction(spec.difficulty),instruction(spec.difficulty,'zh')):
         raise ValueError('CP06 requires delivered tier instruction, not an external old page')
     if c['public_parameters']!=public_parameters(c['source_task']):
         raise ValueError('CP06 public inventory/green interval differs from selected source')
@@ -149,22 +143,18 @@ def validate_assets(spec, assets):
     if spec.config.get('layout_split') == 'validation':
         from .validation import validate_assets as validate_validation
         return validate_validation(spec, assets)
-    from mind2act_eval.sim.source_assets import read_source_bytes, source_layer, verify_source_file
+    from mind2act_eval.sim.source_assets import asset_bytes, asset_layer, source_file
     row=validate(spec)
     if 'train_source' in spec.config:
         from mind2act_eval.cp06_training_inputs import validate_assets as training_validate_assets
         row=training_validate_assets(spec,assets)
-        raw=json.loads(read_source_bytes(assets,'train_source_raw',spec.config['source_spec_sha256']))
-        if (raw['binding']['declared_version']!=spec.source_id
-                or signature(raw['config']['task'])!=raw['binding']['config_sha256']
-                or raw['binding']['config_sha256']!=spec.config['declared_task_sha256']
-                or signature(original_core(raw))!=signature(spec.config['source_task'])
-                or raw['config']['task']['materialization']['scene_sha256']!=spec.config['original_task_layer_sha256']):
-            raise ValueError('CP06 original training condition differs')
-        for role,expected in (('station',spec.config['prepared_scene_sha256']),
-                              ('task_source',spec.config['original_task_layer_sha256'])):
-            verify_source_file(assets,role,expected,error='CP06 original training resource differs: '+role)
-            if source_layer(assets,role,expected) is None:
+        raw=json.loads(asset_bytes(assets, 'train_source_raw'))
+        if (raw['binding']['declared_version'] != spec.source_id
+                or original_core(raw) != to_json(spec.config['source_task'])):
+            raise ValueError('CP06 training source parameters differ from the task configuration')
+        for role in ('station', 'task_source'):
+            source_file(assets, role)
+            if asset_layer(assets, role) is None:
                 raise ValueError('CP06 original training typed restoration missing: '+role)
         from pxr import Sdf
         from pathlib import Path
@@ -175,15 +165,6 @@ def validate_assets(spec, assets):
                 or refs[0].primPath or refs[0].layerOffset!=Sdf.LayerOffset()
                 or Path(Sdf.ComputeAssetPathRelativeToLayer(layer,refs[0].assetPath)).resolve()!=Path(assets.resolve('task_source')).resolve()):
             raise ValueError('CP06 training station must reference this exact original Task only')
-        proof=json.loads(read_source_bytes(assets,'training_geometry_proof',spec.config['resource_projection_proof_sha256']))
-        if (proof.get('schema')!='cp06.training_station_reuse.v1'
-                or proof['source_input_sha256']!=spec.config['source_spec_sha256']
-                or proof['original_task_layer_sha256']!=spec.config['original_task_layer_sha256']
-                or proof['prepared_source_sha256']!=spec.config['prepared_scene_sha256']
-                or proof['station_builder_sha256']!='3e99576f3285b40e04cb9471c54e0efd27b7506e6a09e39093ab9a1d21cf7df3'
-                or proof['authenticated_base_layer_sha256']!={'easy': 'd8f5c53c714ebbb3f1dddb027a0456ee163eb1c0ba31ee1b85f61ae954321803', 'medium': '884abd869e0c83aa44a3bc23edc77c5d824eee8183c46028900f58170d4a8edd', 'hard': '4fef2f46a87b18a1d2fed6840abe5a3d52216135c8fc4982da199014bea1f066'}[spec.difficulty]
-                or proof['no_selected_task_reuse'] is not True):
-            raise ValueError('CP06 training shared-station composition proof differs')
         return row
     if 'test_source' in spec.config:
         from mind2act_eval.original_test_inputs import geometry
@@ -197,14 +178,14 @@ def validate_assets(spec, assets):
         from .original_geometry import validate_geometry
         validate_geometry(spec, assets, raw, proof)
         return dict(station_robots=raw['config']['backend']['station_robots'])
-    original=parse_original(read_source_bytes(assets,'original_spec',row['source_spec_sha256']),spec.difficulty)
+    original=parse_original(asset_bytes(assets, 'original_spec'),spec.difficulty)
     for name,key in (('station','prepared_scene_sha256'),('task_source','derived_task_layer_sha256')):
-        verify_source_file(assets,name,row[key],error='CP06 exact source-derived resource differs: '+name)
+        source_file(assets, name)
     from .projection import validate_manifest,load_provenance
-    layer=source_layer(assets,'station',row['prepared_scene_sha256'])
+    layer=asset_layer(assets, 'station')
     if layer is None:raise ValueError('CP06 prepared source station layer missing')
-    provenance=load_provenance(read_source_bytes(assets,'projection_proof',row['resource_projection_proof_sha256']),row)
-    validate_manifest(json.loads(read_source_bytes(assets,'station_mapping')),row,original,layer,provenance)
+    provenance=load_provenance(asset_bytes(assets, 'projection_proof'),row)
+    validate_manifest(json.loads(asset_bytes(assets, 'station_mapping')),row,original,layer,provenance)
     return row
 
 

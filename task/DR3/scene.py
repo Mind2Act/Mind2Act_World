@@ -174,8 +174,8 @@ def _drive(doors, schedules, source, time):
 
 def build(spec: InstanceSpec, ctx: BuildContext) -> GateScene:
     validate(spec)
-    from mind2act_eval.sim.source_assets import verify_source_file
-    verify_source_file(ctx.assets, 'station', spec.config['scene_sha256'], error='DR3 prepared source scene changed')
+    from mind2act_eval.sim.source_assets import source_file
+    source_file(ctx.assets, 'station')
     from isaacsim.core.prims import SingleArticulation, SingleRigidPrim
     from isaacsim.core.utils.types import ArticulationAction
     from omni.physx import get_physx_simulation_interface

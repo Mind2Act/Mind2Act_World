@@ -24,4 +24,3 @@ Shared specification digests live in `eval/spec_identity.py`; they are required 
 public admission independently of any private scene diagnostics.
 
 `SOURCE_COMMIT` inside an installed wheel identifies the actual build commit.
-`UPSTREAM_COMMIT` is implementation provenance and is not a substitute build stamp.

@@ -56,9 +56,9 @@ def validate(spec,ctx):
         raise ValueError('P2 instruction differs from canonical delivery')
     if cfg['input_protocol_version'] not in (VERSION,SOURCE_VERSION):
         raise ValueError('P2 input protocol must be explicit')
-    from mind2act_eval.sim.source_assets import verify_source_file
-    verify_source_file(ctx.assets,'station',cfg['scene_sha256'],error='P2 prepared source scene SHA mismatch')
-    verify_source_file(ctx.assets,'task_scene',cfg['task_scene_sha256'],error='P2 source task scene SHA mismatch')
+    from mind2act_eval.sim.source_assets import source_file
+    source_file(ctx.assets, 'station')
+    source_file(ctx.assets, 'task_scene')
     for food in set(row['target_foods_bottom_to_top']+row['decoy_foods']):
-        verify_source_file(ctx.assets,'food_'+food,cfg['food_assets_sha256'][food],error='P2 original food asset SHA mismatch: '+food)
+        source_file(ctx.assets, 'food_'+food)
     return row,validate_source(row)

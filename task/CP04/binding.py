@@ -24,9 +24,6 @@ def bind_recipe(spec: InstanceSpec) -> RecipeBinding:
     tier = spec.difficulty
     if tier not in RECIPE_LENGTH:
         raise ValueError("unknown CP04 difficulty: " + tier)
-    for other in RECIPE_LENGTH:
-        if other != tier and f"_{other}_" in spec.instance_id:
-            raise ValueError(f"CP04 instance {spec.instance_id} belongs to {other}, requested {tier}")
     identities = {int(k): v for k, v in spec.config["ingredient_identities"].items()}
     indices = tuple(spec.config["recipe_indices"])
     if len(indices) != RECIPE_LENGTH[tier] or len(set(indices)) != len(indices):

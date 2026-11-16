@@ -54,6 +54,6 @@ CPU tests use synthetic physical measurements and resolver files. They establish
 source-rule boundaries, causality and binding, not Isaac simulation, replay
 success or visual parity. Selected training H5 paths and their scene association
 still require the source mapping; no training-H5 verification is claimed here.
-The coordinator's shared queue must validate native loading/replay, three videos
-and a same-view first-frame comparison. Recorded source projection offsets must
+Native validation requires loading/replay checks, three camera videos and a
+same-view first-frame comparison. Recorded source projection offsets must
 be preserved by replay preparation; this task does not resample or shift tapes.

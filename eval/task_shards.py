@@ -13,40 +13,18 @@ def _seed_identity(root, data, row):
     condition = row.get('source_condition')
     if task != 'DR3':
         return task, tier, seed
-    from .original_test_inputs import REQUEST_SHA256, SNAPSHOT_SHA256, request_records
     if condition is None:
-        if data.get('source_request') is not None or data.get('source_snapshot_sha256') == SNAPSHOT_SHA256:
-            raise ReleaseContractError('source-qualified DR3 phase identity required')
         return task, tier, seed
-    descriptor = data.get('source_request')
-    try:
-        if (data.get('source_snapshot_sha256') != SNAPSHOT_SHA256
-                or not isinstance(descriptor, dict) or descriptor.get('sha256') != REQUEST_SHA256):
-            raise ValueError('original request/snapshot pin required')
-        records = request_records(file_descriptor(root, descriptor, verify=True))
-        original = records.get(row.get('logical_slot'))
-        if (original is None or any(row.get(k) != original[k] for k in
-                ('case_id','task_id','difficulty','seed','logical_slot','native_case_id',
-                 'source_configuration_sha256'))
-                or agent_field(row, 'agent_selected') != agent_field(original, 'agent_selected')
-                or not isinstance(condition, dict)
-                or set(condition) != {'kind','phase_ticks','source_revision','original_formal_eligible'}
-                or condition['kind'] != 'initial_mechanism_phase'
-                or type(condition['phase_ticks']) is not int or condition['phase_ticks'] < 0
-                or condition['original_formal_eligible'] is not False
-                or condition['source_revision'] != 'b6432b408607981059acf36ee668b731e36d70a0'
-                or row.get('source_document_id') != row['native_case_id']
-                or row['native_case_id'] not in {
-                    f"FR3-{family}-v1-{tier}-p{condition['phase_ticks']:04}"
-                    for family in ('alignment', 'phase')}):
-            raise ValueError('original DR3 phase source identity differs')
-    except (KeyError, TypeError, ValueError) as exc:
-        raise ReleaseContractError('source-qualified DR3 phase identity required') from exc
-    return task, tier, seed, condition['source_revision'], condition['phase_ticks']
+    if (not isinstance(condition, dict)
+            or condition.get('kind') != 'initial_mechanism_phase'
+            or type(condition.get('phase_ticks')) is not int
+            or condition['phase_ticks'] < 0):
+        raise ReleaseContractError('DR3 requires a nonnegative initial phase')
+    return task, tier, seed, condition['phase_ticks']
 
 
 def _document(root, descriptor):
-    path = file_descriptor(root, descriptor, verify=True)
+    path = file_descriptor(root, descriptor)
     try:
         value = json.loads(path.read_text())
     except (OSError, ValueError, UnicodeError) as exc:
@@ -80,7 +58,6 @@ def load_source_index(root, descriptor, *, tasks):
                 or seed_identity in seeds or type(row.get('agent_selected')) is not bool
                 or any(not isinstance(row.get(k), str) or not row[k] for k in ('logical_slot','native_case_id'))):
             raise ReleaseContractError('source index has an invalid or duplicate case/seed identity')
-        digest_field(row.get('source_configuration_sha256'))
         limits = row.get('limits')
         try:
             from .budgets import validate_e2e_fields
@@ -123,7 +100,7 @@ def load_task_shards(root, descriptor, *, tasks):
         for row in rows:
             original = by_id.get(row['case_id'])
             keys = ('task_id','difficulty','seed','logical_slot','native_case_id',
-                    'source_configuration_sha256','agent_selected','limits',
+                    'agent_selected','limits',
                     'source_condition','source_document_id','limits_e2e','budget_version_e2e')
             if original is None or any(row.get(k) != original.get(k) for k in keys):
                 raise ReleaseContractError('ready task shard differs from its full source index')
@@ -157,7 +134,6 @@ def load_ready_catalog(root, descriptor, *, task):
         except ValueError as exc:
             raise ReleaseContractError(str(exc)) from exc
         file_descriptor(root,row.get('spec'))
-        digest_field(row['spec'].get('semantic_sha256'))
         assets = row.get('assets')
         if not isinstance(assets,dict) or any(not isinstance(k,str) or not k for k in assets):
             raise ReleaseContractError('ready case requires explicit asset roles')

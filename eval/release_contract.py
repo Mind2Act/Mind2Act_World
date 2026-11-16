@@ -217,7 +217,7 @@ def _instances(value):
 
 
 @path_check_session()
-def load_release(assetroot, *, verified_code_commit=None, code_root=None):
+def load_release(assetroot, *, verified_code_commit=None, code_root=None, strict=False):
     """Read RELEASE.json and return the unified, semantically checked config.
 
     The producer owns complete asset hashing. This function checks descriptor
@@ -249,7 +249,7 @@ def load_release(assetroot, *, verified_code_commit=None, code_root=None):
     if not manifest_path.is_file():
         raise ReleaseContractError("release manifest is not an existing file")
     digest = data.get("manifest_sha256")
-    if not isinstance(digest, str) or re.fullmatch(r"[0-9a-f]{64}", digest) is None:
+    if strict and (not isinstance(digest, str) or re.fullmatch(r"[0-9a-f]{64}", digest) is None):
         raise ReleaseContractError("release manifest_sha256 must be a full lowercase SHA256")
     generated = _text(data.get("generated_at"), "generated_at")
     try:
@@ -259,7 +259,7 @@ def load_release(assetroot, *, verified_code_commit=None, code_root=None):
     instances = _instances(data.get("instances"))
     expected = _commit(data["code_commit"], "code_commit") if "code_commit" in data else None
     identities = []
-    if expected is not None:
+    if strict and expected is not None:
         if verified_code_commit is not None:
             identities.append(("verified code", _commit(verified_code_commit, "verified code identity")))
         sources = [actual_root / 'SOURCE_COMMIT']

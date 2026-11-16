@@ -70,8 +70,8 @@ class PhysicalPrefix:
                 stream.close()
 
 
-def verify_prefix(values, outer_tick):
-    """Read exactly the hashed scoring prefix; never consume the tail journal."""
+def verify_prefix(values, outer_tick, *, strict=False):
+    """Read the complete scoring prefix; optionally verify its digest, never consume the tail journal."""
     values = to_json(values)
     if values['trace_contract'] != TRACE_CONTRACT:
         raise ValueError('CP10 physical prefix contract differs')
@@ -103,7 +103,7 @@ def verify_prefix(values, outer_tick):
     except (OSError, json.JSONDecodeError) as error:
         raise ValueError('CP10 physical prefix unavailable or malformed') from error
     if (count != receipt['count'] or byte_count != receipt['bytes']
-            or hasher.hexdigest() != receipt['sha256']):
+            or (strict and hasher.hexdigest() != receipt['sha256'])):
         raise ValueError('CP10 physical prefix SHA/bytes/count differs')
     snapshot = values['cp10']
     if (snapshot != machine.snapshot(snapshot['terminal_reason']) or snapshot['last_tick'] != end

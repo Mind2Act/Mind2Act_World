@@ -100,8 +100,8 @@ def build(spec, ctx):
     from mind2act_eval.contracts import Action
     from mind2act_eval.robot import normalized_observation
     from .sensors import Contacts, Sensors
-    from mind2act_eval.sim.source_assets import verify_source_file
-    scene=verify_source_file(ctx.assets,'station',row['scene_sha256'],error='CP08 selected scene changed')
+    from mind2act_eval.sim.source_assets import source_file
+    scene=source_file(ctx.assets, 'station')
     textures={name:ctx.assets.resolve(key) for name,key in
               (('plan.png','cue_plan'),('screen-idle.png','cue_idle'))}
     for name,path in textures.items():

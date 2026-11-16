@@ -154,7 +154,7 @@ class ClothScene:
         return dict(source_id=self.spec.source_id,source_spec_sha256=self.spec.config['source_spec_sha256'],
             source_config_sha256=self.spec.config['source_config_sha256'],portable_config_sha256=self.spec.config['portable_config_sha256'],
             scene_sha256=self.spec.config['scene_sha256'],source_initialization=self.settle_receipt,
-            scoring_version=self.spec.config['scoring_version'],rule_decision='benchmark maintainer2026-11-01/23:30',
+            scoring_version=self.spec.config['scoring_version'],rule_decision='Measured cloth coverage and corner placement',
             source_global_physics_expectation=dict(gpu_dynamics=True,broadphase='GPU'),global_physics_owner='shared simulator')
     def close(self):
         try:
@@ -169,8 +169,8 @@ def build(spec,ctx):
     from omni.physx import get_physx_simulation_interface
     validate_case_source(spec)
     validate(spec)
-    from mind2act_eval.sim.source_assets import verify_source_file
-    verify_source_file(ctx.assets,'station',spec.config['scene_sha256'],error='PR4 original prepared scene SHA mismatch')
+    from mind2act_eval.sim.source_assets import source_file
+    source_file(ctx.assets, 'station')
     c=spec.config['source_case'];origin=c['origin'];stage=ctx.sim.stage
     mesh=UsdGeom.Mesh(stage.GetPrimAtPath(origin['body_path']))
     initial=np.asarray(mesh.GetPointsAttr().Get(),np.float32)

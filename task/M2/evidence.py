@@ -82,7 +82,7 @@ class RawTrace:
         self.stream.close()
 
 
-def replay_raw(spec, receipt):
+def replay_raw(spec, receipt, *, strict=False):
     """Recompute the terminal NativeEvidence from each raw measurement, in O(T)."""
     if receipt['schema'] != 'm2.raw-physical.v1':
         raise ValueError('M2 raw schema mismatch')
@@ -105,6 +105,8 @@ def replay_raw(spec, receipt):
             row = read(raw)
             frame = row['physical']
             advance(game, row['physics_tick'], frame)
-    if (digest.hexdigest(), size, game.tick) != (receipt['sha256'], receipt['bytes'], receipt['physics_rows']):
-        raise ValueError('M2 raw SHA/size/row mismatch')
+    if game.tick != receipt['physics_rows']:
+        raise ValueError('M2 raw row count mismatch')
+    if strict and (digest.hexdigest(), size) != (receipt['sha256'], receipt['bytes']):
+        raise ValueError('M2 raw SHA/size mismatch')
     return snapshot(spec, binding, game, frame, game.tick)

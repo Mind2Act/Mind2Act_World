@@ -7,10 +7,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca/scene.usda",
         "station": "assets/88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca/scene.usda",
-        "train_source_raw": "inputs/3d55aa33a35c9ae793888a79c0092c47ee934f263972cda1ff5266a9ac22b85d.json",
+        "train_source_raw": "inputs/7ed4bb8b114ca967cc36361d37f3bcbe8f913493f5189b2d72f38ef43d66696c.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "dd73299a72e808ad786319eccd6770e059c8825ab9031896d8119226b3d7435b",
+      "config_sha256": "ab90df6022b9b792c408bf2d0b4c949fb045677f204e9e2cc695edfdf99b75b9",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -30,7 +30,7 @@
       "runtime_asset_sha256": {
         "scene": "34eb025f94d8f42b4de402d38b568215b488f7d90a4239662dbcf0b23c549afc",
         "station": "34eb025f94d8f42b4de402d38b568215b488f7d90a4239662dbcf0b23c549afc",
-        "train_source_raw": "3d55aa33a35c9ae793888a79c0092c47ee934f263972cda1ff5266a9ac22b85d",
+        "train_source_raw": "7ed4bb8b114ca967cc36361d37f3bcbe8f913493f5189b2d72f38ef43d66696c",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -40,7 +40,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed100000-train-supplement-v1/episode.hdf5",
         "h5_sha256": "1036ea43aa184d11a41234ae551c8fa946710184b27849f58f36f56f844ca116",
-        "input_sha256": "3d55aa33a35c9ae793888a79c0092c47ee934f263972cda1ff5266a9ac22b85d",
+        "input_sha256": "7ed4bb8b114ca967cc36361d37f3bcbe8f913493f5189b2d72f38ef43d66696c",
         "instance_id": "CP10-easy-seed100000-train-supplement-v1",
         "native_case_id": "CP10-easy-seed100000-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -55,10 +55,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/d9c5fa7d1400be11fe22ce046152a3e02fd2a66f2a9c66b98a9e28e16fdc0464/scene.usda",
         "station": "assets/d9c5fa7d1400be11fe22ce046152a3e02fd2a66f2a9c66b98a9e28e16fdc0464/scene.usda",
-        "train_source_raw": "inputs/33a4cf43cc7f51a6cbd03330e4a4a761217a2649c05f10c89cbf32fc2a231811.json",
+        "train_source_raw": "inputs/afeec3884bcfe0805dbc27eb3b7b4623bcbd9ca21bf3ca3acf02a54ac0a11e5e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "62a5e851541a6e4943663f985f86282fc077d5d6bc7f230923d79148a384ca95",
+      "config_sha256": "5b9a927aac396f97eb638aee246632e90f2a6fec1ddd3906575d87e383441bde",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -78,7 +78,7 @@
       "runtime_asset_sha256": {
         "scene": "daa5b04d7cd4804f1b52b5e43f395c012b46ab9bbc9d573da86603a9129af2a5",
         "station": "daa5b04d7cd4804f1b52b5e43f395c012b46ab9bbc9d573da86603a9129af2a5",
-        "train_source_raw": "33a4cf43cc7f51a6cbd03330e4a4a761217a2649c05f10c89cbf32fc2a231811",
+        "train_source_raw": "afeec3884bcfe0805dbc27eb3b7b4623bcbd9ca21bf3ca3acf02a54ac0a11e5e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -88,7 +88,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1038-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "dc97f142e574b968b4599194fc12e0fa5a0363f7f5abd43b1abae0dac6c0e8a4",
-        "input_sha256": "33a4cf43cc7f51a6cbd03330e4a4a761217a2649c05f10c89cbf32fc2a231811",
+        "input_sha256": "afeec3884bcfe0805dbc27eb3b7b4623bcbd9ca21bf3ca3acf02a54ac0a11e5e",
         "instance_id": "CP10-easy-seed1038-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1038-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -103,10 +103,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/39f8dbbf1df451fa757d2a33d86921c1c8739f930b40284db03babdf09e926b8/scene.usda",
         "station": "assets/39f8dbbf1df451fa757d2a33d86921c1c8739f930b40284db03babdf09e926b8/scene.usda",
-        "train_source_raw": "inputs/4a90945c06e017b4bc85c0510690f7e7e0cf5cbdf4b8a8cebf03da7afc52601a.json",
+        "train_source_raw": "inputs/8739e977e6168cc7dca34fd2e884f430a6a4628ee12235ba40ab6cfa56c175ed.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "46bcb2935649016c312b7d6236f200ddeab3664d7e145d096834d12948bf7b8b",
+      "config_sha256": "13dd6386e53e964beb541dfc5cd83fbd9725ae498a4e69bcd4e429ba402da801",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -126,7 +126,7 @@
       "runtime_asset_sha256": {
         "scene": "539dc8eb6404c2cf271682dd4dd1efa1afc68e2988aa229ea0cb2924ac562b9a",
         "station": "539dc8eb6404c2cf271682dd4dd1efa1afc68e2988aa229ea0cb2924ac562b9a",
-        "train_source_raw": "4a90945c06e017b4bc85c0510690f7e7e0cf5cbdf4b8a8cebf03da7afc52601a",
+        "train_source_raw": "8739e977e6168cc7dca34fd2e884f430a6a4628ee12235ba40ab6cfa56c175ed",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -136,7 +136,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1277-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "ff830b131be94bce637b5a293ae9fef32a4bca81db8bf261c818cc065b5c07c5",
-        "input_sha256": "4a90945c06e017b4bc85c0510690f7e7e0cf5cbdf4b8a8cebf03da7afc52601a",
+        "input_sha256": "8739e977e6168cc7dca34fd2e884f430a6a4628ee12235ba40ab6cfa56c175ed",
         "instance_id": "CP10-easy-seed1277-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1277-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -151,10 +151,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/f4a8faeb711c82c38307be1cb0979672668ef194ba481104e33b59d336dd1562/scene.usda",
         "station": "assets/f4a8faeb711c82c38307be1cb0979672668ef194ba481104e33b59d336dd1562/scene.usda",
-        "train_source_raw": "inputs/e70de49d90731a34c0382e72bd619911f88772f83e81582fd01963a62054e148.json",
+        "train_source_raw": "inputs/5471bb8f87e405d6238dfa60470d98cfbcaac8c0f5007cbbbbf28e0925955ec5.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "95e2171d356b2689cd58c668a100e1c74178fcb6c249ecc80901b0f54d42b7d8",
+      "config_sha256": "ae1683f00a379f18909bb0e68772535a50880b7b2c68fcc3e4cc7d342c578987",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -174,7 +174,7 @@
       "runtime_asset_sha256": {
         "scene": "90f22994eefa7e5236b2ea2c69a24d1569e56eeefb63e162f750de16aee5ac8f",
         "station": "90f22994eefa7e5236b2ea2c69a24d1569e56eeefb63e162f750de16aee5ac8f",
-        "train_source_raw": "e70de49d90731a34c0382e72bd619911f88772f83e81582fd01963a62054e148",
+        "train_source_raw": "5471bb8f87e405d6238dfa60470d98cfbcaac8c0f5007cbbbbf28e0925955ec5",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -184,7 +184,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1278-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "322c5e1799ff711f39cbe70b3990c1e8c705baa41d8a7e57bac3ec65331d5707",
-        "input_sha256": "e70de49d90731a34c0382e72bd619911f88772f83e81582fd01963a62054e148",
+        "input_sha256": "5471bb8f87e405d6238dfa60470d98cfbcaac8c0f5007cbbbbf28e0925955ec5",
         "instance_id": "CP10-easy-seed1278-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1278-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -199,10 +199,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/b4f63cfc9dab28bd49a7e4ffbb69f59e895bb33ca2107d0677444c94b5794c89/scene.usda",
         "station": "assets/b4f63cfc9dab28bd49a7e4ffbb69f59e895bb33ca2107d0677444c94b5794c89/scene.usda",
-        "train_source_raw": "inputs/865b4ccd9ff520f2254119990d0bda09405814dd0c86178b1ad98d73b765dd47.json",
+        "train_source_raw": "inputs/21a95b51123ad3ba28fb935131b82fedc8bbf9b6e4afaf51e59d763d8da50a81.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "5c3f946117f1af69702f68c74d5fe055cb1c67a567e38b4c987b4e955b03e18c",
+      "config_sha256": "07d7b63ee465d410e323690d4a68604bdccf835e31b41711958c006df994b725",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -222,7 +222,7 @@
       "runtime_asset_sha256": {
         "scene": "de81097d273db9e2caac120982ab583ff5135375cd0902f2cd0b8df44d0a2714",
         "station": "de81097d273db9e2caac120982ab583ff5135375cd0902f2cd0b8df44d0a2714",
-        "train_source_raw": "865b4ccd9ff520f2254119990d0bda09405814dd0c86178b1ad98d73b765dd47",
+        "train_source_raw": "21a95b51123ad3ba28fb935131b82fedc8bbf9b6e4afaf51e59d763d8da50a81",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -232,7 +232,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1446-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "a8237c99915eba8f2411059f7b9a55b52a61407e3d9730b3a677eec613e81125",
-        "input_sha256": "865b4ccd9ff520f2254119990d0bda09405814dd0c86178b1ad98d73b765dd47",
+        "input_sha256": "21a95b51123ad3ba28fb935131b82fedc8bbf9b6e4afaf51e59d763d8da50a81",
         "instance_id": "CP10-easy-seed1446-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1446-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -247,10 +247,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/391631094b3a51e8646ee48024f22671063a1eb487acca1547a24a8a4a46ae5b/scene.usda",
         "station": "assets/391631094b3a51e8646ee48024f22671063a1eb487acca1547a24a8a4a46ae5b/scene.usda",
-        "train_source_raw": "inputs/993cb701c86ce683931d150a59281cb90481582004d4d082e162726d14cc727e.json",
+        "train_source_raw": "inputs/32be69f4ee5137465b63d15d4e446e18622427db7794a0ffcd80512a723262dd.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "3197eac328ed3dfa04413448eb5c38946aee5ed14128937796b012639d1797f2",
+      "config_sha256": "672e6829a2548ddf1bc9d1493e011edaf40f933dfb963e23f3e9f6da7ac7f5ec",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -270,7 +270,7 @@
       "runtime_asset_sha256": {
         "scene": "dc5446573e302c4b58afca98d2672ebf45e1df58933af831a567b95c11e120ad",
         "station": "dc5446573e302c4b58afca98d2672ebf45e1df58933af831a567b95c11e120ad",
-        "train_source_raw": "993cb701c86ce683931d150a59281cb90481582004d4d082e162726d14cc727e",
+        "train_source_raw": "32be69f4ee5137465b63d15d4e446e18622427db7794a0ffcd80512a723262dd",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -280,7 +280,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1517-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "16a32d1fb5ad5223f1afd8538fdd06c6b55a7b51a8ceed830d9192717183e899",
-        "input_sha256": "993cb701c86ce683931d150a59281cb90481582004d4d082e162726d14cc727e",
+        "input_sha256": "32be69f4ee5137465b63d15d4e446e18622427db7794a0ffcd80512a723262dd",
         "instance_id": "CP10-easy-seed1517-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1517-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -295,10 +295,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/e69513af615b72debd33ca1a68ff4bfe894744fc26b4b023f36c05386d79c0f1/scene.usda",
         "station": "assets/e69513af615b72debd33ca1a68ff4bfe894744fc26b4b023f36c05386d79c0f1/scene.usda",
-        "train_source_raw": "inputs/0ff4fb9ac4d0b60436e05a83cc10a2ed19492d6349e21e568398730ef7932f80.json",
+        "train_source_raw": "inputs/195a57e5e8a270b4d37aa3d52f77614b09b4d9d2c5bbf0f32302fd382cd13e61.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "a76cb3b8673024c5f90704a0f3c595f0c758060059d5f98da716d22e149960ca",
+      "config_sha256": "02389479d2bfd59503a00e76069e0ae12d10159017ebdd5316807ae8e74c2483",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -318,7 +318,7 @@
       "runtime_asset_sha256": {
         "scene": "3f6f04ca2057bfdb4768382d246940309bc561a6cfbc2bb1e842f226916a36f6",
         "station": "3f6f04ca2057bfdb4768382d246940309bc561a6cfbc2bb1e842f226916a36f6",
-        "train_source_raw": "0ff4fb9ac4d0b60436e05a83cc10a2ed19492d6349e21e568398730ef7932f80",
+        "train_source_raw": "195a57e5e8a270b4d37aa3d52f77614b09b4d9d2c5bbf0f32302fd382cd13e61",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -328,7 +328,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1555-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "dc0d8d69dbeb2c2744fb34d0e32dcf11f4fc7570fc1e1b465f79a3823d5ff58f",
-        "input_sha256": "0ff4fb9ac4d0b60436e05a83cc10a2ed19492d6349e21e568398730ef7932f80",
+        "input_sha256": "195a57e5e8a270b4d37aa3d52f77614b09b4d9d2c5bbf0f32302fd382cd13e61",
         "instance_id": "CP10-easy-seed1555-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1555-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -343,10 +343,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/ae346725eb39414051081de6734adef8d678e00e69c5cbe275635c6afaa582c5/scene.usda",
         "station": "assets/ae346725eb39414051081de6734adef8d678e00e69c5cbe275635c6afaa582c5/scene.usda",
-        "train_source_raw": "inputs/37cacecbaca02d1c577ce33cb9e1565e912889bfbf48d41d2558552f418b9b14.json",
+        "train_source_raw": "inputs/b84d9c757115c9fd9de0125d7c76b21601310c1c03836db76d90d4849ac946dd.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "6a71e73c62ae10b5dd986bd755527e6f58480f1bb6931da2bf6c82732314e3d5",
+      "config_sha256": "c032d09a612a898bd14b235df2aa07d02cf8136395dafd139a58d5c5ad0632d9",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -366,7 +366,7 @@
       "runtime_asset_sha256": {
         "scene": "91fc0d4af4211922d8b34661f06bf107520d28981bccb7787ae47bb6f45a120a",
         "station": "91fc0d4af4211922d8b34661f06bf107520d28981bccb7787ae47bb6f45a120a",
-        "train_source_raw": "37cacecbaca02d1c577ce33cb9e1565e912889bfbf48d41d2558552f418b9b14",
+        "train_source_raw": "b84d9c757115c9fd9de0125d7c76b21601310c1c03836db76d90d4849ac946dd",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -376,7 +376,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1690-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "8f1711b11756d9b5c9e6f770406d899186c7d7ba6d236e82b5cea6668cbcd30c",
-        "input_sha256": "37cacecbaca02d1c577ce33cb9e1565e912889bfbf48d41d2558552f418b9b14",
+        "input_sha256": "b84d9c757115c9fd9de0125d7c76b21601310c1c03836db76d90d4849ac946dd",
         "instance_id": "CP10-easy-seed1690-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1690-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -391,10 +391,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/69ce90bd3646b7e1582b693a6ef142a140e4607aac54edc2e6229c95828185d4/scene.usda",
         "station": "assets/69ce90bd3646b7e1582b693a6ef142a140e4607aac54edc2e6229c95828185d4/scene.usda",
-        "train_source_raw": "inputs/5693a6aaed77ece3cda93eb0d3e13f7ad56fd2299208b1d2fa7994dde087aaf7.json",
+        "train_source_raw": "inputs/a8ac7cb65e14742c22ab8038df07d952255a28c61c3cf204efa26174a0c0a59a.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "c779cdc1c5bc27addbb25f97eec733fc1d2d19f7bd4dda356c4140bfaac123ad",
+      "config_sha256": "76a077ee0df2bb1bf3c979774dec5ec0caea8b60d37270e8c25e5234f082b810",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -414,7 +414,7 @@
       "runtime_asset_sha256": {
         "scene": "cedcbdc46e1d3377618a59b63055ee814a5355ba7f4c19b749f26de4367460bd",
         "station": "cedcbdc46e1d3377618a59b63055ee814a5355ba7f4c19b749f26de4367460bd",
-        "train_source_raw": "5693a6aaed77ece3cda93eb0d3e13f7ad56fd2299208b1d2fa7994dde087aaf7",
+        "train_source_raw": "a8ac7cb65e14742c22ab8038df07d952255a28c61c3cf204efa26174a0c0a59a",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -424,7 +424,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1701-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "4964db25f81a12804392ed5956f1afb7a52b3be62779ada82ad59aa12848e628",
-        "input_sha256": "5693a6aaed77ece3cda93eb0d3e13f7ad56fd2299208b1d2fa7994dde087aaf7",
+        "input_sha256": "a8ac7cb65e14742c22ab8038df07d952255a28c61c3cf204efa26174a0c0a59a",
         "instance_id": "CP10-easy-seed1701-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1701-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -439,10 +439,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/d068c5601b049e54ea6655618bcaa28ea58b8c4c159d321772cf11406f95657f/scene.usda",
         "station": "assets/d068c5601b049e54ea6655618bcaa28ea58b8c4c159d321772cf11406f95657f/scene.usda",
-        "train_source_raw": "inputs/ddde5b14f17f7daa6b47cf8cbd38b30d0c45dbba2c04577c91bee82173d82951.json",
+        "train_source_raw": "inputs/d753f658868ffba8cac41a30d0650bd43299be21b61240eef805988b56940f41.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "42a6ef654df21b7f11ed683a2638444aba907d412e1984938f043a84a014eee6",
+      "config_sha256": "ca3ab6382012e31ed74d307d9faa9810162a8f436def237f55d5f717023e8fb4",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -462,7 +462,7 @@
       "runtime_asset_sha256": {
         "scene": "9946e9c327822834fc03ec88be501f987742b2beeaa71859b06fd695557d7c2d",
         "station": "9946e9c327822834fc03ec88be501f987742b2beeaa71859b06fd695557d7c2d",
-        "train_source_raw": "ddde5b14f17f7daa6b47cf8cbd38b30d0c45dbba2c04577c91bee82173d82951",
+        "train_source_raw": "d753f658868ffba8cac41a30d0650bd43299be21b61240eef805988b56940f41",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -472,7 +472,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed171-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "92937df0eeb77e9317a19aa55105a8dc0306a5d562a8b8d428a2a28d955b7320",
-        "input_sha256": "ddde5b14f17f7daa6b47cf8cbd38b30d0c45dbba2c04577c91bee82173d82951",
+        "input_sha256": "d753f658868ffba8cac41a30d0650bd43299be21b61240eef805988b56940f41",
         "instance_id": "CP10-easy-seed171-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed171-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -487,10 +487,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/acb4c88dd5b70cf3f17277b319e237dc4e43d5f342a345a533de8c527acf6422/scene.usda",
         "station": "assets/acb4c88dd5b70cf3f17277b319e237dc4e43d5f342a345a533de8c527acf6422/scene.usda",
-        "train_source_raw": "inputs/9441b572cc352dbd5d072f1b4a0345bd47ffbd1de37eb8c4574f1dcff13e9732.json",
+        "train_source_raw": "inputs/6173bc49b8362194e81dbdd94cd9bbd371655caa474d9c61a47c67e214b338d2.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "24c68a61df0287afbf3744e1f3c6a20e04e20d72a5a164fc052d265d857429fd",
+      "config_sha256": "de1082bb7e8b75d62e7ae6c174b86cc0e5eee8bb18f308047f9861fd77608f18",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -510,7 +510,7 @@
       "runtime_asset_sha256": {
         "scene": "bc510a9ee5cc842e279d512181392217c60bb306729ce8fc090e6d74e889be2d",
         "station": "bc510a9ee5cc842e279d512181392217c60bb306729ce8fc090e6d74e889be2d",
-        "train_source_raw": "9441b572cc352dbd5d072f1b4a0345bd47ffbd1de37eb8c4574f1dcff13e9732",
+        "train_source_raw": "6173bc49b8362194e81dbdd94cd9bbd371655caa474d9c61a47c67e214b338d2",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -520,7 +520,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1757-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "80f7c599d8b98b195512b89e7accb0324ec3f0343eac6027f806f148573729ef",
-        "input_sha256": "9441b572cc352dbd5d072f1b4a0345bd47ffbd1de37eb8c4574f1dcff13e9732",
+        "input_sha256": "6173bc49b8362194e81dbdd94cd9bbd371655caa474d9c61a47c67e214b338d2",
         "instance_id": "CP10-easy-seed1757-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1757-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -535,10 +535,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/63e71d0eabe59f79231657637571b8909851cd3d09b02e3f6a9d1c718cce2ace/scene.usda",
         "station": "assets/63e71d0eabe59f79231657637571b8909851cd3d09b02e3f6a9d1c718cce2ace/scene.usda",
-        "train_source_raw": "inputs/6168974c7d2e52dcadf52263794a908c14d18529d18f7322db950bd9af4ea313.json",
+        "train_source_raw": "inputs/a5f0d86389622807042607436815e51b8c8784b2563774b76f5c90043133118e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "c90fc7fc2e48a64c82a39e7120ab5019c790952f7bf91e03a42fc3f282ccdc06",
+      "config_sha256": "2e7540d74331bc06b974d24597ab387dfa681f3fc227b67ca505704ac1f43527",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -558,7 +558,7 @@
       "runtime_asset_sha256": {
         "scene": "837815854c485eb2e34b6e3f2f9a50826787f3f918e545fdcfaa5674f8c4f9af",
         "station": "837815854c485eb2e34b6e3f2f9a50826787f3f918e545fdcfaa5674f8c4f9af",
-        "train_source_raw": "6168974c7d2e52dcadf52263794a908c14d18529d18f7322db950bd9af4ea313",
+        "train_source_raw": "a5f0d86389622807042607436815e51b8c8784b2563774b76f5c90043133118e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -568,7 +568,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed1847-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "09d566c98896157d070f1692e480d8d8a535930c09009a37648b1e8960ea9562",
-        "input_sha256": "6168974c7d2e52dcadf52263794a908c14d18529d18f7322db950bd9af4ea313",
+        "input_sha256": "a5f0d86389622807042607436815e51b8c8784b2563774b76f5c90043133118e",
         "instance_id": "CP10-easy-seed1847-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed1847-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -583,10 +583,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/464a7070e4cd7d395043a84a07e255ebf0c2507db306b43b638111a97bd78f6f/scene.usda",
         "station": "assets/464a7070e4cd7d395043a84a07e255ebf0c2507db306b43b638111a97bd78f6f/scene.usda",
-        "train_source_raw": "inputs/57c329a7707d1e2c272d6b057f07c289e6540b6099e58323e26a38c58941bb1f.json",
+        "train_source_raw": "inputs/d6a0e9d7933d2c520cf195c083bd39d73b0aab10dfaf019cb3b9d3c35e99c806.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "7fa40463594a83e8cd48f91134fd30440c1287033de15bb0fabaf1f4e9ec0a49",
+      "config_sha256": "26e3586e9012849bc02447c53eabe89228d67b906d1ebd940cb10ae1d622c292",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -606,7 +606,7 @@
       "runtime_asset_sha256": {
         "scene": "dc2c56ce3eb593eb316e19f3fb75a24880d2d2d5a13d42ecd9063cc319ea3c1e",
         "station": "dc2c56ce3eb593eb316e19f3fb75a24880d2d2d5a13d42ecd9063cc319ea3c1e",
-        "train_source_raw": "57c329a7707d1e2c272d6b057f07c289e6540b6099e58323e26a38c58941bb1f",
+        "train_source_raw": "d6a0e9d7933d2c520cf195c083bd39d73b0aab10dfaf019cb3b9d3c35e99c806",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -616,7 +616,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed20-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "65d2d01ea3c5b0a924f014cf4d241ceef3726b9212bd6a172f6b361509c11794",
-        "input_sha256": "57c329a7707d1e2c272d6b057f07c289e6540b6099e58323e26a38c58941bb1f",
+        "input_sha256": "d6a0e9d7933d2c520cf195c083bd39d73b0aab10dfaf019cb3b9d3c35e99c806",
         "instance_id": "CP10-easy-seed20-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed20-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -631,10 +631,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/7790c66c877079e269b37ffdfbd08a41727c294c5f587a91ea3ca3f507e041d4/scene.usda",
         "station": "assets/7790c66c877079e269b37ffdfbd08a41727c294c5f587a91ea3ca3f507e041d4/scene.usda",
-        "train_source_raw": "inputs/727e75a8c822067a6c77a036580f0cbeee364941d55ca4c7a60d6eae390ad818.json",
+        "train_source_raw": "inputs/b390458f654d2d48a78c04cc59f264bd2b5dd1ec513162e5495b5999fb530f86.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "f0c5bade603190ed9385ad2a5550563b85677883f061b964b005bafeb44098e3",
+      "config_sha256": "7cfff936f1c9e3f3ecb8d8b81a4869e4666f491c572e26baa33d96ac0cec6992",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -654,7 +654,7 @@
       "runtime_asset_sha256": {
         "scene": "1ecef3b39edd26c4763036afab5483c1b4d7abf81a2a13160c68d137c4bdfefb",
         "station": "1ecef3b39edd26c4763036afab5483c1b4d7abf81a2a13160c68d137c4bdfefb",
-        "train_source_raw": "727e75a8c822067a6c77a036580f0cbeee364941d55ca4c7a60d6eae390ad818",
+        "train_source_raw": "b390458f654d2d48a78c04cc59f264bd2b5dd1ec513162e5495b5999fb530f86",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -664,7 +664,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed357-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "0ebaff946ac570f05cdf8a8c603fe1d6903938b126223e260fd846f8f1f9fd0b",
-        "input_sha256": "727e75a8c822067a6c77a036580f0cbeee364941d55ca4c7a60d6eae390ad818",
+        "input_sha256": "b390458f654d2d48a78c04cc59f264bd2b5dd1ec513162e5495b5999fb530f86",
         "instance_id": "CP10-easy-seed357-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed357-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -679,10 +679,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/a4f526278e2d29c62ced2308384be2efff4a02c0dfb322343a6fa7bc72d56ba5/scene.usda",
         "station": "assets/a4f526278e2d29c62ced2308384be2efff4a02c0dfb322343a6fa7bc72d56ba5/scene.usda",
-        "train_source_raw": "inputs/9c90591039b82a21f1069767795e63ecb15004cdefa2a17636a82fcd7c0b55d8.json",
+        "train_source_raw": "inputs/bdf7d28cf4856bfe1fffa56a6af7432fb1944d002b9b35cb7bce60ef8730798f.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "a61cb3161aef236456b927b451ea35534aa63dcbc5964a4cf767d76a41922c23",
+      "config_sha256": "6d4870a4c3d3688832aaec594d9e46e0efb865ff461a085bd61ab6ad05cedfad",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -702,7 +702,7 @@
       "runtime_asset_sha256": {
         "scene": "ed0b0e163e52a05bb0f2d361e3e1a22c6c6a999673df1b409a0073cc33f0d918",
         "station": "ed0b0e163e52a05bb0f2d361e3e1a22c6c6a999673df1b409a0073cc33f0d918",
-        "train_source_raw": "9c90591039b82a21f1069767795e63ecb15004cdefa2a17636a82fcd7c0b55d8",
+        "train_source_raw": "bdf7d28cf4856bfe1fffa56a6af7432fb1944d002b9b35cb7bce60ef8730798f",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -712,7 +712,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed416-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "4b23d1fa119cd54fec97dba77a7a85e085816115adc339254f4936265cc5c279",
-        "input_sha256": "9c90591039b82a21f1069767795e63ecb15004cdefa2a17636a82fcd7c0b55d8",
+        "input_sha256": "bdf7d28cf4856bfe1fffa56a6af7432fb1944d002b9b35cb7bce60ef8730798f",
         "instance_id": "CP10-easy-seed416-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed416-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -727,10 +727,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/469dcd10f233519663b48ea2c80152e9e90d0689394a0384e91a4b22b12ba304/scene.usda",
         "station": "assets/469dcd10f233519663b48ea2c80152e9e90d0689394a0384e91a4b22b12ba304/scene.usda",
-        "train_source_raw": "inputs/59bae5369f980ae358e32c812c3bf774ed954232a3f956929eda9df65d1a5e58.json",
+        "train_source_raw": "inputs/c0dfd0dce2d2e34edf0aa5c17f12cd1c2b43872d990f55c141412d4b350011d2.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "c0d80a8bb48272c833218adb455688a19107cb698c020841cbb97a8baf4083a0",
+      "config_sha256": "cdeeca575f6ad13a33c23eca9588dabe63b063c1f3bc242990ca672c02a19281",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -750,7 +750,7 @@
       "runtime_asset_sha256": {
         "scene": "d2215f5e51ca63adac1f2b984d3cabf5bf584aab42aa874ac7e1fc6e3e755201",
         "station": "d2215f5e51ca63adac1f2b984d3cabf5bf584aab42aa874ac7e1fc6e3e755201",
-        "train_source_raw": "59bae5369f980ae358e32c812c3bf774ed954232a3f956929eda9df65d1a5e58",
+        "train_source_raw": "c0dfd0dce2d2e34edf0aa5c17f12cd1c2b43872d990f55c141412d4b350011d2",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -760,7 +760,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed496-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "8819c676d43e467a4244b1893d468bb49c977d79c00a6e918dbfc63ffc16eec3",
-        "input_sha256": "59bae5369f980ae358e32c812c3bf774ed954232a3f956929eda9df65d1a5e58",
+        "input_sha256": "c0dfd0dce2d2e34edf0aa5c17f12cd1c2b43872d990f55c141412d4b350011d2",
         "instance_id": "CP10-easy-seed496-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed496-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -775,10 +775,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/dba7056ba829253f82be8382ba3ef61b8235bda1a18fde617182202ba129f80e/scene.usda",
         "station": "assets/dba7056ba829253f82be8382ba3ef61b8235bda1a18fde617182202ba129f80e/scene.usda",
-        "train_source_raw": "inputs/9c6b422451edb0521d1ae80d47023db3145f4036e8b10369edc9ad8547267af1.json",
+        "train_source_raw": "inputs/cb17766c329b44c6ab1a781e95804e1abaf09da3c2fd74c7f5f646198494d2ed.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "a3ba36b55ce809d7ea7e842f6b5973faf2911124cc4a2ef65bf2da27fed1b854",
+      "config_sha256": "73d4c3cfbbe51547ae360623a77170ec11fdaae69bbd7147021ef4f2484548fa",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -798,7 +798,7 @@
       "runtime_asset_sha256": {
         "scene": "b8c5ad475b1e9dd6dfd59e1fe9ee08a89ef33601256831cedcb3f52c1aa10cf6",
         "station": "b8c5ad475b1e9dd6dfd59e1fe9ee08a89ef33601256831cedcb3f52c1aa10cf6",
-        "train_source_raw": "9c6b422451edb0521d1ae80d47023db3145f4036e8b10369edc9ad8547267af1",
+        "train_source_raw": "cb17766c329b44c6ab1a781e95804e1abaf09da3c2fd74c7f5f646198494d2ed",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -808,7 +808,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed572-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "a159ef91db80ee96ddb369829a25228433e31ed720e02af9320733a51e1ef708",
-        "input_sha256": "9c6b422451edb0521d1ae80d47023db3145f4036e8b10369edc9ad8547267af1",
+        "input_sha256": "cb17766c329b44c6ab1a781e95804e1abaf09da3c2fd74c7f5f646198494d2ed",
         "instance_id": "CP10-easy-seed572-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed572-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -823,10 +823,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/377461ae40cde87bd72ba1a97070d5b707b8cdd9497447fa1ca20ba50b02f697/scene.usda",
         "station": "assets/377461ae40cde87bd72ba1a97070d5b707b8cdd9497447fa1ca20ba50b02f697/scene.usda",
-        "train_source_raw": "inputs/2a1aecee3db946660f443a2e7eb2d05c03c230b792a746525335323409f87f0a.json",
+        "train_source_raw": "inputs/17c71723de73dd376fabfb6db347045150ddf1a239d6ab1d20ad30414fdd8626.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "aa4d5fdd230771c6c71e68dce4a3cd157e2b3b6455df43d8cf62f64fabf3f468",
+      "config_sha256": "52faad56d86d4057a65af8e6f5a0ee62733afe92d3328952326f8da3d4afe023",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -846,7 +846,7 @@
       "runtime_asset_sha256": {
         "scene": "5002f8eb79a67ed35bd5bcbe43ea71f4bbe72a0e089114f23fe62d201da271df",
         "station": "5002f8eb79a67ed35bd5bcbe43ea71f4bbe72a0e089114f23fe62d201da271df",
-        "train_source_raw": "2a1aecee3db946660f443a2e7eb2d05c03c230b792a746525335323409f87f0a",
+        "train_source_raw": "17c71723de73dd376fabfb6db347045150ddf1a239d6ab1d20ad30414fdd8626",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -856,7 +856,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed617-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "90281b377458068819190862de1497070e98b19b50e815a24a84da735fba8326",
-        "input_sha256": "2a1aecee3db946660f443a2e7eb2d05c03c230b792a746525335323409f87f0a",
+        "input_sha256": "17c71723de73dd376fabfb6db347045150ddf1a239d6ab1d20ad30414fdd8626",
         "instance_id": "CP10-easy-seed617-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed617-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -871,10 +871,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/ccbbdcf07614d5f6cb7a8c23f58eca8bd7e8b7992e22e15eeb95f7dca396219d/scene.usda",
         "station": "assets/ccbbdcf07614d5f6cb7a8c23f58eca8bd7e8b7992e22e15eeb95f7dca396219d/scene.usda",
-        "train_source_raw": "inputs/537a705182445c1d364814d574779bdd3911a3bf62bbb5f4b1fc35e1b67a3bdb.json",
+        "train_source_raw": "inputs/43218b2a3f4b96a1c7e583e7ebac441016b22b938bf1f4c12cb992988122f2a9.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "534cf2a49cfc383adf9af2872f3a183e81b3259d4351c1b704104fbc0aceb04c",
+      "config_sha256": "9cc8888ff2134c83ce7ae0f4cf04a8c899c9088a0dc68536c835d1d9a0ad6c75",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -894,7 +894,7 @@
       "runtime_asset_sha256": {
         "scene": "19dbe8dfe93ecd7e6f5ce929a262f0bd9272031ff35a254f13e18d1d33614227",
         "station": "19dbe8dfe93ecd7e6f5ce929a262f0bd9272031ff35a254f13e18d1d33614227",
-        "train_source_raw": "537a705182445c1d364814d574779bdd3911a3bf62bbb5f4b1fc35e1b67a3bdb",
+        "train_source_raw": "43218b2a3f4b96a1c7e583e7ebac441016b22b938bf1f4c12cb992988122f2a9",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -904,7 +904,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed783-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "f193885326d9109e23d3c357e3c7d5be13e435818b5f5a2464c2608255df6b4b",
-        "input_sha256": "537a705182445c1d364814d574779bdd3911a3bf62bbb5f4b1fc35e1b67a3bdb",
+        "input_sha256": "43218b2a3f4b96a1c7e583e7ebac441016b22b938bf1f4c12cb992988122f2a9",
         "instance_id": "CP10-easy-seed783-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed783-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -919,10 +919,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/0be656c9b5f673385cceb1e9735ffe8b8e814cb2bce879dabeed04a7473495fb/scene.usda",
         "station": "assets/0be656c9b5f673385cceb1e9735ffe8b8e814cb2bce879dabeed04a7473495fb/scene.usda",
-        "train_source_raw": "inputs/aa85c831aa6bf466ffe444b47be86e51ac5541a5307cc7edbd226fb12d5d222e.json",
+        "train_source_raw": "inputs/36c387a08be36e349e5cb14288fbbc8eee1fef69e84e2e7220e38f9b4eb8bbd8.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "f5301d230f4a91fd70c8373895c1e55613b84d5dfe8aad9eec2a75654aad88d4",
+      "config_sha256": "3891fde1775c91e2e41463e26b2ba5296358b4abdfeb114c0726845b01207681",
       "identity": {
         "asset_version": "source-scene-sha256:88cac8e1c21e10072aa0012a83b19cb76f63c504322a844680c9f28dd1acf3ca",
         "clock": {
@@ -942,7 +942,7 @@
       "runtime_asset_sha256": {
         "scene": "1890da9c9de540d2c16753aec65186f17f3cf5fad9f096e59d7059b5b38adfea",
         "station": "1890da9c9de540d2c16753aec65186f17f3cf5fad9f096e59d7059b5b38adfea",
-        "train_source_raw": "aa85c831aa6bf466ffe444b47be86e51ac5541a5307cc7edbd226fb12d5d222e",
+        "train_source_raw": "36c387a08be36e349e5cb14288fbbc8eee1fef69e84e2e7220e38f9b4eb8bbd8",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -952,7 +952,7 @@
         "difficulty": "easy",
         "h5_path": "data/CP10/easy/CP10-easy-seed955-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "f392da05a7f028d66f8dafa47694a9cff1f28f62b1cafd55d9fb4cef201a084d",
-        "input_sha256": "aa85c831aa6bf466ffe444b47be86e51ac5541a5307cc7edbd226fb12d5d222e",
+        "input_sha256": "36c387a08be36e349e5cb14288fbbc8eee1fef69e84e2e7220e38f9b4eb8bbd8",
         "instance_id": "CP10-easy-seed955-cp10-semantic50-v1",
         "native_case_id": "CP10-easy-seed955-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -967,10 +967,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/5b2cfe9b04ff5b4bbbd641b15817b4a65a63b4cd0953258d6c35f22b91faaad1/scene.usda",
         "station": "assets/5b2cfe9b04ff5b4bbbd641b15817b4a65a63b4cd0953258d6c35f22b91faaad1/scene.usda",
-        "train_source_raw": "inputs/4913f45587ad7e061c85611b7caf40e4352bb5cba376287639949aa5c99c6f96.json",
+        "train_source_raw": "inputs/23d8b9e35c8b6dd98d25639894ca603d9b47def856c91a98a43ad49f135c27d3.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "68cadfd182c253995b995464faea5b25a0977b6edcf27b612fddef14a1d9cd64",
+      "config_sha256": "d7b775f0e3686a6c8a55dc36ba76c092b1185ac2ad7f8909bf0cb14f8ffbefae",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -990,7 +990,7 @@
       "runtime_asset_sha256": {
         "scene": "5704f4ece87d691a75a93a4a3da603a741d915e4bf3c37e0efe6d71fadc044b3",
         "station": "5704f4ece87d691a75a93a4a3da603a741d915e4bf3c37e0efe6d71fadc044b3",
-        "train_source_raw": "4913f45587ad7e061c85611b7caf40e4352bb5cba376287639949aa5c99c6f96",
+        "train_source_raw": "23d8b9e35c8b6dd98d25639894ca603d9b47def856c91a98a43ad49f135c27d3",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1000,7 +1000,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100011-train-supplement-v1/episode.hdf5",
         "h5_sha256": "2ab8faf1ae8c64e5d66c30423b70811027ee785623248a1a94f76feced46965a",
-        "input_sha256": "4913f45587ad7e061c85611b7caf40e4352bb5cba376287639949aa5c99c6f96",
+        "input_sha256": "23d8b9e35c8b6dd98d25639894ca603d9b47def856c91a98a43ad49f135c27d3",
         "instance_id": "CP10-hard-seed100011-train-supplement-v1",
         "native_case_id": "CP10-hard-seed100011-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1015,10 +1015,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/6332fd9bc4561e037889715b91f37e08074f9139d5f387958817e8509dc5a5a5/scene.usda",
         "station": "assets/6332fd9bc4561e037889715b91f37e08074f9139d5f387958817e8509dc5a5a5/scene.usda",
-        "train_source_raw": "inputs/30211686512bc2d403f86baaf598beaf55560cb5374cfa0747c434a11cc4a13e.json",
+        "train_source_raw": "inputs/145e0af57e234bd12813def02a80f7e467e7ffd105963e016fce64bb09fbb8ac.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "777586e5c2b2f3f3d4583e14cf96c1fccbae695137753f40a5607b168d4525a1",
+      "config_sha256": "05117ac486ef84ad5a0ade68d93d0369b3ffdbf978959b803fd5834cea803809",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1038,7 +1038,7 @@
       "runtime_asset_sha256": {
         "scene": "76b5d0367acba529df0d7ae1bf7576489a3758ef7dec416817842b1207c06914",
         "station": "76b5d0367acba529df0d7ae1bf7576489a3758ef7dec416817842b1207c06914",
-        "train_source_raw": "30211686512bc2d403f86baaf598beaf55560cb5374cfa0747c434a11cc4a13e",
+        "train_source_raw": "145e0af57e234bd12813def02a80f7e467e7ffd105963e016fce64bb09fbb8ac",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1048,7 +1048,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100012-train-supplement-v1/episode.hdf5",
         "h5_sha256": "28e481c582b8804510e438a9b7deca068f55bed9959cef5a902c51abdbf46899",
-        "input_sha256": "30211686512bc2d403f86baaf598beaf55560cb5374cfa0747c434a11cc4a13e",
+        "input_sha256": "145e0af57e234bd12813def02a80f7e467e7ffd105963e016fce64bb09fbb8ac",
         "instance_id": "CP10-hard-seed100012-train-supplement-v1",
         "native_case_id": "CP10-hard-seed100012-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1063,10 +1063,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/cb8dd3c782e8bc4c9e79fae1cbfb1cfc7cd4bb5e4c73353fa245804c19e04e6c/scene.usda",
         "station": "assets/cb8dd3c782e8bc4c9e79fae1cbfb1cfc7cd4bb5e4c73353fa245804c19e04e6c/scene.usda",
-        "train_source_raw": "inputs/d5a21bbf8224f7b83b730ec1ae5492251ddb503aeedb68666edbb6ccd691be2c.json",
+        "train_source_raw": "inputs/bc04ba00495adb20f720c5026f9a290e374ef4d6208738be62a52a6053adc14e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "d264596bc73471c61c97eca2975f778762a498e017971d7a59ad69a94a7d78a2",
+      "config_sha256": "44236cfb45c89d0dc34e2ca54f37d1ecf97e1f9f212d64274286a75265d70ff3",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1086,7 +1086,7 @@
       "runtime_asset_sha256": {
         "scene": "a7905aac7982e8919d334f4ec6f2836eb0913af6990097afb3ec7c94797468b6",
         "station": "a7905aac7982e8919d334f4ec6f2836eb0913af6990097afb3ec7c94797468b6",
-        "train_source_raw": "d5a21bbf8224f7b83b730ec1ae5492251ddb503aeedb68666edbb6ccd691be2c",
+        "train_source_raw": "bc04ba00495adb20f720c5026f9a290e374ef4d6208738be62a52a6053adc14e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1096,7 +1096,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100030-train-supplement-v1/episode.hdf5",
         "h5_sha256": "d8756f42cf2bdcda6bdde9a6dd4a96a15db5b54c987c837d154dcf530dbeaf7f",
-        "input_sha256": "d5a21bbf8224f7b83b730ec1ae5492251ddb503aeedb68666edbb6ccd691be2c",
+        "input_sha256": "bc04ba00495adb20f720c5026f9a290e374ef4d6208738be62a52a6053adc14e",
         "instance_id": "CP10-hard-seed100030-train-supplement-v1",
         "native_case_id": "CP10-hard-seed100030-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1111,10 +1111,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/5e0c6fb372736c26f18ec2c240514dbac9e0ddd29dd60f364e0b48c5600677d4/scene.usda",
         "station": "assets/5e0c6fb372736c26f18ec2c240514dbac9e0ddd29dd60f364e0b48c5600677d4/scene.usda",
-        "train_source_raw": "inputs/2f911d395a0f2ce88ca7bce6d6b6206a7bc6b864eb38c3b9f7efcba96edd6047.json",
+        "train_source_raw": "inputs/0a78c7f63bf82cb04d269f92f0efedc21d9f873f243a7d892b0f87416e128619.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "d44d1e8e2a3c0e29deab1f0b7a0f25bff65025102743b53e8c137db74053b9b9",
+      "config_sha256": "14ed7eaa4cdbc86bc1b065df010bf8e23b009fe5f6e9e158bfa5a6ba4e3f4460",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1134,7 +1134,7 @@
       "runtime_asset_sha256": {
         "scene": "d0a1d4fbf698226597e21e857e7edcc935e2b3d21c2f0e4af0db4d41510b6497",
         "station": "d0a1d4fbf698226597e21e857e7edcc935e2b3d21c2f0e4af0db4d41510b6497",
-        "train_source_raw": "2f911d395a0f2ce88ca7bce6d6b6206a7bc6b864eb38c3b9f7efcba96edd6047",
+        "train_source_raw": "0a78c7f63bf82cb04d269f92f0efedc21d9f873f243a7d892b0f87416e128619",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1144,7 +1144,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100031-train-supplement-v1/episode.hdf5",
         "h5_sha256": "e2eb643871934039f1f7be181acd4b720c4c34f2a850b70145b31e91f4b2ba5f",
-        "input_sha256": "2f911d395a0f2ce88ca7bce6d6b6206a7bc6b864eb38c3b9f7efcba96edd6047",
+        "input_sha256": "0a78c7f63bf82cb04d269f92f0efedc21d9f873f243a7d892b0f87416e128619",
         "instance_id": "CP10-hard-seed100031-train-supplement-v1",
         "native_case_id": "CP10-hard-seed100031-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1159,10 +1159,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/52b651d978ed9a836552b7a102d4752293393ea949fab73cc30069912d72529d/scene.usda",
         "station": "assets/52b651d978ed9a836552b7a102d4752293393ea949fab73cc30069912d72529d/scene.usda",
-        "train_source_raw": "inputs/dadfbbbd7642385706c9321c125ac4c5927586cef5ef9c8383a3e7824d8354e3.json",
+        "train_source_raw": "inputs/059e386806ff899205fe9ec70de0ea33ec4ba44dc9a082122897e026236a9069.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "97caa4f412dcefa6a36739812bc7ae47583c378f306aaf10654b875911a1d4d3",
+      "config_sha256": "579ff8dc0172f3ce5c6153f45f6ba24be639658d660a8a5b53b81b1ad33f8a15",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1182,7 +1182,7 @@
       "runtime_asset_sha256": {
         "scene": "2bc4bcc16632922eb7548520188a6c00af187c1c61e8149c1e5d5d585f7e1d5c",
         "station": "2bc4bcc16632922eb7548520188a6c00af187c1c61e8149c1e5d5d585f7e1d5c",
-        "train_source_raw": "dadfbbbd7642385706c9321c125ac4c5927586cef5ef9c8383a3e7824d8354e3",
+        "train_source_raw": "059e386806ff899205fe9ec70de0ea33ec4ba44dc9a082122897e026236a9069",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1192,7 +1192,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100039-train-supplement-v1/episode.hdf5",
         "h5_sha256": "2835a301e70758e67fb3a3cfc1aa3aa8eeeaeae34c3549cae0661fb52e5fa273",
-        "input_sha256": "dadfbbbd7642385706c9321c125ac4c5927586cef5ef9c8383a3e7824d8354e3",
+        "input_sha256": "059e386806ff899205fe9ec70de0ea33ec4ba44dc9a082122897e026236a9069",
         "instance_id": "CP10-hard-seed100039-train-supplement-v1",
         "native_case_id": "CP10-hard-seed100039-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1207,10 +1207,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/3381d962f5c83bbcf03febfff2dd2c63bd0db6dae69ae206691b3ee2231dfab0/scene.usda",
         "station": "assets/3381d962f5c83bbcf03febfff2dd2c63bd0db6dae69ae206691b3ee2231dfab0/scene.usda",
-        "train_source_raw": "inputs/cf3f4e3cf13b83909149bbfa01bc30c5b377529810cf8cb973105bbaf7dc761c.json",
+        "train_source_raw": "inputs/62d822886b2a1c1e0e7bfdc4453e564f0727319641295e13e48ef4109054d0f1.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "31491fe841bdf8383f6d0502fdaaba3098df28a07f8dffa3387c11a80517c90e",
+      "config_sha256": "60600c3b503a246d2b74ed297517ef0c609c8dc271c3227f674f1dae2fda143c",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1230,7 +1230,7 @@
       "runtime_asset_sha256": {
         "scene": "9dd80d49ab10c9776edf04300221e53db1ec1d86c6b60601f2de8df1eee468d9",
         "station": "9dd80d49ab10c9776edf04300221e53db1ec1d86c6b60601f2de8df1eee468d9",
-        "train_source_raw": "cf3f4e3cf13b83909149bbfa01bc30c5b377529810cf8cb973105bbaf7dc761c",
+        "train_source_raw": "62d822886b2a1c1e0e7bfdc4453e564f0727319641295e13e48ef4109054d0f1",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1240,7 +1240,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100042-train-supplement-v1/episode.hdf5",
         "h5_sha256": "10a13cb7bccebbfc29424b6f2d9f950bb3fcff54ea3845d79439d68bd5f53b24",
-        "input_sha256": "cf3f4e3cf13b83909149bbfa01bc30c5b377529810cf8cb973105bbaf7dc761c",
+        "input_sha256": "62d822886b2a1c1e0e7bfdc4453e564f0727319641295e13e48ef4109054d0f1",
         "instance_id": "CP10-hard-seed100042-train-supplement-v1",
         "native_case_id": "CP10-hard-seed100042-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1255,10 +1255,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/ec1491c51eefdcaa0207f8dd227ec744445a13c88ff8d7eb6c9fb7323afa6685/scene.usda",
         "station": "assets/ec1491c51eefdcaa0207f8dd227ec744445a13c88ff8d7eb6c9fb7323afa6685/scene.usda",
-        "train_source_raw": "inputs/f94cf5cf47c5c8ecb7188babe56f396339c3eb0e4990c44d0de747499abe171e.json",
+        "train_source_raw": "inputs/17a13ce7dc97c6b27aae0de8e25e361f802a18197aa443b0fef921407eb995df.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "d46a6f4f4edd6bb25874da8fc48305ae4855393b56552afca8e821caf6c56434",
+      "config_sha256": "87aca9ad795f9b2d6172b3985f3055b3b761d63c419ddd32a7526ad5a411efa6",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1278,7 +1278,7 @@
       "runtime_asset_sha256": {
         "scene": "cc4d4a7b07b461efc023e07b52e900487b8a6cfee2a6307313dc9c2cfa63fbf5",
         "station": "cc4d4a7b07b461efc023e07b52e900487b8a6cfee2a6307313dc9c2cfa63fbf5",
-        "train_source_raw": "f94cf5cf47c5c8ecb7188babe56f396339c3eb0e4990c44d0de747499abe171e",
+        "train_source_raw": "17a13ce7dc97c6b27aae0de8e25e361f802a18197aa443b0fef921407eb995df",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1288,7 +1288,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100044-train-supplement-v1/episode.hdf5",
         "h5_sha256": "1aa171f385e7bb7379229929403797b3c3b750a61f98505739433e2f3ff43d07",
-        "input_sha256": "f94cf5cf47c5c8ecb7188babe56f396339c3eb0e4990c44d0de747499abe171e",
+        "input_sha256": "17a13ce7dc97c6b27aae0de8e25e361f802a18197aa443b0fef921407eb995df",
         "instance_id": "CP10-hard-seed100044-train-supplement-v1",
         "native_case_id": "CP10-hard-seed100044-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1303,10 +1303,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/66491726e2253e80a4c68e7eac7f36bd3803a0ff7e17945101a1f9913c60b07f/scene.usda",
         "station": "assets/66491726e2253e80a4c68e7eac7f36bd3803a0ff7e17945101a1f9913c60b07f/scene.usda",
-        "train_source_raw": "inputs/affda9c513973ac33d3f47120735421731316e2a2642346b7a68806b5f85f758.json",
+        "train_source_raw": "inputs/546cf97a34c031ce9c01cbaf2d5317280e5ea87427638ec3220e33f9bc01ed4e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "adf59cd164dd4bdc1672b534ebc4a72a61df017a0ddfc7171f974c25fce52c41",
+      "config_sha256": "166987ffcf175e3db1512cfa232a2f815d8c3cc1d17ed6edb32199c598a534a6",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1326,7 +1326,7 @@
       "runtime_asset_sha256": {
         "scene": "9d8d46296baeb682780f8aa6aea60ed78d1b2ba2d0a13b9ea7178398001d34d4",
         "station": "9d8d46296baeb682780f8aa6aea60ed78d1b2ba2d0a13b9ea7178398001d34d4",
-        "train_source_raw": "affda9c513973ac33d3f47120735421731316e2a2642346b7a68806b5f85f758",
+        "train_source_raw": "546cf97a34c031ce9c01cbaf2d5317280e5ea87427638ec3220e33f9bc01ed4e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1336,7 +1336,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100059-train-supplement-v1/episode.hdf5",
         "h5_sha256": "a8e158c4bce149748840b576817f42b59d885768c82a13a1b15e75e73aaaac9a",
-        "input_sha256": "affda9c513973ac33d3f47120735421731316e2a2642346b7a68806b5f85f758",
+        "input_sha256": "546cf97a34c031ce9c01cbaf2d5317280e5ea87427638ec3220e33f9bc01ed4e",
         "instance_id": "CP10-hard-seed100059-train-supplement-v1",
         "native_case_id": "CP10-hard-seed100059-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1351,10 +1351,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/c77d82d215e06e3211a53bacb4c566d962b68a7e918bec3dbd94c2d48110df8b/scene.usda",
         "station": "assets/c77d82d215e06e3211a53bacb4c566d962b68a7e918bec3dbd94c2d48110df8b/scene.usda",
-        "train_source_raw": "inputs/c02d9ec8e3d6071ab0b5f1406ca0ddf1a4d78f8e0b025847fbc33eb727a7462a.json",
+        "train_source_raw": "inputs/5ccec0b8289036fbcfb72922d9b4f46f98a1df4f8b8a516106dc9e722b8a374a.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "1e984fecf5116f96af4eb0ad016151dc10bd6ffc253e245e420573393a8f3b3d",
+      "config_sha256": "0565fc1e79663d49bd8f58c8f56c3480059bf8538a56a08244f79693a842ff87",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1374,7 +1374,7 @@
       "runtime_asset_sha256": {
         "scene": "26d56951a0fd255c89d4f8d2f829c94d1d575b8e8866585f07b75242b2e7db80",
         "station": "26d56951a0fd255c89d4f8d2f829c94d1d575b8e8866585f07b75242b2e7db80",
-        "train_source_raw": "c02d9ec8e3d6071ab0b5f1406ca0ddf1a4d78f8e0b025847fbc33eb727a7462a",
+        "train_source_raw": "5ccec0b8289036fbcfb72922d9b4f46f98a1df4f8b8a516106dc9e722b8a374a",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1384,7 +1384,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100060-train-supplement-v1/episode.hdf5",
         "h5_sha256": "fb2c3dd9507c3ac2145e17a97b2d20f82009da650d037be2692413df3ea9a95d",
-        "input_sha256": "c02d9ec8e3d6071ab0b5f1406ca0ddf1a4d78f8e0b025847fbc33eb727a7462a",
+        "input_sha256": "5ccec0b8289036fbcfb72922d9b4f46f98a1df4f8b8a516106dc9e722b8a374a",
         "instance_id": "CP10-hard-seed100060-train-supplement-v1",
         "native_case_id": "CP10-hard-seed100060-train-supplement-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1399,10 +1399,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/1b77f65039925436c0b883b62af031e16cbaa64635bf2c7973b21bdf91fb0de3/scene.usda",
         "station": "assets/1b77f65039925436c0b883b62af031e16cbaa64635bf2c7973b21bdf91fb0de3/scene.usda",
-        "train_source_raw": "inputs/c5b0b10aecbd76ba5d284be912ad583481bbd07f1f4292c2d973b8b6d95039d4.json",
+        "train_source_raw": "inputs/0a92f30965dba16647c5f33bf170306c12bd124627b4a1ab437a2c461c2fa908.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "c56cdac5c664a755cc4a8a47fe76f074022b5d93bd4fcc4e397c6c3cf4b7887e",
+      "config_sha256": "fc3806cc68542886c6e9aafddd76977e5ebd70d276af63a38ead70d9dc757261",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1422,7 +1422,7 @@
       "runtime_asset_sha256": {
         "scene": "2320e181828a77b5020c200aedaa23abb0e935de8ec37e99ed7e68181aaf437e",
         "station": "2320e181828a77b5020c200aedaa23abb0e935de8ec37e99ed7e68181aaf437e",
-        "train_source_raw": "c5b0b10aecbd76ba5d284be912ad583481bbd07f1f4292c2d973b8b6d95039d4",
+        "train_source_raw": "0a92f30965dba16647c5f33bf170306c12bd124627b4a1ab437a2c461c2fa908",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1432,7 +1432,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100069-train-supplement-v3/episode.hdf5",
         "h5_sha256": "2b9da9d655382f14f8e254aba7de8a9fc50f667988986f01b0d01977845edfde",
-        "input_sha256": "c5b0b10aecbd76ba5d284be912ad583481bbd07f1f4292c2d973b8b6d95039d4",
+        "input_sha256": "0a92f30965dba16647c5f33bf170306c12bd124627b4a1ab437a2c461c2fa908",
         "instance_id": "CP10-hard-seed100069-train-supplement-v3",
         "native_case_id": "CP10-hard-seed100069-train-supplement-v3",
         "schema": "mind2act_eval.training_source.v1",
@@ -1447,10 +1447,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/8af91e93501a1281a2685298172bf728e14e9806ad3a3854b2bb3dcad0547fb3/scene.usda",
         "station": "assets/8af91e93501a1281a2685298172bf728e14e9806ad3a3854b2bb3dcad0547fb3/scene.usda",
-        "train_source_raw": "inputs/8a90459d238253fc1580ec914f4d1b0e119ccc79a31483fada0cb873e70dfcb4.json",
+        "train_source_raw": "inputs/155814cf781088de075856a1c6bc495a049785e18b1e4e283735752a6022c5fa.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "be2585f4f7b8fe054b7b9a12f0cb6def64b3cf7cfe7b6f97060476c5d6f84930",
+      "config_sha256": "3b9fe4ec4a1d2cbc255cd084112db0336057eb84dfe96dcd4789111b3cc11796",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1470,7 +1470,7 @@
       "runtime_asset_sha256": {
         "scene": "f114b4ea8cad8a75ea7bd4a2a1b36627dc006cb7f223768765061276b2f0854f",
         "station": "f114b4ea8cad8a75ea7bd4a2a1b36627dc006cb7f223768765061276b2f0854f",
-        "train_source_raw": "8a90459d238253fc1580ec914f4d1b0e119ccc79a31483fada0cb873e70dfcb4",
+        "train_source_raw": "155814cf781088de075856a1c6bc495a049785e18b1e4e283735752a6022c5fa",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1480,7 +1480,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100075-train-supplement-v8/episode.hdf5",
         "h5_sha256": "d7bc68a86bf88d22b29841b45ad9562db81095b43c0ac011dc1dad3d2356e18f",
-        "input_sha256": "8a90459d238253fc1580ec914f4d1b0e119ccc79a31483fada0cb873e70dfcb4",
+        "input_sha256": "155814cf781088de075856a1c6bc495a049785e18b1e4e283735752a6022c5fa",
         "instance_id": "CP10-hard-seed100075-train-supplement-v8",
         "native_case_id": "CP10-hard-seed100075-train-supplement-v8",
         "schema": "mind2act_eval.training_source.v1",
@@ -1495,10 +1495,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/cd6302b6c3d0d7d3913229ba3930c34b302059f3d1b69740235432f2cac1d978/scene.usda",
         "station": "assets/cd6302b6c3d0d7d3913229ba3930c34b302059f3d1b69740235432f2cac1d978/scene.usda",
-        "train_source_raw": "inputs/12bb70e35d59f43fc7189d3a108ad92281beac08396effc6df9b2db1fd7b80d2.json",
+        "train_source_raw": "inputs/d15ef861673d248b3da41ad757fcb0d99c18e0a074346ca5cb194ca11710b48e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "e7efcd2cc436d797a3a885e97e8b1b2a565b4a640c92169f4dbd68367d06cf9b",
+      "config_sha256": "bb041f9b49f5b1e7c166226e6d01b4dcbb476edb6ae6ea5f683306b095dec0a5",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1518,7 +1518,7 @@
       "runtime_asset_sha256": {
         "scene": "4960e5d45cc427f4aa7e4975efd3a167c1b91f8d0dc8e91a50756058c1b17c02",
         "station": "4960e5d45cc427f4aa7e4975efd3a167c1b91f8d0dc8e91a50756058c1b17c02",
-        "train_source_raw": "12bb70e35d59f43fc7189d3a108ad92281beac08396effc6df9b2db1fd7b80d2",
+        "train_source_raw": "d15ef861673d248b3da41ad757fcb0d99c18e0a074346ca5cb194ca11710b48e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1528,7 +1528,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100085-train-supplement-v8/episode.hdf5",
         "h5_sha256": "460a56ea909f47a0808f4eb73b6729b80b0f0c80a3466d847345a08b31093740",
-        "input_sha256": "12bb70e35d59f43fc7189d3a108ad92281beac08396effc6df9b2db1fd7b80d2",
+        "input_sha256": "d15ef861673d248b3da41ad757fcb0d99c18e0a074346ca5cb194ca11710b48e",
         "instance_id": "CP10-hard-seed100085-train-supplement-v8",
         "native_case_id": "CP10-hard-seed100085-train-supplement-v8",
         "schema": "mind2act_eval.training_source.v1",
@@ -1543,10 +1543,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/ae97b28d4dd67882a1df3fbee855d365c876839c41ca795984860b5e02056ec3/scene.usda",
         "station": "assets/ae97b28d4dd67882a1df3fbee855d365c876839c41ca795984860b5e02056ec3/scene.usda",
-        "train_source_raw": "inputs/24e446615f9df9d05ddf2281143943ffd943d6390d00025c1aac68bf77541562.json",
+        "train_source_raw": "inputs/7b71d4d9ff70e746060e41b625d798a4f8dc640d0cc33a7a731fda9322a91779.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "c4b833f8b97c72201a38c33e76cb84bf465208b060acbcecc30403f9e5066d68",
+      "config_sha256": "6e7748751d06f1a3da445ba160e90ba0ec0f17c8157ef4284d46a9761b2f30d2",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1566,7 +1566,7 @@
       "runtime_asset_sha256": {
         "scene": "f7bbcdfd3eac9b0066bc6a46b059b077ae6f25153a159a4244141f7935003afc",
         "station": "f7bbcdfd3eac9b0066bc6a46b059b077ae6f25153a159a4244141f7935003afc",
-        "train_source_raw": "24e446615f9df9d05ddf2281143943ffd943d6390d00025c1aac68bf77541562",
+        "train_source_raw": "7b71d4d9ff70e746060e41b625d798a4f8dc640d0cc33a7a731fda9322a91779",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1576,7 +1576,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed100089-train-supplement-v8/episode.hdf5",
         "h5_sha256": "b6f7f15b82c2afcfee39a52a8f14d03585e4cc4054f0d469fd24f9b39f4ba00f",
-        "input_sha256": "24e446615f9df9d05ddf2281143943ffd943d6390d00025c1aac68bf77541562",
+        "input_sha256": "7b71d4d9ff70e746060e41b625d798a4f8dc640d0cc33a7a731fda9322a91779",
         "instance_id": "CP10-hard-seed100089-train-supplement-v8",
         "native_case_id": "CP10-hard-seed100089-train-supplement-v8",
         "schema": "mind2act_eval.training_source.v1",
@@ -1591,10 +1591,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/7a3bc7a7754dca0dab5660f91896abe80bba140a8ef5999c4065c2ecc71bb357/scene.usda",
         "station": "assets/7a3bc7a7754dca0dab5660f91896abe80bba140a8ef5999c4065c2ecc71bb357/scene.usda",
-        "train_source_raw": "inputs/ab36fb928fae35834bf242074a7634f8502213a48ea1963c9ee5f1ff1fc21b1a.json",
+        "train_source_raw": "inputs/773a5e539cb359ab6c76d52f7e7dc736f7154b7b7e8870494fcd050bbe6dad9c.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "b2424915efaf4e71a54a2ff39721c4144d204dcd6d0d059bd1289cbabc29a87b",
+      "config_sha256": "59ea4b159dadb8cfea9311a680e0f99669c0580188464f4558b951d0bfa4c902",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1614,7 +1614,7 @@
       "runtime_asset_sha256": {
         "scene": "6b03ab7629c39aeb02c82024f41a375273ddf7fad3976d8d8cc1784f06756b44",
         "station": "6b03ab7629c39aeb02c82024f41a375273ddf7fad3976d8d8cc1784f06756b44",
-        "train_source_raw": "ab36fb928fae35834bf242074a7634f8502213a48ea1963c9ee5f1ff1fc21b1a",
+        "train_source_raw": "773a5e539cb359ab6c76d52f7e7dc736f7154b7b7e8870494fcd050bbe6dad9c",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1624,7 +1624,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed119-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "d48d64907103239c8ca7c8a9efaae115ae7e95f209aa1ad246e111691326edf2",
-        "input_sha256": "ab36fb928fae35834bf242074a7634f8502213a48ea1963c9ee5f1ff1fc21b1a",
+        "input_sha256": "773a5e539cb359ab6c76d52f7e7dc736f7154b7b7e8870494fcd050bbe6dad9c",
         "instance_id": "CP10-hard-seed119-cp10-semantic50-v1",
         "native_case_id": "CP10-hard-seed119-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1639,10 +1639,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/03f721bf82b09b3f1f97f7e0ab3504daf3587dbf4ef90fb7e2926c3fed46deff/scene.usda",
         "station": "assets/03f721bf82b09b3f1f97f7e0ab3504daf3587dbf4ef90fb7e2926c3fed46deff/scene.usda",
-        "train_source_raw": "inputs/f6a17f83e291d96e0982fea2c706edcf45b9beb069c26bede437628761cb1151.json",
+        "train_source_raw": "inputs/2246eae0e3e0f9459c3c26240a8c22e3384ce3cf86cfd4a03f522de703d0070c.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "63e61f554b7c3df6fe5748e847d50611c83bd8b30b690c89fcd8ebf5d6715b0c",
+      "config_sha256": "732d56f4bcd204891f4707f7a8f5dcc037f10b50fd94073a473351cd7c1c8f9a",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1662,7 +1662,7 @@
       "runtime_asset_sha256": {
         "scene": "506680bf5fc9b549667e146666e63d90c188f4eb62930a248e4266099e9ac1b2",
         "station": "506680bf5fc9b549667e146666e63d90c188f4eb62930a248e4266099e9ac1b2",
-        "train_source_raw": "f6a17f83e291d96e0982fea2c706edcf45b9beb069c26bede437628761cb1151",
+        "train_source_raw": "2246eae0e3e0f9459c3c26240a8c22e3384ce3cf86cfd4a03f522de703d0070c",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1672,7 +1672,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed1278-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "aa0398c20ea5961435636f7f9e38dd755ef6596421f3d33063088ea8e7e2c1a4",
-        "input_sha256": "f6a17f83e291d96e0982fea2c706edcf45b9beb069c26bede437628761cb1151",
+        "input_sha256": "2246eae0e3e0f9459c3c26240a8c22e3384ce3cf86cfd4a03f522de703d0070c",
         "instance_id": "CP10-hard-seed1278-cp10-semantic50-v1",
         "native_case_id": "CP10-hard-seed1278-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1687,10 +1687,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/acaa796fa424976deced924f47833f630ddd37766d0205e052b0e645444d78b9/scene.usda",
         "station": "assets/acaa796fa424976deced924f47833f630ddd37766d0205e052b0e645444d78b9/scene.usda",
-        "train_source_raw": "inputs/9fabe0e9a6d97a11f918a3e742e8ed318e5981d09389ac4140954347d43c47af.json",
+        "train_source_raw": "inputs/d3fd124022802b9c52da41ce1a79256df4e5316b5f2cf0422b2924a814eeed34.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "3139c1c8b27d72cd4171755eb92570af80afeaa7fa1270aa77fb52fdef73f3db",
+      "config_sha256": "d15a851057a78d1f4e76782231a3fc1ac8825b9207a6317308b64173949a4886",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1710,7 +1710,7 @@
       "runtime_asset_sha256": {
         "scene": "76f6a418266034f5855fdf30d5622dc5dda73ebb6b19dee15ddea30aa21f4401",
         "station": "76f6a418266034f5855fdf30d5622dc5dda73ebb6b19dee15ddea30aa21f4401",
-        "train_source_raw": "9fabe0e9a6d97a11f918a3e742e8ed318e5981d09389ac4140954347d43c47af",
+        "train_source_raw": "d3fd124022802b9c52da41ce1a79256df4e5316b5f2cf0422b2924a814eeed34",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1720,7 +1720,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed152-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "b2529b5032fcdc89b121c18c05840a2aab4eac6610c248fed31660599fa8f95f",
-        "input_sha256": "9fabe0e9a6d97a11f918a3e742e8ed318e5981d09389ac4140954347d43c47af",
+        "input_sha256": "d3fd124022802b9c52da41ce1a79256df4e5316b5f2cf0422b2924a814eeed34",
         "instance_id": "CP10-hard-seed152-cp10-semantic50-v1",
         "native_case_id": "CP10-hard-seed152-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1735,10 +1735,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/221c179fc4936baf1bf8b84ce400fce8f19c90037a1b2845d8456c2601159ea6/scene.usda",
         "station": "assets/221c179fc4936baf1bf8b84ce400fce8f19c90037a1b2845d8456c2601159ea6/scene.usda",
-        "train_source_raw": "inputs/070b677575e44278c4db67fa0c16b82c108b80605cdf8c4b21c5abf566592916.json",
+        "train_source_raw": "inputs/f866d369cc936556123561fcb4bdd3fd451e8da571c0b48b0712b43d7dfeea66.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "e4e1848720ca0b5b1708927cc91213c5d47e26212c2941d4fa442f42548ad1d8",
+      "config_sha256": "5861a93508a40eb5a665a4b68c0d65ad9437ecbd0e2a32e0cb811e95a8111d26",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1758,7 +1758,7 @@
       "runtime_asset_sha256": {
         "scene": "b25683a95dfd84805455c456b1084ba54208e77236b15c497f8ed9b81a3cd323",
         "station": "b25683a95dfd84805455c456b1084ba54208e77236b15c497f8ed9b81a3cd323",
-        "train_source_raw": "070b677575e44278c4db67fa0c16b82c108b80605cdf8c4b21c5abf566592916",
+        "train_source_raw": "f866d369cc936556123561fcb4bdd3fd451e8da571c0b48b0712b43d7dfeea66",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1768,7 +1768,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed1661-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "75359d67575b3c6107d1b056d9a6591dc53bacf3005b78736d3f0efae2c34a92",
-        "input_sha256": "070b677575e44278c4db67fa0c16b82c108b80605cdf8c4b21c5abf566592916",
+        "input_sha256": "f866d369cc936556123561fcb4bdd3fd451e8da571c0b48b0712b43d7dfeea66",
         "instance_id": "CP10-hard-seed1661-cp10-semantic50-v1",
         "native_case_id": "CP10-hard-seed1661-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1783,10 +1783,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/87824df2e280dd3989aa64aaf6c8f5eb189be49de9a1b3bcdefabff30ea24a57/scene.usda",
         "station": "assets/87824df2e280dd3989aa64aaf6c8f5eb189be49de9a1b3bcdefabff30ea24a57/scene.usda",
-        "train_source_raw": "inputs/1d9c9b75b024c810285bdcea7b4ff62086074cf6d7627844cdd3691667889cec.json",
+        "train_source_raw": "inputs/d461c390ae624a23716cb07512d569a66161721d165edf29301635f8df7583f0.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "5ed43fda2d02d4b916a7d8cd1f9383bb6c658d955a3066258deaa673eff79ea1",
+      "config_sha256": "914ed43871fb4a3ee83d32701bf702da11b685e711b70d556afea2fc376fe5fe",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1806,7 +1806,7 @@
       "runtime_asset_sha256": {
         "scene": "f8d66204ce4fe2968e75192944dbeff1b37704b6f58ef2ea9f6a50cd648003aa",
         "station": "f8d66204ce4fe2968e75192944dbeff1b37704b6f58ef2ea9f6a50cd648003aa",
-        "train_source_raw": "1d9c9b75b024c810285bdcea7b4ff62086074cf6d7627844cdd3691667889cec",
+        "train_source_raw": "d461c390ae624a23716cb07512d569a66161721d165edf29301635f8df7583f0",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1816,7 +1816,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed529-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "f33f7ee621c281ed9e6c90c0c18efa9db578c29bb5ed086eab50bb5932c97fd7",
-        "input_sha256": "1d9c9b75b024c810285bdcea7b4ff62086074cf6d7627844cdd3691667889cec",
+        "input_sha256": "d461c390ae624a23716cb07512d569a66161721d165edf29301635f8df7583f0",
         "instance_id": "CP10-hard-seed529-cp10-semantic50-v1",
         "native_case_id": "CP10-hard-seed529-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1831,10 +1831,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/287d894bb5d227e714ab194c2315a54d9958a5ea1c6adb1b0f85142b5d7680f9/scene.usda",
         "station": "assets/287d894bb5d227e714ab194c2315a54d9958a5ea1c6adb1b0f85142b5d7680f9/scene.usda",
-        "train_source_raw": "inputs/44f5255f1f3bb6b7bafcd58816b96a9620bbb404e8b41b41a077e65510b1bf99.json",
+        "train_source_raw": "inputs/361b91644e3758b6a5b20f8258df284a938e2b8c17e25a886306d7b9ecaad09f.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "d0fb52b5551e89eaeba31a6670cea70c459a1125fb7622bab73d5af23114de40",
+      "config_sha256": "d3de65ec17bd86453b0fbaa378f1ad04d16855934dd6fe0692ec55572145d943",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1854,7 +1854,7 @@
       "runtime_asset_sha256": {
         "scene": "e5bf707b3aba3cd22ec6795337f4cf876a1d13f477a7138a6412068cba1aa8bb",
         "station": "e5bf707b3aba3cd22ec6795337f4cf876a1d13f477a7138a6412068cba1aa8bb",
-        "train_source_raw": "44f5255f1f3bb6b7bafcd58816b96a9620bbb404e8b41b41a077e65510b1bf99",
+        "train_source_raw": "361b91644e3758b6a5b20f8258df284a938e2b8c17e25a886306d7b9ecaad09f",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1864,7 +1864,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed571-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "1bf4f041b240f98839d44da42277f3b1031570f1f3030ab28d9ea0eb9c050bfe",
-        "input_sha256": "44f5255f1f3bb6b7bafcd58816b96a9620bbb404e8b41b41a077e65510b1bf99",
+        "input_sha256": "361b91644e3758b6a5b20f8258df284a938e2b8c17e25a886306d7b9ecaad09f",
         "instance_id": "CP10-hard-seed571-cp10-semantic50-v1",
         "native_case_id": "CP10-hard-seed571-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1879,10 +1879,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/89504869ddf0004f916c0e7cf5891fdb5272eeb5efe557434128b3f468e2b964/scene.usda",
         "station": "assets/89504869ddf0004f916c0e7cf5891fdb5272eeb5efe557434128b3f468e2b964/scene.usda",
-        "train_source_raw": "inputs/9222913c5a6336c0b523eff0bfc7249e5f63b46cfe093f57750a24fc9513dbfa.json",
+        "train_source_raw": "inputs/1590e3d73bf7d5e9bc35e7496309f72595fc9161049581fe50bcc6120e805279.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "5ab53c1b182add84ad1ac1a3a1a6c8c42fb2c1d249a957ed54e064e58b0520a8",
+      "config_sha256": "789f99baf70125263b54e2ecbfb986c975c2fb4a886066fba49209eb6d27fd3b",
       "identity": {
         "asset_version": "source-scene-sha256:a33853ecc5c9347e1ab0704354da1b7ab4ccf6353ab5a168c371eaea1060d58a",
         "clock": {
@@ -1902,7 +1902,7 @@
       "runtime_asset_sha256": {
         "scene": "1ecb1c4257bd9d245c16dea52d7948764baba71c379901a8c23d2231e603e619",
         "station": "1ecb1c4257bd9d245c16dea52d7948764baba71c379901a8c23d2231e603e619",
-        "train_source_raw": "9222913c5a6336c0b523eff0bfc7249e5f63b46cfe093f57750a24fc9513dbfa",
+        "train_source_raw": "1590e3d73bf7d5e9bc35e7496309f72595fc9161049581fe50bcc6120e805279",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1912,7 +1912,7 @@
         "difficulty": "hard",
         "h5_path": "data/CP10/hard/CP10-hard-seed858-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "a2d210bfcafafbe1e7780b4600db4e0e2a4e70c9c3edd02e76922f095367464b",
-        "input_sha256": "9222913c5a6336c0b523eff0bfc7249e5f63b46cfe093f57750a24fc9513dbfa",
+        "input_sha256": "1590e3d73bf7d5e9bc35e7496309f72595fc9161049581fe50bcc6120e805279",
         "instance_id": "CP10-hard-seed858-cp10-semantic50-v1",
         "native_case_id": "CP10-hard-seed858-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1927,10 +1927,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/1097cda3121818c5f64fc74efbff32d0039df97c7f0233996ec1e8c9edc0825d/scene.usda",
         "station": "assets/1097cda3121818c5f64fc74efbff32d0039df97c7f0233996ec1e8c9edc0825d/scene.usda",
-        "train_source_raw": "inputs/568e31b634e3a7d7270e66aeab79879fe4ee3c88ecf98454abcf8494a4bba902.json",
+        "train_source_raw": "inputs/1d00e1444b44bfc9e9ffbea1312feeda29a9ec3aae27d2825b26f61b48d0958d.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "13fb62186e5ac0b814427aafb77cd1f3bc7d80a5c5523fb229b645b7faa37b6c",
+      "config_sha256": "d9a834cdfa45a3c901e8fb4a0aae51c4c4fe232365f48669529988f18bceb474",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -1950,7 +1950,7 @@
       "runtime_asset_sha256": {
         "scene": "627649a73f04ebbc800da0c11f53357803eca7ed82436c649ffa8c7d73f9a621",
         "station": "627649a73f04ebbc800da0c11f53357803eca7ed82436c649ffa8c7d73f9a621",
-        "train_source_raw": "568e31b634e3a7d7270e66aeab79879fe4ee3c88ecf98454abcf8494a4bba902",
+        "train_source_raw": "1d00e1444b44bfc9e9ffbea1312feeda29a9ec3aae27d2825b26f61b48d0958d",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -1960,7 +1960,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1075-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "0075631960d265c38b721624453c824c6b402fe09b69ea859796e6e90b34c8d7",
-        "input_sha256": "568e31b634e3a7d7270e66aeab79879fe4ee3c88ecf98454abcf8494a4bba902",
+        "input_sha256": "1d00e1444b44bfc9e9ffbea1312feeda29a9ec3aae27d2825b26f61b48d0958d",
         "instance_id": "CP10-medium-seed1075-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1075-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -1975,10 +1975,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/c08bdab15d82233e29d6854870254a8749977903c2ae0b2d0ae6757f1a1aaad8/scene.usda",
         "station": "assets/c08bdab15d82233e29d6854870254a8749977903c2ae0b2d0ae6757f1a1aaad8/scene.usda",
-        "train_source_raw": "inputs/5636e52c5068b6ad10e3d971da9f02a12f434d4a51ebe7b63c84d41753de8f46.json",
+        "train_source_raw": "inputs/ae3b5be689d2f7ae88787799fc1eafeb5210e1cb21784af69ccb68b2e8af613e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "736d9612058631b8a8363eb27c2117fcbb61761914339a3f8eccda2db231a52f",
+      "config_sha256": "fa214943d29467bc77d68fed829344a30c7be797ec7319793616417abf3cc57b",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -1998,7 +1998,7 @@
       "runtime_asset_sha256": {
         "scene": "409558f5098e0f3ceb4caf04834bdff2e4e1be60ede5418ac1a219d7e97802aa",
         "station": "409558f5098e0f3ceb4caf04834bdff2e4e1be60ede5418ac1a219d7e97802aa",
-        "train_source_raw": "5636e52c5068b6ad10e3d971da9f02a12f434d4a51ebe7b63c84d41753de8f46",
+        "train_source_raw": "ae3b5be689d2f7ae88787799fc1eafeb5210e1cb21784af69ccb68b2e8af613e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2008,7 +2008,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1166-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "679fe2bf2058c1fcf687e9d79fddae23786879fafe385d87c798375881bd7764",
-        "input_sha256": "5636e52c5068b6ad10e3d971da9f02a12f434d4a51ebe7b63c84d41753de8f46",
+        "input_sha256": "ae3b5be689d2f7ae88787799fc1eafeb5210e1cb21784af69ccb68b2e8af613e",
         "instance_id": "CP10-medium-seed1166-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1166-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2023,10 +2023,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/d5c05de39f8c1954f8049a1780c8fa18e470252b20feda3e4b4e4b30583b5cd7/scene.usda",
         "station": "assets/d5c05de39f8c1954f8049a1780c8fa18e470252b20feda3e4b4e4b30583b5cd7/scene.usda",
-        "train_source_raw": "inputs/94835a0c704795128fb7b16cc69a39201d78f22052bea4e8ac3dbd12374e7553.json",
+        "train_source_raw": "inputs/0325ea52d25000c7ce3600e7aafb393871a7d00600c3f20ec8220ddd50e871fa.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "82a770644dc65901471344ed7cfbbbd04c34839e4c535a2b208cb455e389023b",
+      "config_sha256": "1e90875af1077e5550eb20f39ee10165724d24e2a2908cef2ceb5ef3e1c01ba4",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2046,7 +2046,7 @@
       "runtime_asset_sha256": {
         "scene": "9b791e14da64386c1bc7e3ab24f1e6f252f10d45cab36e40b6ab2657633fc42e",
         "station": "9b791e14da64386c1bc7e3ab24f1e6f252f10d45cab36e40b6ab2657633fc42e",
-        "train_source_raw": "94835a0c704795128fb7b16cc69a39201d78f22052bea4e8ac3dbd12374e7553",
+        "train_source_raw": "0325ea52d25000c7ce3600e7aafb393871a7d00600c3f20ec8220ddd50e871fa",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2056,7 +2056,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1251-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "fb8e563833d469bc2afe488eb49b44b97252dc46c3385ebef48c387f67bcbb92",
-        "input_sha256": "94835a0c704795128fb7b16cc69a39201d78f22052bea4e8ac3dbd12374e7553",
+        "input_sha256": "0325ea52d25000c7ce3600e7aafb393871a7d00600c3f20ec8220ddd50e871fa",
         "instance_id": "CP10-medium-seed1251-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1251-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2071,10 +2071,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/1526209a8a343a898408b8b86760e425e7f424224860baf1245cdf38278453ed/scene.usda",
         "station": "assets/1526209a8a343a898408b8b86760e425e7f424224860baf1245cdf38278453ed/scene.usda",
-        "train_source_raw": "inputs/53ada781c6eb6bd8b0848467f3b743789f2870ce436e129b19c859f3919a001c.json",
+        "train_source_raw": "inputs/ff2ba1e9fe95484c39e135f91759eff7b9cc01171a9aa0bdec01895ebf98a925.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "3dc42cf44fb30888a7c87d19f75be1b0e442cc945f6a969a63c93449eb20202b",
+      "config_sha256": "cc33243ae776b546a5a6d588b5c39675ff91d34d8b863101baee1c6ba9387b3e",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2094,7 +2094,7 @@
       "runtime_asset_sha256": {
         "scene": "334f407c141b6694a69ea11a45967522a892e657664c9ef0efe62c390b844096",
         "station": "334f407c141b6694a69ea11a45967522a892e657664c9ef0efe62c390b844096",
-        "train_source_raw": "53ada781c6eb6bd8b0848467f3b743789f2870ce436e129b19c859f3919a001c",
+        "train_source_raw": "ff2ba1e9fe95484c39e135f91759eff7b9cc01171a9aa0bdec01895ebf98a925",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2104,7 +2104,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1337-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "737ee53b8dfdef7d25f0fafe32080cd031263a947040d682a40c78a9d8641666",
-        "input_sha256": "53ada781c6eb6bd8b0848467f3b743789f2870ce436e129b19c859f3919a001c",
+        "input_sha256": "ff2ba1e9fe95484c39e135f91759eff7b9cc01171a9aa0bdec01895ebf98a925",
         "instance_id": "CP10-medium-seed1337-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1337-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2119,10 +2119,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/ea64653f7353bbfdc57fd7d4594bc5a1e3e3330c8e7d4004e14d1ca19fde6d6d/scene.usda",
         "station": "assets/ea64653f7353bbfdc57fd7d4594bc5a1e3e3330c8e7d4004e14d1ca19fde6d6d/scene.usda",
-        "train_source_raw": "inputs/5cbcc2328bec66c20d3af41fd5cf4d17b17e5c6c51220990e3795f5bd34b4303.json",
+        "train_source_raw": "inputs/c1a3dbda3d924c9c9c73285733781cee6801c4e19d11c5f1bab589536105891b.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "8563b9b0d378a797c93d01487d668b51d27b1d831f0ff3c1bb5451522bc93b4b",
+      "config_sha256": "0cc8d8a5337e7908bfe0c956858160826ab7e9e260360d405b6a2cf4f833fd93",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2142,7 +2142,7 @@
       "runtime_asset_sha256": {
         "scene": "e992e3b13a2df6435d9f841842f0070295803dfe4ecf489cc428277a453463ba",
         "station": "e992e3b13a2df6435d9f841842f0070295803dfe4ecf489cc428277a453463ba",
-        "train_source_raw": "5cbcc2328bec66c20d3af41fd5cf4d17b17e5c6c51220990e3795f5bd34b4303",
+        "train_source_raw": "c1a3dbda3d924c9c9c73285733781cee6801c4e19d11c5f1bab589536105891b",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2152,7 +2152,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1378-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "ad3efcceaedcccf1262d07be39c1db2dbd013fb05bacde6812aba6adb85deeba",
-        "input_sha256": "5cbcc2328bec66c20d3af41fd5cf4d17b17e5c6c51220990e3795f5bd34b4303",
+        "input_sha256": "c1a3dbda3d924c9c9c73285733781cee6801c4e19d11c5f1bab589536105891b",
         "instance_id": "CP10-medium-seed1378-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1378-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2167,10 +2167,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/ee568ec849fc1ffb316b929f774fbb62415937a2df4e080983cab9d2b638b542/scene.usda",
         "station": "assets/ee568ec849fc1ffb316b929f774fbb62415937a2df4e080983cab9d2b638b542/scene.usda",
-        "train_source_raw": "inputs/41d59da5c431779d0bcc7571a7855c697ad4fef20e9398413a24e4453335f69f.json",
+        "train_source_raw": "inputs/f64044bcdb465595b0d2c0423d98d76f3d0035d46f0c2297bee3156d1960bf9e.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "d38566a0f356268fa9a4ebb003e727d6f6f9dea6d5feb4d15492303e7402d321",
+      "config_sha256": "76de3d54fa876f4579f1e628675f491a1509bdd575bf31d2506b415ea7e4002b",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2190,7 +2190,7 @@
       "runtime_asset_sha256": {
         "scene": "19eec81fff482a85cc5af549808e5caa3775b8df310542dd47192c2d80985a8a",
         "station": "19eec81fff482a85cc5af549808e5caa3775b8df310542dd47192c2d80985a8a",
-        "train_source_raw": "41d59da5c431779d0bcc7571a7855c697ad4fef20e9398413a24e4453335f69f",
+        "train_source_raw": "f64044bcdb465595b0d2c0423d98d76f3d0035d46f0c2297bee3156d1960bf9e",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2200,7 +2200,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1516-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "798765c8485cbfc182d095cc390735e11ec55f96f592e40046f68813d3f38b09",
-        "input_sha256": "41d59da5c431779d0bcc7571a7855c697ad4fef20e9398413a24e4453335f69f",
+        "input_sha256": "f64044bcdb465595b0d2c0423d98d76f3d0035d46f0c2297bee3156d1960bf9e",
         "instance_id": "CP10-medium-seed1516-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1516-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2215,10 +2215,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/8110052e8d664127cba80cbfb97e395b331e32db75ba718da66f7e63381d9e2d/scene.usda",
         "station": "assets/8110052e8d664127cba80cbfb97e395b331e32db75ba718da66f7e63381d9e2d/scene.usda",
-        "train_source_raw": "inputs/643e70daeae17a1e5a6fbd1dcc595ff9cd76a02f5c1e6b489c4de27e0c8ed2e9.json",
+        "train_source_raw": "inputs/f86eddb5977ec225ee0e40f2cdfae1eae78f8bb69f04d4bbb1dd3c117a0c5c50.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "66cff1259a6fa5584dbcccd864d105b09d5d249699bfa80290c57d3f8b8230f8",
+      "config_sha256": "8a897f624bdcc6e481db1792fc2d4f180c18defc37d9a6e0fafbc24108bd4e11",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2238,7 +2238,7 @@
       "runtime_asset_sha256": {
         "scene": "76c39d557c970bbbc446bebb756305c375594bd78ee6c74d2ccf542adfacb946",
         "station": "76c39d557c970bbbc446bebb756305c375594bd78ee6c74d2ccf542adfacb946",
-        "train_source_raw": "643e70daeae17a1e5a6fbd1dcc595ff9cd76a02f5c1e6b489c4de27e0c8ed2e9",
+        "train_source_raw": "f86eddb5977ec225ee0e40f2cdfae1eae78f8bb69f04d4bbb1dd3c117a0c5c50",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2248,7 +2248,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1552-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "fbce6a6febae4a7588d21ff3a9c0a3bc336182175f3361794a1cd6fd177470c4",
-        "input_sha256": "643e70daeae17a1e5a6fbd1dcc595ff9cd76a02f5c1e6b489c4de27e0c8ed2e9",
+        "input_sha256": "f86eddb5977ec225ee0e40f2cdfae1eae78f8bb69f04d4bbb1dd3c117a0c5c50",
         "instance_id": "CP10-medium-seed1552-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1552-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2263,10 +2263,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/77a3864bc09bbb199fa1d60069096454f779657e4e5b26f3f66f64aa088a2af4/scene.usda",
         "station": "assets/77a3864bc09bbb199fa1d60069096454f779657e4e5b26f3f66f64aa088a2af4/scene.usda",
-        "train_source_raw": "inputs/7e5b2304f72ae3c8d7419d3c261e7fdea0871896809d6e9403f6fc09d6b4e23d.json",
+        "train_source_raw": "inputs/36bc4b92edcc9dc5be418e16d0bf7b2cc116eb7fda04e04d026e013e90220250.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "4e65ae7457a071a06ae2bc81f73f39698eb419e2f7bcc4bfc7bb9f768741ba4c",
+      "config_sha256": "8faefa3abaecad2ccc8129b3626235e383b1a07ef17654a62fb41185e199ea61",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2286,7 +2286,7 @@
       "runtime_asset_sha256": {
         "scene": "bb5b95d8c46d60ac8d1ca0bb2291c8f11ec079bc559d8f0b21092ead1e623bc1",
         "station": "bb5b95d8c46d60ac8d1ca0bb2291c8f11ec079bc559d8f0b21092ead1e623bc1",
-        "train_source_raw": "7e5b2304f72ae3c8d7419d3c261e7fdea0871896809d6e9403f6fc09d6b4e23d",
+        "train_source_raw": "36bc4b92edcc9dc5be418e16d0bf7b2cc116eb7fda04e04d026e013e90220250",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2296,7 +2296,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1859-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "435e65a1b3a80f42c7f1ddb358b9c7b5a626cce7206e7968032a5adab1caa73b",
-        "input_sha256": "7e5b2304f72ae3c8d7419d3c261e7fdea0871896809d6e9403f6fc09d6b4e23d",
+        "input_sha256": "36bc4b92edcc9dc5be418e16d0bf7b2cc116eb7fda04e04d026e013e90220250",
         "instance_id": "CP10-medium-seed1859-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1859-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2311,10 +2311,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/a4a995ef9389edbfaa65fd1cb3da95c906879fdff125975173b87338109a16a9/scene.usda",
         "station": "assets/a4a995ef9389edbfaa65fd1cb3da95c906879fdff125975173b87338109a16a9/scene.usda",
-        "train_source_raw": "inputs/312b21beac9a422d73c6f094bb3d6cd07bf2c2bb4ebe02ff7c8356a46bea8958.json",
+        "train_source_raw": "inputs/083a15ee7881bbbe4b1d8eb68b642aff7aca6d064db633c5034d823f01606bb7.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "c6955d8a99c560af5376c3359f5b3898318b97122abc6f354cb3dfff42209d08",
+      "config_sha256": "785828a95992589492f2ba0cc443a6c04f1f0130f05f5b59ae8a5f5233adefe9",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2334,7 +2334,7 @@
       "runtime_asset_sha256": {
         "scene": "02a3eba5d83cf7ca1cf2e52375f77bcb299c16103399dc3f28538b9f32081046",
         "station": "02a3eba5d83cf7ca1cf2e52375f77bcb299c16103399dc3f28538b9f32081046",
-        "train_source_raw": "312b21beac9a422d73c6f094bb3d6cd07bf2c2bb4ebe02ff7c8356a46bea8958",
+        "train_source_raw": "083a15ee7881bbbe4b1d8eb68b642aff7aca6d064db633c5034d823f01606bb7",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2344,7 +2344,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1872-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "2577b1fc275f002b0e6e8cd2d1767e5878c2692bfe7782e26651474fa9c328ed",
-        "input_sha256": "312b21beac9a422d73c6f094bb3d6cd07bf2c2bb4ebe02ff7c8356a46bea8958",
+        "input_sha256": "083a15ee7881bbbe4b1d8eb68b642aff7aca6d064db633c5034d823f01606bb7",
         "instance_id": "CP10-medium-seed1872-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1872-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2359,10 +2359,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/bd63278558a9f907627d6ebd18935d4339b2bfe07e641d6f6d9bd2ca3a7bbf0f/scene.usda",
         "station": "assets/bd63278558a9f907627d6ebd18935d4339b2bfe07e641d6f6d9bd2ca3a7bbf0f/scene.usda",
-        "train_source_raw": "inputs/0eb125f68f0f7d682c65235845806faa24640730b2b1acf90d06a5cdf37920be.json",
+        "train_source_raw": "inputs/827293489a25559844337bcccd3328fc2022904663744359485820e085858b3f.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "d4d77d7f7df6ae8ea2db42f4812482aee08fe81e94bcc1f5e29cb001be4b2187",
+      "config_sha256": "2db036db0d08b3bb4188ffa7eec6ba2f34a584826710f21d988c7db0178bc91e",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2382,7 +2382,7 @@
       "runtime_asset_sha256": {
         "scene": "3abbfb55cd4e9172acb4d303f6c3076a16039aba3d04ee33d6ad829ab5f90838",
         "station": "3abbfb55cd4e9172acb4d303f6c3076a16039aba3d04ee33d6ad829ab5f90838",
-        "train_source_raw": "0eb125f68f0f7d682c65235845806faa24640730b2b1acf90d06a5cdf37920be",
+        "train_source_raw": "827293489a25559844337bcccd3328fc2022904663744359485820e085858b3f",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2392,7 +2392,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed1913-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "c9a0039f7b9c7f52251633b8cce99060345d35304c20e98149ee65db5d77c0dd",
-        "input_sha256": "0eb125f68f0f7d682c65235845806faa24640730b2b1acf90d06a5cdf37920be",
+        "input_sha256": "827293489a25559844337bcccd3328fc2022904663744359485820e085858b3f",
         "instance_id": "CP10-medium-seed1913-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed1913-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2407,10 +2407,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/a11ce059623123f1a1a89e0a70da5538d1fd9b0bd5371de89dfa50cf3a95c99c/scene.usda",
         "station": "assets/a11ce059623123f1a1a89e0a70da5538d1fd9b0bd5371de89dfa50cf3a95c99c/scene.usda",
-        "train_source_raw": "inputs/a003bf1fcc2353d76588d6e46e854d4e1290f805d70dea714ab5dc2fc32f5469.json",
+        "train_source_raw": "inputs/d1d7525e793e95137eff7c50bfafb5bc4d577fd95670a284c75e762ad97f1e29.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "8b4eaba4c02d3d4c63e7bafc28022be647765d976f75a89ff67ab3e433a8247c",
+      "config_sha256": "742173d43bc1498834080ba99d9783f526fce7c6c2b7113653541a76c76acb10",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2430,7 +2430,7 @@
       "runtime_asset_sha256": {
         "scene": "eb1f100c4c6beea87b29ddd04124e41671dee3824ada110c17970b865378dc95",
         "station": "eb1f100c4c6beea87b29ddd04124e41671dee3824ada110c17970b865378dc95",
-        "train_source_raw": "a003bf1fcc2353d76588d6e46e854d4e1290f805d70dea714ab5dc2fc32f5469",
+        "train_source_raw": "d1d7525e793e95137eff7c50bfafb5bc4d577fd95670a284c75e762ad97f1e29",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2440,7 +2440,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed2002-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "c06dad8d644abc4b8189e8ab8492c2e913798e5a5770749818d4a24ebcc058d5",
-        "input_sha256": "a003bf1fcc2353d76588d6e46e854d4e1290f805d70dea714ab5dc2fc32f5469",
+        "input_sha256": "d1d7525e793e95137eff7c50bfafb5bc4d577fd95670a284c75e762ad97f1e29",
         "instance_id": "CP10-medium-seed2002-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed2002-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2455,10 +2455,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/adfdb03d99c859e950cc9ba5579d56ada035138d66f345cc253aa7464b0f1440/scene.usda",
         "station": "assets/adfdb03d99c859e950cc9ba5579d56ada035138d66f345cc253aa7464b0f1440/scene.usda",
-        "train_source_raw": "inputs/b9d8dff41ecdcb430244e552b1796f6106497a195044859ce8b803c2cfea1e24.json",
+        "train_source_raw": "inputs/5ade82a5b8b0cb436c031574eee840b53a05dad8e6e1e9a02bcc5f008127875b.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "1a6439c4005ddb51f1a220bf5d25b8d2161606000468f056fab33db5fdf94adc",
+      "config_sha256": "f7531ebc2b7049bb538315cf670aec76ca401ab57147fc1c23d654b47cf74edd",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2478,7 +2478,7 @@
       "runtime_asset_sha256": {
         "scene": "68ac2afa955b305d6eb8f6bf492ea93e5703db6e450af5bff2a1dec90183d440",
         "station": "68ac2afa955b305d6eb8f6bf492ea93e5703db6e450af5bff2a1dec90183d440",
-        "train_source_raw": "b9d8dff41ecdcb430244e552b1796f6106497a195044859ce8b803c2cfea1e24",
+        "train_source_raw": "5ade82a5b8b0cb436c031574eee840b53a05dad8e6e1e9a02bcc5f008127875b",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2488,7 +2488,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed2045-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "9729421cb0218b923481934789708ea8883b19fe487f1de89387c355169854f8",
-        "input_sha256": "b9d8dff41ecdcb430244e552b1796f6106497a195044859ce8b803c2cfea1e24",
+        "input_sha256": "5ade82a5b8b0cb436c031574eee840b53a05dad8e6e1e9a02bcc5f008127875b",
         "instance_id": "CP10-medium-seed2045-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed2045-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2503,10 +2503,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/ed577d89d1fcd70f09a13a909dbc2a29d6c029c0dc5a69e131bb2ff9d350adfd/scene.usda",
         "station": "assets/ed577d89d1fcd70f09a13a909dbc2a29d6c029c0dc5a69e131bb2ff9d350adfd/scene.usda",
-        "train_source_raw": "inputs/d4615eacad839791926ff078256cca60b5420995a0ca16318d33b7937d25ccac.json",
+        "train_source_raw": "inputs/e825224c27c1b91fe2d1a5b2d55b59ef121edd9ffa0307d3909687b80849674a.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "5311b17d88067e23f6c77384c1f244f1e21cf57c70598d40e82f4f98af87cdac",
+      "config_sha256": "4a46a367289cc3bf146736b5cf108da6948dbb32385c285930e169b48856c285",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2526,7 +2526,7 @@
       "runtime_asset_sha256": {
         "scene": "c3756a0c03ebe7d8f8704a5f44dee8750c336ea630f05f2fee8f308298f10fba",
         "station": "c3756a0c03ebe7d8f8704a5f44dee8750c336ea630f05f2fee8f308298f10fba",
-        "train_source_raw": "d4615eacad839791926ff078256cca60b5420995a0ca16318d33b7937d25ccac",
+        "train_source_raw": "e825224c27c1b91fe2d1a5b2d55b59ef121edd9ffa0307d3909687b80849674a",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2536,7 +2536,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed330-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "e0e32b744322c556e82cc16f1632e139f63348e7afee2df04660444d7001e282",
-        "input_sha256": "d4615eacad839791926ff078256cca60b5420995a0ca16318d33b7937d25ccac",
+        "input_sha256": "e825224c27c1b91fe2d1a5b2d55b59ef121edd9ffa0307d3909687b80849674a",
         "instance_id": "CP10-medium-seed330-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed330-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2551,10 +2551,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/13c3fd7bae1049a87989719c9f487c8ab200acd47111aad79c055568689c35a6/scene.usda",
         "station": "assets/13c3fd7bae1049a87989719c9f487c8ab200acd47111aad79c055568689c35a6/scene.usda",
-        "train_source_raw": "inputs/7f4f050bb04969ddb46be649c342d6c37bbd367be5be3c5b2e45f9ab56ec36f0.json",
+        "train_source_raw": "inputs/344e2feaa7446e6012c44ff61ddbb8152219049de93663457e28c9cd1cf30396.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "a3c3c0fe020a79f1dfe32c226ed156c8936e0cc3af393d660dad34f5e4f63355",
+      "config_sha256": "80e10bd52074766d0e31c8eed3620b40355c00fdaa85f7e934e39f2281b53767",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2574,7 +2574,7 @@
       "runtime_asset_sha256": {
         "scene": "5c2bd369ce6977c76a679cb557a3db68f5da56cf3af774422db92caddb81df54",
         "station": "5c2bd369ce6977c76a679cb557a3db68f5da56cf3af774422db92caddb81df54",
-        "train_source_raw": "7f4f050bb04969ddb46be649c342d6c37bbd367be5be3c5b2e45f9ab56ec36f0",
+        "train_source_raw": "344e2feaa7446e6012c44ff61ddbb8152219049de93663457e28c9cd1cf30396",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2584,7 +2584,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed360-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "8115014d37690c429f5fb6cb45e31857f11ec4a33ea2cab289bd7d66605db264",
-        "input_sha256": "7f4f050bb04969ddb46be649c342d6c37bbd367be5be3c5b2e45f9ab56ec36f0",
+        "input_sha256": "344e2feaa7446e6012c44ff61ddbb8152219049de93663457e28c9cd1cf30396",
         "instance_id": "CP10-medium-seed360-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed360-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2599,10 +2599,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/4c65bdccf9379a8c8ff8a0020a759e1c8e3c37515ef657bc4c6f555a50251e58/scene.usda",
         "station": "assets/4c65bdccf9379a8c8ff8a0020a759e1c8e3c37515ef657bc4c6f555a50251e58/scene.usda",
-        "train_source_raw": "inputs/402a4265d6841af8423223c980d2b11af9e26b4d92a13967e4fca80d514b1d8a.json",
+        "train_source_raw": "inputs/c0ed5917d80c51286ac4f8efac3c8900189ed5247b5c8d8fe602a86d2097cf68.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "b167e5c49072e31845b54669bea983f09b74a7b76aedfa1da89211f862891c23",
+      "config_sha256": "6e0469108036459219dcd149ef45087d6d24a8bd45406cceec3b589ff14c2ab9",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2622,7 +2622,7 @@
       "runtime_asset_sha256": {
         "scene": "f31e0602196fe80fa45c44597f3ab4cbba2b094bf02138fadbd911f5afc3a13a",
         "station": "f31e0602196fe80fa45c44597f3ab4cbba2b094bf02138fadbd911f5afc3a13a",
-        "train_source_raw": "402a4265d6841af8423223c980d2b11af9e26b4d92a13967e4fca80d514b1d8a",
+        "train_source_raw": "c0ed5917d80c51286ac4f8efac3c8900189ed5247b5c8d8fe602a86d2097cf68",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2632,7 +2632,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed383-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "16d0c69d9a5d2249dc4bbc31295f035d6c0cead85b083e57be787580bd1959b4",
-        "input_sha256": "402a4265d6841af8423223c980d2b11af9e26b4d92a13967e4fca80d514b1d8a",
+        "input_sha256": "c0ed5917d80c51286ac4f8efac3c8900189ed5247b5c8d8fe602a86d2097cf68",
         "instance_id": "CP10-medium-seed383-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed383-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2647,10 +2647,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/8b468f145c29420ec433195e6af1d05863efe3cae467e8c99182798d5e7fb947/scene.usda",
         "station": "assets/8b468f145c29420ec433195e6af1d05863efe3cae467e8c99182798d5e7fb947/scene.usda",
-        "train_source_raw": "inputs/7ba72aea2418837fa688d9dd46bbfd5d7ad979f3fba549e58f492f47125faf23.json",
+        "train_source_raw": "inputs/3c28b7fcb8274047a47567966d0a1fe432b147e94f36113f31cc1c26fed7b18d.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "55b13a0c5ea948a831a2b6540b5e1feb648bcc7d88d3643f9104ff1b5d591a5a",
+      "config_sha256": "61b096a69e5abd7bdcc10a2a2d3684eafd4559a60aee8f50455c3a1824cca0e2",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2670,7 +2670,7 @@
       "runtime_asset_sha256": {
         "scene": "49e82cb4a90a58f40ebfa4f2520e22872de42dc37d2951d4a1e4719ae0a87204",
         "station": "49e82cb4a90a58f40ebfa4f2520e22872de42dc37d2951d4a1e4719ae0a87204",
-        "train_source_raw": "7ba72aea2418837fa688d9dd46bbfd5d7ad979f3fba549e58f492f47125faf23",
+        "train_source_raw": "3c28b7fcb8274047a47567966d0a1fe432b147e94f36113f31cc1c26fed7b18d",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2680,7 +2680,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed572-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "3a207545ba0595f0548c1387fe3fb7a8dfff3447c4f92512f5a591a5ca0eb423",
-        "input_sha256": "7ba72aea2418837fa688d9dd46bbfd5d7ad979f3fba549e58f492f47125faf23",
+        "input_sha256": "3c28b7fcb8274047a47567966d0a1fe432b147e94f36113f31cc1c26fed7b18d",
         "instance_id": "CP10-medium-seed572-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed572-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2695,10 +2695,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/a340046d158f4ff5be75b2f8eca51c72db4500ee2ac8651ba8c06e03e8cae818/scene.usda",
         "station": "assets/a340046d158f4ff5be75b2f8eca51c72db4500ee2ac8651ba8c06e03e8cae818/scene.usda",
-        "train_source_raw": "inputs/69b31670565a745dc3a9a577703c6d85d0450898cc7850eb869c141b1a0f2e80.json",
+        "train_source_raw": "inputs/e6808d456211461c1c97251504d7eaac42eff6a980fe20029e8b365c1b8d54da.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "3ce1b4637c570ccedff265af0e17585afb670692ee1578a182a36981c7db4f8d",
+      "config_sha256": "853c844524482d4858c46f7462d2ceabdbc6c6121dc5635b89c3e0618b076818",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2718,7 +2718,7 @@
       "runtime_asset_sha256": {
         "scene": "d999f440d258da1664e25282a3ffa474edbf48257ebc5a2ec68ca4ef5409160c",
         "station": "d999f440d258da1664e25282a3ffa474edbf48257ebc5a2ec68ca4ef5409160c",
-        "train_source_raw": "69b31670565a745dc3a9a577703c6d85d0450898cc7850eb869c141b1a0f2e80",
+        "train_source_raw": "e6808d456211461c1c97251504d7eaac42eff6a980fe20029e8b365c1b8d54da",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2728,7 +2728,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed582-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "67c49915c693df27cc0e68819bc1b37f103011b7f5b7894f8d974979b8e95620",
-        "input_sha256": "69b31670565a745dc3a9a577703c6d85d0450898cc7850eb869c141b1a0f2e80",
+        "input_sha256": "e6808d456211461c1c97251504d7eaac42eff6a980fe20029e8b365c1b8d54da",
         "instance_id": "CP10-medium-seed582-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed582-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2743,10 +2743,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/dc0c622fb86f100b7bbdedb874f1991a3f71d27252d7d9d90648348b6de29c41/scene.usda",
         "station": "assets/dc0c622fb86f100b7bbdedb874f1991a3f71d27252d7d9d90648348b6de29c41/scene.usda",
-        "train_source_raw": "inputs/74dbaa9ba8eb35b246b6a604d8e9b0b446b990bced5024638f18a8bf2f2e0730.json",
+        "train_source_raw": "inputs/2db380da7c18c2d02f88ea4cca6e73f30af91033a77524b64c9d2b9e9a848e76.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "78c14ddc5bf5f4e784e3d74b00fa99c5e4392a94b6c17feb9576d497073374f8",
+      "config_sha256": "12b94a618e79fc94ae2742bc5200e8654682927b1f2d685c0c23a463bcf4a7f4",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2766,7 +2766,7 @@
       "runtime_asset_sha256": {
         "scene": "3ea22065bf79b06c41ddce9a24e7b97c20ce6e5b396e4f7d752f029fc0c9f1c9",
         "station": "3ea22065bf79b06c41ddce9a24e7b97c20ce6e5b396e4f7d752f029fc0c9f1c9",
-        "train_source_raw": "74dbaa9ba8eb35b246b6a604d8e9b0b446b990bced5024638f18a8bf2f2e0730",
+        "train_source_raw": "2db380da7c18c2d02f88ea4cca6e73f30af91033a77524b64c9d2b9e9a848e76",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2776,7 +2776,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed851-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "808493762980d0b7611923dc17459a608e41834d5cf336522a2df53f38f0ad0e",
-        "input_sha256": "74dbaa9ba8eb35b246b6a604d8e9b0b446b990bced5024638f18a8bf2f2e0730",
+        "input_sha256": "2db380da7c18c2d02f88ea4cca6e73f30af91033a77524b64c9d2b9e9a848e76",
         "instance_id": "CP10-medium-seed851-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed851-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2791,10 +2791,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/a3d1aedcfff766fa38d672896ebb5c8d5df37ae77a23308f282e2bd9687da8d2/scene.usda",
         "station": "assets/a3d1aedcfff766fa38d672896ebb5c8d5df37ae77a23308f282e2bd9687da8d2/scene.usda",
-        "train_source_raw": "inputs/6a8628c30901f79cf525eaa7163054973524050250a09709663cd74f08b0bead.json",
+        "train_source_raw": "inputs/d0251d8059048c6d6de7b10c2c5429357a69f8503bcae3cabf3c1ce4bc123a6b.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "9ac78490f4307d37b1b194e8595bfe60b16460e6934746d944249aec44e317c5",
+      "config_sha256": "fbedf9a45394e0c89c232c0096a8c674b7d35daee3f0d6e49837fcddf021d749",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2814,7 +2814,7 @@
       "runtime_asset_sha256": {
         "scene": "e8efeb55af0b8840ccf6e35a550a5f62c747104742397c4cedf348f5e29607d9",
         "station": "e8efeb55af0b8840ccf6e35a550a5f62c747104742397c4cedf348f5e29607d9",
-        "train_source_raw": "6a8628c30901f79cf525eaa7163054973524050250a09709663cd74f08b0bead",
+        "train_source_raw": "d0251d8059048c6d6de7b10c2c5429357a69f8503bcae3cabf3c1ce4bc123a6b",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2824,7 +2824,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed900-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "87f20479b84759d8fc7212a69edad46b0e10f14fb69b7eeba861ba6e3b8739fa",
-        "input_sha256": "6a8628c30901f79cf525eaa7163054973524050250a09709663cd74f08b0bead",
+        "input_sha256": "d0251d8059048c6d6de7b10c2c5429357a69f8503bcae3cabf3c1ce4bc123a6b",
         "instance_id": "CP10-medium-seed900-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed900-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",
@@ -2839,10 +2839,10 @@
         "portable-mdl-2": "mdl-sdk/rtx",
         "scene": "assets/c15ff553215897754501db49dfe26d50fe936ecb62e62f6d8c409dae9a25b02f/scene.usda",
         "station": "assets/c15ff553215897754501db49dfe26d50fe936ecb62e62f6d8c409dae9a25b02f/scene.usda",
-        "train_source_raw": "inputs/2ef4ad24c06411f30513774431389d4eb3922c33ebe8c6ccc80b82ab73906b5d.json",
+        "train_source_raw": "inputs/7ea92ccd9858c8ddfee9b5c4f8a602d419a5109a16c5eda84a2d8cd31261f426.json",
         "x5": "robot/ARX.usd"
       },
-      "config_sha256": "cd2dc62f0b7770345cf8d456111db8604bdbde00ba757182b56a6c752101013f",
+      "config_sha256": "cd068ebcb53aa229ea45695f85962e0f6833230048aac89fc8f5823e9965fb16",
       "identity": {
         "asset_version": "source-scene-sha256:030149b87646f9e6077a6cc72da6de1cd25500157a4ecdcbe0c3288793121e28",
         "clock": {
@@ -2862,7 +2862,7 @@
       "runtime_asset_sha256": {
         "scene": "bb3e786b2fc4f2bab4d26d92b0e19bcee475fa662cdd58cf5abf80922b60a172",
         "station": "bb3e786b2fc4f2bab4d26d92b0e19bcee475fa662cdd58cf5abf80922b60a172",
-        "train_source_raw": "2ef4ad24c06411f30513774431389d4eb3922c33ebe8c6ccc80b82ab73906b5d",
+        "train_source_raw": "7ea92ccd9858c8ddfee9b5c4f8a602d419a5109a16c5eda84a2d8cd31261f426",
         "x5": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
       },
       "runtime_row": {
@@ -2872,7 +2872,7 @@
         "difficulty": "medium",
         "h5_path": "data/CP10/medium/CP10-medium-seed951-cp10-semantic50-v1/episode.hdf5",
         "h5_sha256": "acb1168956ab8dc8cd6ec6593f2fa7afcbb6135a6a3c41f0fd894d81094b43d4",
-        "input_sha256": "2ef4ad24c06411f30513774431389d4eb3922c33ebe8c6ccc80b82ab73906b5d",
+        "input_sha256": "7ea92ccd9858c8ddfee9b5c4f8a602d419a5109a16c5eda84a2d8cd31261f426",
         "instance_id": "CP10-medium-seed951-cp10-semantic50-v1",
         "native_case_id": "CP10-medium-seed951-cp10-semantic50-v1",
         "schema": "mind2act_eval.training_source.v1",

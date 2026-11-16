@@ -1,6 +1,6 @@
 {
   "source_id": "pr1-original-source-uniform-run925de9",
-  "source_file": "legacy_sources/PR1/configs/physco/robodojo_dual_x5_station.json (world_support_z)",
+  "source_file": "station configuration (world_support_z)",
   "support_z_m": 0.768,
   "base_shift_y_m": -0.07,
   "carriage_y_m": 0.084,

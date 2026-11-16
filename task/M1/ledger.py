@@ -3,7 +3,7 @@ import numpy as np
 
 
 class Ledger:
-    def __init__(self, stations, target_dims, lay, dt=1/120):
+    def __init__(self, stations):
         self.stations = stations
         self.last_node = None
         self.placements = []
@@ -22,7 +22,7 @@ class Ledger:
             raise ValueError('M1 simultaneous station membership is ambiguous')
         return matches[0] if matches else None
 
-    def observe(self, step, center, linear_velocity, angular_velocity, robot_contact, supports, ready):
+    def observe(self, step, center, supports, ready):
         station = self.station_at(center, supports) if ready else None
         previous, self.last_node = self.last_node, station
         if station is not None and station != previous:

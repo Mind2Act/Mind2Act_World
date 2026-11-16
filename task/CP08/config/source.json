@@ -31,7 +31,7 @@
     "source_physics_modified": false,
     "source_reset_hold_ticks": 120,
     "tcp_measurement": "source X5Kinematics.fk: actual joint6/link6 world frame plus rotated [.145,0,0]m; nearest measured TCP freezes grasp arm; raw flange pose independently checked by Replay",
-    "withdraw_interpretation": "\u98de\u4e66\u672a\u7ed9\u8ddd\u79bb\u5b9a\u4e49\uff0c\u6309\u6e90\u5b9e\u73b0\uff1a\u56fa\u5b9a\u6293\u53d6\u81c2\u5b9e\u6d4bjaw widening\u3001\u6301\u7eed\u53cc\u6307\u5206\u79bb\u3001\u5916\u90e8\u652f\u6491\uff0c\u672b\u7a97\u7a33\u5b9a\u4e14\u65e0robot_contact\uff1bK0\u7ecfSpec\u786e\u8ba4\uff1b\u65e0\u64a4\u79bb\u8ddd\u79bb\u6216\u547d\u4ee4\u9759\u6b62\u95e8"
+    "withdraw_interpretation": "飞书未给距离定义，按源实现：固定抓取臂实测jaw widening、持续双指分离、外部支撑，末窗稳定且无robot_contact；无撤离距离或命令静止门"
   },
   "native_task_id": "CP11",
   "public_task_id": "CP08",

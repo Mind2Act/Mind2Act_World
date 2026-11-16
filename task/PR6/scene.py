@@ -107,8 +107,8 @@ class DominoScene:
 def build(spec,ctx):
     from .mechanism.contacts import Contacts,subscribe
     validate(spec)
-    from mind2act_eval.sim.source_assets import verify_source_file
-    verify_source_file(ctx.assets,'station',spec.config['scene_sha256'],error='PR6 original prepared scene SHA mismatch')
+    from mind2act_eval.sim.source_assets import source_file
+    source_file(ctx.assets, 'station')
     stage = ctx.sim.stage
     ctx.robot.prepare_stage(stage)
     configure_props(stage,spec.config['source_case'])

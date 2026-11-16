@@ -1,9 +1,9 @@
-"""Measured E1 batch sealing (Feishu snapshot E1 section 5).
+"""Measured E1 batch completion.
 
 Each batch opens for submissions in phase `batch_execute`. Every item that is really placed inside the
 tray and released is registered for that batch (removing it later does not clear it). The batch seals at
 the first tick where any item completes a continuous 1.0 s window (inside, floor-supported, released,
-position range < 3 mm relative to the tray); there is no per-batch deadline (benchmark maintainer 10-30), so a batch
+position range < 3 mm relative to the tray). There is no per-batch deadline, so a batch
 never sealed before the episode budget ends contributes 0. All events of
 that physical tick are collected first. A sealed batch is valid only if exactly one item is registered,
 it is the batch's unique repeated item, and its window is complete. Errors never stop later batches.

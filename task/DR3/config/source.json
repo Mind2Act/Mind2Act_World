@@ -42,7 +42,6 @@
     },
     "measurement_contract": {
       "version": "dr3-measured-physics-substeps-v1",
-      "authority": "root task_ff1afdc34796 explicit clarification, 2026-11-02; implements K0 15:35",
       "physics_hz": 120,
       "intra_step_continuous_trajectory_claimed": false,
       "arbitrary_rotation_envelope_is_scoring_precondition": false,

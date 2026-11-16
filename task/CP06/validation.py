@@ -25,26 +25,29 @@ def validate(spec):
     return dict(station_robots=to_json(c['station_robots']))
 
 
-def validate_assets(spec,assets):
+def validate_assets(spec,assets,*,verify_assets=False):
     row=validate(spec)
-    from mind2act_eval.sim.source_assets import verify_source_file,read_source_bytes
-    verify_source_file(assets,'station',spec.config['prepared_scene_sha256'])
-    raw=json.loads(read_source_bytes(assets,'validation_case',spec.config['source_spec_sha256']))
+    from mind2act_eval.sim.source_assets import source_file,asset_bytes
+    source_file(assets, 'station')
+    raw=json.loads(asset_bytes(assets, 'validation_case'))
     expected=dict(schema='mind2act.cp06.validation_runtime_case.v1',task_id='CP06',difficulty=spec.difficulty,
         instance_id=spec.instance_id,source_task=to_json(spec.config['source_task']),station_robots=row['station_robots'])
     if raw!=expected:raise ValueError('CP06 independent VAL source document differs')
-    # Exact original NVIDIA glTF PBR module and its full real import closure.
-    pbr=verify_source_file(assets,'validation_pbr',spec.config['validation_pbr_sha256'])
-    from mind2act_eval.sim.mdl_dependencies import audit_mdl,_read
-    import hashlib
-    sha=lambda identifier:hashlib.sha256(_read(str(identifier))).hexdigest()
+    # Resolve runtime shader dependencies. Export-byte comparison is an
+    # optional offline diagnostic, not a prerequisite for loading the scene.
+    pbr=source_file(assets, 'validation_pbr')
+    from mind2act_eval.sim.mdl_dependencies import audit_mdl
     audit=audit_mdl(str(pbr),[str(assets.resolve(k)) for k in spec.config['material_mdl_search_asset_ids']])
     if not audit['passed']:raise ValueError('validation PBR import closure unresolved')
-    value=dict(root_sha256=sha(pbr),modules=sorted(sha(x) for x in audit['modules']),
-        references=sorted((x['kind'],x['path'],sha(x['layer']),sha(x['resolved'])) for x in audit['references']))
-    digest=hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':')).encode()).hexdigest()
-    if digest!=spec.config['validation_pbr_closure_sha256']:
-        raise ValueError('validation PBR real import/texture bytes differ')
+    if verify_assets:
+        import hashlib
+        from mind2act_eval.sim.mdl_dependencies import _read
+        sha=lambda identifier:hashlib.sha256(_read(str(identifier))).hexdigest()
+        value=dict(root_sha256=sha(pbr),modules=sorted(sha(x) for x in audit['modules']),
+            references=sorted((x['kind'],x['path'],sha(x['layer']),sha(x['resolved'])) for x in audit['references']))
+        digest=hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+        if digest!=spec.config['validation_pbr_closure_sha256']:
+            raise ValueError('validation PBR real import/texture bytes differ')
     from pxr import Usd,UsdGeom,UsdPhysics
     stage=Usd.Stage.Open(str(assets.resolve('station')));cache=UsdGeom.XformCache()
     for obj in raw['source_task']['all_objects']:

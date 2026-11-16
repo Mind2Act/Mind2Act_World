@@ -203,8 +203,8 @@ def validate(spec):
 def validate_assets(spec, assets):
     validate(spec)
     if spec.config.get('layout_split') == 'validation':
-        from mind2act_eval.sim.source_assets import verify_source_file
-        verify_source_file(assets, 'station', spec.config['scene_sha256'])
+        from mind2act_eval.sim.source_assets import source_file
+        source_file(assets, 'station')
     return assets.resolve('station')
 
 

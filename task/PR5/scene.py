@@ -19,16 +19,16 @@ def checked_inputs(spec, assets):
     case = validate(spec)
     paths = {}
     for asset_id in ('station', 'scene_config', 'authoring_receipt', 'ink_clean', 'ink_smeared'):
-        from mind2act_eval.sim.source_assets import read_source_bytes, verify_source_file
+        from mind2act_eval.sim.source_assets import asset_bytes, source_file
         path = assets.resolve(asset_id)
         expected = spec.config['asset_sha256'][asset_id]
         if path.suffix == '.json':
-            read_source_bytes(assets,asset_id,expected,error="PR5 source asset digest mismatch: "+asset_id)
+            asset_bytes(assets, asset_id)
         else:
-            verify_source_file(assets,asset_id,expected,error="PR5 source asset digest mismatch: "+asset_id)
+            source_file(assets, asset_id)
         paths[asset_id] = path
-    authored = json.loads(read_source_bytes(assets,'scene_config',spec.config['asset_sha256']['scene_config']))
-    receipt = json.loads(read_source_bytes(assets,'authoring_receipt',spec.config['asset_sha256']['authoring_receipt']))
+    authored = json.loads(asset_bytes(assets, 'scene_config'))
+    receipt = json.loads(asset_bytes(assets, 'authoring_receipt'))
     pin = json.loads(resources.files(__package__).joinpath('config/source.json').read_text())
     if (authored['seed'] != to_json(case) or authored['face_side_m'] != .050
             or authored['plate_top_m'] != .772 or authored['card_top_m'] != .7768

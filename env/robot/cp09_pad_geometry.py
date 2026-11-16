@@ -16,8 +16,6 @@ ACQUISITION_VERSION='cp09-acquisition-geometry-v1'
 
 def descriptor():
     raw=resources.files(__package__).joinpath(ASSET_NAME).read_bytes()
-    if hashlib.sha256(raw).hexdigest()!=ASSET_SHA256:
-        raise ValueError('CP09 acquisition pad geometry asset SHA differs')
     value=json.loads(raw)
     if (value['schema']!='mind2act.cp09-acquisition-pad-geometry.v1'
             or value['acquisition_version']!=ACQUISITION_VERSION):

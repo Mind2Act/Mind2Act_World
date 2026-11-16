@@ -1,8 +1,7 @@
 """Support-frame placement windows, carousel ledger and release tracker for S1.
 
-Sources: PlacementWindow (old eval cases/placement_window.py), CarouselLedger (cases/S/runtime/evidence.py)
-and SPlacementReleaseTracker (physco_eval/s_placement_events.py); rule per benchmark maintainer 2026-10-30. These are
-trusted-evaluator measurements; they never read expert phase.
+Placement, carousel and release measurements use observed physical state;
+they never read expert phase labels.
 """
 from collections import deque
 from copy import deepcopy

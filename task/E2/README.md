@@ -18,7 +18,7 @@ four consecutive ticks, preserving the training debounce boundary. Held-object
 contact alone cannot register a digit. Gripper observations are retained as
 measurements; no new numerical closure tolerance is invented.
 
-Source-parity ruling approved 2026-11-01: the collection scorer has no gripper
+The collection scorer has no gripper
 closure gate, and the training reference uses fully open grippers. Count genuine
 native link7/link8 contact with the source travel/debounce thresholds at any
 opening. The delivered instruction and current Feishu section 5 still say
@@ -49,6 +49,5 @@ added tail waiting.
 CPU tests check all three authored USD scenes and physical-measurement scoring
 boundaries. They mock unavailable PhysX metadata APIs and rigid-body readings;
 they do not establish GPU simulation, native replay success or visual parity.
-Those require the coordinator's shared queue, including a same-view first-frame
-comparison. Source projection and state-control-step offsets must be retained
+Native validation also requires a same-view first-frame comparison. Source projection and state-control-step offsets must be retained
 by the shared replay preparation; this task does not resample trajectories.

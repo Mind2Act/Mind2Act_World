@@ -109,8 +109,8 @@ def build(spec: InstanceSpec, ctx: BuildContext):
     from .mechanism.seeded import apply
     from .mechanism.contacts import ContactReadings, subscribe
     validate(spec)
-    from mind2act_eval.sim.source_assets import verify_source_file
-    verify_source_file(ctx.assets, 'station', spec.config['scene_sha256'], error='DR4 selected prepared scene changed')
+    from mind2act_eval.sim.source_assets import source_file
+    source_file(ctx.assets, 'station')
     stage = ctx.sim.stage
     seeded = apply(stage, spec)  # exact original condition offsets, before reset; never a resampled scene
     shell = np.asarray(UsdGeom.Mesh(stage.GetPrimAtPath('/World/PR7/Tray/Shell')).GetPointsAttr().Get())

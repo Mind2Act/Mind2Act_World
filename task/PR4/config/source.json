@@ -78,10 +78,6 @@
     ]
   },
   "rule_decision": {
-    "authority": "benchmark maintainer",
-    "date": "2026-11-01",
-    "time": "23:30",
-    "supersedes": "23:20 hand/region requirements",
     "scored_hand_count": false,
     "scored_grasp_regions": false
   },

@@ -23,8 +23,6 @@ def goals(task):
     return RECIPES[task]
 
 def render_goal(compiled):
-    if compiled['task'] in ('CP07','CP09'):
-        raise ValueError('task has no admitted public clean layouts')
     params = compiled['environment_parameters']
     if compiled['task'] == 'CP07':
         # Keep source/asset cohort authentication, without selecting old prose.
