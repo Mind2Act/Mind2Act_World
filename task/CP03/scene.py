@@ -206,6 +206,14 @@ class CP03Scene:
         for p in self._preloaded:
             if np.linalg.norm(bodies[p].get_world_pose()[0] - self._initial[p] - np.array([x - ns["initial_rail"], 0, 0])) >= .025:
                 failures.add("preloaded_plate_disturbed")
+        self._cache.Clear()
+        mouths = {}
+        for slot_index, paths in self._mouth_paths.items():
+            bounds = []
+            for path in paths:
+                r = self._cache.ComputeWorldBound(stage.GetPrimAtPath(path)).ComputeAlignedRange()
+                bounds.append((np.asarray(r.GetMin()), np.asarray(r.GetMax())))
+            mouths[slot_index] = bounds
         occupied = []
         for p in self._sources:
             pos, q = bodies[p].get_world_pose()
@@ -238,7 +246,9 @@ class CP03Scene:
             # whether support starts before or after the gripper releases it.
             # Leaving and re-entering creates a new placement attempt; there is
             # no once-per-episode "first support" veto on legitimate retries.
-            in_slot = dish_target(center[0]-x, center[2], 1., local, S["slot_width_m"], ns["carriage_base"][2] + .123)
+            points = self._local_bounds[p] @ quat_matrix(q).T + pos
+            plate_bounds = (points.min(axis=0), points.max(axis=0))
+            in_slot = bool(supported or slot_mouth_intersects(plate_bounds, mouths[slot]))
             if in_slot and self._inside_slot[p] != slot:
                 enabled = self._loading_enabled(step)
                 self._slot_entries[p] = dict(tick=step, slot=slot, rack_speed_m_s=abs(velocity),
