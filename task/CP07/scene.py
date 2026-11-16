@@ -31,9 +31,10 @@ class BridgeScene:
         measured = self.sensors.read()
         launch = self.facts.after_step(tick, measured)
         if launch:self.sensors.drive(True)
-        if self.facts.snapshot()['car_reached'] and self._arrival_brake_tick is None:
-            # Preserve the task-owned bank brake, while continuing real pose
-            # measurements: a later displacement must change the T0 result.
+        if (self.facts.launched and measured['car']['front_world_x_m'] >= self.binding['finish_x_m']
+                and self._arrival_brake_tick is None):
+            # Stop when the measured visible chassis front reaches the finish x.
+            # Continue terminal measurements; braking does not latch success.
             self.sensors.drive(False)
             self._arrival_brake_tick=tick
         if (self.facts.launched and self._arrival_brake_tick is None and self.binding['mode']!='source_bound_test'
@@ -122,6 +123,8 @@ class NativeSensors:
         self.bank_upper=np.asarray(bank_range.GetMax())[:2]
         car_bounds=cache.ComputeUntransformedBound(stage.GetPrimAtPath('/World/Car/Chassis')).ComputeAlignedRange()
         self.car_local_center=(np.asarray(car_bounds.GetMin())+np.asarray(car_bounds.GetMax()))/2
+        self.car_local_corners = np.array(list(itertools.product(*zip(
+            car_bounds.GetMin(), car_bounds.GetMax()))))
         self.piece_corners = {}
         for piece in binding["pieces"]:
             bounds = cache.ComputeUntransformedBound(stage.GetPrimAtPath(piece["path"])).ComputeAlignedRange()
@@ -197,12 +200,18 @@ class NativeSensors:
         p, q = self.car.get_world_pose()
         rotation = self.rotation(q)
         car_center=np.asarray(p)+rotation@self.car_local_center
-        bank_supported=bool(self.contacts.supported('/World/Car',other='/World/Terrain/BankRight'))
+        chassis_points = self.car_local_corners @ rotation.T + p
+        front_world_x = float(chassis_points[:, 0].max())
+        # The authored opposite road deck is a sibling of the bank base.
+        bank_supported = any(self.contacts.supported('/World/Car', other=path)
+                             for path in ('/World/Terrain/BankRight', '/World/Terrain/RoadRight'))
         bank_inside=bool(np.all(car_center[:2]>=self.bank_lower) and np.all(car_center[:2]<=self.bank_upper))
         return dict(pieces=pieces, button_z_m=float(bp[2]),
             button_robot_contact=self.contacts.touch("/World/StartButton", robot_only=True),
             hands_clear=bool(clear), joint_error_rad=None,
             car=dict(p_m=p.tolist(),far_bank_supported=bank_supported,far_bank_center_inside=bank_inside,
+                     front_world_x_m=front_world_x,
+                     chassis_aabb_world_m=[chassis_points.min(0).tolist(), chassis_points.max(0).tolist()],
                      center_world_m=car_center.tolist(),bank_bounds_xy_m=[self.bank_lower.tolist(),self.bank_upper.tolist()], up=float(rotation[2, 2]),
                      heading_rad=float(np.arctan2(rotation[1, 0], rotation[0, 0]))))
 
