@@ -24,7 +24,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-from mind2act_eval.budgets import AGENT_BUDGET_VERSION, AGENT_POLICY_KINDS, DecisionBudget
+from mind2act_eval.budgets import AGENT_BUDGET_VERSION, DecisionBudget
 from mind2act_eval.contracts import Action
 
 ADAPTER_VERSION = "llm-e2e-joint-v1"
@@ -321,7 +321,7 @@ class LlmJointAdapter:
         self.clock = clock
 
     def validate_limits(self, limits):
-        if limits.policy_kind not in AGENT_POLICY_KINDS or limits.budget_version != AGENT_BUDGET_VERSION:
+        if limits.policy_kind not in ("agent", "coding_agent") or limits.budget_version != AGENT_BUDGET_VERSION:
             raise ValueError("llm joint adapter requires the frozen agent budget protocol")
         if self._decision_budget is None:
             raise ValueError("agent adapter must bind framework decision accounting")
