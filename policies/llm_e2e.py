@@ -1,15 +1,19 @@
-"""LLM 关节空间 adapter，按 agent 预算协议运行。
+"""LLM joint-space adapter under the agent budget protocol.
 
-模型每次决策返回若干绝对关节路点；adapter 按单行步长上限把路点线性展开为
-控制行，在 adapter 内排队。act 每次返回一行，peek_next_action 返回同块下一行
-（块末返回 None，由 runner 保持）。不依赖 RoboProbe SDK、cuRobo，也不发送
-extra_headers。密钥只从 key_env 指定的环境变量读取，不进入任何日志。
+Each model decision returns absolute joint waypoints. The adapter expands them
+linearly into control rows under a per-row step limit and queues them. act
+returns one row per call; peek_next_action returns the next row of the same
+chunk (None at the chunk end, where the runner holds). No RoboProbe SDK, no
+cuRobo and no extra_headers. The key is read only from the key_env environment
+variable and never enters any log.
 
-预算与 roboprobe_feishu 一致：只接受 --policy-kind agent|coding_agent 与
-coding-agent-e2e-x4-v1（墙钟 21600 s，physics_ticks 为冻结 e2e 的 4 倍）；
-框架 DecisionBudget 计 150 次完整回复（含需重问的无效回复），每次决策内
-基础设施重试 12 次不计决策；付费 ledger 仍在每次 HTTP 请求前预留。
-具体服务商 profile 见 duclaw.py；这是冒烟/对比用 adapter，不是基准提交。
+Budgets follow roboprobe_feishu: only --policy-kind agent|coding_agent with
+coding-agent-e2e-x4-v1 is accepted (wall 21600 s, physics_ticks four times the
+frozen e2e budget). The framework DecisionBudget counts 150 complete replies,
+including invalid ones that are re-asked; up to 12 infrastructure retries per
+decision do not spend decisions. The paid ledger still reserves before every
+HTTP request. Provider profiles live in duclaw.py. This is a smoke/comparison
+adapter, not a benchmark submission.
 """
 import base64
 import fcntl
@@ -38,20 +42,20 @@ DEFAULTS = dict(
     key_env="MIND2ACT_API_KEY",
     reasoning_effort=None,
     timeout_s=180,
-    parse_retries=1,              # 回复无法解析时带错误反馈重问的次数；每次重问占一次决策
+    parse_retries=1,              # re-asks with error feedback on unparsable replies; each spends a decision
     max_waypoints=8,
-    max_rows_per_decision=150,    # 30Hz 下 5 s
-    fallback_hold_rows=30,        # 解析重试耗尽时保持当前指令的行数
-    max_step_rad=0.05,            # 每控制行关节步长上限，与 roboprobe_eef 默认一致
+    max_rows_per_decision=150,    # 5 s at 30 Hz
+    fallback_hold_rows=30,        # rows holding the current command after parse retries run out
+    max_step_rad=0.05,            # per-row joint step limit, same as the roboprobe_eef default
     max_step_gripper=0.25,
-    joint_limits=None,            # 可选 {"lower": [6], "upper": [6]}，两臂共用
+    joint_limits=None,            # optional {"lower": [6], "upper": [6]}, shared by both arms
     include_images=True,
     image_format="jpeg",          # jpeg | png
     jpeg_quality=90,
     save_images=False,
-    history_turns=2,              # 只保留最近若干次决策的文本回复，不重发历史图像
+    history_turns=2,              # keep text of the latest decisions only; history images are not resent
     max_output_tokens=4096,
-    base_url=None,                # 覆盖 profile 地址；仅用于本地桩服务测试
+    base_url=None,                # overrides the profile URL; local stub tests only
     model=None,
 )
 REQUIRED = ("log_dir", "ledger", "ledger_limit")
@@ -73,7 +77,8 @@ def _write_json(path, value):
 
 
 def reserve(path, limit, run):
-    """持久化累计请求账本：每次 HTTP 请求前预留一次，失败请求同样计入，永不重置。"""
+    """Durable cumulative request ledger: reserve once before every HTTP request,
+    failed requests included; never reset."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.with_suffix(path.suffix + ".lock").open("a") as lock:
@@ -212,7 +217,8 @@ def _action(vector):
 
 
 def expand(start, waypoints, *, max_step_rad, max_step_gripper, max_rows, limits):
-    """把绝对路点按单行步长上限线性展开为 14 维控制行；超过 max_rows 截断。"""
+    """Expand absolute waypoints linearly into 14-D control rows under the per-row
+    step limits; truncate beyond max_rows."""
     rows, current, truncated = [], list(start), False
     for waypoint in waypoints:
         target = _vector(waypoint["left_arm"], waypoint["right_arm"],
@@ -228,10 +234,10 @@ def expand(start, waypoints, *, max_step_rad, max_step_gripper, max_rows, limits
                         for t, c in zip(target[12:], current[12:])))
         for k in range(1, steps):
             row = [c + (t - c) * k / steps for c, t in zip(current, target)]
-            # 浮点插值可能把 0/1 夹爪算成 -2.78e-17 等越界值，contracts._gripper 会拒绝
+            # Float interpolation can turn a 0/1 gripper into e.g. -2.78e-17, which contracts._gripper rejects
             row[12:] = [min(1.0, max(0.0, v)) for v in row[12:]]
             rows.append(row)
-        rows.append(list(target))  # 末行精确落在路点上
+        rows.append(list(target))  # the last row lands exactly on the waypoint
         rows.extend(list(target) for _ in range(waypoint["hold_rows"]))
         current = target
         if len(rows) >= max_rows:
@@ -290,7 +296,7 @@ class LlmJointAdapter:
         self.directory.mkdir(parents=True, exist_ok=False)
         self.ledger = Path(self.cfg["ledger"])
         if self.ledger.exists():
-            # 准入时只检查不预留：既有账本上限不同即拒绝，永不重置或修改
+            # Admission only checks, never reserves: reject a ledger with a different limit; never reset or modify it
             data = json.loads(self.ledger.read_text())
             if data.get("schema") != LEDGER_SCHEMA or data.get("limit") != self.cfg["ledger_limit"]:
                 raise ValueError("existing ledger schema/limit differs; never reset or change it")
@@ -303,7 +309,7 @@ class LlmJointAdapter:
         self.policy_kind = self.budget_version = None
         self._decision_budget = None
 
-    # ---- 契约钩子 ----
+    # ---- contract hooks ----
     def bind_decision_budget(self, budget):
         if self._decision_budget is not None:
             raise ValueError("decision budget is already bound")
@@ -343,7 +349,7 @@ class LlmJointAdapter:
     def close(self):
         pass
 
-    # ---- 决策 ----
+    # ---- decisions ----
     def _remaining_rows(self, tick):
         if self.physics_ticks is None or self.clock is None:
             return None
@@ -406,7 +412,7 @@ class LlmJointAdapter:
         return body
 
     def _skeleton(self, body):
-        """审计用请求体：图像替换为摘要，不含任何认证信息。"""
+        """Audit copy of the request body: images replaced by digests, no credentials."""
         def project(value):
             if isinstance(value, str) and value.startswith("data:image/"):
                 return "image-sha256:" + hashlib.sha256(base64.b64decode(value.split(",", 1)[1])).hexdigest()
@@ -418,9 +424,11 @@ class LlmJointAdapter:
         return project(body)
 
     def _request(self, body, audit):
-        """一次模型调用：先检查框架决策预算，再做至多 12 次基础设施重试。
+        """One model call: check the framework decision budget, then make up to 12
+        infrastructure retries.
 
-        每次 HTTP 请求前先在付费 ledger 预留；只有拿到完整回复才消耗一次决策。
+        Every HTTP request first reserves in the paid ledger; only a complete
+        reply spends a decision.
         """
         budget = self._decision_budget
         budget.ensure_available()
@@ -459,7 +467,7 @@ class LlmJointAdapter:
         raise RuntimeError(f"model request failed after retries: {last}")
 
     def _decide(self, observation):
-        # 决策预算由 _request 内的 DecisionBudget 执行，耗尽时抛 CallBudgetExhausted
+        # _request enforces the DecisionBudget and raises CallBudgetExhausted when it runs out
         number = self.stats["decisions"] + 1
         start = self.command or _vector(observation.left_arm, observation.right_arm,
                                         observation.left_gripper, observation.right_gripper)
@@ -485,7 +493,7 @@ class LlmJointAdapter:
                 reply = _reply_text(response)
                 audit["replies"].append(reply)
                 try:
-                    # hold_rows 按配置上限校验；超出本局剩余行数的部分由 expand 截断
+                    # hold_rows is checked against the configured cap; expand truncates rows beyond the episode remainder
                     waypoints, note = parse_waypoints(reply, self.cfg["max_waypoints"],
                                                       self.cfg["max_rows_per_decision"])
                 except (ValueError, KeyError, TypeError) as error:
