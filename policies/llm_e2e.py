@@ -1,9 +1,14 @@
-"""E2E 路线 LLM 关节空间 adapter。
+"""LLM 关节空间 adapter，按 agent 预算协议运行。
 
 模型每次决策返回若干绝对关节路点；adapter 按单行步长上限把路点线性展开为
 控制行，在 adapter 内排队。act 每次返回一行，peek_next_action 返回同块下一行
 （块末返回 None，由 runner 保持）。不依赖 RoboProbe SDK、cuRobo，也不发送
 extra_headers。密钥只从 key_env 指定的环境变量读取，不进入任何日志。
+
+预算与 roboprobe_feishu 一致：只接受 --policy-kind agent|coding_agent 与
+coding-agent-e2e-x4-v1（墙钟 21600 s，physics_ticks 为冻结 e2e 的 4 倍）；
+框架 DecisionBudget 计 150 次完整回复（含需重问的无效回复），每次决策内
+基础设施重试 12 次不计决策；付费 ledger 仍在每次 HTTP 请求前预留。
 具体服务商 profile 见 duclaw.py；这是冒烟/对比用 adapter，不是基准提交。
 """
 import base64
@@ -19,7 +24,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-from mind2act_eval.contracts import Action, PolicyStop
+from mind2act_eval.budgets import AGENT_BUDGET_VERSION, AGENT_POLICY_KINDS, DecisionBudget
+from mind2act_eval.contracts import Action
 
 ADAPTER_VERSION = "llm-e2e-joint-v1"
 LEDGER_SCHEMA = "mind2act-llm-e2e-ledger/v1"
@@ -32,9 +38,7 @@ DEFAULTS = dict(
     key_env="MIND2ACT_API_KEY",
     reasoning_effort=None,
     timeout_s=180,
-    request_retries=2,            # 每次决策首次请求之外的基础设施重试，均占用 ledger
-    parse_retries=1,              # 回复无法解析时带错误反馈重问的次数，均占用 ledger
-    max_decisions=None,           # 单局决策上限；达到后 PolicyStop，按当时物理状态计分
+    parse_retries=1,              # 回复无法解析时带错误反馈重问的次数；每次重问占一次决策
     max_waypoints=8,
     max_rows_per_decision=150,    # 30Hz 下 5 s
     fallback_hold_rows=30,        # 解析重试耗尽时保持当前指令的行数
@@ -296,8 +300,17 @@ class LlmJointAdapter:
                           rows_executed=0, model_request_s=0.0, input_tokens=0, output_tokens=0)
         self.clock = None
         self.physics_ticks = None
+        self.policy_kind = self.budget_version = None
+        self._decision_budget = None
 
     # ---- 契约钩子 ----
+    def bind_decision_budget(self, budget):
+        if self._decision_budget is not None:
+            raise ValueError("decision budget is already bound")
+        if not isinstance(budget, DecisionBudget) or (budget.limit, budget.retry_limit, budget.used) != (150, 12, 0):
+            raise ValueError("A fresh 150-decision budget with 12 retries per decision is required")
+        self._decision_budget = budget
+
     def reset(self, seed):
         self.seed = int(seed)
         self.queue, self.history, self.command = [], [], None
@@ -308,6 +321,10 @@ class LlmJointAdapter:
         self.clock = clock
 
     def validate_limits(self, limits):
+        if limits.policy_kind not in AGENT_POLICY_KINDS or limits.budget_version != AGENT_BUDGET_VERSION:
+            raise ValueError("llm joint adapter requires the frozen agent budget protocol")
+        if self._decision_budget is None:
+            raise ValueError("agent adapter must bind framework decision accounting")
         self.physics_ticks = limits.physics_ticks
         self.policy_kind = limits.policy_kind
         self.budget_version = limits.budget_version
@@ -341,8 +358,8 @@ class LlmJointAdapter:
                  f"Current joint state: {json.dumps(state)}"]
         if remaining is not None:
             lines.append(f"Remaining control rows in the episode: {remaining}.")
-        if self.cfg["max_decisions"] is not None:
-            lines.append(f"Remaining decisions: {self.cfg['max_decisions'] - self.stats['decisions']}.")
+        budget = self._decision_budget
+        lines.append(f"Remaining model decisions: {budget.limit - budget.used}.")
         return "\n".join(lines)
 
     def _images(self, observation, number):
@@ -401,9 +418,15 @@ class LlmJointAdapter:
         return project(body)
 
     def _request(self, body, audit):
-        """一次决策内的请求，含基础设施重试；每次 HTTP 请求前先在 ledger 预留。"""
+        """一次模型调用：先检查框架决策预算，再做至多 12 次基础设施重试。
+
+        每次 HTTP 请求前先在付费 ledger 预留；只有拿到完整回复才消耗一次决策。
+        """
+        budget = self._decision_budget
+        budget.ensure_available()
+        retries = budget.retry_limit
         last = None
-        for attempt in range(self.cfg["request_retries"] + 1):
+        for attempt in range(retries + 1):
             number = reserve(self.ledger, self.cfg["ledger_limit"], self.run_id)
             self.stats["requests"] += 1
             record = dict(ledger_attempt=number, started_at=time.time())
@@ -413,6 +436,7 @@ class LlmJointAdapter:
                 status, response = post_json(self.url, body, self._key, self.cfg["timeout_s"])
                 record.update(status=status, response_id=response.get("id"),
                               returned_model=response.get("model"), usage=response.get("usage"))
+                budget.decision()
                 return response
             except HttpFailure as error:
                 self.stats["failed_requests"] += 1
@@ -421,7 +445,7 @@ class LlmJointAdapter:
                 last = error
                 if not error.retryable:
                     break
-                if error.status == 429 and attempt < self.cfg["request_retries"]:
+                if error.status == 429 and attempt < retries:
                     try:
                         delay = min(30.0, max(0.0, float(error.retry_after)))
                     except (TypeError, ValueError):
@@ -435,9 +459,7 @@ class LlmJointAdapter:
         raise RuntimeError(f"model request failed after retries: {last}")
 
     def _decide(self, observation):
-        limit = self.cfg["max_decisions"]
-        if limit is not None and self.stats["decisions"] >= limit:
-            raise PolicyStop("give_up", f"adapter decision limit {limit} reached")
+        # 决策预算由 _request 内的 DecisionBudget 执行，耗尽时抛 CallBudgetExhausted
         number = self.stats["decisions"] + 1
         start = self.command or _vector(observation.left_arm, observation.right_arm,
                                         observation.left_gripper, observation.right_gripper)
@@ -493,8 +515,11 @@ class LlmJointAdapter:
                     api_style=self.api_style, endpoint_host=_host(self.url),
                     reasoning_effort=self.cfg["reasoning_effort"],
                     ledger=str(self.ledger), ledger_limit=self.cfg["ledger_limit"],
-                    log_dir=str(self.directory), request_retries=self.cfg["request_retries"],
-                    parse_retries=self.cfg["parse_retries"], max_decisions=self.cfg["max_decisions"],
+                    log_dir=str(self.directory), parse_retries=self.cfg["parse_retries"],
+                    policy_kind=self.policy_kind, budget_version=self.budget_version,
+                    frozen_physics_ticks=self.physics_ticks,
+                    budget_basis="frozen e2e physics_ticks multiplied by four at admission",
+                    decision_budget=None if self._decision_budget is None else self._decision_budget.receipt(),
                     max_rows_per_decision=self.cfg["max_rows_per_decision"],
                     max_step_rad=self.cfg["max_step_rad"], max_step_gripper=self.cfg["max_step_gripper"],
                     include_images=self.cfg["include_images"], image_format=self.cfg["image_format"],
