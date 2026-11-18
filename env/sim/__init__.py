@@ -506,6 +506,7 @@ class IsaacSimulator:
                                 "initial_pose_publication": getattr(self, "_initial_pose_publication", None),
                                 "renderer_warmup": renderer_warmup,
                                 "bindings": self._camera_bindings(),
+                                "recording_cameras": list(self._recording_camera_names),
                                 "cameras": cameras}
         path = self._output_dir / "camera-receipt.json"
         temporary = path.with_suffix(path.suffix + ".tmp")
