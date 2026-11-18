@@ -10,6 +10,7 @@ from pathlib import Path
 _MODES = {
     "e2e": ("e2e", "mind2act_eval.adapters.xpolicylab:create", "Run an end-to-end policy through XPolicyLab"),
     "agent": ("agent", "mind2act_eval.adapters.m2a_agent:create", "Run the Mind2Act tool agent"),
+    "duclaw-agent": ("agent", "mind2act_eval.adapters.duclaw:create", "Run DuClaw with the Agent budget"),
 }
 
 

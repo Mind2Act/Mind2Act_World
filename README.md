@@ -7,8 +7,8 @@
   <a href="https://mind2act-world.com/leaderboard.html">🏆 Leaderboard</a> |
   <a href="https://mind2act-world.com/benchmark.html">🧩 Benchmark</a> |
   <a href="https://mind2act-world.com/diagnosis.html">🩺 Diagnosis</a> |
-  <a href="https://mind2act-world.com/document.html">📖 Document</a> |
-  <a href="https://huggingface.co/Mind2Act-World">🤗 Data</a>
+  <a href="https://mind2act-world.com/resources.html">📖 Document</a> |
+  <a href="https://mind2act-world.com/index.html">📄 Report</a>
 </h3>
 
 <p>
@@ -27,13 +27,14 @@ Mind2Act World evaluates memory, physical execution, and tasks that require both
 - **2026-11-11** — Per-task costs and timings, with inference benchmarks for the evaluated end-to-end models, are on the [leaderboard](https://mind2act-world.com/leaderboard.html#efficiency).
 - **2026-11-10** — Results for the first four end-to-end models (π0.5, KinRT, X-VLA, G0.5) are [live](https://mind2act-world.com/leaderboard.html#board-e2e).
 - **2026-11-09** — First results on the Agent leaderboard are [live](https://mind2act-world.com/leaderboard.html#board-agent).
+- **2026-11-18** — The [technical report](https://mind2act-world.com/index.html) is available.
 
 ## ✅ Release checklist
 
 - [x] 🌐 Launch the benchmark website and task demonstrations.
 - [x] 🏆 Publish initial VLA/WAM and multimodal-agent results.
 - [x] ⏱️ Publish evaluation costs, timings and inference benchmarks.
-- [ ] 📄 Release the technical report.
+- [x] 📄 Release the [technical report](https://mind2act-world.com/index.html).
 - [ ] 📦 Release **Mind2Act Mini World**, a smaller, fully open-source benchmark designed to make training and evaluation more accessible.
 - [ ] 🧪 Launch a **new agent leaderboard** for external submissions, with a standardized evaluation interface and sandboxed execution.
 
@@ -76,13 +77,11 @@ Task pages with videos for every difficulty level are on the [benchmark page](ht
 
 </details>
 
-Training demonstrations are available in [mind2act-train](https://huggingface.co/datasets/Mind2Act-World/mind2act-train) on [Hugging Face](https://huggingface.co/Mind2Act-World).
-
 ## Quick start
 
 Use Linux, an NVIDIA GPU, and the Python 3.11 launcher supplied with Isaac Sim 5.1.
 Download the exact revision from the release record in
-[the `main` asset branch](https://huggingface.co/datasets/Lustin5209/mind2act-dev-assets/tree/main).
+[the `duclaw-agent` asset branch](https://huggingface.co/datasets/Lustin5209/mind2act-dev-assets/tree/duclaw-agent).
 Set `ASSET_SNAPSHOT` to the downloaded snapshot and `ISAAC_PYTHON` to the launcher.
 The snapshot's `release-v1.0.0/RELEASE.json` gives the paired Git commit and
 artifact checksums. Match its `official_code_commit` to your Git checkout.
@@ -109,13 +108,26 @@ sets the task budget. See [Agent setup](docs/agent-runtime.md),
 [XPolicyLab setup](policies/README.md), [container setup](docker/README.md),
 and the [source layout](docs/source-layout.md).
 
+## DuClaw integration
+
+Save the existing DuClaw adapter JSON as `config/duclaw-agent.json` under
+your deployment directory. This mode uses the Agent budget.
+
+```sh
+"$ISAAC_PYTHON" -m mind2act_eval.cli run --spec "$SPEC" --asset-root "$ASSET_ROOT" --duclaw-agent --gpu "$GPU"
+```
+
+Set `log_dir`, `ledger` and an approved positive `ledger_limit` in the
+configuration. Set `key_env` to the name of the environment variable
+holding the API credential. Resume with the existing ledger and its original limit.
+
 ## 🏆 Leaderboard
 
 Live rankings are on the [Mind2Act World Leaderboard](https://mind2act-world.com/leaderboard.html), with separate boards for **End-to-end (VLA / WAM)** policies and **Agents** that act through tools, each reported by Mind, Act and Mind2Act view, in Clean and Random settings.
 
 ## 📝 Citation
 
-Please cite the project as:
+The [technical report](https://mind2act-world.com/index.html) is available. Please cite the project as:
 
 ```bibtex
 @misc{mind2actworld2026,
