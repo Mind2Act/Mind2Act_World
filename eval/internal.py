@@ -121,7 +121,9 @@ def _worker(args):
                     material_receipt = variation_materials
             sim = IsaacSimulator(spec.clock, output, physical_gpu=args.gpu, cameras=spec.config.get("cameras"),
                                  ffmpeg=spec.config.get("ffmpeg", "ffmpeg"), video_hz=getattr(args, "video_hz", 6),
-                                 record_wrist_cameras=getattr(args, "record_wrist_cameras", False))
+                                 record_wrist_cameras=getattr(args, "record_wrist_cameras", False),
+                                 observe_wrist_cameras=(not args.h5
+                                     and args.adapter == "mind2act_eval.adapters.xpolicylab:create"))
             if material_receipt is not None:
                 from mind2act_eval.sim.material_closure import verify_native_mdl_search
                 write_json(output / 'material-resolver.json', verify_native_mdl_search(material_receipt))

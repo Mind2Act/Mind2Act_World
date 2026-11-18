@@ -82,7 +82,7 @@ Training demonstrations are available in [mind2act-train](https://huggingface.co
 
 Use Linux, an NVIDIA GPU, and the Python 3.11 launcher supplied with Isaac Sim 5.1.
 Download the exact revision from the release record in
-[the `main` asset branch](https://huggingface.co/datasets/Lustin5209/mind2act-dev-assets/tree/main).
+[the `main` asset branch](https://huggingface.co/datasets/Mind2Act-World/mind2act-dev-assets/tree/main).
 Set `ASSET_SNAPSHOT` to the downloaded snapshot and `ISAAC_PYTHON` to the launcher.
 The snapshot's `release-v1.0.0/RELEASE.json` gives the paired Git commit and
 artifact checksums. Match its `official_code_commit` to your Git checkout.
