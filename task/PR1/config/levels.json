@@ -1,0 +1,76 @@
+{
+  "task_id": "PR1",
+  "revision": "scale-target-types-20260919",
+  "status": "static_preview; shared_tolerance_provisional_pending_pilot",
+  "resistance_model": {
+    "type": "ideal_linear_calibrated",
+    "terminals": [
+      "EndA",
+      "Wiper"
+    ],
+    "zero_world_x_m": -0.2,
+    "travel_m": 0.4,
+    "full_scale_ohm": 40.0,
+    "formula": "R_ohm = 40 * (pointer_world_x_m + 0.2) / 0.4",
+    "electrical_circuit_simulated": false
+  },
+  "scale": {
+    "unit": "Ω",
+    "major_label_step_ohm": 5.0,
+    "minor_tick_step_ohm": 0.5,
+    "integer_tick_step_ohm": 1.0
+  },
+  "sampling": {
+    "initial_and_target_range_ohm": [
+      2,
+      38
+    ],
+    "same_distribution_across_difficulties": false,
+    "matched_travel_distribution": true,
+    "minimum_initial_target_difference_ohm": 5,
+    "target_rule": "easy: labelled multiples of 5; medium: unlabelled multiples of 0.5; hard: midpoints between 0.5-ohm ticks"
+  },
+  "levels": {
+    "easy": {
+      "target_count": 1,
+      "target_kind": "labelled_major_tick",
+      "example_initial_ohm": 15,
+      "example_target_ohm": 30,
+      "tolerance_ohm": 0.2,
+      "equivalent_position_tolerance_mm": 2,
+      "tolerance_status": "provisional_common_value_not_calibrated"
+    },
+    "medium": {
+      "target_count": 1,
+      "target_kind": "unlabelled_minor_tick",
+      "example_initial_ohm": 18,
+      "example_target_ohm": 33,
+      "tolerance_ohm": 0.2,
+      "equivalent_position_tolerance_mm": 2,
+      "tolerance_status": "provisional_common_value_not_calibrated"
+    },
+    "hard": {
+      "target_count": 1,
+      "target_kind": "between_minor_ticks",
+      "example_initial_ohm": 18.25,
+      "example_target_ohm": 33.25,
+      "tolerance_ohm": 0.2,
+      "equivalent_position_tolerance_mm": 2,
+      "tolerance_status": "provisional_common_value_not_calibrated"
+    }
+  },
+  "success_contract": {
+    "required_continuous_hold_s": 1.0,
+    "requires_robot_disengagement": true,
+    "error": "abs(actual_resistance_ohm - target_ohm)",
+    "criterion": "error <= level.tolerance_ohm throughout hold after robot disengagement",
+    "readout_source": "actual simulated slider pose; not commanded pose or model text"
+  },
+  "controls": {
+    "geometry": "same across levels",
+    "friction": "same across levels, not calibrated yet",
+    "bidirectional_adjustment": true,
+    "green_goal_geometry": false,
+    "higher_static_friction": "separate future ablation, not a main difficulty axis"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "base_policy": {
+    "meaning": "Preplaced base displacement is diagnostic only; historical1e-7m is not a scoring veto."
+  },
+  "dismantling_ruling": {
+    "canonical_instruction_unchanged": true,
+    "effect": "The source mat/assigned target_drop/landing-region rule is superseded. Dismantled baskets may rest at any supported stable position on the table or wooden board. No mat or designated landing coordinate is scored.",
+    "source_snapshot_unchanged": true,
+    "version": "p2-table-board-dismantling-20261101-2330-v1"
+  },
+  "distractor_ruling": {
+    "effect": "Only terminal stack identity/order/lid affects distractor scoring. Historical contact and displacement never independently veto a stage.",
+    "version": "p2-terminal-stack-20261104-v3"
+  },
+  "evaluation_mode": "formal",
+  "instruction_authority": {
+    "hard_discrepancy": "score terminal target identities/order/lid; a distractor in the stack is misplaced. No independent movement/use veto. Preserve delivered E2E and historical H5.",
+    "sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae"
+  },
+  "measurement_policy": "Native poses, quaternions, velocities, signed raw contact manifolds and measured joint states; no expert phase, target, side or action-index annotations.",
+  "native_task_id": "P_STEAMER",
+  "original_task_id": "P",
+  "public_task_id": "P2",
+  "qualification": "No legacy robot/video qualification gates. The original960 held-rest pre-record physics steps are preserved as initialization, never a score gate or episode budget.",
+  "rubric": "p2-spec-20261030-v1",
+  "scoring_version": "p2-terminal-stack-20261104-v3",
+  "source_files_sha256": {
+    "annotate.py": "7af399b9418440ab80fd98f6bf2c4b54985c7c246331990a4157bf12510f3d88",
+    "coverage.py": "1bc7b59c65592991ce846308aa8a7f1e5d41cfde21cb8588aed4e093208c3334",
+    "evidence.py": "6f8e89570e858a8371da72d3c84a53a35d0496ee8bff9913577e2d4d317cbce4",
+    "placement.py": "e6c1d6bc2717adb294fd5a78ed73def24a408d83e5770399e3a11f424842ca10",
+    "preparation.py": "5fcb64254843db2718c5d9fa5e6b74bad04d2c2f8ca7563d48b7604384c8de56",
+    "provenance.py": "07f966c370915258478e2eaa9b9a7bef8f8b38e0360424f0b56136d62c476b42",
+    "task.py": "c072de1db548c324080806f617542f33d610e818127332bcf8885a0e2d1ab31a",
+    "world.py": "230f14a7d5ded5483066e97df74938f2c8677ba69d1f5325d750960c7f9a462d"
+  },
+  "source_framework_commit": "fbe12ebdf5fc928807b556f737a04f3b137ddfac",
+  "source_id": "p-steamer-wrist-continuous",
+  "source_package_manifest_sha256": "dd1ed4a8bde3d8c7973da1c2345b0af4ce37bf3cae5dfd36ba9fc9b3e8e64d0a",
+  "spec_snapshot": {
+    "sections": [
+      4,
+      5,
+      6
+    ],
+    "sha256": "1a7488fd8efe46e868b7636b0dbb1385d3e1f23f84cfda80cbe7351f6b9edd38"
+  },
+  "stage_mapping_status": "Stages score 0/10/20/30/100 using the highest eligible stage without rescaling. The 10-point dismantling stage accepts stable support anywhere on the table or wooden board."
+}

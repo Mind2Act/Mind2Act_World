@@ -1,0 +1,53 @@
+{
+  "source_id": "cp04-b-v42-delivery",
+  "selected_scheme": "CP04-full-sequence-review-v42",
+  "source_files": {
+    "cases_unified/CP04/native_factory.py": "3592d16a14506db72cd9960b2ec99e624a4994b026a70c5eb9030f1a744e8d90",
+    "cases/CP/CP04/runtime/package_world.py": "d30b58b2247736b658ef9559c88fa6c4a5fed4bc10f863d3a2382c34ff9220e2",
+    "cases/CP/CP04/_cooking_evidence.py": "0e31240afd611e0699bf96acb11016c410b3c351027e975a2da16502b64476c8",
+    "cases/CP/CP04/runtime/dependencies/physco_cooking_appliance.py": "5dd01150ce27a56e0b206e09485af1fa83f4c28069a6db337f5e66a3f31beaae",
+    "cases/CP/CP04/runtime/dependencies/physco_cooking_multi_jars.py": "e2e666c1f1c213af151324d48ee8714f925e7dacb2c260bd6211df7ef875d848",
+    "cases/CP/CP04/runtime/dependencies/physco_cooking_drawer_physics.py": "e4454ad90dd3b02e42815b5ef9b7754a1030915105b07acd52355e7cb9216a05",
+    "cases/CP/CP04/runtime/dependencies/physco_cooking_geometry.py": "c27cec5dbb37518ff02c0bb5c9111a1ede361ba8a7bee5ce31d5ddc216c7c525",
+    "cases/CP/CP04/runtime/dependencies/physco_cooking_thermal.py": "d39c8328b7b60ddf8c04aff1398fab0acefcefe18227fc9a6e365e4eaf4635f5",
+    "cases/CP/CP04/runtime/dependencies/physco_cooking_thermal_profile497.py": "d57c9c5f02ff05f32e8cb783a484a3bd3735614b8b9f57b3705ae4373bf94bce",
+    "cases/CP/CP04/runtime/dependencies/physco_cooking_screw_state.py": "9ff2f75981b92afda738130f48a143abae40f5e4ba67b1a976a135b700b46f6a"
+  },
+  "scoring_authority": {
+    "section": "CP04 section6, finalized2026-10-29",
+    "snapshot_sha256": "932d55407318dd005aa0c9997d3ef8e8213cd4741b32d51c078e694bbdb3bff1",
+    "required_steps": {
+      "easy": 4,
+      "medium": 6,
+      "hard": 7
+    }
+  },
+  "port_scope": "selected native passive scene/mechanisms and frozen recipe/thermal binding; no legacy world or controller imports",
+  "evaluation_cadence": {
+    "clock_profile_version": "cp04-evaluation-physics120-v1",
+    "physics_hz": 120,
+    "control_hz": 30,
+    "logical_hz": 120,
+    "rgb_hz": 30,
+    "comparison_group": "cp04-physics120-logical120-v1"
+  },
+  "historical_source_cadence": {
+    "clock_profile_version": "cp04-source-physics960-v1",
+    "physics_hz": 960,
+    "logical_hz": 120,
+    "rgb_hz": 30,
+    "comparison_group": "cp04-physics960-logical120-v1",
+    "comparable_to_evaluation": false
+  },
+  "shared_arm_reference_selection": {
+    "api": "configure_arm_reference_slew",
+    "max_rad_s": 5.0,
+    "per_physics_step_delta_rad": "5/120 (evaluation); 5/960 (explicit historical source)",
+    "receipt": "shared_software_control",
+    "native_parameter": false,
+    "owner": "mind2act_eval.robot"
+  },
+  "geometry_profile": "shortturn413_30",
+  "thermal_profile_version": "cooking_thermal497_v3_4_3_2_off_freeze",
+  "native_validation": "pending A/V; CPU construction/command-reference checks are not native qualification"
+}

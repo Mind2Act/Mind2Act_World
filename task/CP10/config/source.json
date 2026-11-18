@@ -1,0 +1,44 @@
+{
+  "instruction_authority_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "native_validation": {
+    "deploy_ready": false,
+    "gpu_tested": false,
+    "kit_started": false,
+    "model_tested": false
+  },
+  "physics_ownership": {
+    "clock_owner": "shared simulator/spec",
+    "runtime_write_scope": "/World/Task",
+    "source_wrapper_global_and_station_overrides_migrated": false,
+    "source_wrapper_requests_preserved_in_result_diagnostics": true
+  },
+  "runtime_registered": true,
+  "scene_binding_status": "native_scene_implemented_with_exact_prepared_stage_gate_and_shared_station_relocation; native_replay_not_run",
+  "scoring": {
+    "authority": "CP10 scoring specification section 6",
+    "required_steps": {
+      "easy": 4,
+      "hard": 7,
+      "medium": 5
+    },
+    "snapshot_sha256": "9777ea0c977e0d12b128e7d4935943da9c6eccd20a5f778a0fb4be8e28c87770"
+  },
+  "source_file_sha256": {
+    "collection_protocol.py": "c5d67e97f68176f66705532445796d59d72f36a2cf90f327644c5cefaef39e05",
+    "rules/arena_cycle.py": "50e64be28370d89b6882e2ef6a3bd81328cbae1ff5cad6ad88ad4ea74765fe0f",
+    "rules/arena_preparation.py": "712c43d3ec45a608e56436c2b4ab6a18ac005de0a7d78257cf747c06f16e7aa4",
+    "rules/arena_task.py": "471f9f359b73bb3f42535c0847cc5ff1a50fbe40fbfc5b9691b990051d1bf273",
+    "rules/collector_geometry.py": "5d83ce02db5d343436b1d56f6c7f21259fe021beb1e4e5c391c0bc426fb530c8",
+    "rules/evidence.py": "8266fc2ec6293ba2505d9b9401143ad5f6e22811104b7e95264248e568b4cb76",
+    "rules/mobile_launcher.py": "ae779bf01891e488e77f13237c9e7aedefb60045b2666326341674b27f328f5c",
+    "rules/net_collection.py": "1832a61aa6e9fb9250b157c808121cf7f5058562d3d9bfd66611b20ad913f562",
+    "rules/net_retention.py": "5a7470e088f3c20c6848352522d5b9138929c00e2698287de3b5ab17ba5917ec",
+    "rules/rebound_schedule.py": "f59a64fc4e29fe33e4153948a4aeb477ab4a83d19caf8b74966d5cb2bfabf969",
+    "rules/retention_task.py": "fef41caea124d01c5fc4ea35d74229243302402345e15bb07d248e27ff8cf102",
+    "timeline.py": "680a0c0f138515e984b707684507591020eb91bab32c2d096113adf2fe8810ee",
+    "world.py": "85f4a64e81841a6b3f664a124b20eb6df613a52c7b0a99ad7990895c09761238"
+  },
+  "source_id": "cp10-training-retained-net-v1",
+  "task_id": "CP10",
+  "training_cohorts": {}
+}

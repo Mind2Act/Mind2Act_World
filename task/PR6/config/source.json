@@ -1,0 +1,54 @@
+{
+  "actual_worktree_framework_commit": "40615b911c4b83a55e7f768a2bcb9d16ad2530d1",
+  "files": {
+    "cases/CP/CP11/bell_scene.py": "08fe921acd555549a5eac356fa422a911b6e8e96453343d59ae1e94ab37086dc",
+    "cases/CP/CP11/contact_policy.py": "27299e4e79be8d54e6a0f89277f4938382795aa5092e0bfbd320d211641ed796",
+    "cases/CP/CP11/curobo_expert.py": "63377bdcd2bacf8e504dc10ba5c1a602f1fcf154d95e61477f4dc200e9e80266",
+    "cases/CP/CP11/curve_setup.py": "f82d6dfdb5f53a885b2cf73734ea8c864ded35516dfbab6d7aed2e3eac7659ff",
+    "cases/CP/CP11/expert_geometry.py": "3703b8d1d3f51811bc6ae94f6b9c0281e2d72f54f43c55229134331c9b3f8cd9",
+    "cases/CP/CP11/legacy_v2.py": "e327a7d6e9ad05622a36f92b64e34cf85a7681c422261585567e0c4c311e0659",
+    "cases/CP/CP11/task.py": "83d2b4f819a7a459c04565081350e010c17a52ec0798a0ed13c7971b9dcb9ece",
+    "cases/cp_new_common/measurements.py": "ce7e2dc3e38d9c57bd6e6b395f4472a336fc0d82455eae0ddb68e451f1d03d15",
+    "cases/cp_new_common/route_band.py": "a1972bfeb0d4e009dcd578ebb731c0a66fccba3edff75ae90b075d96740b96a7",
+    "cases/mind_common/aligned_scene.py": "2d1846359e95a77202447f8542ba6fc7e2b27bb81aef221b8f2fe343ea2c7741",
+    "cases/mind_common/evidence.py": "8266fc2ec6293ba2505d9b9401143ad5f6e22811104b7e95264248e568b4cb76",
+    "cases/mind_common/finger_contact.py": "70aa325bcedd4a9a63d72021398fa6c5dc871940dfbe9ee0fefaff0ec8ece61e",
+    "cases/mind_common/four_case_scene.py": "4c269e96429dc66a6f272b15fa76b542a269187cff34dff4035ba54fe3647be6",
+    "cases/mind_common/initialization.py": "ecf46968d892140a038a3c2f98d031bffa8f0e7b908767958654cc873cb119b1",
+    "cases/mind_common/native.py": "6db31a2f77f9ffc8bac43d462039a02f9c33887f9ce96e5f6c5be30241f5b2eb",
+    "cases/mind_common/scoring.py": "99295c55d3d9231746d05636f94c3087d126e1bca37ab600778ee2715d4990f5",
+    "cases/mind_common/session.py": "9e1cd5b5db0904ef411800d051e676a2006e4ed755b22c5d2f10acadbc1ac6dc",
+    "engine/simulation/configs/physco/pr3_station_collision_reference.json": "1d7a6da384077982bbd76e7f65fa0e1080197f9f486addd04c5ba132d4b380d7",
+    "engine/simulation/configs/physco/robodojo_dual_x5_station.json": "f2f8b9c1599bac31d2549d28538f7456a152795830567fe103388cea2c424866"
+  },
+  "framework_commit": "af64f5b1a72ee8f9b60fa39468ac20bb01a161c7",
+  "native_alias": "PR8",
+  "native_task_id": "CP11",
+  "public_task_id": "PR6",
+  "resource_manifest_sha256": "d19e4dc83110e5a3db511eb5c59ee0a596d4ff08ac087ff4f982577329bd16dc",
+  "revision": "094bd912a18b6a83ea1ac83d4b22683971a079ac",
+  "rule_version": "pr6-spec-20261030-v1",
+  "runtime_global_physics_owner": "shared simulator",
+  "source_global_physics_expectation": {
+    "enable_ccd": true,
+    "physics_hz": 120,
+    "solver_type": "TGS"
+  },
+  "source_id": "pr8-four-case-native-v4",
+  "source_lock_sha256": "37f337392bab500e9b760c209488467d1347d87bc6ba780e5ce184417cf0de3a",
+  "source_reset_joint_state": {
+    "arm_degrees": [
+      0,
+      65,
+      100,
+      -65,
+      0,
+      0
+    ],
+    "finger_positions_m": [
+      0.035,
+      0.035
+    ]
+  },
+  "spec_sha256": "cb254b266e77e8eaf2ca762cc96870ea230ee301f267e25c633d9198e483cfd5"
+}

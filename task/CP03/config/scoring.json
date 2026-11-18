@@ -1,0 +1,23 @@
+{
+  "task": "CP03",
+  "rule_version": "mind2act-final-scoring-20261105",
+  "source_id": "cp03-em-b-20261028 / cp03-hard-b-20261028",
+  "formula": "success: 100; otherwise difficulty cap * max(0, correct core units - wrong core units - extra core units) / core N; setup earns no partial credit",
+  "required_steps": {
+    "easy": 4,
+    "medium": 7,
+    "hard": 9
+  },
+  "scoring_version": "mind2act-final-scoring-20261105",
+  "authority": "Reviewed task scoring specification",
+  "core_units": {
+    "easy": 3,
+    "medium": 5,
+    "hard": 7
+  },
+  "partial_caps": {
+    "easy": 15,
+    "medium": 10,
+    "hard": 7
+  }
+}

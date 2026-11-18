@@ -1,0 +1,23 @@
+{
+  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "task_id": "DR3",
+  "instructions": [
+    {
+      "d": [
+        "easy",
+        "medium"
+      ],
+      "en": "Grasp the eraser, time the moving gate, and pass through its opening to place the eraser stably in the green tray behind it. Withdraw the whole gripper before the gate closes. Do not touch the gate, frame or rails.",
+      "ex": "",
+      "zh": "\u6293\u8d77\u677f\u64e6\uff0c\u770b\u51c6\u79fb\u52a8\u95f8\u95e8\u7684\u5f00\u5408\u65f6\u673a\uff0c\u4ece\u5f00\u53e3\u7a7f\u8fc7\u53bb\uff0c\u628a\u677f\u64e6\u7a33\u7a33\u653e\u8fdb\u540e\u9762\u7684\u7eff\u8272\u6258\u76d8\uff0c\u5e76\u5728\u95f8\u95e8\u5173\u95ed\u524d\u628a\u6574\u4e2a\u5939\u722a\u64a4\u51fa\u6765\u3002\u4e0d\u8981\u78b0\u95f8\u95e8\u3001\u95e8\u6846\u6216\u5bfc\u8f68\u3002"
+    },
+    {
+      "d": [
+        "hard"
+      ],
+      "en": "Grasp the eraser, time the moving gates, and pass through the blue then the orange opening to place the eraser stably in the green tray behind them. Withdraw the whole gripper past the outer gate before they close. Do not touch any gate, frame or rail.",
+      "ex": "",
+      "zh": "\u6293\u8d77\u677f\u64e6\uff0c\u770b\u51c6\u79fb\u52a8\u95f8\u95e8\u7684\u5f00\u5408\u65f6\u673a\uff0c\u5148\u540e\u7a7f\u8fc7\u84dd\u8272\u548c\u6a59\u8272\u5f00\u53e3\uff0c\u628a\u677f\u64e6\u7a33\u7a33\u653e\u8fdb\u540e\u9762\u7684\u7eff\u8272\u6258\u76d8\uff0c\u5e76\u5728\u4e24\u9053\u95f8\u95e8\u5173\u95ed\u524d\u628a\u6574\u4e2a\u5939\u722a\u64a4\u5230\u5916\u95e8\u4ee5\u5916\u3002\u4e0d\u8981\u78b0\u4efb\u4f55\u95f8\u95e8\u3001\u95e8\u6846\u6216\u5bfc\u8f68\u3002"
+    }
+  ]
+}

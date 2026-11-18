@@ -1,0 +1,49 @@
+{
+  "source_ids": {
+    "easy": "pr2-em-edge-side-grasp-run925de9-v1",
+    "medium": "pr2-em-edge-side-grasp-run925de9-v1",
+    "hard": "pr2-hard-directional-grasp-run925de9-v1"
+  },
+  "support_z_m": 0.768,
+  "base_shift_y_m": -0.04,
+  "dial_center_y_m": 0.106,
+  "deck_above_support_m": 0.1362,
+  "dial_radius_m": 0.106,
+  "knob_diameter_mm": 50,
+  "knob_above_deck_m": 0.007,
+  "value_mapping": {
+    "zero_deg": 150.0,
+    "zero_value": 0.0,
+    "deg_per_unit": -1.1538461538461537
+  },
+  "voltage_range_v": [
+    0,
+    260
+  ],
+  "joint_limit_deg": 150,
+  "fingertip_contact_exception": {
+    "decision": "Preserve the task fingertip contact material.",
+    "source_world_sha256": "76b316fd45f5461e8c49a5eeb7c993ea2f9d0a7187e7b7b30404ed4d2ffcfbd2",
+    "material_path": "/World/PrecisionContactMaterial",
+    "static_friction": 0.9,
+    "dynamic_friction": 0.7,
+    "restitution": 0.0,
+    "contact_offset_m": 0.00015,
+    "rest_offset_m": 0.0
+  },
+  "physics": {
+    "body_mass_kg": 0.05,
+    "drive_damping": 0.02,
+    "drive_max_force": 5.0,
+    "drive_stiffness": 0.0,
+    "body_solver_position_iterations": 64,
+    "body_solver_velocity_iterations": 16,
+    "contact_offset_m": 0.00015,
+    "rest_offset_m": 0.0,
+    "static_friction": 0.9,
+    "dynamic_friction": 0.7,
+    "restitution": 0.0
+  },
+  "tick_hz": 120,
+  "instruction": "Adjust the output voltage to {TARGET} V, then release the knob and keep that reading for 1 second."
+}

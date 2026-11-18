@@ -1,0 +1,172 @@
+{
+  "source_revision": "ee67a1468510da7624a089164402359f2afc72c8",
+  "source_robot_config": "env_cfg/robot/dual_x5.yml",
+  "robots": [
+    {
+      "name": "Left",
+      "position": [
+        -0.3,
+        -0.45,
+        0.765
+      ],
+      "euler_deg": [
+        0,
+        0,
+        90
+      ]
+    },
+    {
+      "name": "Right",
+      "position": [
+        0.3,
+        -0.45,
+        0.765
+      ],
+      "euler_deg": [
+        0,
+        0,
+        90
+      ]
+    }
+  ],
+  "head_camera": {
+    "position": [
+      0,
+      -0.41,
+      1.308
+    ],
+    "euler_deg": [
+      30,
+      0,
+      0
+    ],
+    "focal_length": 10,
+    "horizontal_aperture": 22.212,
+    "vertical_aperture": 14.266
+  },
+  "camera_stand": {
+    "position": [
+      0,
+      -0.47,
+      0.765
+    ],
+    "euler_deg": [
+      -90,
+      0,
+      0
+    ],
+    "source_ground_relative_position": [
+      0,
+      -0.47,
+      0.715
+    ]
+  },
+  "fixed_region_rule": "Task props may not be added to robot base or camera-support region. Task output tray/button belongs to task workspace only.",
+  "coordinate_note": "Positions are world coordinates. Official saved layout adds ground top offset +0.05 m for ground-relative props; robot roots and head camera retain their original direct poses.",
+  "station_id": "physco_dual_x5_v1",
+  "world_support_z": 0.768,
+  "public_cameras": [
+    "head"
+  ],
+  "development_cameras": [
+    "overview",
+    "detail"
+  ],
+  "background_modules": {
+    "conveyor": {
+      "asset": "Dynamic/conveyor/00000/object.usdz",
+      "position": [
+        -2.08,
+        0.175,
+        0.05
+      ],
+      "euler_deg": [
+        0,
+        0,
+        180
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "task_families": [
+        "E2",
+        "P1"
+      ]
+    },
+    "table": {
+      "position": [
+        0,
+        0.15,
+        0.768
+      ],
+      "size_xy": [
+        1.3,
+        0.88
+      ],
+      "task_families": [
+        "S2",
+        "F2",
+        "M1"
+      ],
+      "status": "Matte textured wood tabletop with grounded steel frame; visual module, not collision validated",
+      "thickness": 0.04,
+      "wood": {
+        "color_texture": "Material/physco_wood/Parquet_Color.png",
+        "roughness": 0.82,
+        "metallic": 0.0,
+        "specular_color": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "texture_tile_size_m": [
+          0.65,
+          0.65
+        ],
+        "provenance": "Existing Parquet_Color.png copied from original asset; no generated replacement permitted"
+      },
+      "frame": {
+        "leg_inset_xy": [
+          0.1,
+          0.1
+        ],
+        "leg_side": 0.055,
+        "foot_size_xy": [
+          0.09,
+          0.09
+        ],
+        "foot_height": 0.018,
+        "beam_side": 0.035,
+        "apron_height": 0.05,
+        "lower_beam_center_above_ground": 0.11,
+        "color": [
+          0.1,
+          0.12,
+          0.13
+        ],
+        "roughness": 0.76
+      }
+    }
+  },
+  "task_envelope_proposal": {
+    "x": [
+      -0.52,
+      0.52
+    ],
+    "y": [
+      -0.22,
+      0.2
+    ],
+    "note": "layout envelope only, NOT an IK or collision validated workspace"
+  },
+  "motion_contract": {
+    "observe": "arms parked; no task contact before action-ready",
+    "approach": "orientation fixed for descent; avoid cross-arm paths",
+    "transport": "vertical lift before lateral transfer; height validated against obstacles and IK",
+    "release": "open, stabilize, vertical retreat, then move sideways",
+    "completion": "measured stable release; never inferred from issued command"
+  },
+  "ground_top_z": 0.05
+}

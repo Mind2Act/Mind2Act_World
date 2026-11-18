@@ -1,0 +1,266 @@
+{
+  "schema": "mind2act.cp09-restoration.case.v1",
+  "task_id": "CP09",
+  "backend": "Isaac Sim 5.1 / PhysX / original dual X5",
+  "station": {
+    "support_z_m": 0.768,
+    "robot_bases_m": [
+      [
+        -0.3,
+        -0.45,
+        0.765
+      ],
+      [
+        0.3,
+        -0.45,
+        0.765
+      ]
+    ],
+    "board_center_xy_m": [
+      0,
+      0.065
+    ]
+  },
+  "physics_hz": 120,
+  "board_size_m": [
+    0.44,
+    0.285
+  ],
+  "raster_size": [
+    880,
+    570
+  ],
+  "cue_seconds": 3.0,
+  "pen_width_m": 0.004,
+  "eraser_size_m": [
+    0.018,
+    0.028
+  ],
+  "max_seconds": 420,
+  "grading": {
+    "tolerance_m": 0.0015,
+    "min_recall": 0.95,
+    "min_precision": 0.95,
+    "max_extra_fraction": 0.03,
+    "version": "cp09-restoration-95-v1"
+  },
+  "difficulties": {
+    "easy": {
+      "elements": 2,
+      "relationship": "single_crossing_line",
+      "description_zh": "\u4e24\u4e2a\u539f\u7a3f\u56fe\u5f62\uff08\u4e09\u89d2\u5f62\u548c\u5706\uff09\uff1b\u4ec5\u4e00\u6761\u6742\u7ebf\u8d2f\u7a7f\u4e24\u4e2a\u56fe\u5f62"
+    },
+    "medium": {
+      "elements": 3,
+      "relationship": "two_crossing_lines",
+      "description_zh": "\u4e09\u4e2a\u539f\u7a3f\u5143\u7d20\uff08\u4e09\u89d2\u5f62\u3001\u6298\u7ebf\u548c\u5706\uff09\uff1b\u4e24\u6761\u6742\u7ebf\uff0c\u5305\u542b\u8fd1\u8fb9\u754c\u548c\u76f8\u4ea4\u533a\u57df"
+    },
+    "hard": {
+      "elements": 4,
+      "relationship": "intersecting",
+      "description_zh": "\u56db\u4e2a\u539f\u7a3f\u5143\u7d20\uff1b\u4ea4\u53c9\u7b14\u8ff9\u64e6\u9664\u540e\u5fc5\u987b\u5c40\u90e8\u8865\u753b"
+    }
+  },
+  "ink_layout_transform": {
+    "uniform_scale": 0.68,
+    "translation_board_xy_m": [
+      0,
+      -0.045
+    ],
+    "reason": "All levels restore the same flat board inside the original X5 contact workspace."
+  },
+  "tool_acquisition": {
+    "initial_state": "independent tools on tabletop tray; empty grippers",
+    "required_in_all_difficulties": true,
+    "sequence": {
+      "easy": [
+        "memorize_same_board",
+        "occlude_and_annotate",
+        "grasp_side_handle",
+        "lift_clear_of_platform",
+        "extract_entire_board",
+        "place_flat",
+        "release_board",
+        "empty_platform_retracts",
+        "pick_eraser",
+        "erase_interference",
+        "return_eraser",
+        "pick_blue_marker",
+        "repair_original_color",
+        "return_marker"
+      ],
+      "medium": [
+        "memorize_same_board",
+        "occlude_and_annotate",
+        "grasp_side_handle",
+        "lift_clear_of_platform",
+        "extract_entire_board",
+        "place_flat",
+        "release_board",
+        "empty_platform_retracts",
+        "pick_eraser",
+        "erase_interference",
+        "return_eraser",
+        "pick_blue_marker",
+        "pull_cap_straight_along_pen_axis",
+        "park_cap",
+        "repair_original_color",
+        "return_marker",
+        "pick_red_marker",
+        "pull_cap_straight_along_pen_axis",
+        "park_cap",
+        "repair_original_color",
+        "return_marker"
+      ],
+      "hard": [
+        "memorize_same_board",
+        "occlude_and_annotate",
+        "grasp_side_handle",
+        "lift_clear_of_platform",
+        "extract_entire_board",
+        "place_flat",
+        "release_board",
+        "empty_platform_retracts",
+        "pick_eraser",
+        "erase_interference",
+        "return_eraser",
+        "pick_blue_marker",
+        "pull_cap_straight_along_pen_axis",
+        "park_cap",
+        "repair_original_color",
+        "return_marker",
+        "pick_red_marker",
+        "pull_cap_straight_along_pen_axis",
+        "park_cap",
+        "repair_original_color",
+        "return_marker",
+        "pick_green_marker",
+        "pull_cap_straight_along_pen_axis",
+        "park_cap",
+        "repair_original_color",
+        "return_marker"
+      ]
+    },
+    "jaw_command_unit": "metres per jaw",
+    "minimum_free_lift_m": 0.04,
+    "consecutive_lift_contact_ticks": 24,
+    "grasp_assistance": "fixed grasp constraint only after a verified bilateral-contact free lift",
+    "tool_start_positions_m": {
+      "eraser": [
+        -0.15,
+        -0.22,
+        0.7855
+      ],
+      "pen_group_center": [
+        0.15,
+        -0.22,
+        0.7855
+      ],
+      "pen_spacing_x_m": 0.065
+    }
+  },
+  "task_revision": "colored-memory-axial-pull-v2",
+  "board_support": {
+    "required_levels": [],
+    "board_flat": true,
+    "resting_contact_stabilization": true
+  },
+  "board_count": 1,
+  "occlusion_seconds": 2.0,
+  "upstream_registry_registered": false,
+  "presentation": {
+    "memory_source": "same actual board ink",
+    "mutation": "in-place additions while shutter is fully closed",
+    "annotation_tick": 480,
+    "same_rigid_body_and_ink_mesh": true,
+    "platform": "open raised support; no canopy or enclosure above the canvas",
+    "shutter_initial_state": "fully retracted behind the board"
+  },
+  "handles": {
+    "count": 2,
+    "style": "continuous low rounded side loops integrated into the frame",
+    "grasp_local_m": {
+      "Left": [
+        -0.263,
+        -0.13,
+        0.032
+      ],
+      "Right": [
+        0.263,
+        -0.13,
+        0.032
+      ]
+    }
+  },
+  "colors": [
+    {
+      "name": "blue",
+      "rgb": [
+        25,
+        65,
+        170
+      ],
+      "material": [
+        0.015,
+        0.065,
+        0.4
+      ]
+    },
+    {
+      "name": "red",
+      "rgb": [
+        185,
+        35,
+        45
+      ],
+      "material": [
+        0.52,
+        0.018,
+        0.03
+      ]
+    },
+    {
+      "name": "green",
+      "rgb": [
+        20,
+        125,
+        65
+      ],
+      "material": [
+        0.012,
+        0.28,
+        0.075
+      ]
+    }
+  ],
+  "color_count_by_difficulty": {
+    "easy": 1,
+    "medium": 2,
+    "hard": 3
+  },
+  "cap_open_angle_deg": {
+    "easy": 0,
+    "medium": 0,
+    "hard": 0
+  },
+  "eraser_body_size_m": [
+    0.022,
+    0.038,
+    0.023
+  ],
+  "tool_layout": {
+    "symmetric_group_centers_x_m": [
+      -0.15,
+      0.15
+    ],
+    "shared_y_m": -0.22,
+    "caps": "three central tray bays"
+  },
+  "cap_mechanism": {
+    "version": "axial-pull-v2",
+    "retention_travel_m": 0.004,
+    "angular_axes": "locked",
+    "detach": "measured axial travel with verified bilateral grasps",
+    "body_pose_writes": false
+  }
+}

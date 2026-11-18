@@ -1,0 +1,16 @@
+{
+  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "task_id": "F2",
+  "entries": [
+    {
+      "d": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "en": "Place one colored block in each slot, then press and release the confirmation button on the right. The brief feedback gives the number of correct positions. Infer the hidden permutation in as few attempts as possible.",
+      "ex": "",
+      "zh": "每个槽位放一个彩色方块，然后按下并松开右侧的确认按钮；短暂反馈显示位置正确的个数，用尽量少的尝试次数推断出隐藏排列。"
+    }
+  ]
+}

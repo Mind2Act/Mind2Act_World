@@ -1,0 +1,12 @@
+[
+  {
+    "d": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "en": "Predict each ball from the launcher's settled aim. After two practice balls, use the sliding blocker to return every white ball to the far net and let every red ball pass untouched into the near net. Wait for each ball to settle before the next shot.",
+    "ex": "",
+    "zh": "根据发射器停稳后的朝向预测每个球。两个练习球之后，用滑动挡板把每个白球挡回远端网，让每个红球不碰挡板直接进近端网。每个球落网静止后再等下一球。"
+  }
+]

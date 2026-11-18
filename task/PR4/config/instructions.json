@@ -1,0 +1,35 @@
+{
+  "delivered_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "entries": [
+    {
+      "d": [
+        "easy"
+      ],
+      "en": "Fold the square cloth along its centerline into the displayed rectangle, release it fully and leave it flat and stable.",
+      "ex": "",
+      "zh": "把方形布沿中线对折成显示的长方形，完全松开，让它平整稳定。"
+    },
+    {
+      "d": [
+        "medium"
+      ],
+      "en": "Fold the square cloth diagonally into the displayed triangle, release it fully and leave it flat and stable.",
+      "ex": "",
+      "zh": "把方形布沿对角线折成显示的三角形，完全松开，让它平整稳定。"
+    },
+    {
+      "d": [
+        "hard"
+      ],
+      "en": "Fold the hexagonal cloth once into the displayed trapezoid, align its paired edges, release it fully and leave it stable.",
+      "ex": "",
+      "zh": "把六边形布折一次成显示的梯形，对齐成对的边，完全松开，让它稳定。"
+    }
+  ],
+  "goal_recipe": {
+    "easy": "Goal: Fold the square cloth along its centerline into the displayed rectangle, release it fully and leave it flat and stable.\n\nTASK RECIPE:\nFold the square cloth along its centerline into the displayed rectangle, release it fully and leave it flat and stable.\n\nUse either hand or both hands and any cloth region. The cloth must actually move; an untouched initial target arrangement does not count. Align the displayed target with the required layer and face order, leave it supported and flat, fully release it, move every finger more than 15 mm clear, and keep it stable for one second. No prescribed grasp region, hand count or holding-percentage requirement applies.\n\nScoring (highest eligible stage; stages are not added):\n0: Any required final shape, release, stability or actual-cloth-movement condition is unmet.\n100: The cloth was moved and the target shape, alignment, layer/face order, target-region coverage, support, full release, finger clearance and one-second stability all pass.",
+    "medium": "Goal: Fold the square cloth diagonally into the displayed triangle, release it fully and leave it flat and stable.\n\nTASK RECIPE:\nFold the square cloth diagonally into the displayed triangle, release it fully and leave it flat and stable.\n\nUse either hand or both hands and any cloth region. The cloth must actually move; an untouched initial target arrangement does not count. Align the displayed target with the required layer and face order, leave it supported and flat, fully release it, move every finger more than 15 mm clear, and keep it stable for one second. No prescribed grasp region, hand count or holding-percentage requirement applies.\n\nScoring (highest eligible stage; stages are not added):\n0: Any required final shape, release, stability or actual-cloth-movement condition is unmet.\n100: The cloth was moved and the target shape, alignment, layer/face order, target-region coverage, support, full release, finger clearance and one-second stability all pass.",
+    "hard": "Goal: Fold the hexagonal cloth once into the displayed trapezoid, align its paired edges, release it fully and leave it stable.\n\nTASK RECIPE:\nFold the hexagonal cloth once into the displayed trapezoid, align its paired edges, release it fully and leave it stable.\n\nUse either hand or both hands and any cloth region. The cloth must actually move; an untouched initial target arrangement does not count. Align the displayed target with the required layer and face order, leave it supported and flat, fully release it, move every finger more than 15 mm clear, and keep it stable for one second. No prescribed grasp region, hand count or holding-percentage requirement applies.\n\nScoring (highest eligible stage; stages are not added):\n0: Any required final shape, release, stability or actual-cloth-movement condition is unmet.\n100: The cloth was moved and the target shape, alignment, layer/face order, target-region coverage, support, full release, finger clearance and one-second stability all pass."
+  },
+  "rule_decision": "Measured cloth coverage and corner placement"
+}

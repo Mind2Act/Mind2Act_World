@@ -1,0 +1,17 @@
+{
+  "source_id": "instructions-delivered-20261028",
+  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "task_id": "E2",
+  "entries": [
+    {
+      "d": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "en": "Observe the visible entity-value associations, remember them, decode the physical expression, and enter its exact result using only the closed gripper fingertips on the nine keys.",
+      "ex": "",
+      "zh": "观察可见的实物与数值的对应关系并记住，解读实物算式，只用闭合的夹爪指尖在九个按键上输入精确结果。"
+    }
+  ]
+}

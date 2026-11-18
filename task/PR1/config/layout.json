@@ -1,0 +1,24 @@
+{
+  "source_id": "pr1-original-source-uniform-run925de9",
+  "source_file": "station configuration (world_support_z)",
+  "support_z_m": 0.768,
+  "base_shift_y_m": -0.07,
+  "carriage_y_m": 0.084,
+  "carriage_height_above_support_m": 0.097,
+  "physics": {
+    "slide_limit_m": 0.2,
+    "drive_damping": 1.0,
+    "drive_max_force_n": 5.0,
+    "drive_stiffness": 0.0,
+    "body_solver_position_iterations": 64,
+    "body_solver_velocity_iterations": 16,
+    "contact_offset_m": 0.00015,
+    "rest_offset_m": 0.0,
+    "static_friction": 0.9,
+    "dynamic_friction": 0.7,
+    "restitution": 0.0,
+    "body_mass_kg": 0.22
+  },
+  "tick_hz": 120,
+  "instruction": "Adjust the resistance between the left terminal and wiper to {TARGET} ohm, then release the slider and keep that reading for 0.5 seconds."
+}

@@ -1,0 +1,16 @@
+{
+  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "task_id": "S2",
+  "entries": [
+    {
+      "d": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "en": "Remember the briefly lit forbidden cells. Press and release the arrow buttons to move one cell per press. Reach the ring without entering a forbidden cell or leaving the board. Do not touch the slider.",
+      "ex": "",
+      "zh": "记住短暂亮起的禁止格。按下并松开方向键，每按一次移动一格。到达圆环目标，途中不能进入禁止格或离开棋盘。不要碰滑块。"
+    }
+  ]
+}

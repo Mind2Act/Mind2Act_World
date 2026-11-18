@@ -1,0 +1,519 @@
+{
+  "budget_version": "e2e-p90x1.2-v1",
+  "cells": {
+    "CP01": {
+      "easy": {
+        "physics_ticks": 7720,
+        "retries": 0,
+        "wall_s": 7720
+      },
+      "hard": {
+        "physics_ticks": 22300,
+        "retries": 0,
+        "wall_s": 22300
+      },
+      "medium": {
+        "physics_ticks": 15196,
+        "retries": 0,
+        "wall_s": 15196
+      }
+    },
+    "CP02": {
+      "easy": {
+        "physics_ticks": 16136,
+        "retries": 0,
+        "wall_s": 16136
+      },
+      "hard": {
+        "physics_ticks": 16716,
+        "retries": 0,
+        "wall_s": 16716
+      },
+      "medium": {
+        "physics_ticks": 12584,
+        "retries": 0,
+        "wall_s": 12584
+      }
+    },
+    "CP03": {
+      "easy": {
+        "physics_ticks": 13888,
+        "retries": 0,
+        "wall_s": 13888
+      },
+      "hard": {
+        "physics_ticks": 17440,
+        "retries": 0,
+        "wall_s": 17440
+      },
+      "medium": {
+        "physics_ticks": 20392,
+        "retries": 0,
+        "wall_s": 20392
+      }
+    },
+    "CP04": {
+      "easy": {
+        "physics_ticks": 24244,
+        "retries": 0,
+        "wall_s": 24244
+      },
+      "hard": {
+        "physics_ticks": 36568,
+        "retries": 0,
+        "wall_s": 36568
+      },
+      "medium": {
+        "physics_ticks": 26228,
+        "retries": 0,
+        "wall_s": 26228
+      }
+    },
+    "CP05": {
+      "easy": {
+        "physics_ticks": 7792,
+        "retries": 0,
+        "wall_s": 7792
+      },
+      "hard": {
+        "physics_ticks": 13132,
+        "retries": 0,
+        "wall_s": 13132
+      },
+      "medium": {
+        "physics_ticks": 9176,
+        "retries": 0,
+        "wall_s": 9176
+      }
+    },
+    "CP06": {
+      "easy": {
+        "physics_ticks": 4128,
+        "retries": 0,
+        "wall_s": 4128
+      },
+      "hard": {
+        "physics_ticks": 6924,
+        "retries": 0,
+        "wall_s": 6924
+      },
+      "medium": {
+        "physics_ticks": 6004,
+        "retries": 0,
+        "wall_s": 6004
+      }
+    },
+    "CP07": {
+      "easy": {
+        "physics_ticks": 13952,
+        "retries": 0,
+        "wall_s": 13952
+      },
+      "hard": {
+        "physics_ticks": 24384,
+        "retries": 0,
+        "wall_s": 24384
+      },
+      "medium": {
+        "physics_ticks": 22888,
+        "retries": 0,
+        "wall_s": 22888
+      }
+    },
+    "CP08": {
+      "easy": {
+        "physics_ticks": 4716,
+        "retries": 0,
+        "wall_s": 4716
+      },
+      "hard": {
+        "physics_ticks": 11360,
+        "retries": 0,
+        "wall_s": 11360
+      },
+      "medium": {
+        "physics_ticks": 6208,
+        "retries": 0,
+        "wall_s": 6208
+      }
+    },
+    "CP09": {
+      "easy": {
+        "physics_ticks": 11628,
+        "retries": 0,
+        "wall_s": 11628
+      },
+      "hard": {
+        "physics_ticks": 37020,
+        "retries": 0,
+        "wall_s": 37020
+      },
+      "medium": {
+        "physics_ticks": 22540,
+        "retries": 0,
+        "wall_s": 22540
+      }
+    },
+    "CP10": {
+      "easy": {
+        "physics_ticks": 7520,
+        "retries": 0,
+        "wall_s": 7520
+      },
+      "hard": {
+        "physics_ticks": 10948,
+        "retries": 0,
+        "wall_s": 10948
+      },
+      "medium": {
+        "physics_ticks": 9536,
+        "retries": 0,
+        "wall_s": 9536
+      }
+    },
+    "DR1": {
+      "easy": {
+        "physics_ticks": 3228,
+        "retries": 0,
+        "wall_s": 3228
+      },
+      "hard": {
+        "physics_ticks": 5860,
+        "retries": 0,
+        "wall_s": 5860
+      },
+      "medium": {
+        "physics_ticks": 3992,
+        "retries": 0,
+        "wall_s": 3992
+      }
+    },
+    "DR2": {
+      "easy": {
+        "physics_ticks": 2296,
+        "retries": 0,
+        "wall_s": 2296
+      },
+      "hard": {
+        "physics_ticks": 2312,
+        "retries": 0,
+        "wall_s": 2312
+      },
+      "medium": {
+        "physics_ticks": 2312,
+        "retries": 0,
+        "wall_s": 2312
+      }
+    },
+    "DR3": {
+      "easy": {
+        "physics_ticks": 4272,
+        "retries": 0,
+        "wall_s": 4272
+      },
+      "hard": {
+        "physics_ticks": 7136,
+        "retries": 0,
+        "wall_s": 7136
+      },
+      "medium": {
+        "physics_ticks": 4024,
+        "retries": 0,
+        "wall_s": 4024
+      }
+    },
+    "DR4": {
+      "easy": {
+        "physics_ticks": 1432,
+        "retries": 0,
+        "wall_s": 1800
+      },
+      "hard": {
+        "physics_ticks": 2084,
+        "retries": 0,
+        "wall_s": 2084
+      },
+      "medium": {
+        "physics_ticks": 2056,
+        "retries": 0,
+        "wall_s": 2056
+      }
+    },
+    "E1": {
+      "easy": {
+        "physics_ticks": 5736,
+        "retries": 0,
+        "wall_s": 5736
+      },
+      "hard": {
+        "physics_ticks": 15064,
+        "retries": 0,
+        "wall_s": 15064
+      },
+      "medium": {
+        "physics_ticks": 10368,
+        "retries": 0,
+        "wall_s": 10368
+      }
+    },
+    "E2": {
+      "easy": {
+        "physics_ticks": 1952,
+        "retries": 0,
+        "wall_s": 1952
+      },
+      "hard": {
+        "physics_ticks": 3296,
+        "retries": 0,
+        "wall_s": 3296
+      },
+      "medium": {
+        "physics_ticks": 2732,
+        "retries": 0,
+        "wall_s": 2732
+      }
+    },
+    "F1": {
+      "easy": {
+        "physics_ticks": 2916,
+        "retries": 0,
+        "wall_s": 2916
+      },
+      "hard": {
+        "physics_ticks": 5812,
+        "retries": 0,
+        "wall_s": 5812
+      },
+      "medium": {
+        "physics_ticks": 4448,
+        "retries": 0,
+        "wall_s": 4448
+      }
+    },
+    "F2": {
+      "easy": {
+        "physics_ticks": 21316,
+        "retries": 0,
+        "wall_s": 21316
+      },
+      "hard": {
+        "physics_ticks": 50460,
+        "retries": 0,
+        "wall_s": 50460
+      },
+      "medium": {
+        "physics_ticks": 38572,
+        "retries": 0,
+        "wall_s": 38572
+      }
+    },
+    "M1": {
+      "easy": {
+        "physics_ticks": 6848,
+        "retries": 0,
+        "wall_s": 6848
+      },
+      "hard": {
+        "physics_ticks": 9800,
+        "retries": 0,
+        "wall_s": 9800
+      },
+      "medium": {
+        "physics_ticks": 7908,
+        "retries": 0,
+        "wall_s": 7908
+      }
+    },
+    "M2": {
+      "easy": {
+        "physics_ticks": 4572,
+        "retries": 0,
+        "wall_s": 4572
+      },
+      "hard": {
+        "physics_ticks": 18312,
+        "retries": 0,
+        "wall_s": 18312
+      },
+      "medium": {
+        "physics_ticks": 8500,
+        "retries": 0,
+        "wall_s": 8500
+      }
+    },
+    "P1": {
+      "easy": {
+        "physics_ticks": 4628,
+        "retries": 0,
+        "wall_s": 4628
+      },
+      "hard": {
+        "physics_ticks": 8388,
+        "retries": 0,
+        "wall_s": 8388
+      },
+      "medium": {
+        "physics_ticks": 5672,
+        "retries": 0,
+        "wall_s": 5672
+      }
+    },
+    "P2": {
+      "easy": {
+        "physics_ticks": 7456,
+        "retries": 0,
+        "wall_s": 7456
+      },
+      "hard": {
+        "physics_ticks": 9116,
+        "retries": 0,
+        "wall_s": 9116
+      },
+      "medium": {
+        "physics_ticks": 8988,
+        "retries": 0,
+        "wall_s": 8988
+      }
+    },
+    "PR1": {
+      "easy": {
+        "physics_ticks": 752,
+        "retries": 0,
+        "wall_s": 1800
+      },
+      "hard": {
+        "physics_ticks": 752,
+        "retries": 0,
+        "wall_s": 1800
+      },
+      "medium": {
+        "physics_ticks": 752,
+        "retries": 0,
+        "wall_s": 1800
+      }
+    },
+    "PR2": {
+      "easy": {
+        "physics_ticks": 904,
+        "retries": 0,
+        "wall_s": 1800
+      },
+      "hard": {
+        "physics_ticks": 920,
+        "retries": 0,
+        "wall_s": 1800
+      },
+      "medium": {
+        "physics_ticks": 904,
+        "retries": 0,
+        "wall_s": 1800
+      }
+    },
+    "PR3": {
+      "easy": {
+        "physics_ticks": 1528,
+        "retries": 0,
+        "wall_s": 1800
+      },
+      "hard": {
+        "physics_ticks": 1840,
+        "retries": 0,
+        "wall_s": 1840
+      },
+      "medium": {
+        "physics_ticks": 1604,
+        "retries": 0,
+        "wall_s": 1800
+      }
+    },
+    "PR4": {
+      "easy": {
+        "physics_ticks": 3432,
+        "retries": 0,
+        "wall_s": 3432
+      },
+      "hard": {
+        "physics_ticks": 4120,
+        "retries": 0,
+        "wall_s": 4120
+      },
+      "medium": {
+        "physics_ticks": 4064,
+        "retries": 0,
+        "wall_s": 4064
+      }
+    },
+    "PR5": {
+      "easy": {
+        "physics_ticks": 2548,
+        "retries": 0,
+        "wall_s": 2548
+      },
+      "hard": {
+        "physics_ticks": 2500,
+        "retries": 0,
+        "wall_s": 2500
+      },
+      "medium": {
+        "physics_ticks": 2612,
+        "retries": 0,
+        "wall_s": 2612
+      }
+    },
+    "PR6": {
+      "easy": {
+        "physics_ticks": 8008,
+        "retries": 0,
+        "wall_s": 8008
+      },
+      "hard": {
+        "physics_ticks": 18776,
+        "retries": 0,
+        "wall_s": 18776
+      },
+      "medium": {
+        "physics_ticks": 15036,
+        "retries": 0,
+        "wall_s": 15036
+      }
+    },
+    "S1": {
+      "easy": {
+        "physics_ticks": 5524,
+        "retries": 0,
+        "wall_s": 5524
+      },
+      "hard": {
+        "physics_ticks": 6304,
+        "retries": 0,
+        "wall_s": 6304
+      },
+      "medium": {
+        "physics_ticks": 6248,
+        "retries": 0,
+        "wall_s": 6248
+      }
+    },
+    "S2": {
+      "easy": {
+        "physics_ticks": 2888,
+        "retries": 0,
+        "wall_s": 2888
+      },
+      "hard": {
+        "physics_ticks": 7144,
+        "retries": 0,
+        "wall_s": 7144
+      },
+      "medium": {
+        "physics_ticks": 4892,
+        "retries": 0,
+        "wall_s": 4892
+      }
+    }
+  },
+  "control_hz": 30,
+  "physics_hz": 120,
+  "schema": "mind2act_eval.policy_budget_cells.v1",
+  "source_table_semantic_sha256": "ff4f87d6c732e0b1636b12941fa94a3469bc437b2b8b73f65d51fbd760becbd5"
+}

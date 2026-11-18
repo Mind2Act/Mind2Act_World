@@ -1,0 +1,41 @@
+{
+  "clock_policy": "Keep source_start_tick600 separate from native tick0 and physical samples. Require exact source receipt for nonzero origin. No fake warmup, shifted H5, fabricated prefix/tail or completion on replay EOF.",
+  "instruction_source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "native_task_id": "F2",
+  "public_task_id": "F2",
+  "rubric": "f2-spec-20261030-v1",
+  "rule_updates": [
+    "Current valid submission budgets are Easy5/Medium6/Hard7; historical6/12/20 are provenance only, including source-condition diagnostics.",
+    "A valid submission commits at physical CONFIRM release with one supported, released, stable block per slot. The last permitted press must not terminate before release.",
+    "Rearm on the same measured release frame so the third or a later confirmation needs no invented extra idle frame."
+  ],
+  "shared_physics_policy": "Resolver prepared scene and shared simulator own geometry, materials, cameras and global/station/X5 physics. Only task-owned contact reports and native CONFIRM spring reset are set.",
+  "source_files_sha256": {
+    "evidence.py": "e09938287aae2156c6e2a1cdfda9b17010cc2a1e7704b79b5744f1257bf57b7c",
+    "geometry.py": "45fb7a43bd11324bf55464f2bc249d71120467cabee2d1568fdb2e52321e79ec",
+    "mechanism.py": "eb0289cc31437020a0d3a28eab7d35661b471e17d6628c85dc0aab9ee703d7c2",
+    "preparation.py": "70abfd02ff1e5d526c3107baa2765b084c2df04badb99e357a3f856e62f4d724",
+    "provenance.py": "72e9eb75e56f92b3cec9268239ea270a7b9ceeda764caefd85f961b9000e2ba2",
+    "source_pins.json": "081dc692c6c85c094aabfb0253ba8663b72536111b07fad7ce3fa159d335c0eb",
+    "task.py": "357a978f78ce38687467049bf48c53bfcc3411801b1aba1ecf1a936ead5b40f8",
+    "timeline.py": "54b37d547dfe39f02617bac8e8b8003d251a075b71a574036125091b9336142d",
+    "world.py": "386568d9017e197d080d29d4e3133fc4e1b368bf7cce4c357de10007621fc8ff"
+  },
+  "source_id": "f2-35050e5-7f67c3e-uniform",
+  "source_lock_sha256": "37f337392bab500e9b760c209488467d1347d87bc6ba780e5ce184417cf0de3a",
+  "source_projection_receipt": {
+    "schema": "source-c-CP08-CP06-F2.json cells",
+    "sha256": "7319c90a785dc42e30ec1b272a75469c325465df82b83f359b082c27d68fda37"
+  },
+  "source_revision": "094bd912a18b6a83ea1ac83d4b22683971a079ac",
+  "spec_snapshot": {
+    "sections": [
+      2,
+      4,
+      5,
+      6
+    ],
+    "sha256": "2a78bdeca450be8f6e5cd06878a17e92bf12a6f219bcb64e85c599dfe521dd4b"
+  },
+  "training_scene_binding_status": "Exact selected training instance/scene profile still pending input bridge mapping; no scene or replay parity claim."
+}

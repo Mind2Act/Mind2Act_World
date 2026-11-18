@@ -1,0 +1,50 @@
+{
+  "54581167372a187313f769510e1c98b6f2a5225f79a55dc40b5c40164fc43002": {
+    "CLOSED": 3.0,
+    "DUR": 6.6,
+    "PERIOD": 11.2,
+    "TRANS": 0.8,
+    "TRAVEL": 0.34
+  },
+  "626a22b7d5d246771cd65a6ab27acdca226bb1d1cef0bbd9db25b9ba43684715": {
+    "CLOSED": 3.0,
+    "DUR": 6.0,
+    "PERIOD": 10.6,
+    "TRANS": 0.8,
+    "TRAVEL": 0.34
+  },
+  "6c2a339b7aa3dc34b424377b319814abdcaa7a88baa4b674b5721089ba7265b6": {
+    "TRANS": 0.8,
+    "TRAVEL": 0.34,
+    "gates": [
+      {
+        "color": [
+          0.13,
+          0.28,
+          0.42
+        ],
+        "first_open": 4.8,
+        "name": "Slow",
+        "open_seconds": 12.8,
+        "period": 18.4,
+        "transition_seconds": 0.8,
+        "travel_m": 0.34,
+        "x": -0.23
+      },
+      {
+        "color": [
+          0.56,
+          0.24,
+          0.08
+        ],
+        "first_open": 2.0,
+        "name": "Fast",
+        "open_seconds": 6.4,
+        "period": 9.2,
+        "transition_seconds": 0.8,
+        "travel_m": 0.34,
+        "x": -0.105
+      }
+    ]
+  }
+}

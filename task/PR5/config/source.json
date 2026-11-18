@@ -1,0 +1,41 @@
+{
+  "source_id": "pr5-eval-controller-v3-lower-lift",
+  "repository": "zgcazyz/mind2act-new-cases",
+  "revision": "b6432b408607981059acf36ee668b731e36d70a0",
+  "task_source_commit": "fb338a824581ab27e54461ff56ce3a5d49a8e7af",
+  "files": {
+    "world.py": "a1dbb5b46d4f443ba83abd0a5bbf3d9588d513a2e4774b5a5e863f4bcdee4df7",
+    "replay.py": "e0efcc781ab8bac1e763e85e77de68ebd6f70ec14c639be30b766d80c76003af",
+    "rules/imprint.py": "6a1a2ae3e015ebcc65d80705cec84cd30ad15f4a3e5a1d28e9b0f1ebf38cb4e7",
+    "rules/scoring.py": "f0f36325f8a12ec4f11297a69177bddcc688f9bac97a026be49dc59a2f970a25",
+    "source_pins.json": "323066f2255d4d2747ff5b05620da011050fd59d549be4ae4142e4123728983c"
+  },
+  "scene_author_sha256": "1f17ae2c84cfefa4208d80989e16d5c9ee8d5f95a52773e0344624f58b404cf8",
+  "common_sha256": "507cbdfc29fdc3934a2f29d5cae23c60f15e216c082cb14eee3c66eb7c37a4c0",
+  "license_status": "Source snapshot has no redistribution license; retain author review before public release.",
+  "scoring_authority": {
+    "source_id": "pr5-spec-20261030-v1",
+    "snapshot_sha256": "1ccb0110e74880fe9cbf5eac2fa54db44b0568c8ee00383c7f08d654a96a1010",
+    "sections": [
+      4,
+      5,
+      6
+    ],
+    "historical_binary_score_replaced": true
+  },
+  "source_reset_joint_state": {
+    "arm_degrees": [
+      0.0,
+      65.0,
+      100.0,
+      -65.0,
+      0.0,
+      0.0
+    ],
+    "finger_positions_m": [
+      0.044,
+      0.044
+    ],
+    "source_file": "world.py"
+  }
+}

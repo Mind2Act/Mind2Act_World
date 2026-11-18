@@ -1,0 +1,29 @@
+{
+  "source_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae",
+  "instructions": [
+    {
+      "d": [
+        "easy"
+      ],
+      "en": "Move all fruit and vegetables from the left tray onto the left scale pan. Use the weights on the right to balance the scale, then release them and keep the pointer in the green zone.",
+      "ex": "",
+      "zh": "把左边托盘里的所有果蔬移到秤的左盘上。用右边的砝码让秤平衡，然后松开，让指针停在绿色区域。"
+    },
+    {
+      "d": [
+        "medium"
+      ],
+      "en": "With the empty scale stable, press ZERO. Move all fruit and vegetables from the left tray onto the left scale pan. Use the weights on the right to balance the scale, then release them and keep the pointer in the green zone.",
+      "ex": "",
+      "zh": "在空秤稳定时按 ZERO。把左边托盘里的所有果蔬移到秤的左盘上。用右边的砝码让秤平衡，然后松开，让指针停在绿色区域。"
+    },
+    {
+      "d": [
+        "hard"
+      ],
+      "en": "With the empty scale stable, press ZERO. Move all fruit and vegetables from the left tray onto the left scale pan. Balance the scale using the weights on the right and by physically moving the sliding weight, then release them and keep the pointer in the green zone.",
+      "ex": "",
+      "zh": "在空秤稳定时按 ZERO。把左边托盘里的所有果蔬移到秤的左盘上。用右边的砝码并实际推动游码让秤平衡，然后松开，让指针停在绿色区域。"
+    }
+  ]
+}

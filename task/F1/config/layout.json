@@ -1,0 +1,21 @@
+{
+  "source_id": "f-v4-original-train-camera-v1",
+  "config_version": "f_original_train_v4_shared_collection_v1",
+  "protocol_version": "v1",
+  "home_joints_deg": [0, 65, 100, -65, 0, 0],
+  "rest_finger_m": 0.0,
+  "warmup_ticks": 120,
+  "reset_ticks": 180,
+  "reveal_ticks": 120,
+  "home_tolerance_rad": 0.02,
+  "button_contact_offset_m": 0.0005,
+  "button_drive_target_m": 0.005,
+  "button_solver_iterations": 16,
+  "button_base_lift_m": 0.031,
+  "slider_height_m": {"line": 0.062, "grid": 0.049},
+  "slider_end_margin_m": 0.03,
+  "finger_links": ["link7", "link8"],
+  "button_body": "E_button_01_13",
+  "rail_prims": ["RailBase", "RailBed", "Console", "ConsoleInset"],
+  "rail_prim_pattern": "(?:Guide|Bearing|Endstop|Screw|Index)\\d+"
+}

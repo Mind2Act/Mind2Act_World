@@ -1,0 +1,11 @@
+{
+  "cases": {},
+  "fields": [
+    "/config/instruction",
+    "/config/geometry_decision"
+  ],
+  "schema": "mind2act_eval.english_spec_authority.v1",
+  "source_baseline_sha256": "0cfee6abd002c1892b13d7c63503ea6e545fc28a92258f66a8260f25809f06de",
+  "source_cp09_extra_sha256": "f0cb15597dff502ea7b97f3ab2b0f759780c74866aa9cffbfe23cc3e2f9d22fe",
+  "source_extra_sha256": "95b6f215286854e8bfb8373332d87d1bc3ef4585da29293c8de8087b8d9af5cb"
+}

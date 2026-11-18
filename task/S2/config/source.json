@@ -1,0 +1,38 @@
+{
+  "source_id": "s2-fbe12eb-5e523fc",
+  "source_revision": "094bd912a18b6a83ea1ac83d4b22683971a079ac",
+  "rubric": "s2-spec-20261030-v1",
+  "source_files_sha256": {
+    "task.py": "866272ffb84c396b7c9792058bae94ccfd0eceac0684b925e7a97cc1b8bddb84",
+    "world.py": "41d092bacd7f35e867e7f589af7b035495912acef3cc68746197e68f2f1c9f61",
+    "measurements.py": "8b86d83cd02406b636f25ba0d789f7cc6a37565fa9c546409d1816b8d578f178",
+    "display.py": "1837922dc57c7fbbe42028336073ae0548ffa73222b9ea1802d2734e0a88debc",
+    "source_rules/__init__.py": "88fcab60fddc288d6b58c7b77a46f8459e8856b41c77e0c4e148ba5b63134813",
+    "source_rules/board.py": "e7beaadcad1ce761d81770a06496c979b1d84e7e5d96e0f6d6aff78511e7e7d8",
+    "source_rules/body.py": "c59d4236273cb49eb3fdb676d62d3f4c7057255c2578322ab38197d7bb4482b8",
+    "source_rules/buttons.py": "3e706b955a6bf6e47b1d42a21d5b7435bf8252290cfb730fa6973e20244d2ce8",
+    "source_rules/session.py": "6f7f83b1892ad456b34909134579d0f0a280e896820825aa1c670624e62d38c6"
+  },
+  "spec_snapshot": {
+    "sha256": "28b19c8d795b861590857cc54e69411cf5ce866ede0ea6ea3e0683d9df413095",
+    "sections": [
+      2,
+      4,
+      5,
+      6
+    ]
+  },
+  "source_scene": "resolver-provided native prepared scene; preserve geometry and authored physics",
+  "rule_updates": [
+    "Map visible for 240 physics ticks (2 seconds), replacing legacy cue600 by the explicit current section 2.",
+    "Goal stability starts only when all direction buttons are released, per current sections 5\u20136.",
+    "Every active physics sample must remain within source arrival_tolerance_m of the current button-authorized one-cell segment; it collapses after quiet arrival. Enforces section 6 actual-motion causality without new speed or tolerance parameters."
+  ],
+  "training_h5_binding_status": "selected paths pending; do not claim replay or hash verification",
+  "input_version_policy": {
+    "current": "s2-spec-20261030-v1: cue240",
+    "source_diagnostic": "s2-four-case-native-v4: preserve original source cue",
+    "selection": "explicit frozen InstanceSpec.config.input_protocol_version; identical builder/scorer across consumers; never modify H5"
+  },
+  "shared_physics_policy": "Prepared scene and shared simulator own global/station/X5 physics. Task enables contact reporting only under /World/Task; historical wrapper values are diagnostic metadata, not overrides or qualification gates."
+}

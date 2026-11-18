@@ -1,0 +1,180 @@
+{
+  "schema": "mind2act.clean_validation_assets.v1",
+  "task_id": "F1",
+  "records": [
+    {
+      "task_id": "F1",
+      "difficulty": "easy",
+      "instance_id": "VAL-F1-gap-easy-caf67b343938ab7f",
+      "spec_sha256": "15ec5d94ef5dc2b38761f9b209212b144aa80e0a0e58dcb8242a7bd94e0c3467"
+    },
+    {
+      "task_id": "F1",
+      "difficulty": "easy",
+      "instance_id": "VAL-F1-gap-easy-61c9cd51ef955919",
+      "spec_sha256": "02c5dbcab9357818997a9874a93ef23f3a49381296dbeab4c348c81ca119e2ff"
+    },
+    {
+      "task_id": "F1",
+      "difficulty": "easy",
+      "instance_id": "VAL-F1-gap-easy-7ac3a47f6e8326ed",
+      "spec_sha256": "f840922e569f1350b75eed327cd9cb3256411a1de88935da45f91bd548e5e10f"
+    },
+    {
+      "task_id": "F1",
+      "difficulty": "easy",
+      "instance_id": "VAL-F1-gap-easy-f412db7da868db64",
+      "spec_sha256": "e1abfd313e844173a08f3a51dd530f4705ca55408fe3f1b0ea1e01fe4768a843"
+    },
+    {
+      "task_id": "F1",
+      "difficulty": "easy",
+      "instance_id": "VAL-F1-gap-easy-b317e54ecf22af70",
+      "spec_sha256": "12d57af74a3aabf03506b9e139744d9a3555e9ff47b09c23ece4c33d2566e3ce"
+    },
+    {
+      "task_id": "F1",
+      "difficulty": "easy",
+      "instance_id": "VAL-F1-gap-easy-0adc3fbcafa66a95",
+      "spec_sha256": "eedd8b921176935646d70099c759fffe91d26221361119d286730aff6dc76316"
+    },
+    {
+      "task_id": "F1",
+      "difficulty": "easy",
+      "instance_id": "VAL-F1-gap-easy-51db8511b0dc05b4",
+      "spec_sha256": "09f9a854b6d235e1a5636aceacb0f8bd67b6a3127de2350c6aa98f50e1881aa7"
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/canonical/files/content/57/5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63/ARX.usd",
+      "sha256": "c22673331872ca8d401947013aab735b9f17a3a84f786999d6e259276d376371",
+      "size": 28294753
+    },
+    {
+      "path": "assets/portable/5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63.usda",
+      "sha256": "51cbed9db63a5feb202e1113b4ae0e5577ed35c82e6bfa202bce8c538b58d3a7",
+      "size": 416230709
+    },
+    {
+      "path": "assets/portable/661fdfdd10bab5cb6c510c5aece6179b81497581f9ec2ce46408343a793d075b.usda",
+      "sha256": "26b5f949b655fb97880689762fda75900fd81ee4bac8e7604b677b490663d400",
+      "size": 286932
+    },
+    {
+      "path": "assets/portable/698819f2ac164b774dae87fa705912bdebf1590a5cd830a2b1ba48cca6def6f7.usda",
+      "sha256": "1c960af4a30b3acc109bae19e910db6c6b55531d8a3e9b6a3ec36a6d5e4ad7d1",
+      "size": 25848560
+    },
+    {
+      "path": "assets/sdk/mdl/core/Base/OmniGlass.mdl",
+      "sha256": "c3f9555fbf8db2c4d47ac25501afaf23720260255381bde3df003fecf01869af",
+      "size": 9945
+    },
+    {
+      "path": "assets/sdk/mdl/core/Base/OmniGlass_Opacity.mdl",
+      "sha256": "87facd037b11888d3052b663bb20e41367b769095bde4c9cf686925fa17eb2a4",
+      "size": 17219
+    },
+    {
+      "path": "assets/sdk/mdl/core/Base/OmniPBR.mdl",
+      "sha256": "685a82c18b381f1cd29831490e4c356e61dbeac2d86803babc115cd6a4a845db",
+      "size": 15591
+    },
+    {
+      "path": "assets/sdk/mdl/core/Base/OmniPBRBase.mdl",
+      "sha256": "edcc669a238798a4d90ce36bd535282d23f88cddc544d68a532a5b732432788e",
+      "size": 18876
+    },
+    {
+      "path": "assets/sdk/mdl/core/Base/OmniPBR_ClearCoat.mdl",
+      "sha256": "53f5f5e5ca67477f9e105cdc17db13201a876ef54f005978286fef428221bfd8",
+      "size": 29055
+    },
+    {
+      "path": "assets/sdk/mdl/core/mdl/gltf/pbr.mdl",
+      "sha256": "2c7c14d7bbf7cacea990f90e8ecc92700d8a7fe9805e44970096796e2be88b78",
+      "size": 43800
+    },
+    {
+      "path": "assets/sdk/mdl/core/mdl/nvidia/aux_definitions.mdl",
+      "sha256": "168c28acdc30f3a3e0828d006b262644f555951a737b08663c55158868d6361a",
+      "size": 96607
+    },
+    {
+      "path": "assets/sdk/mdl/core/mdl/nvidia/core_definitions.mdl",
+      "sha256": "e020d5c2865b0c24563b09620b739f8b147661f6e0f221030757a426cfe00e83",
+      "size": 190114
+    },
+    {
+      "path": "assets/sdk/mdl/core/mdl/nvidia/support_definitions.mdl",
+      "sha256": "c04891737fff406e650e4522e44ec28e8b204c0016f2d4e2de9d7680ca216d73",
+      "size": 101202
+    },
+    {
+      "path": "assets/source/0b5e0adeeaa15179b3ab14a56a581c960fe118d4917957b6914e3ecdd7a1330d/object.usdz",
+      "sha256": "0b5e0adeeaa15179b3ab14a56a581c960fe118d4917957b6914e3ecdd7a1330d",
+      "size": 6894847
+    },
+    {
+      "path": "assets/source/368251c254a47dc7aaf532a515c0bd9ad3708ce5a3c5bb520b1628bcb9a37bc0/brown_photostudio_02_4k.hdr",
+      "sha256": "368251c254a47dc7aaf532a515c0bd9ad3708ce5a3c5bb520b1628bcb9a37bc0",
+      "size": 25433817
+    },
+    {
+      "path": "assets/source/5469bfef01fbd8c4b1784ed90884a29d93eb68ce6f27a8ae61803411ea3fb713/Aluminum_Anodized/Aluminum_Anodized_BaseColor.png",
+      "sha256": "d1d042502d7d94bca13cee10c63ab5b3801fb0a46e26d79169e13f5b9c7b5a31",
+      "size": 16903
+    },
+    {
+      "path": "assets/source/5469bfef01fbd8c4b1784ed90884a29d93eb68ce6f27a8ae61803411ea3fb713/Aluminum_Anodized/Aluminum_Anodized_Normal.png",
+      "sha256": "6dc1cb1b23a9abd766188a85ccbad1a2639d0a9a334f284e359c6c5d4438608e",
+      "size": 3321558
+    },
+    {
+      "path": "assets/source/5469bfef01fbd8c4b1784ed90884a29d93eb68ce6f27a8ae61803411ea3fb713/Aluminum_Anodized/Aluminum_Anodized_ORM.png",
+      "sha256": "768f2dbb4f702a9624b912b431efd1a6a8e0ff3e93744cf54f3866ef8f7986e9",
+      "size": 637843
+    },
+    {
+      "path": "assets/source/5469bfef01fbd8c4b1784ed90884a29d93eb68ce6f27a8ae61803411ea3fb713/Aluminum_Anodized.mdl",
+      "sha256": "5469bfef01fbd8c4b1784ed90884a29d93eb68ce6f27a8ae61803411ea3fb713",
+      "size": 1586
+    },
+    {
+      "path": "assets/source/78c3edb2398c7a48618ebe011a9a9d09802e56e1af041ea7797b115f934bce53/Aluminum_Cast/Aluminum_Cast_BaseColor.png",
+      "sha256": "03ab7494d37e1f6551a26894628c5fe03a65b4d85a09ed11337e184852a580b3",
+      "size": 1154931
+    },
+    {
+      "path": "assets/source/78c3edb2398c7a48618ebe011a9a9d09802e56e1af041ea7797b115f934bce53/Aluminum_Cast/Aluminum_Cast_N.png",
+      "sha256": "812c0161ea14abc581cb35c47b33dc6005c089f8e82dca6cb4dd4832deb0556c",
+      "size": 6557833
+    },
+    {
+      "path": "assets/source/78c3edb2398c7a48618ebe011a9a9d09802e56e1af041ea7797b115f934bce53/Aluminum_Cast/Aluminum_Cast_ORM.png",
+      "sha256": "571eba5a99da444b681609a722a29914490c6dae45d230dac471a45875211a4c",
+      "size": 4198310
+    },
+    {
+      "path": "assets/source/78c3edb2398c7a48618ebe011a9a9d09802e56e1af041ea7797b115f934bce53/Aluminum_Cast.mdl",
+      "sha256": "78c3edb2398c7a48618ebe011a9a9d09802e56e1af041ea7797b115f934bce53",
+      "size": 2006
+    },
+    {
+      "path": "assets/source/996caa235e62010e15fcf8c820ffdf502a3c276fc416d3f95298e325adf44616/Plastic_ABS.mdl",
+      "sha256": "996caa235e62010e15fcf8c820ffdf502a3c276fc416d3f95298e325adf44616",
+      "size": 1522
+    },
+    {
+      "path": "assets/source/bdbee4bed6e418e00b8e04fd8115f4cecae3fed291e5af13a327bcd986e3bae9/neutral_normal.png",
+      "sha256": "bdbee4bed6e418e00b8e04fd8115f4cecae3fed291e5af13a327bcd986e3bae9",
+      "size": 69
+    },
+    {
+      "path": "assets/source/c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f/Parquet_Color.png",
+      "sha256": "c67a4b0c0d77134cbe667af01b81861b5c157a738d7659fb3d348dabc204fe2f",
+      "size": 17770200
+    }
+  ]
+}

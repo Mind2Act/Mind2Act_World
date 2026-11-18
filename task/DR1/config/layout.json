@@ -1,0 +1,22 @@
+{
+  "source_id": "fr1-retained-train-x5-120hz-v1",
+  "config_version": "fr1-original-train150-shared-v1",
+  "protocol_version": "v1",
+  "count_by_difficulty": {"easy": 3, "medium": 5, "hard": 7},
+  "removed_prims": ["/World/FR1/Conveyor/PickupMark0", "/World/FR1/Conveyor/PickupMark1", "/World/FR1/StreamGoods"],
+  "tray_material": {"shader": "/World/Materials/FR1_InspectionTray/Shader", "diffuse_rgb": [0.12, 0.135, 0.15], "metallic": 0.0, "roughness": 0.85},
+  "static_prefixes": ["/World/Worktable", "/World/TableFrame", "/World/CameraStand", "/World/PedestalLeft",
+                      "/World/PedestalRight", "/World/Floor", "/World/FR1/InspectionTray", "/World/FR1/Conveyor"],
+  "contact_material": {"static_friction": 0.9, "dynamic_friction": 0.8, "restitution": 0.0, "contact_offset_m": 0.001, "rest_offset_m": 0.0},
+  "belt_surface": {"center_z_m": 0.850, "thickness_m": 0.016},
+  "goods": {"parking_xy_z": [-20.0, 0.0, 1.5], "parking_dx_m": -0.3, "mass_kg": 0.08, "position_iterations": 32,
+            "velocity_iterations": 8, "sleep_threshold": 0.0, "collision_approximation": "convexHull"},
+  "ref_carrier": "/World/FR1/ReferencePass/Carrier",
+  "head_camera": "/World/HeadCamera",
+  "fixed_paths": ["/World/HeadCamera", "/World/Worktable", "/World/FR1/InspectionTray", "/World/RobotLeft/Asset", "/World/RobotRight/Asset"],
+  "warmup_ticks": 120,
+  "rest_joints_deg": [0, 65, 100, -65, 0, 0],
+  "rest_finger_m": 0.044,
+  "rest_gripper": 1.0,
+  "physics_budget_ticks": 15601
+}

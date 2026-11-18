@@ -1,0 +1,27 @@
+{
+  "source_id": "m2-memory-cards-native-2d5a516d",
+  "source_files": {
+    "MEMORY_CARDS/mechanism.py": "2d5a516d615e32beafb1fa839b62dd2ff722fae0fe5b54cf2747ced782dc8e04",
+    "MEMORY_CARDS/evidence.py": "6ab2b1985c0c83e88876f59fe676542e0b73ac75b4c536c456c83c55caceb8cb",
+    "MEMORY_CARDS/world.py": "14ad7b24d0be287c21718d3416713ad94547dd2de4e58fe1ba0239fe91ba099f",
+    "MEMORY_CARDS/task.py": "fa7c46a3409a9c742c6dff95f6cbaa110443c1fa5ef369f3396c73193c8be220"
+  },
+  "rule": "m2-spec-20261030-v1",
+  "scoring_authority": {
+    "section": "M2 sections 5 and 6, 2026-10-30 revision",
+    "snapshot_sha256": "167ceb77dc340047f03bb46dd292fa538277d191b1ebfe2980920e36536eac46",
+    "instruction_sha256": "9f0ca3f4890dc12b416d1ed738c0fa0adc30a90130ff6c0753dec2fb2167d4ae"
+  },
+  "source_difference": "The selected task.py digest differs from the document's historical registration; section 8 explicitly says historical code is not synchronized with the current rule. The new scorer follows current section 6, not the binary source mapping.",
+  "mechanism_change": "Autonomous after source 240-tick initialization, no expert enable flag; valid physical press-release selects a card; matching additionally requires actual face-up measurements. Durations 84/108/540 ticks and USD card hinge targets 178/2 degrees retain source values.",
+  "evaluation_profile_status": "blocked: 15 materialized profile files (5 each tier) exist but use collection mode, split=train, old source rule. They do not supply formal current-rule clean/agentic/random bindings. The old snapshot lock lists only 9 and is incomplete.",
+  "native_validation": "pending; CPU physical traces do not establish prepared scene/source/H5 equality or native success",
+  "private_binding": {
+    "schema": "m2.source-binding.v1",
+    "assets": ["station", "m2_binding"],
+    "config": ["m2_mode=diagnostic_training", "m2_binding_sha256"],
+    "fields": ["identity", "mode", "source_manifest_sha256", "scene_sha256", "mechanism_sha256", "card_identities", "faceup_quaternions_wxyz", "button_rest_m"],
+    "source_spec_alternative": "Asset m2_source_spec plus explicit m2_source_spec_sha256, m2_scene_sha256 and m2_condition_sha256. Converter requires exact source case_id/seed/condition/version and train split; never follows embedded source paths or imports the old runtime.",
+    "privacy": "No real deck, assets, reference trajectories, profile or original paths are bundled. Card identities are private mechanism truth and never enter Observation."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "source_id": "fr2-b-fr2-work-20261025-v3",
+  "config_version": "fr2-shared-sdk-response-v1",
+  "protocol_version": "v1",
+  "press_window_s": {"easy": 4.0, "medium": 3.2, "hard": 2.6},
+  "release_window_s": 1.0,
+  "inter_event_gap_s": 0.3,
+  "cues": 10,
+  "buttons": 3,
+  "release_depression_m": 0.0008,
+  "press_depression_m": 0.0025,
+  "button_drive_target_m": 0.005,
+  "button_contact_offset_m": 0.0005,
+  "button_body": "E_button_01_13",
+  "finger_links": ["link7", "link8"],
+  "rest_joints_deg": [0, 65, 100, -65, 0, 0],
+  "rest_finger_m": 0.0,
+  "unlit_material": "/World/Materials/UnlitRing",
+  "lit_material": "/World/Materials/ActiveAmberRing"
+}

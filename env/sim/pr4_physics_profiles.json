@@ -1,0 +1,47 @@
+{
+  "schema": "mind2act_eval.pr4_physics_configurations.v1",
+  "profiles": {
+    "easy": {
+      "profile": "pr4-source-gpu-fem-v1",
+      "source_version": "pr4-original-time-v3",
+      "source_world_sha256": "b106906803decb33daff8dc9bfa04b7e7e992b114c104bf313eef369fab2f801",
+      "clock": {
+        "physics_hz": 120,
+        "control_hz": 30,
+        "rgb_hz": 30
+      },
+      "requested": {
+        "gpu_dynamics": true,
+        "broadphase": "GPU"
+      }
+    },
+    "medium": {
+      "profile": "pr4-source-gpu-fem-v1",
+      "source_version": "pr4-original-time-v3",
+      "source_world_sha256": "b106906803decb33daff8dc9bfa04b7e7e992b114c104bf313eef369fab2f801",
+      "clock": {
+        "physics_hz": 120,
+        "control_hz": 30,
+        "rgb_hz": 30
+      },
+      "requested": {
+        "gpu_dynamics": true,
+        "broadphase": "GPU"
+      }
+    },
+    "hard": {
+      "profile": "pr4-source-gpu-fem-v1",
+      "source_version": "pr4-original-time-v3",
+      "source_world_sha256": "b106906803decb33daff8dc9bfa04b7e7e992b114c104bf313eef369fab2f801",
+      "clock": {
+        "physics_hz": 120,
+        "control_hz": 30,
+        "rgb_hz": 30
+      },
+      "requested": {
+        "gpu_dynamics": true,
+        "broadphase": "GPU"
+      }
+    }
+  }
+}
