@@ -2,7 +2,7 @@
 
 <img src="docs/assets/readme/banner.webp" alt="Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation" width="100%">
 
-<h3 align="center">
+<h4 align="center">
   <a href="https://arxiv.org/abs/2611.26444">📄 Paper</a> |
   <a href="https://mind2act-world.com/">🌐 Webpage</a> |
   <a href="https://mind2act-world.com/leaderboard.html">🏆 Leaderboard</a> |
@@ -10,7 +10,7 @@
   <a href="https://mind2act-world.com/diagnosis.html">🩺 Diagnosis</a> |
   <a href="https://mind2act-world.com/document.html">📖 Document</a> |
   <a href="https://huggingface.co/Mind2Act-World">🤗 Data</a>
-</h3>
+</h4>
 
 <p>
   <a href="https://arxiv.org/abs/2611.26444"><img alt="arXiv 2611.26444" src="https://img.shields.io/badge/arXiv-2611.26444-b31b1b?style=flat-square&logo=arxiv&logoColor=white&labelColor=64748b" height="22"/></a>&nbsp;
@@ -63,7 +63,7 @@ Mind2Act World evaluates memory, physical execution, and tasks that require both
 ## 🧩 Tasks
 
 <p align="center">
-  <img src="docs/assets/readme/tasks.jpg" alt="The 30 Mind2Act World tasks: 10 Mind, 10 Act and 10 Mind2Act tasks" width="100%">
+  <img src="docs/assets/readme/tasks_wheel.webp" alt="All 30 Mind2Act World tasks, grouped by view and capability" width="100%">
 </p>
 
 <details>
@@ -91,37 +91,7 @@ Task pages with videos for every difficulty level are on the [benchmark page](ht
 
 </details>
 
-<p align="center">
-  <img src="docs/assets/readme/difficulty.webp" alt="Easy, Medium and Hard levels of twelve tasks" width="100%">
-</p>
-
-<p align="center"><em><b>Easy, Medium and Hard levels of twelve tasks.</b> A harder level keeps the goal of a task and raises its demands, so Mind tasks give more to remember or infer, Act tasks require more precise or timely execution, and Mind2Act tasks chain more dependent operations.</em></p>
-
 Training demonstrations are available in [mind2act-train](https://huggingface.co/datasets/Mind2Act-World/mind2act-train) on [Hugging Face](https://huggingface.co/Mind2Act-World).
-
-## 🔁 Training, Evaluation and Diagnosis
-
-<p align="center">
-  <img src="docs/assets/readme/pipeline.webp" alt="Training, evaluation and diagnosis pipeline" width="100%">
-</p>
-
-<p align="center"><em><b>Training, evaluation and diagnosis pipeline.</b> End-to-end policies are fine-tuned on 4,500 scripted demonstrations, agents act through motion tools, and the evaluator decides success from simulator state hidden from both. Episode logs then feed a model profile card that records where each failed episode first breaks down and whether the failure lies in Mind, Act or their composition. The panels trace one recorded GPT-6 Astra episode on S1 Medium.</em></p>
-
-## 📊 Key Results
-
-<p align="center">
-  <img src="docs/assets/readme/results.webp" alt="Success rates by view and Random versus Clean successes" width="100%">
-</p>
-
-<p align="center"><em><b>(a) Success rate by view</b> with 95% Wilson intervals. Competence in a single view does not carry over to Mind2Act, as the strongest agent succeeds in 52.7% of Mind and 39.0% of Act episodes but in only 12.0% of Mind2Act episodes. <b>(b) Random vs. Clean successes</b> for the six end-to-end policies. The VLAs keep most of their Act successes in Random scenes and lose most of their Mind successes.</em></p>
-
-## 🩺 Failure Diagnosis
-
-<p align="center">
-  <img src="docs/assets/readme/diagnosis.webp" alt="Failure diagnosis on an example profile card" width="100%">
-</p>
-
-<p align="center"><em><b>Failure diagnosis on an example profile card.</b> (a) Rules settle part of the failed episodes and pass the rest to an LLM judge and, where it is uncertain, to a human check. (b) On each of these tasks, most failures stop at one early step. (c) Every failed episode is traced from the step where it first breaks down to its failure code. Measured cards of three representative systems are on the <a href="https://mind2act-world.com/diagnosis.html">diagnosis page</a>.</em></p>
 
 ## 🚀 Quick start
 
@@ -209,7 +179,11 @@ Mind2Act World builds on [Isaac Sim](https://developer.nvidia.com/isaac/sim) and
   <a href="https://www.sigs.tsinghua.edu.cn/"><img src="docs/assets/readme/affiliations.png" alt="Tsinghua Shenzhen International Graduate School · mmlab@SIGS" width="78%"></a>
 </p>
 
-Mind2Act World is built by the Mind2Act World Team at [mmlab@SIGS](https://mmlab-sigs.github.io/groups/zwang/), Tsinghua Shenzhen International Graduate School.
+Mind2Act World is built by the Mind2Act World Team at [mmlab@SIGS](https://mmlab-sigs.github.io/groups/zwang/), Tsinghua Shenzhen International Graduate School, together with researchers from the following universities and companies.
+
+<p align="center">
+  <img src="docs/assets/readme/affiliation_logos.png" alt="Tsinghua University, University of Cambridge, University of Oxford, Stanford University, Carnegie Mellon University, The University of Hong Kong, HKUST, CUHK, Peking University, Shanghai Jiao Tong University, Fudan University, Renmin University of China, Shenzhen University, Velabot AI, Simple AI and Baidu AI Cloud" width="100%">
+</p>
 
 ## ⚖️ License
 
