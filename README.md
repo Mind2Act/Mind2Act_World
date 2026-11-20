@@ -22,6 +22,12 @@
 
 </div>
 
+<p align="center">
+  <a href="https://media.mind2act-world.com/site-videos/promo-v17c-profile-v20261111/mind2act-world-promo-2026-v17c-profile-1080p-88c877425b.mp4"><img src="docs/assets/readme/promo_cover.jpg" alt="Watch the Mind2Act World introduction video" width="100%"></a>
+  <br>
+  <em>▶ Click to watch the introduction video, or see it on the <a href="https://mind2act-world.com/">webpage</a>.</em>
+</p>
+
 Mind2Act World evaluates memory, physical execution, and tasks that require both.
 
 ## 📰 News
