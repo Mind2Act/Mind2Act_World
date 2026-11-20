@@ -171,6 +171,19 @@ If you find Mind2Act World useful, please cite our [technical report](https://ar
 
 Mind2Act World builds on [Isaac Sim](https://developer.nvidia.com/isaac/sim) and integrates policies through [XPolicyLab](https://github.com/XPolicyLab/XPolicyLab). The agent runtime installs pinned sources from RoboProbe (Apache-2.0) and [RoboDojo](https://github.com/RoboDojo-Benchmark/RoboDojo) (MIT), and verifies a separately installed [cuRobo](https://github.com/NVlabs/curobo); see [THIRD_PARTY.md](THIRD_PARTY.md). We thank their authors and maintainers.
 
+## 🤝 Call for Collaboration and Sponsorship
+
+Evaluating a model on Mind2Act World takes substantial resources. On average, fine-tuning an end-to-end policy takes about 3,800 A100 GPU-hours and evaluating it about 1,150 GPU-hours, and a strong agent can use billions of API tokens. We welcome support that helps us evaluate more models and keep the benchmark and leaderboard open to the community.
+
+- 🖥️ **GPU compute** for training, simulation and inference
+- 🔑 **API credits** for agent evaluation
+- 🗄️ **Hosting and storage** for datasets, videos and website services
+- 🦾 **Robotics hardware** for real-world validation partnerships
+
+Partners are acknowledged on the website, on the leaderboard and in the technical report, and a supported model can receive priority scheduling and a complete model profile card. Sponsorship never changes scores or rankings, and all models in the same track follow the same protocol. We also welcome research collaborations on new tasks, models and diagnosis methods.
+
+To start a conversation, visit the [support page](https://mind2act-world.com/support.html) or email [Mind2ActCommittee@outlook.com](mailto:Mind2ActCommittee@outlook.com).
+
 ## 🏫 Affiliations
 
 <p align="center">
