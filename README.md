@@ -173,7 +173,7 @@ Mind2Act World builds on [Isaac Sim](https://developer.nvidia.com/isaac/sim) and
 
 ## 🤝 Call for Collaboration and Sponsorship
 
-Evaluating a model on Mind2Act World takes substantial resources. On average, fine-tuning an end-to-end policy takes about 3,800 A100 GPU-hours and evaluating it about 1,150 GPU-hours, and a strong agent can use billions of API tokens. We welcome support that helps us evaluate more models and keep the benchmark and leaderboard open to the community.
+Evaluating more models on Mind2Act World needs more GPU compute and API tokens. We welcome partners who can help with these resources and invite everyone to build the Mind2Act community with us.
 
 - 🖥️ **GPU compute** for training, simulation and inference
 - 🔑 **API credits** for agent evaluation
