@@ -22,15 +22,9 @@
 
 </div>
 
-<p align="center">
-  <a href="
-
 https://github.com/user-attachments/assets/d83241f1-bab5-4015-8894-484402551eca
 
-"><img src="docs/assets/readme/promo_cover.jpg" alt="Watch the Mind2Act World introduction video" width="100%"></a>
-  <br>
-  <em>▶ Click to watch the introduction video, or see it on the <a href="https://mind2act-world.com/">webpage</a>.</em>
-</p>
+<p align="center"><em>The full 1080p version is on the <a href="https://mind2act-world.com/">webpage</a>.</em></p>
 
 Mind2Act World evaluates memory, physical execution, and tasks that require both.
 
