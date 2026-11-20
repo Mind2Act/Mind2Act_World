@@ -48,6 +48,12 @@ Mind2Act World evaluates memory, physical execution, and tasks that require both
 
 ## ✨ Highlights
 
+<p align="center">
+  <img src="docs/assets/readme/overview.webp" alt="Overview of Mind2Act World" width="100%">
+</p>
+
+<p align="center"><em><b>Overview of Mind2Act World.</b> The benchmark tests history-based cognitive reasoning (Mind), precise and timely physical execution (Act) and their closed-loop composition through environmental feedback (Mind2Act), both separately and in combination. Its 30 tasks come from five real-world application domains and run at three difficulty levels in Clean and Random scenes, and agents and end-to-end policies are ranked on separate leaderboards.</em></p>
+
 - 🧠 **Three diagnostic views, 30 tasks** — 10 **Mind** tasks (memory and task decisions), 10 **Act** tasks (precise, timely, contact-rich execution) and 10 **Mind2Act** tasks where intent guides action and outcomes update the next decision.
 - 🎚️ **Progressive pressure** — the full benchmark has 180 task, difficulty, and variation combinations. The development download contains clean training and validation layouts.
 - 🔬 **Physics-verified, task-specific scoring** — scorers read physical measurements from the simulation, such as the final resistance.
@@ -85,9 +91,39 @@ Task pages with videos for every difficulty level are on the [benchmark page](ht
 
 </details>
 
+<p align="center">
+  <img src="docs/assets/readme/difficulty.webp" alt="Easy, Medium and Hard levels of twelve tasks" width="100%">
+</p>
+
+<p align="center"><em><b>Easy, Medium and Hard levels of twelve tasks.</b> A harder level keeps the goal of a task and raises its demands, so Mind tasks give more to remember or infer, Act tasks require more precise or timely execution, and Mind2Act tasks chain more dependent operations.</em></p>
+
 Training demonstrations are available in [mind2act-train](https://huggingface.co/datasets/Mind2Act-World/mind2act-train) on [Hugging Face](https://huggingface.co/Mind2Act-World).
 
-## Quick start
+## 🔁 Training, Evaluation and Diagnosis
+
+<p align="center">
+  <img src="docs/assets/readme/pipeline.webp" alt="Training, evaluation and diagnosis pipeline" width="100%">
+</p>
+
+<p align="center"><em><b>Training, evaluation and diagnosis pipeline.</b> End-to-end policies are fine-tuned on 4,500 scripted demonstrations, agents act through motion tools, and the evaluator decides success from simulator state hidden from both. Episode logs then feed a model profile card that records where each failed episode first breaks down and whether the failure lies in Mind, Act or their composition. The panels trace one recorded GPT-6 Astra episode on S1 Medium.</em></p>
+
+## 📊 Key Results
+
+<p align="center">
+  <img src="docs/assets/readme/results.webp" alt="Success rates by view and Random versus Clean successes" width="100%">
+</p>
+
+<p align="center"><em><b>(a) Success rate by view</b> with 95% Wilson intervals. Competence in a single view does not carry over to Mind2Act, as the strongest agent succeeds in 52.7% of Mind and 39.0% of Act episodes but in only 12.0% of Mind2Act episodes. <b>(b) Random vs. Clean successes</b> for the six end-to-end policies. The VLAs keep most of their Act successes in Random scenes and lose most of their Mind successes.</em></p>
+
+## 🩺 Failure Diagnosis
+
+<p align="center">
+  <img src="docs/assets/readme/diagnosis.webp" alt="Failure diagnosis on an example profile card" width="100%">
+</p>
+
+<p align="center"><em><b>Failure diagnosis on an example profile card.</b> (a) Rules settle part of the failed episodes and pass the rest to an LLM judge and, where it is uncertain, to a human check. (b) On each of these tasks, most failures stop at one early step. (c) Every failed episode is traced from the step where it first breaks down to its failure code. Measured cards of three representative systems are on the <a href="https://mind2act-world.com/diagnosis.html">diagnosis page</a>.</em></p>
+
+## 🚀 Quick start
 
 Use Linux, an NVIDIA GPU, and the Python 3.11 launcher supplied with Isaac Sim 5.1.
 Download the exact revision from the release record in
@@ -117,6 +153,33 @@ Use `--agent` for the Mind2Act tool Agent (`m2a_agent:create`). It supports
 sets the task budget. See [Agent setup](docs/agent-runtime.md),
 [XPolicyLab setup](policies/README.md), [container setup](docker/README.md),
 and the [source layout](docs/source-layout.md).
+
+## 📚 Documentation
+
+| Document | Description |
+| :-- | :-- |
+| [Webpage documentation](https://mind2act-world.com/document.html) | Tasks and difficulty, evaluation protocol, leaderboard and release notes on the project website. |
+| [Task catalogue](docs/tasks.md) | Instruction excerpts and success definitions for all 30 tasks. |
+| [Agent runtime](docs/agent-runtime.md) | Tool calls and observations for multimodal agents. |
+| [Policy interfaces](policies/README.md) | XPolicyLab and G0.5 connections for end-to-end policies. |
+| [Container setup](docker/README.md) | Isaac Sim 5.1 image built from the pinned source. |
+| [Source layout](docs/source-layout.md) | Source directories, installed modules and where to make changes. |
+| [Development and evaluation](docs/submission.md) | Developing on public layouts and evaluating on held-out layouts. |
+| [Validation status](docs/validation-status.md) | Checks run on the development layouts. |
+
+## 🗂️ Repository Structure
+
+```text
+eval/       evaluation CLI, episode runner, scoring and budgets (mind2act_eval)
+task/       30 task definitions with scenes, instructions and scorers
+env/        Isaac Sim scene, X5 robot and scene variations
+env_cfg/    shared layout admission and budget configs
+policies/   Mind2Act tool Agent and XPolicyLab adapters
+docker/     Isaac Sim 5.1 image definition
+tools/      dependency installation helpers
+tests/      runtime and Agent regression tests
+docs/       documentation and README assets
+```
 
 ## 🏆 Leaderboard
 
