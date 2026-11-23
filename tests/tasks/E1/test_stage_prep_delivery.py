@@ -2,7 +2,31 @@
 import pytest
 from pxr import Gf, Sdf, Usd, UsdGeom, UsdPhysics, UsdShade
 
-from mind2act_eval.tasks.E1.mechanism.stage_prep import make_station_static
+from mind2act_eval.tasks.E1.mechanism.stage_prep import _cargo_mass_kg, make_station_static
+
+
+@pytest.mark.parametrize(
+    ("identity", "dimensions_m", "expected_kg"),
+    [
+        ("Rigid/chocolate_bar/00000", [0.012529, 0.065, 0.007384], 0.00677),
+        ("Rigid/chocolate_bar/00000", [0.0212034748, 0.11, 0.0124967555], 0.03283),
+        ("Rigid/chocolate_bar/00001", [0.0196038065, 0.065, 0.0082187335], 0.00991),
+        ("Rigid/chocolate_bar/00001", [0.033176, 0.11, 0.013909], 0.04803),
+        ("Rigid/chocolate_bar/00002", [0.020266, 0.065, 0.007118], 0.00911),
+        ("Rigid/chocolate_bar/00002", [0.034296, 0.11, 0.012047], 0.04413),
+        ("Rigid/chocolate_bar/00001", [0.012529, 0.065, 0.007384], 0.08),
+        ("Clutter/power_bank/00000", [0.027289, 0.065, 0.006951], 0.018),
+        ("Rigid/power_bank/00002", [0.050, 0.109513, 0.020895], 0.155),
+        ("Rigid/mouse/00009", [0.012529, 0.065, 0.007384], 0.08),
+    ],
+)
+def test_cargo_mass_uses_identity_and_ordered_dimensions(identity, dimensions_m, expected_kg):
+    item = {"visible_identity": identity, "dimensions_m": dimensions_m}
+    assert _cargo_mass_kg(item) == pytest.approx(expected_kg)
+
+
+def test_legacy_cargo_without_identity_and_dimensions_keeps_original_mass():
+    assert _cargo_mass_kg({"prim_path": "/World/Items/Batch0/Item0"}) == pytest.approx(0.08)
 
 
 def _e1_conveyor_stage():

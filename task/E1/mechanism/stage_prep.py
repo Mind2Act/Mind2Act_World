@@ -9,6 +9,84 @@ import copy
 import numpy as np
 
 
+# Simulation reference masses in grams, keyed by catalog identity and ordered
+# dimensions in mm. Use typical finished goods of the represented size.
+# Assume empty general boxes, can and cup, a filled juice carton, lightly
+# stocked tea/coffee boxes, and an unweighted desktop tape dispenser.
+# Chocolate uses hull volume and density (1300 kg/m³, DOI 10.1039/D1FO04049A).
+_CARGO_MASS_G = {
+    ('Clutter/box/00000', (50, 60.607, 49.774)): 12,
+    ('Clutter/box/00001', (50, 52.245, 13.425)): 5,
+    ('Clutter/box/00001', (56, 58.515, 15.036)): 7,
+    ('Clutter/box/00002', (50, 62.813, 37.033)): 10,
+    ('Clutter/calculator/00000', (50, 64.933, 9.428)): 22,
+    ('Clutter/can/00000', (50, 50, 21.07)): 5,
+    ('Clutter/cup/00000', (50, 62.602, 49.011)): 18,
+    ('Clutter/eraser/00000', (31.777, 65, 22.087)): 42,
+    ('Clutter/eraser/00000', (50, 102.275, 34.753)): 155,
+    ('Clutter/power_bank/00000', (27.289, 65, 6.951)): 18,
+    ('Clutter/power_bank/00000', (46.181, 110, 11.762)): 75,
+    ('Clutter/stapler/00003', (29.454, 65, 17.918)): 26,
+    ('Clutter/stapler/00003', (49.844, 110, 30.323)): 105,
+    ('Levels38/magenta_box/00000', (40, 50.25, 29.626)): 6,
+    ('Levels38/magenta_box/00000', (50, 62.813, 37.033)): 10,
+    ('Rigid/action_camera/00000', (46.339, 65, 35.215)): 115,
+    ('Rigid/action_camera/00000', (50, 70.136, 37.998)): 140,
+    ('Rigid/action_camera/00001', (47.695, 65, 32.099)): 105,
+    ('Rigid/action_camera/00001', (50, 68.142, 33.65)): 120,
+    ('Rigid/action_camera/00002', (50, 54.682, 30.069)): 80,
+    ('Rigid/alarm/00000', (50, 50, 31.25)): 40,
+    ('Rigid/box/00000', (40.574, 65, 37.937)): 9,
+    ('Rigid/box/00000', (50, 80.101, 46.75)): 15,
+    ('Rigid/cassette/00000', (40.258, 65, 7.622)): 16,
+    ('Rigid/cassette/00000', (50, 80.728, 9.467)): 25,
+    ('Rigid/charger/00000', (43.282, 65, 27.828)): 55,
+    ('Rigid/charger/00000', (50, 75.089, 32.148)): 80,
+    ('Rigid/chocolate_bar/00000', (12.529, 65, 7.384)): 6.77,
+    ('Rigid/chocolate_bar/00000', (21.203, 110, 12.497)): 32.83,
+    ('Rigid/chocolate_bar/00001', (19.604, 65, 8.219)): 9.91,
+    ('Rigid/chocolate_bar/00001', (33.176, 110, 13.909)): 48.03,
+    ('Rigid/chocolate_bar/00002', (20.266, 65, 7.118)): 9.11,
+    ('Rigid/chocolate_bar/00002', (34.296, 110, 12.047)): 44.13,
+    ('Rigid/clock/00000', (50, 51.989, 25.355)): 35,
+    ('Rigid/correction_tape/00000', (27.267, 65, 10.935)): 12,
+    ('Rigid/correction_tape/00000', (46.145, 110, 18.506)): 35,
+    ('Rigid/game_machine/00000', (50, 53.844, 19.091)): 35,
+    ('Rigid/jewelry_box/00000', (36.433, 65, 19.237)): 22,
+    ('Rigid/jewelry_box/00000', (50, 89.205, 26.4)): 45,
+    ('Rigid/juice_carton/00000', (24.322, 65.0, 18.446)): 28,
+    ('Rigid/juice_carton/00000', (41.16, 110, 31.216)): 135,
+    ('Rigid/mouse/00004', (42.701, 65.0, 21.279)): 25,
+    ('Rigid/mouse/00004', (50, 76.111, 24.916)): 34,
+    ('Rigid/mouse/00006', (35.834, 65, 21.334)): 22,
+    ('Rigid/mouse/00006', (50, 90.696, 29.768)): 45,
+    ('Rigid/mouse/00007', (36.92, 65, 22.507)): 23,
+    ('Rigid/mouse/00007', (50, 88.029, 30.481)): 42,
+    ('Rigid/mouse/00008', (44.499, 65, 24.89)): 27,
+    ('Rigid/mouse/00008', (50, 73.036, 27.967)): 36,
+    ('Rigid/mouse/00009', (50, 64.764, 26.534)): 30,
+    ('Rigid/music_player/00000', (46.73, 65, 17.01)): 42,
+    ('Rigid/music_player/00000', (50, 69.548, 18.2)): 50,
+    ('Rigid/phone/00000', (27.304, 65, 12.679)): 32,
+    ('Rigid/phone/00000', (46.207, 110, 21.457)): 120,
+    ('Rigid/power_bank/00002', (29.677, 65, 12.402)): 35,
+    ('Rigid/power_bank/00002', (50, 109.513, 20.895)): 155,
+    ('Rigid/tape_dispense/00000', (32.852, 65, 32.063)): 25,
+    ('Rigid/tape_dispense/00000', (50, 98.929, 48.8)): 75,
+    ('RoboTwin/107_soap', (20.108, 65, 13.448)): 15,
+    ('RoboTwin/107_soap', (34.029, 110, 22.758)): 72,
+    ('RoboTwin/112_tea-box', (48.328, 65, 48.248)): 30,
+    ('RoboTwin/112_tea-box', (50, 67.249, 49.917)): 33,
+    ('RoboTwin/113_coffee-box', (49.705, 65, 44.04)): 48,
+    ('RoboTwin/113_coffee-box', (50, 65.386, 44.301)): 49,
+}
+
+
+def _cargo_mass_kg(item):
+    dimensions_mm = tuple(round(d * 1000, 3) for d in item.get('dimensions_m') or ())
+    return _CARGO_MASS_G.get((item.get('visible_identity'), dimensions_mm), 80) / 1000
+
+
 def scene_visible_intervals(case, frustum, batch_prims):
     """Bound actual rendered mesh pieces, without the old 18 cm proxy/padding.
 
@@ -144,7 +222,7 @@ def make_station_static(stage):
 
 
 def make_items_dynamic(stage, items):
-    """Item meshes: convex-hull colliders, dynamic rigid bodies, 0.08 kg, shared physics material."""
+    """Set up dynamic cargo bodies, convex-hull colliders and shared physics material."""
     from pxr import Usd, UsdGeom, UsdPhysics, PhysxSchema, UsdShade
     mat = UsdShade.Material.Define(stage, '/World/PhysicsMaterial')
     pm = UsdPhysics.MaterialAPI.Apply(mat.GetPrim())
@@ -169,6 +247,6 @@ def make_items_dynamic(stage, items):
         rb.CreateRigidBodyEnabledAttr(True)
         rb.CreateKinematicEnabledAttr(False)
         PhysxSchema.PhysxContactReportAPI.Apply(root).CreateThresholdAttr(0.)
-        UsdPhysics.MassAPI.Apply(root).CreateMassAttr(.08)
+        UsdPhysics.MassAPI.Apply(root).CreateMassAttr().Set(_cargo_mass_kg(item))
         PhysxSchema.PhysxRigidBodyAPI.Apply(root).CreateSolverPositionIterationCountAttr(32)
         PhysxSchema.PhysxRigidBodyAPI.Apply(root).CreateSolverVelocityIterationCountAttr(8)
