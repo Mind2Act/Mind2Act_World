@@ -94,17 +94,14 @@ Training demonstrations are available in [mind2act-train](https://huggingface.co
 ## 🚀 Quick start
 
 Use Linux, an NVIDIA GPU, and the Python 3.11 launcher supplied with Isaac Sim 5.1.
-Download a fresh copy of the
-[v1.0.0 asset snapshot](https://huggingface.co/datasets/Mind2Act-World/mind2act-dev-assets/tree/7b93083c3dbca98f0ec447e10e47ac73714b33ba)
-and the asset overlay from the [v1.0.1 release](https://github.com/Mind2Act/Mind2Act_World/releases/tag/v1.0.1).
-Set `ASSET_SNAPSHOT` to the downloaded snapshot, `ASSET_PATCH` to the absolute path
-of the overlay archive, and `ISAAC_PYTHON` to the launcher.
-The overlay supplies the paired wheel, the two corrected validation shards,
-and the updated release record and checksums.
+Download the [v1.0.1 development asset snapshot](https://huggingface.co/datasets/Mind2Act-World/mind2act-dev-assets/tree/8690686b0b5de5979c3fb516d5888f0df6df4b31/release-v1.0.1).
+Set `ASSET_SNAPSHOT` to the downloaded repository root and `ISAAC_PYTHON` to the launcher.
+The snapshot's `release-v1.0.1/RELEASE.json` pins the wheel and the Git commit
+tagged `v1.0.1`. Users who already have v1.0.0 can use the smaller overlay from
+the [GitHub release](https://github.com/Mind2Act/Mind2Act_World/releases/tag/v1.0.1).
 
 ```sh
-cd "$ASSET_SNAPSHOT/release-v1.0.0"
-tar --zstd -xf "$ASSET_PATCH"
+cd "$ASSET_SNAPSHOT/release-v1.0.1"
 sha256sum -c SHA256SUMS
 for archive in archives/*.tar.zst; do tar --zstd -xf "$archive"; done
 "$ISAAC_PYTHON" -m pip install 'code/mind2act_dev-1.0.1-py3-none-any.whl[isaac,agent,g05]'
