@@ -49,7 +49,7 @@ These notes describe the implemented scorer. They do not replace the fixed model
 | CP05 | Mallet contact, last-key release and final withdrawal are not scoring gates. Hard checks MAX before Play and at the terminal sample, not continuously between them. |
 | PR1 / PR2 | Scoring reads the final T0 resistance/voltage. Release and holding are not scoring gates; the released-hold window controls scene termination only. PR1 tolerances are ±0.2 / ±0.15 / ±0.12 Ω. PR2 tolerances are ±1 / ±0.5 / ±0.5 V; Hard tightens the partial-credit zero distance, not the voltage tolerance. |
 | PR5 | Reject missing, repeated, dragged or out-of-box imprints first; then grade heading, then stamp return. |
-| DR3 | Ordered physical aperture passage and terminal delivery are scored. Gripper withdrawal is not a scoring gate. |
+| DR3 | Scoring uses ordered physical aperture passage, supported tray delivery, and the withdrawal and gate-contact rules. Both arms must clear the gate corridor for automatic success. A confirmed irreversible violation ends the model rollout with zero. |
 | DR4 | Ball touching is not a scoring gate. Easy / Medium / Hard have 2 / 3 / 4 balls and 0 / 1 / 2 columns respectively. Retention, terminal delivery and obstacle-contact rules still apply. |
 | E1 | The tray accepts one submission per round; a wrong submission still settles that round and cannot be replaced with another answer. |
 | E2 | Remember the objects and their values, calculate the expression, and enter its result. Fingertip contact is not a scoring gate; the fixed short instruction does not specify a key-return requirement. |

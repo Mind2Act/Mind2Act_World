@@ -95,16 +95,16 @@ Training demonstrations are available in [mind2act-train](https://huggingface.co
 
 Use Linux, an NVIDIA GPU, and the Python 3.11 launcher supplied with Isaac Sim 5.1.
 Download the [v1.0.1 development asset snapshot](https://huggingface.co/datasets/Mind2Act-World/mind2act-dev-assets/tree/8690686b0b5de5979c3fb516d5888f0df6df4b31/release-v1.0.1).
-Set `ASSET_SNAPSHOT` to the downloaded repository root and `ISAAC_PYTHON` to the launcher.
-The snapshot's `release-v1.0.1/RELEASE.json` pins the wheel and the Git commit
-tagged `v1.0.1`. Users who already have v1.0.0 can use the smaller overlay from
-the [GitHub release](https://github.com/Mind2Act/Mind2Act_World/releases/tag/v1.0.1).
+Download the [v1.0.2 evaluator wheel](https://github.com/Mind2Act/Mind2Act_World/releases/download/v1.0.2/mind2act_dev-1.0.2-py3-none-any.whl).
+Set `ASSET_SNAPSHOT` to the downloaded repository root, `ISAAC_PYTHON` to the
+launcher, and `MIND2ACT_WHEEL` to the absolute path of the downloaded wheel.
+Existing v1.0.1 asset installations can install the new wheel directly.
 
 ```sh
 cd "$ASSET_SNAPSHOT/release-v1.0.1"
 sha256sum -c SHA256SUMS
 for archive in archives/*.tar.zst; do tar --zstd -xf "$archive"; done
-"$ISAAC_PYTHON" -m pip install 'code/mind2act_dev-1.0.1-py3-none-any.whl[isaac,agent,g05]'
+"$ISAAC_PYTHON" -m pip install "${MIND2ACT_WHEEL}[isaac,agent,g05]"
 ```
 
 Change to your deployment directory. Save the XPolicyLab configuration as
