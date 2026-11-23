@@ -107,6 +107,8 @@ for archive in archives/*.tar.zst; do tar --zstd -xf "$archive"; done
 "$ISAAC_PYTHON" -m pip install "${MIND2ACT_WHEEL}[isaac,agent,g05]"
 ```
 
+To use the latest fixes on `main`, run `"$ISAAC_PYTHON" -m pip install ".[isaac,agent,g05]"` from the repository checkout. Use the same development assets linked above.
+
 Change to your deployment directory. Save the XPolicyLab configuration as
 `config/e2e.json`, or the Mind2Act tool Agent configuration as `config/agent.json`.
 Set `SPEC` to the layout JSON, `ASSET_ROOT` to its extracted asset root, and `GPU`
