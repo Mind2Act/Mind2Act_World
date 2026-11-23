@@ -148,7 +148,12 @@ def _validate_result_closure(root: Path, result: Result) -> None:
             or any(not isinstance(row, dict) or row.get("valid") is not True
                    for row in camera_rows.values())):
         raise ValueError("native camera receipt does not prove valid initial frames")
-    expected_video_keys = {"video_" + name for name in camera_rows}
+    recording_cameras = camera_receipt.get("recording_cameras", list(camera_rows))
+    if (not isinstance(recording_cameras, list) or not recording_cameras
+            or any(not isinstance(name, str) or name not in camera_rows for name in recording_cameras)
+            or len(set(recording_cameras)) != len(recording_cameras)):
+        raise ValueError("native camera receipt has invalid recording camera names")
+    expected_video_keys = {"video_" + name for name in recording_cameras}
     if camera_video_keys != expected_video_keys:
         raise ValueError("native result must reference every camera video")
     for key in camera_video_keys:

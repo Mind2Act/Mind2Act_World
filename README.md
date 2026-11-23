@@ -2,16 +2,18 @@
 
 <img src="docs/assets/readme/banner.webp" alt="Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation" width="100%">
 
-<h3 align="center">
+<h4 align="center">
+  <a href="https://arxiv.org/pdf/2611.26444">📄 Paper</a> |
   <a href="https://mind2act-world.com/">🌐 Webpage</a> |
   <a href="https://mind2act-world.com/leaderboard.html">🏆 Leaderboard</a> |
   <a href="https://mind2act-world.com/benchmark.html">🧩 Benchmark</a> |
   <a href="https://mind2act-world.com/diagnosis.html">🩺 Diagnosis</a> |
-  <a href="https://mind2act-world.com/resources.html">📖 Document</a> |
-  <a href="https://mind2act-world.com/index.html">📄 Report</a>
-</h3>
+  <a href="https://mind2act-world.com/document.html">📖 Document</a> |
+  <a href="https://huggingface.co/Mind2Act-World">🤗 Data</a>
+</h4>
 
 <p>
+  <a href="https://arxiv.org/pdf/2611.26444"><img alt="arXiv 2611.26444" src="https://img.shields.io/badge/arXiv-2611.26444-b31b1b?style=flat-square&logo=arxiv&logoColor=white&labelColor=64748b" height="22"/></a>&nbsp;
   <img alt="Python 3.11" src="https://img.shields.io/badge/Python-3.11-475569?style=flat-square&logo=python&logoColor=white&labelColor=64748b" height="22"/>&nbsp;
   <img alt="Isaac Sim 5.1" src="https://img.shields.io/badge/Isaac_Sim-5.1-475569?style=flat-square&logo=nvidia&logoColor=76B900&labelColor=64748b" height="22"/>&nbsp;
   <img alt="30 tasks" src="https://img.shields.io/badge/Tasks-30_%C3%97_3_levels-497c6c?style=flat-square&labelColor=64748b" height="22"/>&nbsp;
@@ -20,25 +22,35 @@
 
 </div>
 
+https://github.com/user-attachments/assets/d83241f1-bab5-4015-8894-484402551eca
+
+<p align="center"><em>The full 1080p version is on the <a href="https://mind2act-world.com/">webpage</a>.</em></p>
+
 Mind2Act World evaluates memory, physical execution, and tasks that require both.
 
 ## 📰 News
 
+- **2026-11-19** — The technical report is on [arXiv](https://arxiv.org/pdf/2611.26444).
 - **2026-11-11** — Per-task costs and timings, with inference benchmarks for the evaluated end-to-end models, are on the [leaderboard](https://mind2act-world.com/leaderboard.html#efficiency).
 - **2026-11-10** — Results for the first four end-to-end models (π0.5, KinRT, X-VLA, G0.5) are [live](https://mind2act-world.com/leaderboard.html#board-e2e).
 - **2026-11-09** — First results on the Agent leaderboard are [live](https://mind2act-world.com/leaderboard.html#board-agent).
-- **2026-11-18** — The [technical report](https://mind2act-world.com/index.html) is available.
 
 ## ✅ Release checklist
 
 - [x] 🌐 Launch the benchmark website and task demonstrations.
 - [x] 🏆 Publish initial VLA/WAM and multimodal-agent results.
 - [x] ⏱️ Publish evaluation costs, timings and inference benchmarks.
-- [x] 📄 Release the [technical report](https://mind2act-world.com/index.html).
+- [x] 📄 Release the [technical report](https://arxiv.org/pdf/2611.26444).
 - [ ] 📦 Release **Mind2Act Mini World**, a smaller, fully open-source benchmark designed to make training and evaluation more accessible.
 - [ ] 🧪 Launch a **new agent leaderboard** for external submissions, with a standardized evaluation interface and sandboxed execution.
 
 ## ✨ Highlights
+
+<p align="center">
+  <img src="docs/assets/readme/overview.webp" alt="Overview of Mind2Act World" width="100%">
+</p>
+
+<p align="center"><em><b>Overview of Mind2Act World.</b> The benchmark tests history-based cognitive reasoning (Mind), precise and timely physical execution (Act) and their closed-loop composition through environmental feedback (Mind2Act), both separately and in combination. Its 30 tasks come from five real-world application domains and run at three difficulty levels in Clean and Random scenes, and agents and end-to-end policies are ranked on separate leaderboards.</em></p>
 
 - 🧠 **Three diagnostic views, 30 tasks** — 10 **Mind** tasks (memory and task decisions), 10 **Act** tasks (precise, timely, contact-rich execution) and 10 **Mind2Act** tasks where intent guides action and outcomes update the next decision.
 - 🎚️ **Progressive pressure** — the full benchmark has 180 task, difficulty, and variation combinations. The development download contains clean training and validation layouts.
@@ -49,7 +61,7 @@ Mind2Act World evaluates memory, physical execution, and tasks that require both
 ## 🧩 Tasks
 
 <p align="center">
-  <img src="docs/assets/readme/tasks.jpg" alt="The 30 Mind2Act World tasks: 10 Mind, 10 Act and 10 Mind2Act tasks" width="100%">
+  <img src="docs/assets/readme/tasks_wheel.webp" alt="All 30 Mind2Act World tasks, grouped by view and capability" width="100%">
 </p>
 
 <details>
@@ -77,20 +89,20 @@ Task pages with videos for every difficulty level are on the [benchmark page](ht
 
 </details>
 
-## Quick start
+Training demonstrations are available in [mind2act-train](https://huggingface.co/datasets/Mind2Act-World/mind2act-train) on [Hugging Face](https://huggingface.co/Mind2Act-World).
+
+## 🚀 Quick start
 
 Use Linux, an NVIDIA GPU, and the Python 3.11 launcher supplied with Isaac Sim 5.1.
-Download the exact revision from the release record in
-[the `duclaw-agent` asset branch](https://huggingface.co/datasets/Lustin5209/mind2act-dev-assets/tree/duclaw-agent).
-Set `ASSET_SNAPSHOT` to the downloaded snapshot and `ISAAC_PYTHON` to the launcher.
-The snapshot's `release-v1.0.0/RELEASE.json` gives the paired Git commit and
-artifact checksums. Match its `official_code_commit` to your Git checkout.
+Download the [v1.0.1 development asset snapshot](https://huggingface.co/datasets/Mind2Act-World/mind2act-dev-assets/tree/8690686b0b5de5979c3fb516d5888f0df6df4b31/release-v1.0.1).
+Set `ASSET_SNAPSHOT` to the downloaded repository root, `ISAAC_PYTHON` to the
+launcher and `MIND2ACT_SOURCE` to the absolute path of this `duclaw-agent` checkout.
 
 ```sh
-cd "$ASSET_SNAPSHOT/release-v1.0.0"
+cd "$ASSET_SNAPSHOT/release-v1.0.1"
 sha256sum -c SHA256SUMS
 for archive in archives/*.tar.zst; do tar --zstd -xf "$archive"; done
-"$ISAAC_PYTHON" -m pip install 'code/mind2act_dev-1.0.0-py3-none-any.whl[isaac,agent,g05]'
+"$ISAAC_PYTHON" -m pip install "${MIND2ACT_SOURCE}[isaac,agent,g05]"
 ```
 
 Change to your deployment directory. Save the XPolicyLab configuration as
@@ -121,20 +133,48 @@ Set `log_dir`, `ledger` and an approved positive `ledger_limit` in the
 configuration. Set `key_env` to the name of the environment variable
 holding the API credential. Resume with the existing ledger and its original limit.
 
+## 📚 Documentation
+
+| Document | Description |
+| :-- | :-- |
+| [Webpage documentation](https://mind2act-world.com/document.html) | Tasks and difficulty, evaluation protocol, leaderboard and release notes on the project website. |
+| [Task catalogue](docs/tasks.md) | Instruction excerpts and success definitions for all 30 tasks. |
+| [Agent runtime](docs/agent-runtime.md) | Tool calls and observations for multimodal agents. |
+| [Policy interfaces](policies/README.md) | XPolicyLab and G0.5 connections for end-to-end policies. |
+| [Container setup](docker/README.md) | Isaac Sim 5.1 image built from the pinned source. |
+| [Source layout](docs/source-layout.md) | Source directories, installed modules and where to make changes. |
+| [Development and evaluation](docs/submission.md) | Developing on public layouts and evaluating on held-out layouts. |
+| [Validation status](docs/validation-status.md) | Checks run on the development layouts. |
+
+## 🗂️ Repository Structure
+
+```text
+eval/       evaluation CLI, episode runner, scoring and budgets (mind2act_eval)
+task/       30 task definitions with scenes, instructions and scorers
+env/        Isaac Sim scene, X5 robot and scene variations
+env_cfg/    shared layout admission and budget configs
+policies/   Mind2Act tool Agent and XPolicyLab adapters
+docker/     Isaac Sim 5.1 image definition
+tools/      dependency installation helpers
+tests/      runtime and Agent regression tests
+docs/       documentation and README assets
+```
+
 ## 🏆 Leaderboard
 
 Live rankings are on the [Mind2Act World Leaderboard](https://mind2act-world.com/leaderboard.html), with separate boards for **End-to-end (VLA / WAM)** policies and **Agents** that act through tools, each reported by Mind, Act and Mind2Act view, in Clean and Random settings.
 
 ## 📝 Citation
 
-The [technical report](https://mind2act-world.com/index.html) is available. Please cite the project as:
+If you find Mind2Act World useful, please cite our [technical report](https://arxiv.org/pdf/2611.26444):
 
 ```bibtex
-@misc{mind2actworld2026,
-  title        = {{Mind2Act World}: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation},
-  author       = {{Mind2Act World Team}},
-  year         = {2026},
-  howpublished = {\url{https://mind2act-world.com}}
+@article{huang2026mind2actworld,
+  title   = {{Mind2Act World}: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation},
+  author  = {Huang, Yuzhi and Wu, Jie and Huang, Fanding and Lin, Junchao and Zhang, Weichen and Xiong, Ziyi and Li, Yang and Xie, Zhengwei and Wang, Zhimin and Liu, Zhen and Huang, Jiazhen and Zhang, Yuzheng and Liu, Yuche and Yang, Hongyi and Tang, Chen and Tang, Shixiang and Aktas, Hakan and Wu, Adam and Wu, Duo and Ji, Kangye and Xie, Shuzhao and Liu, Huanan and Bu, Weijue and Li, Chenxin and Wang, Xinyuan and Bai, Tianyi and Mao, Yinan and Wang, Jiawei and Li, Minglei and Yu, Heng and Adeli, Ehsan and Li, Minchen and Li, Yong-Lu and Öztireli, Cengiz and Xu, Huazhe and Yu, Chao and Zhang, Jing and Zhang, Shanghang and Zhou, Weitao and Zhu, Wenwu and Chi, Cheng and Jiang, Jingyan and Wang, Zhi},
+  journal = {arXiv preprint arXiv:2611.26444},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2611.26444}
 }
 ```
 
@@ -142,13 +182,30 @@ The [technical report](https://mind2act-world.com/index.html) is available. Plea
 
 Mind2Act World builds on [Isaac Sim](https://developer.nvidia.com/isaac/sim) and integrates policies through [XPolicyLab](https://github.com/XPolicyLab/XPolicyLab). The agent runtime installs pinned sources from RoboProbe (Apache-2.0) and [RoboDojo](https://github.com/RoboDojo-Benchmark/RoboDojo) (MIT), and verifies a separately installed [cuRobo](https://github.com/NVlabs/curobo); see [THIRD_PARTY.md](THIRD_PARTY.md). We thank their authors and maintainers.
 
+## 🤝 Call for Collaboration and Sponsorship
+
+Evaluating more models on Mind2Act World needs more GPU compute and API tokens. We welcome partners who can help with these resources and invite everyone to build the Mind2Act community with us.
+
+- 🖥️ **GPU compute** for training, simulation and inference
+- 🔑 **API credits** for agent evaluation
+- 🗄️ **Hosting and storage** for datasets, videos and website services
+- 🦾 **Robotics hardware** for real-world validation partnerships
+
+Partners are acknowledged on the website, on the leaderboard and in the technical report, and a supported model can receive priority scheduling and a complete model profile card. Sponsorship never changes scores or rankings, and all models in the same track follow the same protocol. We also welcome research collaborations on new tasks, models and diagnosis methods.
+
+To start a conversation, visit the [support page](https://mind2act-world.com/support.html) or email [Mind2ActCommittee@outlook.com](mailto:Mind2ActCommittee@outlook.com).
+
 ## 🏫 Affiliations
 
 <p align="center">
   <a href="https://www.sigs.tsinghua.edu.cn/"><img src="docs/assets/readme/affiliations.png" alt="Tsinghua Shenzhen International Graduate School · mmlab@SIGS" width="78%"></a>
 </p>
 
-Mind2Act World is built by the Mind2Act World Team at [mmlab@SIGS](https://mmlab-sigs.github.io/groups/zwang/), Tsinghua Shenzhen International Graduate School.
+Mind2Act World is built by the Mind2Act World Team at [mmlab@SIGS](https://mmlab-sigs.github.io/groups/zwang/), Tsinghua Shenzhen International Graduate School, together with researchers from the following universities and companies.
+
+<p align="center">
+  <img src="docs/assets/readme/affiliation_logos.png" alt="Tsinghua University, University of Cambridge, University of Oxford, Stanford University, Carnegie Mellon University, The University of Hong Kong, HKUST, CUHK, Peking University, Shanghai Jiao Tong University, Fudan University, Renmin University of China, Shenzhen University, Velabot AI, Simple AI and Baidu AI Cloud" width="100%">
+</p>
 
 ## ⚖️ License
 

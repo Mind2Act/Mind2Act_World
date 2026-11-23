@@ -56,6 +56,10 @@ class GateScene:
         self._success_analysis_tick = None
         self._success_analysis = None
         self._score_violation_latched = False
+        self._failure_probe_available = True
+        self._failure_progress = None
+        self._withdrawal_audit = None
+        self._failure_scan_rows = 0
         self.initial_time = float(ctx.world.current_time)
         audit_dir = Path(ctx.output_dir) / 'DR3'
         self.trace = AppendOnlyTrace(audit_dir / 'raw-trace.jsonl')
@@ -139,8 +143,65 @@ class GateScene:
         return not any(corridor_overrun(manifest, frame['poses'], gate, CORRIDOR_MARGIN_M)
                        for gate in manifest['gates'])
 
+    def irreversible_failure(self):
+        """Certify a losing prefix once its model action has finished."""
+        if not self._failure_probe_available:
+            return None
+        from .scorer import score
+
+        try:
+            reason = self._scan_for_failure()
+            if reason is None:
+                return None
+            # The ordinary scorer qualifies the sealed prefix before any action
+            # is cut off. A trace gap cannot be repaired by subsequent steps.
+            verdict = score(self.evidence(self.rows[-1]['physics_tick']))
+        except ValueError:
+            self._failure_probe_available = False
+            return None
+        self._failure_probe_available = False
+        if verdict.value == 0.0 and verdict.components['evidence']['violation_latched']:
+            return reason
+        return None
+
+    def _scan_for_failure(self):
+        from .events import ApertureProgress
+        from .scorer import withdrawal_audit
+        from .withdrawal_audit import CORRIDOR_MARGIN_M, DEFAULT_IMPULSE_NS, withdrawal_failures
+
+        manifest = self.capture.manifest
+        if self._failure_progress is None:
+            self._failure_progress = ApertureProgress(manifest, manifest['item_root'], [])
+            self._withdrawal_audit = withdrawal_audit(
+                manifest, self.spec.config['condition'], self.spec.difficulty)
+        passage, audit = self._failure_progress, self._withdrawal_audit
+        previous_events, previous_contacts = len(audit.events), len(audit.contact_events)
+        for index in range(self._failure_scan_rows, len(self.rows)):
+            row = self.rows[index]
+            frame = row['detector']
+            if frame.get('contacts_complete') is not True:
+                raise ValueError('DR3 failure probe requires complete contact evidence')
+            audit.feed(row)
+            if index:
+                passage.feed(self.rows[index-1]['detector'], frame, row['simulation_time_s'])
+        self._failure_scan_rows = len(self.rows)
+
+        withdrawal, contacts, _ = withdrawal_failures(
+            audit.events[previous_events:], audit.contact_events[previous_contacts:],
+            DEFAULT_IMPULSE_NS, CORRIDOR_MARGIN_M)
+        if passage.violation:
+            return passage.violation
+        if withdrawal:
+            return 'not_withdrawn_before_close'
+        if contacts:
+            return 'gate_contact_after_passage'
+        return None
+
     def is_success(self):
         """Model result probe: existing route-qualified delivery and both arms clear."""
+        if (self._failure_probe_available and self._failure_progress is not None
+                and not self._failure_progress.route_completed):
+            return False
         if self._score_violation_latched or not self._delivery_and_withdrawal_ready():
             return False
         from .events import rebuild_events

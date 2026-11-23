@@ -212,7 +212,8 @@ def _require_isaac_extension_dependencies():
 
 class IsaacSimulator:
     """One app/world per child process. Call ready() after build/reset completes."""
-    def __init__(self, clock, output_dir: Path, *, physical_gpu, headless=True, cameras=None, ffmpeg="ffmpeg", video_hz=6, record_wrist_cameras=False):
+    def __init__(self, clock, output_dir: Path, *, physical_gpu, headless=True, cameras=None, ffmpeg="ffmpeg", video_hz=6, record_wrist_cameras=False,
+                 observe_wrist_cameras=False):
         if type(physical_gpu) is not int or physical_gpu < 0:
             raise ValueError("explicit nonnegative physical GPU index required")
         if os.environ.get("CUDA_VISIBLE_DEVICES") != str(physical_gpu):
@@ -234,8 +235,10 @@ class IsaacSimulator:
         self._physics_profile_receipt = None
         self._world_creation_started = False
         self._world_configuration_error = None
-        self._camera_config, self._observation_camera_names = recording_cameras(
-            cameras, include_wrists=record_wrist_cameras)
+        self._camera_config, authored_camera_names = recording_cameras(
+            cameras, include_wrists=record_wrist_cameras or observe_wrist_cameras)
+        self._observation_camera_names = tuple(self._camera_config) if observe_wrist_cameras else authored_camera_names
+        self._recording_camera_names = tuple(self._camera_config) if record_wrist_cameras else authored_camera_names
         self.timings = {"physics_s": 0., "render_s": 0., "video_s": 0.}
         from mind2act_eval.sim.video import RGBRecorder, video_interval
         # Runtime output configuration is deliberately outside InstanceSpec.clock.
@@ -287,8 +290,8 @@ class IsaacSimulator:
                 active_gpu = physical_gpu
                 physics_gpu = 0
                 # Start encoders before Kit grows the process image.
-                self.recorder.prepare({name: tuple(config["resolution"])
-                                       for name, config in self._camera_config.items()})
+                self.recorder.prepare({name: tuple(self._camera_config[name]["resolution"])
+                                       for name in self._recording_camera_names})
                 self.app = SimulationApp({"headless": headless, "active_gpu": active_gpu,
                                           "physics_gpu": physics_gpu, "multi_gpu": False,
                                           # Kit's native fast-shutdown path may terminate the
@@ -503,6 +506,7 @@ class IsaacSimulator:
                                 "initial_pose_publication": getattr(self, "_initial_pose_publication", None),
                                 "renderer_warmup": renderer_warmup,
                                 "bindings": self._camera_bindings(),
+                                "recording_cameras": list(self._recording_camera_names),
                                 "cameras": cameras}
         path = self._output_dir / "camera-receipt.json"
         temporary = path.with_suffix(path.suffix + ".tmp")
@@ -590,8 +594,11 @@ class IsaacSimulator:
         render_before = self.timings["render_s"]
         self._refresh_rgb()
         frames = getattr(self, "_initial_rgb", None)
-        self.recorder.capture(frames if frames is not None else self._sampled_rgb)
+        self._record_frames(frames if frames is not None else self._sampled_rgb)
         self.timings["video_s"] += time.monotonic() - before - (self.timings["render_s"] - render_before)
+
+    def _record_frames(self, frames):
+        self.recorder.capture({name: frames[name] for name in self._recording_camera_names})
 
     def _synchronize_capture(self):
         """Schedule and finish SDG capture at the current state, as in training.
@@ -754,7 +761,7 @@ class IsaacSimulator:
                     self._initial_rgb = {name: pixels.copy() for name, pixels in frames.items()}
                     self._write_camera_receipt("verified", render_count, observations)
                     before = time.monotonic()
-                    self.recorder.capture(frames)
+                    self._record_frames(frames)
                     self.timings["video_s"] += time.monotonic() - before
                     self._release_gate()
                     return

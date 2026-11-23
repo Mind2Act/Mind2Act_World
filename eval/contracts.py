@@ -252,6 +252,7 @@ class ConsumerKind(str, Enum):
 
 class Termination(str, Enum):
     COMPLETED = "completed"
+    TASK_FAILURE = "task_failure"
     PHYSICS_BUDGET = "physics_budget"
     TRAJECTORY_EXHAUSTED = "trajectory_exhausted"
     WALL_TIMEOUT = "wall_timeout"

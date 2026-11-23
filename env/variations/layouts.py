@@ -66,12 +66,25 @@ def _objects(data, coordinates):
                 raise ValueError("unsupported clutter identity/frame; delivery paths are data only")
             physics = row["physics"]
             if (not isinstance(physics, dict) or physics.get("type") != "rigid"
-                    or set(physics) - {"type", "mass", "friction"}):
+                    or set(physics) - {"type", "mass", "friction", "static_friction", "dynamic_friction", "restitution"}):
                 raise ValueError("unsupported distractor physics")
             for key in ("mass", "friction"):
                 if key in physics and (type(physics[key]) not in (int, float)
                         or not math.isfinite(physics[key]) or physics[key] <= 0):
                     raise ValueError("invalid distractor physics value")
+            has_static = "static_friction" in physics
+            has_dynamic = "dynamic_friction" in physics
+            if has_static != has_dynamic:
+                raise ValueError("distractor static_friction and dynamic_friction must both be explicit")
+            if "restitution" in physics and not (has_static and has_dynamic):
+                raise ValueError("distractor restitution requires explicit static_friction and dynamic_friction")
+            for key in ("static_friction", "dynamic_friction"):
+                if key in physics and (type(physics[key]) not in (int, float)
+                        or not math.isfinite(physics[key]) or physics[key] < 0):
+                    raise ValueError("invalid distractor friction value")
+            if "restitution" in physics and (type(physics["restitution"]) not in (int, float)
+                    or not math.isfinite(physics["restitution"]) or not (0.0 <= physics["restitution"] <= 1.0)):
+                raise ValueError("invalid distractor restitution value")
             scale = vector(row["scale"], 3)
             if any(x <= 0 for x in scale):
                 raise ValueError("scale must be positive")

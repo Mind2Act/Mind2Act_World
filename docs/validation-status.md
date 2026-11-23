@@ -5,7 +5,8 @@ physics stepping, contacts, rendered appearance, and materials.
 
 Source scene and material notes:
 
-- E1 preserves active Belt physics-material warnings; contact and friction require native inspection. Hard instances also retain an invisible, collision-disabled auxiliary material warning.
+- The E1 source stage carries Belt material warnings. The runtime builder binds a physics material to the active conveyor colliders and disables the surface velocity authored on the shapeless Belt node. Hard source layouts also retain an invisible, collision-disabled auxiliary material warning.
+- The refreshed PR4 and PR6 validation archives explicitly author meter units and a Z up axis on their station roots. The changes cover 30 PR4 and 5 PR6 overlays.
 - CP01 retains an original unresolved physics binding on OriginalBelt. The actual initializer disables its colliders before reset/step; raw material-graph checks report this exception rather than claiming a clean graph.
 - CP08 retains two enabled GoalMonitor colliders with no explicit effective physics material. Default contact behavior is not certified.
 - Approved camera normal-map repairs are retained and are not original-image recovery. Standalone robot warnings and composed runtime bindings are distinguished; CPU material checks do not certify rendered appearance.

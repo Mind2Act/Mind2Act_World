@@ -114,13 +114,17 @@ class Audit:
  def result(self):
   return dict(passed_gate_ticks=self.passed,first_close_completion_events=self.events,closing_contact_events=self.contact_events,all_time_both_gate_contact_peak_by_gate=self.all_contact_peaks,initial_geometry=self.initial,right_max_wrist_motion_m=self.right_max_motion,right_item_contact_peak_ns=self.right_item_contact_peak,right_gate_contact_peak_ns=self.right_gate_contact_peak,targets_reconstructed=True,raw_goal_positions_recorded=False,sampling_rows=self.n)
 
-def apply_A3(A2_value,audit,threshold_ns=DEFAULT_IMPULSE_NS,margin_m=CORRIDOR_MARGIN_M):
- if threshold_ns not in IMPULSE_THRESHOLDS or margin_m not in CORRIDOR_MARGINS_M:raise ValueError('unsupported A3 sensitivity')
+def withdrawal_failures(events, contact_events, threshold_ns, margin_m):
  geometry=[];unknown=False
- for e in audit['first_close_completion_events']:
+ for e in events:
   hits=e['geometry_by_margin'][str(float(margin_m))]
   if any(not h['unresolved_enclosure']for h in hits):geometry.append(dict(e,selected_margin_m=margin_m,selected_hits=hits))
   unknown|=any(h['unresolved_enclosure']for h in hits)
- contacts=[e for e in audit['closing_contact_events']if e['impulse_ns']>0 and(threshold_ns==0 or e['impulse_ns']>=threshold_ns)]
+ contacts=[e for e in contact_events if e['impulse_ns']>0 and(threshold_ns==0 or e['impulse_ns']>=threshold_ns)]
+ return geometry, contacts, unknown
+
+def apply_A3(A2_value,audit,threshold_ns=DEFAULT_IMPULSE_NS,margin_m=CORRIDOR_MARGIN_M):
+ if threshold_ns not in IMPULSE_THRESHOLDS or margin_m not in CORRIDOR_MARGINS_M:raise ValueError('unsupported A3 sensitivity')
+ geometry,contacts,unknown=withdrawal_failures(audit['first_close_completion_events'],audit['closing_contact_events'],threshold_ns,margin_m)
  failed=bool(geometry or contacts)
  return dict(value=0. if failed else None if unknown and A2_value>0 else A2_value,unverified_withdrawal_geometry=unknown and not failed,withdrawal_failure=bool(geometry),closing_contact_failure=bool(contacts),threshold_ns=threshold_ns,margin_m=margin_m,geometry_events=geometry,first_closing_contact=contacts[0]if contacts else None,closing_contact_peak_ns=max((e['impulse_ns']for e in audit['closing_contact_events']),default=0.),all_time_contact_reference_would_zero=any(v>0 and(threshold_ns==0 or v>=threshold_ns)for v in audit['all_time_both_gate_contact_peak_by_gate'].values()))

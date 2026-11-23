@@ -36,12 +36,14 @@ class SScene:
         self.body_offsets, self.ledger, self.tracker = body_offsets, ledger, tracker
         self.cfg, self.gap = timeline_cfg, timeline_cfg["cue_gap_s"]
         self.names = list(tables)
-        self.angles = {k: 0. for k in tables}
+        self.phase, cue_visible, self.angles = schedule(0, self.cfg, tables, self.gap)
         self.contact_pairs = {}
-        self.phase, self.execution_start_step, self.tick = "cue", None, 0
+        self.execution_start_step, self.tick = None, 0
         self._health = Health(True)
         self._subscription = None
         self._cue_visible = None
+        # The runner observes tick zero before the first before_step call.
+        self._set_cue(cue_visible)
 
     # -- helpers ------------------------------------------------------------------------------------
     def center(self, key):

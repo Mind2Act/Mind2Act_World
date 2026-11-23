@@ -16724,14 +16724,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_001.usda",
-          "sha256": "12b951b37ac870f2bc8d3afb5f0a864fdd286f1707f6513b62d1293f4caf5be3"
+          "sha256": "805669be44bada9575e986deb7837c6926146d74269150c300bb3c0967ab3b2e"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "3c8d29fa9fe8c89628d4c973705f556f891620f687068eaa1c045c291605473c",
+      "spec_sha256": "8f2ab9b79c870b00dbb9c79f894a6b50fa31439c138e845040a83c82cc365026",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16741,14 +16741,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_002.usda",
-          "sha256": "479f2113d0fd6e5a1f2410016d3ba2eebb1d0d4a088c136009b6199e7c03b9ce"
+          "sha256": "dee8c0c286e1b84a3ec4e686d7e0b402841dfe8e35610bafa8d99cffbeacb3d8"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "7c690b26cd3c48bdef7db0267682b110d385b2ff7541b007ab74dacb34c14f62",
+      "spec_sha256": "f8b0a80c1e40d9d893988372b2c473e99ab2a63530764ec098791584b53a2f43",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16758,14 +16758,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_003.usda",
-          "sha256": "d8fb1c34c90eae7997dea3db17b9cfa7ddab7304c33f72dde35014cbdb15552b"
+          "sha256": "d36d4cfc7fbd25e739f6b46490080da96bd45c8b6ec1fb6b37266b52abe4b91e"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "2b42c9714c86dad5923be83811b72e5e134e52051ee7c05bd67045bc150f6974",
+      "spec_sha256": "99a1d7ba39988dd4b57810649906180b39447d8776aa73a1f719be392260263d",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16775,14 +16775,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_004.usda",
-          "sha256": "5d4c5f5ae89eddc03249310323ef808088c11598e8acbde2d609ef5423a4221c"
+          "sha256": "5dd1d2eb42ae0e3c2b09ae75a83e9e7b0f67dc99e1156db6dc97276ba4eaded7"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "dfbb4727cd3406c65a2dbd051a241a3486b3660d585a00f9cf25676376557bf1",
+      "spec_sha256": "03cd43cca30af5f3e02bb5c2aa75be2d09f8b60844ee22ba3b3ab2ac96a8822f",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16792,14 +16792,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_005.usda",
-          "sha256": "9f37577eac201a9f3451de362da0e3839219bc6a84bbb7360a677554c5f06789"
+          "sha256": "8a2e09fdc19e173a4bc901faaba6132b9c9f65de5be021bee2b423ee26a6214d"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "095d64c2a1496e51267ee240ca4a1ca685142bffc312a7f480ade590d6a151a3",
+      "spec_sha256": "29648e0ed4858c83ce4dda889763ec8115b3a10d9fd877de821f42e71a43b24f",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16809,14 +16809,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_006.usda",
-          "sha256": "5978e996ad37fe4f8d6e08c879d9b81bfffe877302947be5d97fee5adebd2473"
+          "sha256": "881c1138b966cc31db155d0aa18d258fd97dce9cc59a09e21c3053d89772f31b"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "43a2f1caebd5c4a05e613c804c6284fc04a5f8b27f380d9b2419af4220edd5e2",
+      "spec_sha256": "bf1ff05a4b88a34fef1d18e2242debad3577ef04306e7108166d2063cde7d287",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16826,14 +16826,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_007.usda",
-          "sha256": "8f15ecf382b409eb3f89f2846bd569c269f5296bee01956940b327efb4863068"
+          "sha256": "fefd6a5bd71b55a62ef41b9d42e197bce8c0a83c69af91c5628b13a0d76fd8be"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "e8bf8e1b9ce42f05ce3addc3090557a3cab460999b32bd188dcd602e5e7eb716",
+      "spec_sha256": "fd9ae8c477a00b87acabb1a02ec13e07ec6aa51ae48a6a8589129c9d37158c90",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16843,14 +16843,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_008.usda",
-          "sha256": "e770bf0dfa80518a841cbd43b310441eaeec43a1dfab94226b7566aa4b897c86"
+          "sha256": "817a8f370cc2761b82ac93118afc1fbf7d86db102fc0c6cdbcb8c651f1d74cc8"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "13d26d4136ac2302e9e36c0941980ce1da18dd748da6dadf19d735243454dff6",
+      "spec_sha256": "27f85b04d072ec2af75ef6670fa6aeddb369916833d7320dc96c779511460c22",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16860,14 +16860,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_009.usda",
-          "sha256": "d06757108c104341d4935c1542e6565e639edbaea278a1d3d3f69ae401f680da"
+          "sha256": "2b9f74cbcccdd011c2ea06f5f37476f63d8a3ce201160328a326b8d9748ad09a"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "89cab6b70d8a977ce0e324ba78bf55bb40212b07c07fcb5b5a29033d2f7c2fc4",
+      "spec_sha256": "f21170cbb1a76eeb25f5bbb33deed8884659cc679e52e8e4a9467d68f576f720",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16877,14 +16877,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/easy/VAL_PR4_easy_010.usda",
-          "sha256": "48cc53c773767685c4139ebb4b3da9194b5f9b3ed751fd395b3aaedafa08973c"
+          "sha256": "e8961a511d80fe652407a0e641fb48a9236af01751fcebf1f0c39db5d907268b"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "e94ffaa9baa8c4c27b0b727bc6e22c60eddca2a803e3aa649a3084ae58d84b15",
+      "spec_sha256": "d31d03aa950ba8f3fdc25710f5e917b025d4ef9e6bab19a70a72f6bd5f87cf56",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16894,14 +16894,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_001.usda",
-          "sha256": "e94c2e0922954dfc395b6df085a47cd6fe82cde063800132081400a62eaa59da"
+          "sha256": "85c017817308e24f84e8a821217e2159478b491ab53faec8759fad9e87264316"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "078b621e1a29fbb6a946b8e1889cc37fec874e4b0b457abad4ef2e1523a8e4b4",
+      "spec_sha256": "41b7685f3560a958dc138eb463f2043cb43be5b596b1d6ef3238dd39e1404e5b",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16911,14 +16911,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_002.usda",
-          "sha256": "14754fe624bedfde42955f10014eba565124c75eec98761cbd3e3c726edab580"
+          "sha256": "d3fee7f8afd9524cf87a485be557df84d8962f834959bf487d38445634de73a3"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "c94c9771fae1d11639a8d4b7b3fb9823e20579fecd534f264aabc5734db2281e",
+      "spec_sha256": "e0e8f2e23a0f3b228a8f0abb65c44b72b029ede04aefa98e5457495701fa4d8c",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16928,14 +16928,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_003.usda",
-          "sha256": "21ed457b4ce5c6f66cebe03570248aea273c0bc62dc46bc9499955ac814dd2ef"
+          "sha256": "3851b43bbfe1341ff2b9e72446474221092ac38426ddeb4f794d1beb8aa59fc0"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "b5ffd60b7d661a8bb4a43577dde799a8f36aef1ed52a4b8d33e6ba3e8f41667a",
+      "spec_sha256": "3b634f8b8e6f1f6e56fc09d3beea4cc0de2381237e2c2187df19399a4fa32bea",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16945,14 +16945,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_004.usda",
-          "sha256": "18619101b1ebf9f19efc0dd332d08b735cf8d0c59f5b6ca794236d9d7e1810e2"
+          "sha256": "56982596f7fc6b0380710f316432a620fdb80477d47cab2bc330d3338eda893b"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "f94cd15b2fa1111e333ec2804491511eb67af2223d3f96f3f1a9f53a1e4d2002",
+      "spec_sha256": "31276a864978d6dc83f483229def5d4b1dddede2dfe4985cfe12a33adcc8d33a",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16962,14 +16962,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_005.usda",
-          "sha256": "d09391e6f0f47dc32ae8655db0d367290818392bbaf081dfb902ead728e140f9"
+          "sha256": "754821ad73e58bde31794e563c6e17fcd6718e2201533240a11523a19931b635"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "240cd5e4ede2b434a70ac3148746738f46eed99b3bf7c7d6ca8d826bf7f98f88",
+      "spec_sha256": "9b88b0e347b37656383f2b72079da627359eedf4338e0385ea424dc074abc6c1",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16979,14 +16979,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_006.usda",
-          "sha256": "3151d01dc4d1111f34779b93937313ff25317d1b8230c2f49f8b270f4e1a333e"
+          "sha256": "e162fa57ddcf6ea1e196b9401cce3358f55afcee6e929ae890027d72ffc9f97d"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "027b05d172ddaac8a037d4d22bf167dc0bdcd9bdf8a5987c4aa8d6da6254a395",
+      "spec_sha256": "76689f8ad00a3cc5623b22d4facb4f2a2e4fae5f052c30ba446f9cd9192434ef",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -16996,14 +16996,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_007.usda",
-          "sha256": "f7f8308e54280341c9e3dbca97bc5564aad9c91b640fc9e6bfffb8d7da74dde5"
+          "sha256": "6df338a837fcbfbd7f25da23932d5925563d45351efc75bd3b99abf1c719d04e"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "5a40b2304ae2a0f9762d43f699b2114fc44ac2ac37d1a7de78c6f7364a9b192f",
+      "spec_sha256": "671724b34b6659a0e87143dc5b1c0244f93b7d873c72278b10df83eb9cc918df",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17013,14 +17013,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_008.usda",
-          "sha256": "0ea8fca7d3027791b28e240f4810f53fa6a07d99c98b44e15f90a0741cdc61e4"
+          "sha256": "fda44a6815b151757a58122f7629da96daeae21c5d63a26edbf47edcb87dc609"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "a282c39745833ea9f2495a7b0721fb05fa79dc2dc34815588a02d555df46b5e0",
+      "spec_sha256": "e47c855be3bc8ba6bcd6504d7c16b82b48b24adf7aaf9b896ee629a061fe016c",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17030,14 +17030,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_009.usda",
-          "sha256": "1fc5c7becbe9abaabaface04c7df0a1edce7417560a9198d1fe637713f77ec1a"
+          "sha256": "2895c0ff31428f6ebd207ef3866ba91e4d9d5e0824701a6fce7e60c81122953d"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "8d4ccf3e4a4d8c00fac29c670bc3a5b52c2ac02d395a340d33e3338e69ab1470",
+      "spec_sha256": "8d02f5e9158bcebf49b870bde97474db48d9c0187136a69b082d230caa5a0c14",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17047,14 +17047,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/hard/VAL_PR4_hard_010.usda",
-          "sha256": "1ca35d2ef6d054967e8f6b5c7de787128b849732c8a1996900a49a8bc3cad3ca"
+          "sha256": "8169464671b0dd5c8b570389adf4813222e0d5dd28287dac1f7be77022513dec"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "11048c6fc14da4ede4c1c57a7c8fa419e5dba3a84cae2f313aaa1a6b3677cc02",
+      "spec_sha256": "a8cedda2a10c5ec81278c02331b27054588a46bb7a739c402fbb62a8ff790c41",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17064,14 +17064,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_001.usda",
-          "sha256": "c437f295634cdd27145d2175fafba02c1f167cd1139a9e4368cbab616bbd8e9f"
+          "sha256": "bdcee5d8c14b59aaa0d92ceee0fe489ca2f9e88cc5c71c0eec6e728b1506ff9c"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "5c1728d9013b7857661fa12b50f02fb1b6d9b45a8cb975b7cfc9fa6eb0e85326",
+      "spec_sha256": "9d11b6c2069969a5a3e3efbbc2145db2227e3b4e3cb702d11ed5a82d19b53e67",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17081,14 +17081,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_002.usda",
-          "sha256": "7aa2bcd21dcabfb3b9be480b4170f33cc34b243aca20a6b07831a72a602d4fef"
+          "sha256": "8d8779828ce91318876579c4361a2338f15fc0b52b9a2b8531d1a746447cf038"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "6ffb557805f3a5ab5fc019d5c59433c9c4d408fa3ba2419fb052f51a2d3af9c2",
+      "spec_sha256": "def0fd488e92f60a4b00c8ebf56057384ed0d5398b6077b683eda1e3724ad66f",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17098,14 +17098,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_003.usda",
-          "sha256": "8d65af569b7969f5b4063e512f28d67a617620300c44fea8b2ed1e379df87f74"
+          "sha256": "43139b3971dfab3f80182ba5a215ee45a7400ffb18c23cf1bd6d3f44bc832633"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "b43286721cd3c47c5f73a5673b0688a23b1667afe6414e8cb9e3f5cffeebb1ba",
+      "spec_sha256": "209ec81f02538ffab558159e1518b1fea6ed2ac12016652cfc35195ac28c5fbc",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17115,14 +17115,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_004.usda",
-          "sha256": "bc48661f33f8ffc72ac3e035f7d793cf9dccb764cb30167988eb14b40cf56bb1"
+          "sha256": "caa683a8af90c73471c4361964c8acb20097ececef350eac876d23d13c2716fb"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "e19308107b2f8bf2f6adcd66787e4efd1453e6a5c914f6de7c25804507cb5c6f",
+      "spec_sha256": "6c4257c79072f53929d3cd7442bce2d592394299771dea331b4d30e6d306b67c",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17132,14 +17132,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_005.usda",
-          "sha256": "a619ac8d3a23de7807ca6338e1b167d30339da8cfcc117cec3b7cc4e3319eccb"
+          "sha256": "90da8210cccc50763206b024e79b45a4922142607819f9c40220ec70ff61469a"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "8ebfb5a4e0d3edfda08a05ea59b7413bbec9731b9cc8cc538f03cca10a46e624",
+      "spec_sha256": "c3b043ce8241edf42f4fb03012246362f9c23b28eb8c48438bfb0548f4a30f1f",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17149,14 +17149,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_006.usda",
-          "sha256": "7b87cc3906b83f9d3ae5f9fb89fb50d3802062b024cd0130f2255af455eaf4de"
+          "sha256": "c88c7b742455924752410a0d24b31368d4c6cfd256d7f35bd65744e147458894"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "28a836d79a134739fe25e6ae60618f09875a8e18dca70a92d50cbfb705aace54",
+      "spec_sha256": "178f63da9479dfa777764f776ca97e8f72436c16ef76621ea4d0894364b6e3e4",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17166,14 +17166,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_007.usda",
-          "sha256": "12f11b86f468c27497592701b72db4a0fb0b161b6f2b74855e3ecbd065b7a7d8"
+          "sha256": "9b06b26e5ee05ced13eeb0b7be3e40d04ef6095427b6ec56501931c242460628"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "20003b4af5b437a93c3531230a5fab43c4e25a682793a3d0cb045ff095b1ab59",
+      "spec_sha256": "a24692b8509a5994d13c6af9ec715ded3060daceef950e12e62f5abfd1eb6b63",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17183,14 +17183,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_008.usda",
-          "sha256": "3d1483d9422188b0d60bc1bfed886de849c18d470d48948359e72dd22b7c25e0"
+          "sha256": "d3bd9a96581da39077b98a17a63379eee16e425ba61003d659f2a3919cf2f6eb"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "8c0d71dc848401b263df5c47bb118e6dee0faae02af67f3ffaa42da88744a3c6",
+      "spec_sha256": "32bdda7c0574fba72bee88e36457c75fb0b7e153aa4b2bc780be28673afb859d",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17200,14 +17200,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_009.usda",
-          "sha256": "f2d926c44e10f4d3b99f9c71bd22ce0c2d7a352e4c85aede4df305ec5c1f156b"
+          "sha256": "72a9e01f14b2e119b9c95f7c81c7cd7bc8fabe5b4bcd68bdc666eacc01903d0f"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "c4359e1ce093896490b2325e3d4d1631707c875b5c49e0f93acd30d8e551d77c",
+      "spec_sha256": "a797c093e712df2691224db71297ff65f90ef973e24ad8f6b7250c5ad41be403",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -17217,14 +17217,14 @@
       "runtime_files": {
         "station": {
           "path": "stations/medium/VAL_PR4_medium_010.usda",
-          "sha256": "209596c7c2bbb2906b4647fd928eae84af4963235126cc8dfbede7d3ec941eed"
+          "sha256": "ac3d01b5b74ac5813846a8456ed44fe9dbd521c4d85bebc18c04e37459c511b5"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "3d452a2f7bd42b508fa0b8bbdc38a8cebcb95844a7e4c156d17126e989371613",
+      "spec_sha256": "bb4eeaecd8807e8e41d75cbc959ce3fcca75b6ee500bc1b9409ee4b01b485a5a",
       "split": "validation",
       "task_id": "PR4"
     },
@@ -19454,14 +19454,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/7c4d965741a06bcf3207dce5dd1ecb7bb197533c160900cfe0f143b99d6ea00a/scene.usda",
-          "sha256": "1ce014906a3e680ddf92799e36066868ffc9333d88b886f758caf630aa8396b6"
+          "sha256": "fe28e2e337b0f96279b8e04cbf8a85046711e8b0f9d1324c6fdd2385f81d3d44"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "9aaec0b85b216500bb7b2be70bf07f9eb42ecad7fb9b6d22a6c7e516b6c20282",
+      "spec_sha256": "ae0dab705f0193dc2a0e2472ef9757b21d7369f83bea3352ba69e8f6bf73983d",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19471,14 +19471,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/79ffdc309834cabe80488a24317a5b4d1cfe6786db09923aea14621234ff41b6/scene.usda",
-          "sha256": "f6391d5e12b235d52ffa37a383273ebbf723e74fae92f8515e0c0de96c065cde"
+          "sha256": "b71a2696c7a166c06688c8f538cfcc8505df3fb938bc667d22c50075f226274b"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "dfc71b483ed3dbf4a73b258c13b5f05b96ba6ce1f110762acb993f33b4a1591b",
+      "spec_sha256": "0edc0c7b2f5f7f77150c86c438ceec50ddeb1abd66994314e52baf569002a365",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19488,14 +19488,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/52cdb87902fc404685c8bb4649c382e80a900676e2fc4600c04702dc41a32566/scene.usda",
-          "sha256": "565abd634bb5bcf56322b800430ef22b9dbfd70c3015cb1d89f056ae6196e3ba"
+          "sha256": "f8d6cbc5ccbeb0b4ea375116c794fa8c7aa9753e611aa67cbb53a941c9d501e8"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "2c7da9b472ee2da7153ab1bdfcabd0538f58f7d94da039a2dafa2b0a7353f2b2",
+      "spec_sha256": "8a911272de291fae797123684ef968cca2efd5ae4c560e0b32c130a509723413",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19505,14 +19505,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/eecd5e7678a574490cf5efb9f4eb6ad807e88a7aef799db0e69c7c21fa59f24d/scene.usda",
-          "sha256": "b281e6eff5eac6bdbca9a9b23c4a6801ae236a91aa70564071fd13ac1c759a04"
+          "sha256": "80ac9a3d960e88e7348eaf111a59bcf3b93bd188842279d7262584ce1a90c9d3"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "ceccc8987b67543a52d5197feddea41f106577b02d8e545f7848e081d08ab522",
+      "spec_sha256": "08ca25a5188fe65ae8fe42197518de14e25662d967eb4c09d0ffa025cdf2f727",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19522,14 +19522,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/35f739ecbe32fa66f3acb263e45b67740693fe20a9a36aba6ec1835f8ff18b35/scene.usda",
-          "sha256": "42e3b0368b8327f0378b1b8592cfbb73bcdc58c4f64819feaf42aed552072f96"
+          "sha256": "b8ecd5e9c18d561d5524a581ff81bd4598416d94818cd2f5255d4b3c8d0b5aed"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "1a49f75e6c29050f6238cbff5713452df596a5f95032d345de52ba8813bf7baa",
+      "spec_sha256": "0c74e6c578ce1bf71118a567c08ba9c3c1a9cefcff3f32e3df6536f00ed611e0",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19539,14 +19539,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/88ded81838ce7f48d76353aecbc83c4d6a132ead8fade671ccfe68ea5215758d/scene.usda",
-          "sha256": "296cd78635f37eaba6c3cc8e72bacaf72af41810a00081945f003003c6352260"
+          "sha256": "2f31b8c8a41b46b4a8ce532eb0bf5f3c3b4465c1635cc279170cf5de2ebc6442"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "95304fc4ac15aa201ea5058a0a4dca2d2efdd9c3af8ef5f0af75d3f834c9a166",
+      "spec_sha256": "cacfe2dd834b9112113a5877b48724b1f1424861b5058d4795e13d468c6ca3dd",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19556,14 +19556,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/bba00473c4d05419c177785f56e7aedb65720b407ab2ecc8082eb5f6742d957f/scene.usda",
-          "sha256": "d0edc327ab67cdf48732fcecc3f742e9246d9ff41f1374ad7ca53e8bb82118a8"
+          "sha256": "0c5cbccd444ee00a0aa3c91cc41b9d500462947a9ca02026a52fc245ef60fbab"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "571c82e8d57c0a221a0b0c9d223d1f09f16868d064d28a413affd87c749c9c3b",
+      "spec_sha256": "89b9ff7c42c02a36f3750e799654a371fd96450760f610f828882e3ed7629f5b",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19573,14 +19573,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/1299b6bf3acc1753306f3b37dcc77871b1948459071b757995bb4ec46499f9d2/scene.usda",
-          "sha256": "6bf4021625f3401453293dc149740877567c9378e2cc1dc09f910c16c04f31f6"
+          "sha256": "f6330ae0479ad52d2a951c1e5ed43fb9550101f9f1a499613286e9d7766ec668"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "b36a17fc19d61b785350babd8146d8ff1e8e3436bc94bf22a62e8cd3f4b7d497",
+      "spec_sha256": "6f88d2b4effa019aeb5c35e30af5c96d4a98d86bb2f8af966a870d9927982e81",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19590,14 +19590,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/cfe025e5e7635e1fee95f30dc90458f9ff0551c3c0f7f86536c58578fc5c2b90/scene.usda",
-          "sha256": "463dc6a91801cd45881d19ed8b870c89f8f8d031ec8917d93618cc48b00df928"
+          "sha256": "9cd14026be18407fe743d588d1340f0bbc602c5e5fcc935edfa204d97ead5140"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "37d237f9d693d0bfd77eb2618000c75181c7c5b2de6e8bb329765b1f044bed2c",
+      "spec_sha256": "99470d9d63d480f2fd4f08ffd49bf10ec9c49136ea500320de62aa64b8fc8fd8",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19607,14 +19607,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/a23ba584469fd584cafc2f659a705938ce9cbc6450ae380df25637415cccbf74/scene.usda",
-          "sha256": "b21333961de023bf303174711f04a940a75fe29b2efb658bc5f87f5a12875bb8"
+          "sha256": "d02e999728a42622e98a3ac7bb79822c9de4702984d0e8ca46daccf8d5bc8f00"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "91a224a4489e9ee56130a32fa25c35672a3e000611ca0ffd1ad4668c65577ecd",
+      "spec_sha256": "edb6c4f7e2845b89d03bcfdca1cc60bc2a4e87e3109d85330d98267845d86dfb",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19624,14 +19624,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/4f68e918c5e9614ad318628a2704520c1a1d7a4a49fbe9865b2b328487292ece/scene.usda",
-          "sha256": "33ed84b6bf43e02c4611a640c4c8ae9aa12aa0b5f9fe3218f5ab16271104749d"
+          "sha256": "975432248d279fd7d780b36a0147194d094ef3ac1aa4ea2b1140869dd17474bb"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "e709c7c9bd80c84bcdf0ec8584189f55327608df358868394f4cfba54bbe7103",
+      "spec_sha256": "831817f369a0a5f04e11b6f39d5b37b0b5768b29c3481f62a3254baa39275067",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19641,14 +19641,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/632d316efbf31653ad6d2a07abe481db388660b724747eadfa510380ce21509f/scene.usda",
-          "sha256": "4a41d543b258a08e51012e0f1fba8c5b5e372aa5fa5993ddd4cd4f6c2913715d"
+          "sha256": "6015022a4788699b6c644642ed72f0d8bd2ab0c732b223f08e7d3f994927c63d"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "1f7249ff28374d2a436de2090149ada7779531e7d5d940eae24b100b3d9141ba",
+      "spec_sha256": "a5abeadec4fea422b3c6c4faee4ff5afc74b707048dc4d80035e9c2dd29d0b51",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19658,14 +19658,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/e6bc9cae9630662519ebf2a2ed6ed357553887c9956d8009722470668d2ffbfc/scene.usda",
-          "sha256": "496edfba2bf85dbedfab5cfd930790a2cbc13a690f37fd13464cfad85fcf5b14"
+          "sha256": "7a1c24311d7d145e407c64fef74fa129bdd47bf2bfc310d0410e062f7cee0fd6"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "167d115891f45901ba57404daeb9d78872f6580f20b083c1c843712815ebfbbf",
+      "spec_sha256": "8a0627dfe6520c9032b53cfd133683c6b0678a7ec317a8b719d289fb21658f79",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19675,14 +19675,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/b293713130b69cd3ec46331c9ced8c20aaa0db54f42beb67d23653d92c8cb2f1/scene.usda",
-          "sha256": "ab92b4327fe26b5b5114d23e62cbb3f4c3a18afe7d5ea2b10999fd6ca7dd2272"
+          "sha256": "5c013885b7edd3c1c0d2dfd86126d70ad7c7d1e6f62009fb285afd9a408cbc38"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "0c199a031dcd8b13e13c0eb994e83c592fc61300b45b3daafd4852814231c830",
+      "spec_sha256": "34d03dc03b331bdc98bec2246e6be5124fdd042eda3681d37d99a39b6ca367f4",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19692,14 +19692,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/e852a2c564ade463c9499ff40dc484580ecd62700d82f953d8f76411fab42e80/scene.usda",
-          "sha256": "105601dc4148046e9806d99fa2ec4668005352f2e10768cf396af60d3039edb2"
+          "sha256": "605e1cf93fdd40f25835997f2c15f0bd5bb34fa08f52a5c0b5289ed24eb73f9c"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "db7a3991655196e3cebbca437cf14879adec9dc85889ac0bc103689f37fdf0fc",
+      "spec_sha256": "6a7e9a963a65d7bfbd926c7f782edcfa18f265955a6f9b85a7f2fc7f23fc9e36",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19709,14 +19709,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/525f74a6b83cf821993948436105f4143e10714bf5cda7d842a79e73702c5c90/scene.usda",
-          "sha256": "da39f5ee2d2dcaf5bbc125f5e54ac5b6b53aa9fa565f49c3fa3d5277593efeba"
+          "sha256": "3184d21f212a45682d8a21d96a65afe9319266cec15a731e2c85dc78ae607ded"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "1bfa7fcf47faffbf527f817965704f6dd7cf7c373c752b8a27b121e66126189d",
+      "spec_sha256": "62da99d8059d8caf8add497ad53d8554a5245f49b5c1f42c435373ace8fa21f4",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19726,14 +19726,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/2da6c9e6927e41033bcef88b37429566eb1befdfbfb46ccf7a7b1a74cc9ad53c/scene.usda",
-          "sha256": "026df6d4587f58b497a39b6b39b6539da9f70992ddf4f6fa0bc0b978506d2ac3"
+          "sha256": "28b645bbb2510dae77e63707f1d26562901310fbc42e7e0f152505f82acfda00"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "5b4a92718f1b82e73d3a759a7ee39a337c0ac93b3ef6f577ceecc3f76fb73b81",
+      "spec_sha256": "0356417545d2bd88799086d48d16b0229fc18c46054dd489afe62ed394775d9b",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19743,14 +19743,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/af95941ef8a395c259e497eb62b800d88082b40a746ebade793e627d0800b9d3/scene.usda",
-          "sha256": "db356091e303b3164a7a4c456caa35c1002aac7c9157a0f6bf78eb9697bab09e"
+          "sha256": "181270b06454a2f5fe165068b1bd944bd4bd62bdec53be5b3a793ab3224cf640"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "c0b69c4fc03a6b850d843a35287bae9ada0f4461aae5c27073c570a10ebab8a6",
+      "spec_sha256": "c9150df15717604bdadeaaa5997bca5cb9b4018d0917b3c8bf21c4720ae5fc67",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19760,14 +19760,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/05fe124e37d2d186ab0af861b2a3995cbd6cd58cfa2b427f23bf433b5e06771b/scene.usda",
-          "sha256": "734732189e8bedcb14d9a23f8b464c323dada1b481b16de9a174fca5e60cf6df"
+          "sha256": "a69571cd5a68dadef1b2e27cd918d482a81e058608354b97331e22d0a3d363dc"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "6afceedf1c172bf8bd77cb1bf5b4ad6ff13853a24e029c4a3228244f908725df",
+      "spec_sha256": "1ee43287ab8cd70556a3bd8b1dc9e668c928f4c5e300d5fd07e8b08eb52c8a86",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19777,14 +19777,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/c9739331228e9d4f28c48a8472260fb92b96c345c1f0f79554c6c188f4806a2e/scene.usda",
-          "sha256": "db9298a5b7a053a047b218c60f0040ce27a24c9659d390bf5e06b0baa4623e4f"
+          "sha256": "66ac8d329dbeb9684a8716879ed3df315840957d1a063c75aa8b6efc75ec50fb"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "886d6b4a0cf7dda266a2bc949e8fd84a4c430568467b7b3fa9d3f187d98266d2",
+      "spec_sha256": "b2fc94508f70234343eff183ce35cef3de1b5c2b78d8288916e14ccfb26a2424",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19794,14 +19794,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/dd62a777f1a1f4846b829470c5c8598ea00758accd4ed746145ea4880b24fee7/scene.usda",
-          "sha256": "d0444b006104cf08ef91f12abb59209f2500cc8f4d201a6b48af5e4aaea088a2"
+          "sha256": "5ca111d198375d34140cba67ebaf80c9cd74adcbe67f505cb3291e3db6020de5"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "07f01034b5106fba620b821d63a0635688ca73d3a77a7aa58b7124afdc7a0cf5",
+      "spec_sha256": "d60462e9f4d1c6ddb7b4c23096a93214f9cf171cd0127b53691e3494a98a579d",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19811,14 +19811,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/b421daf649584dc3420cc607a8b2f2c5606c150063e12539d91ae7387ed010b9/scene.usda",
-          "sha256": "6c6d045682261db4064bf9343b6321e5995004adc483fb04f78f44554ccdc424"
+          "sha256": "59ad1be4456abefe49b79c7bd6604c95b90726f5324348b26acaaa6ae03581d3"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "2e99f78782833e6349ebc71e4888deaa302cbd86b6a67614d1391c690380decb",
+      "spec_sha256": "f770a0d654616b3f6fef41f2b23c4bd1009faa7e1543510c677e639ba4a3ad65",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19828,14 +19828,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/97c10171e770edb0ff415b5e0b622d025934856b86d56188f63d26f5a95cc57b/scene.usda",
-          "sha256": "415da3bf9b8ac41a9f04a5b03e575636ea2d20df5e72dd64fee7a83cf6ecc9e1"
+          "sha256": "89c1ebd7e64a50e037c01e18118877c0140cda8bdc7a67c3b520d3a9cc393053"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "1e5e3392c43e0cbf4547f9ad847bf931a97bb37f1973b71865c8ed701f5b6c2e",
+      "spec_sha256": "08ee452d483c22d699f28efb686b66b4c24c409ef77d690360499420808966b1",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19845,14 +19845,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/61f55a31470421332031008d63b560eb0a8b8d1a2444a17abaa3ce437ee3719f/scene.usda",
-          "sha256": "3620b34db31561d371e7e08c7fe31c85b42b729c7cb8a026279fdfe7fd0db1b7"
+          "sha256": "ac77e86ad51ece7157947832ae210cbb4e93c553d5c8fd2324c5aaca47468fca"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "89794b951a78761d5ad0757f549afa3c6f693d2c0feb40c124bb40e178885cb2",
+      "spec_sha256": "b7b59932006edc0fb713d306f94e3879ceaf2e98f778dd901672aed03195935e",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19862,14 +19862,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/107183c0a3d44826c123a1eecaba4ca287de94672d26cc389746d06645e97d7c/scene.usda",
-          "sha256": "26db25435113b190e2cd32625f3e17b8d2df1dfd293e5626c690c9da9d2853db"
+          "sha256": "a9e69e0f75c7de426fb7a4c38cf499b90dfe0ec460deba826267949837bca169"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "a8171e9b39cc49d1ab243755010da3326c251e903a06bd975ebe440671dcd843",
+      "spec_sha256": "98e73270897c13f783a73b9aa858f39e615546f715dfab3f410f6b24021a9a64",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19879,14 +19879,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/734634e7eabf64d8aa701024560d992fe9e8554a805c098a2b9d883ad18a4be8/scene.usda",
-          "sha256": "a84b11cfb28dbd4b92559e9a21814b7ea34b4f4041cb6e240014c07da5523750"
+          "sha256": "76bc016bb991f00067ba9fe1006a1ab4d47030ae59346bb4dd1c1cb969e6b144"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "58fdc3b6a583c0fe6df51052bf26fe949303922aba60789d6e77643b1ff7bdc6",
+      "spec_sha256": "6585b93a642792044c00cb88920e03704123753b034b1c75d29f77f18124d714",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19896,14 +19896,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/1de78905f80fb9e5b56ecb0c24b29774627c5043433d0f2503c077e8b2616031/scene.usda",
-          "sha256": "8ea44423adc23f0baf43d694d3e2340cf0d15f8f45cfc4ef2590bf119349930f"
+          "sha256": "b065cdc304ed8088fd4bb848fa6d53612286e6e79e627777ea16086094a3574a"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "80afe1ca5ff15e788e48014a9d9a57a674fe7d7f05383eacaaf2c13fe7b9cd99",
+      "spec_sha256": "5d85cacb098b749ba37479715346c93e19dbd82cd1a5beea05ac4bdf4591d7b4",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19913,14 +19913,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/d74fb3fc0c86567940acca63b125fa01e93ef9c52c89568ed4881db692041113/scene.usda",
-          "sha256": "d14426fbf9d3b8c035afd256e20b483a4a03f1a53ce3832af8578492df5ce95a"
+          "sha256": "b8158949ffb6099e7abaa3442b5444886165c3702895a79cef3d31627de7edb4"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "fa15ffdbcfda5a6b5f90e6a7547fac33f20e63d6c844282ae84c04f4f81bd6fb",
+      "spec_sha256": "f732b91771feda66efdcb02782aa022035f3945152843131666e4adfb4391933",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19930,14 +19930,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/a1996d15459b67914e54c61b37582fdf4e434438730ffdff71967132bfc0112b/scene.usda",
-          "sha256": "3bcce753fa86ba60d4c1ae43d8642587500179996292c0e0a8b0c1f7d409d7dd"
+          "sha256": "9a1d03a704795956af5001c591b1775711ec2571a42329d808275ac798417f4d"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "a0caa30733431f18862226ca19f887f4062ab99ff4f9c07d22436c8986f69c84",
+      "spec_sha256": "ef1e6ba203ae4e727d4799ffff9525a4949a379a0e1b9ebda308424292025f3e",
       "split": "validation",
       "task_id": "PR6"
     },
@@ -19947,14 +19947,14 @@
       "runtime_files": {
         "station": {
           "path": "resources/6de75e7e176e78e68c0dd3fdd7006367e15c3c3c96dbac4370d6bf239b76f330/scene.usda",
-          "sha256": "c9856581267e1570aab51b8b48e2e71b20ea679bd91ab91a69ef9d7eb107d425"
+          "sha256": "c84295f1f5f89bca0f388fa9ad84757fc5dfa16608cbc24768414f2082efbd72"
         },
         "x5": {
           "path": "shared/robot/x5/ARX.usd",
-          "sha256": "5723a835bf5627a935a8dabb3a44447725bd1465243ce791e221b3e990121d63"
+          "sha256": "31de6ed98aa980afc8f0b08ad3e836690712a648d46bdb2cd633139bee981e2d"
         }
       },
-      "spec_sha256": "e6d74f143d8b240123f15ba5418a9133c66defb2fecd8a2378c531524aa06b26",
+      "spec_sha256": "3d9222c999dc138a303a5f23695386d96ddc6378ca4a0fd977395463c8be3e5c",
       "split": "validation",
       "task_id": "PR6"
     },

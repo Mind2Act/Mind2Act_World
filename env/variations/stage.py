@@ -184,6 +184,45 @@ def _material(stage, root, name, pin):
     return material
 
 
+def _bind_distractor_physics_material(stage, clutter_root, item, root_prim):
+    from pxr import Usd, UsdPhysics, UsdShade
+    physics = item.physics
+    has_static = "static_friction" in physics
+    has_dynamic = "dynamic_friction" in physics
+    if has_static != has_dynamic:
+        raise ValueError("distractor static_friction and dynamic_friction must both be explicit")
+    if "restitution" in physics and not (has_static and has_dynamic):
+        raise ValueError("distractor restitution requires explicit static_friction and dynamic_friction")
+    if has_static and has_dynamic:
+        static_f = float(physics["static_friction"])
+        dynamic_f = float(physics["dynamic_friction"])
+        restitution = float(physics.get("restitution", 0.0))
+        if not (math.isfinite(static_f) and static_f >= 0.0 and math.isfinite(dynamic_f) and dynamic_f >= 0.0):
+            raise ValueError("invalid distractor friction value")
+        if not (math.isfinite(restitution) and 0.0 <= restitution <= 1.0):
+            raise ValueError("invalid distractor restitution value")
+        colliders = [p for p in Usd.PrimRange(root_prim)
+                     if p.HasAPI(UsdPhysics.CollisionAPI)
+                     and UsdPhysics.CollisionAPI(p).GetCollisionEnabledAttr().Get() is not False]
+        if not colliders:
+            raise ValueError("distractor with explicit friction has no enabled collider: " + str(root_prim.GetPath()))
+        material = UsdShade.Material.Define(stage, clutter_root + "/Materials/Physics_" + item.name)
+        pm = UsdPhysics.MaterialAPI.Apply(material.GetPrim())
+        pm.CreateStaticFrictionAttr(static_f)
+        pm.CreateDynamicFrictionAttr(dynamic_f)
+        pm.CreateRestitutionAttr(restitution)
+        for collider in colliders:
+            UsdShade.MaterialBindingAPI.Apply(collider).Bind(material, materialPurpose="physics")
+        return {"status": "bound_explicit", "applied": True,
+                "material_path": str(material.GetPath()),
+                "colliders": [str(c.GetPath()) for c in colliders],
+                "static_friction": static_f, "dynamic_friction": dynamic_f, "restitution": restitution}
+    if "friction" in physics:
+        return {"status": "legacy_scalar_metadata_only", "applied": False,
+                "raw_friction": float(physics["friction"])}
+    return {"status": "inherited", "applied": False}
+
+
 def _spawn(stage, plan, targets):
     from pxr import Gf, Usd, UsdGeom, UsdPhysics
     from mind2act_eval.sim.asset_relocation import relative_asset_path
@@ -212,16 +251,18 @@ def _spawn(stage, plan, targets):
         body = UsdPhysics.RigidBodyAPI(bodies[0])
         if body.GetKinematicEnabledAttr().Get() or body.GetRigidBodyEnabledAttr().Get() is False:
             raise ValueError("distractor baked rigid body is disabled or kinematic")
-        # Only this new distractor receives the effective archived mass and rest
-        # velocity. Inherited PhysicsMaterial and friction opinions stay intact.
+        # Only this new distractor receives the effective archived mass, rest
+        # velocity, and (when explicitly authored) pre-cook physics material.
         if "mass" in item.physics:
             UsdPhysics.MassAPI.Apply(bodies[0]).CreateMassAttr(float(item.physics["mass"]))
+        friction_binding = _bind_distractor_physics_material(stage, targets.clutter_root, item, xform.GetPrim())
         body.CreateVelocityAttr(Gf.Vec3f(0))
         body.CreateAngularVelocityAttr(Gf.Vec3f(0))
         warnings = _check_exclusions(stage, xform.GetPrim(), plan.binding["forbidden_aabbs"])
         rows.append({"path": path, "asset_sha256": pin.sha256,
                      "position": item.position, "orientation_wxyz": item.orientation,
-                     "physics": dict(item.physics), "warnings": warnings})
+                     "physics": dict(item.physics), "friction_binding": friction_binding,
+                     "warnings": warnings})
     return rows
 
 
