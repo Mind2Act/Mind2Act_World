@@ -3,7 +3,7 @@
 <img src="docs/assets/readme/banner.webp" alt="Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation" width="100%">
 
 <h4 align="center">
-  <a href="https://arxiv.org/abs/2611.26444">📄 Paper</a> |
+  <a href="https://arxiv.org/pdf/2611.26444">📄 Paper</a> |
   <a href="https://mind2act-world.com/">🌐 Webpage</a> |
   <a href="https://mind2act-world.com/leaderboard.html">🏆 Leaderboard</a> |
   <a href="https://mind2act-world.com/benchmark.html">🧩 Benchmark</a> |
@@ -13,7 +13,7 @@
 </h4>
 
 <p>
-  <a href="https://arxiv.org/abs/2611.26444"><img alt="arXiv 2611.26444" src="https://img.shields.io/badge/arXiv-2611.26444-b31b1b?style=flat-square&logo=arxiv&logoColor=white&labelColor=64748b" height="22"/></a>&nbsp;
+  <a href="https://arxiv.org/pdf/2611.26444"><img alt="arXiv 2611.26444" src="https://img.shields.io/badge/arXiv-2611.26444-b31b1b?style=flat-square&logo=arxiv&logoColor=white&labelColor=64748b" height="22"/></a>&nbsp;
   <img alt="Python 3.11" src="https://img.shields.io/badge/Python-3.11-475569?style=flat-square&logo=python&logoColor=white&labelColor=64748b" height="22"/>&nbsp;
   <img alt="Isaac Sim 5.1" src="https://img.shields.io/badge/Isaac_Sim-5.1-475569?style=flat-square&logo=nvidia&logoColor=76B900&labelColor=64748b" height="22"/>&nbsp;
   <img alt="30 tasks" src="https://img.shields.io/badge/Tasks-30_%C3%97_3_levels-497c6c?style=flat-square&labelColor=64748b" height="22"/>&nbsp;
@@ -30,7 +30,7 @@ Mind2Act World evaluates memory, physical execution, and tasks that require both
 
 ## 📰 News
 
-- **2026-11-19** — The technical report is on [arXiv](https://arxiv.org/abs/2611.26444).
+- **2026-11-19** — The technical report is on [arXiv](https://arxiv.org/pdf/2611.26444).
 - **2026-11-11** — Per-task costs and timings, with inference benchmarks for the evaluated end-to-end models, are on the [leaderboard](https://mind2act-world.com/leaderboard.html#efficiency).
 - **2026-11-10** — Results for the first four end-to-end models (π0.5, KinRT, X-VLA, G0.5) are [live](https://mind2act-world.com/leaderboard.html#board-e2e).
 - **2026-11-09** — First results on the Agent leaderboard are [live](https://mind2act-world.com/leaderboard.html#board-agent).
@@ -40,7 +40,7 @@ Mind2Act World evaluates memory, physical execution, and tasks that require both
 - [x] 🌐 Launch the benchmark website and task demonstrations.
 - [x] 🏆 Publish initial VLA/WAM and multimodal-agent results.
 - [x] ⏱️ Publish evaluation costs, timings and inference benchmarks.
-- [x] 📄 Release the [technical report](https://arxiv.org/abs/2611.26444).
+- [x] 📄 Release the [technical report](https://arxiv.org/pdf/2611.26444).
 - [ ] 📦 Release **Mind2Act Mini World**, a smaller, fully open-source benchmark designed to make training and evaluation more accessible.
 - [ ] 🧪 Launch a **new agent leaderboard** for external submissions, with a standardized evaluation interface and sandboxed execution.
 
@@ -155,7 +155,7 @@ Live rankings are on the [Mind2Act World Leaderboard](https://mind2act-world.com
 
 ## 📝 Citation
 
-If you find Mind2Act World useful, please cite our [technical report](https://arxiv.org/abs/2611.26444):
+If you find Mind2Act World useful, please cite our [technical report](https://arxiv.org/pdf/2611.26444):
 
 ```bibtex
 @article{huang2026mind2actworld,
