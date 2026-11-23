@@ -100,6 +100,19 @@ def score_A2(evidence):
     return _A2_measurement(evidence)[0]
 
 
+def withdrawal_audit(manifest, condition, difficulty):
+    # Exact source-case identity selects an extracted original timing schedule;
+    # no policy/expert controller, guessed phase or observed-door velocity is used.
+    registry = json.loads(resources.files(__package__).joinpath('config/withdrawal_timing.json').read_text())
+    source = registry.get(condition['source_case_sha256'])
+    if source is None:
+        raise ValueError('DR3 original gate schedule is unavailable')
+    phase = condition['phase_ticks']
+    if type(phase) is not int or phase < 0:
+        raise ValueError('DR3 gate phase must be explicit nonnegative ticks')
+    return _WithdrawalAudit(manifest, source, difficulty, phase)
+
+
 def score(evidence, *, rule_version=RULE_VERSION):
     if rule_version == LEGACY_RULE_VERSION:
         return score_legacy(evidence)
@@ -111,17 +124,7 @@ def score(evidence, *, rule_version=RULE_VERSION):
     if rule_version != RULE_VERSION:
         raise ValueError('unsupported DR3 scoring rule version')
     baseline, values, manifest, rows = _A2_measurement(evidence)
-    condition = values['condition']
-    # Exact source-case identity selects an extracted original timing schedule;
-    # no policy/expert controller, guessed phase or observed-door velocity is used.
-    registry = json.loads(resources.files(__package__).joinpath('config/withdrawal_timing.json').read_text())
-    source = registry.get(condition['source_case_sha256'])
-    if source is None:
-        raise ValueError('DR3 original gate schedule is unavailable')
-    phase = condition['phase_ticks']
-    if type(phase) is not int or phase < 0:
-        raise ValueError('DR3 gate phase must be explicit nonnegative ticks')
-    audit = _WithdrawalAudit(manifest, source, values['difficulty'], phase)
+    audit = withdrawal_audit(manifest, values['condition'], values['difficulty'])
     for row in rows:
         audit.feed(row)
     diagnostics = audit.result()

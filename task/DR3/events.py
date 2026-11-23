@@ -56,6 +56,77 @@ def _center_in_tray(center_xy, tray):
     return bool(np.any((area != 0) & (np.all(cross >= 0, axis=1) | np.all(cross <= 0, axis=1))))
 
 
+def _uses_measured_physics(manifest):
+    return (manifest.get('measurement_contract') == MEASUREMENT_CONTRACT or
+        (manifest.get('schema') == 'dr3-collision-pose-evidence-v1' and
+         manifest.get('motion_contract') == 'per-physics-step-origin-segment-full-rotation-envelope-v1'))
+
+
+class ApertureProgress:
+    """Ordered gate passages shared by the live failure probe and replay."""
+
+    def __init__(self, manifest, item_id, unknown, *, allow_test_certificates=False,
+                 require_fully_open=False):
+        self.gates = manifest['gates']
+        self.item_id = item_id
+        self.item = manifest['bodies'][item_id]
+        self.unknown = unknown
+        self.measured = _uses_measured_physics(manifest)
+        self.allow_test_certificates = allow_test_certificates
+        self.require_fully_open = require_fully_open
+        self.entries = [event() for _ in self.gates]
+        self.passed = [event() for _ in self.gates]
+        self.attempts = []
+        self.active = None
+        self.violation = None
+        self.route_completed = False
+
+    def feed(self, previous, frame, t):
+        vertices = self.item['vertices']
+        before, after = previous['poses'][self.item_id], frame['poses'][self.item_id]
+        forward = after['position'][0] > before['position'][0]
+        for j, gate in enumerate(self.gates):
+            if self.measured:
+                motion = measured_physics_transition(vertices, before, after, gate,
+                    actual_vertices=True, collision_parts=self.item.get('collision_parts'))
+            else:
+                certificates = frame.get('sweeps', {}).get(self.item_id, {})
+                certificate = certificates if 'contract' in certificates else certificates.get(gate['id'])
+                motion = swept_aperture(vertices, before, after, gate, certificate,
+                                       allow_test_certificates=self.allow_test_certificates)
+            if motion['status'] == 'UNKNOWN':
+                self.unknown.append('unresolved item aperture passage at '+gate['id'])
+            # Gate occupancy must be legal in either travel direction (also
+            # while the item turns or pauses in the slab). Only progress/entry
+            # ordering below is restricted to forward travel.
+            if motion.get('intersects'):
+                # Legacy scoring additionally required near-full door travel.
+                opened = (not self.require_fully_open or all(_number(f['gates'][gate['id']]) >=
+                    gate['fully_open_position_m']-gate['open_tolerance_m'] for f in (previous, frame)))
+                if not opened or motion['status'] == 'VIOLATION':
+                    self.violation = self.violation or 'illegal_aperture_passage'
+            a = side(vertices, before, gate, gate['half_thickness_m'])
+            b = side(vertices, after, gate, gate['half_thickness_m'])
+            begins = forward and a == 'OUTSIDE' and b != 'OUTSIDE'
+            if begins:
+                if j == 0:
+                    self.active = dict(attempt_id=len(self.attempts), entry_s=[None]*len(self.gates),
+                                       pass_s=[None]*len(self.gates), passed_gate_count=0, legal=True)
+                    self.attempts.append(self.active)
+                # Overlapping gate occupancy is legal: earlier ENTRY suffices.
+                if self.active is None or j and self.active['entry_s'][j-1] is None:
+                    self.violation = self.violation or 'wrong_gate_order'
+                    continue
+                self.active['entry_s'][j] = t
+                self.entries[j] = event('OCCURRED', t, attempt_id=self.active['attempt_id'])
+            if self.active and self.active['entry_s'][j] is not None and b == 'INSIDE' and self.active['pass_s'][j] is None:
+                self.active['pass_s'][j] = t
+                self.active['passed_gate_count'] += 1
+                if self.active['passed_gate_count'] == len(self.gates):
+                    self.route_completed = True
+                self.passed[j] = event('OCCURRED', t, attempt_id=self.active['attempt_id'])
+
+
 def rebuild_events(rows, manifest, *, allow_test_certificates=False, require_fully_open=False):
     if not rows:
         raise ValueError('missing native item trace')
@@ -63,11 +134,9 @@ def rebuild_events(rows, manifest, *, allow_test_certificates=False, require_ful
     items = [name for name, body in bodies.items() if body['role'] == 'item']
     if len(items) != 1 or len(gates) not in (1, 2):
         raise ValueError('one item and one/two ordered gates required')
-    item_id, unknown, violation = items[0], [], False
+    item_id, unknown = items[0], []
     item = bodies[item_id]
-    measured = (manifest.get('measurement_contract') == MEASUREMENT_CONTRACT or
-        (manifest.get('schema') == 'dr3-collision-pose-evidence-v1' and
-         manifest.get('motion_contract') == 'per-physics-step-origin-segment-full-rotation-envelope-v1'))
+    measured = _uses_measured_physics(manifest)
     coverage = manifest['coverage']
     if coverage['missing_colliders'] or set(coverage['expected_colliders']) != set(coverage['represented_colliders']):
         unknown.append('collision geometry coverage is incomplete')
@@ -79,8 +148,10 @@ def rebuild_events(rows, manifest, *, allow_test_certificates=False, require_ful
     if measured and (abs(dt-1/120) > 1e-12 or any(
             body.get('vertices_are_actual_collision_points') is not True for body in bodies.values())):
         unknown.append('missing actual item collision points or 120Hz native clock')
-    entries, passed = [event() for _ in gates], [event() for _ in gates]
-    states, times, attempts, active = [], [], [], None
+    passage = ApertureProgress(manifest, item_id, unknown,
+                               allow_test_certificates=allow_test_certificates,
+                               require_fully_open=require_fully_open)
+    times = []
     for i, row in enumerate(rows):
         t = _number(row['simulation_time_s'])
         if type(row['physics_tick']) is not int or row['physics_tick'] != i:
@@ -103,51 +174,10 @@ def rebuild_events(rows, manifest, *, allow_test_certificates=False, require_ful
                     or receipt.get('tick') != i or receipt.get('before_step_epoch') != i-1
                     or receipt.get('subscription_active') is not True or receipt.get('errors') != []):
                 unknown.append('missing native physics substep receipt')
-        states.append(_contact_state(frame, manifest))
-        if not i:
-            continue
-        previous = rows[i-1]['detector']
-        before, after = previous['poses'][item_id], frame['poses'][item_id]
-        forward = after['position'][0] > before['position'][0]
-        for j, gate in enumerate(gates):
-            if measured:
-                motion = measured_physics_transition(item['vertices'], before, after, gate,
-                    actual_vertices=True, collision_parts=item.get('collision_parts'))
-            else:
-                certificates = frame.get('sweeps', {}).get(item_id, {})
-                certificate = certificates if 'contract' in certificates else certificates.get(gate['id'])
-                motion = swept_aperture(item['vertices'], before, after, gate, certificate,
-                                       allow_test_certificates=allow_test_certificates)
-            if motion['status'] == 'UNKNOWN':
-                unknown.append('unresolved item aperture passage at '+gate['id'])
-            # Gate occupancy must be legal in either travel direction (also
-            # while the item turns or pauses in the slab). Only progress/entry
-            # ordering below is restricted to forward travel.
-            if motion.get('intersects'):
-                # Legacy scoring additionally required near-full door travel.
-                opened = (not require_fully_open or all(_number(f['gates'][gate['id']]) >=
-                    gate['fully_open_position_m']-gate['open_tolerance_m'] for f in (previous, frame)))
-                if not opened or motion['status'] == 'VIOLATION':
-                    violation = True
-            a = side(item['vertices'], before, gate, gate['half_thickness_m'])
-            b = side(item['vertices'], after, gate, gate['half_thickness_m'])
-            begins = forward and a == 'OUTSIDE' and b != 'OUTSIDE'
-            if begins:
-                if j == 0:
-                    active = dict(attempt_id=len(attempts), entry_s=[None]*len(gates),
-                                  pass_s=[None]*len(gates), passed_gate_count=0, legal=True)
-                    attempts.append(active)
-                # Overlapping gate occupancy is legal: earlier ENTRY suffices.
-                if active is None or j and active['entry_s'][j-1] is None:
-                    violation = True
-                    continue
-                active['entry_s'][j] = t
-                entries[j] = event('OCCURRED', t, attempt_id=active['attempt_id'])
-            if active and active['entry_s'][j] is not None and b == 'INSIDE' and active['pass_s'][j] is None:
-                active['pass_s'][j] = t
-                active['passed_gate_count'] += 1
-                passed[j] = event('OCCURRED', t, attempt_id=active['attempt_id'])
-    valid_pass = not violation and any(a['passed_gate_count'] == len(gates) for a in attempts)
+        state = _contact_state(frame, manifest)
+        if i:
+            passage.feed(rows[i-1]['detector'], frame, t)
+    valid_pass = not passage.violation and passage.route_completed
     tray = manifest['tray']
     vertices = transform_vertices(item['vertices'], rows[-1]['detector']['poses'][item_id])
     center = (vertices.min(axis=0) + vertices.max(axis=0))/2 - finite_array(tray['origin'], (3,))
@@ -155,7 +185,7 @@ def rebuild_events(rows, manifest, *, allow_test_certificates=False, require_ful
         contained = _center_in_tray(center[:2], tray)
     except ValueError as exc:
         unknown.append(str(exc)); contained = False
-    supported = states[-1]['tray_support']
+    supported = state['tray_support']
     delivered = bool(contained and supported)
     unknown = list(dict.fromkeys(unknown))
     complete = not unknown
@@ -165,7 +195,7 @@ def rebuild_events(rows, manifest, *, allow_test_certificates=False, require_ful
         full_success_evidence_complete=complete, unknown_reasons=unknown, unknown_ranges=[],
         event_detector_contract=CONTRACT, measurement_contract=MEASUREMENT_CONTRACT if measured else 'legacy-bounded-envelope',
         intra_step_continuous_trajectory_claimed=False, success=success if complete else None, score=value,
-        events=dict(entry=entries, passed=passed), attempts=attempts, windows=[],
-        passed_aperture=bool(valid_pass), passed_aperture_count=max((a['passed_gate_count'] for a in attempts), default=0),
-        violation_latched=bool(violation), delivered=delivered, terminal_tray_support=supported,
+        events=dict(entry=passage.entries, passed=passage.passed), attempts=passage.attempts, windows=[],
+        passed_aperture=bool(valid_pass), passed_aperture_count=max((a['passed_gate_count'] for a in passage.attempts), default=0),
+        violation_latched=bool(passage.violation), delivered=delivered, terminal_tray_support=supported,
         center_inside_tray=bool(contained), cutoff_simulation_time_s=times[-1], zero_proof=None)

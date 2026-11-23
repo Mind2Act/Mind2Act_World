@@ -335,11 +335,19 @@ def run_episode(spec, task, ctx, adapter, *, consumer_kind=ConsumerKind.MODEL,
             # checked only after its last row, never in the middle of a motion.
             if stop_on_success and completion_mode == 'result' and following_action is None:
                 with phases.measure('scene.completion'):
-                    if check_task_completion():
+                    failure = getattr(scene, "irreversible_failure", None)
+                    reason = (failure() if callable(failure) and consumer_kind == ConsumerKind.MODEL
+                              and action_hold_ticks == requested_ticks else None)
+                    if reason is not None:
+                        if not isinstance(reason, str) or not reason:
+                            raise TypeError("irreversible failure must supply a nonempty reason")
+                        completion_receipt.update(first_failure_tick=tick, failure_reason=reason)
+                        termination = Termination.TASK_FAILURE
+                    elif check_task_completion():
                         task_first_complete_tick = tick
                         termination = Termination.COMPLETED
             timings["action_s"] += time.monotonic() - before
-            if termination == Termination.COMPLETED:
+            if termination in (Termination.COMPLETED, Termination.TASK_FAILURE):
                 break
         if time.monotonic() - episode_start >= limits.wall_s:
             raise TimeoutError("episode wall budget exhausted")
@@ -357,6 +365,8 @@ def run_episode(spec, task, ctx, adapter, *, consumer_kind=ConsumerKind.MODEL,
         before = time.monotonic()
         score = task.scorer(evidence)
         timings["score_s"] = time.monotonic() - before
+        if termination == Termination.TASK_FAILURE and score.value != 0.0:
+            raise ValueError("irreversible failure must score zero at the action boundary")
         score_components = score.components
         write_json(ctx.output_dir / "evidence.json", evidence)
         write_json(ctx.output_dir / "score.json", score)
@@ -539,6 +549,11 @@ def run_episode(spec, task, ctx, adapter, *, consumer_kind=ConsumerKind.MODEL,
             result = Result(spec.task_id, spec.instance_id, None, Termination.ERROR, False,
                             consumer_kind, model_tested, tick, timings,
                             error="cleanup: " + "; ".join(errors))
+    if result.termination == Termination.TASK_FAILURE:
+        task_metadata = {**task_metadata, "terminal_failure": {
+            "reason": completion_receipt["failure_reason"],
+            "tick": completion_receipt["first_failure_tick"],
+        }}
     timings["total_s"] = time.monotonic() - start
     # Reconstruct to freeze the final timings after cleanup.
     from dataclasses import replace
