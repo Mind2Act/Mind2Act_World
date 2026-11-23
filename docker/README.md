@@ -5,7 +5,7 @@ interpreter. Build from the pinned source checkout:
 
 ```sh
 git rev-parse HEAD > SOURCE_COMMIT
-docker build -f docker/Dockerfile -t mind2act-world:1.0.0 .
+docker build -f docker/Dockerfile -t mind2act-world:1.0.1 .
 ```
 
 Mount the assets read-only and mount a writable results directory. Pass credentials

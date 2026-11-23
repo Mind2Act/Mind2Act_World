@@ -105,9 +105,18 @@ def align_colliders(stage, receipt):
 
 def make_station_static(stage):
     """Station meshes become static colliders; they catch collisions the planner does not model."""
-    from pxr import Usd, UsdGeom, UsdPhysics
+    from pxr import Gf, Sdf, Usd, UsdGeom, UsdPhysics, UsdShade
+    station_mat = UsdShade.Material.Define(stage, '/World/StationPhysicsMaterial')
+    station_pm = UsdPhysics.MaterialAPI.Apply(station_mat.GetPrim())
+    station_pm.CreateStaticFrictionAttr(.9)
+    station_pm.CreateDynamicFrictionAttr(.8)
+    station_pm.CreateRestitutionAttr(0.)
     for prefix in ['/World/Conveyor', '/World/CameraStand', '/World/PedestalLeft', '/World/PedestalRight', '/World/Floor']:
-        for prim in Usd.PrimRange(stage.GetPrimAtPath(prefix)):
+        root = stage.GetPrimAtPath(prefix)
+        if not root:
+            continue
+        is_conveyor = prefix == '/World/Conveyor'
+        for prim in Usd.PrimRange(root):
             if prim.HasAPI(UsdPhysics.RigidBodyAPI):
                 prim.RemoveAPI(UsdPhysics.RigidBodyAPI)
             if prim.IsA(UsdPhysics.Joint):
@@ -115,6 +124,23 @@ def make_station_static(stage):
             if prim.IsA(UsdGeom.Mesh):
                 UsdPhysics.CollisionAPI.Apply(prim).CreateCollisionEnabledAttr(True)
                 UsdPhysics.MeshCollisionAPI.Apply(prim).CreateApproximationAttr('none')
+            if is_conveyor:
+                if prim.IsA(UsdGeom.Gprim):
+                    collision = UsdPhysics.CollisionAPI(prim)
+                    if prim.HasAPI(UsdPhysics.CollisionAPI) and collision.GetCollisionEnabledAttr().Get() is not False:
+                        UsdShade.MaterialBindingAPI.Apply(prim).Bind(station_mat, materialPurpose='physics')
+                else:
+                    # Shapeless conveyor Xforms (e.g. Belt container) must not carry dangling
+                    # CollisionAPI, render-only physics bindings, or orphaned surfaceVelocity.
+                    if prim.HasAPI(UsdPhysics.CollisionAPI):
+                        prim.RemoveAPI(UsdPhysics.CollisionAPI)
+                    if prim.HasAPI(UsdShade.MaterialBindingAPI):
+                        UsdShade.MaterialBindingAPI(prim).UnbindDirectBinding(materialPurpose='physics')
+                    sv_enabled = prim.GetAttribute('physxSurfaceVelocity:surfaceVelocityEnabled')
+                    sv_vel = prim.GetAttribute('physxSurfaceVelocity:surfaceVelocity')
+                    if sv_enabled or sv_vel or 'PhysxSurfaceVelocityAPI' in prim.GetAppliedSchemas():
+                        prim.CreateAttribute('physxSurfaceVelocity:surfaceVelocityEnabled', Sdf.ValueTypeNames.Bool).Set(False)
+                        prim.CreateAttribute('physxSurfaceVelocity:surfaceVelocity', Sdf.ValueTypeNames.Vector3f).Set(Gf.Vec3f(0., 0., 0.))
 
 
 def make_items_dynamic(stage, items):

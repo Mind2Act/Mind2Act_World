@@ -37,7 +37,7 @@ def verify(spec):
     """Offline: verify an unmodified example against the released catalogue."""
     from mind2act_eval.spec_identity import spec_digest
     raw = files('mind2act_eval.env_cfg').joinpath('public_layouts.json').read_bytes()
-    if hashlib.sha256(raw).hexdigest() != 'b26de0d1057fe9d9ac1dfbdd11451a907912bb27d68e612deec44524e6c0f1d9':
+    if hashlib.sha256(raw).hexdigest() != '8bdc5923773eefe16308d2be543a957f9cb13d5b9de70671d4f1f8df2d25239f':
         raise ValueError('public layout authority bytes differ')
     validate(spec)
     row = catalogue().get((spec.task_id, spec.difficulty, spec.instance_id))
