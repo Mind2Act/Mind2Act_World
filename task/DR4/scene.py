@@ -86,6 +86,15 @@ class TrayScene:
     def is_success(self):
         return bool(self.recorder.facts()['success'])
 
+    def irreversible_failure(self) -> str | None:
+        if self.recorder.bad:
+            return 'obstacle_contact'
+        if self.recorder.spilled:
+            return 'ball_spilled_from_tray'
+        if self.recorder.tray_fallen:
+            return 'tray_fell_off_station'
+        return None
+
     def result_metadata(self):
         return dict(source_id=self.spec.source_id, native_task_alias='PR7',
             source_spec_sha256=self.spec.config['source_spec_sha256'],

@@ -429,13 +429,45 @@ class CP03Scene:
     def health(self) -> Health:
         return Health(False, self._error) if self._error else Health(True, "")
 
-    def is_success(self) -> bool:
-        if not self._tick:
-            return False
-        values = self.evidence(self._tick).values
-        return bool(values["task_success"])
+    def _completion_values(self):
+        tick = getattr(self, "_tick", None)
+        if not tick or not getattr(self, "_terminal_placements", None) or getattr(self, "_spec", None) is None:
+            return None
+        return self.evidence(tick).values
 
-    is_complete = is_success
+    def is_complete(self) -> bool:
+        values = self._completion_values()
+        return bool(values and values["task_success"])
+
+    def _credit_ceiling(self):
+        placements = getattr(self, "_terminal_placements", None)
+        sources = getattr(self, "_sources", None)
+        carriage_base = (getattr(self, "_ns", None) or {}).get("carriage_base")
+        touch = getattr(self, "_touch", None)
+        if not sources or not placements or len(placements) != len(sources) or carriage_base is None or touch is None:
+            return None
+        cutoff = carriage_base[2] - .40
+        dropped = sum(row["world_z_m"] < cutoff and not touch(path, robot_only=True)
+                      for path, row in placements.items())
+        return len(sources) - dropped if dropped else None
+
+    def irreversible_failure(self) -> str | None:
+        if self._credit_ceiling() == 0:
+            values = self._completion_values()
+            if (values and not values["task_success"]
+                    and values["credited_plates"] <= values["wrong_or_extra_items"]):
+                return "plates_fell_off_station"
+        return None
+
+    def is_success(self) -> bool:
+        values = self._completion_values()
+        if values is None:
+            return False
+        if values["task_success"]:
+            return True
+        ceiling = self._credit_ceiling()
+        return (ceiling is not None and ceiling > 0 and values["credited_plates"] == ceiling
+                and values["wrong_or_extra_items"] == 0)
 
     def close(self) -> None:
         self._robot_subscription = None

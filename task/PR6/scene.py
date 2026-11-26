@@ -74,11 +74,16 @@ class DominoScene:
         return Health(True)
 
     def is_success(self):
-        # A recorded violation may force score zero, but must not stop physics.
         return bool(self.recorder.rules.facts()['success'])
 
     def is_complete(self):
         return self.is_success()
+
+    def irreversible_failure(self) -> str | None:
+        rules = self.recorder.rules
+        if rules.status == 'failure':
+            return rules.reason or 'domino_rule_violation'
+        return None
 
     def result_metadata(self):
         return dict(source_id=self.spec.source_id,native_task_alias='PR8',native_task_id='CP11',

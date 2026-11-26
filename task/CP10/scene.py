@@ -169,6 +169,17 @@ class ArenaScene:
 
     is_complete=events_complete
 
+    def irreversible_failure(self) -> str | None:
+        if self.machine.failure is not None:
+            return self.machine.failure['reason']
+        for shot in self.machine.shots[2:]:
+            if shot['color'] == 'white' and shot['net'] == 'far' and shot['paddle_contact']:
+                # This white receipt may still earn credit at the final net check.
+                return None
+            if shot['color'] != 'red' or shot['net'] != 'near' or shot['paddle_contact']:
+                return 'zero_white_prefix_locked'
+        return None
+
     def replay_eof_settle_ticks(self):
         # Source ShotCycle transitions from the final measured receipt to its
         # terminal state on the next tick (selected easy: 6288 -> 6289).

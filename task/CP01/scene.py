@@ -14,6 +14,8 @@ ticks, then contact ledger cleared) happens once in build.
 """
 from __future__ import annotations
 
+from collections import Counter
+
 import numpy as np
 
 from mind2act_eval.tasks._instructions import public_instruction
@@ -129,10 +131,48 @@ class CP01Scene:
             return Health(False, self._error)
         return Health(True, "")
 
-    def is_success(self) -> bool:
-        return bool(self._grade and self._grade["task_success"])
+    def is_complete(self) -> bool:
+        grade = getattr(self, "_grade", None)
+        return bool(grade and grade["task_success"])
 
-    is_complete = is_success
+    def _credit_ceiling(self):
+        grade = getattr(self, "_grade", None)
+        setup = getattr(self, "_setup", None)
+        if not grade or not setup or not setup.get("tray_initial_positions_m"):
+            return None
+        measurements = grade.get("terminal_measurements")
+        if not measurements:
+            return None
+        cutoff = min(pos[2] for pos in setup["tray_initial_positions_m"]) - .40
+        items = setup["items"]
+        foods = measurements["bodies"][:len(items)]
+        trays = measurements["bodies"][len(items):]
+        # The scorer can still credit food supported by a tray on the floor.
+        if any(row["position"][2] < cutoff for row in trays):
+            return None
+        # All supply bodies exist from reset; the passing reference batch is visual only.
+        required = Counter(kind for order in setup["orders"] for kind in order)
+        dropped = Counter(item["kind"] for item, row in zip(items, foods)
+                          if row["position"][2] < cutoff and not row["touch_robot"])
+        if not dropped:
+            return None
+        supply = Counter(item["kind"] for item in items)
+        ceiling = sum((required & (supply - dropped)).values())
+        return ceiling if ceiling < sum((required & supply).values()) else None
+
+    def irreversible_failure(self) -> str | None:
+        if self._credit_ceiling() == 0:
+            grade = self._grade
+            if not grade["task_success"] and grade["credited_foods"] <= grade["wrong_or_extra_items"]:
+                return "foods_fell_off_station"
+        return None
+
+    def is_success(self) -> bool:
+        if self.is_complete():
+            return True
+        ceiling = self._credit_ceiling()
+        return (ceiling is not None and ceiling > 0 and self._grade["credited_foods"] == ceiling
+                and self._grade["wrong_or_extra_items"] == 0)
 
     def close(self) -> None:
         # Contact subscription belongs to ctx.sim; nothing task-owned outlives the episode.

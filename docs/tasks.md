@@ -50,10 +50,11 @@ These notes describe the implemented scorer. They do not replace the fixed model
 | PR1 / PR2 | Scoring reads the final T0 resistance/voltage. Release and holding are not scoring gates; the released-hold window controls scene termination only. PR1 tolerances are ±0.2 / ±0.15 / ±0.12 Ω. PR2 tolerances are ±1 / ±0.5 / ±0.5 V; Hard tightens the partial-credit zero distance, not the voltage tolerance. |
 | PR5 | Reject missing, repeated, dragged or out-of-box imprints first; then grade heading, then stamp return. |
 | DR3 | Scoring uses ordered physical aperture passage, supported tray delivery, and the withdrawal and gate-contact rules. Both arms must clear the gate corridor for automatic success. A confirmed irreversible violation ends the model rollout with zero. |
-| DR4 | Ball touching is not a scoring gate. Easy / Medium / Hard have 2 / 3 / 4 balls and 0 / 1 / 2 columns respectively. Retention, terminal delivery and obstacle-contact rules still apply. |
+| DR4 | Ball touching is not a scoring gate. Easy / Medium / Hard have 2 / 3 / 4 balls and 0 / 1 / 2 columns respectively. Retention, terminal delivery and obstacle-contact rules still apply; a ball spilling from the tray or the tray falling off the station scores zero and ends the model rollout. |
 | E1 | The tray accepts one submission per round; a wrong submission still settles that round and cannot be replaced with another answer. |
 | E2 | Remember the objects and their values, calculate the expression, and enter its result. Fingertip contact is not a scoring gate; the fixed short instruction does not specify a key-return requirement. |
 | S1 | Early placement is recorded but does not itself force a zero. Easy uses two rotations in the same direction. Original training demonstrations use a 2-second cue; formal evaluation uses a 1-second cue. |
+| S2 | Static perimeter colliders keep the slider on the board; hitting the board rim or leaving the playable area after the cue ends records `slider_left_board` and ends the model rollout with zero. |
 
 PR3 short-stroke partial credit and the remaining source rules are unchanged. A stricter phrase in an instruction does not silently introduce an additional scoring condition.
 

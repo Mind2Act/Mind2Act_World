@@ -84,17 +84,41 @@ class ConveyorScene:
                 return Health(False, f'parcel {i} dynamic role inconsistent with activation')
         return Health(True)
 
-    def is_success(self) -> bool:
+    def is_complete(self) -> bool:
         """All parcels must currently have real target support and centers inside."""
-        ticks, count = self._recorder.ticks, len(self._bodies)
+        ticks = getattr(getattr(self, '_recorder', None), 'ticks', ())
+        count = len(getattr(self, '_bodies', ()))
         if not ticks or not count:
             return False
         if len(ticks[-1]['parcels']) != count:
             raise ValueError('DR1 completion requires every parcel measurement')
         return all(parcel_state(ticks, i, self._tray)['placed'] for i in range(count))
 
-    def is_complete(self) -> bool:
-        return self.is_success()
+    def _drop_state(self):
+        ticks = getattr(getattr(self, '_recorder', None), 'ticks', ())
+        tray = getattr(self, '_tray', ())
+        if not ticks or len(tray) < 5:
+            return None
+        parcels = ticks[-1]['parcels']
+        dropped = [i for i, row in enumerate(parcels) if row['active']
+                   and row['position'][2] < tray[4] - .40 and not row.get('robot_contact', True)]
+        if not dropped:
+            return None
+        placed = {i for i in range(len(parcels)) if parcel_state(ticks, i, self._tray)['placed']}
+        if placed.intersection(dropped):
+            return None  # Conflicting tray support cannot certify a drop.
+        return len(parcels) - len(dropped), len(placed)
+
+    def is_success(self) -> bool:
+        if self.is_complete():
+            return True
+        state = self._drop_state()
+        return state is not None and state[0] == state[1] > 0
+
+    def irreversible_failure(self) -> str | None:
+        if self._drop_state() == (0, 0):
+            return 'all_parcels_dropped'
+        return None
 
     def close(self) -> None:
         unsubscribe = getattr(self._subscription, 'unsubscribe', None)

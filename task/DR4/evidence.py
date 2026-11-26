@@ -94,6 +94,7 @@ class Recorder:
         self.maximum, self.spilled, self.bad = np.zeros(self.count), set(), set()
         self.final_displacement = np.zeros(self.count)
         self.grasp_tick, self.frames = None, 0
+        self.tray_fallen = False
         self.previous_time = initial['time_s']
         self.recent = deque(maxlen=120)
         self.trace_path = Path(trace_path).resolve() if trace_path is not None else None
@@ -107,6 +108,7 @@ class Recorder:
         if abs(frame['time_s']-self.previous_time-1/120) > 1e-7:
             raise ValueError('DR4 measured physics clock gap')
         p, r = vector(frame['tray_position'], 3), rotation(frame['tray_rotation_wxyz'])
+        self.tray_fallen = bool(p[2] < self.initial['tray_position'][2] - .40)
         v, omega = vector(frame['tray_linear_velocity'], 3), vector(frame['tray_angular_velocity'], 3)
         balls = np.asarray([frame['balls']['Ball'+str(i)]['position'] for i in range(self.count)])
         velocities = np.asarray([frame['balls']['Ball'+str(i)]['linear_velocity'] for i in range(self.count)])
@@ -143,15 +145,17 @@ class Recorder:
         # R[DR4] explicitly publishes +0.5mm calibration for the painted circles.
         radius = self.config['radius_mm'] / 1000 + NUMERIC_TOLERANCE_M
         escaped = [int(i) for i in np.flatnonzero(self.maximum > np.nextafter(radius, np.inf))]
-        eligible = not (escaped or self.bad)
+        eligible = not (escaped or self.bad or self.spilled)
         current_inside = bool(np.all(self.final_displacement <= np.nextafter(radius, np.inf)))
-        delivered = bool(self.recent and self.recent[-1]['position'] and self.recent[-1]['supported'])
+        delivered = bool(not self.tray_fallen and self.recent
+                         and self.recent[-1]['position'] and self.recent[-1]['supported'])
         success = bool(eligible and current_inside and delivered)
         return dict(success=success, prerequisites=bool(eligible),
             all_balls_retained=not escaped, each_ball_within_initial_radius=not escaped,
             all_balls_currently_in_circles=current_inside,
             final_ball_displacement_m=self.final_displacement.tolist(),
             no_obstacle_contacts=not self.bad, current_delivered=delivered,
+            no_balls_spilled=not self.spilled, spilled_balls=sorted(self.spilled),
             terminal_platform_support=bool(self.recent and self.recent[-1]['supported']),
             maximum_ball_displacement_m=self.maximum.tolist(), radius_violations_latched=escaped,
             obstacle_contact_pairs=[list(pair) for pair in sorted(self.bad)], instance_ball_count=self.count)

@@ -171,10 +171,46 @@ class CP02Scene:
     def health(self) -> Health:
         return Health(False, self._error) if self._error else Health(True, "")
 
-    def is_success(self) -> bool:
-        return bool(self._task.grade()["physical_task_success"])
+    def _completion_grade(self):
+        task = getattr(self, "_task", None)
+        return task.grade() if task is not None else None
 
-    is_complete = is_success
+    def is_complete(self) -> bool:
+        grade = self._completion_grade()
+        return bool(grade and grade["physical_task_success"] and grade["task_process_pass"])
+
+    def _credit_ceiling(self):
+        task = getattr(self, "_task", None)
+        raw = getattr(task, "latest", None)
+        spec = getattr(task, "spec", None)
+        if not raw or not spec or "assembly_z_m" not in spec:
+            return None
+        cutoff = spec["assembly_z_m"] - .40
+        rows = raw["bodies"]
+        dropped = sum(row["position"][2] < cutoff and not row["touch_robot"] for row in rows)
+        cover = raw.get("cover")
+        cover_dropped = cover and cover["position"][2] < cutoff and not cover["touch_robot"]
+        # The hard-mode cover gates full success; only macarons contribute core credit.
+        return len(rows) - dropped if dropped or cover_dropped else None
+
+    def irreversible_failure(self) -> str | None:
+        if self._credit_ceiling() == 0:
+            grade = self._task.grade()
+            if (not (grade["physical_task_success"] and grade["task_process_pass"])
+                    and grade["credited_macarons"] <= grade["core_wrong_or_extra_items"]):
+                return "macarons_fell_off_station"
+        return None
+
+    def is_success(self) -> bool:
+        grade = self._completion_grade()
+        if grade is None:
+            return False
+        if grade["physical_task_success"] and grade["task_process_pass"]:
+            return True
+        ceiling = self._credit_ceiling()
+        if ceiling is None or ceiling == 0:
+            return False
+        return grade["credited_macarons"] == ceiling and grade["core_wrong_or_extra_items"] == 0
 
     def close(self) -> None:
         self._ns = None

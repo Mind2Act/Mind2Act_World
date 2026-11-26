@@ -4,11 +4,15 @@ Formal evaluation uses one 120 Hz solve per logical event. The explicit
 historical source profile retains eight 960 Hz solves. Robot
 initialization and actions belong exclusively to the shared robot service.
 """
+from collections import Counter
+
 import numpy as np
 from mind2act_eval.tasks._instructions import public_instruction
 from mind2act_eval.contracts import NativeEvidence, Observation, Health
+from mind2act_eval.scoring import lcs_length
 from .binding import bind_recipe
 from .clock import CookingClock, LOGICAL_HZ, resolve
+from .scorer import WINDOWS, _actions, _valid_transition, score
 
 
 def contact_free(touching, *body_paths):
@@ -94,6 +98,8 @@ def _initialize(spec, ctx, binding):
     support_edges = set()
     from .mechanism.containment import Containers, support_reaches, support_directions
     containers = Containers(stage)
+    table = stage.GetPrimAtPath('/World/Worktable')
+    support_z = float((containers.bounds(table) if table else containers.bottom)[1][2])
     def receive(headers, data):
         for header in headers:
             pair = tuple(sorted(str(PhysicsSchemaTools.intToSdfPath(int(x)))
@@ -132,15 +138,21 @@ def _initialize(spec, ctx, binding):
     def sample():
         dp = drawer.get_world_pose()[0]
         measured = {'drawer':dp.tolist(),'jars':{},'food':{name:[] for name in IDS},
-                    'food_in_pot':{name:[] for name in IDS}}
+                    'food_in_pot':{name:[] for name in IDS},'lost_portions':[],
+                    'lost_returns':[]}
         fp,_ = food.get_world_poses()
         for path,pos in zip(food.prim_paths, fp):
             i = int(path.split('/LooseFood')[1].split('/')[0])
             measured['food'][IDS[i]].append(pos.tolist())
+            if pos[2] < support_z - .40 and not touching(path):
+                measured['lost_portions'].append(IDS[i])
             measured['food_in_pot'][IDS[i]].append(bool(containers.pot_contains(pos)
                 and support_reaches(path,root+'PotCollision',support_edges)))
         for i,item in jars.items.items():
             bp,br = jars.pose(item['jar']); cp,cr = jars.pose(item['lid'])
+            if ((bp[2] < support_z - .40 and not touching(item['body_path']))
+                    or (cp[2] < support_z - .40 and not touching(item['lid_path']))):
+                measured['lost_returns'].append(IDS[i])
             center=bp+br@jar_centers[IDS[i]]
             measured['jars'][IDS[i]] = dict(body=bp.tolist(),cap=cp.tolist(),
                 body_speed=float(np.linalg.norm(item['jar'].get_linear_velocity())),
@@ -159,6 +171,7 @@ def _initialize(spec, ctx, binding):
         measured.update(pot_lid_supported=bool(support_reaches(root+'PotLid',root+'PotCollision',support_edges)
                 and containers.pot_contains(lp,rim=True)),
             pot_lid_released=contact_free(touching,root+'PotLid'),
+            pot_lid_lost=bool(lp[2] < support_z - .40 and not touching(root+'PotLid')),
             pot_lid_stable=bool(np.linalg.norm(lid.get_linear_velocity())<.015 and np.linalg.norm(lid.get_angular_velocity())<.15),
             controls_released=contact_free(touching,root+'PowerPlunger',root+'Knob'))
         observer.sample(counter['step'], measured)
@@ -213,16 +226,105 @@ class CookingScene:
             dict(difficulty=self.spec.difficulty, recipe=self.spec.config['recipe'],
                  normal_termination=True, cp04_evidence=self.native['observer'].evidence(), **evidence_fields(self.spec)))
 
+    def _observed_evidence(self):
+        native, clock = getattr(self, 'native', None), getattr(self, 'clock', None)
+        if not native or clock is None or getattr(self, 'spec', None) is None:
+            return None
+        counter, observer = native.get('counter'), native.get('observer')
+        if counter is None or observer is None:
+            return None
+        from mind2act_eval.tasks.CP04.validation_inputs import evidence_fields
+        return NativeEvidence(self.spec.task_id, self.spec.instance_id, counter['step'] * clock.substeps,
+            dict(difficulty=self.spec.difficulty, recipe=self.spec.config['recipe'],
+                 normal_termination=True, cp04_evidence=observer.evidence(), **evidence_fields(self.spec)))
+
+    def is_complete(self):
+        evidence = self._observed_evidence()
+        return bool(evidence and 'difficulty' in evidence.values and score(evidence).value == 100.)
+
     def events_complete(self):
-        e=self.evidence(self.native['counter']['step']*self.clock.substeps).values['cp04_evidence']
+        evidence = self._observed_evidence()
+        if evidence is None:
+            # Observer-free event snapshots can supply the legacy flow check.
+            read_snapshot = vars(self).get('evidence')
+            if callable(read_snapshot):
+                evidence = read_snapshot(self.native['counter']['step'] * self.clock.substeps)
+        if evidence is None:
+            return False
+        settlement = self._ingredient_ceiling(evidence)
+        if settlement is not None:
+            current, maximum = settlement
+            return current == maximum > 0
+        e = evidence.values['cp04_evidence']
         actions=e['thermal']['events']
         off=bool(actions and actions[-1]['mode']=='OFF' and any(r['mode']!='OFF' for r in actions))
         terminal=e['terminal_measurements']
         jars=terminal['jars'] if terminal else {}
-        return bool(off and all(n in jars and jars[n]['in_drawer'] and jars[n]['in_tray']
-                               and jars[n]['detached'] for n in self.spec.config['recipe']))
+        finished = bool(off and all(n in jars and jars[n]['in_drawer'] and jars[n]['in_tray']
+                                    and jars[n]['detached'] for n in self.spec.config['recipe']))
+        return finished and ('difficulty' not in evidence.values or score(evidence).value == 100.)
 
-    is_complete = events_complete
+    def irreversible_failure(self) -> str | None:
+        if self._ingredient_ceiling(self._observed_evidence()) == (0, 0):
+            return 'all_recipe_ingredients_lost'
+        return None
+
+    @staticmethod
+    def _ingredient_ceiling(evidence):
+        if evidence is None or 'difficulty' not in evidence.values:
+            return None
+        v = evidence.values
+        recipe, e = tuple(v['recipe']), v['cp04_evidence']
+        terminal = e['terminal_measurements']
+        if terminal is None:
+            return None
+        events = e['ingredient_events']
+        recorded = tuple(row['ingredient_id'] for row in events)
+        lost = set(terminal.get('lost_portions', ()))
+        counts = Counter(row['tick'] for row in events)
+        # Only the first whole-portion observation is recorded per jar.
+        # Containment can be restored, but the entry's cap/order facts are fixed.
+        viable = tuple(row['ingredient_id'] for row in events
+                       if row['whole_portion'] and row['entered_pot'] and row['cap_removed']
+                       and counts[row['tick']] == 1 and not row.get('order_ambiguous', False)
+                       and row['ingredient_id'] not in lost)
+        future = tuple(name for name in recipe if name not in recorded and name not in lost)
+        maximum = lcs_length(viable + future, recipe)
+
+        thermal = e['thermal']
+        actions = _actions(thermal)
+        flow = tuple(row['mode'] for row in actions)
+        if flow[:1] == ('OFF',):
+            flow, actions = flow[1:], actions[1:]
+        expected_flow = ('HEAT', 'KEEP_WARM', 'OFF')
+        prep = v['difficulty'] != 'easy'
+        drawer, lid = e['drawer_open_tick'], e['pot_lid_release_tick']
+        lid_ok = bool(events and lid is not None and events[-1]['tick'] <= lid)
+        lost_lid = prep and terminal.get('pot_lid_lost', False) and (not lid_ok or len(recorded) < len(recipe))
+        full_impossible = (
+            recorded != recipe[:len(recorded)] or viable != recorded
+            or bool(set(recipe) & (lost | set(terminal.get('lost_returns', ()))))
+            or lost_lid or flow != expected_flow[:len(flow)]
+            or (prep and bool(events) and (drawer is None or drawer >= events[0]['tick']))
+        )
+        if flow[:1] == ('HEAT',):
+            heat = actions[0]['tick']
+            full_impossible |= (
+                recorded != recipe or events[-1]['tick'] >= heat
+                or (prep and (not lid_ok or lid >= heat))
+            )
+        # The score checks measured transition history, not ThermalState.failure.
+        start = thermal['response_window_start_tick']
+        if len(flow) >= 2:
+            full_impossible |= _valid_transition(thermal, v['difficulty']) is None
+        elif flow == ('HEAT',) and start is not None:
+            full_impossible |= thermal['observed_through_tick'] >= start + WINDOWS[v['difficulty']] * LOGICAL_HZ
+        if not full_impossible:
+            return None
+        result = score(evidence)
+        if result.value != 100.:
+            return result.components['recipe_lcs'], maximum
+        return None
 
     def health(self):
         return Health(True)

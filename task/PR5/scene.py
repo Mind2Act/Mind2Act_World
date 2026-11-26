@@ -87,10 +87,35 @@ class StampScene:
         return self._health
 
     def is_success(self):
-        return bool(self.recorder.frame_count and self.recorder.facts()['success'])
+        if not self.recorder.frame_count:
+            return False
+        facts = self.recorder.facts()
+        return bool(facts['success'] or (self._fell_off_station() and all(
+            facts[key] for key in ('single', 'inside', 'clean'))))
 
     def is_complete(self):
-        return self.is_success()
+        return bool(self.recorder.frame_count and self.recorder.facts()['success'])
+
+    def _fell_off_station(self):
+        return self.recorder.final_frame['position'][2] < self.recorder.support_z - .40
+
+    def irreversible_failure(self) -> str | None:
+        if not self.recorder.frame_count:
+            return None
+        tracker = self.recorder.tracker
+        count, marks = tracker.preview()
+        if count >= 2:
+            return 'multiple_imprints'
+        if marks and marks[0].smeared:
+            return 'imprint_smeared'
+        fell = self._fell_off_station()
+        if tracker.count or fell:
+            facts = self.recorder.facts()
+            if tracker.count and not facts['inside']:
+                return 'imprint_outside_box'
+            if fell and not all(facts[key] for key in ('single', 'inside', 'clean')):
+                return 'stamp_fell_off_station'
+        return None
 
     def result_metadata(self):
         return dict(source_id=self.spec.source_id, source_revision=SOURCE_REVISION,

@@ -331,9 +331,9 @@ def run_episode(spec, task, ctx, adapter, *, consumer_kind=ConsumerKind.MODEL,
             confirm_action = getattr(adapter, "confirm_action_executed", None)
             if callable(confirm_action):
                 confirm_action(action_hold_ticks)
-            # A model action may contain many control rows. Result tasks are
-            # checked only after its last row, never in the middle of a motion.
-            if stop_on_success and completion_mode == 'result' and following_action is None:
+            # Check irreversible failure and result completion at the action
+            # boundary. An event sequence may already have completed this tick.
+            if stop_on_success and following_action is None and termination == Termination.PHYSICS_BUDGET:
                 with phases.measure('scene.completion'):
                     failure = getattr(scene, "irreversible_failure", None)
                     reason = (failure() if callable(failure) and consumer_kind == ConsumerKind.MODEL
@@ -343,7 +343,7 @@ def run_episode(spec, task, ctx, adapter, *, consumer_kind=ConsumerKind.MODEL,
                             raise TypeError("irreversible failure must supply a nonempty reason")
                         completion_receipt.update(first_failure_tick=tick, failure_reason=reason)
                         termination = Termination.TASK_FAILURE
-                    elif check_task_completion():
+                    elif completion_mode == 'result' and check_task_completion():
                         task_first_complete_tick = tick
                         termination = Termination.COMPLETED
             timings["action_s"] += time.monotonic() - before

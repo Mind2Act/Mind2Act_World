@@ -37,6 +37,7 @@ class RestorationScene:
             self.original_source=audit_source(spec,ctx.assets)
         self.audit=Audit(Path(ctx.output_dir)/'CP09'/'raw-trace.jsonl')
         self.audit.append(dict(tick=0,contract=CONTRACT,source_case=sensors.case));self.complete=False
+        self.support_z = config('station')['world_support_z']
 
     def before_step(self,tick):
         if tick!=self.tick+1:raise ValueError('CP09 before-step clock differs')
@@ -45,6 +46,7 @@ class RestorationScene:
     def after_step(self,tick):
         if tick!=self.tick+1:raise ValueError('CP09 missing physics sample')
         row=self.sensors.after_step(tick);self.replay.append(row);self.audit.append(row);self.tick=tick
+        self.last = row
         # Raster metrics update only changed patches; no per-tick history replay.
         self.complete=bool(self.replay.result()['success'])
 
@@ -53,8 +55,46 @@ class RestorationScene:
         if tick!=self.tick:raise ValueError('CP09 unsampled physical evidence')
         return NativeEvidence('CP09',self.spec.instance_id,tick,dict(difficulty=self.spec.difficulty,
             seed=self.spec.seed,audit=self.audit.receipt(),**self.original_source))
-    def is_success(self):return self.complete
-    is_complete=is_success
+    def is_success(self):
+        if self.is_complete():
+            return True
+        settlement = self._color_ceiling()
+        return bool(settlement and settlement[0] == settlement[1] > 0)
+
+    def is_complete(self):
+        return bool(getattr(self, 'complete', False))
+
+    def _color_ceiling(self):
+        replay, last = getattr(self, 'replay', None), getattr(self, 'last', None)
+        support_z = getattr(self, 'support_z', None)
+        if not getattr(replay, 'annotated', False) or not last or support_z is None:
+            return None
+        tools, contacts = last.get('tools'), last.get('ink_contacts')
+        if not tools or contacts is None or contacts:
+            return None
+        lost = {name for name, tool in tools.items()
+                if tool['position_m'][2] < support_z - .40 and not tool['robot_contact']}
+        if not lost:
+            return None
+        progress = replay.result()
+        colors = progress['final_surface']['per_color']
+        current = sum(progress['measured_report_steps'])
+        # Erasure or overpainting may fix precision for a missing marker,
+        # but only that marker can add pixels of its color and raise recall.
+        if lost == tools.keys():
+            maximum = current
+        else:
+            maximum = sum(f"pen{metric['color']}" not in lost or metric['recall'] >= .95
+                          for metric in colors)
+        if maximum < len(colors):
+            return current, maximum
+        return None
+
+    def irreversible_failure(self) -> str | None:
+        if self._color_ceiling() == (0, 0):
+            return 'required_tools_fell_off_station'
+        return None
+
     def health(self):return Health(True)
     def result_metadata(self):
         return dict(geometry_decision=self.spec.config['geometry_decision'],dock_rule_status=self.spec.config['dock_rule_status'],
@@ -88,6 +128,7 @@ class NativeSensors:
         pick_start=len(env.pickup_events);cap_start=len(env.caps.events)
         select_contacted_marker(env);env._measure_pickup();env.board_support.sample();env.caps.sample();env._boards()
         contacts=[]
+        tool_states = {}
         # Every actual tool may draw; active-hand selection is diagnostic.
         from scipy.spatial.transform import Rotation
         tools=[('eraser',env.active_pen,env.tools['eraser'])]+[
@@ -95,7 +136,14 @@ class NativeSensors:
         for tool,color,body in tools:
             p,q=body.get_world_pose();p=np.asarray(p)
             r=Rotation.from_quat([*q[1:],q[0]]).as_matrix()
-            root=env.tool_root_for(tool,color)+'/Contact'
+            tool_root = env.tool_root_for(tool, color)
+            name = 'eraser' if tool == 'eraser' else 'pen'+str(color)
+            latched = env.grasp_latches[tool] and (tool == 'eraser' or color == env.active_pen)
+            robot_contact = any(on and any(q == tool_root or q.startswith(tool_root+'/') for q in pair)
+                                and any(q.startswith('/World/Robot') for q in pair)
+                                for pair,(on,_,_) in env.contact_pairs.items())
+            tool_states[name] = dict(position_m=p.tolist(), robot_contact=bool(latched or robot_contact))
+            root=tool_root+'/Contact'
             active=any(root in pair and env.board_path in pair and on and (impulse>1e-8 or sep<=0)
                        for pair,(on,impulse,sep) in env.contact_pairs.items())
             board_r=env.board_support.rotation();local=board_r.T@(p-env.board_support.position())
@@ -124,7 +172,7 @@ class NativeSensors:
             eraser=dict(position_m=eraser_p.tolist(),initial_position_m=env.initial_tool_positions['eraser'].tolist(),
                 latched=bool(env.grasp_latches['eraser']),tray_contact=bool(eraser_support)),
             pickup_events=env.pickup_events[pick_start:],cap_events=[e for e in env.caps.events[cap_start:] if e['event']=='cap_pulled_open'],
-            ink_contacts=contacts)
+            ink_contacts=contacts, tools=tool_states)
 
     def close(self):
         if self.subscription is not None:self.subscription.unsubscribe();self.subscription=None

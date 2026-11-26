@@ -11,7 +11,7 @@ a missing card is an explicit asset gap. Per-phase wall time is kept in `scene.t
 """
 import json
 import time
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import numpy as np
@@ -23,6 +23,7 @@ from .mechanism.cup_geometry import inside_cup, OccupancyVolume
 from .mechanism.batched_rays import BatchedCupRays
 from .mechanism.occupancy import OccupancyLedger, SAMPLE_DT
 from .mechanism.orders import OrderClock
+from .scorer import score
 
 IMPULSE_MIN = 1e-5
 REQUIRED_CARDS = ("hard_idle.png", "hard_all_sent.png")
@@ -52,6 +53,7 @@ class PScene:
         self.cups = {x["id"]: x for x in manifest["containers"]}
         self.cards, self.screen_attr, self.clock = cards, screen_attr, clock
         self.ledger = OccupancyLedger(self.foods, SAMPLE_DT)
+        self._dropped_foods = set()
         self.contact_pairs = {}
         self.timings = defaultdict(float)
         self.counts = defaultdict(int)
@@ -86,6 +88,9 @@ class PScene:
             started = time.perf_counter()
             self.ledger.observe(tick, objects, published_demand=self.clock.published_demand(),
                                 all_orders_published=self.clock.all_published(tick - 1))
+            floor_cutoff = self.M["station"]["world_support_z"] - .40
+            self._dropped_foods = {name for name, row in objects.items()
+                                   if row["position"][2] < floor_cutoff and row["released"]}
             self._timed("ledger_s", started)
         except ValueError as error:
             self._health = Health(False, "P1 evidence error: " + str(error))
@@ -102,8 +107,34 @@ class PScene:
         return self._health
 
     def is_complete(self) -> bool:
-        from .scorer import score
-        return self.tick > 0 and score(self.evidence(self.tick)).value == 100
+        result = self._terminal_score()
+        return result is not None and result.value == 100
+
+    def _terminal_score(self):
+        tick = getattr(self, "tick", None)
+        if not tick or getattr(self, "spec", None) is None or getattr(self, "ledger", None) is None:
+            return None
+        return score(self.evidence(tick))
+
+    def _unavoidable_missing(self):
+        ledger = getattr(self, "ledger", None)
+        dropped = getattr(self, "_dropped_foods", None)
+        foods = getattr(self, "foods", None)
+        if ledger is None or not ledger.all_sent or not dropped or not foods:
+            return 0
+        # The cups are static. Interchangeable foods can fill any cup that calls for their type.
+        required = Counter()
+        for key, count in ledger.demand.items():
+            required[key.split("/")[1]] += count
+        surviving = Counter(row["type"] for name, row in foods.items() if name not in dropped)
+        return sum(required.values()) - sum((required & surviving).values())
+
+    def irreversible_failure(self) -> str | None:
+        if self._unavoidable_missing() >= 3:
+            result = self._terminal_score()
+            if result is not None and result.value == 0:
+                return "required_ingredients_dropped"
+        return None
 
     def result_metadata(self) -> dict:
         return {"p1_phase_timings": dict(self.timings, **{k + "_calls": v for k, v in self.counts.items()},
@@ -112,7 +143,12 @@ class PScene:
             scalar_candidate_fallback_calls=sum(q.fallback_calls for q in self.cup_queries.values()), ticks=self.tick)}
 
     def is_success(self) -> bool:
-        return self.is_complete()
+        result = self._terminal_score()
+        if result is None:
+            return False
+        missing = self._unavoidable_missing()
+        return result.value == 100 or (result.value > 0 and result.components["defects"] == missing
+                                       and missing in (1, 2))
 
     def close(self) -> None:
         self._subscription = None
@@ -153,7 +189,6 @@ class PScene:
             if any(n[2] < 0. for n in normals):
                 graph.setdefault(v, set()).add(u)
         self._timed("contacts_s", started)
-        support_z = self.M["station"]["world_support_z"]
         objects = {}
         for food, body in self.bodies.items():
             position, quat = body.get_world_pose()
@@ -169,7 +204,8 @@ class PScene:
             self._timed("containment_s", started)
             self.counts["containment_food_ticks"] += 1
             self.counts["containment_pairs"] += len(self.cups)
-            released = not any(any(_pair_owner(p, self.foods, self.cups) == food for p in pair)
+            root = self.foods[food]["prim_path"]
+            released = not any(any(p == root or p.startswith(root + "/") for p in pair)
                                and any("/Robot" in p for p in pair) for pair, _ in active)
             objects[food] = dict(occupied_containers=occupied, position=center.tolist(), kind=self.foods[food]["type"],
                                  inside=inside,
