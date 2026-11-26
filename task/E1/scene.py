@@ -19,6 +19,7 @@ from mind2act_eval.tasks._instructions import public_instruction
 from mind2act_eval.contracts import Action, BuildContext, Health, InstanceSpec, NativeEvidence, Observation, Scene
 from mind2act_eval.tasks._observation import observation, require_physics_hz
 from .evidence import Evidence
+from .scorer import N_BY_DIFFICULTY
 from .mechanism import stage_prep
 from .mechanism.timeline import PHYSICS_HZ, Timeline
 from .mechanism.transport import build_transport
@@ -44,6 +45,7 @@ class EScene:
         self.submission_z_bounds = submission_z_bounds
         self.evidence_recorder = evidence
         self.contact_pairs = {}
+        self.latest = None
         self.tick = 0
         self.timeline = Timeline(transport, manifest["rounds"], manifest["case"]["timing"], intervals,
                                  transport.carrier_x, evidence)
@@ -64,6 +66,8 @@ class EScene:
             self.timeline.after_tick(tick - 1, measured)
         except ValueError as error:  # invalid measured evidence is an infrastructure fault, not a score
             self._health = Health(False, "E1 evidence error: " + str(error))
+        else:
+            self.latest = measured
 
     # -- Scene protocol -----------------------------------------------------------------------------
     def observe(self, tick: int) -> Observation:
@@ -76,10 +80,38 @@ class EScene:
         return self._health
 
     def is_complete(self) -> bool:
-        return len(self.evidence_recorder.results) >= {'easy':2, 'medium':4, 'hard':6}[self.spec.difficulty]
+        rec = getattr(self, 'evidence_recorder', None)
+        return rec is not None and len(rec.results) >= N_BY_DIFFICULTY[self.spec.difficulty]
 
     def events_complete(self) -> bool:
-        return self.is_complete()
+        return self.is_complete() or bool(self._settlement_reason() and self._has_credit())
+
+    def _has_credit(self):
+        return any(row['pass'] for row in self.evidence_recorder.results)
+
+    def _settlement_reason(self):
+        row = getattr(self, 'latest', None)
+        if not row or row['phase'] != 'batch_execute':
+            return None
+        rn = row['round']
+        if not 1 <= rn <= N_BY_DIFFICULTY[self.spec.difficulty] or len(self.evidence_recorder.results) >= rn:
+            return None
+        items = row['items']
+        if not items:
+            return None
+        dropped = {item['path'] for item in items
+                   if item['center'][2] < row['z_bounds'][0] - .40 and not item['touch_robot']}
+        if len(dropped) == len(items):
+            return 'active_batch_items_dropped'
+        if rn == N_BY_DIFFICULTY[self.spec.difficulty]:
+            target = next(item['path'] for item in items if item['identity'] == self.evidence_recorder.answers[rn])
+            if target in dropped or self.evidence_recorder.registered.get(rn, set()) - {target}:
+                return 'final_batch_failed'
+        return None
+
+    def irreversible_failure(self) -> str | None:
+        reason = self._settlement_reason()
+        return reason if reason and not self._has_credit() else None
 
     def close(self) -> None:
         if self._subscription is not None:

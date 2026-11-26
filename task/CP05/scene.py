@@ -3,7 +3,7 @@
 Selected Easy/Medium/Hard runtime sources are identical. No expert imports.
 """
 from types import SimpleNamespace
-from collections import deque
+from collections import Counter, deque
 import numpy as np
 from mind2act_eval.tasks._instructions import public_instruction
 from mind2act_eval.contracts import NativeEvidence, Observation, Health, to_json
@@ -11,6 +11,7 @@ from .mechanism.keyboard_clock import KeyboardClock
 from .mechanism.key_press_policy import KeyPressPolicy, PRESS_M, RELEASE_M
 from .mechanism.stability import StablePlacement
 from .mechanism.replay_events import ReplayEvents
+from .scorer import TOOLS, score
 
 
 def _mechanism(w, setup):
@@ -20,10 +21,12 @@ def _mechanism(w, setup):
     clock=KeyboardClock(setup['sequence'],press_depth_m=PRESS_M,release_depth_m=RELEASE_M);w.clock=clock
     key_press_policy=getattr(w,'key_press_policy',None) or KeyPressPolicy(w.keys);w.key_press_policy=key_press_policy
     initial={s:w.tools[s].get_world_pose()[0].copy() for s in sides}
+    support_z = getattr(w, 'rack_support_z', {s: initial[s][2] for s in sides})
     gates={s:StablePlacement(120,.003,require_manipulation=False) for s in sides}
     pickup={};returned={};cloth_history=deque(maxlen=61)
     state=dict(cloth_bimanual=not setup['cloth'],cloth_front=not setup['cloth'],volume_contact=False,
-               volume_max=not setup['volume_required'],cloth_evidence_available=not setup['cloth'])
+               volume_max=not setup['volume_required'],cloth_evidence_available=not setup['cloth'],
+               mallet_lost=False)
     materials={k:w.shared.material('FormalCP05_'+k,c,rough=.5) for k,c in
                [('white',(.89,.87,.8)),('cyan',(.02,.8,.85)),('green',(.05,.75,.15)),('yellow',(.9,.65,.02))]}
     # Each mechanism belongs to one scene/stage; a fresh instance starts unbound.
@@ -77,8 +80,10 @@ def _mechanism(w, setup):
             for i in feedback_keys-visual_pressed:
                 clock.flash_until[i]=max(clock.flash_until.get(i,0),step+30)
                 visual_pressed.add(i)
+        state['mallet_lost'] = False
         for s in sides:
             pos,quaternion=w.tools[s].get_world_pose();released=not w.touch(paths[s],robot_only=True)
+            state['mallet_lost'] |= bool(pos[2] < support_z[s] - .40 and released)
             supported=w.supported(paths[s],other=root+'/Tools/'+s)
             gates[s].update(pos,bilateral=False,elevated=False,released=released,supported=supported,
                            correct=w.rack_contains(s,pos,quaternion))
@@ -166,16 +171,34 @@ class PianoScene:
                  normal_termination=True, cp05_evidence=e))
 
     def events_complete(self):
-        e=self.evidence(self.tick).values['cp05_evidence']
-        from .scorer import TOOLS
-        from collections import Counter
-        tools=e['tools']
-        return bool(e['demonstration_completed']
-            and len(e['replay_events'])>=len(self.spec.config['setup']['sequence'])
-            and Counter(t['tool_id'] for t in tools)==Counter(TOOLS[self.spec.difficulty])
-            and all(t['returned'] for t in tools))
+        if getattr(self, 'tick', None) is None or getattr(self, 'spec', None) is None:
+            return False
+        evidence = self.evidence(self.tick)
+        e = evidence.values['cp05_evidence']
+        target = tuple(self.spec.config['setup']['sequence'])
+        if not e['demonstration_completed'] or len(e['replay_events']) < len(target):
+            return False
+        if 'difficulty' in evidence.values:
+            result = score(evidence)
+            if result.value == 100.:
+                return True
+            if result.components['note_lcs'] != len(target):
+                return False
+            # Full LCS still allows wrong presses, and MAX can be restored
+            # only if it was first measured before the one-shot Start edge.
+            wrong_notes = tuple(row['key'] for row in e['replay_events']) != target
+            max_tick, play = e['volume_max_tick'], e['play_tick']
+            missed_max = self.spec.difficulty == 'hard' and (max_tick is None or max_tick >= play)
+            return bool(wrong_notes or missed_max or getattr(self, 'state', {}).get('mallet_lost'))
 
-    is_complete = events_complete
+        # The original event-only receipt has no scoring fields.
+        tools = e['tools']
+        return bool(Counter(t['tool_id'] for t in tools)==Counter(TOOLS[self.spec.difficulty])
+                    and all(t['returned'] for t in tools))
+
+    def is_complete(self):
+        return bool(getattr(self, 'w', None) and self.w.clock.state == 'replay'
+                    and score(self.evidence(self.tick)).value == 100.)
 
     def health(self):
         return Health(True)
@@ -234,6 +257,13 @@ def build(spec, ctx):
     contacts = ctx.sim.contacts
     from .mechanism.rack import RackGeometry
     rack=RackGeometry(stage,sides)
+    table = stage.GetPrimAtPath('/World/Worktable')
+    if table:
+        cache = UsdGeom.BBoxCache(Usd.TimeCode.Default(), [UsdGeom.Tokens.default_])
+        table_z = cache.ComputeWorldBound(table).ComputeAlignedRange().GetMax()[2]
+        rack_support_z = dict.fromkeys(sides, table_z)
+    else:
+        rack_support_z = {s: rack.bounds[s][1][2] for s in sides}
     world.reset()
     ctx.robot.reset_to_rest()
     ctx.robot.verify(robots, stage)
@@ -252,5 +282,6 @@ def build(spec, ctx):
     w = SimpleNamespace(stage=stage, robots=robots, tools=tools, button=button, keys=keys,
                         volume=volume, control_positions=control_positions, touch=contacts.touch, supported=contacts.supported,
                         key_press_policy=key_press_policy,initialization_physics_ticks=initialization_physics_ticks,
-                        shared=shared, UsdShade=UsdShade, clothmesh=None,rack_contains=rack.contains)
+                        shared=shared, UsdShade=UsdShade, clothmesh=None,rack_contains=rack.contains,
+                        rack_support_z=rack_support_z)
     return PianoScene(spec, ctx, w)

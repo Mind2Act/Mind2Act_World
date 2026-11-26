@@ -126,6 +126,7 @@ class ClothScene:
             point_source='native_surface_simulation_mesh_usd',render_physics_error_m=error)
         self.recorder.record(raw,points)
         self._last_shape_points = np.asarray(points, dtype='<f4').copy()
+        self._last_shape_row = raw
 
     def before_step(self,tick):self.contacts.clear()
     def after_step(self,tick):self._sample(tick)
@@ -136,20 +137,41 @@ class ClothScene:
     def evidence(self,tick):return self.recorder.evidence(tick)
     def is_success(self):
         """Check the live measured mesh in the fixed target, without replay I/O."""
-        if not hasattr(self, '_last_shape_points'):
+        points = getattr(self, '_last_shape_points', None)
+        if points is None:
             return False
-        if getattr(self, '_success_check_rows', None) != self.recorder.rows:
-            from .mechanism.terminal_shape import terminal_shape
-            case = self.recorder.case
-            origin = case['origin']
-            shape = terminal_shape(self._last_shape_points, self.recorder.triangles,
-                                   case['level'], origin['fold_target_center'], origin['width'])
-            from .mechanism.support import support_witness
-            support=support_witness(self._last_shape_points,self.support_geometry)
-            self._success_at_tick = bool(shape['shape_success'] and support['supported'])
-            self._success_check_rows = self.recorder.rows
-        return self._success_at_tick
+        from .mechanism.terminal_shape import terminal_shape
+        from .mechanism.support import support_witness
+        case = self.recorder.case
+        origin = case['origin']
+        shape = terminal_shape(points, self.recorder.triangles, case['level'],
+                               origin['fold_target_center'], origin['width'])
+        return bool(shape['shape_success'] and support_witness(points, self.support_geometry)['supported'])
     def is_complete(self):return self.is_success()
+
+    def irreversible_failure(self) -> str | None:
+        row = getattr(self, '_last_shape_row', None)
+        points = getattr(self, '_last_shape_points', None)
+        geometry = getattr(self, 'support_geometry', None)
+        if not row or row['tick'] == 0 or points is None or not len(points) or not geometry:
+            return None
+        support_z = min(float(np.asarray(surface['points'])[:, 2].min()) for surface in geometry['surfaces'])
+        if float(points[:, 2].max()) >= support_z - .40:
+            return None
+        cloth = geometry['cloth']['path']
+        if any(any(p == cloth or p.startswith(cloth + '/') for p in contact['pair'])
+               and any(p.startswith('/World/Robot') for p in contact['pair'])
+               for contact in row['rigid_contact_impulses_ns']):
+            return None
+        from .evidence import contact_envelopes
+        fingers = contact_envelopes(row, points, self.recorder.hulls, np.arange(len(points)))
+        if any(finger['min_signed_plane_distance_m'] <= .002 for finger in fingers.values()):
+            return None
+        from .mechanism.support import support_witness
+        if not support_witness(points, geometry)['supported']:
+            return 'cloth_fell_off_station'
+        return None
+
     def result_metadata(self):
         return dict(source_id=self.spec.source_id,source_spec_sha256=self.spec.config['source_spec_sha256'],
             source_config_sha256=self.spec.config['source_config_sha256'],portable_config_sha256=self.spec.config['portable_config_sha256'],

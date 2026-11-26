@@ -7,7 +7,7 @@ RULE_VERSION = SCORING_VERSION
 
 
 def grade_facts(facts, *, difficulty='easy'):
-    if (not facts['no_obstacle_contacts'] or not facts['current_delivered']
+    if (not facts['no_obstacle_contacts'] or not facts.get('no_balls_spilled', True) or not facts['current_delivered']
             or not facts['all_balls_currently_in_circles']):
         return 0.
     return 100. if facts['all_balls_retained'] else {'easy':30.,'medium':22.,'hard':15.}[difficulty]

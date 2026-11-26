@@ -61,9 +61,21 @@ class BridgeScene:
         return NativeEvidence("CP07", self.spec.instance_id, tick, values)
 
     def is_success(self):
-        return bool(self.facts.sampled and self.facts.snapshot()['car_reached'])
+        facts = getattr(self, 'facts', None)
+        return bool(facts and facts.sampled and facts.snapshot()['car_reached'])
 
     is_complete = is_success
+
+    def irreversible_failure(self) -> str | None:
+        facts, sensors = getattr(self, 'facts', None), getattr(self, 'sensors', None)
+        support_z = getattr(sensors, 'support_z', None)
+        if facts is None or support_z is None or not facts.sampled:
+            return None
+        car = facts.last['car']
+        if (car.get('robot_contact') is False and car['p_m'][2] < support_z - .40
+                and not self.is_success()):
+            return 'car_fell_off_station'
+        return None
 
     def health(self):
         return Health(True)
@@ -119,6 +131,9 @@ class NativeSensors:
         bank=stage.GetPrimAtPath('/World/Terrain/BankRight')
         if not bank:raise ValueError('CP07 actual opposite bank geometry missing')
         bank_range=cache.ComputeWorldBound(bank).ComputeAlignedRange()
+        table = stage.GetPrimAtPath('/World/Worktable')
+        support_range = cache.ComputeWorldBound(table).ComputeAlignedRange() if table else bank_range
+        self.support_z = float(support_range.GetMax()[2])
         self.bank_lower=np.asarray(bank_range.GetMin())[:2]
         self.bank_upper=np.asarray(bank_range.GetMax())[:2]
         car_bounds=cache.ComputeUntransformedBound(stage.GetPrimAtPath('/World/Car/Chassis')).ComputeAlignedRange()
@@ -210,6 +225,7 @@ class NativeSensors:
             button_robot_contact=self.contacts.touch("/World/StartButton", robot_only=True),
             hands_clear=bool(clear), joint_error_rad=None,
             car=dict(p_m=p.tolist(),far_bank_supported=bank_supported,far_bank_center_inside=bank_inside,
+                     robot_contact=self.contacts.touch('/World/Car', robot_only=True),
                      front_world_x_m=front_world_x,
                      chassis_aabb_world_m=[chassis_points.min(0).tolist(), chassis_points.max(0).tolist()],
                      center_world_m=car_center.tolist(),bank_bounds_xy_m=[self.bank_lower.tolist(),self.bank_upper.tolist()], up=float(rotation[2, 2]),

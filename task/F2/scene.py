@@ -6,6 +6,7 @@ from pathlib import Path
 from mind2act_eval.contracts import Health, NativeEvidence, Observation, to_json
 from .provenance import SOURCE_ID, VERSION, effective_config, read_origin, validate_start
 from .mechanism import Task
+from .geometry import Body
 from .evidence import CAP, BUTTON_ROOT, OBJECT_ROOT, Rows, Manifolds, measure, validate_frame
 
 DIGITS = {'0':'abcdef','1':'bc','2':'abdeg','3':'abcdg','4':'bcfg',
@@ -82,6 +83,7 @@ class ExperimentScene:
         self.display=FeedbackDisplay(ctx.sim.stage)
         self.terminal_tick=None
         self.initial=self._measure(0)
+        self.latest=self.initial
         validate_frame(c,self.initial,native_tick=0,source_start=start)
         self.machine.sample(self.initial['f2_raw'])
         self.rows=Rows(Path(ctx.output_dir)/'private'/'F2'/'measurements.jsonl')
@@ -100,6 +102,7 @@ class ExperimentScene:
             if self.machine.status!='running':
                 self.terminal_tick=tick
         self.rows.append(row)
+        self.latest=row
         self.display.update(self.machine.public())
 
     def observe(self,tick):
@@ -114,8 +117,9 @@ class ExperimentScene:
             measurements=self.rows.receipt(),terminal_tick=self.terminal_tick))
 
     def is_complete(self):
-        return (not self.machine.pending_release and
-                (self.machine.status == 'success' or len(self.machine.attempts) >= self.c['attempt_budget']))
+        machine = getattr(self, 'machine', None)
+        return (machine is not None and not machine.pending_release and
+                (machine.status == 'success' or len(machine.attempts) >= self.c['attempt_budget']))
 
     def health(self):
         from math import isfinite
@@ -134,6 +138,17 @@ class ExperimentScene:
 
     def events_complete(self) -> bool:
         return self.is_complete()
+
+    def irreversible_failure(self) -> str | None:
+        row = getattr(self, 'latest', None)
+        if row is None or row['physics_tick'] == 0 or self.machine.status == 'success':
+            return None
+        floor_z = min(region['floor_z'] for region in self.c['regions'].values())
+        for raw in row['f2_raw']['bodies'].values():
+            block = Body.parse(raw)
+            if block.center[2] < floor_z - .40 and block.released:
+                return 'block_fell_off_station'
+        return None
 
     def close(self):
         self.rows.close()

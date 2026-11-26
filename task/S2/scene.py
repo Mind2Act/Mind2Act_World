@@ -8,6 +8,7 @@ from .binding import SOURCE_ID, VERSION, effective_config
 from .display import BoardDisplay
 from .evidence import Rows, Manifolds, measure, SLIDER, CONTROLS
 from .measurements import validate_frame
+from .source_rules.board import BOARD_RIM_PREFIX
 from .source_rules.buttons import Task
 
 
@@ -30,6 +31,36 @@ def validate(spec, assets):
     from mind2act_eval.sim.source_assets import source_file
     source_file(assets, "station")
     return source, effective_config(source, input_version=spec.config["input_protocol_version"])
+
+
+def author_board_rim(stage, board, slider_size):
+    """Place static colliders outside the board's world-space playable area."""
+    from pxr import Gf, UsdGeom, UsdPhysics, PhysxSchema
+
+    x0, y0 = board["origin"]
+    extent = board["size"] * board["cell_size"]
+    thickness = 0.02
+    height = max(float(slider_size[2]) * 2.0, 0.04)
+    z = board["floor_z"] + height / 2
+    xc, yc = x0 + extent / 2, y0 + extent / 2
+    side_length = extent + 2 * thickness
+    for name, x, y, width, depth in (
+        ("left", x0 - thickness / 2, yc, thickness, side_length),
+        ("right", x0 + extent + thickness / 2, yc, thickness, side_length),
+        ("bottom", xc, y0 - thickness / 2, extent, thickness),
+        ("top", xc, y0 + extent + thickness / 2, extent, thickness),
+    ):
+        cube = UsdGeom.Cube.Define(stage, BOARD_RIM_PREFIX + name)
+        cube.CreateSizeAttr(1.0)
+        cube.SetResetXformStack(True)
+        cube.AddTranslateOp().Set(Gf.Vec3d(x, y, z))
+        cube.AddScaleOp(precision=UsdGeom.XformOp.PrecisionDouble).Set(Gf.Vec3d(width, depth, height))
+        cube.MakeInvisible()
+        prim = cube.GetPrim()
+        UsdPhysics.CollisionAPI.Apply(prim).CreateCollisionEnabledAttr(True)
+        collision = PhysxSchema.PhysxCollisionAPI.Apply(prim)
+        collision.CreateContactOffsetAttr(0.001)
+        collision.CreateRestOffsetAttr(0.0)
 
 
 def prepare_task_contacts(stage):
@@ -116,6 +147,15 @@ class NavigationScene:
     def is_success(self) -> bool:
         return self.is_complete()
 
+    def irreversible_failure(self) -> str | None:
+        session = self.session
+        if not session.violations and session.status != "failure":
+            return None
+        for event in session.events:
+            if event["kind"] == "violation" and event.get("reason"):
+                return event["reason"]
+        return session.reason or min(session.violations, default=session.status)
+
     def close(self):
         self.rows.close()
         self.contacts.close()
@@ -131,6 +171,7 @@ def build(spec, ctx):
         if not stage.GetPrimAtPath(path):
             raise ValueError("S2 prepared scene is missing " + path)
     ctx.robot.prepare_stage(stage)
+    author_board_rim(stage, c["board"], c["objects"]["slider"]["size"])
     prepare_task_contacts(stage)
     from mind2act_eval.variations import prepare_station
     prepare_station(ctx)

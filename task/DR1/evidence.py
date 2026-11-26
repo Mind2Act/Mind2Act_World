@@ -85,6 +85,7 @@ class Recorder:
                 extent=[float(x) for x in self._extent(quaternion, self.dims[i])],
                 velocity=[float(x) for x in body.get_linear_velocity()],
                 finger_contact=self.contacts.active(i, fingers=True),
+                robot_contact=self.contacts.active(i, token='/World/Robot'),
                 belt_contact=self.contacts.active(i, token='BeltContactSurface'),
                 tray_contact=self.contacts.active(i, token='/FR1/InspectionTray/'),
                 tray_supported=self.contacts.supports(i)))

@@ -4,7 +4,8 @@ from mind2act_eval.contracts import Action,Health,NativeEvidence
 from mind2act_eval.tasks._observation import observation
 from .binding import SOURCE_ID,VERSION,SCORING_VERSION,DISMANTLING_RULE,EVALUATION_MODE,instruction,validate
 from .evidence import Rows,Manifolds,measure
-from .measurements import validate_frame
+from .measurements import robot_paths,validate_frame
+from .stages import stage_value
 
 
 def prepare_task_contacts(stage):
@@ -75,7 +76,26 @@ class MeasurementScene:
             input_protocol_version=self.spec.config['input_protocol_version']))
 
     def is_complete(self):
-        return self.progress.result()['task_success']
+        progress=getattr(self,'progress',None)
+        return progress is not None and progress.result()['task_success']
+
+    def _prefix_ceiling(self):
+        progress=getattr(self,'progress',None)
+        geometry=getattr(self,'geometry',None)
+        if progress is None or not geometry or not progress.facts.tick:
+            return None
+        # The board origin is at z=0; the stove anchors at the tabletop.
+        cutoff=geometry['stove_xyz'][2]-.40
+        row=progress.facts.last
+        for i,name in enumerate([*progress.targets,'Lid']):
+            if row['poses'][name]['position'][2]<cutoff and not robot_paths(row,name):
+                return i
+        return None
+
+    def irreversible_failure(self) -> str | None:
+        if self._prefix_ceiling()==0 and self.progress.prefix()==0:
+            return 'tier1_fell_off_station'
+        return None
 
     def health(self):
         from math import isfinite
@@ -95,7 +115,19 @@ class MeasurementScene:
             source_pre_record_warmup_ticks=960,warmup_used_as_score_gate=False)
 
     def is_success(self) -> bool:
-        return self.is_complete()
+        progress=getattr(self,'progress',None)
+        if progress is None:
+            return False
+        result=progress.result()
+        if result['task_success']:
+            return True
+        ceiling=self._prefix_ceiling()
+        source=getattr(self,'source',None)
+        if ceiling is None or ceiling==0 or source is None:
+            return False
+        stage=dict(valid_disassembly=result['valid_disassembly'],target_count=result['target_count'],final_conditions_met=False,
+                   difficulty=source['difficulty'])
+        return stage_value(restored_prefix=result['restored_prefix'],**stage)==stage_value(restored_prefix=ceiling,**stage)
 
     def close(self):
         self.rows.close();self.contacts.close()

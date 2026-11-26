@@ -3,6 +3,9 @@ from .body import segment_hits_box
 from .session import Session
 
 
+BOARD_RIM_PREFIX = '/World/Task/Board/Rim/'
+
+
 class Task(Session):
     def start(self):
         board = self.config['board']
@@ -21,7 +24,8 @@ class Task(Session):
             return
         origin, extent = board['origin'], board['size']*board['cell_size']
         a, now = (self.previous or b).center, b.center
-        if any(b.lower[i] < origin[i] or b.upper[i] > origin[i]+extent for i in range(2)):
+        if (any(path.startswith(BOARD_RIM_PREFIX) for path in b.contacts)
+                or any(b.lower[i] < origin[i] or b.upper[i] > origin[i]+extent for i in range(2))):
             self.fail('slider_left_board')
             return
         previous = self.previous or b

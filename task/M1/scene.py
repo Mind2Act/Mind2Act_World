@@ -8,7 +8,15 @@ from mind2act_eval.contracts import BuildContext, Health, InstanceSpec, NativeEv
 
 from .evidence import ContactTable, Recorder
 from .instances import layout, plain, require_baseline_clock
-from .scorer import Tracker
+from .scorer import Tracker, lcs
+
+
+def min_future_mistakes(route, expected):
+    """Each suffix can match the expected tail after the last prefix match."""
+    k = len(route)
+    # The tracker accepts at most len(expected) submissions. A split before
+    # k cannot fit the entire expected tail, and cannot improve on split k.
+    return min(k + j - 2 * lcs(route, expected[:j]) for j in range(k, len(expected) + 1))
 
 
 class RouteScene:
@@ -70,10 +78,36 @@ class RouteScene:
 
     def is_complete(self) -> bool:
         """The round ends at submission N (any station); later actions never execute."""
-        return self.tracker is not None and len(self.tracker.ledger.placements) >= len(self.M['case']['expected_path'])
+        tracker = getattr(self, 'tracker', None)
+        return tracker is not None and len(tracker.ledger.placements) >= len(self.M['case']['expected_path'])
 
     def events_complete(self) -> bool:
-        return self.is_complete()
+        if self.is_complete():
+            return True
+        if getattr(self, 'tracker', None) is None or not self._target_dropped():
+            return False
+        route, expected = self.tracker.route, self.M['case']['expected_path']
+        mistakes = len(route) + len(expected) - 2 * lcs(route, expected)
+        return mistakes in (1, 2)
+
+    def _target_dropped(self) -> bool:
+        recorder = getattr(self, 'recorder', None)
+        z = getattr(self, 'target_initial_z', None)
+        if z is None or not getattr(recorder, 'ticks', None):
+            return False
+        last = recorder.ticks[-1]
+        return last['target_center'][2] < z - .40 and not last.get('target_robot_contact', True)
+
+    def irreversible_failure(self) -> str | None:
+        if getattr(self, 'physical_start', None) is None or getattr(self, 'tracker', None) is None:
+            return None
+        route, expected = self.tracker.route, self.M['case']['expected_path']
+        mistakes = len(route) + len(expected) - 2 * lcs(route, expected)
+        if mistakes >= 3 and self._target_dropped():
+            return 'target_fell_off_station'
+        if min_future_mistakes(route, expected) >= 3:
+            return 'route_mistakes_exceeded'
+        return None
 
     def close(self) -> None:
         unsubscribe = getattr(self.subscription, 'unsubscribe', None)

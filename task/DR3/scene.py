@@ -53,10 +53,8 @@ class GateScene:
         self.doors, self.schedules = doors, schedules
         self.contacts, self.subscription, self.capture = contacts, subscription, capture
         self.rows = []
-        self._success_analysis_tick = None
-        self._success_analysis = None
-        self._score_violation_latched = False
         self._failure_probe_available = True
+        self._failure_reason = None
         self._failure_progress = None
         self._withdrawal_audit = None
         self._failure_scan_rows = 0
@@ -80,6 +78,12 @@ class GateScene:
                                                   float(self.ctx.world.current_time)))
         self.trace.append(row)
         self.rows.append(row)
+        if tick > 0 and self._failure_probe_available:
+            try:
+                reason = self._scan_for_failure()
+                self._failure_reason = self._failure_reason or reason
+            except (AttributeError, KeyError, RuntimeError, ValueError):
+                self._failure_probe_available = False
 
     def before_step(self, tick):
         if tick != len(self.rows):
@@ -121,10 +125,10 @@ class GateScene:
         return self._delivery_and_withdrawal_ready()
 
     def _delivery_and_withdrawal_ready(self):
-        manifest = self.capture.manifest
+        manifest = getattr(getattr(self, 'capture', None), 'manifest', {})
         items = [(name, body) for name, body in manifest.get('bodies', {}).items()
                  if body['role'] == 'item']
-        if len(items) != 1:
+        if len(items) != 1 or not getattr(self, 'rows', None):
             return False
         from .events import _contact_state, _center_in_tray
         from .geometry import finite_array, transform_vertices
@@ -143,24 +147,47 @@ class GateScene:
         return not any(corridor_overrun(manifest, frame['poses'], gate, CORRIDOR_MARGIN_M)
                        for gate in manifest['gates'])
 
-    def irreversible_failure(self):
-        """Certify a losing prefix once its model action has finished."""
-        if not self._failure_probe_available:
-            return None
-        from .scorer import score
+    def _item_dropped(self):
+        rows = getattr(self, 'rows', ())
+        if len(rows) < 2:
+            return False
+        from .events import _contact_state
+        manifest = getattr(getattr(self, 'capture', None), 'manifest', {})
+        item = next((name for name, body in manifest.get('bodies', {}).items() if body['role'] == 'item'), None)
+        if item is None:
+            return False
+        first, last = rows[0]['detector'], rows[-1]['detector']
+        start_z = first['poses'][item]['position'][2]
+        return (last['poses'][item]['position'][2] < start_z - .40
+                and not _contact_state(last, manifest)['robot_contact'])
 
-        try:
-            reason = self._scan_for_failure()
-            if reason is None:
-                return None
-            # The ordinary scorer qualifies the sealed prefix before any action
-            # is cut off. A trace gap cannot be repaired by subsequent steps.
-            verdict = score(self.evidence(self.rows[-1]['physics_tick']))
-        except ValueError:
-            self._failure_probe_available = False
+    def _current_score(self):
+        """Apply the scorer's A, A2 and A3 kernels to the already sampled rows."""
+        audit = getattr(self, '_withdrawal_audit', None)
+        if not getattr(self, '_failure_probe_available', False) or audit is None:
             return None
-        self._failure_probe_available = False
-        if verdict.value == 0.0 and verdict.components['evidence']['violation_latched']:
+        from .events import rebuild_events
+        from .flight_kernel import from_rows
+        from .flight_policy import FLIGHT_PARTIAL_SCORES, apply_value
+        from .withdrawal_audit import apply_A3
+
+        manifest = self.capture.manifest
+        result = rebuild_events(self.rows, manifest)
+        if not result['evidence_complete']:
+            return None
+        value = result['score']
+        if value == 100.:
+            value = apply_value(value, self.spec.difficulty, from_rows(self.rows, manifest))['value']
+        elif value == 5.:
+            value = FLIGHT_PARTIAL_SCORES[self.spec.difficulty]
+        delta = apply_A3(value, audit.result())
+        return delta['value']
+
+    def irreversible_failure(self) -> str | None:
+        reason = getattr(self, '_failure_reason', None)
+        if reason is None and self._item_dropped():
+            reason = 'item_fell_off_station'
+        if reason is not None and self._current_score() == 0.0:
             return reason
         return None
 
@@ -198,22 +225,17 @@ class GateScene:
         return None
 
     def is_success(self):
-        """Model result probe: existing route-qualified delivery and both arms clear."""
-        if (self._failure_probe_available and self._failure_progress is not None
-                and not self._failure_progress.route_completed):
+        """Finish full delivery or settle credit after an unheld drop."""
+        if getattr(self, '_failure_reason', None) is not None:
             return False
-        if self._score_violation_latched or not self._delivery_and_withdrawal_ready():
+        dropped = self._item_dropped()
+        if not dropped and not self._delivery_and_withdrawal_ready():
             return False
-        from .events import rebuild_events
-        manifest = self.capture.manifest
-        tick = self.rows[-1]['physics_tick']
-        if self._success_analysis_tick != tick:
-            self._success_analysis = rebuild_events(self.rows, manifest)
-            self._success_analysis_tick = tick
-        result = self._success_analysis
-        if result['evidence_complete'] and result['violation_latched']:
-            self._score_violation_latched = True
-        return bool(result['evidence_complete'] and result['success'])
+        progress = getattr(self, '_failure_progress', None)
+        if progress is not None and not progress.route_completed:
+            return False
+        value = self._current_score()
+        return value == 100. or (dropped and value is not None and value > 0.)
 
     def result_metadata(self):
         return dict(source_id=SOURCE_ID, condition=dict(self.spec.config['condition']),

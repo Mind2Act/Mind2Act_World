@@ -80,6 +80,10 @@ class TraceScene:
         point = nib - np.array([0., 0., .0025])
         board = bool(self._ctx.sim.contacts.touch(self._tip, other=self._board))
         valid = self._recorder.sample(tick, board, point)
+        from .mechanism.marker import MARKER
+        self._marker_dropped = (not board and marker[2] < self._paper_top_z - .40
+                                and not self._ctx.sim.contacts.touch(MARKER, robot_only=True)
+                                and not self._ctx.sim.contacts.touch(self._tip, robot_only=True))
         self._ink.sample([float(point[0]), float(point[1]), self._paper_top_z], valid)
         if tick % 10 == 0:
             self._ink.flush()
@@ -94,19 +98,25 @@ class TraceScene:
     def health(self) -> Health:
         return self._health
 
-    def is_success(self) -> bool:
-        """Actual ink must meet both metrics; lifting is not a completion gate."""
-        tick = self._recorder._measured
+    def _ink_score(self):
+        recorder = getattr(self, '_recorder', None)
+        tick = getattr(recorder, '_measured', 0)
         if not tick:
-            return False
-        if getattr(self, '_success_check_tick', None) != tick:
-            from .scorer import score
-            self._success_at_tick = score(self._recorder.evidence(tick)).value == 100.
-            self._success_check_tick = tick
-        return bool(self._success_at_tick)
+            return 0.
+        from .scorer import score
+        return score(recorder.evidence(tick)).value
 
     def is_complete(self) -> bool:
-        return self.is_success()
+        return self._ink_score() == 100.
+
+    def is_success(self) -> bool:
+        value = self._ink_score()
+        return value == 100. or (value > 0. and bool(getattr(self, '_marker_dropped', False)))
+
+    def irreversible_failure(self) -> str | None:
+        if getattr(self, '_marker_dropped', False) and self._ink_score() == 0.:
+            return 'marker_fell_off_station'
+        return None
 
     def result_metadata(self) -> dict:
         """Scene settings that change what the score means; the runner stores them in Result.task_metadata."""

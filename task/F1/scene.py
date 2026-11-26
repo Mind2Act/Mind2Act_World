@@ -59,7 +59,17 @@ class SliderScene:
         return bool(self._grade['task_success'])
 
     def is_success(self) -> bool:
-        return self.is_complete()
+        """End model control at a released arrival, including partial credit."""
+        g = self._grade
+        return (not g.get('protocol_violations')
+                and bool(g.get('prerequisites'))
+                and bool(g.get('at_target'))
+                and bool(g.get('final_released'))
+                and self.slider.stage in ('execution', 'goal_reveal'))
+
+    def irreversible_failure(self) -> str | None:
+        violations = self._grade.get('protocol_violations')
+        return violations[0] if violations else None
 
     def close(self) -> None:
         unsubscribe = getattr(self.subscription, 'unsubscribe', None)

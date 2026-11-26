@@ -95,7 +95,7 @@ Training demonstrations are available in [mind2act-train](https://huggingface.co
 
 Use Linux, an NVIDIA GPU, and the Python 3.11 launcher supplied with Isaac Sim 5.1.
 Download the [v1.0.1 development asset snapshot](https://huggingface.co/datasets/Mind2Act-World/mind2act-dev-assets/tree/8690686b0b5de5979c3fb516d5888f0df6df4b31/release-v1.0.1).
-Download the [v1.0.2 evaluator wheel](https://github.com/Mind2Act/Mind2Act_World/releases/download/v1.0.2/mind2act_dev-1.0.2-py3-none-any.whl).
+Download the [v1.0.3 evaluator wheel](https://github.com/Mind2Act/Mind2Act_World/releases/download/v1.0.3/mind2act_dev-1.0.3-py3-none-any.whl).
 Set `ASSET_SNAPSHOT` to the downloaded repository root, `ISAAC_PYTHON` to the
 launcher, and `MIND2ACT_WHEEL` to the absolute path of the downloaded wheel.
 Existing v1.0.1 asset installations can install the new wheel directly.

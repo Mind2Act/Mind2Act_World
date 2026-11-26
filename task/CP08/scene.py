@@ -32,9 +32,6 @@ class StructureScene:
         self.windows = {b['id']: StabilityWindow(b, self.replay.config) for b in self.replay.config['blocks']}
         self.audit = Audit(Path(ctx.output_dir)/'CP08'/'raw-trace.jsonl')
         self.audit.append(self.initial)
-        self._complete = False
-        self._candidate = False
-        self._success_rows = None
 
     def before_step(self, tick):
         if tick != self.tick + 1:
@@ -62,19 +59,49 @@ class StructureScene:
             source_projection=self.projection,audit=self.audit.receipt(),**self.original_source))
 
     def is_success(self):
+        if self.is_complete():
+            return True
+        settlement = self._placement_ceiling()
+        return bool(settlement and settlement[0] == settlement[1] > 0 and settlement[2])
+
+    def is_complete(self):
         # Reference placements alone do not describe the whole success state:
         # distractors can move while every reference block remains correct.
-        candidate = all(window.stable for window in self.windows.values())
-        if not candidate:
-            self._complete = False
-            self._success_rows = None
-        elif getattr(self, '_success_rows', None) != len(self.replay.rows):
-            self._complete = evaluate(self.replay.rows,self.replay.config,self.initial)['success']
-            self._success_rows = len(self.replay.rows)
-        self._candidate = candidate
-        return bool(self._complete)
+        windows, replay = getattr(self, 'windows', None), getattr(self, 'replay', None)
+        initial = getattr(self, 'initial', None)
+        return bool(windows and replay and initial and all(window.stable for window in windows.values())
+                    and evaluate(replay.rows, replay.config, initial)['success'])
 
-    is_complete = is_success
+    def _placement_ceiling(self):
+        replay, windows = getattr(self, 'replay', None), getattr(self, 'windows', None)
+        if replay is None or not replay.rows or not windows:
+            return None
+        frame = replay.rows[-1]
+        if not frame.get('support_measurements_complete'):
+            return None
+        blocks, config = frame['blocks'], replay.config
+        targets = config['blocks']
+        dropped = {b['id'] for b in targets if blocks[b['id']]['position'][2] < config['table_z'] - .40
+                   and not blocks[b['id']]['robot_contact']}
+        if not dropped:
+            return None
+        # A missing physical support prevents its immediate child's check.
+        # A surviving child can itself support other blocks without passing
+        # its own placement check (for example, on a temporary support).
+        dead = dropped | {b['id'] for b in targets if dropped.intersection(b['supports'])}
+        core = {b['id'] for b in targets}
+        if config['level'] == 'hard':
+            core.remove('A')  # The preinstalled block is a full-success gate only.
+        available = core - dead
+        current = sum(windows[name].stable for name in core)
+        settled = all(windows[name].stable and not blocks[name]['robot_contact'] for name in available)
+        return current, len(available), settled
+
+    def irreversible_failure(self) -> str | None:
+        settlement = self._placement_ceiling()
+        if settlement and settlement[0] == settlement[1] == 0 and not self.is_complete():
+            return 'core_blocks_fell_off_station'
+        return None
 
     def health(self):
         return Health(not self.sensors.errors, '; '.join(self.sensors.errors))

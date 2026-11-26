@@ -19,6 +19,7 @@ from mind2act_eval.contracts import Action, BuildContext, Health, InstanceSpec, 
 from mind2act_eval.tasks._observation import observation, require_physics_hz
 from .mechanism.placement import CarouselLedger, SPlacementReleaseTracker
 from .mechanism.schedule import schedule, timeline_config
+from .scorer import N_BLOCKS, score
 
 WARMUP_TICKS = 120
 
@@ -30,10 +31,13 @@ def _pair_has(pair, root):
 class SScene:
     termination_kind = 'result'
 
-    def __init__(self, spec, ctx, world, stage, tables, blocks, carousel, rotor, body_offsets, ledger, tracker, timeline_cfg):
+    def __init__(self, spec, ctx, world, stage, tables, blocks, carousel, rotor, body_offsets, ledger, tracker,
+                 timeline_cfg, *, support_z=None):
         self.spec, self.ctx, self.stage, self.T = spec, ctx, stage, tables
         self.world, self.blocks, self.carousel, self.rotor = world, blocks, carousel, rotor
         self.body_offsets, self.ledger, self.tracker = body_offsets, ledger, tracker
+        self._support_z = support_z
+        self._dropped_blocks = set()
         self.cfg, self.gap = timeline_cfg, timeline_cfg["cue_gap_s"]
         self.names = list(tables)
         self.phase, cue_visible, self.angles = schedule(0, self.cfg, tables, self.gap)
@@ -79,6 +83,10 @@ class SScene:
             observations, finished, rotations = self._sample()
             self.ledger.observe(tick, observations, program_finished=finished,
                                 rotation_state=None, cue_visible=self.phase == 'cue')
+            support_z = getattr(self, "_support_z", None)
+            if support_z is not None:
+                self._dropped_blocks = {name for name, row in observations.items()
+                                        if row["position_world_z"] < support_z - .40 and row["released"]}
         except ValueError as error:
             self._health = Health(False, "S1 evidence error: " + str(error))
 
@@ -94,14 +102,33 @@ class SScene:
         return self._health
 
     def is_complete(self) -> bool:
-        from .scorer import score
-        return self.tick > 0 and bool(self.ledger.blocks) and score(self.evidence(self.tick)).value == 100
+        result = self._terminal_score()
+        return result is not None and result.value == 100
+
+    def _terminal_score(self):
+        tick = getattr(self, "tick", None)
+        ledger = getattr(self, "ledger", None)
+        if not tick or not getattr(ledger, "blocks", None) or getattr(self, "spec", None) is None:
+            return None
+        return score(self.evidence(tick))
+
+    def irreversible_failure(self) -> str | None:
+        if len(getattr(self, "_dropped_blocks", None) or ()) >= 3:
+            result = self._terminal_score()
+            if result is not None and result.value == 0:
+                return "too_many_blocks_dropped"
+        return None
 
     def result_metadata(self) -> dict:
         return {"s1_timeline": dict(self.cfg)}  # cue/rotation timing actually used, recorded in Result.task_metadata
 
     def is_success(self) -> bool:
-        return self.is_complete()
+        result = self._terminal_score()
+        if result is None:
+            return False
+        dropped = len(getattr(self, "_dropped_blocks", None) or ())
+        return result.value == 100 or (dropped in (1, 2) and result.value > 0
+                                       and result.components["credited_units"] == N_BLOCKS - dropped)
 
     def close(self) -> None:
         self._subscription = None
@@ -140,7 +167,8 @@ class SScene:
             carousel_support = any(_pair_has(pair, spec["block_prim"]) and any(_pair_has(pair, r) for r in rotor_roots)
                                    for pair, _ in contacts)
             observations[spec["block_prim"]] = dict(
-                position_local=local, inside=slot is not None, support=slot is not None, released=bool(released),
+                position_local=local, position_world_z=float(center[2]), inside=slot is not None,
+                support=slot is not None, released=bool(released),
                 slot_id="%s/tray%d" % (root, slot) if slot is not None else None, carousel_supported=bool(carousel_support),
                 original_entity_slot_match=slot == spec["target_local_index"],
                 placed_after_program_finished=bool(self.tracker.placed_after_stop(spec["block_prim"], self.execution_start_step)))
@@ -242,7 +270,8 @@ def build(spec: InstanceSpec, ctx: BuildContext) -> Scene:
 
     tracker = SPlacementReleaseTracker({t["block_prim"]: t["block_prim"] for t in tables.values()})
     ledger = CarouselLedger([t["block_prim"] for t in tables.values()])
-    scene = SScene(spec, ctx, world, stage, tables, blocks, carousel, rotor, body_offsets, ledger, tracker, cfg)
+    scene = SScene(spec, ctx, world, stage, tables, blocks, carousel, rotor, body_offsets, ledger, tracker, cfg,
+                   support_z=manifest["station"]["world_support_z"])
 
     def on_contact(headers, data):
         events = []

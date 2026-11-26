@@ -6,7 +6,7 @@ from mind2act_eval.contracts import NativeEvidence, Health, to_json
 from mind2act_eval.tasks._observation import observation
 from .instances import validate, validate_assets, public_parameters
 from .audit import Audit
-from .physical import evaluate
+from .physical import evaluate, terminal_units
 from .terminal import TerminalFacts
 
 
@@ -42,6 +42,10 @@ class BalanceScene:
         self.rows.append(dict(physics_tick=tick,simulation_time_s=raw['simulation_time_s'],raw=raw))
         self.audit.append(dict(tick=tick,raw=raw))
         self.facts.append(raw);self.tick=tick;self.last=raw
+        candidate=self.facts.candidate()
+        if not candidate:self._complete=False
+        elif not self._candidate:self._complete=evaluate(self.config,self.rows,self.initial)['success']
+        self._candidate=candidate
 
     def observe(self,tick):
         return observation(self.spec,self.ctx.robot,tick,self.spec.config['instruction'])
@@ -54,13 +58,43 @@ class BalanceScene:
             source_task=self.config,audit=self.audit.receipt(),**self.original_source))
 
     def is_success(self):
-        candidate=self.facts.candidate()
-        if not candidate:self._complete=False
-        elif not self._candidate:self._complete=evaluate(self.config,self.rows,self.initial)['success']
-        self._candidate=candidate
-        return bool(candidate and self._complete)
+        if self.is_complete():
+            return True
+        settlement = self._placement_ceiling()
+        return bool(settlement and settlement[0] == settlement[1] > 0)
 
-    is_complete = is_success
+    def is_complete(self):
+        return bool(getattr(self, '_complete', False))
+
+    def _placement_ceiling(self):
+        facts, initial = getattr(self, 'facts', None), getattr(self, 'initial', None)
+        if facts is None or not facts.tail or not initial or not initial['objects']:
+            return None
+        state = facts.tail[-1]
+        ref_z = getattr(getattr(self, 'sensors', None), 'support_z', None)
+        if ref_z is None:
+            # The lowest reset object origin is the fallback stock support datum.
+            ref_z = min(obj['position'][2] for obj in initial['objects'].values())
+        unusable = facts.drops.dropped | {
+            path for path, obj in state['objects'].items()
+            if obj['position'][2] < ref_z - .40 and not obj['robot_contact']
+        }
+        objects = facts.config['all_objects']
+        fruits = {o['path'] for o in objects if o['kind'] == 'fruit'}
+        weights = {o['path'] for o in objects if o['kind'] == 'weight'}
+        available_weights = len(weights - unusable)
+        if not (facts.drops.dropped or fruits & unusable or available_weights < 2):
+            return None
+        # Only pan placements earn partial credit. Use the scorer's actual
+        # drop latch for the current count, including any measured pan support.
+        _, placed_fruits, placed_weights = terminal_units(facts.config, state, facts.zero, facts.drops.dropped)
+        return (len(placed_fruits) + min(2, len(placed_weights)),
+                len(fruits - unusable) + min(2, available_weights))
+
+    def irreversible_failure(self) -> str | None:
+        if self._placement_ceiling() == (0, 0):
+            return 'all_weighable_items_dropped'
+        return None
 
     def health(self):
         values=[self.last['simulation_time_s'],self.last['beam_deg'],self.last['corrected_angle_deg'],
@@ -93,7 +127,7 @@ class BalanceScene:
 
 def build(spec,ctx):
     row=validate_assets(spec,ctx.assets)
-    from pxr import Usd, UsdPhysics, PhysxSchema
+    from pxr import Usd, UsdGeom, UsdPhysics, PhysxSchema
     from isaacsim.core.prims import SingleRigidPrim
     from .controls import BalanceControls
     from .rider_latch import RiderLatch
@@ -127,4 +161,8 @@ def build(spec,ctx):
         if any(float(getattr(drive,'Get'+key+'Attr')().Get() or 0)>0 for key in ('Stiffness','Damping')):
             raise ValueError('CP06 source rider latch cannot coexist with legacy slider drive')
     sensors=Sensors(ctx,to_json(spec.config['source_task']),bodies,arms,flange_views,controls,latch)
+    table = stage.GetPrimAtPath('/World/Worktable')
+    if table:
+        cache = UsdGeom.BBoxCache(Usd.TimeCode.Default(), [UsdGeom.Tokens.default_])
+        sensors.support_z = float(cache.ComputeWorldBound(table).ComputeAlignedRange().GetMax()[2])
     return BalanceScene(spec,ctx,sensors)

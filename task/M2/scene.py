@@ -60,6 +60,11 @@ class MemoryScene:
     def is_success(self) -> bool:
         return self.is_complete()
 
+    def irreversible_failure(self) -> str | None:
+        if self.game.tick > 0 and self.game.max_unmatched_faceup > 2:
+            return "too_many_unmatched_faceup"
+        return None
+
     def close(self):
         if self.trace is not None:
             self.trace.close()
