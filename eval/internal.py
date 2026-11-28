@@ -46,6 +46,13 @@ def _episode_assets(spec, args):
     entries = dict(spec.assets)
     manifest = getattr(args, "variation_manifest", None)
     if spec.variation.mode == "random":
+        if spec.config.get("layout_split") == "mini":
+            from mind2act_eval.mini_layouts import validate as validate_mini
+            expected_manifest = validate_mini(spec)["variation_manifest"]
+            if manifest is None:
+                manifest = expected_manifest
+            elif manifest != expected_manifest:
+                raise ValueError("mini random variation manifest differs from catalogue")
         if not manifest or Path(manifest).is_absolute():
             raise ValueError("random requires --variation-manifest relative to --asset-root")
         if "variation_manifest" in entries:
@@ -61,11 +68,14 @@ def _material_search_asset_ids(spec):
     validate(spec)
     if 'material_mdl_search_asset_ids' in spec.config:
         return spec.config['material_mdl_search_asset_ids']
+    portable = ('portable-mdl-0', 'portable-mdl-1', 'portable-mdl-2')
+    if set(portable) <= set(spec.assets):
+        return portable
     return {
         'P2': ('mdl0', 'mdl1', 'mdl2'),
-        'CP06': ('portable-mdl-0', 'portable-mdl-1', 'portable-mdl-2'),
-        'CP08': ('portable-mdl-0', 'portable-mdl-1', 'portable-mdl-2'),
-        'CP09': ('portable-mdl-0', 'portable-mdl-1', 'portable-mdl-2'),
+        'CP06': portable,
+        'CP08': portable,
+        'CP09': portable,
     }.get(spec.task_id, ())
 
 
@@ -115,8 +125,7 @@ def _worker(args):
                 material_receipt = configure_mdl_search(assets, material_ids)
             if spec.variation.mode == "random":
                 from mind2act_eval.variations import configure_material_search
-                variation_materials = configure_material_search(spec, assets,
-                    spec.config.get('material_mdl_search_asset_ids', ()))
+                variation_materials = configure_material_search(spec, assets, material_ids)
                 if variation_materials is not None:
                     material_receipt = variation_materials
             sim = IsaacSimulator(spec.clock, output, physical_gpu=args.gpu, cameras=spec.config.get("cameras"),

@@ -225,7 +225,7 @@ def validate(spec):
 
 def validate_assets(spec, assets):
     validate(spec)
-    if spec.config.get('layout_split') == 'validation':
+    if spec.config.get('layout_split') in ('validation', 'mini'):
         from mind2act_eval.sim.source_assets import source_file
         source_file(assets, 'station')
     return assets.resolve('station')

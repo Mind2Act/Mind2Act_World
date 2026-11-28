@@ -98,7 +98,7 @@ class RheostatScene:
 def build(spec: InstanceSpec, ctx: BuildContext) -> RheostatScene:
     from . import mechanism  # needs pxr; kept out of registration
     validate(spec)
-    if spec.config.get('layout_split') == 'validation':
+    if spec.config.get('layout_split') in ('validation', 'mini'):
         from mind2act_eval.sim.source_assets import source_file
         source_file(ctx.assets, 'station')
     levels, layout = _config('levels.json'), _config('layout.json')
