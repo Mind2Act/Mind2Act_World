@@ -22,6 +22,9 @@ def validate(spec):
     Task loaders validate their required parameters and scene assets. The shipped
     catalogue describes the bundled examples; it is not a runtime whitelist.
     """
+    if spec.config.get('layout_split') == 'mini':
+        from mind2act_eval.mini_layouts import validate as validate_mini
+        return validate_mini(spec)
     if spec.variation.mode != 'clean' or 'test_source' in spec.config or 'fixed50_origin' in spec.config:
         raise ValueError('public development inputs must be clean train/validation layouts')
     records = catalogue()

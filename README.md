@@ -30,6 +30,7 @@ Mind2Act World evaluates memory, physical execution, and tasks that require both
 
 ## 📰 News
 
+- **2026-11-28** — **[Mind2Act Mini World](docs/mini-world.md)** is open-sourced with [1,200 training episodes](https://huggingface.co/datasets/Mind2Act-World/Mind2Act-Mini-Train) and [720 Clean + Random evaluation episodes](https://huggingface.co/datasets/Mind2Act-World/Mind2Act-Mini-Assets) across 8 tasks (`M1, M2, DR1, PR1, CP02, CP05, CP06, CP10`) and all 3 difficulty tiers.
 - **2026-11-19** — The technical report is on [arXiv](https://arxiv.org/pdf/2611.26444).
 - **2026-11-11** — Per-task costs and timings, with inference benchmarks for the evaluated end-to-end models, are on the [leaderboard](https://mind2act-world.com/leaderboard.html#efficiency).
 - **2026-11-10** — Results for the first four end-to-end models (π0.5, KinRT, X-VLA, G0.5) are [live](https://mind2act-world.com/leaderboard.html#board-e2e).
@@ -41,7 +42,7 @@ Mind2Act World evaluates memory, physical execution, and tasks that require both
 - [x] 🏆 Publish initial VLA/WAM and multimodal-agent results.
 - [x] ⏱️ Publish evaluation costs, timings and inference benchmarks.
 - [x] 📄 Release the [technical report](https://arxiv.org/pdf/2611.26444).
-- [ ] 📦 Release **Mind2Act Mini World**, a smaller, fully open-source benchmark designed to make training and evaluation more accessible.
+- [x] 📦 Release **[Mind2Act Mini World](docs/mini-world.md)**, a smaller, fully open-source benchmark designed to make training and evaluation more accessible.
 - [ ] 🧪 Launch a **new agent leaderboard** for external submissions, with a standardized evaluation interface and sandboxed execution.
 
 ## ✨ Highlights
@@ -124,11 +125,16 @@ sets the task budget. See [Agent setup](docs/agent-runtime.md),
 [XPolicyLab setup](policies/README.md), [container setup](docker/README.md),
 and the [source layout](docs/source-layout.md).
 
+### 📦 Mind2Act Mini World (1,200 training + 720 evaluation episodes)
+
+For self-contained training and local Clean + Random evaluation across 8 view-aligned tasks (`M1, M2, DR1, PR1, CP02, CP05, CP06, CP10` at `easy`, `medium`, and `hard`), use [`Mind2Act-Mini-Train`](https://huggingface.co/datasets/Mind2Act-World/Mind2Act-Mini-Train), [`Mind2Act-Mini-Assets`](https://huggingface.co/datasets/Mind2Act-World/Mind2Act-Mini-Assets), and `mind2act_eval.cli summarize-mini`. Full setup instructions and reference model scores are in [docs/mini-world.md](docs/mini-world.md).
+
 ## 📚 Documentation
 
 | Document | Description |
 | :-- | :-- |
 | [Webpage documentation](https://mind2act-world.com/document.html) | Tasks and difficulty, evaluation protocol, leaderboard and release notes on the project website. |
+| [Mind2Act Mini World](docs/mini-world.md) | 8-task (`2 + 2 + 4`) training (`1,200` episodes) and local evaluation (`720` episodes) suite across `easy`/`medium`/`hard`, `summarize-mini` CLI, and reference scores. |
 | [Task catalogue](docs/tasks.md) | Instruction excerpts and success definitions for all 30 tasks. |
 | [Agent runtime](docs/agent-runtime.md) | Tool calls and observations for multimodal agents. |
 | [Policy interfaces](policies/README.md) | XPolicyLab and G0.5 connections for end-to-end policies. |

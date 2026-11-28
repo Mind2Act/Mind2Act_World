@@ -303,6 +303,22 @@ def validate_binding(spec, assets):
     if spec.instance_id.startswith('VAL-CP10-') or spec.config.get('layout_split')=='validation':
         from mind2act_eval.tasks.CP10.validation_inputs import validate_assets as validation_assets
         return validation_assets(spec,assets)
+    if spec.config.get('layout_split') == 'mini':
+        from mind2act_eval.mini_layouts import validate as validate_mini
+        from mind2act_eval.sim.source_assets import source_file
+        from .original_inputs import _static_geometry, _validate_projection
+        from pxr import Sdf
+        validate_mini(spec)
+        _static_geometry(c)
+        scene_path = Path(source_file(assets, 'scene')).resolve(strict=True)
+        if Path(source_file(assets, 'station')).resolve(strict=True) != scene_path:
+            raise ValueError('CP10 mini station and scene differ')
+        lyr = Sdf.Layer.FindOrOpen(str(scene_path))
+        if lyr is None or len(lyr.subLayerPaths) != 1:
+            raise ValueError('CP10 mini derived scene requires one static pool')
+        pool_path = (scene_path.parent / lyr.subLayerPaths[0]).resolve(strict=True)
+        _validate_projection(scene_path.read_bytes(), scene_path, pool_path, c)
+        return c
     if 'train_source' in spec.config:
         from mind2act_eval.tasks.CP10.training_inputs import validate_assets as training_validate_assets
         training_validate_assets(spec, assets)

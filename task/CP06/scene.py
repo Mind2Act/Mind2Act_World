@@ -17,6 +17,8 @@ class BalanceScene:
         self.original_source={}
         if spec.config.get('layout_split') == 'validation':
             self.original_source['validation_source_spec']=to_json(spec)
+        elif spec.config.get('layout_split') == 'mini':
+            self.original_source['mini_source_spec']=to_json(spec)
         if 'train_source' in spec.config:
             self.original_source['training_source_spec']=to_json(spec)
         if 'test_source' in spec.config:
@@ -105,6 +107,12 @@ class BalanceScene:
     def result_metadata(self):
         if self.spec.config.get('layout_split') == 'validation':
             return dict(validation_source=self.spec.config['validation_source'],
+                source_spec_sha256=self.spec.config['source_spec_sha256'],
+                original_task_config_sha256=self.spec.config['declared_task_sha256'],
+                prepared_scene_sha256=self.spec.config['prepared_scene_sha256'],
+                public_parameters=public_parameters(self.config),native_validation='not_run')
+        if self.spec.config.get('layout_split') == 'mini':
+            return dict(layout_split='mini',
                 source_spec_sha256=self.spec.config['source_spec_sha256'],
                 original_task_config_sha256=self.spec.config['declared_task_sha256'],
                 prepared_scene_sha256=self.spec.config['prepared_scene_sha256'],

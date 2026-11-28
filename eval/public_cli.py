@@ -14,12 +14,17 @@ _MODES = {
 
 
 def main(argv=None):
+    import sys
+    from mind2act_eval import mini_summary
+
     parser = argparse.ArgumentParser(prog="mind2act-eval", allow_abbrev=False)
     commands = parser.add_subparsers(dest="command", required=True)
 
     run = commands.add_parser("run", help="Run a model episode", allow_abbrev=False)
     run.add_argument("--spec", required=True, help="Instance spec JSON path")
     run.add_argument("--asset-root", help="Root directory for the instance assets")
+    run.add_argument("--variation-manifest", help="Optional variation manifest path relative to --asset-root")
+    run.add_argument("--config", help="Optional adapter config JSON path (defaults to ./config/<mode>.json)")
     mode = run.add_mutually_exclusive_group(required=True)
     for name, (_, _, description) in _MODES.items():
         mode.add_argument(f"--{name}", dest="mode", action="store_const", const=name, help=description)
@@ -28,8 +33,23 @@ def main(argv=None):
     run.add_argument("--video-hz", type=int, help="Video frames per second")
     run.add_argument("--record-wrist-cameras", action="store_true",
                      help="Record both wrist cameras")
+
+    summarize = commands.add_parser(
+        "summarize-mini",
+        help="Verify and summarize Mind2Act Mini World (720-episode) model results",
+        allow_abbrev=False,
+    )
+    mini_summary.add_arguments(summarize)
+
     args = parser.parse_args(argv)
-    config_path = Path.cwd() / "config" / f"{args.mode}.json"
+    if args.command == "summarize-mini":
+        try:
+            return mini_summary.run_cli(args)
+        except Exception as exc:
+            print(f"{type(exc).__name__}: {exc}", file=sys.stderr)
+            return 2
+
+    config_path = Path(args.config) if args.config else (Path.cwd() / "config" / f"{args.mode}.json")
     try:
         raw_config = config_path.read_bytes()
         config = json.loads(raw_config)
@@ -48,7 +68,7 @@ def main(argv=None):
     budget_mode, adapter, _ = _MODES[args.mode]
     arguments = ["run", f"--{budget_mode}", f"--spec={args.spec}", f"--adapter={adapter}",
                  f"--adapter-config={config_path}", f"--adapter-config-sha256={hashlib.sha256(raw_config).hexdigest()}"]
-    for field in ("asset_root", "gpu", "output_root", "video_hz"):
+    for field in ("asset_root", "variation_manifest", "gpu", "output_root", "video_hz"):
         value = getattr(args, field)
         if value is not None:
             arguments.append(f"--{field.replace('_', '-')}={value}")

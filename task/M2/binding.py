@@ -58,6 +58,19 @@ def validate(spec, binding):
     elif spec.config.get('m2_mode') == 'source_bound_validation':
         if binding['mode'] != 'source_bound_validation':
             raise ValueError('M2 validation input mode differs')
+    elif spec.config.get('m2_mode') == 'source_bound_mini':
+        if spec.config.get('layout_split') != 'mini' or binding['mode'] not in ('source_bound_mini', 'source_bound_test'):
+            raise ValueError('M2 mini input mode differs')
+        dimensions = {'easy': (2, 2), 'medium': (2, 4), 'hard': (4, 4)}
+        layout = binding['source_layout']
+        if ((layout['rows'], layout['cols']) != dimensions[spec.difficulty]
+                or binding['card_identities'] != layout['card_types']):
+            raise ValueError('M2 mini deck/layout differs')
+        target = [cos(radians(2)/2), 0., sin(radians(2)/2), 0.]
+        count = layout['rows'] * layout['cols']
+        if (binding['button_rest_m'] != [.8055] * count
+                or binding['faceup_quaternions_wxyz'] != [target] * count):
+            raise ValueError('M2 mini physical button rest or face-up target differs')
     elif binding["mode"] != "diagnostic_training" or spec.config.get("m2_mode") != "diagnostic_training":
         raise ProfileBlocked("M2 formal evaluation profiles/slots unavailable; no training substitution")
     n = 2 * PAIRS[spec.difficulty]
@@ -106,6 +119,24 @@ def load(spec, assets):
             raise ValueError('M2 finite VAL source condition differs')
         from .validation_geometry import validate_geometry
         validate_geometry(spec, assets, binding, source)
+        source_file(assets, 'station')
+        return binding
+    if spec.config.get('m2_mode') == 'source_bound_mini':
+        if spec.config.get('layout_split') != 'mini':
+            raise ValueError('M2 mini input requires the mini split')
+        from mind2act_eval.mini_layouts import validate as validate_mini
+        validate_mini(spec)
+        raw = asset_bytes(assets, 'm2_binding')
+        if hashlib.sha256(raw).hexdigest() != spec.config.get('m2_binding_sha256'):
+            raise ValueError('M2 mini binding sha256 differs')
+        binding = validate(spec, dict(json.loads(raw), mode='source_bound_mini'))
+        from .original_geometry import validate_geometry
+        validate_geometry(
+            spec,
+            assets,
+            binding,
+            {'layout': binding['source_layout'], 'board_offset_xy': binding['source_board_offset_xy']},
+        )
         source_file(assets, 'station')
         return binding
     if spec.config.get("m2_mode") != "diagnostic_training":

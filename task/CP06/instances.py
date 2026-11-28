@@ -59,6 +59,29 @@ def validate(spec):
     if spec.config.get('layout_split') == 'validation':
         from .validation import validate as validate_validation
         return validate_validation(spec)
+    if spec.config.get('layout_split') == 'mini':
+        import math
+        from pathlib import PurePosixPath
+        from mind2act_eval.public_layouts import validate as validate_public
+        validate_public(spec)
+        c = to_json(spec.config)
+        core = validate_core(c['source_task'], spec.difficulty)
+        rest = [math.radians(v) for v in (0, 65, 100, -65, 0, 0)] + [.044, .044]
+        if (spec.task_id != 'CP06' or spec.config_version != CONFIG_VERSION
+                or spec.clock.physics_hz != 120 or spec.clock.control_hz != 30
+                or core['candidate']['seed'] != spec.seed
+                or core['framework_commit'] != FRAMEWORK
+                or c['public_parameters'] != public_parameters(core)
+                or c['instruction'] not in (instruction(spec.difficulty), instruction(spec.difficulty, 'zh'))
+                or c.get('instruction_source_sha256') != INSTRUCTION_SHA
+                or c['robot_rest'] != rest
+                or not ({'station', 'x5'} <= set(spec.assets))):
+            raise ValueError('CP06 mini instance condition or resources differ')
+        for value in spec.assets.values():
+            path = PurePosixPath(value)
+            if not value or path.is_absolute() or '..' in path.parts or '\\' in value:
+                raise ValueError('CP06 runtime assets must use relative library identifiers')
+        return dict(station_robots=to_json(c['station_robots']))
     training="train_source" in spec.config
     if training:
         from mind2act_eval.tasks.CP06.training_inputs import validate as training_validate
@@ -143,6 +166,12 @@ def validate_assets(spec, assets):
     if spec.config.get('layout_split') == 'validation':
         from .validation import validate_assets as validate_validation
         return validate_validation(spec, assets)
+    if spec.config.get('layout_split') == 'mini':
+        row = validate(spec)
+        from mind2act_eval.sim.source_assets import source_file
+        source_file(assets, 'station')
+        source_file(assets, 'x5')
+        return row
     from mind2act_eval.sim.source_assets import asset_bytes, asset_layer, source_file
     row=validate(spec)
     if 'train_source' in spec.config:
